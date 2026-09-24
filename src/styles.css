@@ -1,1 +1,315 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================================================================
+   WORLD-CLASS BOTANICAL EDITORIAL DESIGN SYSTEM
+   Specialist Pistachio Cultivation & Nursery
+   ========================================================================== */
+
+:root {
+  /* Editorial Color Palette */
+  --c-ivory: #F8F5EE;          /* Warm limestone / editorial paper */
+  --c-ivory-warm: #F2EDE2;     /* Slightly deeper linen */
+  --c-ivory-light: #FCFAF6;    /* Soft clean alabaster */
+  --c-white: #FFFFFF;
+
+  --c-forest: #112117;         /* Deepest Mediterranean evergreen */
+  --c-forest-dark: #0A140E;    /* Ink forest */
+  --c-forest-mid: #1A3123;     /* Rich botanical slate */
+
+  --c-pistachio: #768E37;      /* Refined botanical pistachio green */
+  --c-pistachio-deep: #5A6F28; /* Deep olive-pistachio */
+  --c-pistachio-subtle: #EBF0DC;/* Pale pistachio tint */
+
+  --c-sand: #DFD7C7;          /* Fine limestone border */
+  --c-sand-muted: #BCB2A1;    /* Subtle rule color */
+  --c-earth: #8C7B65;         /* Warm loam accent */
+
+  --c-charcoal: #151A17;      /* Primary text */
+  --c-slate: #4A564F;         /* Editorial body text */
+  --c-slate-light: #7E8C83;   /* Secondary captions & metadata */
+
+  /* Typography System */
+  --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-ar-display: 'Cairo', 'IBM Plex Sans Arabic', sans-serif;
+  --font-ar-body: 'IBM Plex Sans Arabic', 'Cairo', system-ui, -apple-system, sans-serif;
+
+  /* Editorial Spacing Units */
+  --spacing-macro: clamp(5rem, 10vw, 10rem);
+  --spacing-mid: clamp(3rem, 6vw, 6rem);
+  --container-max: 1380px;
+  --container-pad: clamp(1.25rem, 5vw, 4rem);
+
+  /* Transitions */
+  --ease-editorial: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: all 0.5s var(--ease-editorial);
+  --transition-fast: all 0.25s var(--ease-editorial);
+}
+
+/* Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--c-ivory);
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--c-charcoal);
+  background-color: var(--c-ivory);
+  min-height: 100vh;
+}
+
+/* RTL Typography Overrides */
+body.rtl {
+  font-family: var(--font-ar-body);
+}
+
+body.rtl .font-serif,
+body.rtl h1,
+body.rtl h2,
+body.rtl h3,
+body.rtl h4 {
+  font-family: var(--font-ar-display);
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+/* Direction Helper for Icons */
+body.rtl .icon-dir {
+  transform: rotate(180deg);
+}
+
+/* Editorial Typography */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--c-forest);
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--c-slate);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.container-wide {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 960px;
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+/* Editorial Eyebrow Tag */
+.editorial-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--c-pistachio);
+  margin-bottom: 1.5rem;
+}
+
+body.rtl .editorial-kicker {
+  font-family: var(--font-ar-body);
+  letter-spacing: 0.06em;
+}
+
+.editorial-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1px;
+  background-color: var(--c-pistachio);
+}
+
+/* Editorial Section Dividers */
+.hairline {
+  border: none;
+  border-top: 1px solid var(--c-sand);
+  margin: 0;
+  width: 100%;
+}
+
+/* Restrained Editorial Buttons */
+.btn-editorial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.95rem 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  line-height: 1;
+}
+
+body.rtl .btn-editorial {
+  font-family: var(--font-ar-body);
+  letter-spacing: normal;
+}
+
+.btn-editorial-dark {
+  background-color: var(--c-forest);
+  color: var(--c-ivory);
+  border-color: var(--c-forest);
+}
+
+.btn-editorial-dark:hover {
+  background-color: var(--c-forest-mid);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-editorial-outline {
+  background-color: transparent;
+  color: var(--c-forest);
+  border-color: var(--c-charcoal);
+}
+
+.btn-editorial-outline:hover {
+  background-color: var(--c-forest);
+  color: var(--c-ivory);
+  transform: translateY(-2px);
+}
+
+.btn-editorial-wa {
+  background-color: var(--c-forest);
+  color: #FFFFFF;
+  border-color: var(--c-forest);
+}
+
+.btn-editorial-wa .fa-whatsapp {
+  color: #38E079;
+}
+
+.btn-editorial-wa:hover {
+  background-color: #193825;
+  border-color: #193825;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-editorial-wa-light {
+  background-color: #FFFFFF;
+  color: var(--c-forest);
+  border-color: #FFFFFF;
+}
+
+.btn-editorial-wa-light .fa-whatsapp {
+  color: #25D366;
+}
+
+.btn-editorial-wa-light:hover {
+  background-color: var(--c-ivory-warm);
+  transform: translateY(-2px);
+}
+
+/* Subtle Botanical Micro-Badges */
+.botanical-tag {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-slate-light);
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--c-sand);
+}
+
+/* Image Art Direction Classes */
+.art-frame {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--c-sand);
+}
+
+.art-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--ease-editorial);
+}
+
+.art-frame:hover img {
+  transform: scale(1.025);
+}
+
+/* Form Minimalist Elements */
+.field-group {
+  margin-bottom: 1.75rem;
+}
+
+.field-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-forest);
+  margin-bottom: 0.65rem;
+}
+
+.field-input,
+.field-textarea,
+.field-select {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--c-charcoal);
+  background-color: transparent;
+  border: 1px solid var(--c-sand-muted);
+  border-radius: 0;
+  transition: var(--transition-fast);
+  outline: none;
+}
+
+.field-input:focus,
+.field-textarea:focus,
+.field-select:focus {
+  border-color: var(--c-forest);
+  background-color: #FFFFFF;
+}

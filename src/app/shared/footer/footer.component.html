@@ -1,0 +1,103 @@
+<footer class="editorial-footer">
+  <div class="container-wide">
+    <!-- Top Editorial Header in Footer -->
+    <div class="footer-header-strip">
+      <div class="footer-brand-lockup">
+        <a routerLink="/" class="footer-logo-anchor">
+          <img src="logo.png" alt="Pistachio Specialist Logo" class="footer-logo-inverted" width="160" height="52">
+        </a>
+        <p class="footer-mission-lead">
+          {{ i18n.t().footer.tagline }}
+        </p>
+      </div>
+
+      <div class="footer-direct-action">
+        <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer"
+          class="btn-editorial btn-editorial-wa-light">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          <span>{{ i18n.t().footer.whatsappCta }}</span>
+        </a>
+      </div>
+    </div>
+
+    <hr class="footer-hairline">
+
+    <!-- 4 Structured Columns -->
+    <div class="footer-main-columns">
+      <!-- Navigation -->
+      <div class="footer-column">
+        <span class="column-kicker">{{ i18n.t().footer.quickLinks }}</span>
+        <ul class="column-links">
+          <li><a routerLink="/">{{ i18n.t().navbar.home }}</a></li>
+          <li><a routerLink="/">{{ i18n.t().navbar.about }}</a></li>
+          <li><a routerLink="/">{{ i18n.t().navbar.products }}</a></li>
+          <li><a routerLink="/">{{ i18n.t().navbar.contact }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Plant Material -->
+      <div class="footer-column">
+        <span class="column-kicker">{{ i18n.t().footer.productsTitle }}</span>
+        <ul class="column-links">
+          <li><a routerLink="/" fragment="ucb1">{{ i18n.t().products.ucb1.title }}</a></li>
+          <li><a routerLink="/" fragment="traditional">{{ i18n.t().products.traditional.cornicabraTitle }}</a>
+          </li>
+          <li><a routerLink="/" fragment="grafted">{{ i18n.t().products.grafted.title }}</a></li>
+          <li><a routerLink="/" fragment="varieties">{{ i18n.t().products.varieties.title }}</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Metadata -->
+      <div class="footer-column">
+        <span class="column-kicker">{{ i18n.t().footer.contactTitle }}</span>
+        <div class="column-meta-list">
+          <p class="meta-row">
+            <span class="meta-label">Operations</span>
+            <span class="meta-val">{{ i18n.t().footer.locationPlaceholder }}</span>
+          </p>
+          <p class="meta-row">
+            <span class="meta-label">Inquiries</span>
+            <span class="meta-val">{{ i18n.t().footer.emailPlaceholder }}</span>
+          </p>
+          <p class="meta-row">
+            <span class="meta-label">Direct</span>
+            <span class="meta-val" dir="ltr">{{ i18n.t().footer.phonePlaceholder }}</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Official Social Channels -->
+      <div class="footer-column">
+        <span class="column-kicker">{{ i18n.t().footer.socialTitle }}</span>
+        <div class="footer-social-roster">
+          <a [href]="social.instagram" target="_blank" rel="noopener noreferrer" class="social-tag">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <span>Instagram</span>
+          </a>
+          <a [href]="social.facebook" target="_blank" rel="noopener noreferrer" class="social-tag">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            <span>Facebook</span>
+          </a>
+          <a [href]="social.youtube" target="_blank" rel="noopener noreferrer" class="social-tag">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            <span>YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-hairline">
+
+    <!-- Bottom Colophon -->
+    <div class="footer-colophon">
+      <p class="copyright-text">
+        &copy; {{ currentYear }} {{ i18n.t().footer.rights }}
+      </p>
+      <div class="colophon-links">
+        <a routerLink="/contact">{{ i18n.t().footer.privacy }}</a>
+        <span class="colophon-sep">/</span>
+        <a routerLink="/contact">{{ i18n.t().footer.legalNotice }}</a>
+      </div>
+    </div>
+  </div>
+</footer>

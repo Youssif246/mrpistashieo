@@ -1,0 +1,193 @@
+<!-- ==========================================================================
+     CONTACT PAGE: THE FINAL CHAPTER OF THE BRAND STORY
+     ========================================================================== -->
+<section class="contact-statement-hero">
+  <div class="container">
+    <div class="statement-lockup">
+      <span class="editorial-kicker">{{ i18n.t().contact.hero.badge }}</span>
+      <h1 class="statement-hero-title">
+        {{ i18n.t().contact.hero.headline }}
+      </h1>
+      <p class="statement-hero-lead">
+        {{ i18n.t().contact.hero.description }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     CONTACT EDITORIAL COMPOSITION (CHANNELS & BESPOKE INQUIRY FORM)
+     ========================================================================== -->
+<section class="section-contact-spread">
+  <div class="container">
+    <div class="contact-spread-grid">
+      <!-- Direct Communication Channels & Coordinates -->
+      <div class="contact-dossier-column">
+        <span class="editorial-kicker">{{ i18n.t().contact.info.tag }}</span>
+        <h2 class="dossier-title">{{ i18n.t().contact.info.title }}</h2>
+        <p class="dossier-intro">{{ i18n.t().contact.info.desc }}</p>
+
+        <!-- Direct WhatsApp Interaction Block -->
+        <div class="dossier-wa-banner">
+          <div class="wa-banner-text">
+            <span class="wa-kicker">Immediate Agronomic Channel</span>
+            <h3 class="wa-action-title">{{ i18n.t().contact.info.whatsappLabel }}</h3>
+            <p class="wa-action-sub">{{ i18n.t().contact.info.whatsappSub }}</p>
+          </div>
+          <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-wa">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <span>{{ i18n.t().contact.info.whatsappAction }}</span>
+          </a>
+        </div>
+
+        <!-- Coordinates Ledger -->
+        <div class="coordinates-ledger">
+          <div class="ledger-row">
+            <span class="ledger-label">{{ i18n.t().contact.info.locationLabel }}</span>
+            <span class="ledger-val">{{ i18n.t().contact.info.locationValue }}</span>
+          </div>
+
+          <div class="ledger-row">
+            <span class="ledger-label">{{ i18n.t().contact.info.hoursLabel }}</span>
+            <span class="ledger-val">{{ i18n.t().contact.info.hoursValue }}</span>
+          </div>
+
+          <div class="ledger-row">
+            <span class="ledger-label">{{ i18n.t().contact.info.emailLabel }}</span>
+            <span class="ledger-val">{{ i18n.t().contact.info.emailValue }}</span>
+          </div>
+
+          <div class="ledger-row">
+            <span class="ledger-label">{{ i18n.t().contact.info.phoneLabel }}</span>
+            <span class="ledger-val" dir="ltr">{{ i18n.t().contact.info.phoneValue }}</span>
+          </div>
+        </div>
+
+        <!-- Official Social Links -->
+        <div class="dossier-social-block">
+          <span class="dossier-social-kicker">{{ i18n.t().contact.social.title }}</span>
+          <p class="dossier-social-p">{{ i18n.t().contact.social.desc }}</p>
+          <div class="dossier-social-row">
+            <a [href]="social.instagram" target="_blank" rel="noopener noreferrer" class="social-chip">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>Instagram</span>
+            </a>
+            <a [href]="social.facebook" target="_blank" rel="noopener noreferrer" class="social-chip">
+              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+              <span>Facebook</span>
+            </a>
+            <a [href]="social.youtube" target="_blank" rel="noopener noreferrer" class="social-chip">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+              <span>YouTube</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bespoke Project Inquiry Form -->
+      <div class="contact-form-column">
+        <div class="bespoke-form-pane">
+          <span class="editorial-kicker">{{ i18n.t().contact.form.tag }}</span>
+          <h2 class="form-display-title">{{ i18n.t().contact.form.title }}</h2>
+          <p class="form-display-lead">{{ i18n.t().contact.form.desc }}</p>
+
+          <form (ngSubmit)="onSubmit()" class="editorial-inquiry-form">
+            <div class="field-group">
+              <label for="contact-name" class="field-label">{{ i18n.t().contact.form.name }}</label>
+              <input
+                id="contact-name"
+                name="name"
+                type="text"
+                class="field-input"
+                [(ngModel)]="name"
+                [placeholder]="i18n.t().contact.form.namePlaceholder"
+                required>
+            </div>
+
+            <div class="fields-dual-row">
+              <div class="field-group">
+                <label for="contact-phone" class="field-label">{{ i18n.t().contact.form.phone }}</label>
+                <input
+                  id="contact-phone"
+                  name="phone"
+                  type="tel"
+                  class="field-input"
+                  [(ngModel)]="phone"
+                  [placeholder]="i18n.t().contact.form.phonePlaceholder"
+                  required>
+              </div>
+
+              <div class="field-group">
+                <label for="contact-email" class="field-label">{{ i18n.t().contact.form.email }}</label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  class="field-input"
+                  [(ngModel)]="email"
+                  [placeholder]="i18n.t().contact.form.emailPlaceholder">
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="contact-interest" class="field-label">{{ i18n.t().contact.form.interest }}</label>
+              <select
+                id="contact-interest"
+                name="interest"
+                class="field-select"
+                [(ngModel)]="interest">
+                <option value="General Pistachio Plants Inquiry">{{ i18n.t().contact.form.interestOption1 }}</option>
+                <option value="UCB1 Rootstock Inquiries">{{ i18n.t().contact.form.interestOption2 }}</option>
+                <option value="Traditional Rootstocks (Cornicabra / Atlantica)">{{ i18n.t().contact.form.interestOption3 }}</option>
+                <option value="Grafted Plants (Kerman, Sirora, Larnaka)">{{ i18n.t().contact.form.interestOption4 }}</option>
+                <option value="Agricultural & Field Services">{{ i18n.t().contact.form.interestOption5 }}</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label for="contact-details" class="field-label">{{ i18n.t().contact.form.projectDetails }}</label>
+              <textarea
+                id="contact-details"
+                name="projectDetails"
+                rows="4"
+                class="field-textarea"
+                [(ngModel)]="projectDetails"
+                [placeholder]="i18n.t().contact.form.projectDetailsPlaceholder"></textarea>
+            </div>
+
+            <button type="submit" class="btn-editorial btn-editorial-dark form-dispatch-btn">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              <span>{{ i18n.t().contact.form.submit }}</span>
+            </button>
+
+            <p class="form-disclaimer">
+              <i class="fa-solid fa-lock disclaimer-icon" aria-hidden="true"></i>
+              <span>{{ i18n.t().contact.form.notice }}</span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     MINIMALIST LOCATION VISUAL PLATE
+     ========================================================================== -->
+<section class="section-location-monolith">
+  <div class="container">
+    <div class="location-monolith-plate">
+      <div class="plate-info">
+        <span class="editorial-kicker">{{ i18n.t().contact.info.locationLabel }}</span>
+        <h3 class="plate-location-name">{{ i18n.t().contact.info.locationValue }}</h3>
+        <span class="plate-sub">Specialized Mediterranean Nursery Operations</span>
+      </div>
+      <div class="plate-action">
+        <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-outline">
+          <i class="fa-solid fa-location-arrow" aria-hidden="true"></i>
+          <span>{{ i18n.t().contact.info.whatsappAction }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

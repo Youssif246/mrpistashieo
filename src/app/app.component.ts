@@ -10,5 +10,4 @@ import { FooterComponent } from './shared/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class App {}
-export { App as AppComponent };
+export class AppComponent {}

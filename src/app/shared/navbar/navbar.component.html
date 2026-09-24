@@ -1,0 +1,109 @@
+<header class="navbar-floating-wrapper" [class.is-floating]="isScrolled()">
+  <div class="navbar-glass-slab">
+    <!-- 1. Left: Company Logo (Signature Brand Anchor) -->
+    <a routerLink="/" class="navbar-logo" (click)="closeMobileMenu()" aria-label="Mister Pistachio">
+      <img src="logo.png" alt="Mister Pistachio" class="logo-img" width="170" height="50">
+    </a>
+
+    <!-- 2. Center: Navigation Links (Refined Botanical Typography) -->
+    <nav class="navbar-links" aria-label="Primary Navigation">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">
+        <span class="nav-link-text">{{ i18n.t().navbar.home }}</span>
+        <span class="nav-active-botanical" aria-hidden="true">
+          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
+            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
+          </svg>
+        </span>
+      </a>
+      <a routerLink="/" routerLinkActive="" class="nav-link">
+        <span class="nav-link-text">{{ i18n.t().navbar.about }}</span>
+        <span class="nav-active-botanical" aria-hidden="true">
+          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
+            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
+          </svg>
+        </span>
+      </a>
+      <a routerLink="/" routerLinkActive="" class="nav-link">
+        <span class="nav-link-text">{{ i18n.t().navbar.products }}</span>
+        <span class="nav-active-botanical" aria-hidden="true">
+          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
+            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
+          </svg>
+        </span>
+      </a>
+      <a routerLink="/" routerLinkActive="" class="nav-link">
+        <span class="nav-link-text">{{ i18n.t().navbar.contact }}</span>
+        <span class="nav-active-botanical" aria-hidden="true">
+          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
+            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
+          </svg>
+        </span>
+      </a>
+    </nav>
+
+    <!-- 3. Right: Utility Controls (Translucent Hardware Dial & Metallic-Accented WhatsApp CTA) -->
+    <div class="navbar-actions">
+      <!-- Refined Translucent Language Switcher: EN · العربية -->
+      <div class="lang-switcher" role="group" aria-label="Language selection">
+        <button type="button" class="lang-btn" [class.active]="i18n.currentLang() === 'en'" (click)="setLanguage('en')"
+          aria-label="English">
+          EN
+        </button>
+        <span class="lang-dot" aria-hidden="true">·</span>
+        <button type="button" class="lang-btn lang-ar" [class.active]="i18n.currentLang() === 'ar'"
+          (click)="setLanguage('ar')" aria-label="العربية">
+          العربية
+        </button>
+      </div>
+
+      <!-- Premium Compact WhatsApp CTA (Deep Botanical Green) -->
+      <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="navbar-cta"
+        aria-label="WhatsApp Inquiry">
+        <i class="fa-brands fa-whatsapp cta-icon" aria-hidden="true"></i>
+        <span class="cta-text">{{ i18n.t().navbar.cta }}</span>
+      </a>
+
+      <!-- Redesigned Luxury Mobile Architectural Menu Trigger -->
+      <button type="button" class="mobile-menu-btn" (click)="toggleMobileMenu()" [class.is-open]="isMobileMenuOpen()"
+        [attr.aria-expanded]="isMobileMenuOpen()" aria-label="Navigation Menu">
+        <span class="btn-bars" aria-hidden="true">
+          <span class="bar bar-top"></span>
+          <span class="bar bar-bottom"></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Floating Glass Drawer -->
+  @if (isMobileMenuOpen()) {
+  <div class="mobile-menu-glass" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <nav class="mobile-nav">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="mobile-nav-link"
+        (click)="closeMobileMenu()">
+        <span class="m-link-text">{{ i18n.t().navbar.home }}</span>
+      </a>
+      <a routerLink="/" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+        <span class="m-link-text">{{ i18n.t().navbar.about }}</span>
+      </a>
+      <a routerLink="/" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+        <span class="m-link-text">{{ i18n.t().navbar.products }}</span>
+      </a>
+      <a routerLink="/" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+        <span class="m-link-text">{{ i18n.t().navbar.contact }}</span>
+      </a>
+    </nav>
+
+    <div class="mobile-actions">
+      <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="mobile-cta"
+        (click)="closeMobileMenu()">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        <span>{{ i18n.t().navbar.cta }}</span>
+      </a>
+    </div>
+  </div>
+  }
+</header>

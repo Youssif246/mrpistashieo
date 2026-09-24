@@ -1,0 +1,325 @@
+<!-- ==========================================================================
+     1. BOTANICAL CATALOG HERO
+     ========================================================================== -->
+<section class="catalog-hero-monograph">
+  <div class="container">
+    <div class="catalog-hero-lockup">
+      <span class="editorial-kicker">{{ i18n.t().products.hero.badge }}</span>
+      <h1 class="catalog-hero-headline">{{ i18n.t().products.hero.headline }}</h1>
+      <p class="catalog-hero-lead">{{ i18n.t().products.hero.description }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     2. UCB1 HYBRID ROOTSTOCK (MAJOR BOTANICAL CATALOG SPREAD)
+     ========================================================================== -->
+<section id="ucb1" class="catalog-chapter chapter-ucb1">
+  <div class="container">
+    <!-- Chapter Header -->
+    <div class="chapter-number-header">
+      <div class="chapter-index">
+        <span class="cat-num">01</span>
+        <span class="cat-label">Rootstock Portfolio</span>
+      </div>
+      <div class="chapter-meta-tag">
+        <span class="botanical-tag">{{ i18n.t().products.ucb1.badge }}</span>
+      </div>
+    </div>
+
+    <div class="ucb1-monograph-layout">
+      <div class="ucb1-prose-column">
+        <h2 class="ucb1-specimen-title">{{ i18n.t().products.ucb1.title }}</h2>
+        <span class="ucb1-binomial">{{ i18n.t().products.ucb1.subtitle }}</span>
+        <p class="ucb1-primary-desc">{{ i18n.t().products.ucb1.desc }}</p>
+
+        <!-- Technical Agronomic Specifications Table/List -->
+        <div class="agronomic-specs-roster">
+          <div class="spec-entry">
+            <span class="spec-index">A. Vigor</span>
+            <h4 class="spec-name">{{ i18n.t().products.ucb1.feat1Title }}</h4>
+            <p>{{ i18n.t().products.ucb1.feat1Desc }}</p>
+          </div>
+          <div class="spec-entry">
+            <span class="spec-index">B. Climate</span>
+            <h4 class="spec-name">{{ i18n.t().products.ucb1.feat2Title }}</h4>
+            <p>{{ i18n.t().products.ucb1.feat2Desc }}</p>
+          </div>
+          <div class="spec-entry">
+            <span class="spec-index">C. Salinity</span>
+            <h4 class="spec-name">{{ i18n.t().products.ucb1.feat3Title }}</h4>
+            <p>{{ i18n.t().products.ucb1.feat3Desc }}</p>
+          </div>
+          <div class="spec-entry">
+            <span class="spec-index">D. Pathogens</span>
+            <h4 class="spec-name">{{ i18n.t().products.ucb1.feat4Title }}</h4>
+            <p>{{ i18n.t().products.ucb1.feat4Desc }}</p>
+          </div>
+        </div>
+
+        <div class="delivery-format-strip">
+          <span class="strip-label">Availability & Format</span>
+          <p class="strip-text">{{ i18n.t().products.ucb1.formatNote }}</p>
+        </div>
+
+        <div class="ucb1-action-row">
+          <a [href]="getUcb1WhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-wa">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <span>{{ i18n.t().products.ucb1.cta }}</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Large Scale Nursery Visual -->
+      <div class="ucb1-photography-column">
+        <div class="art-frame ucb1-image-frame">
+          <img src="home-images/nursery.png" alt="Young UCB1 pistachio plants during controlled nursery propagation" class="catalog-plant-img" loading="lazy">
+          <div class="catalog-photo-plate">
+            <span class="plate-code">Catalog Plate 01-A</span>
+            <span class="plate-caption">Controlled Propagation Facility</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     3. TRADITIONAL MEDITERRANEAN ROOTSTOCKS (CORRESPONDING CHAPTER)
+     ========================================================================== -->
+<section id="traditional" class="catalog-chapter chapter-traditional">
+  <div class="container">
+    <div class="chapter-number-header">
+      <div class="chapter-index">
+        <span class="cat-num">02</span>
+        <span class="cat-label">Indigenous & Hardy Bases</span>
+      </div>
+      <div class="chapter-meta-tag">
+        <span class="botanical-tag">{{ i18n.t().products.traditional.tag }}</span>
+      </div>
+    </div>
+
+    <div class="traditional-intro-row">
+      <h2 class="chapter-display-title">{{ i18n.t().products.traditional.title }}</h2>
+      <p class="chapter-display-sub">{{ i18n.t().products.traditional.subtitle }}</p>
+    </div>
+
+    <!-- 2 Distinct Grand Botanical Entries (Not Cards!) -->
+    <div class="traditional-duo-spread">
+      <!-- Cornicabra -->
+      <div class="traditional-specimen-block">
+        <div class="specimen-header-strip">
+          <span class="botanical-tag">{{ i18n.t().products.traditional.cornicabraBadge }}</span>
+          <span class="specimen-index-tag">P. terebinthus</span>
+        </div>
+        <h3 class="specimen-title">{{ i18n.t().products.traditional.cornicabraTitle }}</h3>
+        <p class="specimen-body">{{ i18n.t().products.traditional.cornicabraDesc }}</p>
+
+        <div class="specimen-points-roster">
+          <div class="point-row">
+            <span class="point-bullet">&mdash;</span>
+            <p>{{ i18n.t().products.traditional.cornicabraPoint1 }}</p>
+          </div>
+          <div class="point-row">
+            <span class="point-bullet">&mdash;</span>
+            <p>{{ i18n.t().products.traditional.cornicabraPoint2 }}</p>
+          </div>
+          <div class="point-row">
+            <span class="point-bullet">&mdash;</span>
+            <p>{{ i18n.t().products.traditional.cornicabraPoint3 }}</p>
+          </div>
+        </div>
+
+        <div class="specimen-action">
+          <a [href]="getTraditionalWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-outline">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <span>{{ i18n.t().products.varieties.cta }}</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Atlantica -->
+      <div class="traditional-specimen-block">
+        <div class="specimen-header-strip">
+          <span class="botanical-tag">{{ i18n.t().products.traditional.atlanticaBadge }}</span>
+          <span class="specimen-index-tag">P. atlantica Desf.</span>
+        </div>
+        <h3 class="specimen-title">{{ i18n.t().products.traditional.atlanticaTitle }}</h3>
+        <p class="specimen-body">{{ i18n.t().products.traditional.atlanticaDesc }}</p>
+
+        <div class="specimen-points-roster">
+          <div class="point-row">
+            <span class="point-bullet">&mdash;</span>
+            <p>{{ i18n.t().products.traditional.atlanticaPoint1 }}</p>
+          </div>
+          <div class="point-row">
+            <span class="point-bullet">&mdash;</span>
+            <p>{{ i18n.t().products.traditional.atlanticaPoint2 }}</p>
+          </div>
+          <div class="point-row">
+            <span class="point-bullet">&mdash;</span>
+            <p>{{ i18n.t().products.traditional.atlanticaPoint3 }}</p>
+          </div>
+        </div>
+
+        <div class="specimen-action">
+          <a [href]="getTraditionalWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-outline">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <span>{{ i18n.t().products.varieties.cta }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     4. GRAFTED PISTACHIO PLANTS (FIELD-READY FORMAT GUIDE)
+     ========================================================================== -->
+<section id="grafted" class="catalog-chapter chapter-grafted">
+  <div class="container">
+    <div class="chapter-number-header">
+      <div class="chapter-index">
+        <span class="cat-num">03</span>
+        <span class="cat-label">Production Stock</span>
+      </div>
+      <div class="chapter-meta-tag">
+        <span class="botanical-tag">{{ i18n.t().products.grafted.tag }}</span>
+      </div>
+    </div>
+
+    <div class="grafted-headline-block">
+      <h2 class="chapter-display-title">{{ i18n.t().products.grafted.title }}</h2>
+      <p class="chapter-display-sub">{{ i18n.t().products.grafted.desc }}</p>
+    </div>
+
+    <!-- Architectural Dual Format Comparison -->
+    <div class="format-editorial-spread">
+      <!-- Containerized Format -->
+      <div class="format-editorial-pane">
+        <span class="pane-season">Spring / Autumn Planting</span>
+        <h3 class="pane-title">{{ i18n.t().products.grafted.potTitle }}</h3>
+        <p class="pane-desc">{{ i18n.t().products.grafted.potDesc }}</p>
+        <div class="pane-highlights">
+          <div class="pane-hl-item">
+            <i class="fa-solid fa-check hl-icon" aria-hidden="true"></i>
+            <span>{{ i18n.t().products.grafted.potPoint1 }}</span>
+          </div>
+          <div class="pane-hl-item">
+            <i class="fa-solid fa-check hl-icon" aria-hidden="true"></i>
+            <span>{{ i18n.t().products.grafted.potPoint2 }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bare-Root Format -->
+      <div class="format-editorial-pane">
+        <span class="pane-season">Winter Dormancy Plantation</span>
+        <h3 class="pane-title">{{ i18n.t().products.grafted.bareTitle }}</h3>
+        <p class="pane-desc">{{ i18n.t().products.grafted.bareDesc }}</p>
+        <div class="pane-highlights">
+          <div class="pane-hl-item">
+            <i class="fa-solid fa-check hl-icon" aria-hidden="true"></i>
+            <span>{{ i18n.t().products.grafted.barePoint1 }}</span>
+          </div>
+          <div class="pane-hl-item">
+            <i class="fa-solid fa-check hl-icon" aria-hidden="true"></i>
+            <span>{{ i18n.t().products.grafted.barePoint2 }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grafted-cta-row text-center">
+      <a [href]="getGraftedWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-wa">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        <span>{{ i18n.t().products.grafted.cta }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     5. COMMERCIAL CULTIVARS & POLLINATORS (BOTANICAL TAXONOMY CATALOG)
+     ========================================================================== -->
+<section id="varieties" class="catalog-chapter chapter-varieties">
+  <div class="container">
+    <div class="chapter-number-header">
+      <div class="chapter-index">
+        <span class="cat-num">04</span>
+        <span class="cat-label">Cultivar Portfolio</span>
+      </div>
+      <div class="chapter-meta-tag">
+        <span class="botanical-tag">{{ i18n.t().products.varieties.tag }}</span>
+      </div>
+    </div>
+
+    <div class="varieties-taxonomy-header">
+      <h2 class="chapter-display-title">{{ i18n.t().products.varieties.title }}</h2>
+      <p class="chapter-display-sub">{{ i18n.t().products.varieties.desc }}</p>
+    </div>
+
+    <!-- 4 Cultivar Monograph Entries -->
+    <div class="cultivars-taxonomy-list">
+      <!-- Kerman -->
+      <div class="cultivar-entry">
+        <div class="cultivar-meta-col">
+          <span class="cultivar-code">CUL-KER</span>
+          <span class="cultivar-badge">{{ i18n.t().products.varieties.kermanBadge }}</span>
+          <span class="cultivar-sex">♀ Female Producer</span>
+        </div>
+        <div class="cultivar-info-col">
+          <h3 class="cultivar-name">{{ i18n.t().products.varieties.kermanTitle }}</h3>
+          <p class="cultivar-prose">{{ i18n.t().products.varieties.kermanDesc }}</p>
+        </div>
+      </div>
+
+      <!-- Sirora -->
+      <div class="cultivar-entry">
+        <div class="cultivar-meta-col">
+          <span class="cultivar-code">CUL-SIR</span>
+          <span class="cultivar-badge">{{ i18n.t().products.varieties.siroraBadge }}</span>
+          <span class="cultivar-sex">♀ Female Producer</span>
+        </div>
+        <div class="cultivar-info-col">
+          <h3 class="cultivar-name">{{ i18n.t().products.varieties.siroraTitle }}</h3>
+          <p class="cultivar-prose">{{ i18n.t().products.varieties.siroraDesc }}</p>
+        </div>
+      </div>
+
+      <!-- Larnaka -->
+      <div class="cultivar-entry">
+        <div class="cultivar-meta-col">
+          <span class="cultivar-code">CUL-LAR</span>
+          <span class="cultivar-badge">{{ i18n.t().products.varieties.larnakaBadge }}</span>
+          <span class="cultivar-sex">♀ Female Producer</span>
+        </div>
+        <div class="cultivar-info-col">
+          <h3 class="cultivar-name">{{ i18n.t().products.varieties.larnakaTitle }}</h3>
+          <p class="cultivar-prose">{{ i18n.t().products.varieties.larnakaDesc }}</p>
+        </div>
+      </div>
+
+      <!-- Pollinators -->
+      <div class="cultivar-entry pollinator-entry">
+        <div class="cultivar-meta-col">
+          <span class="cultivar-code">POL-SYNC</span>
+          <span class="cultivar-badge">{{ i18n.t().products.varieties.pollinatorsBadge }}</span>
+          <span class="cultivar-sex">♂ Male Pollinator</span>
+        </div>
+        <div class="cultivar-info-col">
+          <h3 class="cultivar-name">{{ i18n.t().products.varieties.pollinatorsTitle }}</h3>
+          <p class="cultivar-prose">{{ i18n.t().products.varieties.pollinatorsDesc }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Catalog Inquiry Action -->
+    <div class="catalog-inquiry-bar text-center">
+      <a [href]="getVarietiesWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-wa">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        <span>{{ i18n.t().products.varieties.cta }}</span>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,271 @@
+/* ==========================================================================
+   CONTACT PAGE - MINIMAL, CONFIDENT EDITORIAL ART DIRECTION
+   ========================================================================== */
+
+/* 1. Statement Hero */
+.contact-statement-hero {
+  padding-top: clamp(4rem, 8vw, 7.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5.5rem);
+  background-color: var(--c-ivory);
+  border-bottom: 1px solid var(--c-sand);
+}
+
+.statement-lockup {
+  max-width: 980px;
+}
+
+.statement-hero-title {
+  font-size: clamp(2.8rem, 6.5vw, 5.4rem);
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--c-forest);
+  margin-bottom: 1.5rem;
+}
+
+.statement-hero-lead {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  color: var(--c-slate);
+  line-height: 1.65;
+  max-width: 740px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Contact Spread Layout
+   -------------------------------------------------------------------------- */
+.section-contact-spread {
+  padding-block: var(--spacing-macro);
+  background-color: var(--c-ivory-light);
+  border-bottom: 1px solid var(--c-sand);
+}
+
+.contact-spread-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-spread-grid {
+    grid-template-columns: 1fr 1.25fr;
+    gap: clamp(4rem, 7vw, 7rem);
+    align-items: flex-start;
+  }
+}
+
+.dossier-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  color: var(--c-forest);
+  margin-bottom: 0.75rem;
+}
+
+.dossier-intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--c-slate);
+  margin-bottom: 2.5rem;
+}
+
+/* Direct WhatsApp Banner */
+.dossier-wa-banner {
+  background-color: var(--c-ivory-warm);
+  border: 1px solid var(--c-sand);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.wa-kicker {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--c-pistachio-deep);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.wa-action-title {
+  font-size: 1.35rem;
+  color: var(--c-forest);
+  margin-bottom: 0.25rem;
+}
+
+.wa-action-sub {
+  font-size: 0.9rem;
+  color: var(--c-slate);
+  margin-bottom: 0;
+}
+
+/* Coordinates Ledger */
+.coordinates-ledger {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--c-sand);
+  margin-bottom: 3rem;
+}
+
+.ledger-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-block: 1.25rem;
+  border-bottom: 1px solid var(--c-sand);
+}
+
+.ledger-label {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-slate-light);
+  font-weight: 600;
+}
+
+.ledger-val {
+  font-size: 1.05rem;
+  color: var(--c-forest);
+  font-weight: 500;
+}
+
+/* Social Block */
+.dossier-social-block {
+  padding-top: 1rem;
+}
+
+.dossier-social-kicker {
+  display: block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--c-forest);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dossier-social-p {
+  font-size: 0.92rem;
+  color: var(--c-slate);
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.dossier-social-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.social-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 1.15rem;
+  background-color: #FFFFFF;
+  border: 1px solid var(--c-sand);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--c-forest);
+  transition: var(--transition-fast);
+}
+
+.social-chip:hover {
+  border-color: var(--c-forest);
+  transform: translateY(-2px);
+}
+
+/* Bespoke Form Pane */
+.bespoke-form-pane {
+  background-color: #FFFFFF;
+  border: 1px solid var(--c-sand);
+  padding: clamp(2.5rem, 5vw, 4rem);
+}
+
+.form-display-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
+  color: var(--c-forest);
+  margin-bottom: 0.75rem;
+}
+
+.form-display-lead {
+  font-size: 0.98rem;
+  color: var(--c-slate);
+  margin-bottom: 2.5rem;
+  line-height: 1.65;
+}
+
+.fields-dual-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .fields-dual-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-dispatch-btn {
+  width: 100%;
+  padding: 1.15rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.92rem;
+}
+
+.form-disclaimer {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.8rem;
+  color: var(--c-slate-light);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.disclaimer-icon {
+  color: var(--c-pistachio);
+  flex-shrink: 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. Minimalist Location Plate
+   -------------------------------------------------------------------------- */
+.section-location-monolith {
+  padding-block: clamp(3rem, 6vw, 5rem);
+  background-color: var(--c-ivory);
+}
+
+.location-monolith-plate {
+  border: 1px solid var(--c-sand);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--c-ivory-warm);
+}
+
+@media (min-width: 768px) {
+  .location-monolith-plate {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.plate-location-name {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: var(--c-forest);
+  margin-bottom: 0.25rem;
+}
+
+.plate-sub {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-slate-light);
+}

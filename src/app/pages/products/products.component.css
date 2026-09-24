@@ -1,0 +1,461 @@
+/* ==========================================================================
+   PRODUCTS PAGE - BOTANICAL CATALOG MONOGRAPH
+   ========================================================================== */
+
+/* 1. Catalog Hero */
+.catalog-hero-monograph {
+  padding-top: clamp(4rem, 8vw, 7.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5.5rem);
+  background-color: var(--c-ivory);
+  border-bottom: 1px solid var(--c-sand);
+}
+
+.catalog-hero-lockup {
+  max-width: 980px;
+}
+
+.catalog-hero-headline {
+  font-size: clamp(2.8rem, 6.5vw, 5.4rem);
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--c-forest);
+  margin-bottom: 1.5rem;
+}
+
+.catalog-hero-lead {
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  color: var(--c-slate);
+  line-height: 1.65;
+  max-width: 760px;
+}
+
+/* --------------------------------------------------------------------------
+   Chapters Shared Architectural Styling
+   -------------------------------------------------------------------------- */
+.catalog-chapter {
+  padding-block: var(--spacing-macro);
+  border-bottom: 1px solid var(--c-sand);
+}
+
+.chapter-number-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--c-sand);
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.chapter-index {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.cat-num {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: var(--c-forest);
+  line-height: 1;
+}
+
+:host-context(body.rtl) .cat-num {
+  font-family: var(--font-ar-display);
+}
+
+.cat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--c-slate-light);
+  font-weight: 600;
+}
+
+.chapter-display-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  line-height: 1.1;
+  color: var(--c-forest);
+  margin-bottom: 0.75rem;
+}
+
+.chapter-display-sub {
+  font-size: 1.15rem;
+  color: var(--c-slate);
+  margin-bottom: 3.5rem;
+  max-width: 700px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Chapter UCB1 (Major Botanical Spread)
+   -------------------------------------------------------------------------- */
+.chapter-ucb1 {
+  background-color: var(--c-ivory-light);
+}
+
+.ucb1-monograph-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
+
+@media (min-width: 1024px) {
+  .ucb1-monograph-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(3.5rem, 6vw, 6rem);
+    align-items: flex-start;
+  }
+}
+
+.ucb1-specimen-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  color: var(--c-forest);
+  margin-bottom: 0.35rem;
+}
+
+.ucb1-binomial {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--c-pistachio-deep);
+  margin-bottom: 1.5rem;
+}
+
+.ucb1-primary-desc {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+}
+
+.agronomic-specs-roster {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  padding-block: 2rem;
+  border-top: 1px solid var(--c-sand);
+  border-bottom: 1px solid var(--c-sand);
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .agronomic-specs-roster {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.spec-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.spec-index {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-slate-light);
+  font-weight: 600;
+}
+
+.spec-name {
+  font-size: 1.1rem;
+  color: var(--c-forest);
+}
+
+.spec-entry p {
+  font-size: 0.9rem;
+  color: var(--c-slate);
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+.delivery-format-strip {
+  margin-bottom: 2.5rem;
+}
+
+.strip-label {
+  display: block;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-forest);
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.strip-text {
+  font-size: 0.95rem;
+  color: var(--c-slate);
+}
+
+.ucb1-photography-column {
+  position: sticky;
+  top: 100px;
+}
+
+.ucb1-image-frame {
+  aspect-ratio: 4 / 3.8;
+  position: relative;
+}
+
+.catalog-photo-plate {
+  position: absolute;
+  bottom: 1.25rem;
+  inset-inline-start: 1.25rem;
+  background-color: rgba(10, 20, 14, 0.88);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.plate-code {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--c-pistachio);
+  font-family: monospace;
+}
+
+.plate-caption {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Chapter Traditional Mediterranean Rootstocks
+   -------------------------------------------------------------------------- */
+.chapter-traditional {
+  background-color: var(--c-ivory);
+}
+
+.traditional-duo-spread {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+}
+
+@media (min-width: 900px) {
+  .traditional-duo-spread {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(3rem, 6vw, 6rem);
+  }
+}
+
+.traditional-specimen-block {
+  border-top: 2px solid var(--c-forest);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.specimen-header-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.specimen-index-tag {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--c-slate-light);
+}
+
+.specimen-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--c-forest);
+  margin-bottom: 1rem;
+}
+
+.specimen-body {
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.specimen-points-roster {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 2.5rem;
+  flex-grow: 1;
+}
+
+.point-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.point-bullet {
+  color: var(--c-pistachio);
+  font-weight: 700;
+}
+
+.point-row p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.specimen-action {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--c-sand);
+}
+
+/* --------------------------------------------------------------------------
+   4. Chapter Grafted Plants
+   -------------------------------------------------------------------------- */
+.chapter-grafted {
+  background-color: var(--c-ivory-warm);
+}
+
+.format-editorial-spread {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .format-editorial-spread {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.format-editorial-pane {
+  background-color: var(--c-ivory-light);
+  border: 1px solid var(--c-sand);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.pane-season {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--c-pistachio-deep);
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.pane-title {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: var(--c-forest);
+  margin-bottom: 1rem;
+}
+
+.pane-desc {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.pane-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--c-sand);
+}
+
+.pane-hl-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--c-forest);
+}
+
+.hl-icon {
+  color: var(--c-pistachio);
+  font-size: 0.85rem;
+}
+
+.grafted-cta-row {
+  margin-top: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Chapter Varieties & Pollinators
+   -------------------------------------------------------------------------- */
+.chapter-varieties {
+  background-color: var(--c-ivory);
+}
+
+.cultivars-taxonomy-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--c-sand);
+  margin-bottom: 4rem;
+}
+
+.cultivar-entry {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding-block: clamp(2rem, 3.5vw, 3.25rem);
+  border-bottom: 1px solid var(--c-sand);
+}
+
+@media (min-width: 768px) {
+  .cultivar-entry {
+    grid-template-columns: 260px 1fr;
+    gap: 3.5rem;
+  }
+}
+
+.cultivar-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cultivar-code {
+  font-family: monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--c-slate-light);
+}
+
+.cultivar-badge {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-pistachio-deep);
+  font-weight: 600;
+}
+
+.cultivar-sex {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--c-forest);
+}
+
+.cultivar-name {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: var(--c-forest);
+  margin-bottom: 0.75rem;
+}
+
+.cultivar-prose {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--c-slate);
+  max-width: 820px;
+  margin-bottom: 0;
+}
+
+.pollinator-entry {
+  background-color: rgba(212, 180, 125, 0.05);
+  padding-inline: 1.5rem;
+}

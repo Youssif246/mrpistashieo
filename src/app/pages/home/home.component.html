@@ -1,0 +1,739 @@
+<!-- ==========================================================================
+     1. CINEMATIC HERO (IMMERSIVE, PHOTOGRAPHY-LED)
+     ========================================================================== -->
+<section class="hero">
+  <div class="hero-backdrop-frame">
+    <img src="home-images/hero.png" alt="Pistachio Cultivation & Mediterranean Plantation" class="hero-backdrop-img"
+      priority>
+    <div class="hero-gradient-scrim"></div>
+  </div>
+
+  <div class="hero-content">
+    <!-- Centered Eyebrow -->
+    <div class="hero-eyebrow">
+      <span class="eyebrow-accent-line" aria-hidden="true"></span>
+      <span class="eyebrow-text">{{ i18n.t().home.hero.badge }}</span>
+      <span class="eyebrow-dot" aria-hidden="true">·</span>
+      <span class="eyebrow-botanical">{{ i18n.t().home.hero.botanical }}</span>
+    </div>
+
+    <!-- Centered Main Headline with Controlled Desktop Line Break -->
+    <h1 class="hero-title">
+      @if (i18n.currentLang() === 'en') {
+      Pistachio Cultivation, Rooted<br class="desktop-break"> in Precision.
+      } @else {
+      {{ i18n.t().home.hero.title }}
+      }
+    </h1>
+
+    <!-- Centered Supporting Statement -->
+    <p class="hero-description">
+      {{ i18n.t().home.hero.description }}
+    </p>
+
+    <!-- Centered CTA Buttons (Unified Premium Button System - No Arrows) -->
+    <div class="hero-cta-row">
+      <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="hero-cta-primary"
+        aria-label="WhatsApp Inquiry">
+        <i class="fa-brands fa-whatsapp cta-wa-icon" aria-hidden="true"></i>
+        <span>{{ i18n.t().home.hero.ctaPrimary }}</span>
+      </a>
+      <a routerLink="/" class="hero-cta-secondary">
+        <span>{{ i18n.t().home.hero.ctaSecondary }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     2. EDITORIAL BRAND STATEMENT (SPACIOUS, TYPOGRAPHY-DRIVEN)
+     ========================================================================== -->
+<section class="botanical-editorial-section" id="agricultural-specialization">
+  <!-- Clean Architectural Typographic Watermark & Subtle Botanical Branch Contour -->
+  <div class="botanical-ambient-canvas" aria-hidden="true">
+    <div class="botanical-wordmark-layer">
+      <span class="bg-wordmark-text">{{ i18n.t().home.positioning.watermark }}</span>
+    </div>
+    <!-- Ultra-subtle pistachio botanical branch silhouette entering from margin -->
+    <svg class="botanical-ambient-branch" viewBox="0 0 500 500" fill="none">
+      <path d="M 0,440 C 120,410 240,320 340,210 C 390,155 440,90 490,30" stroke="#768E37" stroke-width="1.4"
+        stroke-opacity="0.05" />
+      <path d="M 140,390 C 175,330 205,320 255,340 C 245,380 195,400 140,390 Z" fill="#768E37" fill-opacity="0.035"
+        stroke="#768E37" stroke-width="1" stroke-opacity="0.05" />
+      <path d="M 250,300 C 290,240 330,245 365,275 C 340,315 290,320 250,300 Z" fill="#768E37" fill-opacity="0.035"
+        stroke="#768E37" stroke-width="1" stroke-opacity="0.05" />
+      <path d="M 350,190 C 375,130 415,120 450,150 C 430,195 385,205 350,190 Z" fill="#768E37" fill-opacity="0.035"
+        stroke="#768E37" stroke-width="1" stroke-opacity="0.05" />
+    </svg>
+  </div>
+
+  <!-- FOREGROUND: Art-Directed Editorial Manifesto Spread -->
+  <div class="editorial-manifesto-canvas">
+
+    <!-- Zone A: Dominant Headline & Offset Narrative Note -->
+    <header class="manifesto-header-zone">
+      <div class="manifesto-headline-block">
+        <div class="manifesto-tag-lockup">
+          <span class="tag-accent-node" aria-hidden="true"></span>
+          <span class="manifesto-tag-label">{{ i18n.t().home.positioning.tag }}</span>
+        </div>
+        <h2 class="manifesto-display-title">
+          <span class="title-primary">{{ i18n.t().home.positioning.statementLine1 }}</span>
+          <span class="title-accent">{{ i18n.t().home.positioning.statementLine2 }}</span>
+        </h2>
+      </div>
+
+      <!-- Offset Secondary Editorial Note -->
+      <aside class="manifesto-offset-narrative">
+        <p class="offset-note-text">
+          {{ i18n.t().home.positioning.narrative }}
+        </p>
+      </aside>
+    </header>
+
+    <!-- Zone B: The Botanical Knowledge Trail (Asymmetric Continuous Growth Path) -->
+    <div class="botanical-knowledge-trail">
+
+      <!-- SVG Connecting Organic Stem Path (Midground) -->
+      <svg class="trail-stem-svg" viewBox="0 0 1200 80" fill="none" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M40 40 C260 40, 420 18, 600 18 C780 18, 920 62, 1160 62" stroke="#768E37" stroke-width="1.2"
+          stroke-dasharray="3 4" opacity="0.32" />
+      </svg>
+
+      <!-- Trail Point 1: Left-anchored -->
+      <article class="trail-station station-alpha">
+        <div class="station-anchor">
+          <span class="station-node" aria-hidden="true"></span>
+          <span class="station-line" aria-hidden="true"></span>
+        </div>
+        <div class="station-content">
+          <h3 class="station-title">{{ i18n.t().home.positioning.pillar1Title }}</h3>
+          <p class="station-desc">{{ i18n.t().home.positioning.pillar1Desc }}</p>
+        </div>
+      </article>
+
+      <!-- Trail Point 2: Staggered Center / Elevated -->
+      <article class="trail-station station-beta">
+        <div class="station-anchor">
+          <span class="station-node" aria-hidden="true"></span>
+          <span class="station-line" aria-hidden="true"></span>
+        </div>
+        <div class="station-content">
+          <h3 class="station-title">{{ i18n.t().home.positioning.pillar2Title }}</h3>
+          <p class="station-desc">{{ i18n.t().home.positioning.pillar2Desc }}</p>
+        </div>
+      </article>
+
+      <!-- Trail Point 3: Shifted Right / Anchored -->
+      <article class="trail-station station-gamma">
+        <div class="station-anchor">
+          <span class="station-node" aria-hidden="true"></span>
+          <span class="station-line" aria-hidden="true"></span>
+        </div>
+        <div class="station-content">
+          <h3 class="station-title">{{ i18n.t().home.positioning.pillar3Title }}</h3>
+          <p class="station-desc">{{ i18n.t().home.positioning.pillar3Desc }}</p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<hr class="hairline">
+
+<!-- ==========================================================================
+     3. EDITORIAL SERVICE PANELS (3 CURATED STAGES WITH EDITORIAL PHOTOGRAPHY)
+     ========================================================================== -->
+<section class="section-service-index">
+  <!-- Clean Editorial Background Watermark & Agricultural Field-Row Curves -->
+  <div class="services-ambient-layer" aria-hidden="true">
+    <span class="services-bg-watermark">{{ i18n.t().home.services.watermark }}</span>
+    <svg class="services-field-rows" viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none">
+      <path d="M-100,100 C320,60 720,160 1540,90" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.04" />
+      <path d="M-100,180 C360,140 800,250 1540,170" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.038" />
+      <path d="M-100,260 C400,220 880,340 1540,250" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.035" />
+      <path d="M-100,340 C440,300 960,430 1540,330" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.03" />
+      <path d="M-100,420 C480,380 1040,520 1540,410" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.025" />
+    </svg>
+  </div>
+
+  <div class="service-index-container">
+    <!-- Section Header: Refined & Horizontal -->
+    <header class="service-index-header">
+      <div class="service-header-lead">
+        <div class="service-tag-lockup">
+          <span class="service-tag-pip" aria-hidden="true"></span>
+          <span class="service-tag-label">{{ i18n.t().home.services.tag }}</span>
+        </div>
+        <h2 class="service-index-title">{{ i18n.t().home.services.title }}</h2>
+      </div>
+      <p class="service-header-subtitle">
+        {{ i18n.t().home.services.subtitle }}
+      </p>
+    </header>
+
+    <!-- 3 Editorial Service Panels Grid -->
+    <div class="editorial-service-panels">
+
+      <!-- Panel 01: Soil Preparation & Analysis -->
+      <article class="service-panel panel-soil">
+        <div class="panel-image-wrapper">
+          <div class="panel-image-frame">
+            <img src="about-images/story.png" alt="Soil preparation and agricultural field terrain analysis"
+              class="panel-img" loading="lazy">
+          </div>
+          <div class="panel-num-badge">
+            <span class="panel-num">{{ i18n.t().home.services.s1Num }}</span>
+            <span class="panel-num-pip" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="panel-content">
+          <span class="panel-category">{{ i18n.t().home.services.s1Category }}</span>
+          <h3 class="panel-title">{{ i18n.t().home.services.s1Title }}</h3>
+          <p class="panel-desc">{{ i18n.t().home.services.s1Desc }}</p>
+          <span class="panel-bottom-accent" aria-hidden="true"></span>
+        </div>
+      </article>
+
+      <!-- Panel 02: Specialized Field Grafting (Slightly Shifted on Desktop) -->
+      <article class="service-panel panel-grafting">
+        <div class="panel-image-wrapper">
+          <div class="panel-image-frame">
+            <img src="about-images/expertise.png" alt="Professional pistachio scion budding and field grafting"
+              class="panel-img" loading="lazy">
+          </div>
+          <div class="panel-num-badge">
+            <span class="panel-num">{{ i18n.t().home.services.s2Num }}</span>
+            <span class="panel-num-pip" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="panel-content">
+          <span class="panel-category">{{ i18n.t().home.services.s2Category }}</span>
+          <h3 class="panel-title">{{ i18n.t().home.services.s2Title }}</h3>
+          <p class="panel-desc">{{ i18n.t().home.services.s2Desc }}</p>
+          <span class="panel-bottom-accent" aria-hidden="true"></span>
+        </div>
+      </article>
+
+      <!-- Panel 03: Post-Planting Hydration -->
+      <article class="service-panel panel-hydration">
+        <div class="panel-image-wrapper">
+          <div class="panel-image-frame">
+            <img src="home-images/nursery.png"
+              alt="Pistachio plantation irrigation and post-planting hydration infrastructure" class="panel-img"
+              loading="lazy">
+          </div>
+          <div class="panel-num-badge">
+            <span class="panel-num">{{ i18n.t().home.services.s3Num }}</span>
+            <span class="panel-num-pip" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="panel-content">
+          <span class="panel-category">{{ i18n.t().home.services.s3Category }}</span>
+          <h3 class="panel-title">{{ i18n.t().home.services.s3Title }}</h3>
+          <p class="panel-desc">{{ i18n.t().home.services.s3Desc }}</p>
+          <span class="panel-bottom-accent" aria-hidden="true"></span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Refined Editorial CTA: View All Services (No Arrows) -->
+    <div class="service-index-footer">
+      <a routerLink="/services" class="editorial-cta-link">
+        <span class="cta-text">{{ i18n.t().home.services.viewAll }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     4. BOTANICAL DETAIL (MACRO VISUAL MOMENT)
+     ========================================================================== -->
+<!-- ==========================================================================
+     4. BOTANICAL DETAIL (ARCHITECTURAL BOTANICAL DOSSIER)
+     ========================================================================== -->
+<section class="section-botanical-monograph">
+  <!-- Subtle Botanical Diagram / Caliper Circular Structure -->
+  <div class="monograph-ambient-layer" aria-hidden="true">
+    <svg class="monograph-ambient-diagram" viewBox="0 0 700 700" fill="none">
+      <circle cx="350" cy="350" r="300" stroke="#768E37" stroke-width="1" stroke-dasharray="4 8"
+        stroke-opacity="0.05" />
+      <circle cx="350" cy="350" r="210" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.04" />
+      <circle cx="350" cy="350" r="110" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.05" />
+      <line x1="350" y1="30" x2="350" y2="670" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.035" />
+      <line x1="30" y1="350" x2="670" y2="350" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.035" />
+    </svg>
+  </div>
+
+  <div class="container-wide">
+    <!-- Header Bar with Dual Typography & Scientific Metadata -->
+    <header class="monograph-header-block">
+      <div class="monograph-badge-row">
+        <span class="monograph-pill-badge">
+          <i class="fa-solid fa-seedling badge-icon" aria-hidden="true"></i>
+          <span>{{ i18n.t().home.botanical.tag }}</span>
+        </span>
+        <span class="badge-dot" aria-hidden="true">•</span>
+        <span class="monograph-sub-badge">{{ i18n.t().home.botanical.tagBadge }}</span>
+      </div>
+
+      <div class="monograph-headline-grid">
+        <div class="monograph-headline-col">
+          <h2 class="monograph-title">{{ i18n.t().home.botanical.title }}</h2>
+          <p class="monograph-latin-subtitle">{{ i18n.t().home.botanical.latinSubtitle }}</p>
+        </div>
+        <div class="monograph-narrative-col">
+          <p class="monograph-lead-desc">{{ i18n.t().home.botanical.desc }}</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Architectural Grid: Specimen Showcase + Interactive Dossier Cards -->
+    <div class="monograph-architecture-grid">
+      <!-- Left Column: Archival Specimen Showcase -->
+      <div class="specimen-showcase-column">
+        <div class="specimen-frame">
+          <!-- Scientific Precision Marks -->
+          <span class="specimen-crosshair crosshair-tl" aria-hidden="true">┼</span>
+          <span class="specimen-crosshair crosshair-tr" aria-hidden="true">┼</span>
+          <span class="specimen-crosshair crosshair-bl" aria-hidden="true">┼</span>
+          <span class="specimen-crosshair crosshair-br" aria-hidden="true">┼</span>
+
+          <!-- Coordinates Strip -->
+          <div class="specimen-coord-strip" aria-hidden="true">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <span>{{ i18n.t().home.botanical.specimenCoordinates }}</span>
+          </div>
+
+          <!-- Macro Specimen Image -->
+          <div class="specimen-img-container">
+            <img src="home-images/pistachio-detail.png" alt="Botanical macro detail of pistachio clusters"
+              class="specimen-macro-img" loading="lazy">
+          </div>
+
+          <!-- Floating Glassmorphic Specimen HUD -->
+          <div class="specimen-floating-hud">
+            <div class="hud-top-row">
+              <div class="hud-latin-wrap">
+                <i class="fa-solid fa-leaf hud-leaf-icon" aria-hidden="true"></i>
+                <span class="hud-latin-name">{{ i18n.t().home.botanical.specimenLatin }}</span>
+              </div>
+              <span class="hud-status-pill">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                {{ i18n.t().home.botanical.specimenLabel }}
+              </span>
+            </div>
+            <p class="hud-quality-desc">{{ i18n.t().home.botanical.specimenQuality }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: 3 Interactive Botanical Dossier Cards -->
+      <div class="dossier-cards-column">
+        <!-- Card 01: Climatic Defense -->
+        <article class="botanical-dossier-card">
+          <div class="card-glow-layer" aria-hidden="true"></div>
+          <div class="card-inner">
+            <div class="card-header-bar">
+              <div class="card-index-group">
+                <span class="card-num-chip">{{ i18n.t().home.botanical.card1Num }}</span>
+                <span class="card-tag-text">{{ i18n.t().home.botanical.card1Tag }}</span>
+              </div>
+              <div class="card-icon-emblem" aria-hidden="true">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+            </div>
+
+            <div class="card-content-body">
+              <h3 class="card-headline">{{ i18n.t().home.botanical.card1Title }}</h3>
+              <p class="card-explanation">{{ i18n.t().home.botanical.card1Desc }}</p>
+            </div>
+
+            <div class="card-metrics-strip">
+              <div class="metric-chip primary-metric">
+                <i class="fa-solid fa-temperature-arrow-up" aria-hidden="true"></i>
+                <span>{{ i18n.t().home.botanical.card1Metric }}</span>
+              </div>
+              <div class="metric-chip secondary-metric">
+                <i class="fa-solid fa-water" aria-hidden="true"></i>
+                <span>{{ i18n.t().home.botanical.card1Submetric }}</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 02: Phenological Cycle / Dormancy -->
+        <article class="botanical-dossier-card">
+          <div class="card-glow-layer" aria-hidden="true"></div>
+          <div class="card-inner">
+            <div class="card-header-bar">
+              <div class="card-index-group">
+                <span class="card-num-chip">{{ i18n.t().home.botanical.card2Num }}</span>
+                <span class="card-tag-text">{{ i18n.t().home.botanical.card2Tag }}</span>
+              </div>
+              <div class="card-icon-emblem" aria-hidden="true">
+                <i class="fa-solid fa-snowflake"></i>
+              </div>
+            </div>
+
+            <div class="card-content-body">
+              <h3 class="card-headline">{{ i18n.t().home.botanical.card2Title }}</h3>
+              <p class="card-explanation">{{ i18n.t().home.botanical.card2Desc }}</p>
+            </div>
+
+            <div class="card-metrics-strip">
+              <div class="metric-chip primary-metric">
+                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <span>{{ i18n.t().home.botanical.card2Metric }}</span>
+              </div>
+              <div class="metric-chip secondary-metric">
+                <i class="fa-solid fa-arrows-spin" aria-hidden="true"></i>
+                <span>{{ i18n.t().home.botanical.card2Submetric }}</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 03: Commercial Trajectory -->
+        <article class="botanical-dossier-card">
+          <div class="card-glow-layer" aria-hidden="true"></div>
+          <div class="card-inner">
+            <div class="card-header-bar">
+              <div class="card-index-group">
+                <span class="card-num-chip">{{ i18n.t().home.botanical.card3Num }}</span>
+                <span class="card-tag-text">{{ i18n.t().home.botanical.card3Tag }}</span>
+              </div>
+              <div class="card-icon-emblem" aria-hidden="true">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+              </div>
+            </div>
+
+            <div class="card-content-body">
+              <h3 class="card-headline">{{ i18n.t().home.botanical.card3Title }}</h3>
+              <p class="card-explanation">{{ i18n.t().home.botanical.card3Desc }}</p>
+            </div>
+
+            <div class="card-metrics-strip">
+              <div class="metric-chip primary-metric">
+                <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                <span>{{ i18n.t().home.botanical.card3Metric }}</span>
+              </div>
+              <div class="metric-chip secondary-metric">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                <span>{{ i18n.t().home.botanical.card3Submetric }}</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Editorial Action Bar & Certification Mark (No Arrows) -->
+    <div class="monograph-action-footer">
+      <a routerLink="/products" class="monograph-cta-button">
+        <span class="btn-text">{{ i18n.t().home.botanical.cta }}</span>
+      </a>
+
+      <div class="monograph-certification-seal" aria-hidden="true">
+        <i class="fa-solid fa-spa seal-leaf"></i>
+        <span>{{ i18n.t().home.botanical.publicationMark }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     5. NURSERY CULTIVATION (ASYMMETRICAL EDITORIAL SPREAD)
+     ========================================================================== -->
+<section class="section-nursery-editorial">
+  <!-- Oversized Background Watermark & Nursery Row Geometry -->
+  <div class="nursery-watermark-wrap" aria-hidden="true">
+    <span class="nursery-watermark-text">{{ i18n.t().home.nursery.watermark }}</span>
+    <svg class="nursery-ambient-geometry" viewBox="0 0 1200 500" preserveAspectRatio="none" fill="none">
+      <line x1="150" y1="0" x2="150" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.04"
+        stroke-dasharray="6 8" />
+      <line x1="450" y1="0" x2="450" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.035" />
+      <line x1="750" y1="0" x2="750" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.04"
+        stroke-dasharray="6 8" />
+      <line x1="1050" y1="0" x2="1050" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.035" />
+      <path d="M 0,460 L 1200,460" stroke="#768E37" stroke-width="1" stroke-opacity="0.04" />
+      <path d="M 150,460 L 350,60 M 450,460 L 580,60 M 750,460 L 750,60 M 1050,460 L 920,60" stroke="#768E37"
+        stroke-width="0.8" stroke-opacity="0.03" />
+    </svg>
+  </div>
+
+  <div class="container-wide">
+    <div class="nursery-editorial-layout">
+      <!-- Editorial Content Column (35-40% width) -->
+      <div class="nursery-editorial-col">
+        <div class="nursery-label-wrap">
+          <span class="nursery-botanical-dot" aria-hidden="true"></span>
+          <span class="nursery-kicker">{{ i18n.t().home.nursery.tag }}</span>
+        </div>
+
+        <h2 class="nursery-heading">{{ i18n.t().home.nursery.title }}</h2>
+
+        <p class="nursery-lead-text">{{ i18n.t().home.nursery.lead }}</p>
+        <p class="nursery-body-text">{{ i18n.t().home.nursery.desc }}</p>
+
+        <!-- Visual Botanical Connector Line -->
+        <div class="nursery-connector-line" aria-hidden="true">
+          <span class="connector-track"></span>
+          <i class="fa-solid fa-seedling connector-icon"></i>
+        </div>
+
+        <div class="nursery-cta-wrap">
+          <a routerLink="/services" class="nursery-text-cta">
+            <span>{{ i18n.t().home.nursery.cta }}</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Nursery Photography & Specifications Column (60-65% width) -->
+      <div class="nursery-visual-col">
+        <!-- Hero Image Frame with 14px Radius -->
+        <div class="nursery-hero-frame">
+          <img src="home-images/nursery.png" alt="Controlled nursery greenhouse propagation of young pistachio trees"
+            class="nursery-hero-img" loading="lazy">
+
+          <!-- Botanical Catalog Annotation directly on image -->
+          <div class="nursery-specimen-annotation" aria-hidden="true">
+            <i class="fa-solid fa-leaf annotation-leaf"></i>
+            <span>{{ i18n.t().home.nursery.imageAnnotation }}</span>
+          </div>
+        </div>
+
+        <!-- Technical Specification Layer (NO cards, editorial rules & illustrative icons) -->
+        <div class="nursery-specs-layer">
+          <!-- Spec 01 -->
+          <div class="nursery-spec-item">
+            <div class="spec-meta-header">
+              <span class="spec-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-seedling"></i>
+              </span>
+              <span class="spec-title-label">{{ i18n.t().home.nursery.spec1Label }}</span>
+            </div>
+            <p class="spec-desc-text">{{ i18n.t().home.nursery.spec1Val }}</p>
+          </div>
+
+          <div class="spec-divider-line" aria-hidden="true"></div>
+
+          <!-- Spec 02 -->
+          <div class="nursery-spec-item">
+            <div class="spec-meta-header">
+              <span class="spec-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-layer-group"></i>
+              </span>
+              <span class="spec-title-label">{{ i18n.t().home.nursery.spec2Label }}</span>
+            </div>
+            <p class="spec-desc-text">{{ i18n.t().home.nursery.spec2Val }}</p>
+          </div>
+
+          <div class="spec-divider-line" aria-hidden="true"></div>
+
+          <!-- Spec 03 -->
+          <div class="nursery-spec-item">
+            <div class="spec-meta-header">
+              <span class="spec-icon-wrap" aria-hidden="true">
+                <i class="fa-solid fa-mountain-sun"></i>
+              </span>
+              <span class="spec-title-label">{{ i18n.t().home.nursery.spec3Label }}</span>
+            </div>
+            <p class="spec-desc-text">{{ i18n.t().home.nursery.spec3Val }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================================
+     6. THE CULTIVATION JOURNEY (SCROLL-DRIVEN BOTANICAL STORYTELLING)
+     ========================================================================== -->
+<section class="section-cultivation-journey" id="cultivationJourneySection">
+  <!-- Subtle Organic Growth Path / Orchard Contours Background -->
+  <div class="journey-ambient-layer" aria-hidden="true">
+    <svg class="journey-ambient-path" viewBox="0 0 1200 800" fill="none">
+      <path d="M 80,40 Q 220,280 140,520 T 260,760" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.04"
+        stroke-dasharray="8 8" />
+      <path d="M 280,100 Q 420,340 340,580 T 460,800" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.03"
+        stroke-dasharray="4 8" />
+      <circle cx="140" cy="520" r="140" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.03" />
+    </svg>
+  </div>
+
+  <div class="container-wide">
+    <div class="journey-editorial-grid">
+
+      <!-- Column 1: Editorial Visual Anchor (Sticky on desktop to accompany the journey) -->
+      <aside class="journey-visual-column" id="journeyVisualCol">
+        <header class="journey-editorial-header">
+          <div class="journey-kicker-wrap">
+            <span class="journey-botanical-bullet" aria-hidden="true"></span>
+            <span class="editorial-kicker">{{ i18n.t().home.harvest.tag }}</span>
+          </div>
+          <h2 class="journey-editorial-title">{{ i18n.t().home.harvest.title }}</h2>
+          <p class="journey-editorial-subtitle">{{ i18n.t().home.harvest.subtitle }}</p>
+        </header>
+
+        <!-- Harvest Showcase Plate (Responds subtly to journey progress) -->
+        <div class="harvest-showcase-plate" id="harvestMainPlate">
+          <div class="harvest-image-wrapper">
+            <img src="home-images/harvest.png" alt="Generational pistachio harvest at full maturity"
+              class="harvest-showcase-img" id="harvestClimaxImg" loading="lazy">
+          </div>
+          <div class="harvest-specimen-badge">
+            <i class="fa-solid fa-leaf"></i>
+            <span>{{ i18n.t().home.harvest.imageAnnotation }}</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Column 2: The 5 Linear Cultivation Milestones -->
+      <div class="journey-timeline-track" id="journeyTimelineTrack">
+        <div class="journey-track-rail" aria-hidden="true">
+          <!-- SVG vertical line that literally DRAWS itself via stroke-dashoffset on scroll -->
+          <svg class="journey-svg-track" viewBox="0 0 4 1000" preserveAspectRatio="none" fill="none">
+            <line x1="2" y1="0" x2="2" y2="1000" class="journey-svg-guide" stroke-width="3" stroke-linecap="round" />
+            <path id="journeySvgPath" d="M 2,0 L 2,1000" class="journey-svg-animated" stroke-width="3.5"
+              stroke-linecap="round" />
+          </svg>
+        </div>
+
+        <!-- Stage 01: ROOTSTOCK -->
+        <article class="journey-stage-step" data-stage="1">
+          <div class="stage-node-col">
+            <span class="step-num">{{ i18n.t().home.harvest.stage1Num }}</span>
+            <div class="stage-icon-dot">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+          </div>
+          <div class="stage-text-col">
+            <span class="stage-phase-tag">{{ i18n.t().home.harvest.stage1Tag }}</span>
+            <h3 class="stage-step-title">{{ i18n.t().home.harvest.stage1Title }}</h3>
+            <p class="stage-step-desc">{{ i18n.t().home.harvest.stage1Desc }}</p>
+          </div>
+        </article>
+
+        <!-- Stage 02: NURSERY -->
+        <article class="journey-stage-step" data-stage="2">
+          <div class="stage-node-col">
+            <span class="step-num">{{ i18n.t().home.harvest.stage2Num }}</span>
+            <div class="stage-icon-dot">
+              <i class="fa-solid fa-tree"></i>
+            </div>
+          </div>
+          <div class="stage-text-col">
+            <span class="stage-phase-tag">{{ i18n.t().home.harvest.stage2Tag }}</span>
+            <h3 class="stage-step-title">{{ i18n.t().home.harvest.stage2Title }}</h3>
+            <p class="stage-step-desc">{{ i18n.t().home.harvest.stage2Desc }}</p>
+          </div>
+        </article>
+
+        <!-- Stage 03: GRAFTING -->
+        <article class="journey-stage-step" data-stage="3">
+          <div class="stage-node-col">
+            <span class="step-num">{{ i18n.t().home.harvest.stage3Num }}</span>
+            <div class="stage-icon-dot">
+              <i class="fa-solid fa-code-branch"></i>
+            </div>
+          </div>
+          <div class="stage-text-col">
+            <span class="stage-phase-tag">{{ i18n.t().home.harvest.stage3Tag }}</span>
+            <h3 class="stage-step-title">{{ i18n.t().home.harvest.stage3Title }}</h3>
+            <p class="stage-step-desc">{{ i18n.t().home.harvest.stage3Desc }}</p>
+          </div>
+        </article>
+
+        <!-- Stage 04: ORCHARD -->
+        <article class="journey-stage-step" data-stage="4">
+          <div class="stage-node-col">
+            <span class="step-num">{{ i18n.t().home.harvest.stage4Num }}</span>
+            <div class="stage-icon-dot">
+              <i class="fa-solid fa-mountain-sun"></i>
+            </div>
+          </div>
+          <div class="stage-text-col">
+            <span class="stage-phase-tag">{{ i18n.t().home.harvest.stage4Tag }}</span>
+            <h3 class="stage-step-title">{{ i18n.t().home.harvest.stage4Title }}</h3>
+            <p class="stage-step-desc">{{ i18n.t().home.harvest.stage4Desc }}</p>
+          </div>
+        </article>
+
+        <!-- Stage 05: HARVEST -->
+        <article class="journey-stage-step is-climax" data-stage="5">
+          <div class="stage-node-col">
+            <span class="step-num">{{ i18n.t().home.harvest.stage5Num }}</span>
+            <div class="stage-icon-dot climax-icon">
+              <i class="fa-solid fa-wheat-awn"></i>
+            </div>
+          </div>
+          <div class="stage-text-col">
+            <span class="stage-phase-tag climax-tag">{{ i18n.t().home.harvest.stage5Tag }}</span>
+            <h3 class="stage-step-title">{{ i18n.t().home.harvest.stage5Title }}</h3>
+            <p class="stage-step-desc">{{ i18n.t().home.harvest.stage5Desc }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ==========================================================================
+     8. FINAL CINEMATIC CTA — HIGH-END AGRICULTURAL EDITORIAL
+     ========================================================================== -->
+<section class="section-cinematic-cta" id="cinematicCtaSection" aria-label="Contact Section">
+
+  <!-- Full-Bleed Background Photograph (Preserved exactly as requested) -->
+  <div class="cta-photo-backdrop" aria-hidden="true">
+    <img src="cta.png" alt="" class="cta-backdrop-img" aria-hidden="true">
+    <!-- Refined Deep Botanical Atmospheric Vignette Overlay -->
+    <div class="cta-botanical-overlay"></div>
+  </div>
+
+  <!-- Centered Editorial Content Stage -->
+  <div class="cta-content-stage" id="ctaContentStage">
+    <div class="cta-editorial-frame" aria-hidden="true"></div>
+
+    <!-- Restrained Editorial Eyebrow -->
+    <div class="cta-eyebrow-wrap" id="ctaEyebrow">
+      <span class="cta-eyebrow-line" aria-hidden="true"></span>
+      <span class="cta-eyebrow-text">{{ i18n.t().home.ctaSection.tag }}</span>
+      <span class="cta-eyebrow-line" aria-hidden="true"></span>
+    </div>
+
+    <!-- Editorial Heading with Controlled Break -->
+    <h2 class="cta-editorial-heading" id="ctaHeading">
+      <span class="cta-heading-line cta-heading-line--1">{{ i18n.t().home.ctaSection.titleLine1 }}</span>
+      <span class="cta-heading-line cta-heading-line--2">{{ i18n.t().home.ctaSection.titleLine2 }}</span>
+    </h2>
+
+    <!-- Understated Supporting Paragraph (controlled max-width 620-680px) -->
+    <p class="cta-editorial-lead" id="ctaLead">
+      {{ i18n.t().home.ctaSection.desc }}
+    </p>
+
+    <!-- Redesigned High-End Action Cluster (Unified Button System - No Arrows) -->
+    <div class="cta-action-cluster" id="ctaActions">
+      <!-- Primary: WhatsApp in Dark Botanical Green Surface -->
+      <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--primary"
+        aria-label="Contact us on WhatsApp">
+        <span class="cta-btn-icon" aria-hidden="true">
+          <i class="fa-brands fa-whatsapp"></i>
+        </span>
+        <span class="cta-btn-label">{{ i18n.t().home.ctaSection.primaryBtn }}</span>
+      </a>
+
+      <!-- Secondary: Refined Warm Ivory Transparent / Glass-like Button -->
+      <a routerLink="/contact" class="cta-btn cta-btn--secondary" aria-label="Contact">
+        <span class="cta-btn-label">{{ i18n.t().home.ctaSection.secondaryBtn }}</span>
+      </a>
+    </div>
+
+  </div>
+</section>

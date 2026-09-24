@@ -1,0 +1,288 @@
+/* ==========================================================================
+   ABOUT PAGE - LONG-FORM EDITORIAL MONOGRAPH
+   ========================================================================== */
+
+/* 1. Monumental Opening Statement */
+.about-monumental-intro {
+  padding-top: clamp(4rem, 8vw, 7.5rem);
+  padding-bottom: clamp(3rem, 6vw, 5.5rem);
+  background-color: var(--c-ivory);
+}
+
+.intro-headline-lockup {
+  max-width: 1040px;
+}
+
+.about-hero-display {
+  font-size: clamp(2.8rem, 6.5vw, 5.4rem);
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--c-forest);
+  margin-bottom: 1.75rem;
+}
+
+.about-hero-standfirst {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+  color: var(--c-slate);
+  line-height: 1.6;
+  max-width: 780px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Landscape Environmental Photography
+   -------------------------------------------------------------------------- */
+.about-landscape-story {
+  padding-bottom: var(--spacing-macro);
+  background-color: var(--c-ivory);
+}
+
+.landscape-environmental-frame {
+  width: 100%;
+  aspect-ratio: 21 / 10;
+  max-height: 620px;
+  margin-bottom: clamp(3.5rem, 6vw, 6rem);
+}
+
+.landscape-plate {
+  position: absolute;
+  bottom: 1.5rem;
+  inset-inline-start: 1.5rem;
+  background-color: rgba(10, 20, 14, 0.88);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.plate-geo {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--c-pistachio);
+}
+
+.plate-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #E2ECE5;
+}
+
+.story-monograph-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 960px) {
+  .story-monograph-grid {
+    grid-template-columns: 1.1fr 1.3fr;
+    gap: clamp(3rem, 6vw, 6rem);
+  }
+}
+
+.story-monograph-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.12;
+  margin-bottom: 1.25rem;
+}
+
+.story-strong-lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--c-forest);
+  line-height: 1.6;
+}
+
+.monograph-para {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Philosophy Manifesto Stream (No Cards!)
+   -------------------------------------------------------------------------- */
+.about-philosophy-manifesto {
+  padding-block: var(--spacing-macro);
+  background-color: var(--c-ivory-warm);
+  border-top: 1px solid var(--c-sand);
+  border-bottom: 1px solid var(--c-sand);
+}
+
+.philosophy-header-wrap {
+  margin-bottom: clamp(3rem, 6vw, 5.5rem);
+}
+
+.philosophy-manifesto-title {
+  font-size: clamp(2.4rem, 4.8vw, 4rem);
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.philosophy-manifesto-sub {
+  font-size: 1.15rem;
+  color: var(--c-slate);
+}
+
+.principles-editorial-stream {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--c-sand);
+}
+
+.principle-entry {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding-block: clamp(2rem, 3.5vw, 3.25rem);
+  border-bottom: 1px solid var(--c-sand);
+}
+
+@media (min-width: 768px) {
+  .principle-entry {
+    grid-template-columns: 240px 1fr;
+    gap: 3rem;
+  }
+}
+
+.p-num {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--c-pistachio);
+  line-height: 1;
+}
+
+:host-context(body.rtl) .p-num {
+  font-family: var(--font-ar-display);
+}
+
+.p-category {
+  display: block;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-slate-light);
+  margin-top: 0.25rem;
+}
+
+.p-title {
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  color: var(--c-forest);
+  margin-bottom: 0.75rem;
+}
+
+.p-text {
+  font-size: 1.02rem;
+  color: var(--c-slate);
+  line-height: 1.75;
+  max-width: 780px;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   4. Technical Immersion (Expertise Image)
+   -------------------------------------------------------------------------- */
+.about-technical-immersion {
+  padding-block: var(--spacing-macro);
+  background-color: var(--c-ivory);
+}
+
+.immersion-asymmetric-spread {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .immersion-asymmetric-spread {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(4rem, 7vw, 7.5rem);
+  }
+}
+
+.immersion-visual {
+  aspect-ratio: 4 / 3.4;
+  position: relative;
+}
+
+.immersion-caption {
+  position: absolute;
+  bottom: 1.5rem;
+  inset-inline-start: 1.5rem;
+  background-color: rgba(10, 20, 14, 0.88);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  padding: 0.6rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cap-tag {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-pistachio);
+}
+
+.cap-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+.immersion-title {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.immersion-lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--c-forest);
+  margin-bottom: 1.25rem;
+}
+
+.immersion-body {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.immersion-action-wrap {
+  margin-top: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Restrained Final Statement CTA
+   -------------------------------------------------------------------------- */
+.about-final-statement {
+  padding-block: var(--spacing-macro);
+  background-color: var(--c-ivory-warm);
+  border-top: 1px solid var(--c-sand);
+}
+
+.statement-headline {
+  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.statement-desc {
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: var(--c-slate);
+  max-width: 660px;
+  margin-inline: auto;
+  margin-bottom: 2.5rem;
+}
+
+.statement-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
