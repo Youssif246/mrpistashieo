@@ -1,160 +1,455 @@
 <!-- ==========================================================================
-     1. ABOUT: MONUMENTAL OPENING STATEMENT
+     ABOUT MONOGRAPH: WORLD-CLASS BOTANICAL EDITORIAL EXPERIENCE
+     Specialist Pistachio Cultivation & Mediterranean Nursery
      ========================================================================== -->
-<section class="about-monumental-intro">
-  <div class="container">
-    <div class="intro-headline-lockup">
-      <span class="editorial-kicker">{{ i18n.t().about.hero.badge }}</span>
-      <h1 class="about-hero-display">{{ i18n.t().about.hero.headline }}</h1>
-      <p class="about-hero-standfirst">{{ i18n.t().about.hero.description }}</p>
-    </div>
-  </div>
-</section>
 
-<!-- ==========================================================================
-     2. LANDSCAPE & STORY (MASSIVE ENVIRONMENTAL PHOTOGRAPH)
-     ========================================================================== -->
-<section class="about-landscape-story">
+<!-- ══════════════════════════════════════════════════════════════════════════
+     1. HERO: INTEGRATED TYPOGRAPHIC & PANORAMIC SPREAD
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section class="about-editorial-hero" id="aboutHero">
+  <!-- Subtle Ambient Contours in Background (Clean & Calm, NO giant text crowding the top) -->
+  <div class="hero-ambient-canvas" aria-hidden="true">
+    <svg class="hero-ambient-contours" viewBox="0 0 1440 280" fill="none" preserveAspectRatio="none">
+      <path d="M -50 160 C 320 100 720 220 1120 140 C 1280 110 1380 120 1490 115" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.09" stroke-linecap="round"/>
+    </svg>
+  </div>
+
   <div class="container-wide">
-    <div class="art-frame landscape-environmental-frame">
-      <img src="about-images/story.png" alt="Expansive Mediterranean landscape and pistachio orchards" class="landscape-img" priority>
-      <div class="landscape-plate">
-        <span class="plate-geo">Mediterranean Terroir</span>
-        <span class="plate-title">Pistacia vera Cultivation Heritage</span>
+    <!-- Single Unified Editorial Hero Spread: Typography & Photography Together -->
+    <div class="about-hero-unified-spread">
+      
+      <!-- Typographic Column -->
+      <div class="hero-content-block">
+        <div class="editorial-brand-eyebrow">
+          <span class="eyebrow-accent-line" aria-hidden="true"></span>
+          <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+          <span class="brand-eyebrow-text">{{ i18n.t().about.hero.badge }}</span>
+          <span class="brand-eyebrow-dot" aria-hidden="true">·</span>
+          <span class="brand-eyebrow-sub">Pistacia vera L.</span>
+        </div>
+
+        <h1 class="hero-display-headline">
+          {{ i18n.t().about.hero.headline }}
+        </h1>
+
+        <p class="hero-standfirst-lead">
+          {{ i18n.t().about.hero.description }}
+        </p>
+
+        <!-- Understated Editorial Metadata Strip -->
+        <div class="hero-metadata-row" aria-hidden="true">
+          <div class="hero-meta-item">
+            <span class="meta-label">DISCIPLINE</span>
+            <span class="meta-val">Specialist Cultivation</span>
+          </div>
+          <span class="meta-divider"></span>
+          <div class="hero-meta-item">
+            <span class="meta-label">TERROIR</span>
+            <span class="meta-val">Mediterranean Basin</span>
+          </div>
+          <span class="meta-divider"></span>
+          <div class="hero-meta-item">
+            <span class="meta-label">STANDARDS</span>
+            <span class="meta-val">Certified UCB1 Lineage</span>
+          </div>
+        </div>
       </div>
+
+      <!-- Integrated Photography Column -->
+      <div class="hero-visual-block">
+        <div class="hero-photo-frame">
+          <div class="hero-photo-viewport">
+            <img src="about-images/story.png" alt="Mediterranean pistachio cultivation landscape" class="hero-panorama-img" priority>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <div class="container">
-    <div class="story-monograph-grid">
-      <div class="monograph-lead-col">
-        <span class="editorial-kicker">{{ i18n.t().about.story.tag }}</span>
-        <h2 class="story-monograph-title">{{ i18n.t().about.story.title }}</h2>
-        <p class="story-strong-lead">{{ i18n.t().about.story.lead }}</p>
-      </div>
-
-      <div class="monograph-prose-col">
-        <p class="monograph-para">{{ i18n.t().about.story.p1 }}</p>
-        <p class="monograph-para">{{ i18n.t().about.story.p2 }}</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==========================================================================
-     3. PHILOSOPHY MANIFESTO (EDITORIAL STATEMENT, NOT CARDS)
-     ========================================================================== -->
-<section class="about-philosophy-manifesto">
-  <div class="container">
-    <div class="philosophy-header-wrap">
-      <span class="editorial-kicker">{{ i18n.t().about.philosophy.tag }}</span>
-      <h2 class="philosophy-manifesto-title">{{ i18n.t().about.philosophy.title }}</h2>
-      <p class="philosophy-manifesto-sub">{{ i18n.t().about.philosophy.subtitle }}</p>
-    </div>
-
-    <!-- 4 Editorial Principles Distributed Across Page -->
-    <div class="principles-editorial-stream">
-      <!-- 01 -->
-      <div class="principle-entry">
-        <div class="principle-num-col">
-          <span class="p-num">01</span>
-          <span class="p-category">Genetic Foundation</span>
-        </div>
-        <div class="principle-body-col">
-          <h3 class="p-title">{{ i18n.t().about.philosophy.card1Title }}</h3>
-          <p class="p-text">{{ i18n.t().about.philosophy.card1Desc }}</p>
-        </div>
-      </div>
-
-      <!-- 02 -->
-      <div class="principle-entry">
-        <div class="principle-num-col">
-          <span class="p-num">02</span>
-          <span class="p-category">Subterranean Vitality</span>
-        </div>
-        <div class="principle-body-col">
-          <h3 class="p-title">{{ i18n.t().about.philosophy.card2Title }}</h3>
-          <p class="p-text">{{ i18n.t().about.philosophy.card2Desc }}</p>
-        </div>
-      </div>
-
-      <!-- 03 -->
-      <div class="principle-entry">
-        <div class="principle-num-col">
-          <span class="p-num">03</span>
-          <span class="p-category">Resource Wisdom</span>
-        </div>
-        <div class="principle-body-col">
-          <h3 class="p-title">{{ i18n.t().about.philosophy.card3Title }}</h3>
-          <p class="p-text">{{ i18n.t().about.philosophy.card3Desc }}</p>
-        </div>
-      </div>
-
-      <!-- 04 -->
-      <div class="principle-entry">
-        <div class="principle-num-col">
-          <span class="p-num">04</span>
-          <span class="p-category">Generational Vision</span>
-        </div>
-        <div class="principle-body-col">
-          <h3 class="p-title">{{ i18n.t().about.philosophy.card4Title }}</h3>
-          <p class="p-text">{{ i18n.t().about.philosophy.card4Desc }}</p>
-        </div>
-      </div>
-    </div>
+  <!-- Organic Connecting Flow Arc into Next Section -->
+  <div class="hero-to-story-transition" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
+      <path d="M 120 0 C 380 45 820 45 1320 15" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.12" stroke-linecap="round"/>
+    </svg>
   </div>
 </section>
 
-<!-- ==========================================================================
-     4. TECHNICAL EXPERTISE (IMMERSIVE PHOTOGRAPHY + FIELD DISCIPLINE)
-     ========================================================================== -->
-<section class="about-technical-immersion">
+<!-- ══════════════════════════════════════════════════════════════════════════
+     2. STORY & HERITAGE: UNBOXED EDITORIAL FLOW (NO CARDS)
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section class="about-editorial-story" id="aboutStory">
+  <!-- Ghost Typography & Botanical Leaf Branch in Outer Margin -->
+  <div class="story-ambient-canvas" aria-hidden="true">
+    <span class="story-ghost-watermark">TERROIR & ORIGIN</span>
+    <svg class="story-margin-branch" viewBox="0 0 420 440" fill="none">
+      <path d="M 400 15 C 320 60 230 150 170 235 C 120 310 80 375 25 430" stroke="#768E37" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.13"/>
+      <ellipse cx="250" cy="120" rx="42" ry="20" transform="rotate(-32 250 120)" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.12"/>
+      <line x1="225" y1="134" x2="275" y2="106" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.08"/>
+      <ellipse cx="305" cy="82" rx="36" ry="17" transform="rotate(-46 305 82)" stroke="#768E37" stroke-width="1.1" stroke-opacity="0.11"/>
+      <ellipse cx="185" cy="205" rx="40" ry="19" transform="rotate(-22 185 205)" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.12"/>
+      <ellipse cx="130" cy="295" rx="36" ry="17" transform="rotate(-14 130 295)" stroke="#768E37" stroke-width="1.1" stroke-opacity="0.10"/>
+    </svg>
+  </div>
+
   <div class="container-wide">
-    <div class="immersion-asymmetric-spread">
-      <div class="immersion-visual art-frame">
-        <img src="about-images/expertise.png" alt="Agronomic precision and rootstock grafting mastery" class="expertise-macro-photo" loading="lazy">
-        <div class="immersion-caption">
-          <span class="cap-tag">Agronomic Precision</span>
-          <span class="cap-text">Graft Union & Root Architecture</span>
+    <div class="story-editorial-layout">
+
+      <!-- Left Column: Monumental Anchor Statement & Editorial Pullquote -->
+      <aside class="story-anchor-column">
+        <div class="editorial-brand-eyebrow">
+          <span class="eyebrow-accent-line" aria-hidden="true"></span>
+          <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+          <span class="brand-eyebrow-text">{{ i18n.t().about.story.tag }}</span>
         </div>
+
+        <h2 class="story-anchor-heading">
+          {{ i18n.t().about.story.title }}
+        </h2>
+
+        <!-- Elegant Pull-Quote Anchor (No Box, Pure Typography & Botanical Bar) -->
+        <div class="story-pullquote-statement">
+          <span class="pullquote-botanical-bar" aria-hidden="true"></span>
+          <div class="pullquote-content">
+            <span class="pullquote-leaf-glyph" aria-hidden="true">
+              <i class="fa-solid fa-spa"></i>
+            </span>
+            <p class="pullquote-text">
+              {{ i18n.t().about.story.lead }}
+            </p>
+          </div>
+        </div>
+
+        <!-- Archival Monograph Notation -->
+        <div class="story-monograph-stamp" aria-hidden="true">
+          <span class="stamp-bracket">[</span>
+          <span class="stamp-text">FIELD JOURNAL // CHAPTER I</span>
+          <span class="stamp-bracket">]</span>
+        </div>
+      </aside>
+
+      <!-- Right Column: Flowing Unboxed Prose Stream -->
+      <div class="story-prose-stream">
+        <!-- Editorial Folio Header Line -->
+        <div class="prose-folio-header">
+          <span class="prose-folio-num">FOLIO 01</span>
+          <span class="prose-folio-rule" aria-hidden="true"></span>
+          <span class="prose-folio-topic">AGRICULTURAL GENESIS</span>
+        </div>
+
+        <!-- Paragraph 1 with Editorial Prominence -->
+        <p class="story-paragraph story-paragraph--lead">
+          {{ i18n.t().about.story.p1 }}
+        </p>
+
+        <!-- Subtle Botanical Separation Line with Pistachio Pip -->
+        <div class="prose-subtle-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <span class="divider-leaf"><i class="fa-solid fa-seedling"></i></span>
+          <span class="divider-line"></span>
+        </div>
+
+        <!-- Paragraph 2 -->
+        <p class="story-paragraph">
+          {{ i18n.t().about.story.p2 }}
+        </p>
+
+        <!-- Editorial Footnote Signing Off Chapter I -->
+        <footer class="prose-editorial-footnote">
+          <div class="footnote-left">
+            <i class="fa-solid fa-microscope footnote-icon" aria-hidden="true"></i>
+            <span class="footnote-label">Applied Agricultural Science & Field Verification</span>
+          </div>
+          <span class="footnote-botanical-mark" aria-hidden="true">❦</span>
+        </footer>
       </div>
 
-      <div class="immersion-intellectual-block">
-        <span class="editorial-kicker">{{ i18n.t().about.expertise.tag }}</span>
-        <h2 class="immersion-title">{{ i18n.t().about.expertise.title }}</h2>
-        <p class="immersion-lead">{{ i18n.t().about.expertise.lead }}</p>
-        <p class="immersion-body">{{ i18n.t().about.expertise.p1 }}</p>
-        <p class="immersion-body">{{ i18n.t().about.expertise.p2 }}</p>
+    </div>
+  </div>
+</section>
 
-        <div class="immersion-action-wrap">
-          <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-outline">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+<!-- ══════════════════════════════════════════════════════════════════════════
+     3. CULTIVATION PHILOSOPHY: OPEN ARCHITECTURAL 2x2 MONOGRAPH (NO CARD UI)
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section class="about-editorial-philosophy" id="aboutPhilosophy">
+  <!-- Ghost Typography & Agricultural Guide Lines -->
+  <div class="philosophy-ambient-canvas" aria-hidden="true">
+    <span class="philosophy-ghost-wordmark">CULTIVATION PHILOSOPHY</span>
+    <svg class="philosophy-field-rails" viewBox="0 0 1440 500" fill="none" preserveAspectRatio="none">
+      <line x1="280" y1="0" x2="280" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.08" stroke-dasharray="8 12"/>
+      <line x1="720" y1="0" x2="720" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.09"/>
+      <line x1="1160" y1="0" x2="1160" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.08" stroke-dasharray="8 12"/>
+    </svg>
+  </div>
+
+  <div class="container-wide">
+    <!-- Section Master Header -->
+    <header class="philosophy-section-header">
+      <div class="editorial-brand-eyebrow">
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+        <span class="brand-eyebrow-text">{{ i18n.t().about.philosophy.tag }}</span>
+      </div>
+
+      <div class="philosophy-header-spread">
+        <h2 class="philosophy-section-title">
+          {{ i18n.t().about.philosophy.title }}
+        </h2>
+        <p class="philosophy-section-subtitle">
+          {{ i18n.t().about.philosophy.subtitle }}
+        </p>
+      </div>
+    </header>
+
+    <!-- Open Architectural 2x2 Monograph Grid (Pure Typography & Botanical Lines, NO CARDS) -->
+    <div class="philosophy-architectural-grid">
+
+      <!-- Center Botanical Cross Axis Node -->
+      <div class="grid-center-node" aria-hidden="true">
+        <span class="center-pip"><i class="fa-solid fa-seedling"></i></span>
+      </div>
+
+      <!-- Principle 01: Botanical Integrity -->
+      <article class="philosophy-chapter chapter-01">
+        <div class="chapter-inner">
+          <header class="chapter-header">
+            <div class="chapter-num-block">
+              <span class="chapter-number">01</span>
+              <span class="chapter-category">Genetic Foundation</span>
+            </div>
+            <!-- Custom Line-Style SVG: Pistachio Compound Leaflet Specimen -->
+            <div class="chapter-botanical-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 6 42 C 16 34 26 22 40 8" />
+                <path d="M 40 8 C 30 7 20 13 16 20 C 23 21 32 18 40 8 Z" fill="currentColor" fill-opacity="0.10"/>
+                <path d="M 28 20 C 22 22 17 28 14 34 C 19 34 26 30 28 20 Z" fill="currentColor" fill-opacity="0.08"/>
+                <path d="M 33 14 C 36 18 36 24 33 29 C 31 24 30 18 33 14 Z" fill="currentColor" fill-opacity="0.08"/>
+              </svg>
+            </div>
+          </header>
+
+          <div class="chapter-body">
+            <h3 class="chapter-title">{{ i18n.t().about.philosophy.card1Title }}</h3>
+            <p class="chapter-description">{{ i18n.t().about.philosophy.card1Desc }}</p>
+          </div>
+
+          <footer class="chapter-footer">
+            <span class="chapter-rule" aria-hidden="true"></span>
+            <span class="chapter-meta-code">STANDARD // P·VERA · 01</span>
+          </footer>
+        </div>
+      </article>
+
+      <!-- Principle 02: Root System Architecture -->
+      <article class="philosophy-chapter chapter-02">
+        <div class="chapter-inner">
+          <header class="chapter-header">
+            <div class="chapter-num-block">
+              <span class="chapter-number">02</span>
+              <span class="chapter-category">Subterranean Vitality</span>
+            </div>
+            <!-- Custom Line-Style SVG: Deep Taproot & Lateral Underground Root Network -->
+            <div class="chapter-botanical-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="4" y1="10" x2="44" y2="10" stroke-dasharray="3 3" />
+                <path d="M 24 10 L 24 44" stroke-width="2.2" />
+                <path d="M 24 18 C 17 22 12 28 8 32" />
+                <path d="M 24 22 C 31 25 36 30 40 34" />
+                <path d="M 24 28 C 19 33 15 37 12 41" />
+                <path d="M 24 32 C 28 35 32 39 35 42" />
+              </svg>
+            </div>
+          </header>
+
+          <div class="chapter-body">
+            <h3 class="chapter-title">{{ i18n.t().about.philosophy.card2Title }}</h3>
+            <p class="chapter-description">{{ i18n.t().about.philosophy.card2Desc }}</p>
+          </div>
+
+          <footer class="chapter-footer">
+            <span class="chapter-rule" aria-hidden="true"></span>
+            <span class="chapter-meta-code">STANDARD // P·VERA · 02</span>
+          </footer>
+        </div>
+      </article>
+
+      <!-- Principle 03: Water Stewardship -->
+      <article class="philosophy-chapter chapter-03">
+        <div class="chapter-inner">
+          <header class="chapter-header">
+            <div class="chapter-num-block">
+              <span class="chapter-number">03</span>
+              <span class="chapter-category">Resource Wisdom</span>
+            </div>
+            <!-- Custom Line-Style SVG: Precision Water Droplet & Capillary Irrigation -->
+            <div class="chapter-botanical-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 24 6 C 24 6 13 19 13 27 C 13 33.1 17.9 38 24 38 C 30.1 38 35 33.1 35 27 C 35 19 24 6 24 6 Z" fill="currentColor" fill-opacity="0.10"/>
+                <path d="M 4 27 L 13 27" />
+                <path d="M 35 27 L 44 27" />
+                <path d="M 24 17 C 22 20 20 23 20 27" />
+                <circle cx="24" cy="43" r="1.5" fill="currentColor" />
+              </svg>
+            </div>
+          </header>
+
+          <div class="chapter-body">
+            <h3 class="chapter-title">{{ i18n.t().about.philosophy.card3Title }}</h3>
+            <p class="chapter-description">{{ i18n.t().about.philosophy.card3Desc }}</p>
+          </div>
+
+          <footer class="chapter-footer">
+            <span class="chapter-rule" aria-hidden="true"></span>
+            <span class="chapter-meta-code">STANDARD // P·VERA · 03</span>
+          </footer>
+        </div>
+      </article>
+
+      <!-- Principle 04: Long-Term Partnership -->
+      <article class="philosophy-chapter chapter-04">
+        <div class="chapter-inner">
+          <header class="chapter-header">
+            <div class="chapter-num-block">
+              <span class="chapter-number">04</span>
+              <span class="chapter-category">Generational Vision</span>
+            </div>
+            <!-- Custom Line-Style SVG: Mature Tree Canopy & Multi-Decadal Anchoring Roots -->
+            <div class="chapter-botanical-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M 24 6 C 16 6 10 13 12 20 C 9 22 8 26 11 29 C 13 32 17 32 20 31 L 22 36 L 26 36 L 28 31 C 31 32 35 32 37 29 C 40 26 39 22 36 20 C 38 13 32 6 24 6 Z" fill="currentColor" fill-opacity="0.10"/>
+                <line x1="6" y1="36" x2="42" y2="36" />
+                <path d="M 23 36 C 20 39 16 41 12 43" />
+                <path d="M 25 36 C 28 39 32 41 36 43" />
+                <line x1="24" y1="36" x2="24" y2="44" />
+              </svg>
+            </div>
+          </header>
+
+          <div class="chapter-body">
+            <h3 class="chapter-title">{{ i18n.t().about.philosophy.card4Title }}</h3>
+            <p class="chapter-description">{{ i18n.t().about.philosophy.card4Desc }}</p>
+          </div>
+
+          <footer class="chapter-footer">
+            <span class="chapter-rule" aria-hidden="true"></span>
+            <span class="chapter-meta-code">STANDARD // P·VERA · 04</span>
+          </footer>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     4. TECHNICAL MASTERY: ASYMMETRIC OVERFLOWING IMAGE & CONNECTED PROSE
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section class="about-editorial-technical" id="aboutTechnical">
+  <!-- Ghost Typography & Caliper Schematics -->
+  <div class="technical-ambient-canvas" aria-hidden="true">
+    <span class="technical-ghost-wordmark">GRAFTING MASTERY</span>
+    <svg class="technical-caliper-schematic" viewBox="0 0 600 600" fill="none">
+      <circle cx="300" cy="300" r="270" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.08"/>
+      <circle cx="300" cy="300" r="180" stroke="#768E37" stroke-width="1" stroke-opacity="0.06" stroke-dasharray="6 8"/>
+      <circle cx="300" cy="300" r="6" fill="#768E37" fill-opacity="0.12"/>
+      <line x1="300" y1="15" x2="300" y2="585" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.07"/>
+      <line x1="15" y1="300" x2="585" y2="300" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.07"/>
+    </svg>
+  </div>
+
+  <div class="container-wide">
+    <div class="technical-asymmetric-composition">
+
+      <!-- Left Column: The Overflowing Grafting Photography with Botanical Metadata Labels -->
+      <div class="technical-image-column">
+        <div class="technical-photo-canvas">
+          <!-- Image Frame with Parallax Anchor -->
+          <div class="technical-img-viewport">
+            <img src="about-images/expertise.png" alt="Field grafting mastery and rootstock budwood union" class="technical-graft-img" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Refined Botanical Connecting Line that Arcs into Text Column -->
+        <svg class="technical-connecting-arc" viewBox="0 0 320 80" fill="none" aria-hidden="true">
+          <path d="M 0 40 C 140 40 180 15 320 15" stroke="#768E37" stroke-width="1.4" stroke-opacity="0.22" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <!-- Right Column: Integrated Intellectual Text & Direct WhatsApp CTA -->
+      <div class="technical-prose-column">
+        <div class="editorial-brand-eyebrow">
+          <span class="eyebrow-accent-line" aria-hidden="true"></span>
+          <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+          <span class="brand-eyebrow-text">{{ i18n.t().about.expertise.tag }}</span>
+        </div>
+
+        <h2 class="technical-display-title">
+          {{ i18n.t().about.expertise.title }}
+        </h2>
+
+        <p class="technical-statement-lead">
+          {{ i18n.t().about.expertise.lead }}
+        </p>
+
+        <div class="technical-body-stream">
+          <p class="tech-body-para">{{ i18n.t().about.expertise.p1 }}</p>
+          <p class="tech-body-para">{{ i18n.t().about.expertise.p2 }}</p>
+        </div>
+
+        <!-- Unified Direct WhatsApp CTA (No Arrows) -->
+        <div class="technical-action-cluster">
+          <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-dark" aria-label="Direct WhatsApp Consultation">
+            <i class="fa-brands fa-whatsapp cta-wa-icon" aria-hidden="true"></i>
             <span>{{ i18n.t().about.cta.btn }}</span>
           </a>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ==========================================================================
-     5. RESTRAINED ABOUT CTA
-     ========================================================================== -->
-<section class="about-final-statement">
-  <div class="container-narrow text-center">
-    <span class="editorial-kicker">{{ i18n.t().about.cta.tag }}</span>
-    <h2 class="statement-headline">{{ i18n.t().about.cta.title }}</h2>
-    <p class="statement-desc">{{ i18n.t().about.cta.desc }}</p>
+<!-- ══════════════════════════════════════════════════════════════════════════
+     5. FINAL CONSULTATION CTA: WARM EDITORIAL CLOSURE (NO ARROWS)
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section class="about-editorial-cta" id="aboutCta">
+  <!-- Ghost Watermark & Ground Organic Contour -->
+  <div class="cta-ambient-canvas" aria-hidden="true">
+    <span class="cta-ghost-watermark">PISTACIA VERA</span>
+    <svg class="cta-ambient-curve" viewBox="0 0 1440 240" fill="none" preserveAspectRatio="none">
+      <path d="M 0 160 C 400 80 820 220 1200 130 C 1320 100 1400 105 1440 102" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10" stroke-linecap="round"/>
+    </svg>
+  </div>
 
-    <div class="statement-buttons">
-      <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-wa">
-        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-        <span>{{ i18n.t().about.cta.btn }}</span>
-      </a>
-      <a routerLink="/products" class="btn-editorial btn-editorial-outline">
-        <span>{{ i18n.t().navbar.products }}</span>
-        <i class="fa-solid fa-arrow-right icon-dir" aria-hidden="true"></i>
-      </a>
+  <div class="container-narrow text-center">
+    <div class="cta-editorial-stage">
+      <!-- Centered Eyebrow with Flanking Hairlines -->
+      <div class="cta-centered-eyebrow">
+        <span class="cta-hairline-accent" aria-hidden="true"></span>
+        <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+        <span class="cta-eyebrow-text">{{ i18n.t().about.cta.tag }}</span>
+        <span class="cta-hairline-accent" aria-hidden="true"></span>
+      </div>
+
+      <h2 class="cta-editorial-headline">
+        {{ i18n.t().about.cta.title }}
+      </h2>
+
+      <p class="cta-editorial-description">
+        {{ i18n.t().about.cta.desc }}
+      </p>
+
+      <!-- Unified Button System - Matching Home Page Exactly (NO ARROWS) -->
+      <div class="cta-editorial-buttons">
+        <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-dark" aria-label="Start WhatsApp Consultation">
+          <i class="fa-brands fa-whatsapp cta-wa-icon" aria-hidden="true"></i>
+          <span>{{ i18n.t().about.cta.btn }}</span>
+        </a>
+
+        <a routerLink="/products" class="btn-editorial btn-editorial-outline">
+          <span>{{ i18n.t().navbar.products }}</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>

@@ -12,6 +12,7 @@
     <!-- Centered Eyebrow -->
     <div class="hero-eyebrow">
       <span class="eyebrow-accent-line" aria-hidden="true"></span>
+      <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
       <span class="eyebrow-text">{{ i18n.t().home.hero.badge }}</span>
       <span class="eyebrow-dot" aria-hidden="true">·</span>
       <span class="eyebrow-botanical">{{ i18n.t().home.hero.botanical }}</span>
@@ -49,21 +50,27 @@
      2. EDITORIAL BRAND STATEMENT (SPACIOUS, TYPOGRAPHY-DRIVEN)
      ========================================================================== -->
 <section class="botanical-editorial-section" id="agricultural-specialization">
-  <!-- Clean Architectural Typographic Watermark & Subtle Botanical Branch Contour -->
+  <!-- Subtle Pistachio Touches in Empty Space (100% Free from Content) -->
   <div class="botanical-ambient-canvas" aria-hidden="true">
-    <div class="botanical-wordmark-layer">
-      <span class="bg-wordmark-text">{{ i18n.t().home.positioning.watermark }}</span>
-    </div>
-    <!-- Ultra-subtle pistachio botanical branch silhouette entering from margin -->
-    <svg class="botanical-ambient-branch" viewBox="0 0 500 500" fill="none">
-      <path d="M 0,440 C 120,410 240,320 340,210 C 390,155 440,90 490,30" stroke="#768E37" stroke-width="1.4"
-        stroke-opacity="0.05" />
-      <path d="M 140,390 C 175,330 205,320 255,340 C 245,380 195,400 140,390 Z" fill="#768E37" fill-opacity="0.035"
-        stroke="#768E37" stroke-width="1" stroke-opacity="0.05" />
-      <path d="M 250,300 C 290,240 330,245 365,275 C 340,315 290,320 250,300 Z" fill="#768E37" fill-opacity="0.035"
-        stroke="#768E37" stroke-width="1" stroke-opacity="0.05" />
-      <path d="M 350,190 C 375,130 415,120 450,150 C 430,195 385,205 350,190 Z" fill="#768E37" fill-opacity="0.035"
-        stroke="#768E37" stroke-width="1" stroke-opacity="0.05" />
+    <!-- 1. Corner Pistachio Botanical Sprig (Docked strictly in outer corner margin) -->
+    <svg class="botanical-ambient-branch" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Main stem -->
+      <path d="M 400 20 C 320 50 240 120 180 200 C 130 260 90 330 40 400" stroke="#768E37" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.16"/>
+      <!-- Pistachio compound leaflets -->
+      <ellipse cx="250" cy="110" rx="42" ry="20" transform="rotate(-35 250 110)" stroke="#768E37" stroke-width="1.3" stroke-opacity="0.15"/>
+      <line x1="225" y1="124" x2="275" y2="96" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.1"/>
+      <ellipse cx="305" cy="75" rx="36" ry="17" transform="rotate(-48 305 75)" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.14"/>
+      <ellipse cx="185" cy="185" rx="38" ry="18" transform="rotate(-25 185 185)" stroke="#768E37" stroke-width="1.3" stroke-opacity="0.15"/>
+      <line x1="160" y1="196" x2="210" y2="174" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.1"/>
+      <ellipse cx="130" cy="270" rx="36" ry="17" transform="rotate(-15 130 270)" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.13"/>
+      <!-- Delicate pistachio nut specimen cluster -->
+      <ellipse cx="225" cy="148" rx="11" ry="16" transform="rotate(-22 225 148)" stroke="#B8955A" stroke-width="1.2" stroke-opacity="0.18"/>
+      <ellipse cx="246" cy="162" rx="10" ry="15" transform="rotate(32 246 162)" stroke="#B8955A" stroke-width="1.2" stroke-opacity="0.18"/>
+    </svg>
+
+    <!-- 2. Gentle Field Contour Line in Negative Bottom Space -->
+    <svg class="botanical-ambient-contour" viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none">
+      <path d="M 0 65 C 380 25 780 85 1140 45 C 1280 30 1380 38 1440 35" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.09" stroke-linecap="round"/>
     </svg>
   </div>
 
@@ -73,9 +80,10 @@
     <!-- Zone A: Dominant Headline & Offset Narrative Note -->
     <header class="manifesto-header-zone">
       <div class="manifesto-headline-block">
-        <div class="manifesto-tag-lockup">
-          <span class="tag-accent-node" aria-hidden="true"></span>
-          <span class="manifesto-tag-label">{{ i18n.t().home.positioning.tag }}</span>
+        <div class="editorial-brand-eyebrow">
+          <span class="eyebrow-accent-line" aria-hidden="true"></span>
+          <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+          <span class="brand-eyebrow-text">{{ i18n.t().home.positioning.tag }}</span>
         </div>
         <h2 class="manifesto-display-title">
           <span class="title-primary">{{ i18n.t().home.positioning.statementLine1 }}</span>
@@ -91,18 +99,22 @@
       </aside>
     </header>
 
+    <!-- Subtle Architectural Divider in Midground (Pistachio accent) -->
+    <div class="manifesto-mid-divider" aria-hidden="true">
+      <span class="mid-divider-line"></span>
+      <span class="mid-divider-pip">
+        <i class="fa-solid fa-seedling"></i>
+      </span>
+      <span class="mid-divider-line"></span>
+    </div>
+
     <!-- Zone B: The Botanical Knowledge Trail (Asymmetric Continuous Growth Path) -->
     <div class="botanical-knowledge-trail">
-
-      <!-- SVG Connecting Organic Stem Path (Midground) -->
-      <svg class="trail-stem-svg" viewBox="0 0 1200 80" fill="none" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M40 40 C260 40, 420 18, 600 18 C780 18, 920 62, 1160 62" stroke="#768E37" stroke-width="1.2"
-          stroke-dasharray="3 4" opacity="0.32" />
-      </svg>
 
       <!-- Trail Point 1: Left-anchored -->
       <article class="trail-station station-alpha">
         <div class="station-anchor">
+          <span class="station-num">01</span>
           <span class="station-node" aria-hidden="true"></span>
           <span class="station-line" aria-hidden="true"></span>
         </div>
@@ -115,6 +127,7 @@
       <!-- Trail Point 2: Staggered Center / Elevated -->
       <article class="trail-station station-beta">
         <div class="station-anchor">
+          <span class="station-num">02</span>
           <span class="station-node" aria-hidden="true"></span>
           <span class="station-line" aria-hidden="true"></span>
         </div>
@@ -127,6 +140,7 @@
       <!-- Trail Point 3: Shifted Right / Anchored -->
       <article class="trail-station station-gamma">
         <div class="station-anchor">
+          <span class="station-num">03</span>
           <span class="station-node" aria-hidden="true"></span>
           <span class="station-line" aria-hidden="true"></span>
         </div>
@@ -141,7 +155,11 @@
   </div>
 </section>
 
-<hr class="hairline">
+<div class="botanical-chapter-divider" aria-hidden="true">
+  <span class="chapter-line"></span>
+  <span class="chapter-node"><i class="fa-solid fa-seedling"></i></span>
+  <span class="chapter-line"></span>
+</div>
 
 <!-- ==========================================================================
      3. EDITORIAL SERVICE PANELS (3 CURATED STAGES WITH EDITORIAL PHOTOGRAPHY)
@@ -150,12 +168,14 @@
   <!-- Clean Editorial Background Watermark & Agricultural Field-Row Curves -->
   <div class="services-ambient-layer" aria-hidden="true">
     <span class="services-bg-watermark">{{ i18n.t().home.services.watermark }}</span>
-    <svg class="services-field-rows" viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none">
-      <path d="M-100,100 C320,60 720,160 1540,90" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.04" />
-      <path d="M-100,180 C360,140 800,250 1540,170" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.038" />
-      <path d="M-100,260 C400,220 880,340 1540,250" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.035" />
-      <path d="M-100,340 C440,300 960,430 1540,330" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.03" />
-      <path d="M-100,420 C480,380 1040,520 1540,410" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.025" />
+    <svg class="services-field-rows" viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Three clean, slow agricultural contour arcs -->
+      <path d="M -80,145 C 260,100 620,175 1000,120 C 1180,96 1340,102 1520,95"
+        stroke="#768E37" stroke-width="1.5" stroke-opacity="0.10" stroke-linecap="round"/>
+      <path d="M -80,310 C 300,262 700,345 1100,288 C 1270,265 1400,270 1520,265"
+        stroke="#768E37" stroke-width="1.5" stroke-opacity="0.09" stroke-linecap="round"/>
+      <path d="M -80,478 C 340,428 780,512 1200,454 C 1350,434 1450,438 1520,435"
+        stroke="#768E37" stroke-width="1.5" stroke-opacity="0.08" stroke-linecap="round"/>
     </svg>
   </div>
 
@@ -163,9 +183,10 @@
     <!-- Section Header: Refined & Horizontal -->
     <header class="service-index-header">
       <div class="service-header-lead">
-        <div class="service-tag-lockup">
-          <span class="service-tag-pip" aria-hidden="true"></span>
-          <span class="service-tag-label">{{ i18n.t().home.services.tag }}</span>
+        <div class="editorial-brand-eyebrow">
+          <span class="eyebrow-accent-line" aria-hidden="true"></span>
+          <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+          <span class="brand-eyebrow-text">{{ i18n.t().home.services.tag }}</span>
         </div>
         <h2 class="service-index-title">{{ i18n.t().home.services.title }}</h2>
       </div>
@@ -193,7 +214,6 @@
           <span class="panel-category">{{ i18n.t().home.services.s1Category }}</span>
           <h3 class="panel-title">{{ i18n.t().home.services.s1Title }}</h3>
           <p class="panel-desc">{{ i18n.t().home.services.s1Desc }}</p>
-          <span class="panel-bottom-accent" aria-hidden="true"></span>
         </div>
       </article>
 
@@ -213,7 +233,6 @@
           <span class="panel-category">{{ i18n.t().home.services.s2Category }}</span>
           <h3 class="panel-title">{{ i18n.t().home.services.s2Title }}</h3>
           <p class="panel-desc">{{ i18n.t().home.services.s2Desc }}</p>
-          <span class="panel-bottom-accent" aria-hidden="true"></span>
         </div>
       </article>
 
@@ -234,7 +253,6 @@
           <span class="panel-category">{{ i18n.t().home.services.s3Category }}</span>
           <h3 class="panel-title">{{ i18n.t().home.services.s3Title }}</h3>
           <p class="panel-desc">{{ i18n.t().home.services.s3Desc }}</p>
-          <span class="panel-bottom-accent" aria-hidden="true"></span>
         </div>
       </article>
 
@@ -249,6 +267,12 @@
   </div>
 </section>
 
+<div class="botanical-chapter-divider" aria-hidden="true">
+  <span class="chapter-line"></span>
+  <span class="chapter-node"><i class="fa-solid fa-seedling"></i></span>
+  <span class="chapter-line"></span>
+</div>
+
 <!-- ==========================================================================
      4. BOTANICAL DETAIL (MACRO VISUAL MOMENT)
      ========================================================================== -->
@@ -258,26 +282,34 @@
 <section class="section-botanical-monograph">
   <!-- Subtle Botanical Diagram / Caliper Circular Structure -->
   <div class="monograph-ambient-layer" aria-hidden="true">
-    <svg class="monograph-ambient-diagram" viewBox="0 0 700 700" fill="none">
-      <circle cx="350" cy="350" r="300" stroke="#768E37" stroke-width="1" stroke-dasharray="4 8"
-        stroke-opacity="0.05" />
-      <circle cx="350" cy="350" r="210" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.04" />
-      <circle cx="350" cy="350" r="110" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.05" />
-      <line x1="350" y1="30" x2="350" y2="670" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.035" />
-      <line x1="30" y1="350" x2="670" y2="350" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.035" />
+    <svg class="monograph-ambient-diagram" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Outer ring -->
+      <circle cx="350" cy="350" r="320" stroke="#768E37" stroke-width="1.4" stroke-opacity="0.11"/>
+      <!-- Inner ring (dashed) -->
+      <circle cx="350" cy="350" r="210" stroke="#768E37" stroke-width="1" stroke-opacity="0.09" stroke-dasharray="6 10"/>
+      <!-- Centre dot -->
+      <circle cx="350" cy="350" r="5" fill="#768E37" fill-opacity="0.14"/>
+      <!-- Crosshair -->
+      <line x1="350" y1="28" x2="350" y2="672" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.09"/>
+      <line x1="28" y1="350" x2="672" y2="350" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.09"/>
+      <!-- Four tick marks at cardinal points -->
+      <line x1="350" y1="28" x2="350" y2="48" stroke="#768E37" stroke-width="2" stroke-opacity="0.16"/>
+      <line x1="672" y1="350" x2="652" y2="350" stroke="#768E37" stroke-width="2" stroke-opacity="0.16"/>
+      <line x1="350" y1="672" x2="350" y2="652" stroke="#768E37" stroke-width="2" stroke-opacity="0.16"/>
+      <line x1="28" y1="350" x2="48" y2="350" stroke="#768E37" stroke-width="2" stroke-opacity="0.16"/>
     </svg>
   </div>
 
   <div class="container-wide">
     <!-- Header Bar with Dual Typography & Scientific Metadata -->
     <header class="monograph-header-block">
-      <div class="monograph-badge-row">
-        <span class="monograph-pill-badge">
-          <i class="fa-solid fa-seedling badge-icon" aria-hidden="true"></i>
-          <span>{{ i18n.t().home.botanical.tag }}</span>
+      <div class="monograph-archival-badge">
+        <span class="archival-badge-icon" aria-hidden="true">
+          <i class="fa-solid fa-seedling"></i>
         </span>
-        <span class="badge-dot" aria-hidden="true">•</span>
-        <span class="monograph-sub-badge">{{ i18n.t().home.botanical.tagBadge }}</span>
+        <span class="archival-badge-title">{{ i18n.t().home.botanical.tag }}</span>
+        <span class="archival-badge-divider" aria-hidden="true"></span>
+        <span class="archival-badge-sub">{{ i18n.t().home.botanical.tagBadge }}</span>
       </div>
 
       <div class="monograph-headline-grid">
@@ -433,17 +465,25 @@
 
     <!-- Editorial Action Bar & Certification Mark (No Arrows) -->
     <div class="monograph-action-footer">
-      <a routerLink="/products" class="monograph-cta-button">
+      <a routerLink="/" class="monograph-cta-button">
         <span class="btn-text">{{ i18n.t().home.botanical.cta }}</span>
       </a>
 
       <div class="monograph-certification-seal" aria-hidden="true">
-        <i class="fa-solid fa-spa seal-leaf"></i>
-        <span>{{ i18n.t().home.botanical.publicationMark }}</span>
+        <span class="seal-icon-box">
+          <i class="fa-solid fa-spa seal-leaf"></i>
+        </span>
+        <span class="seal-text-content">{{ i18n.t().home.botanical.publicationMark }}</span>
       </div>
     </div>
   </div>
 </section>
+
+<div class="botanical-chapter-divider" aria-hidden="true">
+  <span class="chapter-line"></span>
+  <span class="chapter-node"><i class="fa-solid fa-seedling"></i></span>
+  <span class="chapter-line"></span>
+</div>
 
 <!-- ==========================================================================
      5. NURSERY CULTIVATION (ASYMMETRICAL EDITORIAL SPREAD)
@@ -452,16 +492,12 @@
   <!-- Oversized Background Watermark & Nursery Row Geometry -->
   <div class="nursery-watermark-wrap" aria-hidden="true">
     <span class="nursery-watermark-text">{{ i18n.t().home.nursery.watermark }}</span>
-    <svg class="nursery-ambient-geometry" viewBox="0 0 1200 500" preserveAspectRatio="none" fill="none">
-      <line x1="150" y1="0" x2="150" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.04"
-        stroke-dasharray="6 8" />
-      <line x1="450" y1="0" x2="450" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.035" />
-      <line x1="750" y1="0" x2="750" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.04"
-        stroke-dasharray="6 8" />
-      <line x1="1050" y1="0" x2="1050" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.035" />
-      <path d="M 0,460 L 1200,460" stroke="#768E37" stroke-width="1" stroke-opacity="0.04" />
-      <path d="M 150,460 L 350,60 M 450,460 L 580,60 M 750,460 L 750,60 M 1050,460 L 920,60" stroke="#768E37"
-        stroke-width="0.8" stroke-opacity="0.03" />
+    <svg class="nursery-ambient-geometry" viewBox="0 0 1200 500" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Four clean vertical cultivation-row lines -->
+      <line x1="240" y1="0" x2="240" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10"/>
+      <line x1="480" y1="0" x2="480" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10"/>
+      <line x1="720" y1="0" x2="720" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10"/>
+      <line x1="960" y1="0" x2="960" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10"/>
     </svg>
   </div>
 
@@ -469,9 +505,10 @@
     <div class="nursery-editorial-layout">
       <!-- Editorial Content Column (35-40% width) -->
       <div class="nursery-editorial-col">
-        <div class="nursery-label-wrap">
-          <span class="nursery-botanical-dot" aria-hidden="true"></span>
-          <span class="nursery-kicker">{{ i18n.t().home.nursery.tag }}</span>
+        <div class="editorial-brand-eyebrow">
+          <span class="eyebrow-accent-line" aria-hidden="true"></span>
+          <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+          <span class="brand-eyebrow-text">{{ i18n.t().home.nursery.tag }}</span>
         </div>
 
         <h2 class="nursery-heading">{{ i18n.t().home.nursery.title }}</h2>
@@ -550,18 +587,24 @@
   </div>
 </section>
 
+<div class="botanical-chapter-divider" aria-hidden="true">
+  <span class="chapter-line"></span>
+  <span class="chapter-node"><i class="fa-solid fa-seedling"></i></span>
+  <span class="chapter-line"></span>
+</div>
+
 <!-- ==========================================================================
      6. THE CULTIVATION JOURNEY (SCROLL-DRIVEN BOTANICAL STORYTELLING)
      ========================================================================== -->
 <section class="section-cultivation-journey" id="cultivationJourneySection">
   <!-- Subtle Organic Growth Path / Orchard Contours Background -->
   <div class="journey-ambient-layer" aria-hidden="true">
-    <svg class="journey-ambient-path" viewBox="0 0 1200 800" fill="none">
-      <path d="M 80,40 Q 220,280 140,520 T 260,760" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.04"
-        stroke-dasharray="8 8" />
-      <path d="M 280,100 Q 420,340 340,580 T 460,800" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.03"
-        stroke-dasharray="4 8" />
-      <circle cx="140" cy="520" r="140" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.03" />
+    <svg class="journey-ambient-path" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- One slow organic growth arc — root to sky -->
+      <path d="M 180,800 C 172,680 165,540 178,400 C 190,265 210,148 192,32"
+        stroke="#768E37" stroke-width="1.8" stroke-opacity="0.13" stroke-linecap="round"/>
+      <!-- Ground line -->
+      <line x1="0" y1="800" x2="1200" y2="800" stroke="#768E37" stroke-width="1" stroke-opacity="0.09"/>
     </svg>
   </div>
 
@@ -571,9 +614,10 @@
       <!-- Column 1: Editorial Visual Anchor (Sticky on desktop to accompany the journey) -->
       <aside class="journey-visual-column" id="journeyVisualCol">
         <header class="journey-editorial-header">
-          <div class="journey-kicker-wrap">
-            <span class="journey-botanical-bullet" aria-hidden="true"></span>
-            <span class="editorial-kicker">{{ i18n.t().home.harvest.tag }}</span>
+          <div class="editorial-brand-eyebrow">
+            <span class="eyebrow-accent-line" aria-hidden="true"></span>
+            <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+            <span class="brand-eyebrow-text">{{ i18n.t().home.harvest.tag }}</span>
           </div>
           <h2 class="journey-editorial-title">{{ i18n.t().home.harvest.title }}</h2>
           <p class="journey-editorial-subtitle">{{ i18n.t().home.harvest.subtitle }}</p>
@@ -682,7 +726,11 @@
   </div>
 </section>
 
-
+<div class="botanical-chapter-divider" aria-hidden="true">
+  <span class="chapter-line"></span>
+  <span class="chapter-node"><i class="fa-solid fa-seedling"></i></span>
+  <span class="chapter-line"></span>
+</div>
 
 <!-- ==========================================================================
      8. FINAL CINEMATIC CTA — HIGH-END AGRICULTURAL EDITORIAL
@@ -703,6 +751,7 @@
     <!-- Restrained Editorial Eyebrow -->
     <div class="cta-eyebrow-wrap" id="ctaEyebrow">
       <span class="cta-eyebrow-line" aria-hidden="true"></span>
+      <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
       <span class="cta-eyebrow-text">{{ i18n.t().home.ctaSection.tag }}</span>
       <span class="cta-eyebrow-line" aria-hidden="true"></span>
     </div>

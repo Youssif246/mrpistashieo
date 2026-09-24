@@ -464,3 +464,34 @@
     height: 38px;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar-glass-slab {
+    height: 64px;
+    padding-inline: 1rem;
+  }
+
+  .navbar-floating-wrapper.is-floating .navbar-glass-slab {
+    height: 60px;
+  }
+
+  .logo-img {
+    height: 36px;
+  }
+
+  .navbar-floating-wrapper.is-floating .logo-img {
+    height: 34px;
+  }
+
+  .mobile-menu-glass {
+    max-height: calc(100vh - 75px);
+    overflow-y: auto;
+    padding: 1.25rem 1.15rem 1.75rem;
+    border-radius: 12px;
+  }
+
+  .mobile-nav-link {
+    font-size: 1.25rem;
+    padding-block: 0.85rem;
+  }
+}

@@ -1,193 +1,394 @@
 <!-- ==========================================================================
-     CONTACT PAGE: THE FINAL CHAPTER OF THE BRAND STORY
+     CONTACT PAGE: BOTANICAL EDITORIAL CONSULTATION EXPERIENCE
+     Specialist Pistachio Cultivation & Mediterranean Nursery Advisory
      ========================================================================== -->
-<section class="contact-statement-hero">
-  <div class="container">
-    <div class="statement-lockup">
-      <span class="editorial-kicker">{{ i18n.t().contact.hero.badge }}</span>
-      <h1 class="statement-hero-title">
-        {{ i18n.t().contact.hero.headline }}
-      </h1>
-      <p class="statement-hero-lead">
-        {{ i18n.t().contact.hero.description }}
-      </p>
+
+<div class="contact-editorial-experience" id="contactPage">
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       1. CONTACT HERO: EDITORIAL BOTANICAL INTRODUCTION
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="contact-editorial-hero" id="contactHero">
+    <!-- Distinct Botanical Background Art (Leaf Silhouettes, Branch Veins, Topographic Curves) -->
+    <div class="contact-hero-ambient" aria-hidden="true">
+      <!-- Extremely Faint Serif Typographic Watermark (Deep in background, low opacity, no obstruction) -->
+      <span class="hero-watermark-monograph">CONSULTATION</span>
+
+      <!-- Botanical Vector Composition: Pistacia vera compound leaves & thin branches -->
+      <svg class="contact-hero-botanical-svg" viewBox="0 0 1200 500" fill="none">
+        <!-- Botanical branch line -->
+        <path d="M 1250 50 C 1050 140 880 280 680 340 C 520 390 320 420 80 440" stroke="#768E37" stroke-width="1.3" stroke-opacity="0.14" stroke-linecap="round"/>
+        <!-- Branch sub-shoots -->
+        <path d="M 880 280 C 820 220 740 180 660 170" stroke="#768E37" stroke-width="1.1" stroke-opacity="0.12" stroke-linecap="round"/>
+        <path d="M 680 340 C 640 400 580 440 500 460" stroke="#768E37" stroke-width="1.1" stroke-opacity="0.12" stroke-linecap="round"/>
+        <!-- Stylized Pistacia vera leaflet pairs -->
+        <path d="M 880 280 C 860 230 890 190 930 210 C 940 250 910 280 880 280 Z" stroke="#768E37" stroke-width="1" stroke-opacity="0.15" fill="#768E37" fill-opacity="0.02"/>
+        <path d="M 820 220 C 780 180 810 140 850 155 C 865 195 840 220 820 220 Z" stroke="#768E37" stroke-width="1" stroke-opacity="0.15" fill="#768E37" fill-opacity="0.02"/>
+        <path d="M 740 180 C 710 135 745 105 780 120 C 790 160 760 180 740 180 Z" stroke="#768E37" stroke-width="1" stroke-opacity="0.15" fill="#768E37" fill-opacity="0.02"/>
+        <path d="M 680 340 C 650 300 680 260 720 275 C 730 315 700 340 680 340 Z" stroke="#768E37" stroke-width="1" stroke-opacity="0.15" fill="#768E37" fill-opacity="0.02"/>
+        <!-- Subtle Topographic Contour Wave -->
+        <path d="M -60 380 C 280 290 620 440 1020 360 C 1180 325 1280 335 1380 330" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.08" stroke-linecap="round"/>
+      </svg>
     </div>
-  </div>
-</section>
 
-<!-- ==========================================================================
-     CONTACT EDITORIAL COMPOSITION (CHANNELS & BESPOKE INQUIRY FORM)
-     ========================================================================== -->
-<section class="section-contact-spread">
-  <div class="container">
-    <div class="contact-spread-grid">
-      <!-- Direct Communication Channels & Coordinates -->
-      <div class="contact-dossier-column">
-        <span class="editorial-kicker">{{ i18n.t().contact.info.tag }}</span>
-        <h2 class="dossier-title">{{ i18n.t().contact.info.title }}</h2>
-        <p class="dossier-intro">{{ i18n.t().contact.info.desc }}</p>
-
-        <!-- Direct WhatsApp Interaction Block -->
-        <div class="dossier-wa-banner">
-          <div class="wa-banner-text">
-            <span class="wa-kicker">Immediate Agronomic Channel</span>
-            <h3 class="wa-action-title">{{ i18n.t().contact.info.whatsappLabel }}</h3>
-            <p class="wa-action-sub">{{ i18n.t().contact.info.whatsappSub }}</p>
-          </div>
-          <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-wa">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-            <span>{{ i18n.t().contact.info.whatsappAction }}</span>
-          </a>
+    <div class="container-wide">
+      <div class="contact-hero-lockup">
+        <!-- Botanical Editorial Eyebrow -->
+        <div class="editorial-brand-eyebrow hero-eyebrow">
+          <span class="eyebrow-accent-line" aria-hidden="true"></span>
+          <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+          <span class="brand-eyebrow-text">{{ i18n.t().contact.hero.badge }}</span>
+          <span class="brand-eyebrow-dot" aria-hidden="true">·</span>
+          <span class="brand-eyebrow-sub">Agronomic Dialogue</span>
         </div>
 
-        <!-- Coordinates Ledger -->
-        <div class="coordinates-ledger">
-          <div class="ledger-row">
-            <span class="ledger-label">{{ i18n.t().contact.info.locationLabel }}</span>
-            <span class="ledger-val">{{ i18n.t().contact.info.locationValue }}</span>
-          </div>
+        <!-- Primary Display Headline -->
+        <h1 class="contact-display-headline">
+          {{ i18n.t().contact.hero.headline }}
+        </h1>
 
-          <div class="ledger-row">
-            <span class="ledger-label">{{ i18n.t().contact.info.hoursLabel }}</span>
-            <span class="ledger-val">{{ i18n.t().contact.info.hoursValue }}</span>
-          </div>
+        <!-- Standfirst Lead -->
+        <p class="contact-standfirst-lead">
+          {{ i18n.t().contact.hero.description }}
+        </p>
 
-          <div class="ledger-row">
-            <span class="ledger-label">{{ i18n.t().contact.info.emailLabel }}</span>
-            <span class="ledger-val">{{ i18n.t().contact.info.emailValue }}</span>
+        <!-- Understated Consultation Spec Sheet / Indicators -->
+        <div class="contact-hero-indicators" aria-hidden="true">
+          <div class="indicator-item">
+            <span class="ind-dot"></span>
+            <span class="ind-txt">Direct Agronomic Advisory</span>
           </div>
-
-          <div class="ledger-row">
-            <span class="ledger-label">{{ i18n.t().contact.info.phoneLabel }}</span>
-            <span class="ledger-val" dir="ltr">{{ i18n.t().contact.info.phoneValue }}</span>
+          <span class="ind-sep">/</span>
+          <div class="indicator-item">
+            <span class="ind-dot"></span>
+            <span class="ind-txt">Verified Mediterranean Lineages</span>
           </div>
-        </div>
-
-        <!-- Official Social Links -->
-        <div class="dossier-social-block">
-          <span class="dossier-social-kicker">{{ i18n.t().contact.social.title }}</span>
-          <p class="dossier-social-p">{{ i18n.t().contact.social.desc }}</p>
-          <div class="dossier-social-row">
-            <a [href]="social.instagram" target="_blank" rel="noopener noreferrer" class="social-chip">
-              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-              <span>Instagram</span>
-            </a>
-            <a [href]="social.facebook" target="_blank" rel="noopener noreferrer" class="social-chip">
-              <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-              <span>Facebook</span>
-            </a>
-            <a [href]="social.youtube" target="_blank" rel="noopener noreferrer" class="social-chip">
-              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-              <span>YouTube</span>
-            </a>
+          <span class="ind-sep">/</span>
+          <div class="indicator-item">
+            <span class="ind-dot"></span>
+            <span class="ind-txt">Commercial & Private Orchards</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Bespoke Project Inquiry Form -->
-      <div class="contact-form-column">
-        <div class="bespoke-form-pane">
-          <span class="editorial-kicker">{{ i18n.t().contact.form.tag }}</span>
-          <h2 class="form-display-title">{{ i18n.t().contact.form.title }}</h2>
-          <p class="form-display-lead">{{ i18n.t().contact.form.desc }}</p>
+    <!-- Organic Flowing Transition Arc into Main Spread -->
+    <div class="hero-flow-transition" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" fill="none" preserveAspectRatio="none">
+        <path d="M 0 36 C 420 10 980 44 1440 16" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.12" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </section>
 
-          <form (ngSubmit)="onSubmit()" class="editorial-inquiry-form">
-            <div class="field-group">
-              <label for="contact-name" class="field-label">{{ i18n.t().contact.form.name }}</label>
-              <input
-                id="contact-name"
-                name="name"
-                type="text"
-                class="field-input"
-                [(ngModel)]="name"
-                [placeholder]="i18n.t().contact.form.namePlaceholder"
-                required>
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       2. EDITORIAL CONSULTATION SPREAD (LEFT: DOSSIER | RIGHT: INQUIRY FORM)
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="contact-spread-section" id="contactSpread">
+    <div class="container-wide">
+      <div class="contact-editorial-composition">
+
+        <!-- ──────────────────────────────────────────────────────────────────
+             LEFT COLUMN: CURATED AGRICULTURAL CONTACT PANEL
+             ────────────────────────────────────────────────────────────────── -->
+        <div class="contact-dossier-panel">
+          <div class="dossier-inner-content">
+
+            <!-- Section Eyebrow & Title -->
+            <div class="editorial-brand-eyebrow">
+              <span class="eyebrow-accent-line" aria-hidden="true"></span>
+              <span class="brand-eyebrow-text">{{ i18n.t().contact.info.tag }}</span>
             </div>
 
-            <div class="fields-dual-row">
-              <div class="field-group">
-                <label for="contact-phone" class="field-label">{{ i18n.t().contact.form.phone }}</label>
+            <h2 class="dossier-editorial-title">
+              {{ i18n.t().contact.info.title }}
+            </h2>
+
+            <p class="dossier-editorial-desc">
+              {{ i18n.t().contact.info.desc }}
+            </p>
+
+            <!-- Refined WhatsApp Contact Module (Dark botanical green, subtle pistachio accent, NO ARROWS) -->
+            <div class="whatsapp-dialogue-module">
+              <div class="wa-module-header">
+                <div class="wa-specimen-badge">
+                  <span class="wa-pulsing-pip"></span>
+                  <span class="wa-badge-label">IMMEDIATE AGRONOMIC CHANNEL</span>
+                </div>
+                <div class="wa-icon-monogram" aria-hidden="true">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+              </div>
+
+              <div class="wa-module-body">
+                <h3 class="wa-module-title">{{ i18n.t().contact.info.whatsappLabel }}</h3>
+                <p class="wa-module-desc">{{ i18n.t().contact.info.whatsappSub }}</p>
+              </div>
+
+              <div class="wa-module-action">
+                <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial-wa-dialogue">
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                  <span>START A CONVERSATION</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Curated Editorial Ledger (List structure with small uppercase category, primary info, subtle dividers) -->
+            <div class="agricultural-ledger">
+
+              <!-- Ledger Item: Nursery Location -->
+              <div class="ledger-entry">
+                <div class="ledger-entry-head">
+                  <span class="ledger-category">{{ i18n.t().contact.info.locationLabel }}</span>
+                  <span class="ledger-mini-pip" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+                </div>
+                <div class="ledger-entry-body">
+                  <p class="ledger-value-primary">{{ i18n.t().contact.info.locationValue }}</p>
+                  <span class="ledger-value-secondary">Certified Nursery & Phytosanitary Operations</span>
+                </div>
+              </div>
+
+              <!-- Ledger Item: Operating Hours -->
+              <div class="ledger-entry">
+                <div class="ledger-entry-head">
+                  <span class="ledger-category">{{ i18n.t().contact.info.hoursLabel }}</span>
+                  <span class="ledger-mini-pip" aria-hidden="true"><i class="fa-solid fa-clock"></i></span>
+                </div>
+                <div class="ledger-entry-body">
+                  <p class="ledger-value-primary">{{ i18n.t().contact.info.hoursValue }}</p>
+                  <span class="ledger-value-secondary">Central European Time (CET / GMT+1)</span>
+                </div>
+              </div>
+
+              <!-- Ledger Item: Email Address -->
+              <div class="ledger-entry">
+                <div class="ledger-entry-head">
+                  <span class="ledger-category">{{ i18n.t().contact.info.emailLabel }}</span>
+                  <span class="ledger-mini-pip" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+                </div>
+                <div class="ledger-entry-body">
+                  <a href="mailto:contact@specialist-pistachio.com" class="ledger-value-link">{{ i18n.t().contact.info.emailValue }}</a>
+                  <span class="ledger-value-secondary">Direct agronomic reservations & nursery inquiries</span>
+                </div>
+              </div>
+
+              <!-- Ledger Item: Telephone -->
+              <div class="ledger-entry">
+                <div class="ledger-entry-head">
+                  <span class="ledger-category">{{ i18n.t().contact.info.phoneLabel }}</span>
+                  <span class="ledger-mini-pip" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
+                </div>
+                <div class="ledger-entry-body">
+                  <span class="ledger-value-primary" dir="ltr">{{ i18n.t().contact.info.phoneValue }}</span>
+                  <span class="ledger-value-secondary">Field consultations & commercial tree bookings</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Refined Social Media Ledger -->
+            <div class="dossier-social-section">
+              <span class="social-section-title">{{ i18n.t().contact.social.title }}</span>
+              <p class="social-section-desc">{{ i18n.t().contact.social.desc }}</p>
+              <div class="social-editorial-links">
+                <a [href]="social.instagram" target="_blank" rel="noopener noreferrer" class="social-editorial-btn" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                  <span>Instagram</span>
+                </a>
+                <a [href]="social.facebook" target="_blank" rel="noopener noreferrer" class="social-editorial-btn" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                  <span>Facebook</span>
+                </a>
+                <a [href]="social.youtube" target="_blank" rel="noopener noreferrer" class="social-editorial-btn" aria-label="YouTube">
+                  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+                  <span>YouTube</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ──────────────────────────────────────────────────────────────────
+             RIGHT COLUMN: INTEGRATED EDITORIAL INQUIRY FORM (NOT A WHITE CARD)
+             ────────────────────────────────────────────────────────────────── -->
+        <div class="contact-form-panel">
+          <div class="editorial-document-sheet">
+
+            <!-- Sheet Corner Ambient Accent -->
+            <div class="sheet-ambient-decor" aria-hidden="true">
+              <svg class="sheet-botanical-branch" viewBox="0 0 200 240" fill="none">
+                <path d="M 180 20 C 140 70 80 140 30 220" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.12" stroke-linecap="round"/>
+                <path d="M 140 70 C 120 45 140 25 165 40 C 168 60 150 72 140 70 Z" stroke="#768E37" stroke-width="1" stroke-opacity="0.14"/>
+                <path d="M 80 140 C 50 120 60 90 90 105 C 95 125 85 140 80 140 Z" stroke="#768E37" stroke-width="1" stroke-opacity="0.14"/>
+              </svg>
+            </div>
+
+            <!-- Form Header with Editorial Hierarchy -->
+            <div class="sheet-header">
+              <div class="editorial-brand-eyebrow">
+                <span class="eyebrow-accent-line" aria-hidden="true"></span>
+                <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-leaf"></i></span>
+                <span class="brand-eyebrow-text">{{ i18n.t().contact.form.tag }}</span>
+                <span class="brand-eyebrow-dot" aria-hidden="true">·</span>
+                <span class="brand-eyebrow-sub">Bespoke Advisory</span>
+              </div>
+              <h2 class="sheet-display-title">{{ i18n.t().contact.form.title }}</h2>
+              <p class="sheet-display-lead">{{ i18n.t().contact.form.desc }}</p>
+            </div>
+
+            <!-- Form Fields -->
+            <form (ngSubmit)="onSubmit()" class="editorial-document-form">
+              <!-- Full Name -->
+              <div class="doc-field-wrap">
+                <label for="contact-name" class="doc-label">
+                  <span class="doc-label-text">{{ i18n.t().contact.form.name }}</span>
+                  <span class="doc-required" aria-hidden="true">*</span>
+                </label>
                 <input
-                  id="contact-phone"
-                  name="phone"
-                  type="tel"
-                  class="field-input"
-                  [(ngModel)]="phone"
-                  [placeholder]="i18n.t().contact.form.phonePlaceholder"
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  class="doc-input"
+                  [(ngModel)]="name"
+                  [placeholder]="i18n.t().contact.form.namePlaceholder"
                   required>
               </div>
 
-              <div class="field-group">
-                <label for="contact-email" class="field-label">{{ i18n.t().contact.form.email }}</label>
-                <input
-                  id="contact-email"
-                  name="email"
-                  type="email"
-                  class="field-input"
-                  [(ngModel)]="email"
-                  [placeholder]="i18n.t().contact.form.emailPlaceholder">
+              <!-- Phone & Email Dual Row -->
+              <div class="doc-dual-grid">
+                <div class="doc-field-wrap">
+                  <label for="contact-phone" class="doc-label">
+                    <span class="doc-label-text">{{ i18n.t().contact.form.phone }}</span>
+                    <span class="doc-required" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    id="contact-phone"
+                    name="phone"
+                    type="tel"
+                    class="doc-input"
+                    [(ngModel)]="phone"
+                    [placeholder]="i18n.t().contact.form.phonePlaceholder"
+                    required>
+                </div>
+
+                <div class="doc-field-wrap">
+                  <label for="contact-email" class="doc-label">
+                    <span class="doc-label-text">{{ i18n.t().contact.form.email }}</span>
+                  </label>
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    class="doc-input"
+                    [(ngModel)]="email"
+                    [placeholder]="i18n.t().contact.form.emailPlaceholder">
+                </div>
               </div>
-            </div>
 
-            <div class="field-group">
-              <label for="contact-interest" class="field-label">{{ i18n.t().contact.form.interest }}</label>
-              <select
-                id="contact-interest"
-                name="interest"
-                class="field-select"
-                [(ngModel)]="interest">
-                <option value="General Pistachio Plants Inquiry">{{ i18n.t().contact.form.interestOption1 }}</option>
-                <option value="UCB1 Rootstock Inquiries">{{ i18n.t().contact.form.interestOption2 }}</option>
-                <option value="Traditional Rootstocks (Cornicabra / Atlantica)">{{ i18n.t().contact.form.interestOption3 }}</option>
-                <option value="Grafted Plants (Kerman, Sirora, Larnaka)">{{ i18n.t().contact.form.interestOption4 }}</option>
-                <option value="Agricultural & Field Services">{{ i18n.t().contact.form.interestOption5 }}</option>
-              </select>
-            </div>
+              <!-- Primary Interest Select -->
+              <div class="doc-field-wrap">
+                <label for="contact-interest" class="doc-label">
+                  <span class="doc-label-text">{{ i18n.t().contact.form.interest }}</span>
+                </label>
+                <div class="doc-select-shell">
+                  <select
+                    id="contact-interest"
+                    name="interest"
+                    class="doc-select"
+                    [(ngModel)]="interest">
+                    <option value="General Pistachio Plants Inquiry">{{ i18n.t().contact.form.interestOption1 }}</option>
+                    <option value="UCB1 Rootstock Inquiries">{{ i18n.t().contact.form.interestOption2 }}</option>
+                    <option value="Traditional Rootstocks (Cornicabra / Atlantica)">{{ i18n.t().contact.form.interestOption3 }}</option>
+                    <option value="Grafted Plants (Kerman, Sirora, Larnaka)">{{ i18n.t().contact.form.interestOption4 }}</option>
+                    <option value="Agricultural & Field Services">{{ i18n.t().contact.form.interestOption5 }}</option>
+                  </select>
+                  <span class="doc-select-caret" aria-hidden="true">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </div>
+              </div>
 
-            <div class="field-group">
-              <label for="contact-details" class="field-label">{{ i18n.t().contact.form.projectDetails }}</label>
-              <textarea
-                id="contact-details"
-                name="projectDetails"
-                rows="4"
-                class="field-textarea"
-                [(ngModel)]="projectDetails"
-                [placeholder]="i18n.t().contact.form.projectDetailsPlaceholder"></textarea>
-            </div>
+              <!-- Project Details Textarea -->
+              <div class="doc-field-wrap">
+                <label for="contact-details" class="doc-label">
+                  <span class="doc-label-text">{{ i18n.t().contact.form.projectDetails }}</span>
+                </label>
+                <textarea
+                  id="contact-details"
+                  name="projectDetails"
+                  rows="4"
+                  class="doc-textarea"
+                  [(ngModel)]="projectDetails"
+                  [placeholder]="i18n.t().contact.form.projectDetailsPlaceholder"></textarea>
+              </div>
 
-            <button type="submit" class="btn-editorial btn-editorial-dark form-dispatch-btn">
+              <!-- Submit Action: NO ARROW, consistent dark botanical button -->
+              <div class="doc-action-wrap">
+                <button type="submit" class="btn-editorial-submit">
+                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                  <span>SEND INQUIRY VIA WHATSAPP</span>
+                </button>
+              </div>
+
+              <!-- Security / Privacy Notice -->
+              <div class="doc-notice-row">
+                <i class="fa-solid fa-shield-halved notice-icon" aria-hidden="true"></i>
+                <span class="notice-text">{{ i18n.t().contact.form.notice }}</span>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       3. NURSERY LOCATION EDITORIAL FEATURE (WIDE HORIZONTAL COMPOSITION)
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="section-nursery-location" id="nurseryLocation">
+    <div class="container-wide">
+      <div class="location-editorial-card">
+        <!-- Abstract Botanical & Topographic Background Contour -->
+        <div class="location-card-ambient" aria-hidden="true">
+          <svg class="location-contour-lines" viewBox="0 0 1000 240" fill="none" preserveAspectRatio="none">
+            <path d="M 0 160 C 240 60 520 220 780 120 C 890 80 960 90 1020 85" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.14" stroke-linecap="round"/>
+            <path d="M 0 190 C 260 90 540 250 800 150 C 900 110 970 120 1020 115" stroke="#768E37" stroke-width="0.9" stroke-opacity="0.08" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="location-editorial-content">
+          <div class="location-text-side">
+            <div class="editorial-brand-eyebrow">
+              <span class="eyebrow-accent-line" aria-hidden="true"></span>
+              <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-location-crosshairs"></i></span>
+              <span class="brand-eyebrow-text">{{ i18n.t().contact.info.locationLabel }}</span>
+            </div>
+            <h3 class="location-card-title">{{ i18n.t().contact.info.locationValue }}</h3>
+            <p class="location-card-sub">Specialized Mediterranean nursery operations & regional logistics</p>
+          </div>
+
+          <div class="location-action-side">
+            <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-location-action">
               <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-              <span>{{ i18n.t().contact.form.submit }}</span>
-            </button>
-
-            <p class="form-disclaimer">
-              <i class="fa-solid fa-lock disclaimer-icon" aria-hidden="true"></i>
-              <span>{{ i18n.t().contact.form.notice }}</span>
-            </p>
-          </form>
+              <span>START A CONVERSATION</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ==========================================================================
-     MINIMALIST LOCATION VISUAL PLATE
-     ========================================================================== -->
-<section class="section-location-monolith">
-  <div class="container">
-    <div class="location-monolith-plate">
-      <div class="plate-info">
-        <span class="editorial-kicker">{{ i18n.t().contact.info.locationLabel }}</span>
-        <h3 class="plate-location-name">{{ i18n.t().contact.info.locationValue }}</h3>
-        <span class="plate-sub">Specialized Mediterranean Nursery Operations</span>
-      </div>
-      <div class="plate-action">
-        <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-outline">
-          <i class="fa-solid fa-location-arrow" aria-hidden="true"></i>
-          <span>{{ i18n.t().contact.info.whatsappAction }}</span>
-        </a>
-      </div>
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       4. SEAMLESS BOTANICAL BRIDGE TO FOOTER
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="contact-footer-bridge" aria-hidden="true">
+    <div class="bridge-ambient-branch">
+      <svg viewBox="0 0 1440 64" fill="none" preserveAspectRatio="none">
+        <path d="M 0 0 C 460 50 980 50 1440 0" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.18" stroke-linecap="round"/>
+      </svg>
     </div>
   </div>
-</section>
+
+</div>

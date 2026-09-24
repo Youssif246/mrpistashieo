@@ -131,7 +131,7 @@ p {
   padding-inline: var(--container-pad);
 }
 
-/* Editorial Eyebrow Tag */
+/* Editorial Eyebrow Tag & Unified Brand Eyebrow */
 .editorial-kicker {
   display: inline-flex;
   align-items: center;
@@ -158,12 +158,130 @@ body.rtl .editorial-kicker {
   background-color: var(--c-pistachio);
 }
 
-/* Editorial Section Dividers */
+/* Unified Editorial Brand Eyebrow Signature */
+.editorial-brand-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.2rem;
+  width: fit-content;
+}
+
+.eyebrow-accent-line {
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--c-pistachio);
+  border-radius: 1px;
+  flex-shrink: 0;
+}
+
+.eyebrow-botanical-pip {
+  color: var(--c-pistachio);
+  font-size: 0.82rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: transform 0.4s var(--ease-editorial);
+}
+
+.editorial-brand-eyebrow:hover .eyebrow-botanical-pip {
+  transform: rotate(15deg) scale(1.15);
+}
+
+.brand-eyebrow-text {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--c-pistachio-deep);
+}
+
+body.rtl .brand-eyebrow-text {
+  font-family: var(--font-ar-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+.brand-eyebrow-dot {
+  color: var(--c-earth);
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.brand-eyebrow-sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--c-earth);
+}
+
+body.rtl .brand-eyebrow-sub {
+  font-family: var(--font-ar-body);
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+/* Editorial Section Dividers & Authentic Botanical Chapter Bridges */
 .hairline {
   border: none;
   border-top: 1px solid var(--c-sand);
   margin: 0;
   width: 100%;
+}
+
+.botanical-chapter-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  width: min(calc(100% - clamp(2.5rem, 6vw, 6.5rem)), 1360px);
+  margin-inline: auto;
+  padding-block: 0.75rem;
+  position: relative;
+  z-index: 2;
+  user-select: none;
+}
+
+.chapter-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(118, 142, 55, 0.22), transparent);
+}
+
+.chapter-node {
+  color: var(--c-pistachio);
+  font-size: 0.82rem;
+  opacity: 0.75;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s var(--ease-editorial), opacity 0.4s var(--ease-editorial);
+}
+
+.botanical-chapter-divider:hover .chapter-node {
+  transform: rotate(20deg) scale(1.2);
+  opacity: 1;
+}
+
+/* Botanical Subtle Breathing Animations */
+@keyframes botanicalBreathe {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.02);
+  }
+}
+
+@keyframes botanicalGlow {
+  0%, 100% {
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 0.2;
+  }
 }
 
 /* Restrained Editorial Buttons */
@@ -313,3 +431,34 @@ body.rtl .btn-editorial {
   border-color: var(--c-forest);
   background-color: #FFFFFF;
 }
+
+/* ==========================================================================
+   GLOBAL MOBILE RESPONSIVE ENHANCEMENTS (All Screens <= 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  :root {
+    --container-pad: 1.15rem;
+  }
+
+  /* Safe tap target defaults */
+  button, 
+  [role="button"],
+  .btn-editorial,
+  .hero-cta-primary,
+  .hero-cta-secondary {
+    min-height: 46px;
+  }
+
+  /* Prevent text clipping on narrow viewports */
+  h1, h2, h3, h4, h5, h6, p {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --container-pad: 0.95rem;
+  }
+}
+
