@@ -26,10 +26,8 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
     this.hasIntroPending = !hasIntroAlreadyPlayed();
 
-    // Slight delay to ensure Angular has fully rendered the DOM
-    setTimeout(() => {
-      this.initAnimations();
-    }, 100);
+    // Synchronous execution eliminates any flash of unstyled content
+    this.initAnimations();
   }
 
   private initAnimations(): void {
@@ -38,6 +36,19 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     this.gsapCtx = gsap.context(() => {
       if (!this.hasIntroPending) {
         this.initHeroAnimation(prefersReducedMotion);
+      } else if (!prefersReducedMotion) {
+        // Pre-hide hero elements while intro is active so they reveal gracefully
+        const heroSection = document.querySelector('.hero') as HTMLElement | null;
+        if (heroSection) {
+          const eyebrow = heroSection.querySelector('.hero-eyebrow');
+          const title   = heroSection.querySelector('.hero-title');
+          const desc    = heroSection.querySelector('.hero-description');
+          const ctas    = heroSection.querySelectorAll('.hero-cta-primary, .hero-cta-secondary');
+          if (eyebrow) gsap.set(eyebrow, { opacity: 0, y: 16 });
+          if (title)   gsap.set(title,   { opacity: 0, y: 24 });
+          if (desc)    gsap.set(desc,    { opacity: 0, y: 18 });
+          ctas.forEach(c => gsap.set(c,  { opacity: 0, y: 14 }));
+        }
       }
       this.initManifestoAnimation(prefersReducedMotion);
       this.initServicesAnimation(prefersReducedMotion);
@@ -51,6 +62,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   onIntroComplete(): void {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.hasIntroPending = false;
     this.initHeroAnimation(prefersReducedMotion);
   }
 

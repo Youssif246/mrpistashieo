@@ -22,9 +22,7 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     if (typeof window === 'undefined') return;
 
-    setTimeout(() => {
-      this.initAnimations();
-    }, 100);
+    this.initAnimations();
   }
 
   private initAnimations(): void {

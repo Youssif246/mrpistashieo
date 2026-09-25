@@ -75,10 +75,7 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
   ngAfterViewInit(): void {
     if (typeof window === 'undefined' || !this.isVisible()) return;
 
-    // Slight delay ensures SVG geometry is measured accurately by the browser
-    setTimeout(() => {
-      this.initContinuousGrowthAnimation();
-    }, 60);
+    this.initContinuousGrowthAnimation();
   }
 
   private initContinuousGrowthAnimation(): void {

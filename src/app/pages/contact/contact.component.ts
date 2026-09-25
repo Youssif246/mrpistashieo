@@ -30,9 +30,7 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     if (typeof window === 'undefined') return;
 
-    setTimeout(() => {
-      this.initAnimations();
-    }, 80);
+    this.initAnimations();
   }
 
   ngOnDestroy(): void {
