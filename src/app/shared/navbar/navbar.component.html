@@ -16,7 +16,7 @@
           </svg>
         </span>
       </a>
-      <a routerLink="/" routerLinkActive="" class="nav-link">
+      <a routerLink="/about" routerLinkActive="active" class="nav-link">
         <span class="nav-link-text">{{ i18n.t().navbar.about }}</span>
         <span class="nav-active-botanical" aria-hidden="true">
           <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -25,23 +25,11 @@
           </svg>
         </span>
       </a>
-      <a routerLink="/" routerLinkActive="" class="nav-link">
+      <a class="nav-link is-inert-link" aria-disabled="true" tabindex="-1">
         <span class="nav-link-text">{{ i18n.t().navbar.products }}</span>
-        <span class="nav-active-botanical" aria-hidden="true">
-          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
-            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
-          </svg>
-        </span>
       </a>
-      <a routerLink="/" routerLinkActive="" class="nav-link">
+      <a class="nav-link is-inert-link" aria-disabled="true" tabindex="-1">
         <span class="nav-link-text">{{ i18n.t().navbar.contact }}</span>
-        <span class="nav-active-botanical" aria-hidden="true">
-          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
-            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
-          </svg>
-        </span>
       </a>
     </nav>
 
@@ -86,13 +74,13 @@
         (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.t().navbar.home }}</span>
       </a>
-      <a routerLink="/" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+      <a routerLink="/about" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.t().navbar.about }}</span>
       </a>
-      <a routerLink="/" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+      <a class="mobile-nav-link is-inert-link" aria-disabled="true" tabindex="-1">
         <span class="m-link-text">{{ i18n.t().navbar.products }}</span>
       </a>
-      <a routerLink="/" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+      <a class="mobile-nav-link is-inert-link" aria-disabled="true" tabindex="-1">
         <span class="m-link-text">{{ i18n.t().navbar.contact }}</span>
       </a>
     </nav>

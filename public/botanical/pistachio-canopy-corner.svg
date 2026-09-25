@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" fill="none" class="botanical-stationery-drawing">
+  <defs>
+    <!-- Soft luxury paper watermark tint -->
+    <linearGradient id="stationery-stem-grad" x1="800" y1="0" x2="300" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#768E37" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#8C9F4E" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#A4B86A" stop-opacity="0.10"/>
+    </linearGradient>
+
+    <linearGradient id="stationery-leaf-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#768E37" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#8C9F4E" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+
+  <g class="stationery-foliage-group">
+    <!-- Main Delicate Woody Pistachio Branch (Entering from upper right) -->
+    <path d="M 820 -20 C 760 40 710 110 650 170 C 590 230 510 280 430 320 C 370 350 290 380 210 400 C 180 408 140 415 110 418" 
+          stroke="url(#stationery-stem-grad)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+    <!-- Secondary Twig A: branching towards center-top -->
+    <path d="M 640 175 C 600 130 550 90 490 60 C 440 35 380 20 320 15" 
+          stroke="url(#stationery-stem-grad)" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+
+    <!-- Secondary Twig B: branching downwards toward bottom-right -->
+    <path d="M 520 270 C 530 330 550 400 580 460 C 595 490 620 530 645 560" 
+          stroke="url(#stationery-stem-grad)" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+
+    <!-- Secondary Twig C: lower delicate twig -->
+    <path d="M 330 365 C 290 420 240 470 180 510" 
+          stroke="url(#stationery-stem-grad)" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+
+    <!-- ═══ PISTACIA VERA COMPOUND LEAF CLUSTER 1 (Top Left) ═══ -->
+    <!-- Leaflet 1: Terminal leaflet -->
+    <path d="M 320 15 C 300 -15 260 -35 220 -30 C 180 -25 155 5 165 35 C 175 65 215 85 255 80 C 295 75 315 45 320 15 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.9" stroke-opacity="0.18"/>
+    <path d="M 320 15 C 270 20 220 25 165 35" stroke="#768E37" stroke-width="0.6" stroke-opacity="0.14" fill="none"/>
+
+    <!-- Leaflet 2: Left lateral pair -->
+    <path d="M 360 30 C 330 10 290 5 260 25 C 230 45 225 75 245 95 C 265 115 305 115 335 95 C 365 75 370 45 360 30 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.85" stroke-opacity="0.16"/>
+    <path d="M 360 30 C 310 50 270 70 245 95" stroke="#768E37" stroke-width="0.5" stroke-opacity="0.12" fill="none"/>
+
+    <!-- Leaflet 3: Right lateral pair -->
+    <path d="M 390 45 C 390 15 420 -15 450 -20 C 480 -25 510 -5 510 25 C 510 55 480 85 450 85 C 420 85 390 65 390 45 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.85" stroke-opacity="0.16"/>
+    <path d="M 390 45 C 430 40 470 35 510 25" stroke="#768E37" stroke-width="0.5" stroke-opacity="0.12" fill="none"/>
+
+    <!-- Leaflet 4: Lower left lateral -->
+    <path d="M 432 56 C 410 40 380 45 360 65 C 340 85 345 115 370 130 C 395 145 425 135 445 115 C 465 95 450 70 432 56 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.15"/>
+
+    <!-- Leaflet 5: Lower right lateral -->
+    <path d="M 470 75 C 485 55 515 50 540 65 C 565 80 570 110 550 130 C 530 150 500 150 480 130 C 460 110 460 85 470 75 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.15"/>
+
+    <!-- ═══ PISTACIA VERA COMPOUND LEAF CLUSTER 2 (Mid-branch) ═══ -->
+    <path d="M 110 418 C 70 400 30 410 10 440 C -10 470 -5 510 25 530 C 55 550 95 540 120 510 C 145 480 135 435 110 418 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.9" stroke-opacity="0.18"/>
+    <path d="M 110 418 C 75 455 45 490 25 530" stroke="#768E37" stroke-width="0.55" stroke-opacity="0.14" fill="none"/>
+
+    <path d="M 155 407 C 130 375 90 365 60 385 C 30 405 25 440 45 465 C 65 490 105 495 135 475 C 165 455 170 425 155 407 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.15"/>
+
+    <path d="M 180 405 C 185 370 215 345 250 345 C 285 345 310 370 305 405 C 300 440 270 465 235 465 C 200 465 175 435 180 405 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.15"/>
+
+    <path d="M 215 400 C 190 420 180 455 195 485 C 210 515 245 530 275 515 C 305 500 315 465 300 435 C 285 405 245 385 215 400 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.15"/>
+
+    <path d="M 255 390 C 270 425 295 445 325 440 C 355 435 375 405 370 375 C 365 345 335 325 305 335 C 275 345 250 365 255 390 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.15"/>
+
+    <!-- ═══ PISTACIA VERA COMPOUND LEAF CLUSTER 3 (Lower Branch) ═══ -->
+    <path d="M 180 510 C 140 520 110 555 115 595 C 120 635 155 660 195 650 C 235 640 260 605 250 565 C 240 525 210 505 180 510 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.85" stroke-opacity="0.16"/>
+    <path d="M 215 480 C 185 460 145 470 125 500 C 105 530 115 565 145 580 C 175 595 210 585 230 555 C 250 525 240 490 215 480 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.14"/>
+    <path d="M 270 440 C 285 465 315 475 345 460 C 375 445 385 415 370 390 C 355 365 325 355 295 370 C 265 385 260 415 270 440 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.14"/>
+
+    <!-- ═══ PISTACIA VERA COMPOUND LEAF CLUSTER 4 (Upper Right) ═══ -->
+    <path d="M 645 560 C 670 595 710 615 750 600 C 790 585 810 545 790 510 C 770 475 730 460 690 475 C 650 490 630 530 645 560 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.85" stroke-opacity="0.16"/>
+    <path d="M 605 490 C 635 480 660 450 655 415 C 650 380 620 355 585 365 C 550 375 530 410 540 445 C 550 480 580 500 605 490 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.14"/>
+    <path d="M 580 460 C 550 485 540 525 555 560 C 570 595 610 610 640 585 C 670 560 675 520 655 490 C 635 460 600 445 580 460 Z" 
+          fill="url(#stationery-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.14"/>
+
+    <!-- ═══ DELICATE PISTACHIO DRUPE / SHELL CONTOURS (Luxury Botanical Watermark) ═══ -->
+    <path d="M 430 325 Q 425 355 415 390 Q 405 425 395 460" stroke="#8C7B65" stroke-width="1.0" stroke-opacity="0.20" fill="none"/>
+    
+    <ellipse cx="425" cy="355" rx="13" ry="18" transform="rotate(-25 425 355)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="440" cy="370" rx="12" ry="17" transform="rotate(15 440 370)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="415" cy="380" rx="13" ry="18" transform="rotate(-40 415 380)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="430" cy="400" rx="12" ry="17" transform="rotate(10 430 400)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="405" cy="415" rx="13" ry="19" transform="rotate(-15 405 415)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="422" cy="430" rx="12" ry="17" transform="rotate(25 422 430)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="395" cy="445" rx="11" ry="16" transform="rotate(-30 395 445)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="410" cy="460" rx="10" ry="15" transform="rotate(5 410 460)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+  </g>
+</svg>

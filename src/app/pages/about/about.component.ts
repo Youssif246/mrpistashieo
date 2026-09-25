@@ -36,6 +36,7 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       this.initPhilosophyAnimation(prefersReducedMotion);
       this.initTechnicalAnimation(prefersReducedMotion);
       this.initCtaAnimation(prefersReducedMotion);
+      this.initBotanicalParallax(prefersReducedMotion);
     }, this.el);
   }
 
@@ -245,6 +246,39 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
         once: true
       }
     });
+  }
+
+  // 6. BOTANICAL SPECIMEN & ORCHARD PARALLAX
+  private initBotanicalParallax(prefersReducedMotion: boolean): void {
+    if (prefersReducedMotion) return;
+
+    const verticalShadow = this.el.nativeElement.querySelector('#aboutHero .botanical-shadow--vertical-left');
+    if (verticalShadow) {
+      gsap.to(verticalShadow, {
+        yPercent: 4,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#aboutHero',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 2
+        }
+      });
+    }
+
+    const orchardShadow = this.el.nativeElement.querySelector('#aboutCta .botanical-shadow--orchard-row');
+    if (orchardShadow) {
+      gsap.to(orchardShadow, {
+        yPercent: -3,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '#aboutCta',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 2
+        }
+      });
+    }
   }
 
   ngOnDestroy(): void {

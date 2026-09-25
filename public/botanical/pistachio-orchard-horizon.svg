@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 240" fill="none" class="botanical-orchard-watermark">
+  <defs>
+    <linearGradient id="orchard-watermark-fade" x1="0" y1="0" x2="0" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#768E37" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#8C9F4E" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#768E37" stop-opacity="0.01"/>
+    </linearGradient>
+  </defs>
+
+  <g class="orchard-horizon-line-group">
+    <!-- Extremely Faint Mediterranean Orchard Contour Line -->
+    <path d="M 0 210 C 200 205 380 215 560 210 C 740 205 920 218 1100 212 C 1280 206 1440 215 1600 210" 
+          stroke="#768E37" stroke-width="0.8" stroke-opacity="0.12" stroke-linecap="round" fill="none"/>
+
+    <!-- Distinct, delicate Pistacia vera rounded crowns in distant row -->
+    <!-- Tree 1 -->
+    <line x1="91" y1="175" x2="91" y2="210" stroke="#8C7B65" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 55 172 C 50 148 68 128 91 124 C 114 120 135 138 131 166 C 128 178 114 186 93 184 C 74 184 57 180 55 172 Z" 
+          fill="url(#orchard-watermark-fade)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+
+    <!-- Tree 2 -->
+    <line x1="231" y1="172" x2="231" y2="210" stroke="#8C7B65" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 190 168 C 185 142 205 122 231 116 C 257 112 278 130 274 162 C 271 176 256 184 233 182 C 211 182 193 176 190 168 Z" 
+          fill="url(#orchard-watermark-fade)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+
+    <!-- Tree 3 -->
+    <line x1="381" y1="174" x2="381" y2="210" stroke="#8C7B65" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 340 170 C 335 145 355 125 381 121 C 407 117 427 134 423 164 C 420 179 403 186 383 185 C 361 185 343 179 340 170 Z" 
+          fill="url(#orchard-watermark-fade)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+
+    <!-- Tree 4 -->
+    <line x1="531" y1="172" x2="531" y2="210" stroke="#8C7B65" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 490 168 C 485 143 505 123 531 118 C 557 113 577 132 573 162 C 570 176 553 184 533 182 C 511 182 493 176 490 168 Z" 
+          fill="url(#orchard-watermark-fade)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+
+    <!-- Tree 5 -->
+    <line x1="681" y1="174" x2="681" y2="210" stroke="#8C7B65" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 640 170 C 635 145 655 125 681 119 C 707 115 727 134 723 164 C 720 179 703 186 683 184 C 661 184 643 179 640 170 Z" 
+          fill="url(#orchard-watermark-fade)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+
+    <!-- Tree 6 -->
+    <line x1="831" y1="170" x2="831" y2="210" stroke="#8C7B65" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 790 168 C 785 142 805 120 831 116 C 857 112 878 130 874 160 C 871 175 856 182 833 182 C 811 182 793 176 790 168 Z" 
+          fill="url(#orchard-watermark-fade)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+
+    <!-- Tree 7 -->
+    <line x1="981" y1="173" x2="981" y2="210" stroke="#8C7B65" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 940 170 C 935 145 955 125 981 119 C 1007 115 1027 134 1023 164 C 1020 179 1003 186 983 184 C 961 184 943 179 940 170 Z" 
+          fill="url(#orchard-watermark-fade)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+
+    <!-- Tree 8 -->
+    <line x1="1131" y1="171" x2="1131" y2="210" stroke="#8C7B65" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 1090 168 C 1085 142 1105 122 1131 117 C 1157 113 1177 132 1173 162 C 1170 176 1153 184 1133 182 C 1111 182 1093 176 1090 168 Z" 
+          fill="url(#orchard-watermark-fade)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+
+    <!-- Tree 9 -->
+    <line x1="1281" y1="173" x2="1281" y2="210" stroke="#8C7B65" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 1240 170 C 1235 145 1255 125 1281 121 C 1307 117 1327 134 1323 164 C 1320 179 1303 186 1283 184 C 1261 184 1243 179 1240 170 Z" 
+          fill="url(#orchard-watermark-fade)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+
+    <!-- Tree 10 -->
+    <line x1="1431" y1="172" x2="1431" y2="210" stroke="#8C7B65" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 1390 168 C 1385 143 1405 123 1431 118 C 1457 113 1477 132 1473 162 C 1470 176 1453 184 1433 182 C 1411 182 1393 176 1390 168 Z" 
+          fill="url(#orchard-watermark-fade)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+  </g>
+</svg>

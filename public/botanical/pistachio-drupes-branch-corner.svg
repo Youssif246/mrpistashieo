@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 600" fill="none" class="botanical-stationery-drupes">
+  <defs>
+    <linearGradient id="drupes-stem-grad" x1="0" y1="600" x2="600" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#768E37" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#8C9F4E" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#A4B86A" stop-opacity="0.10"/>
+    </linearGradient>
+
+    <linearGradient id="drupes-leaf-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#768E37" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#8C9F4E" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+
+  <g class="drupes-stationery-group">
+    <!-- Branch rising from lower left corner -->
+    <path d="M -30 620 C 40 550 120 480 210 420 C 300 360 400 320 510 280 C 560 260 620 240 680 230" 
+          stroke="url(#drupes-stem-grad)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+
+    <path d="M 210 420 C 180 340 160 260 150 180" 
+          stroke="url(#drupes-stem-grad)" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+
+    <path d="M 400 320 C 460 300 520 290 590 290" 
+          stroke="url(#drupes-stem-grad)" stroke-width="1.0" stroke-linecap="round" fill="none"/>
+
+    <!-- Foliage Cluster 1 (top right) -->
+    <path d="M 680 230 C 720 200 760 210 775 240 C 790 270 770 305 730 315 C 690 325 655 300 650 270 C 645 245 660 235 680 230 Z" 
+          fill="url(#drupes-leaf-fill)" stroke="#768E37" stroke-width="0.85" stroke-opacity="0.18"/>
+    <path d="M 620 240 C 635 205 665 185 700 190 C 730 195 745 225 735 255 C 725 285 695 300 665 295 C 640 290 625 270 620 240 Z" 
+          fill="url(#drupes-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.15"/>
+    <path d="M 640 250 C 625 285 595 305 565 300 C 535 295 520 265 530 235 C 540 205 570 190 600 195 C 625 200 640 225 640 250 Z" 
+          fill="url(#drupes-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.15"/>
+
+    <!-- Foliage Cluster 2 (top left) -->
+    <path d="M 150 180 C 120 145 130 100 165 85 C 200 70 235 95 240 135 C 245 175 215 205 180 210 C 155 210 140 195 150 180 Z" 
+          fill="url(#drupes-leaf-fill)" stroke="#768E37" stroke-width="0.85" stroke-opacity="0.16"/>
+    <path d="M 160 220 C 130 225 95 205 85 175 C 75 145 95 115 125 110 C 155 105 185 125 195 155 C 205 185 185 215 160 220 Z" 
+          fill="url(#drupes-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.14"/>
+    <path d="M 180 240 C 205 215 240 210 270 225 C 300 240 310 275 290 305 C 270 335 235 340 205 325 C 180 310 170 275 180 240 Z" 
+          fill="url(#drupes-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.14"/>
+
+    <!-- Faint Pistachio Fruit Outlines on Central Panicle Axis -->
+    <path d="M 330 380 Q 345 420 360 460 Q 375 500 385 535" stroke="#8C7B65" stroke-width="0.95" stroke-opacity="0.20" fill="none"/>
+    <ellipse cx="330" cy="405" rx="13" ry="18" transform="rotate(20 330 405)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="350" cy="420" rx="12" ry="17" transform="rotate(-15 350 420)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="325" cy="435" rx="13" ry="18" transform="rotate(35 325 435)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="355" cy="445" rx="12" ry="17" transform="rotate(-25 355 445)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="340" cy="465" rx="13" ry="19" transform="rotate(10 340 465)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="365" cy="475" rx="12" ry="17" transform="rotate(-30 365 475)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="350" cy="495" rx="11" ry="16" transform="rotate(20 350 495)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+    <ellipse cx="370" cy="510" rx="10" ry="15" transform="rotate(-15 370 510)" fill="#768E37" fill-opacity="0.04" stroke="#8C7B65" stroke-width="0.75" stroke-opacity="0.18"/>
+  </g>
+</svg>

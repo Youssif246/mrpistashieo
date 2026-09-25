@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" fill="none" class="botanical-stationery-slender">
+  <defs>
+    <linearGradient id="slender-stem-grad" x1="0" y1="500" x2="500" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#768E37" stop-opacity="0.20"/>
+      <stop offset="60%" stop-color="#8C9F4E" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#A4B86A" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <linearGradient id="slender-leaf-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#768E37" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#8C9F4E" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <g class="slender-stationery-group">
+    <!-- Slender, meditative Pistacia vera twig rising gracefully -->
+    <path d="M -20 520 C 50 470 120 420 190 360 C 260 300 340 240 430 190 C 475 165 520 145 565 130" 
+          stroke="url(#slender-stem-grad)" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+
+    <!-- Small side shoot to upper left -->
+    <path d="M 210 340 C 180 290 150 240 125 190" 
+          stroke="url(#slender-stem-grad)" stroke-width="0.9" stroke-linecap="round" fill="none"/>
+
+    <!-- Tip Leaflet Cluster (Top Right) -->
+    <path d="M 565 130 C 595 105 625 115 635 140 C 645 165 625 190 595 195 C 565 200 540 180 540 155 C 540 138 552 132 565 130 Z" 
+          fill="url(#slender-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.16"/>
+    <path d="M 515 150 C 525 125 550 110 575 115 C 600 120 610 145 600 170 C 590 195 565 205 540 200 C 520 195 510 175 515 150 Z" 
+          fill="url(#slender-leaf-fill)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.15"/>
+    <path d="M 530 160 C 515 185 490 198 465 190 C 440 182 430 158 440 135 C 450 112 475 102 500 110 C 520 118 530 140 530 160 Z" 
+          fill="url(#slender-leaf-fill)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.15"/>
+
+    <!-- Mid-Branch Delicate Leaflet Pair -->
+    <path d="M 330 250 C 350 220 380 210 405 220 C 430 230 435 258 420 280 C 405 302 375 310 350 300 C 332 292 325 272 330 250 Z" 
+          fill="url(#slender-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.15"/>
+    <path d="M 345 260 C 330 285 305 298 280 290 C 255 282 248 258 260 235 C 272 212 298 205 320 215 C 338 222 345 242 345 260 Z" 
+          fill="url(#slender-leaf-fill)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+
+    <!-- Lower Shoot Leaflets -->
+    <path d="M 125 190 C 105 160 112 125 138 112 C 164 99 192 115 198 145 C 204 175 185 200 158 205 C 140 208 128 198 125 190 Z" 
+          fill="url(#slender-leaf-fill)" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.15"/>
+    <path d="M 135 210 C 115 230 85 235 65 220 C 45 205 45 178 62 155 C 79 132 108 130 128 145 C 142 155 145 188 135 210 Z" 
+          fill="url(#slender-leaf-fill)" stroke="#768E37" stroke-width="0.75" stroke-opacity="0.14"/>
+  </g>
+</svg>

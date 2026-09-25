@@ -30,7 +30,7 @@
       "headlineLine2": "Rooted in Precision.",
       "description": "Specialized in pistachio nursery production, rootstocks and grafted plants, with professional agricultural support from propagation to field establishment.",
       "ctaPrimary": "WhatsApp Inquiry",
-      "ctaSecondary": "Explore Plants & Rootstocks"
+      "ctaSecondary": "Explore Plants"
     },
     "positioning": {
       "watermark": "PISTACHIO",
@@ -195,10 +195,10 @@
       "title": "Ready to Plan Your Pistachio Orchard?",
       "titleLine1": "Ready to Plan Your",
       "titleLine2": "Pistachio Orchard?",
-      "desc": "Contact our agricultural specialists on WhatsApp to discuss rootstock availability, variety selection, and field services for your plantation.",
-      "primaryBtn": "CONTACT US ON WHATSAPP",
-      "secondaryBtn": "CONTACT",
-      "btn": "CONTACT US ON WHATSAPP"
+      "desc": "Contact our agricultural specialists to discuss rootstock availability, variety selection, and field services for your plantation.",
+      "primaryBtn": "Contact Our Specialists",
+      "secondaryBtn": "Contact Our Specialists",
+      "btn": "Contact Our Specialists"
     }
   },
   "about": {
@@ -332,13 +332,13 @@
       "whatsappSub": "Fastest response for inquiries & quotes",
       "whatsappAction": "Start Chat",
       "phoneLabel": "Telephone",
-      "phoneValue": "[Company Phone Placeholder - +34 600 000 000]",
+      "phoneValue": "+34 600 000 000",
       "emailLabel": "Email Address",
-      "emailValue": "[Company Email Placeholder - contact@specialist-pistachio.com]",
+      "emailValue": "contact@specialist-pistachio.com",
       "hoursLabel": "Operating Hours",
       "hoursValue": "Monday – Friday: 08:30 – 18:30",
       "locationLabel": "Nursery Location",
-      "locationValue": "[Nursery & Operations Center - Spain]"
+      "locationValue": "Mediterranean Nursery & Operations Center — Spain"
     },
     "form": {
       "tag": "Inquiry Form",
@@ -358,7 +358,7 @@
       "interestOption5": "Agricultural & Field Services",
       "projectDetails": "Project Details & Location",
       "projectDetailsPlaceholder": "Please include approximate hectares or tree count, soil type, and plantation location...",
-      "submit": "Send Inquiry via WhatsApp",
+      "submit": "Submit Inquiry Request",
       "notice": "Clicking submit will open WhatsApp with your pre-composed project message for immediate dialogue."
     },
     "social": {

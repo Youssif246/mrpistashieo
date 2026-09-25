@@ -7,7 +7,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Specialist Pistachio Nursery & Cultivation' },
   { path: 'about', component: AboutComponent, title: 'About Our Nursery - Pistachio Specialist' },
-  { path: 'products', component: ProductsComponent, title: 'Plants & Rootstocks - Pistachio Specialist' },
-  { path: 'contact', component: ContactComponent, title: 'Contact Our Agricultural Team - Pistachio Specialist' },
+  { path: 'products', redirectTo: '' },
+  { path: 'contact', redirectTo: '' },
   { path: '**', redirectTo: '' }
 ];

@@ -4,10 +4,18 @@
 
 /* 1. Catalog Hero */
 .catalog-hero-monograph {
+  position: relative;
+  overflow: hidden;
   padding-top: clamp(4rem, 8vw, 7.5rem);
   padding-bottom: clamp(3rem, 6vw, 5.5rem);
   background-color: var(--c-ivory);
   border-bottom: 1px solid var(--c-sand);
+}
+
+.catalog-hero-monograph .container,
+.catalog-chapter .container {
+  position: relative;
+  z-index: 1;
 }
 
 .catalog-hero-lockup {
@@ -33,6 +41,8 @@
    Chapters Shared Architectural Styling
    -------------------------------------------------------------------------- */
 .catalog-chapter {
+  position: relative;
+  overflow: hidden;
   padding-block: var(--spacing-macro);
   border-bottom: 1px solid var(--c-sand);
 }

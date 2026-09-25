@@ -39,6 +39,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       this.initNurseryAnimation(prefersReducedMotion);
       this.initJourneyAnimation(prefersReducedMotion);
       this.initCtaAnimation(prefersReducedMotion);
+      this.initBotanicalParallax(prefersReducedMotion);
     }, this.el);
   }
 
@@ -422,6 +423,55 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     if (ctaHeading)     ctaTl.to(ctaHeading,     { opacity: 1, y: 0, duration: 0.7,  ease: 'power2.out' }, 0.32);
     if (ctaLead)        ctaTl.to(ctaLead,        { opacity: 1, y: 0, duration: 0.6,  ease: 'power2.out' }, 0.46);
     if (ctaActions)     ctaTl.to(ctaActions,     { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' }, 0.58);
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // 8. BOTANICAL ORCHARD PARALLAX
+  // ═══════════════════════════════════════════════════════════════
+  private initBotanicalParallax(prefersReducedMotion: boolean): void {
+    if (prefersReducedMotion) return;
+
+    const cornerShadow = document.querySelector('.botanical-editorial-section .botanical-shadow--top-right');
+    if (cornerShadow) {
+      gsap.to(cornerShadow, {
+        yPercent: 4,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.botanical-editorial-section',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 2
+        }
+      });
+    }
+
+    const orchardRow = document.querySelector('.section-cultivation-journey .botanical-shadow--orchard-row');
+    if (orchardRow) {
+      gsap.to(orchardRow, {
+        yPercent: -3,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.section-cultivation-journey',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 2
+        }
+      });
+    }
+
+    const serviceBranch = document.querySelector('.section-service-index .botanical-shadow--center-cards');
+    if (serviceBranch) {
+      gsap.to(serviceBranch, {
+        yPercent: 3,
+        ease: 'none',
+        scrollTrigger: {
+          trigger: '.section-service-index',
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 2
+        }
+      });
+    }
   }
 
   ngOnDestroy(): void {

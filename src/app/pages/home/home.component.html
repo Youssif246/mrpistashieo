@@ -12,7 +12,8 @@
     <!-- Centered Eyebrow -->
     <div class="hero-eyebrow">
       <span class="eyebrow-accent-line" aria-hidden="true"></span>
-      <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+      <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
+          class="pip-pistachio-img" loading="lazy"></span>
       <span class="eyebrow-text">{{ i18n.t().home.hero.badge }}</span>
       <span class="eyebrow-dot" aria-hidden="true">·</span>
       <span class="eyebrow-botanical">{{ i18n.t().home.hero.botanical }}</span>
@@ -39,7 +40,7 @@
         <i class="fa-brands fa-whatsapp cta-wa-icon" aria-hidden="true"></i>
         <span>{{ i18n.t().home.hero.ctaPrimary }}</span>
       </a>
-      <a routerLink="/" class="hero-cta-secondary">
+      <a routerLink="/about" class="hero-cta-secondary">
         <span>{{ i18n.t().home.hero.ctaSecondary }}</span>
       </a>
     </div>
@@ -50,28 +51,18 @@
      2. EDITORIAL BRAND STATEMENT (SPACIOUS, TYPOGRAPHY-DRIVEN)
      ========================================================================== -->
 <section class="botanical-editorial-section" id="agricultural-specialization">
-  <!-- Subtle Pistachio Touches in Empty Space (100% Free from Content) -->
-  <div class="botanical-ambient-canvas" aria-hidden="true">
-    <!-- 1. Corner Pistachio Botanical Sprig (Docked strictly in outer corner margin) -->
-    <svg class="botanical-ambient-branch" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Main stem -->
-      <path d="M 400 20 C 320 50 240 120 180 200 C 130 260 90 330 40 400" stroke="#768E37" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.16"/>
-      <!-- Pistachio compound leaflets -->
-      <ellipse cx="250" cy="110" rx="42" ry="20" transform="rotate(-35 250 110)" stroke="#768E37" stroke-width="1.3" stroke-opacity="0.15"/>
-      <line x1="225" y1="124" x2="275" y2="96" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.1"/>
-      <ellipse cx="305" cy="75" rx="36" ry="17" transform="rotate(-48 305 75)" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.14"/>
-      <ellipse cx="185" cy="185" rx="38" ry="18" transform="rotate(-25 185 185)" stroke="#768E37" stroke-width="1.3" stroke-opacity="0.15"/>
-      <line x1="160" y1="196" x2="210" y2="174" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.1"/>
-      <ellipse cx="130" cy="270" rx="36" ry="17" transform="rotate(-15 130 270)" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.13"/>
-      <!-- Delicate pistachio nut specimen cluster -->
-      <ellipse cx="225" cy="148" rx="11" ry="16" transform="rotate(-22 225 148)" stroke="#B8955A" stroke-width="1.2" stroke-opacity="0.18"/>
-      <ellipse cx="246" cy="162" rx="10" ry="15" transform="rotate(32 246 162)" stroke="#B8955A" stroke-width="1.2" stroke-opacity="0.18"/>
-    </svg>
+  <!-- 3-Layer Botanical Orchard Atmosphere -->
+  <!-- Layer 2: Natural Sunlight Filtering Patch -->
+  <div class="botanical-sunlight-filter" aria-hidden="true"></div>
 
-    <!-- 2. Gentle Field Contour Line in Negative Bottom Space -->
-    <svg class="botanical-ambient-contour" viewBox="0 0 1440 90" fill="none" preserveAspectRatio="none">
-      <path d="M 0 65 C 380 25 780 85 1140 45 C 1280 30 1380 38 1440 35" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.09" stroke-linecap="round"/>
-    </svg>
+  <!-- Layer 3: Authentic Real Pistacia vera Branch with Open Split Nuts -->
+  <div class="botanical-shadow-wrapper botanical-shadow--top-right" aria-hidden="true">
+    <img src="/botanical/real-pistachio-branch.png" alt="" loading="lazy">
+  </div>
+
+  <!-- Layer 3: Distant Orchard Horizon Watermark at Base -->
+  <div class="botanical-shadow-wrapper botanical-shadow--orchard-row" aria-hidden="true">
+    <img src="/botanical/pistachio-orchard-horizon.svg" alt="" loading="lazy">
   </div>
 
   <!-- FOREGROUND: Art-Directed Editorial Manifesto Spread -->
@@ -82,7 +73,8 @@
       <div class="manifesto-headline-block">
         <div class="editorial-brand-eyebrow">
           <span class="eyebrow-accent-line" aria-hidden="true"></span>
-          <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+          <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
+              class="pip-pistachio-img" loading="lazy"></span>
           <span class="brand-eyebrow-text">{{ i18n.t().home.positioning.tag }}</span>
         </div>
         <h2 class="manifesto-display-title">
@@ -103,7 +95,7 @@
     <div class="manifesto-mid-divider" aria-hidden="true">
       <span class="mid-divider-line"></span>
       <span class="mid-divider-pip">
-        <i class="fa-solid fa-seedling"></i>
+        <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
       </span>
       <span class="mid-divider-line"></span>
     </div>
@@ -157,7 +149,8 @@
 
 <div class="botanical-chapter-divider" aria-hidden="true">
   <span class="chapter-line"></span>
-  <span class="chapter-node"><i class="fa-solid fa-seedling"></i></span>
+  <span class="chapter-node"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img"
+      loading="lazy"></span>
   <span class="chapter-line"></span>
 </div>
 
@@ -167,15 +160,26 @@
 <section class="section-service-index">
   <!-- Clean Editorial Background Watermark & Agricultural Field-Row Curves -->
   <div class="services-ambient-layer" aria-hidden="true">
+    <!-- Dappled sunlight filter -->
+    <div class="botanical-sunlight-filter"></div>
+    <!-- Pistacia vera arching branch with clusters of open nuts -->
+    <div class="botanical-shadow-wrapper botanical-shadow--top-left">
+      <img src="/botanical/real-pistachio-arch.png" alt="" loading="lazy">
+    </div>
+    <!-- Pistacia vera branch silhouette behind service panels -->
+    <div class="botanical-shadow-wrapper botanical-shadow--center-cards">
+      <img src="/botanical/real-pistachio-sprig.png" alt="" loading="lazy">
+    </div>
     <span class="services-bg-watermark">{{ i18n.t().home.services.watermark }}</span>
-    <svg class="services-field-rows" viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="services-field-rows" viewBox="0 0 1440 600" preserveAspectRatio="none" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
       <!-- Three clean, slow agricultural contour arcs -->
-      <path d="M -80,145 C 260,100 620,175 1000,120 C 1180,96 1340,102 1520,95"
-        stroke="#768E37" stroke-width="1.5" stroke-opacity="0.10" stroke-linecap="round"/>
-      <path d="M -80,310 C 300,262 700,345 1100,288 C 1270,265 1400,270 1520,265"
-        stroke="#768E37" stroke-width="1.5" stroke-opacity="0.09" stroke-linecap="round"/>
-      <path d="M -80,478 C 340,428 780,512 1200,454 C 1350,434 1450,438 1520,435"
-        stroke="#768E37" stroke-width="1.5" stroke-opacity="0.08" stroke-linecap="round"/>
+      <path d="M -80,145 C 260,100 620,175 1000,120 C 1180,96 1340,102 1520,95" stroke="#768E37" stroke-width="1.5"
+        stroke-opacity="0.10" stroke-linecap="round" />
+      <path d="M -80,310 C 300,262 700,345 1100,288 C 1270,265 1400,270 1520,265" stroke="#768E37" stroke-width="1.5"
+        stroke-opacity="0.09" stroke-linecap="round" />
+      <path d="M -80,478 C 340,428 780,512 1200,454 C 1350,434 1450,438 1520,435" stroke="#768E37" stroke-width="1.5"
+        stroke-opacity="0.08" stroke-linecap="round" />
     </svg>
   </div>
 
@@ -185,7 +189,8 @@
       <div class="service-header-lead">
         <div class="editorial-brand-eyebrow">
           <span class="eyebrow-accent-line" aria-hidden="true"></span>
-          <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+          <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
+              class="pip-pistachio-img" loading="lazy"></span>
           <span class="brand-eyebrow-text">{{ i18n.t().home.services.tag }}</span>
         </div>
         <h2 class="service-index-title">{{ i18n.t().home.services.title }}</h2>
@@ -260,7 +265,7 @@
 
     <!-- Refined Editorial CTA: View All Services (No Arrows) -->
     <div class="service-index-footer">
-      <a routerLink="/services" class="editorial-cta-link">
+      <a class="editorial-cta-link is-inert-link" aria-disabled="true" tabindex="-1">
         <span class="cta-text">{{ i18n.t().home.services.viewAll }}</span>
       </a>
     </div>
@@ -269,7 +274,8 @@
 
 <div class="botanical-chapter-divider" aria-hidden="true">
   <span class="chapter-line"></span>
-  <span class="chapter-node"><i class="fa-solid fa-seedling"></i></span>
+  <span class="chapter-node"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img"
+      loading="lazy"></span>
   <span class="chapter-line"></span>
 </div>
 
@@ -284,20 +290,25 @@
   <div class="monograph-ambient-layer" aria-hidden="true">
     <svg class="monograph-ambient-diagram" viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
       <!-- Outer ring -->
-      <circle cx="350" cy="350" r="320" stroke="#768E37" stroke-width="1.4" stroke-opacity="0.11"/>
+      <circle cx="350" cy="350" r="320" stroke="#768E37" stroke-width="1.4" stroke-opacity="0.11" />
       <!-- Inner ring (dashed) -->
-      <circle cx="350" cy="350" r="210" stroke="#768E37" stroke-width="1" stroke-opacity="0.09" stroke-dasharray="6 10"/>
+      <circle cx="350" cy="350" r="210" stroke="#768E37" stroke-width="1" stroke-opacity="0.09"
+        stroke-dasharray="6 10" />
       <!-- Centre dot -->
-      <circle cx="350" cy="350" r="5" fill="#768E37" fill-opacity="0.14"/>
+      <circle cx="350" cy="350" r="5" fill="#768E37" fill-opacity="0.14" />
       <!-- Crosshair -->
-      <line x1="350" y1="28" x2="350" y2="672" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.09"/>
-      <line x1="28" y1="350" x2="672" y2="350" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.09"/>
+      <line x1="350" y1="28" x2="350" y2="672" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.09" />
+      <line x1="28" y1="350" x2="672" y2="350" stroke="#768E37" stroke-width="0.8" stroke-opacity="0.09" />
       <!-- Four tick marks at cardinal points -->
-      <line x1="350" y1="28" x2="350" y2="48" stroke="#768E37" stroke-width="2" stroke-opacity="0.16"/>
-      <line x1="672" y1="350" x2="652" y2="350" stroke="#768E37" stroke-width="2" stroke-opacity="0.16"/>
-      <line x1="350" y1="672" x2="350" y2="652" stroke="#768E37" stroke-width="2" stroke-opacity="0.16"/>
-      <line x1="28" y1="350" x2="48" y2="350" stroke="#768E37" stroke-width="2" stroke-opacity="0.16"/>
+      <line x1="350" y1="28" x2="350" y2="48" stroke="#768E37" stroke-width="2" stroke-opacity="0.16" />
+      <line x1="672" y1="350" x2="652" y2="350" stroke="#768E37" stroke-width="2" stroke-opacity="0.16" />
+      <line x1="350" y1="672" x2="350" y2="652" stroke="#768E37" stroke-width="2" stroke-opacity="0.16" />
+      <line x1="28" y1="350" x2="48" y2="350" stroke="#768E37" stroke-width="2" stroke-opacity="0.16" />
     </svg>
+    <div class="botanical-sunlight-filter"></div>
+    <div class="botanical-shadow-wrapper botanical-shadow--monograph-branch">
+      <img src="/botanical/real-pistachio-corner.png" alt="" loading="lazy">
+    </div>
   </div>
 
   <div class="container-wide">
@@ -305,7 +316,7 @@
     <header class="monograph-header-block">
       <div class="monograph-archival-badge">
         <span class="archival-badge-icon" aria-hidden="true">
-          <i class="fa-solid fa-seedling"></i>
+          <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
         </span>
         <span class="archival-badge-title">{{ i18n.t().home.botanical.tag }}</span>
         <span class="archival-badge-divider" aria-hidden="true"></span>
@@ -465,7 +476,7 @@
 
     <!-- Editorial Action Bar & Certification Mark (No Arrows) -->
     <div class="monograph-action-footer">
-      <a routerLink="/" class="monograph-cta-button">
+      <a class="monograph-cta-button is-inert-link" aria-disabled="true" tabindex="-1">
         <span class="btn-text">{{ i18n.t().home.botanical.cta }}</span>
       </a>
 
@@ -481,7 +492,8 @@
 
 <div class="botanical-chapter-divider" aria-hidden="true">
   <span class="chapter-line"></span>
-  <span class="chapter-node"><i class="fa-solid fa-seedling"></i></span>
+  <span class="chapter-node"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img"
+      loading="lazy"></span>
   <span class="chapter-line"></span>
 </div>
 
@@ -489,15 +501,21 @@
      5. NURSERY CULTIVATION (ASYMMETRICAL EDITORIAL SPREAD)
      ========================================================================== -->
 <section class="section-nursery-editorial">
+  <!-- Subtle Botanical Atmosphere on Left Margin (Bottom Left) -->
+  <div class="botanical-shadow-wrapper botanical-shadow--bottom-left" aria-hidden="true">
+    <img src="/botanical/real-pistachio-corner.png" alt="" loading="lazy">
+  </div>
+
   <!-- Oversized Background Watermark & Nursery Row Geometry -->
   <div class="nursery-watermark-wrap" aria-hidden="true">
     <span class="nursery-watermark-text">{{ i18n.t().home.nursery.watermark }}</span>
-    <svg class="nursery-ambient-geometry" viewBox="0 0 1200 500" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="nursery-ambient-geometry" viewBox="0 0 1200 500" preserveAspectRatio="none" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
       <!-- Four clean vertical cultivation-row lines -->
-      <line x1="240" y1="0" x2="240" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10"/>
-      <line x1="480" y1="0" x2="480" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10"/>
-      <line x1="720" y1="0" x2="720" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10"/>
-      <line x1="960" y1="0" x2="960" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10"/>
+      <line x1="240" y1="0" x2="240" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10" />
+      <line x1="480" y1="0" x2="480" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10" />
+      <line x1="720" y1="0" x2="720" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10" />
+      <line x1="960" y1="0" x2="960" y2="500" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.10" />
     </svg>
   </div>
 
@@ -507,7 +525,8 @@
       <div class="nursery-editorial-col">
         <div class="editorial-brand-eyebrow">
           <span class="eyebrow-accent-line" aria-hidden="true"></span>
-          <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+          <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
+              class="pip-pistachio-img" loading="lazy"></span>
           <span class="brand-eyebrow-text">{{ i18n.t().home.nursery.tag }}</span>
         </div>
 
@@ -519,11 +538,11 @@
         <!-- Visual Botanical Connector Line -->
         <div class="nursery-connector-line" aria-hidden="true">
           <span class="connector-track"></span>
-          <i class="fa-solid fa-seedling connector-icon"></i>
+          <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
         </div>
 
         <div class="nursery-cta-wrap">
-          <a routerLink="/services" class="nursery-text-cta">
+          <a class="nursery-text-cta is-inert-link" aria-disabled="true" tabindex="-1">
             <span>{{ i18n.t().home.nursery.cta }}</span>
           </a>
         </div>
@@ -549,7 +568,7 @@
           <div class="nursery-spec-item">
             <div class="spec-meta-header">
               <span class="spec-icon-wrap" aria-hidden="true">
-                <i class="fa-solid fa-seedling"></i>
+                <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
               </span>
               <span class="spec-title-label">{{ i18n.t().home.nursery.spec1Label }}</span>
             </div>
@@ -589,7 +608,8 @@
 
 <div class="botanical-chapter-divider" aria-hidden="true">
   <span class="chapter-line"></span>
-  <span class="chapter-node"><i class="fa-solid fa-seedling"></i></span>
+  <span class="chapter-node"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img"
+      loading="lazy"></span>
   <span class="chapter-line"></span>
 </div>
 
@@ -598,14 +618,21 @@
      ========================================================================== -->
 <section class="section-cultivation-journey" id="cultivationJourneySection">
   <!-- Subtle Organic Growth Path / Orchard Contours Background -->
+  <!-- 3-Layer Botanical Atmosphere -->
   <div class="journey-ambient-layer" aria-hidden="true">
-    <svg class="journey-ambient-path" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- One slow organic growth arc — root to sky -->
-      <path d="M 180,800 C 172,680 165,540 178,400 C 190,265 210,148 192,32"
-        stroke="#768E37" stroke-width="1.8" stroke-opacity="0.13" stroke-linecap="round"/>
-      <!-- Ground line -->
-      <line x1="0" y1="800" x2="1200" y2="800" stroke="#768E37" stroke-width="1" stroke-opacity="0.09"/>
-    </svg>
+    <div class="botanical-sunlight-filter"></div>
+    <!-- Distant Pistachio Orchard Row Silhouette -->
+    <div class="botanical-shadow-wrapper botanical-shadow--orchard-row">
+      <img src="/botanical/pistachio-orchard-horizon.svg" alt="" loading="lazy">
+    </div>
+    <!-- Subtle lower botanical branch with open pistachios -->
+    <div class="botanical-shadow-wrapper botanical-shadow--bottom-left">
+      <img src="/botanical/real-pistachio-sprig.png" alt="" loading="lazy">
+    </div>
+    <!-- Arching botanical pistachio branch top right -->
+    <div class="botanical-shadow-wrapper botanical-shadow--top-right">
+      <img src="/botanical/real-pistachio-arch.png" alt="" loading="lazy">
+    </div>
   </div>
 
   <div class="container-wide">
@@ -616,7 +643,8 @@
         <header class="journey-editorial-header">
           <div class="editorial-brand-eyebrow">
             <span class="eyebrow-accent-line" aria-hidden="true"></span>
-            <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+            <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
+                class="pip-pistachio-img" loading="lazy"></span>
             <span class="brand-eyebrow-text">{{ i18n.t().home.harvest.tag }}</span>
           </div>
           <h2 class="journey-editorial-title">{{ i18n.t().home.harvest.title }}</h2>
@@ -652,7 +680,7 @@
           <div class="stage-node-col">
             <span class="step-num">{{ i18n.t().home.harvest.stage1Num }}</span>
             <div class="stage-icon-dot">
-              <i class="fa-solid fa-seedling"></i>
+              <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
             </div>
           </div>
           <div class="stage-text-col">
@@ -728,7 +756,8 @@
 
 <div class="botanical-chapter-divider" aria-hidden="true">
   <span class="chapter-line"></span>
-  <span class="chapter-node"><i class="fa-solid fa-seedling"></i></span>
+  <span class="chapter-node"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img"
+      loading="lazy"></span>
   <span class="chapter-line"></span>
 </div>
 
@@ -751,7 +780,8 @@
     <!-- Restrained Editorial Eyebrow -->
     <div class="cta-eyebrow-wrap" id="ctaEyebrow">
       <span class="cta-eyebrow-line" aria-hidden="true"></span>
-      <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-seedling"></i></span>
+      <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
+          class="pip-pistachio-img" loading="lazy"></span>
       <span class="cta-eyebrow-text">{{ i18n.t().home.ctaSection.tag }}</span>
       <span class="cta-eyebrow-line" aria-hidden="true"></span>
     </div>
@@ -767,19 +797,12 @@
       {{ i18n.t().home.ctaSection.desc }}
     </p>
 
-    <!-- Redesigned High-End Action Cluster (Unified Button System - No Arrows) -->
     <div class="cta-action-cluster" id="ctaActions">
-      <!-- Primary: WhatsApp in Dark Botanical Green Surface -->
-      <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="cta-btn cta-btn--primary"
-        aria-label="Contact us on WhatsApp">
+      <!-- High-End Editorial Contact Button -->
+      <a class="cta-btn cta-btn--editorial-main is-inert-link" aria-disabled="true" tabindex="-1" aria-label="Contact Our Specialists">
         <span class="cta-btn-icon" aria-hidden="true">
-          <i class="fa-brands fa-whatsapp"></i>
+          <i class="fa-solid fa-paper-plane"></i>
         </span>
-        <span class="cta-btn-label">{{ i18n.t().home.ctaSection.primaryBtn }}</span>
-      </a>
-
-      <!-- Secondary: Refined Warm Ivory Transparent / Glass-like Button -->
-      <a routerLink="/contact" class="cta-btn cta-btn--secondary" aria-label="Contact">
         <span class="cta-btn-label">{{ i18n.t().home.ctaSection.secondaryBtn }}</span>
       </a>
     </div>

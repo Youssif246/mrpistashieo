@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="100%" height="100%" fill="none" class="pistachio-nut-svg">
+  <!-- Pistachio Nut Icon -->
+  <defs>
+    <linearGradient id="pistaKernel" x1="16" y1="6" x2="16" y2="26" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9BB43E"/>
+      <stop offset="60%" stop-color="#6E8A24"/>
+      <stop offset="100%" stop-color="#4C6316"/>
+    </linearGradient>
+    <linearGradient id="pistaSkin" x1="12" y1="8" x2="20" y2="18" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#A84C66"/>
+      <stop offset="50%" stop-color="#84334C"/>
+      <stop offset="100%" stop-color="#84334C" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pistaShellLeft" x1="6" y1="8" x2="15" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FAF4EA"/>
+      <stop offset="70%" stop-color="#E4D6C3"/>
+      <stop offset="100%" stop-color="#CBB7A0"/>
+    </linearGradient>
+    <linearGradient id="pistaShellRight" x1="26" y1="8" x2="17" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F4EEE2"/>
+      <stop offset="70%" stop-color="#DDD0BD"/>
+      <stop offset="100%" stop-color="#C2AE96"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Exposed Emerald Kernel Inside Open Shell -->
+  <path d="M 16 5.2 C 12.6 6.8 10.5 11.2 11 16.8 C 11.4 21.2 13.4 25.2 16 26.8 C 18.6 25.2 20.6 21.2 21 16.8 C 21.5 11.2 19.4 6.8 16 5.2 Z" 
+        fill="url(#pistaKernel)" stroke="#435914" stroke-width="0.75" stroke-linejoin="round"/>
+        
+  <!-- Signature Purple/Rose Pistachio Pellicle / Skin on kernel edge -->
+  <path d="M 14.8 6.2 C 12.8 8.2 11.8 11.8 12.2 16 C 13 13.2 14.2 9.8 16 7.8 C 15.3 7 15 6.6 14.8 6.2 Z" 
+        fill="url(#pistaSkin)" opacity="0.95"/>
+  <path d="M 17.2 6.5 C 18.8 8.6 19.6 12.2 19.2 16.2 C 18.5 13.2 17.2 9.8 16 7.8 C 16.7 7.2 17 6.8 17.2 6.5 Z" 
+        fill="url(#pistaSkin)" opacity="0.8"/>
+
+  <!-- Natural Kernel Central Cleft / Suture Line -->
+  <path d="M 16 7.5 C 15.6 12 15.7 17.5 16 24" 
+        stroke="#364910" stroke-width="0.85" stroke-linecap="round" opacity="0.75"/>
+
+  <!-- Left Open Shell Valve -->
+  <path d="M 16 27.5 C 11.5 26.5 5.8 21.8 5.2 14.8 C 4.7 7.8 10.8 2.8 15.5 2.2 C 14 6 12.2 11.5 12.8 17.8 C 13.3 22.5 15.1 26 16 27.5 Z" 
+        fill="url(#pistaShellLeft)" stroke="#927E66" stroke-width="1.1" stroke-linejoin="round"/>
+
+  <!-- Right Open Shell Valve -->
+  <path d="M 16 27.5 C 20.5 26.5 26.2 21.8 26.8 14.8 C 27.3 7.8 21.2 2.8 16.5 2.2 C 18 6 19.8 11.5 19.2 17.8 C 18.7 22.5 16.9 26 16 27.5 Z" 
+        fill="url(#pistaShellRight)" stroke="#88735B" stroke-width="1.1" stroke-linejoin="round"/>
+
+  <!-- Shell Base Hinged Stem Attachment Pip -->
+  <circle cx="16" cy="27.8" r="1.1" fill="#75624C"/>
+</svg>

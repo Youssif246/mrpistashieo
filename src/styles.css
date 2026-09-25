@@ -185,8 +185,23 @@ body.rtl .editorial-kicker {
   transition: transform 0.4s var(--ease-editorial);
 }
 
+.pip-pistachio-img {
+  width: 1.35rem;
+  height: 1.05rem;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  filter: drop-shadow(0 1px 2px rgba(40, 55, 20, 0.16));
+  transition: transform 0.35s var(--ease-editorial);
+  pointer-events: none;
+}
+
 .editorial-brand-eyebrow:hover .eyebrow-botanical-pip {
-  transform: rotate(15deg) scale(1.15);
+  transform: rotate(14deg) scale(1.15);
+}
+
+.editorial-brand-eyebrow:hover .pip-pistachio-img {
+  transform: rotate(14deg) scale(1.15);
 }
 
 .brand-eyebrow-text {
@@ -253,16 +268,34 @@ body.rtl .brand-eyebrow-sub {
 .chapter-node {
   color: var(--c-pistachio);
   font-size: 0.82rem;
-  opacity: 0.75;
+  opacity: 0.85;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.4s var(--ease-editorial), opacity 0.4s var(--ease-editorial);
 }
 
+.chapter-node .pip-pistachio-img {
+  width: 2.1rem;
+  height: 1.65rem;
+  filter: drop-shadow(0 2px 5px rgba(35, 50, 18, 0.22));
+}
+
 .botanical-chapter-divider:hover .chapter-node {
-  transform: rotate(20deg) scale(1.2);
+  transform: rotate(18deg) scale(1.22);
   opacity: 1;
+}
+
+.botanical-chapter-divider:hover .chapter-node .pip-pistachio-img {
+  filter: drop-shadow(0 3px 8px rgba(35, 50, 18, 0.3));
+}
+
+.mid-divider-pip .pip-pistachio-img,
+.divider-leaf .pip-pistachio-img,
+.center-pip .pip-pistachio-img {
+  width: 1.6rem;
+  height: 1.6rem;
+  filter: drop-shadow(0 2px 4px rgba(35, 50, 18, 0.2));
 }
 
 /* Botanical Subtle Breathing Animations */
@@ -461,4 +494,192 @@ body.rtl .btn-editorial {
     --container-pad: 0.95rem;
   }
 }
+
+/* ==========================================================================
+   AUTHENTIC PISTACIA VERA BOTANICAL ATMOSPHERE (STATIONERY WATERMARK SYSTEM)
+   ========================================================================== */
+
+/* Layer 2: Subtle Warm Sunlight Filter */
+.botanical-sunlight-filter {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: 
+    radial-gradient(ellipse 65% 50% at 85% 15%, rgba(255, 255, 255, 0.45) 0%, rgba(246, 243, 233, 0.15) 60%, transparent 100%),
+    radial-gradient(ellipse 50% 40% at 15% 85%, rgba(235, 240, 222, 0.18) 0%, transparent 70%);
+}
+
+/* Layer 3: Authentic Real Pistacia vera Botanical Imagery & Watermarks */
+.botanical-shadow-wrapper {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  will-change: transform;
+  transition: opacity 0.4s ease;
+}
+
+.botanical-shadow-wrapper img,
+.botanical-shadow-wrapper svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Real photographic pistachio cutout enhancement */
+.botanical-shadow-wrapper img[src$=".png"] {
+  filter: saturate(0.92) contrast(1.02);
+}
+
+/* Positioning Variants */
+.botanical-shadow--top-right {
+  top: -40px;
+  right: -50px;
+  width: clamp(320px, 34vw, 540px);
+  opacity: 0.32;
+}
+
+body.rtl .botanical-shadow--top-right,
+:host-context(body.rtl) .botanical-shadow--top-right {
+  right: auto;
+  left: -50px;
+  transform: scaleX(-1);
+}
+
+.botanical-shadow--bottom-left {
+  bottom: -40px;
+  left: -50px;
+  width: clamp(300px, 32vw, 500px);
+  opacity: 0.30;
+}
+
+body.rtl .botanical-shadow--bottom-left,
+:host-context(body.rtl) .botanical-shadow--bottom-left {
+  left: auto;
+  right: -50px;
+  transform: scaleX(-1);
+}
+
+.botanical-shadow--vertical-left {
+  top: 5%;
+  left: -60px;
+  width: clamp(260px, 28vw, 440px);
+  opacity: 0.30;
+}
+
+body.rtl .botanical-shadow--vertical-left,
+:host-context(body.rtl) .botanical-shadow--vertical-left {
+  left: auto;
+  right: -60px;
+  transform: scaleX(-1);
+}
+
+.botanical-shadow--orchard-row {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(70px, 10vw, 130px);
+  opacity: 0.45;
+}
+
+.botanical-shadow--center-cards {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(340px, 40vw, 580px);
+  opacity: 0.22;
+}
+
+.botanical-shadow--top-left {
+  top: -30px;
+  left: -40px;
+  width: clamp(320px, 34vw, 550px);
+  opacity: 0.32;
+}
+
+body.rtl .botanical-shadow--top-left,
+:host-context(body.rtl) .botanical-shadow--top-left {
+  left: auto;
+  right: -40px;
+  transform: scaleX(-1);
+}
+
+.botanical-shadow--bottom-right {
+  bottom: -30px;
+  right: -40px;
+  width: clamp(300px, 32vw, 520px);
+  opacity: 0.30;
+}
+
+body.rtl .botanical-shadow--bottom-right,
+:host-context(body.rtl) .botanical-shadow--bottom-right {
+  right: auto;
+  left: -40px;
+  transform: scaleX(-1);
+}
+
+.botanical-shadow--hanging-side {
+  top: 15%;
+  right: -50px;
+  width: clamp(240px, 24vw, 390px);
+  opacity: 0.32;
+}
+
+body.rtl .botanical-shadow--hanging-side,
+:host-context(body.rtl) .botanical-shadow--hanging-side {
+  right: auto;
+  left: -50px;
+  transform: scaleX(-1);
+}
+
+.botanical-shadow--middle-left {
+  top: 40%;
+  left: -60px;
+  width: clamp(280px, 28vw, 460px);
+  opacity: 0.28;
+}
+
+body.rtl .botanical-shadow--middle-left,
+:host-context(body.rtl) .botanical-shadow--middle-left {
+  left: auto;
+  right: -60px;
+  transform: scaleX(-1);
+}
+
+.botanical-shadow--monograph-branch {
+  top: clamp(60px, 8vw, 130px);
+  right: -30px;
+  width: clamp(340px, 36vw, 560px);
+  opacity: 0.32;
+}
+
+body.rtl .botanical-shadow--monograph-branch,
+:host-context(body.rtl) .botanical-shadow--monograph-branch {
+  right: auto;
+  left: -30px;
+  transform: scaleX(-1);
+}
+
+/* Responsive: Keep mobile clean and completely unobstructed */
+@media (max-width: 768px) {
+  .botanical-shadow-wrapper {
+    opacity: 0.16;
+    transform: scale(0.65);
+  }
+  .botanical-shadow--center-cards {
+    display: none;
+  }
+  .botanical-shadow--orchard-row {
+    height: 50px;
+    opacity: 0.25;
+  }
+}
+
+/* Inert link utility - keeps exact visual design but prevents navigation */
+.is-inert-link {
+  pointer-events: none !important;
+  cursor: default !important;
+}
+
 

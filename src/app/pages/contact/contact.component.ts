@@ -45,70 +45,69 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     this.gsapCtx = gsap.context(() => {
-      // 1. HERO ENTRANCE & BOTANICAL AMBIENCE
-      const heroLockup = this.el.nativeElement.querySelector('.contact-hero-lockup') as HTMLElement | null;
-      const heroAmbientDecor = this.el.nativeElement.querySelector('.contact-hero-ambient') as HTMLElement | null;
+      // 1. HERO ENTRANCE & PHOTOGRAPHY REVEAL (MATCHING ABOUT HERO)
+      const heroContentBlock = this.el.nativeElement.querySelector('.hero-content-block') as HTMLElement | null;
+      const heroPhotoFrame = this.el.nativeElement.querySelector('.hero-photo-frame') as HTMLElement | null;
+      const panoramaImg = this.el.nativeElement.querySelector('.hero-panorama-img') as HTMLElement | null;
 
       if (prefersReducedMotion) {
-        if (heroLockup) gsap.set(heroLockup.children, { opacity: 1, y: 0 });
+        if (heroContentBlock) gsap.set(heroContentBlock.children, { opacity: 1, y: 0 });
+        if (heroPhotoFrame) gsap.set(heroPhotoFrame, { opacity: 1, scale: 1 });
         return;
       }
 
-      if (heroLockup) {
-        gsap.set(heroLockup.children, { opacity: 0, y: 24 });
-        gsap.to(heroLockup.children, {
+      if (heroContentBlock) {
+        gsap.set(heroContentBlock.children, { opacity: 0, y: 22 });
+        gsap.to(heroContentBlock.children, {
           opacity: 1,
           y: 0,
-          duration: 0.9,
+          duration: 0.85,
           stagger: 0.14,
           ease: 'power2.out',
-          delay: 0.1
+          delay: 0.12
         });
       }
 
-      if (heroAmbientDecor) {
-        const leafArt = heroAmbientDecor.querySelector('.contact-hero-botanical-svg');
-        const watermark = heroAmbientDecor.querySelector('.hero-watermark-monograph');
-
-        if (leafArt) {
-          gsap.to(leafArt, {
-            yPercent: 12,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: '#contactHero',
-              start: 'top top',
-              end: 'bottom top',
-              scrub: 0.6
-            }
-          });
-        }
-
-        if (watermark) {
-          gsap.to(watermark, {
-            yPercent: -15,
-            ease: 'none',
-            scrollTrigger: {
-              trigger: '#contactHero',
-              start: 'top top',
-              end: 'bottom top',
-              scrub: 0.8
-            }
-          });
-        }
+      if (heroPhotoFrame) {
+        gsap.set(heroPhotoFrame, { opacity: 0, y: 32, scale: 0.985 });
+        gsap.to(heroPhotoFrame, {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.95,
+          ease: 'power2.out',
+          delay: 0.28
+        });
       }
 
-      // 2. SPREAD SECTION ENTRANCE (DOSSIER & INQUIRY SHEET)
+      if (panoramaImg) {
+        gsap.to(panoramaImg, {
+          yPercent: 10,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '#contactHero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 0.5
+          }
+        });
+      }
+
+      // 2. SPREAD SECTION ENTRANCE (DOSSIER & INQUIRY FORM)
       const spreadSection = this.el.nativeElement.querySelector('#contactSpread') as HTMLElement | null;
       if (spreadSection) {
         const dossierPanel = spreadSection.querySelector('.contact-dossier-panel');
         const formPanel = spreadSection.querySelector('.contact-form-panel');
+        const liaisonCards = spreadSection.querySelectorAll('.liaison-card');
 
         if (prefersReducedMotion) {
           if (dossierPanel) gsap.set(dossierPanel, { opacity: 1, y: 0 });
           if (formPanel) gsap.set(formPanel, { opacity: 1, y: 0 });
+          if (liaisonCards) gsap.set(liaisonCards, { opacity: 1, y: 0 });
         } else {
-          if (dossierPanel) gsap.set(dossierPanel, { opacity: 0, y: 28 });
-          if (formPanel) gsap.set(formPanel, { opacity: 0, y: 32 });
+          if (dossierPanel) gsap.set(dossierPanel, { opacity: 0, y: 26 });
+          if (formPanel) gsap.set(formPanel, { opacity: 0, y: 30 });
+          if (liaisonCards.length) gsap.set(liaisonCards, { opacity: 0, y: 20 });
 
           const tl = gsap.timeline({
             scrollTrigger: {
@@ -118,8 +117,17 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
             }
           });
 
-          if (dossierPanel) tl.to(dossierPanel, { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out' });
-          if (formPanel) tl.to(formPanel, { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, '-=0.55');
+          if (dossierPanel) tl.to(dossierPanel, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
+          if (liaisonCards.length) {
+            tl.to(liaisonCards, {
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              stagger: 0.1,
+              ease: 'power2.out'
+            }, '-=0.5');
+          }
+          if (formPanel) tl.to(formPanel, { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out' }, '-=0.6');
         }
       }
 
@@ -141,6 +149,23 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
               trigger: locationSection,
               start: 'top 82%',
               once: true
+            }
+          });
+        }
+      }
+
+      // 4. BOTANICAL SLENDER BRANCH PARALLAX
+      if (!prefersReducedMotion) {
+        const slenderBranch = this.el.nativeElement.querySelector('#contactSpread .botanical-shadow--bottom-left');
+        if (slenderBranch) {
+          gsap.to(slenderBranch, {
+            yPercent: 3,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: '#contactSpread',
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: 2
             }
           });
         }

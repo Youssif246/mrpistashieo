@@ -47,9 +47,9 @@
         <span class="column-kicker">{{ i18n.t().footer.quickLinks }}</span>
         <ul class="column-links">
           <li><a routerLink="/">{{ i18n.t().navbar.home }}</a></li>
-          <li><a routerLink="/">{{ i18n.t().navbar.about }}</a></li>
-          <li><a routerLink="/">{{ i18n.t().navbar.products }}</a></li>
-          <li><a routerLink="/">{{ i18n.t().navbar.contact }}</a></li>
+          <li><a routerLink="/about">{{ i18n.t().navbar.about }}</a></li>
+          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().navbar.products }}</a></li>
+          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().navbar.contact }}</a></li>
         </ul>
       </div>
 
@@ -57,10 +57,10 @@
       <div class="footer-column">
         <span class="column-kicker">{{ i18n.t().footer.productsTitle }}</span>
         <ul class="column-links">
-          <li><a routerLink="/" fragment="ucb1">{{ i18n.t().products.ucb1.title }}</a></li>
-          <li><a routerLink="/" fragment="traditional">{{ i18n.t().products.traditional.cornicabraTitle }}</a></li>
-          <li><a routerLink="/" fragment="grafted">{{ i18n.t().products.grafted.title }}</a></li>
-          <li><a routerLink="/" fragment="varieties">{{ i18n.t().products.varieties.title }}</a></li>
+          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().products.ucb1.title }}</a></li>
+          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().products.traditional.cornicabraTitle }}</a></li>
+          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().products.grafted.title }}</a></li>
+          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().products.varieties.title }}</a></li>
         </ul>
       </div>
 
@@ -111,9 +111,9 @@
         &copy; {{ currentYear }} {{ i18n.t().footer.rights }}
       </p>
       <div class="colophon-links">
-        <a routerLink="/contact">{{ i18n.t().footer.privacy }}</a>
+        <a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().footer.privacy }}</a>
         <span class="colophon-sep">/</span>
-        <a routerLink="/contact">{{ i18n.t().footer.legalNotice }}</a>
+        <a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().footer.legalNotice }}</a>
       </div>
     </div>
   </div>
