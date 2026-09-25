@@ -13,6 +13,18 @@ import { CommonModule } from '@angular/common';
 import { TranslationService } from '../translation.service';
 import { gsap } from 'gsap';
 
+// In-memory flag: ensures intro only runs once when entering the site,
+// and never replays when navigating back to the home page from other routes.
+let hasIntroPlayedInSession = false;
+
+export function hasIntroAlreadyPlayed(): boolean {
+  return hasIntroPlayedInSession;
+}
+
+export function markIntroAsPlayed(): void {
+  hasIntroPlayedInSession = true;
+}
+
 @Component({
   selector: 'app-pistachio-intro',
   standalone: true,
@@ -35,6 +47,21 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
 
   ngOnInit(): void {
     if (typeof window === 'undefined') return;
+
+    // Purge any stale storage keys from prior runs so reload always functions
+    try {
+      sessionStorage.removeItem('mr_pistachio_intro_seen');
+      localStorage.removeItem('mr_pistachio_intro_seen');
+    } catch {
+      // Storage safe
+    }
+
+    // If intro has already played in this application session, skip immediately
+    if (hasIntroAlreadyPlayed()) {
+      this.isVisible.set(false);
+      this.introComplete.emit();
+      return;
+    }
 
     // Lock page scrolling during intro playback
     if (typeof document !== 'undefined' && document.body) {
@@ -80,7 +107,6 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
     const clusterRight = root.querySelector('.cluster-right');
 
     const brandReveal = root.querySelector('.intro-brand-reveal');
-    const brandPip = root.querySelector('.brand-eyebrow-pip');
     const brandLogotype = root.querySelector('.brand-logotype');
     const brandTagline = root.querySelector('.brand-tagline');
 
@@ -126,9 +152,6 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
 
     if (brandReveal) {
       gsap.set(brandReveal, { opacity: 0, y: 14 });
-    }
-    if (brandPip) {
-      gsap.set(brandPip, { opacity: 0, scale: 0.4, transformOrigin: 'center center' });
     }
     if (brandLogotype) {
       gsap.set(brandLogotype, { opacity: 0, y: 12 });
@@ -252,14 +275,11 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
     if (brandReveal) {
       tl.to(brandReveal, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, 3.5);
     }
-    if (brandPip) {
-      tl.to(brandPip, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.3)' }, 3.6);
-    }
     if (brandLogotype) {
-      tl.to(brandLogotype, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }, 3.75);
+      tl.to(brandLogotype, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }, 3.7);
     }
     if (brandTagline) {
-      tl.to(brandTagline, { opacity: 0.85, y: 0, duration: 0.7, ease: 'power2.out' }, 3.9);
+      tl.to(brandTagline, { opacity: 0.85, y: 0, duration: 0.7, ease: 'power2.out' }, 3.85);
     }
 
     // T = 4.9s – 5.9s: Centered composition smoothly settles as ivory overlay seamlessly reveals Hero
@@ -306,6 +326,7 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
   }
 
   private finishIntro(isInstant: boolean): void {
+    markIntroAsPlayed();
     if (typeof document !== 'undefined' && document.body) {
       document.body.style.overflow = '';
     }

@@ -2,7 +2,7 @@ import { Component, inject, AfterViewInit, OnDestroy, ElementRef } from '@angula
 import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../shared/translation.service';
 import { APP_CONFIG } from '../../shared/config';
-import { PistachioIntroComponent } from '../../shared/pistachio-intro/pistachio-intro.component';
+import { PistachioIntroComponent, hasIntroAlreadyPlayed } from '../../shared/pistachio-intro/pistachio-intro.component';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -24,7 +24,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     if (typeof window === 'undefined') return;
 
-    this.hasIntroPending = true;
+    this.hasIntroPending = !hasIntroAlreadyPlayed();
 
     // Slight delay to ensure Angular has fully rendered the DOM
     setTimeout(() => {
