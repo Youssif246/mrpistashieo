@@ -7,6 +7,21 @@
     "cta": "WhatsApp Inquiry",
     "langSwitch": "العربية"
   },
+  "intro": {
+    "skip": "SKIP",
+    "stage1Num": "01",
+    "stage1Title": "THE SEED",
+    "stage2Num": "02",
+    "stage2Title": "THE ROOTS",
+    "stage3Num": "03",
+    "stage3Title": "THE SPROUT",
+    "stage4Num": "04",
+    "stage4Title": "THE TREE",
+    "stage5Num": "05",
+    "stage5Title": "THE FRUIT",
+    "stage6Num": "06",
+    "stage6Title": "THE HARVEST"
+  },
   "footer": {
     "tagline": "Specialist nursery dedicated to pistachio cultivation, certified rootstock propagation, and professional field agronomy.",
     "quickLinks": "Navigation",

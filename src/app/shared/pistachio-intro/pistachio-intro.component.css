@@ -1,0 +1,191 @@
+/* ==========================================================================
+   MISTER PISTACHIO — CONTINUOUS BOTANICAL INTRO ANIMATION
+   Center-Aligned Botanical Growth & Authentic Raw Seed Germination
+   Palette: Warm Ivory #FAF8F3, Botanical Green #15271E, Pistachio #7E993B
+   ========================================================================== */
+
+:host {
+  display: block;
+}
+
+/* Fullscreen Warm Ivory Canvas */
+.pistachio-brand-intro {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  background-color: #FAF8F3;
+  background-image: radial-gradient(circle at 50% 48%, rgba(255, 255, 255, 0.85) 0%, rgba(250, 248, 243, 0.96) 65%, #FAF8F3 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  user-select: none;
+  touch-action: none;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.85s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.pistachio-brand-intro.is-fading {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Minimal Editorial Skip Button */
+.intro-skip-link {
+  position: absolute;
+  top: clamp(1.5rem, 3.5vw, 2.75rem);
+  right: clamp(1.5rem, 4vw, 3.5rem);
+  z-index: 50;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #15271E;
+  opacity: 0.55;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: 0.24em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+}
+
+:host-context([dir="rtl"]) .intro-skip-link,
+body.rtl .intro-skip-link {
+  right: auto;
+  left: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.intro-skip-link:hover,
+.intro-skip-link:focus-visible {
+  opacity: 1;
+  color: #7E993B;
+  border-bottom-color: #7E993B;
+  transform: translateY(-1px);
+}
+
+/* Symmetrical Centered Stage */
+.intro-center-stage {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 680px;
+  height: 100%;
+  max-height: 840px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  pointer-events: none;
+  text-align: center;
+}
+
+.botanical-canvas-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Botanical SVG Canvas (Initial visibility: hidden ensures ZERO flash before GSAP init) */
+.growth-svg {
+  width: clamp(280px, 48vw, 440px);
+  height: clamp(340px, 56vh, 520px);
+  display: block;
+  margin: 0 auto;
+  overflow: visible;
+  filter: drop-shadow(0 14px 34px rgba(21, 39, 30, 0.07));
+  visibility: hidden;
+}
+
+.growth-root-group {
+  transform-origin: 300px 560px;
+  will-change: transform;
+}
+
+.seed-node {
+  transform-origin: 300px 560px;
+  will-change: transform, opacity;
+}
+
+.main-stem-path {
+  will-change: stroke-dashoffset;
+}
+
+.leaf-rachis {
+  will-change: stroke-dashoffset;
+}
+
+/* Centered Luxury Brand Reveal Lockup */
+.intro-brand-reveal {
+  margin-top: -1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(14px);
+  will-change: transform, opacity;
+  max-width: 520px;
+}
+
+.brand-eyebrow-pip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.65rem;
+  opacity: 0;
+}
+
+.pip-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  filter: drop-shadow(0 2px 5px rgba(21, 39, 30, 0.15));
+}
+
+.brand-logotype {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: #15271E;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+:host-context([dir="rtl"]) .brand-logotype,
+body.rtl .brand-logotype {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  font-size: clamp(2.2rem, 4.4vw, 3.2rem);
+}
+
+.brand-tagline {
+  font-size: clamp(0.72rem, 1.1vw, 0.82rem);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: #5C4733;
+  margin: 0;
+  line-height: 1.6;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+:host-context([dir="rtl"]) .brand-tagline,
+body.rtl .brand-tagline {
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: clamp(0.85rem, 1.2vw, 0.95rem);
+}

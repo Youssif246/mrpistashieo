@@ -7,6 +7,21 @@
     "cta": "استشارة عبر واتساب",
     "langSwitch": "English"
   },
+  "intro": {
+    "skip": "تخطي",
+    "stage1Num": "٠١",
+    "stage1Title": "البذرة",
+    "stage2Num": "٠٢",
+    "stage2Title": "الجذور",
+    "stage3Num": "٠٣",
+    "stage3Title": "النمو",
+    "stage4Num": "٠٤",
+    "stage4Title": "الشجرة",
+    "stage5Num": "٠٥",
+    "stage5Title": "الثمار",
+    "stage6Num": "٠٦",
+    "stage6Title": "الحصاد"
+  },
   "footer": {
     "tagline": "مشتل زراعي متخصص في زراعة الفستق الحلبي، إكثار الأصول المعتمدة، وتقديم الخدمات الميدانية المتكاملة.",
     "quickLinks": "روابط سريعة",

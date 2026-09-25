@@ -2,6 +2,7 @@ import { Component, inject, AfterViewInit, OnDestroy, ElementRef } from '@angula
 import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../shared/translation.service';
 import { APP_CONFIG } from '../../shared/config';
+import { PistachioIntroComponent } from '../../shared/pistachio-intro/pistachio-intro.component';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -10,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, PistachioIntroComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -18,9 +19,12 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   readonly i18n = inject(TranslationService);
   private readonly el = inject(ElementRef);
   private gsapCtx?: gsap.Context;
+  private hasIntroPending = false;
 
   ngAfterViewInit(): void {
     if (typeof window === 'undefined') return;
+
+    this.hasIntroPending = true;
 
     // Slight delay to ensure Angular has fully rendered the DOM
     setTimeout(() => {
@@ -32,7 +36,9 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     this.gsapCtx = gsap.context(() => {
-      this.initHeroAnimation(prefersReducedMotion);
+      if (!this.hasIntroPending) {
+        this.initHeroAnimation(prefersReducedMotion);
+      }
       this.initManifestoAnimation(prefersReducedMotion);
       this.initServicesAnimation(prefersReducedMotion);
       this.initMonographAnimation(prefersReducedMotion);
@@ -41,6 +47,11 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       this.initCtaAnimation(prefersReducedMotion);
       this.initBotanicalParallax(prefersReducedMotion);
     }, this.el);
+  }
+
+  onIntroComplete(): void {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.initHeroAnimation(prefersReducedMotion);
   }
 
   // ═══════════════════════════════════════════════════════════════
