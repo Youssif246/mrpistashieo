@@ -1,38 +1,67 @@
 <!-- ==========================================================================
-     1. BOTANICAL CATALOG HERO
+     MISTER PISTACHO: BOTANICAL CATALOG & AGRONOMIC PLANT MATERIAL
+     Authentic Certified Propagation, Rootstocks, Formats & Cultivar Taxonomy
      ========================================================================== -->
-<section class="catalog-hero-monograph">
-  <!-- 3-Layer Botanical Atmosphere -->
-  <div class="botanical-sunlight-filter" aria-hidden="true"></div>
-  <div class="botanical-shadow-wrapper botanical-shadow--top-right" aria-hidden="true">
-    <img src="/botanical/real-pistachio-branch.png" alt="" loading="lazy">
-  </div>
 
-  <div class="container">
-    <div class="catalog-hero-lockup">
-      <span class="editorial-kicker">{{ i18n.t().products.hero.badge }}</span>
-      <h1 class="catalog-hero-headline">{{ i18n.t().products.hero.headline }}</h1>
-      <p class="catalog-hero-lead">{{ i18n.t().products.hero.description }}</p>
+<!-- ══════════════════════════════════════════════════════════════════════════
+     1. HERO: UNIFIED IMAGELESS EDITORIAL HERO
+     Sophisticated publication-grade typography, subtle botanical linework
+     ══════════════════════════════════════════════════════════════════════════ -->
+<header class="inner-page-hero products-inner-hero" id="productsHero">
+  <div class="inner-hero-container">
+    <div class="inner-hero-text">
+      <span class="inner-hero-eyebrow">{{ i18n.t().products.hero.eyebrow }}</span>
+      <h1 class="inner-hero-heading">{{ i18n.t().products.hero.headline }}</h1>
+      <span class="inner-hero-connector" aria-hidden="true"></span>
+      <p class="inner-hero-desc">{{ i18n.t().products.hero.description }}</p>
+    </div>
+    <div class="inner-hero-visual" aria-hidden="true">
+      <div class="inner-hero-aura"></div>
+      <img src="/botanical/real-pistachio-corner.png" alt="" class="inner-hero-botanical" loading="eager">
     </div>
   </div>
-</section>
+</header>
 
-<!-- ==========================================================================
-     2. UCB1 HYBRID ROOTSTOCK (MAJOR BOTANICAL CATALOG SPREAD)
-     ========================================================================== -->
+<!-- Quick Index Navigation Strip -->
+<nav class="catalog-quick-nav" aria-label="Catalog Sections">
+  <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.5rem; padding: 1rem 0;">
+    <button type="button" class="quick-nav-link" (click)="scrollToSection('ucb1')">
+      <span class="q-label">{{ i18n.t().products.catalogLabels.quickNavUcb1 }}</span>
+    </button>
+    <span class="q-sep">·</span>
+    <button type="button" class="quick-nav-link" (click)="scrollToSection('traditional')">
+      <span class="q-label">{{ i18n.t().products.catalogLabels.quickNavHardy }}</span>
+    </button>
+    <span class="q-sep">·</span>
+    <button type="button" class="quick-nav-link" (click)="scrollToSection('grafted')">
+      <span class="q-label">{{ i18n.t().products.catalogLabels.quickNavFormats }}</span>
+    </button>
+    <span class="q-sep">·</span>
+    <button type="button" class="quick-nav-link" (click)="scrollToSection('varieties')">
+      <span class="q-label">{{ i18n.t().products.catalogLabels.quickNavCultivars }}</span>
+    </button>
+    <span class="q-sep">·</span>
+    <button type="button" class="quick-nav-link" (click)="scrollToSection('pollination')">
+      <span class="q-label">{{ i18n.t().products.catalogLabels.quickNavPollination }}</span>
+    </button>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     2. CHAPTER 01 — UCB1 HYBRID ROOTSTOCK (MAJOR BOTANICAL CATALOG SPREAD)
+     ══════════════════════════════════════════════════════════════════════════ -->
 <section id="ucb1" class="catalog-chapter chapter-ucb1">
-  <!-- 3-Layer Botanical Atmosphere -->
   <div class="botanical-sunlight-filter" aria-hidden="true"></div>
   <div class="botanical-shadow-wrapper botanical-shadow--vertical-left" aria-hidden="true">
     <img src="/botanical/real-pistachio-sprig.png" alt="" loading="lazy">
   </div>
 
   <div class="container">
-    <!-- Chapter Header -->
     <div class="chapter-number-header">
       <div class="chapter-index">
         <span class="cat-num">01</span>
-        <span class="cat-label">Rootstock Portfolio</span>
+        <span class="cat-label">{{ i18n.t().products.catalogLabels.elitePortfolio }}</span>
       </div>
       <div class="chapter-meta-tag">
         <span class="botanical-tag">{{ i18n.t().products.ucb1.badge }}</span>
@@ -45,32 +74,32 @@
         <span class="ucb1-binomial">{{ i18n.t().products.ucb1.subtitle }}</span>
         <p class="ucb1-primary-desc">{{ i18n.t().products.ucb1.desc }}</p>
 
-        <!-- Technical Agronomic Specifications Table/List -->
+        <!-- Technical Agronomic Specifications Grid -->
         <div class="agronomic-specs-roster">
           <div class="spec-entry">
-            <span class="spec-index">A. Vigor</span>
+            <span class="spec-index">{{ i18n.t().products.catalogLabels.specA }}</span>
             <h4 class="spec-name">{{ i18n.t().products.ucb1.feat1Title }}</h4>
             <p>{{ i18n.t().products.ucb1.feat1Desc }}</p>
           </div>
           <div class="spec-entry">
-            <span class="spec-index">B. Climate</span>
+            <span class="spec-index">{{ i18n.t().products.catalogLabels.specB }}</span>
             <h4 class="spec-name">{{ i18n.t().products.ucb1.feat2Title }}</h4>
             <p>{{ i18n.t().products.ucb1.feat2Desc }}</p>
           </div>
           <div class="spec-entry">
-            <span class="spec-index">C. Salinity</span>
+            <span class="spec-index">{{ i18n.t().products.catalogLabels.specC }}</span>
             <h4 class="spec-name">{{ i18n.t().products.ucb1.feat3Title }}</h4>
             <p>{{ i18n.t().products.ucb1.feat3Desc }}</p>
           </div>
           <div class="spec-entry">
-            <span class="spec-index">D. Pathogens</span>
+            <span class="spec-index">{{ i18n.t().products.catalogLabels.specD }}</span>
             <h4 class="spec-name">{{ i18n.t().products.ucb1.feat4Title }}</h4>
             <p>{{ i18n.t().products.ucb1.feat4Desc }}</p>
           </div>
         </div>
 
         <div class="delivery-format-strip">
-          <span class="strip-label">Availability & Format</span>
+          <span class="strip-label">Availability & Production Formats</span>
           <p class="strip-text">{{ i18n.t().products.ucb1.formatNote }}</p>
         </div>
 
@@ -87,8 +116,8 @@
         <div class="art-frame ucb1-image-frame">
           <img src="home-images/nursery.png" alt="Young UCB1 pistachio plants during controlled nursery propagation" class="catalog-plant-img" loading="lazy">
           <div class="catalog-photo-plate">
-            <span class="plate-code">Catalog Plate 01-A</span>
-            <span class="plate-caption">Controlled Propagation Facility</span>
+            <span class="plate-code">PLATE 01-A • UCB-1 HYBRID</span>
+            <span class="plate-caption">{{ i18n.t().products.catalogLabels.facilityLabel }}</span>
           </div>
         </div>
       </div>
@@ -96,11 +125,11 @@
   </div>
 </section>
 
-<!-- ==========================================================================
-     3. TRADITIONAL MEDITERRANEAN ROOTSTOCKS (CORRESPONDING CHAPTER)
-     ========================================================================== -->
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     3. CHAPTER 02 — TRADITIONAL ROOTSTOCKS & SOIL MATCHING
+     ══════════════════════════════════════════════════════════════════════════ -->
 <section id="traditional" class="catalog-chapter chapter-traditional">
-  <!-- 3-Layer Botanical Atmosphere -->
   <div class="botanical-sunlight-filter" aria-hidden="true"></div>
   <div class="botanical-shadow-wrapper botanical-shadow--orchard-row" aria-hidden="true">
     <img src="/botanical/pistachio-orchard-horizon.svg" alt="" loading="lazy">
@@ -113,10 +142,10 @@
     <div class="chapter-number-header">
       <div class="chapter-index">
         <span class="cat-num">02</span>
-        <span class="cat-label">Indigenous & Hardy Bases</span>
+        <span class="cat-label">{{ i18n.t().products.traditional.tag }}</span>
       </div>
       <div class="chapter-meta-tag">
-        <span class="botanical-tag">{{ i18n.t().products.traditional.tag }}</span>
+        <span class="botanical-tag">{{ i18n.t().products.catalogLabels.medGenetics }}</span>
       </div>
     </div>
 
@@ -125,16 +154,41 @@
       <p class="chapter-display-sub">{{ i18n.t().products.traditional.subtitle }}</p>
     </div>
 
-    <!-- 2 Distinct Grand Botanical Entries (Not Cards!) -->
+    <!-- 2 Distinct Grand Botanical Entries with Real Nursery Photos -->
     <div class="traditional-duo-spread">
+      
       <!-- Cornicabra -->
-      <div class="traditional-specimen-block">
+      <article class="traditional-specimen-block">
         <div class="specimen-header-strip">
           <span class="botanical-tag">{{ i18n.t().products.traditional.cornicabraBadge }}</span>
-          <span class="specimen-index-tag">P. terebinthus</span>
+          <span class="specimen-index-tag">Pistacia terebinthus L.</span>
         </div>
+        
         <h3 class="specimen-title">{{ i18n.t().products.traditional.cornicabraTitle }}</h3>
         <p class="specimen-body">{{ i18n.t().products.traditional.cornicabraDesc }}</p>
+
+        <!-- Authentic Format Presentation: Alveoli & 1.1L Pot -->
+        <div class="specimen-photo-duo">
+          <div class="specimen-photo-item">
+            <div class="specimen-img-wrapper">
+              <img src="products-images/cornicabra-alveolo.jpg" 
+                   alt="Cornicabra in 45-alveoli forest tray" 
+                   class="specimen-real-img" 
+                   loading="lazy">
+            </div>
+            <span class="specimen-img-caption">Forest Tray (45 Alveoli • 220 cc • 20-35 cm)</span>
+          </div>
+
+          <div class="specimen-photo-item">
+            <div class="specimen-img-wrapper">
+              <img src="products-images/cornicabra-pot-1-1l.jpg" 
+                   alt="Cornicabra in 1.1 Litre pot" 
+                   class="specimen-real-img" 
+                   loading="lazy">
+            </div>
+            <span class="specimen-img-caption">Plastic Container (1.1 Litre • 50-80 cm)</span>
+          </div>
+        </div>
 
         <div class="specimen-points-roster">
           <div class="point-row">
@@ -157,16 +211,27 @@
             <span>{{ i18n.t().products.varieties.cta }}</span>
           </a>
         </div>
-      </div>
+      </article>
 
       <!-- Atlantica -->
-      <div class="traditional-specimen-block">
+      <article class="traditional-specimen-block">
         <div class="specimen-header-strip">
           <span class="botanical-tag">{{ i18n.t().products.traditional.atlanticaBadge }}</span>
-          <span class="specimen-index-tag">P. atlantica Desf.</span>
+          <span class="specimen-index-tag">Pistacia atlantica Desf.</span>
         </div>
+
         <h3 class="specimen-title">{{ i18n.t().products.traditional.atlanticaTitle }}</h3>
         <p class="specimen-body">{{ i18n.t().products.traditional.atlanticaDesc }}</p>
+
+        <div class="specimen-card-feature">
+          <div class="card-feature-header">
+            <i class="fa-solid fa-water-ladder feature-icon" aria-hidden="true"></i>
+            <span class="feature-title">Heavy Soil & Moisture Tolerance</span>
+          </div>
+          <p class="feature-text">
+            Particularly recommended for deep clay-loam terrain (Franco-arcilloso) where seasonal rainfall can cause temporary water stagnation that would otherwise compromise Cornicabra taproots.
+          </p>
+        </div>
 
         <div class="specimen-points-roster">
           <div class="point-row">
@@ -189,28 +254,72 @@
             <span>{{ i18n.t().products.varieties.cta }}</span>
           </a>
         </div>
+      </article>
+
+    </div>
+
+    <!-- Soil Compatibility Editorial Summary Table -->
+    <div class="soil-comparison-strip">
+      <h3 class="strip-section-heading">Rootstock Soil & Climate Selection Guide</h3>
+      <div class="soil-table-responsive">
+        <table class="editorial-soil-table">
+          <thead>
+            <tr>
+              <th>Rootstock (Patrón)</th>
+              <th>{{ i18n.t().products.catalogLabels.soilProfile }}</th>
+              <th>{{ i18n.t().products.catalogLabels.waterRegime }}</th>
+              <th>Cold / Frost Resistance</th>
+              <th>{{ i18n.t().products.catalogLabels.keyAdvantage }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>UCB-1 Hybrid</strong></td>
+              <td>Deep, fertile, well-draining soils</td>
+              <td>Irrigated / Intensive (Riego)</td>
+              <td>High (Continental Mediterranean)</td>
+              <td>Maximum vegetative vigor & Verticillium wilt defense</td>
+            </tr>
+            <tr>
+              <td><strong>Cornicabra (*P. terebinthus*)</strong></td>
+              <td>Shallow, rocky, poor & highly calcareous</td>
+              <td>Rainfed / Dryland (Secano)</td>
+              <td>Extreme (Highest frost resilience)</td>
+              <td>Unrivaled drought survival & early flowering induction</td>
+            </tr>
+            <tr>
+              <td><strong>Atlantica (*P. atlantica*)</strong></td>
+              <td>Clay-loam, compact & heavier soils</td>
+              <td>Secano / Deficit Irrigation</td>
+              <td>Medium-High</td>
+              <td>Superior tolerance to temporary waterlogging and saturation</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- ==========================================================================
-     4. GRAFTED PISTACHIO PLANTS (FIELD-READY FORMAT GUIDE)
-     ========================================================================== -->
-<section id="grafted" class="catalog-chapter chapter-grafted" style="position: relative; overflow: hidden;">
-  <!-- 3-Layer Botanical Atmosphere -->
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     4. CHAPTER 03 — GRAFTED TREES & PRODUCTION FORMATS
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section id="grafted" class="catalog-chapter chapter-grafted">
   <div class="botanical-sunlight-filter" aria-hidden="true"></div>
   <div class="botanical-shadow-wrapper botanical-shadow--hanging-side" aria-hidden="true">
     <img src="/botanical/real-pistachio-hanging.png" alt="" loading="lazy">
   </div>
+
   <div class="container">
     <div class="chapter-number-header">
       <div class="chapter-index">
         <span class="cat-num">03</span>
-        <span class="cat-label">Production Stock</span>
+        <span class="cat-label">{{ i18n.t().products.grafted.tag }}</span>
       </div>
       <div class="chapter-meta-tag">
-        <span class="botanical-tag">{{ i18n.t().products.grafted.tag }}</span>
+        <span class="botanical-tag">&ge; 120 cm Minimum Graft Caliper</span>
       </div>
     </div>
 
@@ -219,41 +328,94 @@
       <p class="chapter-display-sub">{{ i18n.t().products.grafted.desc }}</p>
     </div>
 
-    <!-- Architectural Dual Format Comparison -->
+    <!-- Dual Formats Showcase with Authentic Photography -->
     <div class="format-editorial-spread">
-      <!-- Containerized Format -->
+      
+      <!-- Containerized Format (CT) -->
       <div class="format-editorial-pane">
-        <span class="pane-season">Spring / Autumn Planting</span>
+        <span class="pane-season">Year-Round Plantation Flexibility</span>
         <h3 class="pane-title">{{ i18n.t().products.grafted.potTitle }}</h3>
         <p class="pane-desc">{{ i18n.t().products.grafted.potDesc }}</p>
+
+        <!-- 3 Authentic Pots Gallery: 3.5L, 5L, 7L -->
+        <div class="pots-gallery-row">
+          <div class="pot-item">
+            <div class="pot-img-frame">
+              <img src="products-images/pistachero-pot-3-5l.jpg" alt="Pistachio plant in 3.5 Litre container" loading="lazy">
+            </div>
+            <span class="pot-vol">3.5 Litres</span>
+            <span class="pot-height">&ge; 120 cm</span>
+          </div>
+
+          <div class="pot-item">
+            <div class="pot-img-frame">
+              <img src="products-images/pistachero-pot-5l.jpg" alt="Pistachio plant in 5.0 Litre container" loading="lazy">
+            </div>
+            <span class="pot-vol">5.0 Litres</span>
+            <span class="pot-height">&ge; 120 cm</span>
+          </div>
+
+          <div class="pot-item">
+            <div class="pot-img-frame">
+              <img src="products-images/pistachero-pot-7l.jpg" alt="Pistachio plant in 7.0 Litre container" loading="lazy">
+            </div>
+            <span class="pot-vol">7.0 Litres</span>
+            <span class="pot-height">&ge; 120 cm</span>
+          </div>
+        </div>
+
         <div class="pane-highlights">
           <div class="pane-hl-item">
-            <i class="fa-solid fa-check hl-icon" aria-hidden="true"></i>
+            <i class="fa-solid fa-circle-check hl-icon" aria-hidden="true"></i>
             <span>{{ i18n.t().products.grafted.potPoint1 }}</span>
           </div>
           <div class="pane-hl-item">
-            <i class="fa-solid fa-check hl-icon" aria-hidden="true"></i>
+            <i class="fa-solid fa-circle-check hl-icon" aria-hidden="true"></i>
             <span>{{ i18n.t().products.grafted.potPoint2 }}</span>
+          </div>
+          <div class="pane-hl-item">
+            <i class="fa-solid fa-circle-check hl-icon" aria-hidden="true"></i>
+            <span>Immediate primary scaffold branching upon first spring flush</span>
           </div>
         </div>
       </div>
 
-      <!-- Bare-Root Format -->
+      <!-- Bare-Root Format (RD) -->
       <div class="format-editorial-pane">
-        <span class="pane-season">Winter Dormancy Plantation</span>
+        <span class="pane-season">Winter Dormancy (Dec — March)</span>
         <h3 class="pane-title">{{ i18n.t().products.grafted.bareTitle }}</h3>
         <p class="pane-desc">{{ i18n.t().products.grafted.bareDesc }}</p>
+
+        <!-- Authentic Bare-Root Photo with Bamboo Tutor -->
+        <div class="bare-root-featured-visual">
+          <div class="bare-root-frame">
+            <img src="products-images/pistachero-raiz-desnuda.jpg" 
+                 alt="Pistachio bare root plant with bamboo stake" 
+                 class="bare-root-img" 
+                 loading="lazy">
+          </div>
+          <div class="bare-root-spec-strip">
+            <span class="spec-bamboo"><i class="fa-solid fa-seedling" aria-hidden="true"></i> Servida con Tutor de Bambú</span>
+            <span class="spec-caliber"><i class="fa-solid fa-ruler-vertical" aria-hidden="true"></i> Altura Mínima: 120 cm</span>
+          </div>
+        </div>
+
         <div class="pane-highlights">
           <div class="pane-hl-item">
-            <i class="fa-solid fa-check hl-icon" aria-hidden="true"></i>
+            <i class="fa-solid fa-circle-check hl-icon" aria-hidden="true"></i>
             <span>{{ i18n.t().products.grafted.barePoint1 }}</span>
           </div>
           <div class="pane-hl-item">
-            <i class="fa-solid fa-check hl-icon" aria-hidden="true"></i>
+            <i class="fa-solid fa-circle-check hl-icon" aria-hidden="true"></i>
             <span>{{ i18n.t().products.grafted.barePoint2 }}</span>
+          </div>
+          <div class="pane-hl-item">
+            <i class="fa-solid fa-circle-check hl-icon" aria-hidden="true"></i>
+            <span>Uprooted via specialized vibrating nursery machinery protecting lateral root system</span>
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="grafted-cta-row text-center">
@@ -265,23 +427,24 @@
   </div>
 </section>
 
-<!-- ==========================================================================
-     5. COMMERCIAL CULTIVARS & POLLINATORS (BOTANICAL TAXONOMY CATALOG)
-     ========================================================================== -->
-<section id="varieties" class="catalog-chapter chapter-varieties" style="position: relative; overflow: hidden;">
-  <!-- 3-Layer Botanical Atmosphere -->
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     5. CHAPTER 04 — FEMALE PRODUCTION CULTIVARS MONOGRAPH
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section id="varieties" class="catalog-chapter chapter-varieties">
   <div class="botanical-sunlight-filter" aria-hidden="true"></div>
   <div class="botanical-shadow-wrapper botanical-shadow--bottom-left" aria-hidden="true">
     <img src="/botanical/real-pistachio-corner.png" alt="" loading="lazy">
   </div>
+
   <div class="container">
     <div class="chapter-number-header">
       <div class="chapter-index">
         <span class="cat-num">04</span>
-        <span class="cat-label">Cultivar Portfolio</span>
+        <span class="cat-label">{{ i18n.t().products.varieties.tag }}</span>
       </div>
       <div class="chapter-meta-tag">
-        <span class="botanical-tag">{{ i18n.t().products.varieties.tag }}</span>
+        <span class="botanical-tag">Female Nut Producers (♀)</span>
       </div>
     </div>
 
@@ -290,67 +453,336 @@
       <p class="chapter-display-sub">{{ i18n.t().products.varieties.desc }}</p>
     </div>
 
-    <!-- 4 Cultivar Monograph Entries -->
-    <div class="cultivars-taxonomy-list">
-      <!-- Kerman -->
-      <div class="cultivar-entry">
-        <div class="cultivar-meta-col">
-          <span class="cultivar-code">CUL-KER</span>
-          <span class="cultivar-badge">{{ i18n.t().products.varieties.kermanBadge }}</span>
-          <span class="cultivar-sex">♀ Female Producer</span>
+    <!-- Cultivars Monograph Grid with Authentic Photography -->
+    <div class="cultivars-photographic-grid">
+      
+      <!-- KERMAN -->
+      <article class="cultivar-card-editorial">
+        <div class="cultivar-photo-frame">
+          <img src="products-images/varieties/kerman.jpg" alt="Kerman pistachio cultivar nut clusters" class="cultivar-img" loading="lazy">
+          <span class="cultivar-sex-tag">♀ Female</span>
         </div>
-        <div class="cultivar-info-col">
+        <div class="cultivar-card-body">
+          <div class="cultivar-header-meta">
+            <span class="cultivar-code">CUL-KER</span>
+            <span class="cultivar-badge">{{ i18n.t().products.varieties.kermanBadge }}</span>
+          </div>
           <h3 class="cultivar-name">{{ i18n.t().products.varieties.kermanTitle }}</h3>
           <p class="cultivar-prose">{{ i18n.t().products.varieties.kermanDesc }}</p>
+          <div class="cultivar-pollination-tag">
+            <span class="tag-label">Synchronous Pollinators:</span>
+            <span class="tag-males">Peter • Egino</span>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Sirora -->
-      <div class="cultivar-entry">
-        <div class="cultivar-meta-col">
-          <span class="cultivar-code">CUL-SIR</span>
-          <span class="cultivar-badge">{{ i18n.t().products.varieties.siroraBadge }}</span>
-          <span class="cultivar-sex">♀ Female Producer</span>
+      <!-- SIRORA -->
+      <article class="cultivar-card-editorial">
+        <div class="cultivar-photo-frame">
+          <img src="products-images/varieties/sirora.jpg" alt="Sirora pistachio cultivar high yield open nuts" class="cultivar-img" loading="lazy">
+          <span class="cultivar-sex-tag">♀ Female</span>
         </div>
-        <div class="cultivar-info-col">
+        <div class="cultivar-card-body">
+          <div class="cultivar-header-meta">
+            <span class="cultivar-code">CUL-SIR</span>
+            <span class="cultivar-badge">{{ i18n.t().products.varieties.siroraBadge }}</span>
+          </div>
           <h3 class="cultivar-name">{{ i18n.t().products.varieties.siroraTitle }}</h3>
           <p class="cultivar-prose">{{ i18n.t().products.varieties.siroraDesc }}</p>
+          <div class="cultivar-pollination-tag">
+            <span class="tag-label">Synchronous Pollinators:</span>
+            <span class="tag-males">C-Especial • Peter • Egino</span>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Larnaka -->
-      <div class="cultivar-entry">
-        <div class="cultivar-meta-col">
-          <span class="cultivar-code">CUL-LAR</span>
-          <span class="cultivar-badge">{{ i18n.t().products.varieties.larnakaBadge }}</span>
-          <span class="cultivar-sex">♀ Female Producer</span>
+      <!-- LARNAKA -->
+      <article class="cultivar-card-editorial">
+        <div class="cultivar-photo-frame">
+          <img src="products-images/varieties/larnaka.jpg" alt="Larnaka gourmet pistachio nuts" class="cultivar-img" loading="lazy">
+          <span class="cultivar-sex-tag">♀ Female</span>
         </div>
-        <div class="cultivar-info-col">
+        <div class="cultivar-card-body">
+          <div class="cultivar-header-meta">
+            <span class="cultivar-code">CUL-LAR</span>
+            <span class="cultivar-badge">{{ i18n.t().products.varieties.larnakaBadge }}</span>
+          </div>
           <h3 class="cultivar-name">{{ i18n.t().products.varieties.larnakaTitle }}</h3>
           <p class="cultivar-prose">{{ i18n.t().products.varieties.larnakaDesc }}</p>
+          <div class="cultivar-pollination-tag">
+            <span class="tag-label">Synchronous Pollinator:</span>
+            <span class="tag-males">C-Especial</span>
+          </div>
         </div>
-      </div>
+      </article>
 
-      <!-- Pollinators -->
-      <div class="cultivar-entry pollinator-entry">
-        <div class="cultivar-meta-col">
-          <span class="cultivar-code">POL-SYNC</span>
-          <span class="cultivar-badge">{{ i18n.t().products.varieties.pollinatorsBadge }}</span>
-          <span class="cultivar-sex">♂ Male Pollinator</span>
+      <!-- AVDAT -->
+      <article class="cultivar-card-editorial">
+        <div class="cultivar-photo-frame cultivar-photo-placeholder">
+          <div class="arid-badge-box">
+            <i class="fa-solid fa-sun feature-icon" aria-hidden="true"></i>
+            <span>Arid Secano Specialist</span>
+          </div>
+          <span class="cultivar-sex-tag">♀ Female</span>
         </div>
-        <div class="cultivar-info-col">
-          <h3 class="cultivar-name">{{ i18n.t().products.varieties.pollinatorsTitle }}</h3>
-          <p class="cultivar-prose">{{ i18n.t().products.varieties.pollinatorsDesc }}</p>
+        <div class="cultivar-card-body">
+          <div class="cultivar-header-meta">
+            <span class="cultivar-code">CUL-AVD</span>
+            <span class="cultivar-badge">{{ i18n.t().products.varieties.avdatBadge }}</span>
+          </div>
+          <h3 class="cultivar-name">{{ i18n.t().products.varieties.avdatTitle }}</h3>
+          <p class="cultivar-prose">{{ i18n.t().products.varieties.avdatDesc }}</p>
+          <div class="cultivar-pollination-tag">
+            <span class="tag-label">Synchronous Pollinator:</span>
+            <span class="tag-males">C-Especial</span>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <!-- KASTEL -->
+      <article class="cultivar-card-editorial">
+        <div class="cultivar-photo-frame cultivar-photo-placeholder">
+          <div class="arid-badge-box">
+            <i class="fa-solid fa-certificate feature-icon" aria-hidden="true"></i>
+            <span>High Split Percentage</span>
+          </div>
+          <span class="cultivar-sex-tag">♀ Female</span>
+        </div>
+        <div class="cultivar-card-body">
+          <div class="cultivar-header-meta">
+            <span class="cultivar-code">CUL-KAS</span>
+            <span class="cultivar-badge">{{ i18n.t().products.varieties.kastelBadge }}</span>
+          </div>
+          <h3 class="cultivar-name">{{ i18n.t().products.varieties.kastelTitle }}</h3>
+          <p class="cultivar-prose">{{ i18n.t().products.varieties.kastelDesc }}</p>
+          <div class="cultivar-pollination-tag">
+            <span class="tag-label">Synchronous Pollinators:</span>
+            <span class="tag-males">Peter • Egino</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- MATEUR HEMBRA -->
+      <article class="cultivar-card-editorial">
+        <div class="cultivar-photo-frame">
+          <img src="products-images/varieties/mateur.jpg" alt="Mateur female pistachio variety" class="cultivar-img" loading="lazy">
+          <span class="cultivar-sex-tag">♀ Female</span>
+        </div>
+        <div class="cultivar-card-body">
+          <div class="cultivar-header-meta">
+            <span class="cultivar-code">CUL-MAT</span>
+            <span class="cultivar-badge">{{ i18n.t().products.varieties.mateurBadge }}</span>
+          </div>
+          <h3 class="cultivar-name">{{ i18n.t().products.varieties.mateurTitle }}</h3>
+          <p class="cultivar-prose">{{ i18n.t().products.varieties.mateurDesc }}</p>
+          <div class="cultivar-pollination-tag">
+            <span class="tag-label">Synchronous Pollinators:</span>
+            <span class="tag-males">Mateur Macho • C-Especial</span>
+          </div>
+        </div>
+      </article>
+
     </div>
 
-    <!-- Final Catalog Inquiry Action -->
     <div class="catalog-inquiry-bar text-center">
       <a [href]="getVarietiesWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-wa">
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
         <span>{{ i18n.t().products.varieties.cta }}</span>
       </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     6. CHAPTER 05 — POLLINATION SYNCHRONIZATION MATRIX (MALES ♂)
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section id="pollination" class="catalog-chapter chapter-pollination">
+  <div class="botanical-sunlight-filter" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="chapter-number-header">
+      <div class="chapter-index">
+        <span class="cat-num">05</span>
+        <span class="cat-label">{{ i18n.t().products.pollination.tag }}</span>
+      </div>
+      <div class="chapter-meta-tag">
+        <span class="botanical-tag">Male Pollinators (♂)</span>
+      </div>
+    </div>
+
+    <div class="varieties-taxonomy-header">
+      <h2 class="chapter-display-title">{{ i18n.t().products.pollination.title }}</h2>
+      <p class="chapter-display-sub">{{ i18n.t().products.pollination.desc }}</p>
+    </div>
+
+    <!-- Male Pollinators Profiles with Real Photos -->
+    <div class="pollinators-roster-grid">
+      
+      <!-- Peter -->
+      <div class="pollinator-profile-card">
+        <div class="pollinator-photo-frame">
+          <img src="products-images/varieties/peter.jpg" alt="Peter male pistachio flowers" loading="lazy">
+          <span class="bloom-timing-tag late">Late Bloom</span>
+        </div>
+        <div class="pollinator-content">
+          <h4 class="pollinator-name">{{ i18n.t().products.pollination.peterTitle }}</h4>
+          <span class="pollinator-badge">{{ i18n.t().products.pollination.peterBadge }}</span>
+          <p class="pollinator-desc">{{ i18n.t().products.pollination.peterDesc }}</p>
+          <div class="paired-females">
+            <span class="pair-label">Pairs with:</span>
+            <span class="pair-names">Kerman, Kastel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- C-Especial -->
+      <div class="pollinator-profile-card">
+        <div class="pollinator-photo-frame">
+          <img src="products-images/varieties/c-especial.jpg" alt="C-Especial male pistachio tree flowers" loading="lazy">
+          <span class="bloom-timing-tag early">Early Bloom</span>
+        </div>
+        <div class="pollinator-content">
+          <h4 class="pollinator-name">{{ i18n.t().products.pollination.cEspecialTitle }}</h4>
+          <span class="pollinator-badge">{{ i18n.t().products.pollination.cEspecialBadge }}</span>
+          <p class="pollinator-desc">{{ i18n.t().products.pollination.cEspecialDesc }}</p>
+          <div class="paired-females">
+            <span class="pair-label">Pairs with:</span>
+            <span class="pair-names">Larnaka, Avdat, Aegina, Mateur</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guerrero -->
+      <div class="pollinator-profile-card">
+        <div class="pollinator-photo-frame">
+          <img src="products-images/varieties/guerrero.jpg" alt="Guerrero male pistachio pollinator" loading="lazy">
+          <span class="bloom-timing-tag very-late">Very Late Bloom</span>
+        </div>
+        <div class="pollinator-content">
+          <h4 class="pollinator-name">{{ i18n.t().products.pollination.guerreroTitle }}</h4>
+          <span class="pollinator-badge">{{ i18n.t().products.pollination.guerreroBadge }}</span>
+          <p class="pollinator-desc">{{ i18n.t().products.pollination.guerreroDesc }}</p>
+          <div class="paired-females">
+            <span class="pair-label">Pairs with:</span>
+            <span class="pair-names">Late Kerman safeguard</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chaparrillo -->
+      <div class="pollinator-profile-card">
+        <div class="pollinator-photo-frame">
+          <img src="products-images/varieties/chaparrillo.jpg" alt="Chaparrillo male pollinator flowers" loading="lazy">
+          <span class="bloom-timing-tag mid-late">Mid-Late Bloom</span>
+        </div>
+        <div class="pollinator-content">
+          <h4 class="pollinator-name">{{ i18n.t().products.pollination.chaparrilloTitle }}</h4>
+          <span class="pollinator-badge">{{ i18n.t().products.pollination.chaparrilloBadge }}</span>
+          <p class="pollinator-desc">{{ i18n.t().products.pollination.chaparrilloDesc }}</p>
+          <div class="paired-females">
+            <span class="pair-label">Pairs with:</span>
+            <span class="pair-names">Sirora, Kerman transition</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Editorial Pollination Synchronization Matrix -->
+    <div class="sync-matrix-envelope">
+      <h3 class="matrix-title">Bloom Period & Synchronization Matrix</h3>
+      <div class="sync-table-responsive">
+        <table class="editorial-sync-table">
+          <thead>
+            <tr>
+              <th>Female Cultivar (♀)</th>
+              <th>Bloom Window</th>
+              <th>Chill Hours</th>
+              <th>Primary Male Pollinators (♂)</th>
+              <th>Recommended Orchard Ratio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Kerman</strong></td>
+              <td><span class="timing-pill late">Late (April)</span></td>
+              <td>800 – 1000 hrs</td>
+              <td><strong>Peter</strong>, <strong>Egino</strong>, <strong>Guerrero</strong></td>
+              <td>1 male : 8–9 females</td>
+            </tr>
+            <tr>
+              <td><strong>Sirora</strong></td>
+              <td><span class="timing-pill mid">Intermediate</span></td>
+              <td>600 – 800 hrs</td>
+              <td><strong>C-Especial</strong>, <strong>Peter</strong>, <strong>Egino</strong></td>
+              <td>1 male : 8–10 females</td>
+            </tr>
+            <tr>
+              <td><strong>Larnaka</strong></td>
+              <td><span class="timing-pill early-mid">Early-Mid</span></td>
+              <td>500 – 650 hrs</td>
+              <td><strong>C-Especial</strong>, <strong>Egino</strong></td>
+              <td>1 male : 8–9 females</td>
+            </tr>
+            <tr>
+              <td><strong>Avdat</strong></td>
+              <td><span class="timing-pill early-mid">Early-Mid (Arid)</span></td>
+              <td>450 – 600 hrs</td>
+              <td><strong>C-Especial</strong></td>
+              <td>1 male : 8–10 females</td>
+            </tr>
+            <tr>
+              <td><strong>Kastel</strong></td>
+              <td><span class="timing-pill late">Late</span></td>
+              <td>750 – 900 hrs</td>
+              <td><strong>Peter</strong>, <strong>Egino</strong></td>
+              <td>1 male : 8–9 females</td>
+            </tr>
+            <tr>
+              <td><strong>Mateur</strong></td>
+              <td><span class="timing-pill early">Early (March)</span></td>
+              <td>400 – 500 hrs</td>
+              <td><strong>Mateur Macho</strong>, <strong>C-Especial</strong></td>
+              <td>1 male : 8–10 females</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     7. CLOSING EDITORIAL CTA
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section class="products-closing-cta">
+  <div class="container">
+    <div class="cta-monograph-envelope">
+      <div class="editorial-brand-eyebrow cta-eyebrow-wrap">
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span class="eyebrow-botanical-pip" aria-hidden="true">
+          <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
+        </span>
+        <span class="brand-eyebrow-text">{{ i18n.t().products.intro.tag }}</span>
+      </div>
+
+      <h2 class="cta-monograph-heading">{{ i18n.t().products.catalogLabels.planMaterialTitle }}</h2>
+      <p class="cta-monograph-desc">
+        {{ i18n.t().products.catalogLabels.planMaterialDesc }}
+      </p>
+
+      <div class="cta-actions-cluster">
+        <a [href]="getVarietiesWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-editorial-cta btn-cta-primary">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          <span>{{ i18n.t().products.catalogLabels.chatAgronomist }}</span>
+        </a>
+        <a routerLink="/contact" class="btn-editorial-cta btn-cta-secondary" aria-label="Contact Our Specialists">
+          <span>{{ i18n.t().servicesPage.cta.secondary }}</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>

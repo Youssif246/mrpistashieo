@@ -1,0 +1,552 @@
+<!-- ==========================================================================
+     MISTER PISTACHO: WORLD-CLASS BOTANICAL EDITORIAL SERVICES MONOGRAPH
+     Precision Agricultural Engineering & Generational Orchard Cultivation
+     ========================================================================== -->
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     1. HERO: UNIFIED IMAGELESS EDITORIAL HERO
+     Sophisticated publication-grade typography, subtle botanical linework
+     ══════════════════════════════════════════════════════════════════════════ -->
+<header class="inner-page-hero services-inner-hero" id="servicesHero">
+  <div class="inner-hero-container">
+    <div class="inner-hero-text">
+      <span class="inner-hero-eyebrow">{{ i18n.t().servicesPage.hero.eyebrow }}</span>
+      <h1 class="inner-hero-heading">{{ i18n.t().servicesPage.hero.headline }}</h1>
+      <span class="inner-hero-connector" aria-hidden="true"></span>
+      <p class="inner-hero-desc">{{ i18n.t().servicesPage.hero.lead }}</p>
+    </div>
+    <div class="inner-hero-visual" aria-hidden="true">
+      <div class="inner-hero-aura"></div>
+      <img src="/botanical/real-pistachio-hanging.png" alt="" class="inner-hero-botanical" loading="eager">
+    </div>
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     2. CHAPTER NAVIGATION: REFINED EDITORIAL SUBTLE STICKY INDEX
+     ══════════════════════════════════════════════════════════════════════════ -->
+<nav class="services-chapter-index-bar" aria-label="Services Chapters Navigation">
+  <div class="container-wide chapter-index-inner">
+    <div class="chapter-index-track">
+      
+      <!-- Chapter 01 Item -->
+      <button type="button" 
+              class="chapter-index-btn" 
+              [class.is-active]="activeChapter() === 'establish'"
+              (click)="scrollToChapter('chapter-establish')"
+              aria-label="Scroll to Chapter 01: Establish">
+        <span class="idx-num">01</span>
+        <span class="idx-label">{{ i18n.t().servicesPage.nav.chap1 }}</span>
+        <span class="idx-line-pip" aria-hidden="true"></span>
+      </button>
+
+      <span class="chapter-index-separator" aria-hidden="true"></span>
+
+      <!-- Chapter 02 Item -->
+      <button type="button" 
+              class="chapter-index-btn" 
+              [class.is-active]="activeChapter() === 'cultivate'"
+              (click)="scrollToChapter('chapter-cultivate')"
+              aria-label="Scroll to Chapter 02: Cultivate">
+        <span class="idx-num">02</span>
+        <span class="idx-label">{{ i18n.t().servicesPage.nav.chap2 }}</span>
+        <span class="idx-line-pip" aria-hidden="true"></span>
+      </button>
+
+      <span class="chapter-index-separator" aria-hidden="true"></span>
+
+      <!-- Chapter 03 Item -->
+      <button type="button" 
+              class="chapter-index-btn" 
+              [class.is-active]="activeChapter() === 'harvest'"
+              (click)="scrollToChapter('chapter-harvest')"
+              aria-label="Scroll to Chapter 03: Harvest and Market">
+        <span class="idx-num">03</span>
+        <span class="idx-label">{{ i18n.t().servicesPage.nav.chap3 }}</span>
+        <span class="idx-line-pip" aria-hidden="true"></span>
+      </button>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     3. CHAPTER 01 — ESTABLISH: FROM LAND TO ORCHARD
+     Services 01, 02, 03: One Featured Service + Two Secondary Blocks
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section class="services-chapter-section chapter-tone-ivory" id="chapter-establish">
+  <!-- Subtle Ambient Orchard Contour Layer -->
+  <div class="chapter-ambient-layer" aria-hidden="true">
+    <div class="botanical-sunlight-filter"></div>
+    <div class="botanical-shadow-wrapper botanical-shadow--orchard-row">
+      <img src="/botanical/pistachio-orchard-horizon.svg" alt="" loading="lazy">
+    </div>
+    <span class="chapter-bg-watermark">{{ i18n.t().servicesPage.chapter1.watermark }}</span>
+  </div>
+
+  <div class="container-wide">
+    
+    <!-- Chapter Monograph Header -->
+    <header class="chapter-monograph-header">
+      <div class="chapter-eyebrow-lockup">
+        <span class="chapter-tag-badge">{{ i18n.t().servicesPage.chapter1.tag }}</span>
+        <span class="chapter-eyebrow-code">{{ i18n.t().servicesPage.chapter1.eyebrow }}</span>
+      </div>
+      
+      <div class="chapter-title-split">
+        <h2 class="chapter-title">{{ i18n.t().servicesPage.chapter1.title }}</h2>
+        <p class="chapter-lead">{{ i18n.t().servicesPage.chapter1.subtitle }}</p>
+      </div>
+
+      <div class="chapter-hairline-progress" aria-hidden="true"></div>
+    </header>
+
+    <!-- Establish Composition: 1 Featured Major Heroic Service + 2 Secondary Blocks -->
+    <div class="establish-composition-flow">
+      
+      <!-- 1. FEATURED SERVICE 01: Turnkey Pistachio Plantations (Large Featured Showcase) -->
+      <article class="featured-service-card" id="service-01">
+        <div class="featured-card-grid">
+          
+          <!-- Large High-Fidelity Photography Frame -->
+          <div class="featured-photo-col">
+            <div class="featured-photo-frame">
+              <img src="service-images/turnkey-pistachio-plantation.webp" 
+                   [alt]="i18n.t().home.services.items[0].title" 
+                   class="featured-photo-img" 
+                   loading="lazy">
+              <div class="featured-photo-badge">
+                <span class="badge-plate">{{ i18n.t().servicesPage.labels.plate1 }}</span>
+                <span class="badge-terroir">{{ i18n.t().servicesPage.labels.plate1Sub }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editorial Specification Prose -->
+          <div class="featured-prose-col">
+            <div class="service-kicker-strip">
+              <span class="service-icon-pill" aria-hidden="true"><i class="fa-solid fa-tree"></i></span>
+              <span class="kicker-num">{{ i18n.t().home.services.items[0].number }}</span>
+              <span class="kicker-sep" aria-hidden="true">/</span>
+              <span class="kicker-label">{{ i18n.t().servicesPage.labels.turnkeyPlantation }}</span>
+            </div>
+
+            <span class="service-lead-subtitle">{{ i18n.t().home.services.items[0].subtitle }}</span>
+            <h3 class="service-display-title">{{ i18n.t().home.services.items[0].title }}</h3>
+            <span class="service-es-tag">{{ i18n.t().home.services.items[0].esTitle }}</span>
+
+            <div class="service-desc-callout">
+              <i class="fa-solid fa-leaf desc-corner-leaf" aria-hidden="true"></i>
+              <p class="service-body-description">
+                {{ i18n.t().home.services.items[0].description }}
+              </p>
+            </div>
+
+            <div class="service-deliverables-panel">
+              <span class="deliverables-heading">{{ i18n.t().servicesPage.labels.coreCapabilities }}</span>
+              <ul class="editorial-spec-list" aria-label="Turnkey capabilities">
+                @for (bullet of i18n.t().home.services.items[0].bullets; track $index) {
+                <li class="editorial-spec-item">
+                  <span class="spec-bullet-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+                  <span class="spec-bullet-text">{{ bullet }}</span>
+                </li>
+                }
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- 2. TWO SECONDARY EDITORIAL SERVICE BLOCKS: Services 02 & 03 -->
+      <div class="establish-secondary-grid">
+        
+        <!-- SERVICE 02: Precision GPS-Guided Planting -->
+        <article class="secondary-service-card" id="service-02">
+          <div class="secondary-photo-wrapper">
+            <img src="service-images/gps-precision-planting.webp" 
+                 [alt]="i18n.t().home.services.items[1].title" 
+                 class="secondary-card-img" 
+                 loading="lazy">
+            <div class="secondary-tag-pill">
+              <i class="fa-solid fa-location-crosshairs tag-icon" aria-hidden="true"></i>
+              <span class="pill-num">{{ i18n.t().home.services.items[1].number }}</span>
+              <span class="pill-dot" aria-hidden="true">·</span>
+              <span class="pill-text">{{ i18n.t().servicesPage.labels.gpsPrecision }}</span>
+            </div>
+          </div>
+
+          <div class="secondary-card-body">
+            <span class="secondary-card-sub">{{ i18n.t().home.services.items[1].subtitle }}</span>
+            <h4 class="secondary-card-title">{{ i18n.t().home.services.items[1].title }}</h4>
+            <span class="secondary-card-es">{{ i18n.t().home.services.items[1].esTitle }}</span>
+
+            <div class="service-desc-callout">
+              <p class="secondary-card-desc">
+                {{ i18n.t().home.services.items[1].description }}
+              </p>
+            </div>
+
+            <ul class="editorial-spec-list" aria-label="GPS planting capabilities">
+              @for (bullet of i18n.t().home.services.items[1].bullets; track $index) {
+              <li class="editorial-spec-item">
+                <span class="spec-bullet-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+                <span class="spec-bullet-text">{{ bullet }}</span>
+              </li>
+              }
+            </ul>
+          </div>
+        </article>
+
+        <!-- SERVICE 03: Pistachio Nursery & Plant Supply -->
+        <article class="secondary-service-card" id="service-03">
+          <div class="secondary-photo-wrapper">
+            <img src="service-images/pistachio-nursery.webp" 
+                 [alt]="i18n.t().home.services.items[2].title" 
+                 class="secondary-card-img" 
+                 loading="lazy">
+            <div class="secondary-tag-pill">
+              <i class="fa-solid fa-seedling tag-icon" aria-hidden="true"></i>
+              <span class="pill-num">{{ i18n.t().home.services.items[2].number }}</span>
+              <span class="pill-dot" aria-hidden="true">·</span>
+              <span class="pill-text">{{ i18n.t().servicesPage.labels.propagationSupply }}</span>
+            </div>
+          </div>
+
+          <div class="secondary-card-body">
+            <span class="secondary-card-sub">{{ i18n.t().home.services.items[2].subtitle }}</span>
+            <h4 class="secondary-card-title">{{ i18n.t().home.services.items[2].title }}</h4>
+            <span class="secondary-card-es">{{ i18n.t().home.services.items[2].esTitle }}</span>
+
+            <div class="service-desc-callout">
+              <p class="secondary-card-desc">
+                {{ i18n.t().home.services.items[2].description }}
+              </p>
+            </div>
+
+            <ul class="editorial-spec-list" aria-label="Nursery supply capabilities">
+              @for (bullet of i18n.t().home.services.items[2].bullets; track $index) {
+              <li class="editorial-spec-item">
+                <span class="spec-bullet-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+                <span class="spec-bullet-text">{{ bullet }}</span>
+              </li>
+              }
+            </ul>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     4. CHAPTER 02 — CULTIVATE: PRECISION THROUGH EVERY GROWING SEASON
+     Services 04, 05, 06: Distinct 3-Column Curated Architectural Sequence
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section class="services-chapter-section chapter-tone-sage" id="chapter-cultivate">
+  <!-- Subtle Ambient Botanical Linework -->
+  <div class="chapter-ambient-layer" aria-hidden="true">
+    <div class="botanical-sunlight-filter"></div>
+    <div class="botanical-shadow-wrapper botanical-shadow--center-cards">
+      <img src="/botanical/real-pistachio-sprig.png" alt="" loading="lazy">
+    </div>
+    <span class="chapter-bg-watermark">{{ i18n.t().servicesPage.chapter2.watermark }}</span>
+  </div>
+
+  <div class="container-wide">
+    
+    <!-- Chapter Monograph Header -->
+    <header class="chapter-monograph-header">
+      <div class="chapter-eyebrow-lockup">
+        <span class="chapter-tag-badge">{{ i18n.t().servicesPage.chapter2.tag }}</span>
+        <span class="chapter-eyebrow-code">{{ i18n.t().servicesPage.chapter2.eyebrow }}</span>
+      </div>
+      
+      <div class="chapter-title-split">
+        <h2 class="chapter-title">{{ i18n.t().servicesPage.chapter2.title }}</h2>
+        <p class="chapter-lead">{{ i18n.t().servicesPage.chapter2.subtitle }}</p>
+      </div>
+
+      <div class="chapter-hairline-progress" aria-hidden="true"></div>
+    </header>
+
+    <!-- Cultivate Distinct Composition: 3 Architectural Agronomic Columns -->
+    <div class="cultivate-architectural-grid">
+
+      <!-- SERVICE 04: Professional Grafting & Pruning -->
+      <article class="cultivate-card" id="service-04">
+        <div class="cultivate-photo-frame">
+          <img src="service-images/grafting-pruning.webp" 
+               [alt]="i18n.t().home.services.items[3].title" 
+               class="cultivate-photo-img" 
+               loading="lazy">
+          <div class="cultivate-photo-chip">
+            <span class="chip-code">{{ i18n.t().servicesPage.labels.fieldPhysiology }}</span>
+          </div>
+        </div>
+
+        <div class="cultivate-card-content">
+          <div class="cultivate-tag-row">
+            <span class="cultivate-cat-label"><i class="fa-solid fa-scissors cat-icon" aria-hidden="true"></i> {{ i18n.t().servicesPage.labels.graftingCanopy }}</span>
+            <span class="cultivate-es-meta">{{ i18n.t().home.services.items[3].esTitle }}</span>
+          </div>
+
+          <span class="cultivate-subtitle">{{ i18n.t().home.services.items[3].subtitle }}</span>
+          <h3 class="cultivate-card-title">{{ i18n.t().home.services.items[3].title }}</h3>
+
+          <div class="service-desc-callout">
+            <p class="cultivate-card-desc">
+              {{ i18n.t().home.services.items[3].description }}
+            </p>
+          </div>
+
+          <div class="cultivate-specs-wrap">
+            <span class="specs-mini-heading">{{ i18n.t().servicesPage.labels.technicalCapabilities }}</span>
+            <ul class="editorial-spec-list" aria-label="Grafting and pruning capabilities">
+              @for (bullet of i18n.t().home.services.items[3].bullets; track $index) {
+              <li class="editorial-spec-item">
+                <span class="spec-bullet-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+                <span class="spec-bullet-text">{{ bullet }}</span>
+              </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICE 05: Technical Agricultural Consulting -->
+      <article class="cultivate-card" id="service-05">
+        <div class="cultivate-photo-frame">
+          <img src="service-images/agricultural-consulting.webp" 
+               [alt]="i18n.t().home.services.items[4].title" 
+               class="cultivate-photo-img" 
+               loading="lazy">
+          <div class="cultivate-photo-chip">
+            <span class="chip-code">{{ i18n.t().servicesPage.labels.agronomicSupervision }}</span>
+          </div>
+        </div>
+
+        <div class="cultivate-card-content">
+          <div class="cultivate-tag-row">
+            <span class="cultivate-cat-label"><i class="fa-solid fa-microscope cat-icon" aria-hidden="true"></i> {{ i18n.t().servicesPage.labels.consultingIpm }}</span>
+            <span class="cultivate-es-meta">{{ i18n.t().home.services.items[4].esTitle }}</span>
+          </div>
+
+          <span class="cultivate-subtitle">{{ i18n.t().home.services.items[4].subtitle }}</span>
+          <h3 class="cultivate-card-title">{{ i18n.t().home.services.items[4].title }}</h3>
+
+          <div class="service-desc-callout">
+            <p class="cultivate-card-desc">
+              {{ i18n.t().home.services.items[4].description }}
+            </p>
+          </div>
+
+          <div class="cultivate-specs-wrap">
+            <span class="specs-mini-heading">{{ i18n.t().servicesPage.labels.technicalCapabilities }}</span>
+            <ul class="editorial-spec-list" aria-label="Consulting capabilities">
+              @for (bullet of i18n.t().home.services.items[4].bullets; track $index) {
+              <li class="editorial-spec-item">
+                <span class="spec-bullet-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+                <span class="spec-bullet-text">{{ bullet }}</span>
+              </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- SERVICE 06: Tree Support & Protection Supplies -->
+      <article class="cultivate-card" id="service-06">
+        <div class="cultivate-photo-frame">
+          <img src="service-images/tree-support-protection.webp" 
+               [alt]="i18n.t().home.services.items[5].title" 
+               class="cultivate-photo-img" 
+               loading="lazy">
+          <div class="cultivate-photo-chip">
+            <span class="chip-code">{{ i18n.t().servicesPage.labels.orchardShelter }}</span>
+          </div>
+        </div>
+
+        <div class="cultivate-card-content">
+          <div class="cultivate-tag-row">
+            <span class="cultivate-cat-label"><i class="fa-solid fa-shield-halved cat-icon" aria-hidden="true"></i> {{ i18n.t().servicesPage.labels.orchardStabilization }}</span>
+            <span class="cultivate-es-meta">{{ i18n.t().home.services.items[5].esTitle }}</span>
+          </div>
+
+          <span class="cultivate-subtitle">{{ i18n.t().home.services.items[5].subtitle }}</span>
+          <h3 class="cultivate-card-title">{{ i18n.t().home.services.items[5].title }}</h3>
+
+          <div class="service-desc-callout">
+            <p class="cultivate-card-desc">
+              {{ i18n.t().home.services.items[5].description }}
+            </p>
+          </div>
+
+          <div class="cultivate-specs-wrap">
+            <span class="specs-mini-heading">{{ i18n.t().servicesPage.labels.technicalCapabilities }}</span>
+            <ul class="editorial-spec-list" aria-label="Support and protection capabilities">
+              @for (bullet of i18n.t().home.services.items[5].bullets; track $index) {
+              <li class="editorial-spec-item">
+                <span class="spec-bullet-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+                <span class="spec-bullet-text">{{ bullet }}</span>
+              </li>
+              }
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     5. CHAPTER 03 — HARVEST & MARKET: FROM ORCHARD TO MARKET
+     Service 07: Wide Expansive Horizontal Showcase
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section class="services-chapter-section chapter-tone-ivory" id="chapter-harvest">
+  <!-- Subtle Ambient Botanical Atmosphere -->
+  <div class="chapter-ambient-layer" aria-hidden="true">
+    <div class="botanical-sunlight-filter"></div>
+    <div class="botanical-shadow-wrapper botanical-shadow--top-right">
+      <img src="/botanical/real-pistachio-branch.png" alt="" loading="lazy">
+    </div>
+    <span class="chapter-bg-watermark">{{ i18n.t().servicesPage.chapter3.watermark }}</span>
+  </div>
+
+  <div class="container-wide">
+    
+    <!-- Chapter Monograph Header -->
+    <header class="chapter-monograph-header">
+      <div class="chapter-eyebrow-lockup">
+        <span class="chapter-tag-badge">{{ i18n.t().servicesPage.chapter3.tag }}</span>
+        <span class="chapter-eyebrow-code">{{ i18n.t().servicesPage.chapter3.eyebrow }}</span>
+      </div>
+      
+      <div class="chapter-title-split">
+        <h2 class="chapter-title">{{ i18n.t().servicesPage.chapter3.title }}</h2>
+        <p class="chapter-lead">{{ i18n.t().servicesPage.chapter3.subtitle }}</p>
+      </div>
+
+      <div class="chapter-hairline-progress" aria-hidden="true"></div>
+    </header>
+
+    <!-- Expansive Horizontal Showcase: Full-Width Panoramic Photography with Integrated Prose -->
+    <article class="harvest-expansive-showcase" id="service-07">
+      
+      <div class="harvest-panoramic-frame">
+        <img src="service-images/pistachio-harvest-distribution.webp" 
+             [alt]="i18n.t().home.services.items[6].title" 
+             class="harvest-panoramic-img" 
+             loading="lazy">
+        <div class="panoramic-overlay-badge">
+          <span class="badge-title">{{ i18n.t().servicesPage.labels.commercialOfftake }}</span>
+          <span class="badge-sub">{{ i18n.t().servicesPage.labels.commercialOfftakeSub }}</span>
+        </div>
+      </div>
+
+      <div class="harvest-showcase-prose">
+        <div class="harvest-prose-header">
+          <div class="entry-index-chip">
+            <span class="service-icon-pill" aria-hidden="true"><i class="fa-solid fa-scale-balanced"></i></span>
+            <span class="chip-num">{{ i18n.t().home.services.items[6].number }}</span>
+            <span class="chip-divider" aria-hidden="true">/</span>
+            <span class="chip-category">{{ i18n.t().servicesPage.labels.harvestCommercialization }}</span>
+          </div>
+          <span class="entry-subtitle">{{ i18n.t().home.services.items[6].subtitle }}</span>
+          <h3 class="harvest-display-title">{{ i18n.t().home.services.items[6].title }}</h3>
+          <span class="entry-es-title">{{ i18n.t().home.services.items[6].esTitle }}</span>
+        </div>
+
+        <div class="service-desc-callout harvest-desc-callout">
+          <p class="harvest-description">
+            {{ i18n.t().home.services.items[6].description }}
+          </p>
+        </div>
+
+        <!-- 3 Technical Off-take Highlights in Horizontal Spread -->
+        <div class="harvest-highlights-grid">
+          @for (bullet of i18n.t().home.services.items[6].bullets; track $index) {
+          <div class="harvest-highlight-card">
+            <div class="card-num-indicator"><i class="fa-solid fa-check indicator-check" aria-hidden="true"></i> 0{{ $index + 1 }}</div>
+            <p class="card-copy">{{ bullet }}</p>
+          </div>
+          }
+        </div>
+      </div>
+
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════════════════════
+     6. EDITORIAL CLOSING CTA: FROM PLANNING TO HARVEST
+     ══════════════════════════════════════════════════════════════════════════ -->
+<section class="services-editorial-cta" id="servicesCta">
+  <div class="cta-ambient-canvas" aria-hidden="true">
+    <div class="botanical-sunlight-filter"></div>
+    <div class="botanical-shadow-wrapper botanical-shadow--top-left">
+      <img src="/botanical/real-pistachio-corner.png" alt="" loading="lazy">
+    </div>
+  </div>
+
+  <div class="container-wide">
+    <div class="cta-monograph-envelope">
+      
+      <div class="editorial-brand-eyebrow cta-eyebrow-wrap">
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span class="eyebrow-botanical-pip" aria-hidden="true">
+          <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
+        </span>
+        <span class="brand-eyebrow-text">{{ i18n.t().servicesPage.cta.badge }}</span>
+      </div>
+
+      <h2 class="cta-monograph-heading">
+        {{ i18n.t().servicesPage.cta.headline }}
+      </h2>
+
+      <p class="cta-monograph-sub">
+        {{ i18n.t().servicesPage.cta.subheading }}
+      </p>
+
+      <p class="cta-monograph-desc">
+        {{ i18n.t().servicesPage.cta.description }}
+      </p>
+
+      <div class="cta-actions-cluster">
+        <a [href]="getServicesWhatsApp()" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-editorial-cta btn-cta-primary"
+           aria-label="Direct WhatsApp Consultation">
+          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          <span>{{ i18n.t().servicesPage.cta.button }}</span>
+        </a>
+
+        <a routerLink="/contact" 
+           class="btn-editorial-cta btn-cta-secondary"
+           aria-label="Navigate to Contact Form">
+          <span>{{ i18n.t().servicesPage.cta.secondary }}</span>
+        </a>
+      </div>
+
+      <!-- Subtle Closing Colophon Mark -->
+      <div class="cta-botanical-mark" aria-hidden="true">
+        <span class="mark-line"></span>
+        <span class="mark-label">{{ i18n.t().servicesPage.labels.colophonMark }}</span>
+        <span class="mark-line"></span>
+      </div>
+
+    </div>
+  </div>
+</section>

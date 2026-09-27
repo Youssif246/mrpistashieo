@@ -129,7 +129,7 @@
   color: #112117;
 }
 
-/* Custom Thin Botanical Green Accent Line */
+/* Custom Thin Botanical Green Accent Line (Centered identically in LTR and RTL) */
 .nav-active-botanical {
   position: absolute;
   bottom: 0;
@@ -149,17 +149,9 @@
   display: none;
 }
 
-:host-context(body.rtl) .nav-active-botanical {
-  transform: translateX(50%) scaleX(0);
-}
-
 .nav-link:hover .nav-active-botanical {
   opacity: 0.5;
   transform: translateX(-50%) scaleX(0.7);
-}
-
-:host-context(body.rtl) .nav-link:hover .nav-active-botanical {
-  transform: translateX(50%) scaleX(0.7);
 }
 
 .nav-link.active {
@@ -170,10 +162,6 @@
 .nav-link.active .nav-active-botanical {
   transform: translateX(-50%) scaleX(1);
   opacity: 1;
-}
-
-:host-context(body.rtl) .nav-link.active .nav-active-botanical {
-  transform: translateX(50%) scaleX(1);
 }
 
 /* --------------------------------------------------------------------------

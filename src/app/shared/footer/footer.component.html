@@ -48,19 +48,19 @@
         <ul class="column-links">
           <li><a routerLink="/">{{ i18n.t().navbar.home }}</a></li>
           <li><a routerLink="/about">{{ i18n.t().navbar.about }}</a></li>
-          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().navbar.products }}</a></li>
-          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().navbar.contact }}</a></li>
+          <li><a routerLink="/services">{{ i18n.t().navbar.services }}</a></li>
+          <li><a routerLink="/contact">{{ i18n.t().navbar.contact }}</a></li>
         </ul>
       </div>
 
-      <!-- Plant Material -->
+      <!-- Agricultural Services -->
       <div class="footer-column">
-        <span class="column-kicker">{{ i18n.t().footer.productsTitle }}</span>
+        <span class="column-kicker">{{ i18n.t().navbar.services }}</span>
         <ul class="column-links">
-          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().products.ucb1.title }}</a></li>
-          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().products.traditional.cornicabraTitle }}</a></li>
-          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().products.grafted.title }}</a></li>
-          <li><a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().products.varieties.title }}</a></li>
+          <li><a routerLink="/services" fragment="service-01">{{ i18n.t().home.services.items[0].title }}</a></li>
+          <li><a routerLink="/services" fragment="service-02">{{ i18n.t().home.services.items[1].title }}</a></li>
+          <li><a routerLink="/services" fragment="service-03">{{ i18n.t().home.services.items[2].title }}</a></li>
+          <li><a routerLink="/services">{{ i18n.t().home.services.viewAll }}</a></li>
         </ul>
       </div>
 
@@ -69,15 +69,15 @@
         <span class="column-kicker">{{ i18n.t().footer.contactTitle }}</span>
         <div class="column-meta-list">
           <p class="meta-row">
-            <span class="meta-label">Operations</span>
+            <span class="meta-label">{{ i18n.t().footer.operations }}</span>
             <span class="meta-val">{{ i18n.t().footer.locationPlaceholder }}</span>
           </p>
           <p class="meta-row">
-            <span class="meta-label">Inquiries</span>
+            <span class="meta-label">{{ i18n.t().footer.inquiries }}</span>
             <span class="meta-val">{{ i18n.t().footer.emailPlaceholder }}</span>
           </p>
           <p class="meta-row">
-            <span class="meta-label">Direct</span>
+            <span class="meta-label">{{ i18n.t().footer.direct }}</span>
             <span class="meta-val" dir="ltr">{{ i18n.t().footer.phonePlaceholder }}</span>
           </p>
         </div>

@@ -26,7 +26,7 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
   }
 
   private initAnimations(): void {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     this.gsapCtx = gsap.context(() => {
       this.initHeroAnimation(prefersReducedMotion);
@@ -38,59 +38,38 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     }, this.el);
   }
 
-  // 1. HERO ENTRANCE & BOTANICAL PARALLAX
+  // 1. HERO ENTRANCE (PATTERN A & E)
   private initHeroAnimation(prefersReducedMotion: boolean): void {
-    const heroContentBlock = this.el.nativeElement.querySelector('.hero-content-block') as HTMLElement | null;
-    const heroPhotoFrame = this.el.nativeElement.querySelector('.hero-photo-frame') as HTMLElement | null;
-    const panoramaImg = this.el.nativeElement.querySelector('.hero-panorama-img') as HTMLElement | null;
+    const hero = this.el.nativeElement.querySelector('#aboutHero') as HTMLElement | null;
+    if (!hero) return;
+
+    const eyebrow = hero.querySelector('.inner-hero-eyebrow');
+    const heading = hero.querySelector('.inner-hero-heading');
+    const connector = hero.querySelector('.inner-hero-connector');
+    const desc = hero.querySelector('.inner-hero-desc');
+    const aura = hero.querySelector('.inner-hero-aura');
+    const botanical = hero.querySelector('.inner-hero-botanical');
 
     if (prefersReducedMotion) {
-      if (heroContentBlock) gsap.set(heroContentBlock.children, { opacity: 1, y: 0 });
-      if (heroPhotoFrame) gsap.set(heroPhotoFrame, { opacity: 1, scale: 1 });
+      if (eyebrow) gsap.set(eyebrow, { opacity: 1, y: 0 });
+      if (heading) gsap.set(heading, { opacity: 1, y: 0 });
+      if (desc) gsap.set(desc, { opacity: 1, y: 0 });
+      if (botanical) gsap.set(botanical, { opacity: 0.85, scale: 1 });
       return;
     }
 
-    if (heroContentBlock) {
-      gsap.set(heroContentBlock.children, { opacity: 0, y: 22 });
-      gsap.to(heroContentBlock.children, {
-        opacity: 1,
-        y: 0,
-        duration: 0.85,
-        stagger: 0.14,
-        ease: 'power2.out',
-        delay: 0.12
-      });
-    }
-
-    if (heroPhotoFrame) {
-      gsap.set(heroPhotoFrame, { opacity: 0, y: 32, scale: 0.985 });
-      gsap.to(heroPhotoFrame, {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.95,
-        ease: 'power2.out',
-        delay: 0.28
-      });
-    }
-
-    if (panoramaImg) {
-      gsap.to(panoramaImg, {
-        yPercent: 12,
-        ease: 'none',
-        scrollTrigger: {
-          trigger: '#aboutHero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: 0.5
-        }
-      });
-    }
+    const tl = gsap.timeline({ defaults: { ease: 'power2.out' }, delay: 0.05 });
+    if (eyebrow) tl.to(eyebrow, { opacity: 1, y: 0, duration: 0.45 });
+    if (heading) tl.to(heading, { opacity: 1, y: 0, duration: 0.55 }, '-=0.3');
+    if (connector) tl.to(connector, { scaleX: 1, opacity: 0.65, duration: 0.35 }, '-=0.35');
+    if (desc) tl.to(desc, { opacity: 1, y: 0, duration: 0.5 }, '-=0.35');
+    if (aura) tl.to(aura, { opacity: 1, scale: 1, duration: 0.6 }, '-=0.4');
+    if (botanical) tl.to(botanical, { opacity: 0.85, scale: 1, duration: 0.6 }, '-=0.45');
   }
 
-  // 2. STORY SECTION ENTRANCE (UNBOXED SPREAD)
+  // 2. STORY SECTION ENTRANCE (PATTERN C & E)
   private initStoryAnimation(prefersReducedMotion: boolean): void {
-    const section = document.getElementById('aboutStory');
+    const section = this.el.nativeElement.querySelector('#aboutStory') as HTMLElement | null;
     if (!section) return;
 
     const anchorCol = section.querySelector('.story-anchor-column');
@@ -102,9 +81,6 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       if (proseStream) gsap.set(proseStream, { opacity: 1, y: 0 });
       return;
     }
-
-    if (anchorCol) gsap.set(anchorCol, { opacity: 0, y: 28 });
-    if (proseStream) gsap.set(proseStream, { opacity: 0, y: 32 });
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -118,27 +94,23 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     if (proseStream) tl.to(proseStream, { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out' }, '-=0.5');
 
     if (branchSvg) {
-      gsap.fromTo(
-        branchSvg,
-        { opacity: 0, rotate: -4 },
-        {
-          opacity: 0.75,
-          rotate: 0,
-          duration: 1.4,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 82%',
-            once: true
-          }
+      gsap.to(branchSvg, {
+        opacity: 0.8,
+        rotate: 0,
+        duration: 1.2,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 82%',
+          once: true
         }
-      );
+      });
     }
   }
 
-  // 3. PHILOSOPHY 4 CHAPTERS PROGRESSIVE ENTRANCE
+  // 3. PHILOSOPHY 4 CHAPTERS PROGRESSIVE ENTRANCE (PATTERN C & D)
   private initPhilosophyAnimation(prefersReducedMotion: boolean): void {
-    const section = document.getElementById('aboutPhilosophy');
+    const section = this.el.nativeElement.querySelector('#aboutPhilosophy') as HTMLElement | null;
     if (!section) return;
 
     const header = section.querySelector('.philosophy-section-header');
@@ -151,10 +123,6 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       if (centerNode) gsap.set(centerNode, { opacity: 1, scale: 1 });
       return;
     }
-
-    if (header) gsap.set(header, { opacity: 0, y: 25 });
-    chapters.forEach(c => gsap.set(c, { opacity: 0, y: 32 }));
-    if (centerNode) gsap.set(centerNode, { opacity: 0, scale: 0.5 });
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -173,9 +141,9 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  // 4. TECHNICAL MASTERY SECTION ENTRANCE (OVERFLOWING IMAGE & PROSE)
+  // 4. TECHNICAL MASTERY SECTION ENTRANCE (PATTERN B & C)
   private initTechnicalAnimation(prefersReducedMotion: boolean): void {
-    const section = document.getElementById('aboutTechnical');
+    const section = this.el.nativeElement.querySelector('#aboutTechnical') as HTMLElement | null;
     if (!section) return;
 
     const photoCanvas = section.querySelector('.technical-photo-canvas');
@@ -188,10 +156,6 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       if (proseCol)    gsap.set(proseCol,    { opacity: 1, y: 0 });
       return;
     }
-
-    if (photoCanvas) gsap.set(photoCanvas, { opacity: 0, scale: 0.97 });
-    if (proseCol)    gsap.set(proseCol,    { opacity: 0, y: 28 });
-    if (connectArc)  gsap.set(connectArc,  { opacity: 0 });
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -219,9 +183,9 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  // 5. FINAL EDITORIAL CTA ENTRANCE
+  // 5. FINAL EDITORIAL CTA ENTRANCE (PATTERN C)
   private initCtaAnimation(prefersReducedMotion: boolean): void {
-    const section = document.getElementById('aboutCta');
+    const section = this.el.nativeElement.querySelector('#aboutCta') as HTMLElement | null;
     if (!section) return;
 
     const stage = section.querySelector('.cta-editorial-stage');
@@ -230,8 +194,6 @@ export class AboutComponent implements AfterViewInit, OnDestroy {
       if (stage) gsap.set(stage, { opacity: 1, y: 0 });
       return;
     }
-
-    if (stage) gsap.set(stage, { opacity: 0, y: 26 });
 
     gsap.to(stage, {
       opacity: 1,

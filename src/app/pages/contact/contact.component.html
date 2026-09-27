@@ -6,80 +6,23 @@
 <div class="contact-editorial-experience" id="contactPage">
 
   <!-- ══════════════════════════════════════════════════════════════════════════
-       1. HERO: EXACT SAME EDITORIAL SPREAD DESIGN AS ABOUT HERO
+       1. HERO: UNIFIED IMAGELESS EDITORIAL HERO
+       Sophisticated publication-grade typography, subtle botanical linework
        ══════════════════════════════════════════════════════════════════════════ -->
-  <section class="contact-editorial-hero" id="contactHero">
-    <!-- 3-Layer Botanical Atmosphere -->
-    <div class="hero-ambient-canvas" aria-hidden="true">
-      <div class="botanical-sunlight-filter"></div>
-      <div class="botanical-shadow-wrapper botanical-shadow--vertical-left">
-        <img src="/botanical/real-pistachio-sprig.png" alt="" loading="lazy">
+  <header class="inner-page-hero contact-inner-hero" id="contactHero">
+    <div class="inner-hero-container">
+      <div class="inner-hero-text">
+        <span class="inner-hero-eyebrow">{{ i18n.t().contact.hero.eyebrow }}</span>
+        <h1 class="inner-hero-heading">{{ i18n.t().contact.hero.headline }}</h1>
+        <span class="inner-hero-connector" aria-hidden="true"></span>
+        <p class="inner-hero-desc">{{ i18n.t().contact.hero.description }}</p>
       </div>
-      <div class="botanical-shadow-wrapper botanical-shadow--top-right">
-        <img src="/botanical/real-pistachio-arch.png" alt="" loading="lazy">
-      </div>
-    </div>
-
-    <div class="container-wide">
-      <!-- Unified Editorial Hero Spread: Typography & Photography Together (Exact About Style) -->
-      <div class="contact-hero-unified-spread">
-
-        <!-- Typographic Column -->
-        <div class="hero-content-block">
-          <div class="editorial-brand-eyebrow">
-            <span class="eyebrow-accent-line" aria-hidden="true"></span>
-            <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
-            <span class="brand-eyebrow-text">{{ i18n.t().contact.hero.badge }}</span>
-            <span class="brand-eyebrow-dot" aria-hidden="true">·</span>
-            <span class="brand-eyebrow-sub">Pistacia vera L.</span>
-          </div>
-
-          <h1 class="hero-display-headline">
-            {{ i18n.t().contact.hero.headline }}
-          </h1>
-
-          <p class="hero-standfirst-lead">
-            {{ i18n.t().contact.hero.description }}
-          </p>
-
-          <!-- Understated Editorial Metadata Strip -->
-          <div class="hero-metadata-row" aria-hidden="true">
-            <div class="hero-meta-item">
-              <span class="meta-label">CHANNEL</span>
-              <span class="meta-val">Official WhatsApp</span>
-            </div>
-            <span class="meta-divider"></span>
-            <div class="hero-meta-item">
-              <span class="meta-label">TERROIR</span>
-              <span class="meta-val">Mediterranean Basin</span>
-            </div>
-            <span class="meta-divider"></span>
-            <div class="hero-meta-item">
-              <span class="meta-label">ADVISORY</span>
-              <span class="meta-val">Agronomic Consultations</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Integrated Photography Column (Matching About Hero) -->
-        <div class="hero-visual-block">
-          <div class="hero-photo-frame">
-            <div class="hero-photo-viewport">
-              <img src="home-images/nursery.png" alt="Specialist Mediterranean Pistachio Nursery & Plant Material" class="hero-panorama-img" priority>
-            </div>
-          </div>
-        </div>
-
+      <div class="inner-hero-visual" aria-hidden="true">
+        <div class="inner-hero-aura"></div>
+        <img src="/botanical/real-pistachio-sprig.png" alt="" class="inner-hero-botanical" loading="eager">
       </div>
     </div>
-
-    <!-- Organic Connecting Flow Arc into Spread (Exact About Style) -->
-    <div class="hero-to-spread-transition" aria-hidden="true">
-      <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
-        <path d="M 120 0 C 380 45 820 45 1320 15" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.12" stroke-linecap="round"/>
-      </svg>
-    </div>
-  </section>
+  </header>
 
   <!-- ══════════════════════════════════════════════════════════════════════════
        2. EDITORIAL CONSULTATION SPREAD
@@ -87,16 +30,9 @@
           RIGHT: INQUIRY FORM (PRESERVED INTACT)
        ══════════════════════════════════════════════════════════════════════════ -->
   <section class="contact-spread-section" id="contactSpread">
-    <!-- 3-Layer Botanical Atmosphere -->
+    <!-- Ambient Canvas -->
     <div class="spread-ambient-canvas" aria-hidden="true">
       <div class="botanical-sunlight-filter"></div>
-      <!-- Very elegant thin Pistacia vera branch entering from the bottom or corner -->
-      <div class="botanical-shadow-wrapper botanical-shadow--bottom-left">
-        <img src="/botanical/real-pistachio-sprig.png" alt="" loading="lazy">
-      </div>
-      <div class="botanical-shadow-wrapper botanical-shadow--hanging-side">
-        <img src="/botanical/real-pistachio-hanging.png" alt="" loading="lazy">
-      </div>
     </div>
 
     <div class="container-wide">
@@ -138,7 +74,7 @@
                     <span>{{ i18n.t().contact.info.locationLabel }}</span>
                   </div>
                   <h3 class="facility-title">{{ i18n.t().contact.info.locationValue }}</h3>
-                  <p class="facility-detail">Specialized Mediterranean rootstock propagation, precision field acclimatization, and phytosanitary distribution hub.</p>
+                  <p class="facility-detail">{{ i18n.t().contact.info.facilityDetail }}</p>
                 </div>
               </div>
 
@@ -154,7 +90,7 @@
                         <span>{{ i18n.t().contact.info.emailLabel }}</span>
                       </div>
                       <a href="mailto:contact@specialist-pistachio.com" class="coord-link">{{ i18n.t().contact.info.emailValue }}</a>
-                      <span class="coord-note">Direct cultivar bookings & laboratory requests</span>
+                      <span class="coord-note">{{ i18n.t().contact.info.emailNote }}</span>
                     </div>
 
                     <div class="coord-divider" aria-hidden="true"></div>
@@ -166,7 +102,7 @@
                         <span>{{ i18n.t().contact.info.phoneLabel }}</span>
                       </div>
                       <a href="tel:+34600000000" class="coord-val" dir="ltr">{{ i18n.t().contact.info.phoneValue }}</a>
-                      <span class="coord-note">Field technical advisory & nursery reservations</span>
+                      <span class="coord-note">{{ i18n.t().contact.info.phoneNote }}</span>
                     </div>
 
                   </div>
@@ -210,7 +146,7 @@
                 <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
                 <span class="brand-eyebrow-text">{{ i18n.t().contact.form.tag }}</span>
                 <span class="brand-eyebrow-dot" aria-hidden="true">·</span>
-                <span class="brand-eyebrow-sub">Bespoke Advisory</span>
+                <span class="brand-eyebrow-sub">{{ i18n.t().contact.info.bespokeAdvisory }}</span>
               </div>
               <h2 class="sheet-display-title">{{ i18n.t().contact.form.title }}</h2>
               <p class="sheet-display-lead">{{ i18n.t().contact.form.desc }}</p>
@@ -342,13 +278,13 @@
               <span class="brand-eyebrow-text">{{ i18n.t().contact.info.locationLabel }}</span>
             </div>
             <h3 class="location-card-title">{{ i18n.t().contact.info.locationValue }}</h3>
-            <p class="location-card-sub">Specialized Mediterranean Nursery Operations</p>
+            <p class="location-card-sub">{{ i18n.t().contact.info.locationSub }}</p>
           </div>
 
           <div class="location-action-side">
             <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="btn-location-action">
               <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-              <span>START A CONVERSATION</span>
+              <span>{{ i18n.t().contact.info.startConversation }}</span>
             </a>
           </div>
         </div>

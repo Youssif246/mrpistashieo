@@ -40,58 +40,36 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
   }
 
   private initAnimations(): void {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     this.gsapCtx = gsap.context(() => {
-      // 1. HERO ENTRANCE & PHOTOGRAPHY REVEAL (MATCHING ABOUT HERO)
-      const heroContentBlock = this.el.nativeElement.querySelector('.hero-content-block') as HTMLElement | null;
-      const heroPhotoFrame = this.el.nativeElement.querySelector('.hero-photo-frame') as HTMLElement | null;
-      const panoramaImg = this.el.nativeElement.querySelector('.hero-panorama-img') as HTMLElement | null;
+      // 1. HERO ENTRANCE (PATTERN A & E)
+      const hero = this.el.nativeElement.querySelector('#contactHero') as HTMLElement | null;
+      if (hero) {
+        const eyebrow = hero.querySelector('.inner-hero-eyebrow');
+        const heading = hero.querySelector('.inner-hero-heading');
+        const connector = hero.querySelector('.inner-hero-connector');
+        const desc = hero.querySelector('.inner-hero-desc');
+        const aura = hero.querySelector('.inner-hero-aura');
+        const botanical = hero.querySelector('.inner-hero-botanical');
 
-      if (prefersReducedMotion) {
-        if (heroContentBlock) gsap.set(heroContentBlock.children, { opacity: 1, y: 0 });
-        if (heroPhotoFrame) gsap.set(heroPhotoFrame, { opacity: 1, scale: 1 });
-        return;
+        if (prefersReducedMotion) {
+          if (eyebrow) gsap.set(eyebrow, { opacity: 1, y: 0 });
+          if (heading) gsap.set(heading, { opacity: 1, y: 0 });
+          if (desc) gsap.set(desc, { opacity: 1, y: 0 });
+          if (botanical) gsap.set(botanical, { opacity: 0.85, scale: 1 });
+        } else {
+          const tl = gsap.timeline({ defaults: { ease: 'power2.out' }, delay: 0.05 });
+          if (eyebrow) tl.to(eyebrow, { opacity: 1, y: 0, duration: 0.45 });
+          if (heading) tl.to(heading, { opacity: 1, y: 0, duration: 0.55 }, '-=0.3');
+          if (connector) tl.to(connector, { scaleX: 1, opacity: 0.65, duration: 0.35 }, '-=0.35');
+          if (desc) tl.to(desc, { opacity: 1, y: 0, duration: 0.5 }, '-=0.35');
+          if (aura) tl.to(aura, { opacity: 1, scale: 1, duration: 0.6 }, '-=0.4');
+          if (botanical) tl.to(botanical, { opacity: 0.85, scale: 1, duration: 0.6 }, '-=0.45');
+        }
       }
 
-      if (heroContentBlock) {
-        gsap.set(heroContentBlock.children, { opacity: 0, y: 22 });
-        gsap.to(heroContentBlock.children, {
-          opacity: 1,
-          y: 0,
-          duration: 0.85,
-          stagger: 0.14,
-          ease: 'power2.out',
-          delay: 0.12
-        });
-      }
-
-      if (heroPhotoFrame) {
-        gsap.set(heroPhotoFrame, { opacity: 0, y: 32, scale: 0.985 });
-        gsap.to(heroPhotoFrame, {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 0.95,
-          ease: 'power2.out',
-          delay: 0.28
-        });
-      }
-
-      if (panoramaImg) {
-        gsap.to(panoramaImg, {
-          yPercent: 10,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: '#contactHero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: 0.5
-          }
-        });
-      }
-
-      // 2. SPREAD SECTION ENTRANCE (DOSSIER & INQUIRY FORM)
+      // 2. SPREAD SECTION ENTRANCE (DOSSIER & INQUIRY FORM - PATTERN C & D)
       const spreadSection = this.el.nativeElement.querySelector('#contactSpread') as HTMLElement | null;
       if (spreadSection) {
         const dossierPanel = spreadSection.querySelector('.contact-dossier-panel');
@@ -103,10 +81,6 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
           if (formPanel) gsap.set(formPanel, { opacity: 1, y: 0 });
           if (liaisonCards) gsap.set(liaisonCards, { opacity: 1, y: 0 });
         } else {
-          if (dossierPanel) gsap.set(dossierPanel, { opacity: 0, y: 26 });
-          if (formPanel) gsap.set(formPanel, { opacity: 0, y: 30 });
-          if (liaisonCards.length) gsap.set(liaisonCards, { opacity: 0, y: 20 });
-
           const tl = gsap.timeline({
             scrollTrigger: {
               trigger: spreadSection,
@@ -129,14 +103,13 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
         }
       }
 
-      // 3. NURSERY LOCATION MONOGRAPH
+      // 3. NURSERY LOCATION MONOGRAPH (PATTERN B/C)
       const locationSection = this.el.nativeElement.querySelector('#nurseryLocation') as HTMLElement | null;
       if (locationSection) {
         const locationCard = locationSection.querySelector('.location-editorial-card');
         if (prefersReducedMotion) {
           if (locationCard) gsap.set(locationCard, { opacity: 1, y: 0 });
-        } else {
-          if (locationCard) gsap.set(locationCard, { opacity: 0, y: 24, scale: 0.99 });
+        } else if (locationCard) {
           gsap.to(locationCard, {
             opacity: 1,
             y: 0,

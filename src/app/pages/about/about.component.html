@@ -4,93 +4,35 @@
      ========================================================================== -->
 
 <!-- ══════════════════════════════════════════════════════════════════════════
-     1. HERO: INTEGRATED TYPOGRAPHIC & PANORAMIC SPREAD
+     1. HERO: UNIFIED IMAGELESS EDITORIAL HERO
+     Sophisticated publication-grade typography, subtle botanical linework
      ══════════════════════════════════════════════════════════════════════════ -->
-<section class="about-editorial-hero" id="aboutHero">
-  <!-- 3-Layer Botanical Orchard Atmosphere -->
-  <div class="hero-ambient-canvas" aria-hidden="true">
-    <div class="botanical-sunlight-filter"></div>
-    <!-- Layer 3: Authentic Real Pistacia vera Branch with Open Split Nuts -->
-    <div class="botanical-shadow-wrapper botanical-shadow--vertical-left">
-      <img src="/botanical/real-pistachio-branch.png" alt="" loading="lazy">
+<header class="inner-page-hero about-inner-hero" id="aboutHero">
+  <div class="inner-hero-container">
+    <div class="inner-hero-text">
+      <span class="inner-hero-eyebrow">{{ i18n.t().about.hero.eyebrow }}</span>
+      <h1 class="inner-hero-heading">{{ i18n.t().about.hero.headline }}</h1>
+      <span class="inner-hero-connector" aria-hidden="true"></span>
+      <p class="inner-hero-desc">{{ i18n.t().about.hero.description }}</p>
+    </div>
+    <div class="inner-hero-visual" aria-hidden="true">
+      <div class="inner-hero-aura"></div>
+      <img src="/botanical/real-pistachio-arch.png" alt="" class="inner-hero-botanical" loading="eager">
     </div>
   </div>
-
-  <div class="container-wide">
-    <!-- Single Unified Editorial Hero Spread: Typography & Photography Together -->
-    <div class="about-hero-unified-spread">
-      
-      <!-- Typographic Column -->
-      <div class="hero-content-block">
-        <div class="editorial-brand-eyebrow">
-          <span class="eyebrow-accent-line" aria-hidden="true"></span>
-          <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
-          <span class="brand-eyebrow-text">{{ i18n.t().about.hero.badge }}</span>
-          <span class="brand-eyebrow-dot" aria-hidden="true">·</span>
-          <span class="brand-eyebrow-sub">Pistacia vera L.</span>
-        </div>
-
-        <h1 class="hero-display-headline">
-          {{ i18n.t().about.hero.headline }}
-        </h1>
-
-        <p class="hero-standfirst-lead">
-          {{ i18n.t().about.hero.description }}
-        </p>
-
-        <!-- Understated Editorial Metadata Strip -->
-        <div class="hero-metadata-row" aria-hidden="true">
-          <div class="hero-meta-item">
-            <span class="meta-label">DISCIPLINE</span>
-            <span class="meta-val">Specialist Cultivation</span>
-          </div>
-          <span class="meta-divider"></span>
-          <div class="hero-meta-item">
-            <span class="meta-label">TERROIR</span>
-            <span class="meta-val">Mediterranean Basin</span>
-          </div>
-          <span class="meta-divider"></span>
-          <div class="hero-meta-item">
-            <span class="meta-label">STANDARDS</span>
-            <span class="meta-val">Certified UCB1 Lineage</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Integrated Photography Column -->
-      <div class="hero-visual-block">
-        <div class="hero-photo-frame">
-          <div class="hero-photo-viewport">
-            <img src="about-images/story.png" alt="Mediterranean pistachio cultivation landscape" class="hero-panorama-img" priority>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Organic Connecting Flow Arc into Next Section -->
-  <div class="hero-to-story-transition" aria-hidden="true">
-    <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
-      <path d="M 120 0 C 380 45 820 45 1320 15" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.12" stroke-linecap="round"/>
-    </svg>
-  </div>
-</section>
+</header>
 
 <!-- ══════════════════════════════════════════════════════════════════════════
      2. STORY & HERITAGE: UNBOXED EDITORIAL FLOW (NO CARDS)
      ══════════════════════════════════════════════════════════════════════════ -->
 <section class="about-editorial-story" id="aboutStory">
-  <!-- 3-Layer Botanical Atmosphere -->
+  <!-- 2-Layer Botanical Atmosphere -->
   <div class="story-ambient-canvas" aria-hidden="true">
     <div class="botanical-sunlight-filter"></div>
     <div class="botanical-shadow-wrapper botanical-shadow--orchard-row">
       <img src="/botanical/pistachio-orchard-horizon.svg" alt="" loading="lazy">
     </div>
-    <div class="botanical-shadow-wrapper botanical-shadow--top-right">
-      <img src="/botanical/real-pistachio-sprig.png" alt="" loading="lazy">
-    </div>
-    <span class="story-ghost-watermark">TERROIR & ORIGIN</span>
+    <span class="story-ghost-watermark">{{ i18n.t().about.watermarks.terroir }}</span>
   </div>
 
   <div class="container-wide">
@@ -121,22 +63,10 @@
           </div>
         </div>
 
-        <!-- Archival Monograph Notation -->
-        <div class="story-monograph-stamp" aria-hidden="true">
-          <span class="stamp-bracket">[</span>
-          <span class="stamp-text">FIELD JOURNAL // CHAPTER I</span>
-          <span class="stamp-bracket">]</span>
-        </div>
       </aside>
 
       <!-- Right Column: Flowing Unboxed Prose Stream -->
       <div class="story-prose-stream">
-        <!-- Editorial Folio Header Line -->
-        <div class="prose-folio-header">
-          <span class="prose-folio-num">FOLIO 01</span>
-          <span class="prose-folio-rule" aria-hidden="true"></span>
-          <span class="prose-folio-topic">AGRICULTURAL GENESIS</span>
-        </div>
 
         <!-- Paragraph 1 with Editorial Prominence -->
         <p class="story-paragraph story-paragraph--lead">
@@ -159,13 +89,15 @@
         <footer class="prose-editorial-footnote">
           <div class="footnote-left">
             <i class="fa-solid fa-microscope footnote-icon" aria-hidden="true"></i>
-            <span class="footnote-label">Applied Agricultural Science & Field Verification</span>
+            <span class="footnote-label">{{ i18n.t().about.footnote }}</span>
           </div>
           <span class="footnote-botanical-mark" aria-hidden="true">❦</span>
         </footer>
       </div>
 
     </div>
+
+
   </div>
 </section>
 
@@ -179,7 +111,7 @@
     <div class="botanical-shadow-wrapper botanical-shadow--top-left">
       <img src="/botanical/real-pistachio-arch.png" alt="" loading="lazy">
     </div>
-    <span class="philosophy-ghost-wordmark">CULTIVATION PHILOSOPHY</span>
+    <span class="philosophy-ghost-wordmark">{{ i18n.t().about.watermarks.philosophy }}</span>
     <svg class="philosophy-field-rails" viewBox="0 0 1440 500" fill="none" preserveAspectRatio="none">
       <line x1="280" y1="0" x2="280" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.08" stroke-dasharray="8 12"/>
       <line x1="720" y1="0" x2="720" y2="500" stroke="#768E37" stroke-width="1" stroke-opacity="0.09"/>
@@ -220,7 +152,7 @@
           <header class="chapter-header">
             <div class="chapter-num-block">
               <span class="chapter-number">01</span>
-              <span class="chapter-category">Genetic Foundation</span>
+              <span class="chapter-category">{{ i18n.t().about.categories.cat1 }}</span>
             </div>
             <!-- Custom Line-Style SVG: Pistachio Compound Leaflet Specimen -->
             <div class="chapter-botanical-icon" aria-hidden="true">
@@ -237,11 +169,6 @@
             <h3 class="chapter-title">{{ i18n.t().about.philosophy.card1Title }}</h3>
             <p class="chapter-description">{{ i18n.t().about.philosophy.card1Desc }}</p>
           </div>
-
-          <footer class="chapter-footer">
-            <span class="chapter-rule" aria-hidden="true"></span>
-            <span class="chapter-meta-code">STANDARD // P·VERA · 01</span>
-          </footer>
         </div>
       </article>
 
@@ -251,7 +178,7 @@
           <header class="chapter-header">
             <div class="chapter-num-block">
               <span class="chapter-number">02</span>
-              <span class="chapter-category">Subterranean Vitality</span>
+              <span class="chapter-category">{{ i18n.t().about.categories.cat2 }}</span>
             </div>
             <!-- Custom Line-Style SVG: Deep Taproot & Lateral Underground Root Network -->
             <div class="chapter-botanical-icon" aria-hidden="true">
@@ -270,11 +197,6 @@
             <h3 class="chapter-title">{{ i18n.t().about.philosophy.card2Title }}</h3>
             <p class="chapter-description">{{ i18n.t().about.philosophy.card2Desc }}</p>
           </div>
-
-          <footer class="chapter-footer">
-            <span class="chapter-rule" aria-hidden="true"></span>
-            <span class="chapter-meta-code">STANDARD // P·VERA · 02</span>
-          </footer>
         </div>
       </article>
 
@@ -284,7 +206,7 @@
           <header class="chapter-header">
             <div class="chapter-num-block">
               <span class="chapter-number">03</span>
-              <span class="chapter-category">Resource Wisdom</span>
+              <span class="chapter-category">{{ i18n.t().about.categories.cat3 }}</span>
             </div>
             <!-- Custom Line-Style SVG: Precision Water Droplet & Capillary Irrigation -->
             <div class="chapter-botanical-icon" aria-hidden="true">
@@ -302,11 +224,6 @@
             <h3 class="chapter-title">{{ i18n.t().about.philosophy.card3Title }}</h3>
             <p class="chapter-description">{{ i18n.t().about.philosophy.card3Desc }}</p>
           </div>
-
-          <footer class="chapter-footer">
-            <span class="chapter-rule" aria-hidden="true"></span>
-            <span class="chapter-meta-code">STANDARD // P·VERA · 03</span>
-          </footer>
         </div>
       </article>
 
@@ -316,7 +233,7 @@
           <header class="chapter-header">
             <div class="chapter-num-block">
               <span class="chapter-number">04</span>
-              <span class="chapter-category">Generational Vision</span>
+              <span class="chapter-category">{{ i18n.t().about.categories.cat4 }}</span>
             </div>
             <!-- Custom Line-Style SVG: Mature Tree Canopy & Multi-Decadal Anchoring Roots -->
             <div class="chapter-botanical-icon" aria-hidden="true">
@@ -334,11 +251,6 @@
             <h3 class="chapter-title">{{ i18n.t().about.philosophy.card4Title }}</h3>
             <p class="chapter-description">{{ i18n.t().about.philosophy.card4Desc }}</p>
           </div>
-
-          <footer class="chapter-footer">
-            <span class="chapter-rule" aria-hidden="true"></span>
-            <span class="chapter-meta-code">STANDARD // P·VERA · 04</span>
-          </footer>
         </div>
       </article>
 
@@ -356,7 +268,7 @@
     <div class="botanical-shadow-wrapper botanical-shadow--hanging-side">
       <img src="/botanical/real-pistachio-hanging.png" alt="" loading="lazy">
     </div>
-    <span class="technical-ghost-wordmark">GRAFTING MASTERY</span>
+    <span class="technical-ghost-wordmark">{{ i18n.t().about.watermarks.grafting }}</span>
     <svg class="technical-caliper-schematic" viewBox="0 0 600 600" fill="none">
       <circle cx="300" cy="300" r="270" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.08"/>
       <circle cx="300" cy="300" r="180" stroke="#768E37" stroke-width="1" stroke-opacity="0.06" stroke-dasharray="6 8"/>
@@ -420,10 +332,10 @@
     <div class="botanical-shadow-wrapper botanical-shadow--orchard-row">
       <img src="/botanical/pistachio-orchard-horizon.svg" alt="" loading="lazy">
     </div>
-    <div class="botanical-shadow-wrapper botanical-shadow--bottom-right">
+    <div class="botanical-shadow-wrapper botanical-shadow--bottom-left about-cta-branch-left">
       <img src="/botanical/real-pistachio-corner.png" alt="" loading="lazy">
     </div>
-    <span class="cta-ghost-watermark">PISTACIA VERA</span>
+    <span class="cta-ghost-watermark">{{ i18n.t().about.watermarks.botanical }}</span>
   </div>
 
   <div class="container-narrow text-center">
@@ -451,8 +363,8 @@
           <span>{{ i18n.t().about.cta.btn }}</span>
         </a>
 
-        <a class="btn-editorial btn-editorial-outline is-inert-link" aria-disabled="true" tabindex="-1">
-          <span>{{ i18n.t().navbar.products }}</span>
+        <a routerLink="/services" class="btn-editorial btn-editorial-outline" aria-label="Explore Services">
+          <span>{{ i18n.t().navbar.services }}</span>
         </a>
       </div>
     </div>

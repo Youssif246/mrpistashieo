@@ -19,37 +19,20 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   readonly i18n = inject(TranslationService);
   private readonly el = inject(ElementRef);
   private gsapCtx?: gsap.Context;
-  private hasIntroPending = false;
+
+  hasIntroPending = !hasIntroAlreadyPlayed();
 
   ngAfterViewInit(): void {
     if (typeof window === 'undefined') return;
 
-    this.hasIntroPending = !hasIntroAlreadyPlayed();
-
-    // Synchronous execution eliminates any flash of unstyled content
     this.initAnimations();
   }
 
   private initAnimations(): void {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     this.gsapCtx = gsap.context(() => {
-      if (!this.hasIntroPending) {
-        this.initHeroAnimation(prefersReducedMotion);
-      } else if (!prefersReducedMotion) {
-        // Pre-hide hero elements while intro is active so they reveal gracefully
-        const heroSection = document.querySelector('.hero') as HTMLElement | null;
-        if (heroSection) {
-          const eyebrow = heroSection.querySelector('.hero-eyebrow');
-          const title   = heroSection.querySelector('.hero-title');
-          const desc    = heroSection.querySelector('.hero-description');
-          const ctas    = heroSection.querySelectorAll('.hero-cta-primary, .hero-cta-secondary');
-          if (eyebrow) gsap.set(eyebrow, { opacity: 0, y: 16 });
-          if (title)   gsap.set(title,   { opacity: 0, y: 24 });
-          if (desc)    gsap.set(desc,    { opacity: 0, y: 18 });
-          ctas.forEach(c => gsap.set(c,  { opacity: 0, y: 14 }));
-        }
-      }
+      this.initHeroAnimation(prefersReducedMotion);
       this.initManifestoAnimation(prefersReducedMotion);
       this.initServicesAnimation(prefersReducedMotion);
       this.initMonographAnimation(prefersReducedMotion);
@@ -61,16 +44,14 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   }
 
   onIntroComplete(): void {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.hasIntroPending = false;
-    this.initHeroAnimation(prefersReducedMotion);
   }
 
   // ═══════════════════════════════════════════════════════════════
-  // 1. HERO ENTRANCE & BOTANICAL PARALLAX
+  // 1. HERO ENTRANCE (PATTERN A) & BOTANICAL PARALLAX
   // ═══════════════════════════════════════════════════════════════
   private initHeroAnimation(prefersReducedMotion: boolean): void {
-    const heroSection = document.querySelector('.hero') as HTMLElement | null;
+    const heroSection = this.el.nativeElement.querySelector('.hero') as HTMLElement | null;
     if (!heroSection) return;
 
     const eyebrow = heroSection.querySelector('.hero-eyebrow') as HTMLElement | null;
@@ -79,25 +60,17 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     const ctas    = heroSection.querySelectorAll('.hero-cta-primary, .hero-cta-secondary');
     const heroImg = heroSection.querySelector('.hero-backdrop-img') as HTMLElement | null;
 
-    if (prefersReducedMotion) {
-      if (eyebrow) gsap.set(eyebrow, { opacity: 1, y: 0 });
-      if (title)   gsap.set(title,   { opacity: 1, y: 0 });
-      if (desc)    gsap.set(desc,    { opacity: 1, y: 0 });
-      ctas.forEach(c => gsap.set(c,  { opacity: 1, y: 0 }));
-      return;
-    }
+    // Guaranteed visibility: buttons and elements are never hidden
+    gsap.set([eyebrow, title, desc, ...Array.from(ctas)].filter(Boolean), { opacity: 1, y: 0 });
 
-    if (eyebrow) gsap.set(eyebrow, { opacity: 0, y: 16 });
-    if (title)   gsap.set(title,   { opacity: 0, y: 24 });
-    if (desc)    gsap.set(desc,    { opacity: 0, y: 18 });
-    ctas.forEach(c => gsap.set(c,  { opacity: 0, y: 14 }));
+    if (prefersReducedMotion) return;
 
-    const heroTl = gsap.timeline({ delay: 0.15 });
-    if (eyebrow) heroTl.to(eyebrow, { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out' });
-    if (title)   heroTl.to(title,   { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out' }, '-=0.4');
-    if (desc)    heroTl.to(desc,    { opacity: 1, y: 0, duration: 0.7,  ease: 'power2.out' }, '-=0.5');
+    const heroTl = gsap.timeline({ delay: 0.1, defaults: { ease: 'power2.out' } });
+    if (eyebrow) heroTl.from(eyebrow, { opacity: 0, y: 15, duration: 0.55 }, 0);
+    if (title)   heroTl.from(title,   { opacity: 0, y: 20, duration: 0.65 }, 0.15);
+    if (desc)    heroTl.from(desc,    { opacity: 0, y: 15, duration: 0.55 }, 0.3);
     if (ctas.length > 0) {
-      heroTl.to(ctas, { opacity: 1, y: 0, duration: 0.6, stagger: 0.12, ease: 'power2.out' }, '-=0.45');
+      heroTl.from(ctas, { opacity: 0, y: 15, duration: 0.5, stagger: 0.1 }, 0.45);
     }
 
     if (heroImg) {
@@ -133,11 +106,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       return;
     }
 
-    if (headlineBlock) gsap.set(headlineBlock, { opacity: 0, y: 26 });
-    if (narrative)     gsap.set(narrative,     { opacity: 0, y: 22 });
-    if (midDivider)    gsap.set(midDivider,    { opacity: 0, scaleX: 0.8 });
-    stations.forEach(s => gsap.set(s,          { opacity: 0, y: 28 }));
-
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
@@ -154,29 +122,27 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     }
 
     if (branch) {
-      gsap.fromTo(
-        branch,
-        { opacity: 0, rotate: -4 },
-        {
-          opacity: 1,
-          rotate: 0,
-          duration: 1.4,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 85%',
-            once: true
-          }
+      gsap.to(branch, {
+        opacity: 0.8,
+        y: 0,
+        rotate: 0,
+        scale: 1,
+        duration: 1.1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 85%',
+          once: true
         }
-      );
+      });
     }
   }
 
   // ═══════════════════════════════════════════════════════════════
-  // 3. EDITORIAL SERVICE PANELS ENTRANCE
+  // 3. EDITORIAL SERVICE PANELS ENTRANCE (PATTERN C & D)
   // ═══════════════════════════════════════════════════════════════
   private initServicesAnimation(prefersReducedMotion: boolean): void {
-    const section = document.querySelector('.section-service-index') as HTMLElement | null;
+    const section = this.el.nativeElement.querySelector('.section-service-index') as HTMLElement | null;
     if (!section) return;
 
     const header = section.querySelector('.service-index-header');
@@ -189,10 +155,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       if (footer) gsap.set(footer, { opacity: 1, y: 0 });
       return;
     }
-
-    if (header) gsap.set(header, { opacity: 0, y: 24 });
-    panels.forEach(p => gsap.set(p, { opacity: 0, y: 36 }));
-    if (footer) gsap.set(footer, { opacity: 0, y: 16 });
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -212,10 +174,10 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   }
 
   // ═══════════════════════════════════════════════════════════════
-  // 4. ARCHITECTURAL BOTANICAL MONOGRAPH ENTRANCE
+  // 4. ARCHITECTURAL BOTANICAL MONOGRAPH ENTRANCE (PATTERNS B, C, D)
   // ═══════════════════════════════════════════════════════════════
   private initMonographAnimation(prefersReducedMotion: boolean): void {
-    const section = document.querySelector('.section-botanical-monograph') as HTMLElement | null;
+    const section = this.el.nativeElement.querySelector('.section-botanical-monograph') as HTMLElement | null;
     if (!section) return;
 
     const header        = section.querySelector('.monograph-header-block');
@@ -231,11 +193,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       if (footer)        gsap.set(footer,        { opacity: 1, y: 0 });
       return;
     }
-
-    if (header)        gsap.set(header,        { opacity: 0, y: 24 });
-    if (specimenFrame) gsap.set(specimenFrame, { opacity: 0, scale: 0.96 });
-    cards.forEach(c => gsap.set(c, { opacity: 0, y: 28 }));
-    if (footer)        gsap.set(footer,        { opacity: 0, y: 16 });
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -269,10 +226,10 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   }
 
   // ═══════════════════════════════════════════════════════════════
-  // 5. NURSERY CULTIVATION ENTRANCE
+  // 5. NURSERY CULTIVATION ENTRANCE (PATTERNS B & C)
   // ═══════════════════════════════════════════════════════════════
   private initNurseryAnimation(prefersReducedMotion: boolean): void {
-    const section = document.querySelector('.section-nursery-editorial') as HTMLElement | null;
+    const section = this.el.nativeElement.querySelector('.section-nursery-editorial') as HTMLElement | null;
     if (!section) return;
 
     const editorialCol = section.querySelector('.nursery-editorial-col');
@@ -285,10 +242,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       specs.forEach(s => gsap.set(s, { opacity: 1, y: 0 }));
       return;
     }
-
-    if (editorialCol) gsap.set(editorialCol, { opacity: 0, y: 26 });
-    if (heroFrame)    gsap.set(heroFrame,    { opacity: 0, scale: 0.97 });
-    specs.forEach(s => gsap.set(s, { opacity: 0, y: 20 }));
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -324,21 +277,17 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     }
 
     if (header && !prefersReducedMotion) {
-      gsap.fromTo(
-        header,
-        { opacity: 0, y: 25 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 80%',
-            once: true
-          }
+      gsap.to(header, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: section,
+          start: 'top 80%',
+          once: true
         }
-      );
+      });
     }
 
     if (prefersReducedMotion || stages.length === 0) {
@@ -346,7 +295,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       return;
     }
 
-    // Parallax on harvest image
     if (harvestImg) {
       gsap.fromTo(
         harvestImg,
@@ -424,13 +372,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       ctaEls.forEach(el => el && gsap.set(el, { opacity: 1, y: 0 }));
       return;
     }
-
-    if (ctaBackdropImg) gsap.set(ctaBackdropImg, { scale: 1.04 });
-    if (ctaFrame)       gsap.set(ctaFrame,       { opacity: 0 });
-    if (ctaEyebrow)     gsap.set(ctaEyebrow,     { opacity: 0, y: 12 });
-    if (ctaHeading)     gsap.set(ctaHeading,     { opacity: 0, y: 22 });
-    if (ctaLead)        gsap.set(ctaLead,        { opacity: 0, y: 16 });
-    if (ctaActions)     gsap.set(ctaActions,     { opacity: 0, y: 12 });
 
     const ctaTl = gsap.timeline({
       scrollTrigger: {

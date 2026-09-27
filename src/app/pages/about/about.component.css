@@ -536,6 +536,73 @@
   opacity: 0.75;
 }
 
+/* Archival Documentary Photograph Plate */
+.story-documentary-plate {
+  margin-top: clamp(2.5rem, 4vw, 4rem);
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(118, 142, 55, 0.22);
+  background-color: var(--c-ivory);
+  box-shadow: 0 16px 40px -12px rgba(17, 33, 23, 0.08);
+}
+
+.story-plate-viewport {
+  width: 100%;
+  aspect-ratio: 16 / 7.5;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .story-plate-viewport {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+.story-plate-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 45%;
+  display: block;
+  transition: transform 1.2s var(--ease-editorial);
+}
+
+.story-documentary-plate:hover .story-plate-img {
+  transform: scale(1.02);
+}
+
+.story-plate-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  padding: 0.9rem 1.4rem;
+  background-color: #FAF8F3;
+  border-top: 1px solid rgba(118, 142, 55, 0.15);
+}
+
+.plate-marker {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--c-pistachio-deep);
+  text-transform: uppercase;
+}
+
+.plate-desc {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  color: var(--c-slate);
+}
+
+:host-context(body.rtl) .plate-desc,
+body.rtl .plate-desc {
+  font-family: var(--font-ar-body);
+  font-size: 0.86rem;
+}
+
 /* ══════════════════════════════════════════════════════════════════════════
    3. CULTIVATION PHILOSOPHY: OPEN ARCHITECTURAL 2x2 MONOGRAPH (NO CARDS)
    ══════════════════════════════════════════════════════════════════════════ */
@@ -1275,4 +1342,14 @@
     width: 160px;
     opacity: 0.4;
   }
+}
+
+/* Ensure About CTA botanical branch is positioned on the left side */
+.about-cta-branch-left,
+:host-context(body.rtl) .about-cta-branch-left,
+body.rtl .about-cta-branch-left {
+  left: -40px !important;
+  right: auto !important;
+  bottom: -40px !important;
+  transform: none !important;
 }

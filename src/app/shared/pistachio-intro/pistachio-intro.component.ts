@@ -52,6 +52,7 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
     try {
       sessionStorage.removeItem('mr_pistachio_intro_seen');
       localStorage.removeItem('mr_pistachio_intro_seen');
+      sessionStorage.removeItem('introPlayed');
     } catch {
       // Storage safe
     }

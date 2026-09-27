@@ -1,5 +1,6 @@
-<!-- Cinematic Brand Film Intro (18-Second Lifecycle Experience) -->
-<app-pistachio-intro (introComplete)="onIntroComplete()"></app-pistachio-intro>
+@if (hasIntroPending) {
+  <app-pistachio-intro (introComplete)="onIntroComplete()"></app-pistachio-intro>
+}
 
 <!-- ==========================================================================
      1. CINEMATIC HERO (IMMERSIVE, PHOTOGRAPHY-LED)
@@ -43,7 +44,7 @@
         <i class="fa-brands fa-whatsapp cta-wa-icon" aria-hidden="true"></i>
         <span>{{ i18n.t().home.hero.ctaPrimary }}</span>
       </a>
-      <a routerLink="/about" class="hero-cta-secondary">
+      <a routerLink="/services" class="hero-cta-secondary">
         <span>{{ i18n.t().home.hero.ctaSecondary }}</span>
       </a>
     </div>
@@ -158,9 +159,9 @@
 </div>
 
 <!-- ==========================================================================
-     3. EDITORIAL SERVICE PANELS (3 CURATED STAGES WITH EDITORIAL PHOTOGRAPHY)
+     3. EDITORIAL SERVICE PANELS (7 SPECIALIZED AGRICULTURAL SERVICES)
      ========================================================================== -->
-<section class="section-service-index">
+<section class="section-service-index" id="services">
   <!-- Clean Editorial Background Watermark & Agricultural Field-Row Curves -->
   <div class="services-ambient-layer" aria-hidden="true">
     <!-- Dappled sunlight filter -->
@@ -203,73 +204,41 @@
       </p>
     </header>
 
-    <!-- 3 Editorial Service Panels Grid -->
+    <!-- 3 Editorial Service Panels Grid (Top 3 Prominent Services) -->
     <div class="editorial-service-panels">
-
-      <!-- Panel 01: Soil Preparation & Analysis -->
-      <article class="service-panel panel-soil">
+      @for (service of i18n.t().home.services.items.slice(0, 3); track service.number) {
+      <article class="service-panel" [id]="'service-' + service.number">
         <div class="panel-image-wrapper">
           <div class="panel-image-frame">
-            <img src="about-images/story.png" alt="Soil preparation and agricultural field terrain analysis"
-              class="panel-img" loading="lazy">
+            <img [src]="service.image" [alt]="service.title" class="panel-img" loading="lazy">
           </div>
           <div class="panel-num-badge">
-            <span class="panel-num">{{ i18n.t().home.services.s1Num }}</span>
+            <span class="panel-num">{{ service.number }}</span>
             <span class="panel-num-pip" aria-hidden="true"></span>
           </div>
         </div>
         <div class="panel-content">
-          <span class="panel-category">{{ i18n.t().home.services.s1Category }}</span>
-          <h3 class="panel-title">{{ i18n.t().home.services.s1Title }}</h3>
-          <p class="panel-desc">{{ i18n.t().home.services.s1Desc }}</p>
+          <span class="panel-subtitle">{{ service.subtitle }}</span>
+          <h3 class="panel-title">{{ service.title }}</h3>
+          <p class="panel-desc">{{ service.description }}</p>
+          <ul class="panel-bullet-list" aria-label="Service highlights">
+            @for (bullet of service.bullets; track $index) {
+            <li class="panel-bullet-item">
+              <span class="panel-bullet-pip" aria-hidden="true"></span>
+              <span class="panel-bullet-text">{{ bullet }}</span>
+            </li>
+            }
+          </ul>
         </div>
       </article>
-
-      <!-- Panel 02: Specialized Field Grafting (Slightly Shifted on Desktop) -->
-      <article class="service-panel panel-grafting">
-        <div class="panel-image-wrapper">
-          <div class="panel-image-frame">
-            <img src="about-images/expertise.png" alt="Professional pistachio scion budding and field grafting"
-              class="panel-img" loading="lazy">
-          </div>
-          <div class="panel-num-badge">
-            <span class="panel-num">{{ i18n.t().home.services.s2Num }}</span>
-            <span class="panel-num-pip" aria-hidden="true"></span>
-          </div>
-        </div>
-        <div class="panel-content">
-          <span class="panel-category">{{ i18n.t().home.services.s2Category }}</span>
-          <h3 class="panel-title">{{ i18n.t().home.services.s2Title }}</h3>
-          <p class="panel-desc">{{ i18n.t().home.services.s2Desc }}</p>
-        </div>
-      </article>
-
-      <!-- Panel 03: Post-Planting Hydration -->
-      <article class="service-panel panel-hydration">
-        <div class="panel-image-wrapper">
-          <div class="panel-image-frame">
-            <img src="home-images/nursery.png"
-              alt="Pistachio plantation irrigation and post-planting hydration infrastructure" class="panel-img"
-              loading="lazy">
-          </div>
-          <div class="panel-num-badge">
-            <span class="panel-num">{{ i18n.t().home.services.s3Num }}</span>
-            <span class="panel-num-pip" aria-hidden="true"></span>
-          </div>
-        </div>
-        <div class="panel-content">
-          <span class="panel-category">{{ i18n.t().home.services.s3Category }}</span>
-          <h3 class="panel-title">{{ i18n.t().home.services.s3Title }}</h3>
-          <p class="panel-desc">{{ i18n.t().home.services.s3Desc }}</p>
-        </div>
-      </article>
-
+      }
     </div>
 
-    <!-- Refined Editorial CTA: View All Services (No Arrows) -->
+    <!-- Single Unified Editorial CTA: View All Services -->
     <div class="service-index-footer">
-      <a class="editorial-cta-link is-inert-link" aria-disabled="true" tabindex="-1">
-        <span class="cta-text">{{ i18n.t().home.services.viewAll }}</span>
+      <a routerLink="/services" class="editorial-services-cta" id="viewAllServicesBtn">
+        <span>{{ i18n.t().home.services.viewAll }}</span>
+        <i class="fa-solid fa-arrow-right cta-arrow-icon" aria-hidden="true"></i>
       </a>
     </div>
   </div>
@@ -479,7 +448,7 @@
 
     <!-- Editorial Action Bar & Certification Mark (No Arrows) -->
     <div class="monograph-action-footer">
-      <a class="monograph-cta-button is-inert-link" aria-disabled="true" tabindex="-1">
+      <a routerLink="/services" class="monograph-cta-button">
         <span class="btn-text">{{ i18n.t().home.botanical.cta }}</span>
       </a>
 
@@ -545,7 +514,7 @@
         </div>
 
         <div class="nursery-cta-wrap">
-          <a class="nursery-text-cta is-inert-link" aria-disabled="true" tabindex="-1">
+          <a routerLink="/services" class="nursery-text-cta" aria-label="Explore Services">
             <span>{{ i18n.t().home.nursery.cta }}</span>
           </a>
         </div>
@@ -802,7 +771,7 @@
 
     <div class="cta-action-cluster" id="ctaActions">
       <!-- High-End Editorial Contact Button -->
-      <a class="cta-btn cta-btn--editorial-main is-inert-link" aria-disabled="true" tabindex="-1" aria-label="Contact Our Specialists">
+      <a routerLink="/contact" class="cta-btn cta-btn--editorial-main" aria-label="Contact Our Specialists">
         <span class="cta-btn-icon" aria-hidden="true">
           <i class="fa-solid fa-paper-plane"></i>
         </span>

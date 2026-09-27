@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../shared/translation.service';
 import { APP_CONFIG } from '../../shared/config';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
@@ -38,5 +39,14 @@ export class ProductsComponent {
       ? 'مرحباً، أود الاستفسار عن توفر الأصناف الإنتاجية والملقحات (كيرمان، سيرورا، لارناكا، بيتر).'
       : 'Hello, I would like to inquire about pistachio varieties and pollinators (Kerman, Sirora, Larnaka, Peter).';
     return APP_CONFIG.getWhatsAppUrl(msg);
+  }
+
+  scrollToSection(id: string): void {
+    if (typeof document !== 'undefined') {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
   }
 }
