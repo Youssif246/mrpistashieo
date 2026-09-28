@@ -4,20 +4,61 @@
      ========================================================================== -->
 
 <!-- ══════════════════════════════════════════════════════════════════════════
-     1. HERO: UNIFIED IMAGELESS EDITORIAL HERO
-     Sophisticated publication-grade typography, subtle botanical linework
+     1. HERO: UNIFIED PREMIUM INTERNAL EDITORIAL HERO
+     Consistent visual language, dedicated agronomist inspection photography
      ══════════════════════════════════════════════════════════════════════════ -->
-<header class="inner-page-hero about-inner-hero" id="aboutHero">
-  <div class="inner-hero-container">
-    <div class="inner-hero-text">
-      <span class="inner-hero-eyebrow">{{ i18n.t().about.hero.eyebrow }}</span>
-      <h1 class="inner-hero-heading">{{ i18n.t().about.hero.headline }}</h1>
-      <span class="inner-hero-connector" aria-hidden="true"></span>
-      <p class="inner-hero-desc">{{ i18n.t().about.hero.description }}</p>
-    </div>
-    <div class="inner-hero-visual" aria-hidden="true">
-      <div class="inner-hero-aura"></div>
-      <img src="/botanical/real-pistachio-arch.png" alt="" class="inner-hero-botanical" loading="eager">
+<header class="internal-editorial-hero" id="aboutHero">
+  <div class="internal-hero-container">
+    <div class="internal-hero-grid">
+      
+      <!-- Content Block: Right in RTL, Left in LTR -->
+      <div class="internal-hero-content">
+        <div class="internal-hero-eyebrow">
+          <span class="internal-hero-eyebrow-line" aria-hidden="true"></span>
+          <span class="internal-hero-eyebrow-text">{{ i18n.t().about.hero.eyebrow }}</span>
+        </div>
+
+        <h1 class="internal-hero-title">{{ i18n.t().about.hero.headline }}</h1>
+
+        <div class="internal-hero-divider" aria-hidden="true"></div>
+
+        <p class="internal-hero-desc">{{ i18n.t().about.hero.description }}</p>
+
+        <!-- Subtle Agronomic Metadata Badges -->
+        <div class="internal-hero-strip internal-hero-meta-badges">
+          <span class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            {{ i18n.t().about.hero.metaDiscipline }}
+          </span>
+          <span class="strip-sep">/</span>
+          <span class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            {{ i18n.t().about.hero.metaTerroir }}
+          </span>
+          <span class="strip-sep">/</span>
+          <span class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            {{ i18n.t().about.hero.metaStandards }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Large Custom Image Block (45-50% width) -->
+      <div class="internal-hero-media">
+        <div class="internal-hero-frame">
+          <img src="/hero-images/hero-about.jpg" 
+               alt="Agronomist inspecting developing pistachio trees in sunlit orchard" 
+               class="internal-hero-img"
+               loading="eager">
+          <div class="internal-hero-plate">
+            <span class="plate-marker">{{ i18n.t().navbar.about }}</span>
+            <span class="plate-caption">
+              {{ i18n.currentLang() === 'ar' ? 'فحص ومتابعة حقلية مستمرة لأشجار الفستق في بيئتها الطبيعية' : 'Continuous field agronomic inspection and orchard health monitoring' }}
+            </span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </header>

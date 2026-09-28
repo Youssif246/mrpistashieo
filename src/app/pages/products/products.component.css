@@ -1,1208 +1,1113 @@
 /* ==========================================================================
-   PRODUCTS PAGE - BOTANICAL CATALOG MONOGRAPH & NURSERY SPECIFICATIONS
-   Authentic Nursery Photography, Soil Adaptation & Pollination Synchronization
+   MISTER PISTACHIO: SINGLE PRODUCTS PAGE EDITORIAL STYLES
+   Sophisticated Agricultural Showcase • Architectural Rhythm • Pure Typography
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. Catalog Hero & Quick Navigation
-   -------------------------------------------------------------------------- */
-.catalog-hero-monograph {
-  position: relative;
-  overflow: hidden;
-  padding-top: clamp(4rem, 8vw, 7.5rem);
-  padding-bottom: clamp(3rem, 6vw, 5.5rem);
-  background-color: var(--c-ivory);
-  border-bottom: 1px solid var(--c-sand);
+/* ──────────────────────────────────────────────────────────────────────────
+   0. SHARED CONTAINERS & EDITORIAL PRIMITIVES
+   ────────────────────────────────────────────────────────────────────────── */
+.products-editorial-page {
+  background-color: var(--c-ivory, #F8F5EE);
+  color: var(--c-charcoal, #151A17);
+  overflow-x: clip;
 }
 
-.catalog-hero-monograph .container,
-.catalog-chapter .container {
-  position: relative;
-  z-index: 2;
+.container-wide {
+  width: 100%;
+  max-width: 1340px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 3.5rem);
+  padding-right: clamp(1.25rem, 4vw, 3.5rem);
 }
 
-.catalog-hero-lockup {
-  max-width: 980px;
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
 }
 
-.catalog-hero-headline {
-  font-size: clamp(2.8rem, 6.5vw, 5.4rem);
+/* Editorial Eyebrow Label */
+.editorial-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.editorial-eyebrow .eyebrow-line {
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background-color: var(--c-pistachio, #768E37);
+}
+
+.editorial-eyebrow .eyebrow-text {
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-pistachio-deep, #5A6F28);
+}
+
+.center-eyebrow {
+  justify-content: center;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   1. HERO SECTION: SPACIOUS, EDITORIAL & CALM
+   ────────────────────────────────────────────────────────────────────────── */
+.products-hero-section {
+  padding-top: clamp(1rem, 1.8vw, 1.6rem);
+  padding-bottom: clamp(2rem, 3.5vw, 3rem);
+  background-color: #FAF8F5;
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.hero-split-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2.5rem, 5vw, 6rem);
+  align-items: center;
+}
+
+.hero-text-block {
+  max-width: 640px;
+}
+
+.hero-display-title {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(2.5rem, 5.2vw, 4.4rem);
   font-weight: 500;
-  line-height: 1.05;
-  color: var(--c-forest);
-  margin-bottom: 1.5rem;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--c-forest, #112117);
+  margin-bottom: 1.75rem;
 }
 
-.catalog-hero-lead {
-  font-size: clamp(1.15rem, 2vw, 1.35rem);
-  color: var(--c-slate);
-  line-height: 1.65;
-  max-width: 760px;
+.hero-lead-narrative {
+  font-family: var(--font-sans, system-ui);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.75;
+  color: var(--c-slate, #4A564F);
   margin-bottom: 2.5rem;
+  font-weight: 350;
 }
 
-.hero-to-catalog-transition {
-  width: 100%;
-  height: 40px;
-  margin-top: 1.5rem;
-  pointer-events: none;
-}
-
-.hero-to-catalog-transition svg {
-  width: 100%;
-  height: 100%;
-}
-
-/* Quick Navigation Index Strip */
-.catalog-quick-nav {
+/* Hero Quick Navigation */
+.hero-anchor-strip {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem 1.25rem;
-  padding: 0.75rem 1.4rem;
-  background-color: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(118, 142, 55, 0.22);
-  border-radius: 999px;
-  width: fit-content;
-  backdrop-filter: blur(8px);
-  margin-top: clamp(1.2rem, 2vw, 1.8rem);
-  box-shadow: 0 4px 16px -4px rgba(17, 33, 23, 0.05);
+  gap: 0.85rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(42, 68, 46, 0.12);
 }
 
-.quick-nav-link {
+.anchor-pip-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  text-decoration: none;
-  color: var(--c-forest);
-  font-size: 0.88rem;
-  font-weight: 600;
   background: none;
   border: none;
+  padding: 0.35rem 0.25rem;
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--c-charcoal, #151A17);
   cursor: pointer;
-  padding: 0;
-  font-family: inherit;
-  transition: var(--transition-fast);
+  transition: color 0.25s ease;
 }
 
-.quick-nav-link:hover {
-  color: var(--c-pistachio-deep);
-  transform: translateY(-1px);
+.anchor-pip-btn .pip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--c-pistachio, #768E37);
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
-.q-num {
-  font-family: var(--font-serif);
-  font-size: 0.95rem;
-  color: var(--c-pistachio);
-  font-weight: 700;
+.anchor-pip-btn:hover {
+  color: var(--c-pistachio-deep, #5A6F28);
 }
 
-.q-label {
-  letter-spacing: 0.02em;
+.anchor-pip-btn:hover .pip-dot {
+  transform: scale(1.4);
+  background-color: var(--c-forest, #112117);
 }
 
-.q-sep {
-  color: var(--c-sand-muted);
-  user-select: none;
+.anchor-sep {
+  color: var(--c-sand-muted, #BCB2A1);
+  font-size: 0.85rem;
 }
 
-/* --------------------------------------------------------------------------
-   Chapters Shared Architectural Styling
-   -------------------------------------------------------------------------- */
-.catalog-chapter {
+/* Hero Photography Frame */
+.hero-image-block {
   position: relative;
-  overflow: hidden;
-  padding-block: var(--spacing-macro);
-  border-bottom: 1px solid var(--c-sand);
 }
 
-.chapter-number-header {
+.hero-photo-frame {
+  position: relative;
+  background-color: #FFFFFF;
+  border: 1px solid var(--c-sand, #DFD7C7);
+  padding: 0.85rem;
+  box-shadow: 0 16px 40px -12px rgba(17, 33, 23, 0.08);
+}
+
+.hero-focal-image {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hero-photo-frame:hover .hero-focal-image {
+  transform: scale(1.02);
+}
+
+.photo-editorial-caption {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--c-sand);
-  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  gap: 0.75rem;
+  padding: 0.75rem 0.25rem 0.25rem;
+  font-size: 0.775rem;
+  color: var(--c-slate-light, #7E8C83);
+  font-family: var(--font-sans, system-ui);
+  border-top: 1px solid rgba(42, 68, 46, 0.06);
+  margin-top: 0.75rem;
 }
 
-.chapter-index {
+.caption-marker {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--c-forest, #112117);
+}
+
+
+/* ──────────────────────────────────────────────────────────────────────────
+   2. INTRODUCTION: EDITORIAL SPLIT (NO CARDS)
+   ────────────────────────────────────────────────────────────────────────── */
+.products-intro-section {
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
+  background-color: var(--c-ivory, #F8F5EE);
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.intro-split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+
+.section-display-heading {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  color: var(--c-forest, #112117);
+  margin-bottom: 1.75rem;
+}
+
+.intro-narrative p {
+  font-family: var(--font-sans, system-ui);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--c-slate, #4A564F);
+  margin-bottom: 1.25rem;
+}
+
+.intro-narrative p:last-child {
+  margin-bottom: 0;
+}
+
+/* 3 Refined Specification Markers */
+.agronomic-markers-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.marker-item {
   display: flex;
-  align-items: baseline;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.35rem;
 }
 
-.cat-num {
-  font-family: var(--font-serif);
-  font-size: 2.25rem;
+.marker-metric {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 1.75rem;
   font-weight: 600;
-  color: var(--c-forest);
+  color: var(--c-forest, #112117);
+  line-height: 1.1;
+}
+
+.marker-label {
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.775rem;
+  color: var(--c-slate-light, #7E8C83);
+  line-height: 1.45;
+}
+
+/* Intro Media Column */
+.intro-photograph-wrapper {
+  background-color: #FFFFFF;
+  border: 1px solid var(--c-sand, #DFD7C7);
+  padding: 0.85rem;
+  box-shadow: 0 12px 36px -10px rgba(17, 33, 23, 0.07);
+}
+
+.intro-photograph-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.intro-photo-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0.25rem 0.25rem;
+  border-top: 1px solid rgba(42, 68, 46, 0.06);
+  margin-top: 0.75rem;
+}
+
+.strip-tag {
+  font-size: 0.725rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--c-pistachio-deep, #5A6F28);
+}
+
+.strip-desc {
+  font-size: 0.775rem;
+  color: var(--c-slate-light, #7E8C83);
+}
+
+
+/* ──────────────────────────────────────────────────────────────────────────
+   3. VARIETIES SHOWCASE: SEPARATED GROUPS & ALTERNATING EDITORIAL ROWS
+   ────────────────────────────────────────────────────────────────────────── */
+.products-group-section {
+  padding-top: clamp(5rem, 9vw, 8rem);
+  padding-bottom: clamp(5rem, 9vw, 8rem);
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.female-group-bg {
+  background-color: #FAF8F5;
+}
+
+.male-group-bg {
+  background-color: var(--c-ivory, #F8F5EE);
+}
+
+/* Group Header */
+.group-header-block {
+  max-width: 780px;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.group-display-title {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(2.2rem, 4vw, 3.25rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--c-forest, #112117);
+  margin-bottom: 1rem;
+}
+
+.group-short-intro {
+  font-family: var(--font-sans, system-ui);
+  font-size: 1.075rem;
+  line-height: 1.75;
+  color: var(--c-slate, #4A564F);
+}
+
+/* Editorial Varieties Roster (Alternating Rows) */
+.editorial-varieties-roster {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 7vw, 6.5rem);
+}
+
+.editorial-variety-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 5vw, 5.5rem);
+  align-items: center;
+  padding-bottom: clamp(3rem, 5vw, 4.5rem);
+  border-bottom: 1px solid rgba(42, 68, 46, 0.1);
+}
+
+.editorial-variety-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Alternating Reverse Flow on Desktop */
+@media (min-width: 901px) {
+  .editorial-variety-row.is-reversed .variety-visual-column {
+    order: 2;
+  }
+  .editorial-variety-row.is-reversed .variety-content-column {
+    order: 1;
+  }
+}
+
+/* Variety Visual Canvas */
+.variety-image-canvas {
+  position: relative;
+  background-color: #FFFFFF;
+  border: 1px solid var(--c-sand, #DFD7C7);
+  padding: 0.85rem;
+  box-shadow: 0 14px 34px -10px rgba(17, 33, 23, 0.06);
+}
+
+.variety-editorial-img {
+  width: 100%;
+  height: clamp(300px, 34vw, 420px);
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.variety-image-canvas:hover .variety-editorial-img {
+  transform: scale(1.02);
+}
+
+.variety-badge-pill {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(17, 33, 23, 0.9);
+  color: #FFFFFF;
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.male-pill {
+  background-color: rgba(90, 111, 40, 0.92);
+}
+
+.badge-sex-symbol {
+  font-size: 0.95rem;
+  font-weight: 700;
   line-height: 1;
 }
 
-:host-context(body.rtl) .cat-num {
-  font-family: var(--font-ar-display);
-}
-
-.cat-label {
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--c-slate-light);
-  font-weight: 600;
-}
-
-.chapter-display-title {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  line-height: 1.1;
-  color: var(--c-forest);
+/* Variety Content Column */
+.variety-meta-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   margin-bottom: 0.75rem;
 }
 
-.chapter-display-sub {
-  font-size: 1.15rem;
-  color: var(--c-slate);
-  margin-bottom: 3.5rem;
-  max-width: 760px;
-  line-height: 1.65;
-}
-
-.botanical-tag {
-  display: inline-block;
-  font-size: 0.76rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+.variety-category-tag {
+  font-size: 0.725rem;
   font-weight: 700;
-  padding: 0.35rem 0.85rem;
-  background-color: var(--c-pistachio-subtle);
-  color: var(--c-pistachio-deep);
-  border-radius: 999px;
-  border: 1px solid rgba(118, 142, 55, 0.25);
-}
-
-/* --------------------------------------------------------------------------
-   2. Chapter 01: UCB1 Hybrid Rootstock
-   -------------------------------------------------------------------------- */
-.chapter-ucb1 {
-  background-color: var(--c-ivory-light);
-}
-
-.ucb1-monograph-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3.5rem;
-}
-
-@media (min-width: 1024px) {
-  .ucb1-monograph-layout {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: clamp(3.5rem, 6vw, 6rem);
-    align-items: flex-start;
-  }
-}
-
-.ucb1-specimen-title {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  line-height: 1.1;
-  color: var(--c-forest);
-  margin-bottom: 0.35rem;
-}
-
-.ucb1-binomial {
-  display: block;
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.25rem;
-  color: var(--c-pistachio-deep);
-  margin-bottom: 1.5rem;
-}
-
-.ucb1-primary-desc {
-  font-size: 1.05rem;
-  line-height: 1.75;
-  color: var(--c-slate);
-  margin-bottom: 2.5rem;
-}
-
-.agronomic-specs-roster {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.75rem;
-  padding-block: 2rem;
-  border-top: 1px solid var(--c-sand);
-  border-bottom: 1px solid var(--c-sand);
-  margin-bottom: 2rem;
-}
-
-@media (min-width: 640px) {
-  .agronomic-specs-roster {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.spec-entry {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.spec-index {
-  font-size: 0.74rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--c-slate-light);
+  color: var(--c-pistachio-deep, #5A6F28);
+}
+
+.variety-category-tag.male-tag {
+  color: #3F5E30;
+}
+
+.variety-origin-tag {
+  font-size: 0.75rem;
+  color: var(--c-slate-light, #7E8C83);
+  border-left: 1px solid var(--c-sand-muted, #BCB2A1);
+  padding-left: 0.75rem;
+}
+
+.variety-title {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(2rem, 3.4vw, 2.75rem);
   font-weight: 600;
+  line-height: 1.15;
+  color: var(--c-forest, #112117);
+  margin-bottom: 0.25rem;
 }
 
-.spec-name {
-  font-size: 1.1rem;
-  color: var(--c-forest);
-  font-weight: 600;
-}
-
-.spec-entry p {
-  font-size: 0.9rem;
-  color: var(--c-slate);
-  line-height: 1.55;
-  margin-bottom: 0;
-}
-
-.delivery-format-strip {
-  margin-bottom: 2.5rem;
-  padding: 1.25rem 1.5rem;
-  background-color: var(--c-ivory-warm);
-  border-inline-start: 3px solid var(--c-pistachio);
-}
-
-.strip-label {
+.variety-scientific-name {
   display: block;
-  font-size: 0.76rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--c-forest);
-  font-weight: 700;
-  margin-bottom: 0.35rem;
-}
-
-.strip-text {
-  font-size: 0.95rem;
-  color: var(--c-slate);
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-.ucb1-photography-column {
-  position: sticky;
-  top: 100px;
-}
-
-.ucb1-image-frame {
-  aspect-ratio: 4 / 3.8;
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--c-sand);
-  box-shadow: 0 16px 36px rgba(17, 33, 23, 0.08);
-}
-
-.catalog-plant-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.8s var(--ease-editorial);
-}
-
-.ucb1-image-frame:hover .catalog-plant-img {
-  transform: scale(1.03);
-}
-
-.catalog-photo-plate {
-  position: absolute;
-  bottom: 1.25rem;
-  inset-inline-start: 1.25rem;
-  background-color: rgba(10, 20, 14, 0.88);
-  backdrop-filter: blur(8px);
-  color: #FFFFFF;
-  padding: 0.65rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-  border-inline-start: 3px solid var(--c-pistachio);
-}
-
-.plate-code {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--c-pistachio);
-  font-family: monospace;
-}
-
-.plate-caption {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 0.95rem;
-}
-
-/* --------------------------------------------------------------------------
-   3. Chapter 02: Traditional Mediterranean Rootstocks
-   -------------------------------------------------------------------------- */
-.chapter-traditional {
-  background-color: var(--c-ivory);
-}
-
-.traditional-duo-spread {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3.5rem;
-  margin-bottom: 4.5rem;
-}
-
-@media (min-width: 900px) {
-  .traditional-duo-spread {
-    grid-template-columns: 1fr 1fr;
-    gap: clamp(3rem, 6vw, 5rem);
-  }
-}
-
-.traditional-specimen-block {
-  border-top: 2px solid var(--c-forest);
-  padding-top: 2rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.specimen-header-strip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.25rem;
-}
-
-.specimen-index-tag {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif, Georgia, serif);
   font-style: italic;
   font-size: 1rem;
-  color: var(--c-slate-light);
+  color: var(--c-slate-light, #7E8C83);
+  margin-bottom: 1.35rem;
 }
 
-.specimen-title {
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  color: var(--c-forest);
-  margin-bottom: 1rem;
-}
-
-.specimen-body {
+.variety-prose-desc {
+  font-family: var(--font-sans, system-ui);
   font-size: 1rem;
-  line-height: 1.75;
-  color: var(--c-slate);
+  line-height: 1.8;
+  color: var(--c-slate, #4A564F);
   margin-bottom: 1.75rem;
 }
 
-/* Authentic Format Presentation: Alveoli & 1.1L Pot Duo */
-.specimen-photo-duo {
+/* Characteristics Roster */
+.variety-characteristics-roster {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--c-sand, #DFD7C7);
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+  margin-bottom: 1.75rem;
+}
+
+.trait-line {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 180px 1fr;
   gap: 1rem;
-  margin-bottom: 1.75rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
 }
 
-.specimen-photo-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.trait-label {
+  font-family: var(--font-sans, system-ui);
+  font-weight: 600;
+  color: var(--c-forest, #112117);
 }
 
-.specimen-img-wrapper {
-  position: relative;
-  aspect-ratio: 4 / 3.4;
-  overflow: hidden;
-  background-color: var(--c-ivory-warm);
-  border: 1px solid var(--c-sand);
+.trait-value {
+  color: var(--c-slate, #4A564F);
 }
 
-.specimen-real-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s var(--ease-editorial);
+.trait-value.highlight-partners {
+  color: var(--c-pistachio-deep, #5A6F28);
+  font-weight: 600;
 }
 
-.specimen-img-wrapper:hover .specimen-real-img {
-  transform: scale(1.05);
-}
-
-.specimen-img-caption {
-  font-size: 0.76rem;
-  color: var(--c-slate);
-  line-height: 1.35;
-  font-weight: 500;
-}
-
-/* Heavy Soil Feature Box */
-.specimen-card-feature {
-  padding: 1.25rem 1.5rem;
-  background-color: var(--c-ivory-warm);
-  border: 1px solid var(--c-sand);
-  border-inline-start: 3px solid var(--c-forest);
-  margin-bottom: 1.75rem;
-}
-
-.card-feature-header {
-  display: flex;
+/* Quick Inquiry Button */
+.btn-editorial-inline {
+  display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  margin-bottom: 0.5rem;
-}
-
-.feature-icon {
-  color: var(--c-pistachio-deep);
-  font-size: 1rem;
-}
-
-.feature-title {
-  font-weight: 700;
-  font-size: 0.92rem;
-  color: var(--c-forest);
-  letter-spacing: 0.02em;
-}
-
-.feature-text {
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--c-slate);
-  margin-bottom: 0;
-}
-
-.specimen-points-roster {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  margin-bottom: 2.5rem;
-  flex-grow: 1;
-}
-
-.point-row {
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-}
-
-.point-bullet {
-  color: var(--c-pistachio);
-  font-weight: 700;
-}
-
-.point-row p {
-  font-size: 0.95rem;
-  margin-bottom: 0;
-  line-height: 1.6;
-  color: var(--c-slate);
-}
-
-.specimen-action {
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--c-sand);
-}
-
-/* Soil Compatibility Table */
-.soil-comparison-strip {
-  padding: clamp(2rem, 4vw, 3.5rem);
-  background-color: var(--c-ivory-light);
-  border: 1px solid var(--c-sand);
-}
-
-.strip-section-heading {
-  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-  color: var(--c-forest);
-  margin-bottom: 1.5rem;
+  padding: 0.65rem 1.35rem;
+  background-color: transparent;
+  color: var(--c-forest, #112117);
+  border: 1px solid var(--c-forest, #112117);
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.85rem;
   font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.soil-table-responsive,
-.sync-table-responsive {
+.btn-editorial-inline i {
+  color: #25D366;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-editorial-inline:hover {
+  background-color: var(--c-forest, #112117);
+  color: #FFFFFF;
+}
+
+.btn-editorial-inline:hover i {
+  transform: scale(1.15);
+}
+
+
+/* ──────────────────────────────────────────────────────────────────────────
+   4. VARIETY COMPARISON SECTION: MINIMALIST TABLE
+   ────────────────────────────────────────────────────────────────────────── */
+.products-comparison-section {
+  padding-top: clamp(5rem, 9vw, 8rem);
+  padding-bottom: clamp(5rem, 9vw, 8rem);
+  background-color: #FAF8F5;
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.section-title-center {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+.section-subtitle-text {
+  font-family: var(--font-sans, system-ui);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--c-slate, #4A564F);
+  margin-top: 1rem;
+}
+
+.comparison-table-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  background-color: #FFFFFF;
+  border: 1px solid var(--c-sand, #DFD7C7);
+  box-shadow: 0 10px 30px -10px rgba(17, 33, 23, 0.05);
 }
 
-.editorial-soil-table,
-.editorial-sync-table {
+.editorial-comparison-table {
   width: 100%;
+  min-width: 900px;
   border-collapse: collapse;
-  text-align: start;
-  min-width: 680px;
+  text-align: left;
 }
 
-.editorial-soil-table th,
-.editorial-sync-table th {
-  padding: 1rem 1.25rem;
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--c-forest);
-  font-weight: 700;
-  border-bottom: 2px solid var(--c-forest);
-  background-color: rgba(17, 33, 23, 0.03);
+.editorial-comparison-table thead tr {
+  background-color: #F3EFE7;
+  border-bottom: 2px solid var(--c-sand, #DFD7C7);
 }
 
-.editorial-soil-table td,
-.editorial-sync-table td {
+.editorial-comparison-table th {
   padding: 1.15rem 1.25rem;
-  font-size: 0.92rem;
-  line-height: 1.55;
-  color: var(--c-slate);
-  border-bottom: 1px solid var(--c-sand);
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.775rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-forest, #112117);
 }
 
-.editorial-soil-table tr:hover td,
-.editorial-sync-table tr:hover td {
+.editorial-comparison-table td {
+  padding: 1.15rem 1.25rem;
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--c-slate, #4A564F);
+  border-bottom: 1px solid rgba(42, 68, 46, 0.08);
+}
+
+.editorial-comparison-table tbody tr:hover {
+  background-color: rgba(118, 142, 55, 0.04);
+}
+
+.editorial-comparison-table tbody tr.is-male-row {
   background-color: rgba(248, 245, 238, 0.6);
 }
 
-/* --------------------------------------------------------------------------
-   4. Chapter 03: Grafted Trees & Production Formats
-   -------------------------------------------------------------------------- */
-.chapter-grafted {
-  background-color: var(--c-ivory-warm);
+.col-name strong {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 1.05rem;
+  color: var(--c-forest, #112117);
 }
 
-.format-editorial-spread {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
-  margin-bottom: 3.5rem;
-}
-
-@media (min-width: 860px) {
-  .format-editorial-spread {
-    grid-template-columns: 1fr 1fr;
-    gap: 3.5rem;
-  }
-}
-
-.format-editorial-pane {
-  background-color: var(--c-ivory-light);
-  border: 1px solid var(--c-sand);
-  padding: clamp(2rem, 4vw, 3rem);
-  display: flex;
-  flex-direction: column;
-}
-
-.pane-season {
-  font-size: 0.76rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--c-pistachio-deep);
+.table-sex-badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.725rem;
   font-weight: 600;
-  margin-bottom: 0.85rem;
+  background-color: #EBF0DC;
+  color: var(--c-forest, #112117);
+  border-radius: 2px;
 }
 
-.pane-title {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-  color: var(--c-forest);
-  margin-bottom: 1rem;
+.table-sex-badge.badge-male {
+  background-color: #E2EBD6;
+  color: #2D4C1F;
 }
 
-.pane-desc {
-  font-size: 0.98rem;
-  line-height: 1.7;
-  color: var(--c-slate);
-  margin-bottom: 2rem;
+.col-chill, .col-flowering {
+  white-space: nowrap;
 }
 
-/* Pots Gallery 3.5L, 5L, 7L */
-.pots-gallery-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.85rem;
-  margin-bottom: 2rem;
-}
-
-.pot-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.35rem;
-}
-
-.pot-img-frame {
-  width: 100%;
-  aspect-ratio: 1 / 1.15;
-  overflow: hidden;
-  background-color: var(--c-ivory);
-  border: 1px solid var(--c-sand);
-}
-
-.pot-img-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s var(--ease-editorial);
-}
-
-.pot-img-frame:hover img {
-  transform: scale(1.06);
-}
-
-.pot-vol {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--c-forest);
-}
-
-.pot-height {
-  font-size: 0.72rem;
-  color: var(--c-pistachio-deep);
-  font-weight: 600;
-}
-
-/* Bare Root Visual Frame */
-.bare-root-featured-visual {
-  margin-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.bare-root-frame {
-  width: 100%;
-  aspect-ratio: 16 / 9.5;
-  overflow: hidden;
-  background-color: var(--c-ivory);
-  border: 1px solid var(--c-sand);
-}
-
-.bare-root-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s var(--ease-editorial);
-}
-
-.bare-root-frame:hover .bare-root-img {
-  transform: scale(1.04);
-}
-
-.bare-root-spec-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  background-color: var(--c-ivory);
-  border: 1px solid var(--c-sand);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--c-forest);
-}
-
-.bare-root-spec-strip i {
-  color: var(--c-pistachio);
-  margin-inline-end: 0.35rem;
-}
-
-.pane-highlights {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--c-sand);
-  margin-top: auto;
-}
-
-.pane-hl-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  font-size: 0.92rem;
+.col-partners {
+  color: var(--c-pistachio-deep, #5A6F28);
   font-weight: 500;
-  color: var(--c-forest);
-  line-height: 1.5;
 }
 
-.hl-icon {
-  color: var(--c-pistachio);
-  font-size: 0.95rem;
-  margin-top: 0.2rem;
-  flex-shrink: 0;
+
+/* ──────────────────────────────────────────────────────────────────────────
+   5. ROOTSTOCK SECTION: TEREBINTHUS, ATLANTICA & UCB-1
+   ────────────────────────────────────────────────────────────────────────── */
+.products-rootstocks-section {
+  padding-top: clamp(5rem, 9vw, 8rem);
+  padding-bottom: clamp(5rem, 9vw, 8rem);
+  background-color: #F4EFE6;
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
 }
 
-.grafted-cta-row {
-  margin-top: 2rem;
-}
-
-/* --------------------------------------------------------------------------
-   5. Chapter 04: Female Cultivars Monograph
-   -------------------------------------------------------------------------- */
-.chapter-varieties {
-  background-color: var(--c-ivory);
-}
-
-.cultivars-photographic-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.25rem;
-  margin-bottom: 4rem;
-}
-
-@media (min-width: 680px) {
-  .cultivars-photographic-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1080px) {
-  .cultivars-photographic-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.cultivar-card-editorial {
-  background-color: var(--c-ivory-light);
-  border: 1px solid var(--c-sand);
+.rootstocks-editorial-roster {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  transition: transform 0.4s var(--ease-editorial), box-shadow 0.4s var(--ease-editorial);
+  gap: clamp(3.5rem, 6vw, 5.5rem);
+  margin-bottom: clamp(4rem, 7vw, 6rem);
 }
 
-.cultivar-card-editorial:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 32px rgba(17, 33, 23, 0.08);
+.rootstock-editorial-card {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid var(--c-sand, #DFD7C7);
+  padding: clamp(1.75rem, 3.5vw, 3rem);
+  box-shadow: 0 14px 34px -10px rgba(17, 33, 23, 0.06);
 }
 
-.cultivar-photo-frame {
+@media (min-width: 901px) {
+  .rootstock-editorial-card.is-reversed .rootstock-media-pane {
+    order: 2;
+  }
+  .rootstock-editorial-card.is-reversed .rootstock-info-pane {
+    order: 1;
+  }
+}
+
+.rootstock-photo-frame {
   position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 11;
   overflow: hidden;
-  background-color: var(--c-ivory-warm);
+  background-color: #F8F5EE;
+  border: 1px solid var(--c-sand, #DFD7C7);
 }
 
-.cultivar-img {
+.rootstock-img {
   width: 100%;
-  height: 100%;
+  height: clamp(280px, 32vw, 400px);
   object-fit: cover;
   display: block;
-  transition: transform 0.6s var(--ease-editorial);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.cultivar-card-editorial:hover .cultivar-img {
-  transform: scale(1.05);
+.rootstock-editorial-card:hover .rootstock-img {
+  transform: scale(1.02);
 }
 
-.cultivar-sex-tag {
+.rootstock-botanical-tag {
   position: absolute;
-  top: 0.85rem;
-  inset-inline-end: 0.85rem;
-  padding: 0.3rem 0.75rem;
-  background-color: rgba(17, 33, 23, 0.85);
+  bottom: 0.85rem;
+  left: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  background-color: rgba(17, 33, 23, 0.88);
   color: #FFFFFF;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-family: var(--font-serif, Georgia, serif);
+  font-style: italic;
+  font-size: 0.85rem;
   backdrop-filter: blur(4px);
 }
 
-.cultivar-photo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--c-ivory-warm) 0%, var(--c-sand) 100%);
-}
-
-.arid-badge-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--c-forest);
-  font-weight: 600;
-  font-size: 0.88rem;
-}
-
-.cultivar-card-body {
-  padding: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.cultivar-header-meta {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.65rem;
-}
-
-.cultivar-code {
-  font-family: monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  color: var(--c-slate-light);
-}
-
-.cultivar-badge {
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--c-pistachio-deep);
+.rootstock-badge-tag {
+  display: inline-block;
+  font-size: 0.725rem;
   font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-pistachio-deep, #5A6F28);
+  margin-bottom: 0.5rem;
 }
 
-.cultivar-name {
-  font-size: 1.55rem;
-  color: var(--c-forest);
-  margin-bottom: 0.75rem;
+.rootstock-title {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(1.85rem, 3vw, 2.4rem);
   font-weight: 600;
+  color: var(--c-forest, #112117);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
 }
 
-.cultivar-prose {
-  font-size: 0.92rem;
-  line-height: 1.65;
-  color: var(--c-slate);
+.rootstock-narrative {
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.975rem;
+  line-height: 1.8;
+  color: var(--c-slate, #4A564F);
   margin-bottom: 1.5rem;
-  flex-grow: 1;
 }
 
-.cultivar-pollination-tag {
-  padding: 0.75rem 1rem;
-  background-color: var(--c-ivory);
-  border: 1px solid var(--c-sand);
+.rootstock-specs-matrix {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.6rem;
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--c-sand, #DFD7C7);
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+  margin-bottom: 1.5rem;
 }
 
-.tag-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--c-slate-light);
+.spec-row {
+  display: grid;
+  grid-template-columns: 165px 1fr;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.spec-heading {
+  font-weight: 600;
+  color: var(--c-forest, #112117);
+}
+
+.spec-detail {
+  color: var(--c-slate, #4A564F);
+}
+
+.highlight-advantage {
+  color: var(--c-forest, #112117);
   font-weight: 600;
 }
 
-.tag-males {
-  font-size: 0.85rem;
+/* Production Formats Banner */
+.production-formats-editorial {
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  border-top: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.formats-text-header {
+  max-width: 780px;
+  margin-bottom: 2.5rem;
+}
+
+.formats-kicker {
+  display: inline-block;
+  font-size: 0.725rem;
   font-weight: 700;
-  color: var(--c-forest);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-pistachio-deep, #5A6F28);
+  margin-bottom: 0.5rem;
 }
 
-.catalog-inquiry-bar {
-  margin-top: 1.5rem;
+.formats-heading {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(1.75rem, 2.8vw, 2.35rem);
+  font-weight: 500;
+  color: var(--c-forest, #112117);
+  margin-bottom: 0.75rem;
 }
 
-/* --------------------------------------------------------------------------
-   6. Chapter 05: Pollinators & Bloom Synchronization Matrix
-   -------------------------------------------------------------------------- */
-.chapter-pollination {
-  background-color: var(--c-ivory-light);
+.formats-sub {
+  font-family: var(--font-sans, system-ui);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--c-slate, #4A564F);
 }
 
-.pollinators-roster-grid {
+.formats-duo-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-bottom: 4.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 3.5vw, 2.5rem);
 }
 
-@media (min-width: 640px) {
-  .pollinators-roster-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.format-card-clean {
+  background-color: #FFFFFF;
+  border: 1px solid var(--c-sand, #DFD7C7);
+  padding: 1.25rem;
+  box-shadow: 0 10px 25px -8px rgba(17, 33, 23, 0.05);
 }
 
-@media (min-width: 1080px) {
-  .pollinators-roster-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-.pollinator-profile-card {
-  background-color: var(--c-ivory);
-  border: 1px solid var(--c-sand);
-  display: flex;
-  flex-direction: column;
+.format-card-visual {
   overflow: hidden;
+  background-color: #F8F5EE;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--c-sand, #DFD7C7);
 }
 
-.pollinator-photo-frame {
-  position: relative;
+.format-preview-img {
   width: 100%;
-  aspect-ratio: 4 / 3.2;
-  overflow: hidden;
-  background-color: var(--c-ivory-warm);
-}
-
-.pollinator-photo-frame img {
-  width: 100%;
-  height: 100%;
+  height: 260px;
   object-fit: cover;
   display: block;
 }
 
-.bloom-timing-tag {
-  position: absolute;
-  top: 0.75rem;
-  inset-inline-start: 0.75rem;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 700;
-  padding: 0.25rem 0.6rem;
-  border-radius: 2px;
-  color: #FFFFFF;
-}
-
-.bloom-timing-tag.early {
-  background-color: #2D6A4F;
-}
-
-.bloom-timing-tag.mid-late,
-.bloom-timing-tag.mid {
-  background-color: #B58428;
-}
-
-.bloom-timing-tag.late,
-.bloom-timing-tag.very-late {
-  background-color: #8C2F2F;
-}
-
-.pollinator-content {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.pollinator-name {
-  font-size: 1.35rem;
-  color: var(--c-forest);
-  margin-bottom: 0.25rem;
-  font-weight: 600;
-}
-
-.pollinator-badge {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--c-pistachio-deep);
-  font-weight: 700;
-  margin-bottom: 0.85rem;
-}
-
-.pollinator-desc {
-  font-size: 0.88rem;
-  line-height: 1.6;
-  color: var(--c-slate);
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
-}
-
-.paired-females {
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--c-sand);
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-.pair-label {
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--c-slate-light);
-  font-weight: 600;
-}
-
-.pair-names {
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--c-forest);
-}
-
-/* Synchronization Matrix Table */
-.sync-matrix-envelope {
-  padding: clamp(2rem, 4vw, 3.5rem);
-  background-color: var(--c-white);
-  border: 1px solid var(--c-sand);
-}
-
-.matrix-title {
-  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
-  color: var(--c-forest);
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-}
-
-.timing-pill {
+.format-season-pill {
   display: inline-block;
-  padding: 0.25rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.76rem;
-  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.725rem;
+  font-weight: 600;
+  background-color: #EBF0DC;
+  color: var(--c-forest, #112117);
+  margin-bottom: 0.65rem;
 }
 
-.timing-pill.early {
-  background-color: #E8F5E9;
-  color: #2E7D32;
+.format-name {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--c-forest, #112117);
+  margin-bottom: 0.5rem;
 }
 
-.timing-pill.early-mid {
-  background-color: #F1F8E9;
-  color: #558B2F;
-}
-
-.timing-pill.mid {
-  background-color: #FFF8E1;
-  color: #F57F17;
-}
-
-.timing-pill.late {
-  background-color: #FBE9E7;
-  color: #D84315;
-}
-
-/* --------------------------------------------------------------------------
-   7. Closing Monograph CTA
-   -------------------------------------------------------------------------- */
-.products-closing-cta {
-  padding-block: var(--spacing-macro);
-  background-color: var(--c-ivory);
-}
-
-.cta-monograph-envelope {
-  text-align: center;
-  max-width: 820px;
-  margin-inline: auto;
-  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 4vw, 3.5rem);
-  background-color: var(--c-forest);
-  color: #FFFFFF;
-  border-radius: 2px;
-  position: relative;
-  overflow: hidden;
-}
-
-.cta-eyebrow-wrap .brand-eyebrow-text {
-  color: var(--c-pistachio);
-}
-
-.cta-monograph-heading {
-  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-  line-height: 1.15;
-  color: #FFFFFF;
-  margin-block: 1rem 1.25rem;
-  font-weight: 500;
-}
-
-.cta-monograph-desc {
-  font-size: clamp(1rem, 1.8vw, 1.15rem);
+.format-desc {
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.9rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 2.5rem;
-  max-width: 640px;
-  margin-inline: auto;
+  color: var(--c-slate, #4A564F);
 }
 
-.cta-actions-cluster {
+
+/* ──────────────────────────────────────────────────────────────────────────
+   6. FINAL CTA SECTION: SOPHISTICATED, PREMIUM & UNDERSTATED
+   ────────────────────────────────────────────────────────────────────────── */
+.products-closing-cta {
+  padding-top: clamp(6rem, 10vw, 8.5rem);
+  padding-bottom: clamp(6rem, 10vw, 8.5rem);
+  background-color: #FAF8F5;
+}
+
+.cta-inner-envelope {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.cta-display-title {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--c-forest, #112117);
+  margin-bottom: 1.35rem;
+}
+
+.cta-supporting-text {
+  font-family: var(--font-sans, system-ui);
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  line-height: 1.75;
+  color: var(--c-slate, #4A564F);
+  margin-bottom: 2.75rem;
+}
+
+.cta-actions-group {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  gap: 1.25rem;
 }
 
-.btn-editorial-cta {
+.btn-editorial-primary {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 1.1rem 2.25rem;
-  background-color: var(--c-pistachio);
-  color: var(--c-forest-dark);
+  padding: 0.95rem 2.25rem;
+  background-color: var(--c-forest, #112117);
+  color: #FFFFFF;
+  font-family: var(--font-sans, system-ui);
   font-size: 0.95rem;
-  font-weight: 700;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 999px;
-  transition: var(--transition-fast);
+  cursor: pointer;
+  border: 1px solid var(--c-forest, #112117);
+  transition: all 0.3s ease;
 }
 
-.btn-editorial-cta:hover {
-  background-color: #FFFFFF;
-  color: var(--c-forest-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+.btn-editorial-primary i {
+  color: #25D366;
+  font-size: 1.15rem;
+  transition: transform 0.3s ease;
 }
 
-/* Shared Editorial Buttons */
-.btn-editorial {
+.btn-editorial-primary:hover {
+  background-color: #1A3123;
+  box-shadow: 0 8px 24px -6px rgba(17, 33, 23, 0.25);
+}
+
+.btn-editorial-primary:hover i {
+  transform: scale(1.15);
+}
+
+.btn-editorial-secondary {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
-  padding: 0.9rem 1.85rem;
-  font-size: 0.88rem;
-  font-weight: 700;
-  text-decoration: none;
-  border-radius: 999px;
-  transition: var(--transition-fast);
-}
-
-.btn-editorial-wa {
-  background-color: #25D366;
-  color: #FFFFFF;
-}
-
-.btn-editorial-wa:hover {
-  background-color: #1EBE5D;
-  color: #FFFFFF;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
-}
-
-.btn-editorial-outline {
-  border: 1px solid var(--c-forest);
-  color: var(--c-forest);
+  gap: 0.75rem;
+  padding: 0.95rem 2rem;
   background-color: transparent;
+  color: var(--c-forest, #112117);
+  border: 1px solid var(--c-sand-muted, #BCB2A1);
+  font-family: var(--font-sans, system-ui);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn-editorial-outline:hover {
-  background-color: var(--c-forest);
-  color: #FFFFFF;
-  transform: translateY(-2px);
+.btn-editorial-secondary i {
+  font-size: 0.85rem;
+  transition: transform 0.3s ease;
 }
 
-/* --------------------------------------------------------------------------
-   8. RTL Support
-   -------------------------------------------------------------------------- */
-:host-context(body.rtl) .catalog-hero-headline,
-:host-context(body.rtl) .chapter-display-title,
-:host-context(body.rtl) .ucb1-specimen-title,
-:host-context(body.rtl) .specimen-title,
-:host-context(body.rtl) .pane-title,
-:host-context(body.rtl) .cultivar-name,
-:host-context(body.rtl) .pollinator-name,
-:host-context(body.rtl) .cta-monograph-heading,
-:host-context(body.rtl) .strip-section-heading,
-:host-context(body.rtl) .matrix-title {
-  font-family: var(--font-ar-display);
+.btn-editorial-secondary:hover {
+  border-color: var(--c-forest, #112117);
+  background-color: #FFFFFF;
 }
 
-:host-context(body.rtl) .catalog-hero-lead,
-:host-context(body.rtl) .chapter-display-sub,
-:host-context(body.rtl) .ucb1-primary-desc,
-:host-context(body.rtl) .specimen-body,
-:host-context(body.rtl) .pane-desc,
-:host-context(body.rtl) .cultivar-prose,
-:host-context(body.rtl) .pollinator-desc,
-:host-context(body.rtl) .cta-monograph-desc,
-:host-context(body.rtl) .editorial-soil-table,
-:host-context(body.rtl) .editorial-sync-table {
-  font-family: var(--font-ar-body);
+.btn-editorial-secondary:hover i {
+  transform: translateX(4px);
 }
 
-:host-context(body.rtl) .delivery-format-strip,
-:host-context(body.rtl) .specimen-card-feature,
-:host-context(body.rtl) .catalog-photo-plate {
-  border-inline-start-width: 3px;
-  border-inline-end-width: 0;
+
+/* ──────────────────────────────────────────────────────────────────────────
+   7. RTL & ARABIC ADAPTATIONS (IBM Plex Sans Arabic & Cairo)
+   ────────────────────────────────────────────────────────────────────────── */
+body.rtl .products-editorial-page {
+  text-align: right;
+}
+
+body.rtl .hero-display-title,
+body.rtl .section-display-heading,
+body.rtl .group-display-title,
+body.rtl .variety-title,
+body.rtl .rootstock-title,
+body.rtl .formats-heading,
+body.rtl .cta-display-title {
+  font-family: var(--font-ar, 'IBM Plex Sans Arabic', system-ui);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+body.rtl .hero-lead-narrative,
+body.rtl .intro-narrative p,
+body.rtl .group-short-intro,
+body.rtl .variety-prose-desc,
+body.rtl .rootstock-narrative,
+body.rtl .formats-sub,
+body.rtl .cta-supporting-text {
+  font-family: var(--font-ar, 'IBM Plex Sans Arabic', system-ui);
+  line-height: 1.85;
+}
+
+body.rtl .variety-scientific-name {
+  direction: ltr;
+  text-align: right;
+  display: inline-block;
+}
+
+body.rtl .variety-badge-pill {
+  left: auto;
+  right: 1.5rem;
+}
+
+body.rtl .rootstock-botanical-tag {
+  left: auto;
+  right: 0.85rem;
+  direction: ltr;
+  text-align: right;
+}
+
+body.rtl .variety-origin-tag {
+  border-left: none;
+  border-right: 1px solid var(--c-sand-muted, #BCB2A1);
+  padding-left: 0;
+  padding-right: 0.75rem;
+}
+
+body.rtl .editorial-comparison-table {
+  text-align: right;
+}
+
+body.rtl .btn-editorial-secondary:hover i {
+  transform: translateX(-4px);
+}
+
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8. RESPONSIVE MEDIA QUERIES (DESKTOP, TABLET, MOBILE)
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* Tablet (Max 960px) */
+@media (max-width: 960px) {
+  .hero-split-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-text-block {
+    max-width: 100%;
+  }
+
+  .intro-split-layout {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .agronomic-markers-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .editorial-variety-row {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .rootstock-editorial-card {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .formats-duo-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile (Max 680px) */
+@media (max-width: 680px) {
+  .hero-anchor-strip {
+    gap: 0.5rem;
+  }
+
+  .anchor-sep {
+    display: none;
+  }
+
+  .agronomic-markers-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .trait-line {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .spec-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .variety-editorial-img {
+    height: 260px;
+  }
+
+  .rootstock-img {
+    height: 250px;
+  }
+
+  .cta-actions-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-editorial-primary,
+  .btn-editorial-secondary {
+    width: 100%;
+    justify-content: center;
+  }
 }

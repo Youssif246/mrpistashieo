@@ -5,12 +5,13 @@
 
 export const APP_CONFIG = {
   // Replace this phone number with the official company WhatsApp number (with international country code, no + or spaces)
-  whatsappNumber: '34600000000',
+  whatsappNumber: '31612555547',
 
   social: {
-    instagram: 'https://www.instagram.com/mister.pistachio/',
-    facebook: 'https://www.facebook.com/profile.php?id=61594005164773',
-    youtube: 'https://youtube.com/@mister_pistachio'
+    instagram: 'https://www.instagram.com/mister.pistachio?stkn=MWRibzJ4N254MXdpaw%3D%3D&utm_source=qr',
+    facebook: 'https://www.facebook.com/profile.php?id=61594065104773',
+    youtube: 'https://youtube.com/@mister_pistachio',
+    x: 'https://x.com/Misterpistach'
   },
 
   // Generates a direct WhatsApp link with a contextually pre-filled message

@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly isBrowser = isPlatformBrowser(this.platformId);
   readonly i18n = inject(TranslationService);
+  readonly config = APP_CONFIG;
 
   readonly isMobileMenuOpen = signal(false);
   readonly isScrolled = signal(false);

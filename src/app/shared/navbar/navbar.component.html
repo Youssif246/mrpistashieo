@@ -1,8 +1,8 @@
 <header class="navbar-floating-wrapper" [class.is-floating]="isScrolled()">
   <div class="navbar-glass-slab">
     <!-- 1. Left: Company Logo (Signature Brand Anchor) -->
-    <a routerLink="/" class="navbar-logo" (click)="closeMobileMenu()" aria-label="Mister Pistachio">
-      <img src="logo.png" alt="Mister Pistachio" class="logo-img" width="170" height="50">
+    <a routerLink="/" class="navbar-logo" (click)="closeMobileMenu()" [attr.aria-label]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'">
+      <img src="logo.png" [alt]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'" class="logo-img" width="170" height="50">
     </a>
 
     <!-- 2. Center: Navigation Links (Refined Botanical Typography) -->
@@ -27,6 +27,15 @@
       </a>
       <a routerLink="/services" routerLinkActive="active" class="nav-link">
         <span class="nav-link-text">{{ i18n.t().navbar.services }}</span>
+        <span class="nav-active-botanical" aria-hidden="true">
+          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
+            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
+          </svg>
+        </span>
+      </a>
+      <a routerLink="/products" routerLinkActive="active" class="nav-link">
+        <span class="nav-link-text">{{ i18n.t().navbar.products }}</span>
         <span class="nav-active-botanical" aria-hidden="true">
           <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
@@ -60,12 +69,21 @@
         </button>
       </div>
 
-      <!-- Premium Compact WhatsApp CTA (Deep Botanical Green) -->
-      <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="navbar-cta"
-        aria-label="WhatsApp Inquiry">
-        <i class="fa-brands fa-whatsapp cta-icon" aria-hidden="true"></i>
-        <span class="cta-text">{{ i18n.t().navbar.cta }}</span>
-      </a>
+      <!-- Social Media Platform Icons with Authentic Brand Colors -->
+      <div class="navbar-social-links" role="group" aria-label="Social Media">
+        <a [href]="config.social.x" target="_blank" rel="noopener noreferrer" class="nav-social-btn social-x" aria-label="X (Twitter)">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.instagram" target="_blank" rel="noopener noreferrer" class="nav-social-btn social-instagram" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="nav-social-btn social-facebook" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.youtube" target="_blank" rel="noopener noreferrer" class="nav-social-btn social-youtube" aria-label="YouTube">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </a>
+      </div>
 
       <!-- Redesigned Luxury Mobile Architectural Menu Trigger -->
       <button type="button" class="mobile-menu-btn" (click)="toggleMobileMenu()" [class.is-open]="isMobileMenuOpen()"
@@ -91,6 +109,9 @@
       </a>
       <a routerLink="/services" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.t().navbar.services }}</span>
+      </a>
+      <a routerLink="/products" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+        <span class="m-link-text">{{ i18n.t().navbar.products }}</span>
       </a>
       <a routerLink="/contact" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.t().navbar.contact }}</span>

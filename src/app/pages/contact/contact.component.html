@@ -6,20 +6,61 @@
 <div class="contact-editorial-experience" id="contactPage">
 
   <!-- ══════════════════════════════════════════════════════════════════════════
-       1. HERO: UNIFIED IMAGELESS EDITORIAL HERO
-       Sophisticated publication-grade typography, subtle botanical linework
+       1. HERO: UNIFIED PREMIUM INTERNAL EDITORIAL HERO
+       Consistent visual language, dedicated nursery estate & advisory grounds photography
        ══════════════════════════════════════════════════════════════════════════ -->
-  <header class="inner-page-hero contact-inner-hero" id="contactHero">
-    <div class="inner-hero-container">
-      <div class="inner-hero-text">
-        <span class="inner-hero-eyebrow">{{ i18n.t().contact.hero.eyebrow }}</span>
-        <h1 class="inner-hero-heading">{{ i18n.t().contact.hero.headline }}</h1>
-        <span class="inner-hero-connector" aria-hidden="true"></span>
-        <p class="inner-hero-desc">{{ i18n.t().contact.hero.description }}</p>
-      </div>
-      <div class="inner-hero-visual" aria-hidden="true">
-        <div class="inner-hero-aura"></div>
-        <img src="/botanical/real-pistachio-sprig.png" alt="" class="inner-hero-botanical" loading="eager">
+  <header class="internal-editorial-hero" id="contactHero">
+    <div class="internal-hero-container">
+      <div class="internal-hero-grid">
+        
+        <!-- Content Block: Right in RTL, Left in LTR -->
+        <div class="internal-hero-content">
+          <div class="internal-hero-eyebrow">
+            <span class="internal-hero-eyebrow-line" aria-hidden="true"></span>
+            <span class="internal-hero-eyebrow-text">{{ i18n.t().contact.hero.eyebrow }}</span>
+          </div>
+
+          <h1 class="internal-hero-title">{{ i18n.t().contact.hero.headline }}</h1>
+
+          <div class="internal-hero-divider" aria-hidden="true"></div>
+
+          <p class="internal-hero-desc">{{ i18n.t().contact.hero.description }}</p>
+
+          <!-- Subtle Agronomic Metadata Badges -->
+          <div class="internal-hero-strip internal-hero-meta-badges">
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.t().contact.hero.metaDiscipline }}
+            </span>
+            <span class="strip-sep">/</span>
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.t().contact.hero.metaStandards }}
+            </span>
+            <span class="strip-sep">/</span>
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.currentLang() === 'ar' ? 'استجابة مباشرة < 24 ساعة' : 'Direct Response < 24h' }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Large Custom Image Block (45-50% width) -->
+        <div class="internal-hero-media">
+          <div class="internal-hero-frame">
+            <img src="/hero-images/hero-contact.jpg" 
+                 alt="Specialist pistachio nursery grounds and consultation estate" 
+                 class="internal-hero-img"
+                 loading="eager">
+            <div class="internal-hero-plate">
+              <span class="plate-marker">{{ i18n.t().navbar.contact }}</span>
+              <span class="plate-caption">
+                {{ i18n.currentLang() === 'ar' ? 'مقر المشاتل التخصصية وبساتين التجارب الحقلية المعتمدة' : 'Specialist nursery grounds and field trial cultivation estate' }}
+              </span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </header>
@@ -101,7 +142,7 @@
                         <i class="fa-solid fa-phone" aria-hidden="true"></i>
                         <span>{{ i18n.t().contact.info.phoneLabel }}</span>
                       </div>
-                      <a href="tel:+34600000000" class="coord-val" dir="ltr">{{ i18n.t().contact.info.phoneValue }}</a>
+                      <a href="tel:+31612555547" class="coord-val" dir="ltr">{{ i18n.t().contact.info.phoneValue }}</a>
                       <span class="coord-note">{{ i18n.t().contact.info.phoneNote }}</span>
                     </div>
 

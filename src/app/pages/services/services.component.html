@@ -4,20 +4,61 @@
      ========================================================================== -->
 
 <!-- ══════════════════════════════════════════════════════════════════════════
-     1. HERO: UNIFIED IMAGELESS EDITORIAL HERO
-     Sophisticated publication-grade typography, subtle botanical linework
+     1. HERO: UNIFIED PREMIUM INTERNAL EDITORIAL HERO
+     Consistent visual language, dedicated agricultural operation photography
      ══════════════════════════════════════════════════════════════════════════ -->
-<header class="inner-page-hero services-inner-hero" id="servicesHero">
-  <div class="inner-hero-container">
-    <div class="inner-hero-text">
-      <span class="inner-hero-eyebrow">{{ i18n.t().servicesPage.hero.eyebrow }}</span>
-      <h1 class="inner-hero-heading">{{ i18n.t().servicesPage.hero.headline }}</h1>
-      <span class="inner-hero-connector" aria-hidden="true"></span>
-      <p class="inner-hero-desc">{{ i18n.t().servicesPage.hero.lead }}</p>
-    </div>
-    <div class="inner-hero-visual" aria-hidden="true">
-      <div class="inner-hero-aura"></div>
-      <img src="/botanical/real-pistachio-hanging.png" alt="" class="inner-hero-botanical" loading="eager">
+<header class="internal-editorial-hero" id="servicesHero">
+  <div class="internal-hero-container">
+    <div class="internal-hero-grid">
+      
+      <!-- Content Block: Right in RTL, Left in LTR -->
+      <div class="internal-hero-content">
+        <div class="internal-hero-eyebrow">
+          <span class="internal-hero-eyebrow-line" aria-hidden="true"></span>
+          <span class="internal-hero-eyebrow-text">{{ i18n.t().servicesPage.hero.eyebrow }}</span>
+        </div>
+
+        <h1 class="internal-hero-title">{{ i18n.t().servicesPage.hero.headline }}</h1>
+
+        <div class="internal-hero-divider" aria-hidden="true"></div>
+
+        <p class="internal-hero-desc">{{ i18n.t().servicesPage.hero.lead }}</p>
+
+        <!-- Subtle Agronomic Metadata Badges -->
+        <div class="internal-hero-strip internal-hero-meta-badges">
+          <span class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            {{ i18n.t().servicesPage.hero.metaDiscipline }}
+          </span>
+          <span class="strip-sep">/</span>
+          <span class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            {{ i18n.t().servicesPage.hero.metaTerroir }}
+          </span>
+          <span class="strip-sep">/</span>
+          <span class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            {{ i18n.t().servicesPage.hero.metaStandards }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Large Custom Image Block (45-50% width) -->
+      <div class="internal-hero-media">
+        <div class="internal-hero-frame">
+          <img src="/hero-images/hero-services.jpg" 
+               alt="Professional pistachio plantation and precision irrigation" 
+               class="internal-hero-img"
+               loading="eager">
+          <div class="internal-hero-plate">
+            <span class="plate-marker">{{ i18n.t().navbar.services }}</span>
+            <span class="plate-caption">
+              {{ i18n.currentLang() === 'ar' ? 'إدارة البساتين النموذجية وشبكات الري الزراعي الدقيق' : 'Precision commercial pistachio plantation & irrigation management' }}
+            </span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </header>

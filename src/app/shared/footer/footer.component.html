@@ -22,7 +22,7 @@
     <div class="footer-header-strip">
       <div class="footer-brand-lockup">
         <a routerLink="/" class="footer-logo-anchor">
-          <img src="logo.png" alt="Pistachio Specialist Logo" class="footer-logo-inverted" width="160" height="52">
+          <img src="logo.png" [alt]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'" class="footer-logo-inverted" width="160" height="52">
         </a>
         <p class="footer-mission-lead">
           {{ i18n.t().footer.tagline }}
@@ -49,6 +49,7 @@
           <li><a routerLink="/">{{ i18n.t().navbar.home }}</a></li>
           <li><a routerLink="/about">{{ i18n.t().navbar.about }}</a></li>
           <li><a routerLink="/services">{{ i18n.t().navbar.services }}</a></li>
+          <li><a routerLink="/products">{{ i18n.t().navbar.products }}</a></li>
           <li><a routerLink="/contact">{{ i18n.t().navbar.contact }}</a></li>
         </ul>
       </div>
@@ -87,6 +88,10 @@
       <div class="footer-column">
         <span class="column-kicker">{{ i18n.t().footer.socialTitle }}</span>
         <div class="footer-social-roster">
+          <a [href]="social.x" target="_blank" rel="noopener noreferrer" class="social-tag" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            <span>X (Twitter)</span>
+          </a>
           <a [href]="social.instagram" target="_blank" rel="noopener noreferrer" class="social-tag">
             <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             <span>Instagram</span>

@@ -720,320 +720,397 @@ body.rtl .botanical-shadow--monograph-branch,
 }
 
 /* ==========================================================================
-   SIMPLE, PREMIUM INNER-PAGE HERO SYSTEM (REFINED COHESIVE COMPOSITION)
-   Balanced 2-column composition, intentional spacing, page-specific visuals
+   UNIFIED PREMIUM INTERNAL EDITORIAL HERO SYSTEM
+   Consistent visual language across all internal pages (Products, Services, About, Contact)
+   [ LARGE CUSTOM IMAGE (45-50%) ]  |  [ PAGE CONTENT ]
+   Clean cream background (#FAF8F5), thin sand border, strong typography, subtle animation
    ========================================================================== */
 
+.internal-editorial-hero,
 .inner-page-hero,
-.inner-editorial-hero,
-.botanical-editorial-header {
+.products-hero-section {
   position: relative;
   width: 100%;
-  background-color: var(--c-ivory, #FAF8F3);
-  background-image: linear-gradient(180deg, #FAF8F3 0%, #F5F1E8 100%);
-  padding-top: clamp(4.25rem, 6.5vw, 5.5rem);
-  padding-bottom: clamp(2.5rem, 4vw, 3.5rem);
-  min-height: clamp(380px, 42vh, 460px);
-  display: flex;
-  align-items: center;
+  background-color: #FAF8F5;
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+  padding-top: clamp(1rem, 1.8vw, 1.6rem);
+  padding-bottom: clamp(2rem, 3.5vw, 3rem);
   overflow: hidden;
-  border-bottom: 1px solid rgba(21, 39, 30, 0.08);
 }
 
-/* Narrower, intentional container bringing text & botanical into ONE balanced block */
+/* Constrained generous container */
+.internal-hero-container,
 .inner-hero-container {
   position: relative;
   z-index: 2;
-  width: min(calc(100% - clamp(2rem, 5vw, 4rem)), 1060px);
+  width: min(calc(100% - clamp(2rem, 5vw, 4.5rem)), 1300px);
   margin-inline: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(1.25rem, 3vw, 2.75rem);
 }
 
-/* Left text zone: 52-56% width with controlled line length */
+/* Fundamental 2-Column Grid: Content & Large Media Frame */
+.internal-hero-grid {
+  display: grid;
+  grid-template-columns: 1.14fr 0.86fr;
+  gap: clamp(2.5rem, 5vw, 5.5rem);
+  align-items: center;
+}
+
+/* Content Block: Right in RTL, Left in LTR */
+.internal-hero-content,
 .inner-hero-text {
-  flex: 1 1 56%;
-  max-width: 570px;
+  max-width: 630px;
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 2;
+  align-items: flex-start;
+  text-align: start;
+  animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
+/* Small Eyebrow Label with Accent Line */
+.internal-hero-eyebrow,
 .inner-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: clamp(0.75rem, 1.2vw, 1.15rem);
+}
+
+.internal-hero-eyebrow-line {
   display: inline-block;
-  font-family: var(--font-sans);
-  font-size: clamp(0.76rem, 0.85vw, 0.82rem);
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: var(--c-pistachio-deep, #5B7328);
-  text-transform: uppercase;
-  margin-bottom: clamp(0.5rem, 0.9vw, 0.75rem);
-}
-
-:host-context(body.rtl) .inner-hero-eyebrow,
-body.rtl .inner-hero-eyebrow {
-  font-family: var(--font-ar-body);
-  letter-spacing: 0.04em;
-  font-size: 0.88rem;
-}
-
-.inner-hero-heading {
-  font-family: var(--font-serif);
-  font-size: clamp(2.1rem, 3.5vw, 3.15rem);
-  font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-  color: var(--c-forest, #15271E);
-  margin: 0 0 clamp(0.65rem, 1vw, 0.9rem) 0;
-  max-width: 20ch;
-}
-
-:host-context(body.rtl) .inner-hero-heading,
-body.rtl .inner-hero-heading {
-  font-family: var(--font-ar-display);
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: 0;
-}
-
-/* Subtle connecting hairline between heading and description */
-.inner-hero-connector {
-  display: block;
-  width: 44px;
+  width: 28px;
   height: 1.5px;
   background-color: var(--c-pistachio, #7E993B);
   border-radius: 1px;
-  opacity: 0.65;
-  margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
-  transform-origin: left center;
 }
 
-:host-context(body.rtl) .inner-hero-connector,
-body.rtl .inner-hero-connector {
+.internal-hero-eyebrow-text {
+  font-family: var(--font-sans);
+  font-size: clamp(0.75rem, 0.85vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-pistachio-deep, #5B7328);
+}
+
+body.rtl .internal-hero-eyebrow-text,
+:host-context(body.rtl) .internal-hero-eyebrow-text {
+  font-family: var(--font-ar-body);
+  letter-spacing: 0.03em;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Large Refined Title */
+.internal-hero-title,
+.inner-hero-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.35rem, 4.4vw, 3.85rem);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  color: var(--c-forest, #15271E);
+  margin: 0 0 clamp(0.75rem, 1.2vw, 1.05rem) 0;
+}
+
+body.rtl .internal-hero-title,
+body.rtl .inner-hero-heading,
+:host-context(body.rtl) .internal-hero-title,
+:host-context(body.rtl) .inner-hero-heading {
+  font-family: var(--font-ar-display);
+  font-weight: 600;
+  line-height: 1.24;
+  letter-spacing: 0;
+}
+
+/* Subtle Decorative Horizontal Line */
+.internal-hero-divider,
+.inner-hero-connector {
+  display: block;
+  width: 44px;
+  height: 2px;
+  background-color: var(--c-pistachio, #7E993B);
+  border-radius: 1px;
+  margin-bottom: clamp(1rem, 1.4vw, 1.35rem);
+  transform-origin: left center;
+  animation: heroLineExpand 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+body.rtl .internal-hero-divider,
+body.rtl .inner-hero-connector,
+:host-context(body.rtl) .internal-hero-divider,
+:host-context(body.rtl) .inner-hero-connector {
   transform-origin: right center;
 }
 
+/* Short Concise Description */
+.internal-hero-desc,
 .inner-hero-desc {
   font-family: var(--font-sans);
-  font-size: clamp(0.95rem, 1.05vw, 1.05rem);
-  line-height: 1.72;
-  color: var(--c-slate, #4A5850);
-  margin: 0;
-  max-width: 540px;
+  font-size: clamp(1.02rem, 1.25vw, 1.18rem);
+  line-height: 1.76;
+  color: var(--c-slate, #4A564F);
+  margin: 0 0 clamp(1.4rem, 2vw, 2.15rem) 0;
+  font-weight: 350;
+  max-width: 600px;
+  animation: heroFadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+body.rtl .internal-hero-desc,
+body.rtl .inner-hero-desc,
+:host-context(body.rtl) .internal-hero-desc,
+:host-context(body.rtl) .inner-hero-desc {
+  font-family: var(--font-ar-body);
+  font-size: clamp(1.04rem, 1.28vw, 1.2rem);
+  line-height: 1.82;
   font-weight: 400;
 }
 
-:host-context(body.rtl) .inner-hero-desc,
-body.rtl .inner-hero-desc {
-  font-family: var(--font-ar-body);
-  font-size: clamp(0.98rem, 1.08vw, 1.08rem);
-  line-height: 1.8;
+/* Optional Contextual Metadata Strip */
+.internal-hero-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(42, 68, 46, 0.12);
+  width: 100%;
 }
 
-/* Right visual zone: 38-42% width, intentionally overlapping toward text */
-.inner-hero-visual {
-  flex: 0 0 42%;
-  max-width: 440px;
+.hero-strip-pip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  padding: 0.35rem 0.25rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--c-charcoal, #151A17);
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+body.rtl .hero-strip-pip,
+:host-context(body.rtl) .hero-strip-pip {
+  font-family: var(--font-ar-body);
+  font-size: 0.9rem;
+}
+
+.hero-strip-pip .pip-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--c-pistachio, #768E37);
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.hero-strip-pip:hover {
+  color: var(--c-pistachio-deep, #5A6F28);
+}
+
+.hero-strip-pip:hover .pip-dot {
+  transform: scale(1.4);
+  background-color: var(--c-forest, #112117);
+}
+
+.strip-sep {
+  color: var(--c-sand-muted, #BCB2A1);
+  font-size: 0.85rem;
+}
+
+.internal-hero-meta-badges {
+  border-top: 1px solid rgba(42, 68, 46, 0.1);
+}
+
+.hero-meta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--c-slate, #4A564F);
+}
+
+body.rtl .hero-meta-badge,
+:host-context(body.rtl) .hero-meta-badge {
+  font-family: var(--font-ar-body);
+  font-size: 0.875rem;
+}
+
+.hero-meta-badge .badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--c-pistachio, #768E37);
+  opacity: 0.75;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   LARGE EDITORIAL IMAGE BLOCK (45–50% Width)
+   Thin elegant frame, subtle shadow, natural agricultural photography
+   ────────────────────────────────────────────────────────────────────────── */
+.internal-hero-media {
   position: relative;
+  width: 100%;
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.internal-hero-frame {
+  position: relative;
+  background-color: #FFFFFF;
+  border: 1px solid var(--c-sand, #DFD7C7);
+  padding: 0.85rem;
+  box-shadow: 0 16px 40px -12px rgba(17, 33, 23, 0.08);
+  border-radius: 2px;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.internal-hero-frame:hover {
+  border-color: rgba(126, 153, 59, 0.38);
+  box-shadow: 0 20px 48px -12px rgba(17, 33, 23, 0.12);
+}
+
+.internal-hero-img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+  border-radius: 1px;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.internal-hero-frame:hover .internal-hero-img {
+  transform: scale(1.018);
+}
+
+/* Plate Caption Underneath Image */
+.internal-hero-plate {
   display: flex;
   align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  user-select: none;
-  margin-inline-start: -1.75rem; /* overlapping the visual space of the text */
-  z-index: 1;
+  gap: 0.75rem;
+  padding: 0.75rem 0.25rem 0.25rem;
+  font-size: 0.775rem;
+  color: var(--c-slate-light, #7E8C83);
+  font-family: var(--font-sans);
+  border-top: 1px solid rgba(42, 68, 46, 0.06);
+  margin-top: 0.75rem;
 }
 
-/* Extremely soft, warm organic tonal area behind botanical visual */
-.inner-hero-aura {
-  position: absolute;
-  width: 125%;
-  height: 125%;
-  top: -12.5%;
-  left: -12.5%;
-  background: radial-gradient(circle at 52% 48%, rgba(126, 153, 59, 0.08) 0%, rgba(235, 229, 217, 0.42) 48%, transparent 72%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(14px);
+body.rtl .internal-hero-plate,
+:host-context(body.rtl) .internal-hero-plate {
+  font-family: var(--font-ar-body);
 }
 
-/* Authentic Pistacia vera botanical element with natural depth */
-.inner-hero-botanical {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  max-height: 310px;
-  object-fit: contain;
-  opacity: 0.76;
-  filter: contrast(0.98) drop-shadow(0 12px 28px rgba(21, 39, 30, 0.06));
-  transition: transform 0.4s ease, opacity 0.4s ease;
+.plate-marker {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--c-forest, #15271E);
+  font-size: 0.72rem;
+  padding: 0.15rem 0.45rem;
+  background: rgba(126, 153, 59, 0.12);
+  border-radius: 2px;
+  white-space: nowrap;
 }
 
-:host-context(body.rtl) .inner-hero-botanical,
-body.rtl .inner-hero-botanical {
-  transform: scaleX(-1);
+body.rtl .plate-marker,
+:host-context(body.rtl) .plate-marker {
+  font-family: var(--font-ar-body);
+  letter-spacing: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
 }
 
-/* ==========================================================================
-   PAGE-SPECIFIC COMPOSITIONS (DISTINCT VISUALS & TARGETED PLACEMENT)
-   ========================================================================== */
-
-/* ABOUT: Refined mature branch with leaves & subtle fruit clusters; positioned slightly higher */
-.about-inner-hero .inner-hero-visual {
-  align-self: flex-start;
-  margin-top: -0.5rem;
+.plate-caption {
+  color: var(--c-slate, #4A564F);
+  line-height: 1.45;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.about-inner-hero .inner-hero-botanical {
-  max-width: 390px;
-  transform: translateY(-8px) rotate(-2deg);
+/* ──────────────────────────────────────────────────────────────────────────
+   REFINED SUBTLE ANIMATION KEYFRAMES
+   Gentle fade-in + slight upward movement (no aggressive parallax or bounce)
+   ────────────────────────────────────────────────────────────────────────── */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-:host-context(body.rtl) .about-inner-hero .inner-hero-botanical,
-body.rtl .about-inner-hero .inner-hero-botanical {
-  transform: scaleX(-1) translateY(-8px) rotate(2deg);
+@keyframes heroLineExpand {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
 }
 
-/* SERVICES: Productive cluster & healthy foliage communicating agricultural cultivation; centered & slightly larger */
-.services-inner-hero .inner-hero-visual {
-  align-self: center;
+/* ──────────────────────────────────────────────────────────────────────────
+   RESPONSIVE DESIGN (Desktop -> Tablet -> Mobile)
+   Mobile: Stacks vertically; image retains full prominence (never a thumbnail)
+   ────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .internal-hero-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(1.75rem, 3.5vw, 3rem);
+  }
+
+  .internal-hero-title,
+  .inner-hero-heading {
+    font-size: clamp(2.1rem, 4vw, 2.85rem);
+  }
+
+  .internal-hero-desc,
+  .inner-hero-desc {
+    font-size: 0.98rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
-.services-inner-hero .inner-hero-botanical {
-  max-width: 370px;
-  max-height: 330px;
-  transform: scale(1.05) rotate(2deg);
-}
-
-:host-context(body.rtl) .services-inner-hero .inner-hero-botanical,
-body.rtl .services-inner-hero .inner-hero-botanical {
-  transform: scaleX(-1) scale(1.05) rotate(-2deg);
-}
-
-/* PRODUCTS: Younger botanical nursery branch with fresh leaves; slightly closer to heading */
-.products-inner-hero .inner-hero-visual {
-  margin-inline-start: -2.75rem;
-  align-self: center;
-}
-
-.products-inner-hero .inner-hero-botanical {
-  max-width: 360px;
-  transform: rotate(-3deg);
-}
-
-:host-context(body.rtl) .products-inner-hero .inner-hero-botanical,
-body.rtl .products-inner-hero .inner-hero-botanical {
-  transform: scaleX(-1) rotate(3deg);
-}
-
-/* BLOG: Close botanical compound leaves and fruit detail; compact and focused */
-.blog-inner-hero .inner-hero-visual {
-  align-self: center;
-  margin-inline-start: -1.5rem;
-}
-
-.blog-inner-hero .inner-hero-botanical {
-  max-width: 340px;
-  transform: scale(0.96) rotate(-1deg);
-}
-
-:host-context(body.rtl) .blog-inner-hero .inner-hero-botanical,
-body.rtl .blog-inner-hero .inner-hero-botanical {
-  transform: scaleX(-1) scale(0.96) rotate(1deg);
-}
-
-/* CONTACT: Simpler, calmer branch with fewer leaves; understated and serene */
-.contact-inner-hero .inner-hero-visual {
-  align-self: center;
-  max-width: 420px;
-}
-
-.contact-inner-hero .inner-hero-botanical {
-  max-width: 370px;
-  opacity: 0.85;
-  mix-blend-mode: multiply;
-  filter: contrast(1.04);
-  transform: rotate(1deg);
-}
-
-:host-context(body.rtl) .contact-inner-hero .inner-hero-botanical,
-body.rtl .contact-inner-hero .inner-hero-botanical {
-  transform: scaleX(-1) rotate(-1deg);
-}
-
-/* ==========================================================================
-   RESPONSIVE REFINEMENTS
-   ========================================================================== */
-
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .internal-editorial-hero,
   .inner-page-hero,
-  .inner-editorial-hero,
-  .botanical-editorial-header {
-    min-height: auto;
-    padding-top: clamp(4rem, 8vw, 5rem);
-    padding-bottom: clamp(2rem, 4.5vw, 2.75rem);
+  .products-hero-section {
+    padding-top: clamp(1rem, 3vw, 1.5rem);
+    padding-bottom: 2.25rem;
   }
 
-  .inner-hero-container {
-    gap: 1.5rem;
+  .internal-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
   }
 
-  .inner-hero-visual {
-    margin-inline-start: -1rem;
-    flex: 0 0 38%;
-  }
-
-  .inner-hero-botanical {
-    max-width: 280px;
-    opacity: 0.68;
-  }
-}
-
-@media (max-width: 680px) {
-  .inner-hero-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.25rem;
-  }
-
+  .internal-hero-content,
   .inner-hero-text {
-    flex: 1 1 100%;
     max-width: 100%;
   }
 
-  .inner-hero-visual {
-    position: absolute;
-    right: -15px;
-    bottom: -15px;
-    margin-inline-start: 0;
-    max-width: 180px;
-    opacity: 0.28;
+  .internal-hero-media {
+    order: 2;
+    width: 100%;
   }
 
-  :host-context(body.rtl) .inner-hero-visual,
-  body.rtl .inner-hero-visual {
-    right: auto;
-    left: -15px;
+  .internal-hero-img {
+    aspect-ratio: 16 / 10;
+    max-height: 380px;
+    min-height: 220px;
   }
 
-  .inner-hero-botanical {
-    max-width: 160px;
-    max-height: 160px;
-  }
-
-  .inner-hero-heading {
-    font-size: clamp(1.85rem, 6.5vw, 2.35rem);
-  }
-
-  .inner-hero-desc {
-    font-size: 0.95rem;
-    line-height: 1.65;
+  .plate-caption {
+    white-space: normal;
   }
 }
 
