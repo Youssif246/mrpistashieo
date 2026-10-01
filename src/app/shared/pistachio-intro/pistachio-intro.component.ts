@@ -25,7 +25,7 @@ if (typeof window !== 'undefined') {
 }
 
 export function hasIntroAlreadyPlayed(): boolean {
-  if (typeof window === 'undefined') return true;
+  if (typeof window === 'undefined') return false;
   return hasIntroPlayedInSession;
 }
 
