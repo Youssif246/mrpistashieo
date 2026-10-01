@@ -1209,6 +1209,8 @@
 
 .cta-eyebrow-wrap {
   margin-bottom: 0.85rem;
+  margin-inline: auto;
+  justify-content: center;
 }
 
 .cta-monograph-heading {
@@ -1218,12 +1220,16 @@
   line-height: 1.15;
   color: var(--c-forest);
   margin: 0 0 0.65rem 0;
+  text-align: center;
+  width: 100%;
 }
 
-:host-context(body.rtl) .cta-monograph-heading {
-  font-family: var(--font-ar-display);
+:host-context([dir="rtl"]) .cta-monograph-heading,
+:host-context(html[dir="rtl"]) .cta-monograph-heading {
+  font-family: var(--font-ar-display, 'IBM Plex Sans Arabic', system-ui);
   font-weight: 600;
   line-height: 1.34;
+  text-align: center !important;
 }
 
 .cta-monograph-sub {
@@ -1232,11 +1238,15 @@
   font-weight: 600;
   color: var(--c-forest-mid);
   margin: 0 0 1rem 0;
+  text-align: center;
+  width: 100%;
 }
 
-:host-context(body.rtl) .cta-monograph-sub {
-  font-family: var(--font-ar-body);
+:host-context([dir="rtl"]) .cta-monograph-sub,
+:host-context(html[dir="rtl"]) .cta-monograph-sub {
+  font-family: var(--font-ar-body, 'IBM Plex Sans Arabic', system-ui);
   font-size: 1.08rem;
+  text-align: center !important;
 }
 
 .cta-monograph-desc {
@@ -1244,13 +1254,17 @@
   font-size: 0.96rem;
   line-height: 1.78;
   color: var(--c-slate);
-  margin: 0 0 2rem 0;
+  margin: 0 auto 2rem auto;
   max-width: 660px;
+  text-align: center;
+  width: 100%;
 }
 
-:host-context(body.rtl) .cta-monograph-desc {
-  font-family: var(--font-ar-body);
+:host-context([dir="rtl"]) .cta-monograph-desc,
+:host-context(html[dir="rtl"]) .cta-monograph-desc {
+  font-family: var(--font-ar-body, 'IBM Plex Sans Arabic', system-ui);
   font-size: 0.98rem;
+  text-align: center !important;
 }
 
 .cta-actions-cluster {
@@ -1260,6 +1274,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2.5rem;
+  width: 100%;
 }
 
 .btn-editorial-cta {
@@ -1279,8 +1294,9 @@
   transition: all 0.28s ease;
 }
 
-:host-context(body.rtl) .btn-editorial-cta {
-  font-family: var(--font-ar-body);
+:host-context([dir="rtl"]) .btn-editorial-cta,
+:host-context(html[dir="rtl"]) .btn-editorial-cta {
+  font-family: var(--font-ar-body, 'IBM Plex Sans Arabic', system-ui);
   letter-spacing: 0.02em;
   font-size: 0.88rem;
 }
@@ -1402,8 +1418,14 @@
   .cta-actions-cluster {
     flex-direction: column;
     width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   .btn-editorial-cta {
     width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+    text-align: center;
+    justify-content: center;
   }
 }
