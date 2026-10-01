@@ -335,7 +335,9 @@
         <div class="cultivate-card-content">
           <div class="cultivate-tag-row">
             <span class="cultivate-cat-label"><i class="fa-solid fa-scissors cat-icon" aria-hidden="true"></i> {{ i18n.t().servicesPage.labels.graftingCanopy }}</span>
+            @if (i18n.t().home.services.items[3].esTitle) {
             <span class="cultivate-es-meta">{{ i18n.t().home.services.items[3].esTitle }}</span>
+            }
           </div>
 
           <span class="cultivate-subtitle">{{ i18n.t().home.services.items[3].subtitle }}</span>
@@ -376,7 +378,9 @@
         <div class="cultivate-card-content">
           <div class="cultivate-tag-row">
             <span class="cultivate-cat-label"><i class="fa-solid fa-microscope cat-icon" aria-hidden="true"></i> {{ i18n.t().servicesPage.labels.consultingIpm }}</span>
+            @if (i18n.t().home.services.items[4].esTitle) {
             <span class="cultivate-es-meta">{{ i18n.t().home.services.items[4].esTitle }}</span>
+            }
           </div>
 
           <span class="cultivate-subtitle">{{ i18n.t().home.services.items[4].subtitle }}</span>
@@ -417,7 +421,9 @@
         <div class="cultivate-card-content">
           <div class="cultivate-tag-row">
             <span class="cultivate-cat-label"><i class="fa-solid fa-shield-halved cat-icon" aria-hidden="true"></i> {{ i18n.t().servicesPage.labels.orchardStabilization }}</span>
+            @if (i18n.t().home.services.items[5].esTitle) {
             <span class="cultivate-es-meta">{{ i18n.t().home.services.items[5].esTitle }}</span>
+            }
           </div>
 
           <span class="cultivate-subtitle">{{ i18n.t().home.services.items[5].subtitle }}</span>
@@ -546,9 +552,6 @@
       
       <div class="editorial-brand-eyebrow cta-eyebrow-wrap">
         <span class="eyebrow-accent-line" aria-hidden="true"></span>
-        <span class="eyebrow-botanical-pip" aria-hidden="true">
-          <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
-        </span>
         <span class="brand-eyebrow-text">{{ i18n.t().servicesPage.cta.badge }}</span>
       </div>
 
@@ -565,19 +568,11 @@
       </p>
 
       <div class="cta-actions-cluster">
-        <a [href]="getServicesWhatsApp()" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="btn-editorial-cta btn-cta-primary"
-           aria-label="Direct WhatsApp Consultation">
-          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-          <span>{{ i18n.t().servicesPage.cta.button }}</span>
-        </a>
-
         <a routerLink="/contact" 
-           class="btn-editorial-cta btn-cta-secondary"
-           aria-label="Navigate to Contact Form">
-          <span>{{ i18n.t().servicesPage.cta.secondary }}</span>
+           class="btn-editorial-cta btn-cta-primary"
+           aria-label="Contact Agricultural Team">
+          <span>{{ i18n.t().servicesPage.cta.button }}</span>
+          <i class="fa-solid fa-arrow-right icon-dir" aria-hidden="true"></i>
         </a>
       </div>
 

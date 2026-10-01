@@ -1,0 +1,173 @@
+<div class="article-details-page" [class.is-rtl]="i18n.isRtl()">
+  <!-- Ambient Subtle Background -->
+  <div class="article-bg-ambient" aria-hidden="true">
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-bottom"></div>
+  </div>
+
+  @if (article(); as item) {
+    <div class="container-narrow article-container">
+      <!-- Breadcrumb Navigation -->
+      <nav class="editorial-breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li>
+            <a routerLink="/">
+              <i class="fa-solid fa-house" aria-hidden="true"></i>
+              <span>{{ i18n.currentLang() === 'ar' ? 'الرئيسية' : 'Home' }}</span>
+            </a>
+          </li>
+          <li class="crumb-separator" aria-hidden="true">
+            <i [class]="i18n.isRtl() ? 'fa-solid fa-chevron-left' : 'fa-solid fa-chevron-right'"></i>
+          </li>
+          <li>
+            <a routerLink="/articles">
+              <span>{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</span>
+            </a>
+          </li>
+          <li class="crumb-separator" aria-hidden="true">
+            <i [class]="i18n.isRtl() ? 'fa-solid fa-chevron-left' : 'fa-solid fa-chevron-right'"></i>
+          </li>
+          <li aria-current="page" class="active">
+            <span>{{ item.category }}</span>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="article-header">
+        <div class="category-pill-wrap">
+          <span class="category-pill">{{ item.category }}</span>
+        </div>
+
+        <h1 class="article-headline">{{ item.title }}</h1>
+
+        <p class="article-lead-excerpt">{{ item.excerpt }}</p>
+
+        <!-- Meta Strip -->
+        <div class="article-meta-strip">
+          <div class="author-block">
+            <div class="author-avatar" aria-hidden="true">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <div class="author-info">
+              <span class="author-name">
+                {{ i18n.currentLang() === 'ar' ? 'فريق الأبحاث الزراعية' : 'Mister Pistachio Agronomy Team' }}
+              </span>
+              <span class="author-title">
+                {{ i18n.currentLang() === 'ar' ? 'قسم الهندسة والتطوير الزراعي' : 'Orchard Engineering & Plant Science' }}
+              </span>
+            </div>
+          </div>
+
+          <div class="meta-details">
+            <span class="meta-item">
+              <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+              {{ item.date }}
+            </span>
+            <span class="meta-dot">·</span>
+            <span class="meta-item">
+              <i class="fa-regular fa-clock" aria-hidden="true"></i>
+              {{ item.readTime }}
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Featured Image -->
+      <div class="article-cover-frame">
+        <img [src]="item.coverImage" [alt]="item.title" class="cover-image" width="1120" height="630" loading="eager">
+      </div>
+
+      <!-- Long-form Article Body Content -->
+      <main class="article-body-content">
+        @for (block of item.content; track $index) {
+          @if (block.type === 'paragraph') {
+            <p class="content-paragraph">{{ block.text }}</p>
+          }
+
+          @if (block.type === 'heading') {
+            <h2 class="content-heading">{{ block.text }}</h2>
+          }
+
+          @if (block.type === 'image') {
+            <figure class="content-figure">
+              <img [src]="block.src" [alt]="block.alt" loading="lazy" width="960" height="540">
+              @if (block.alt) {
+                <figcaption class="content-caption">
+                  <i class="fa-solid fa-camera" aria-hidden="true"></i>
+                  <span>{{ block.alt }}</span>
+                </figcaption>
+              }
+            </figure>
+          }
+
+          @if (block.type === 'list') {
+            <div class="content-list-wrapper">
+              <ul class="content-list">
+                @for (listItem of block.items; track listItem) {
+                  <li>
+                    <span class="list-bullet-icon" aria-hidden="true">
+                      <i class="fa-solid fa-check"></i>
+                    </span>
+                    <span class="list-text">{{ listItem }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+          }
+        }
+      </main>
+
+      <!-- Related Articles Section -->
+      @if (relatedArticles().length > 0) {
+        <section class="related-articles-section" aria-label="Related Articles">
+          <div class="related-header">
+            <h3 class="related-title">
+              {{ i18n.currentLang() === 'ar' ? 'دراسات ومقالات ذات صلة' : 'Related Agronomic Insights' }}
+            </h3>
+            <a routerLink="/articles" class="view-all-link">
+              <span>{{ i18n.currentLang() === 'ar' ? 'استعراض كافة المقالات' : 'Explore All Guides' }}</span>
+              <i [class]="i18n.isRtl() ? 'fa-solid fa-arrow-left' : 'fa-solid fa-arrow-right'" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <div class="related-grid">
+            @for (rel of relatedArticles(); track rel.id) {
+              <article class="related-card">
+                <a [routerLink]="['/articles', rel.slug]" class="related-image-link" [attr.aria-label]="rel.title">
+                  <img [src]="rel.coverImage" [alt]="rel.title" loading="lazy" width="400" height="240">
+                  <span class="related-category-pill">{{ rel.category }}</span>
+                </a>
+                <div class="related-body">
+                  <div class="related-meta">
+                    <span>{{ rel.date }}</span>
+                    <span>•</span>
+                    <span>{{ rel.readTime }}</span>
+                  </div>
+                  <h4 class="related-card-title">
+                    <a [routerLink]="['/articles', rel.slug]">{{ rel.title }}</a>
+                  </h4>
+                </div>
+              </article>
+            }
+          </div>
+        </section>
+      }
+    </div>
+  } @else {
+    <!-- 404 Article Not Found -->
+    <div class="container-narrow not-found-wrapper">
+      <div class="not-found-card">
+        <i class="fa-solid fa-book-open not-found-icon" aria-hidden="true"></i>
+        <h2>{{ i18n.currentLang() === 'ar' ? 'المقال غير متوفر' : 'Article Not Found' }}</h2>
+        <p>
+          {{ i18n.currentLang() === 'ar' ? 'عذراً، لم نتمكن من العثور على الدراسة المطلوبة. قد يكون الرابط قد تم تحديثه.' : 'Sorry, the requested article could not be located. It may have been moved or updated.' }}
+        </p>
+        <a routerLink="/articles" class="btn-back-articles">
+          <i [class]="i18n.isRtl() ? 'fa-solid fa-arrow-right' : 'fa-solid fa-arrow-left'" aria-hidden="true"></i>
+          <span>{{ i18n.currentLang() === 'ar' ? 'العودة إلى فهرس المقالات' : 'Back to Articles Directory' }}</span>
+        </a>
+      </div>
+    </div>
+  }
+</div>

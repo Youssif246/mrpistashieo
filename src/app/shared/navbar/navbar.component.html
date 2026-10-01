@@ -43,6 +43,15 @@
           </svg>
         </span>
       </a>
+      <a routerLink="/articles" routerLinkActive="active" class="nav-link">
+        <span class="nav-link-text">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</span>
+        <span class="nav-active-botanical" aria-hidden="true">
+          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
+            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
+          </svg>
+        </span>
+      </a>
       <a routerLink="/contact" routerLinkActive="active" class="nav-link">
         <span class="nav-link-text">{{ i18n.t().navbar.contact }}</span>
         <span class="nav-active-botanical" aria-hidden="true">
@@ -69,18 +78,21 @@
         </button>
       </div>
 
-      <!-- Social Media Platform Icons with Authentic Brand Colors -->
+      <!-- Social Media Platform Icons (Refined Editorial Botanical Styling) -->
       <div class="navbar-social-links" role="group" aria-label="Social Media">
-        <a [href]="config.social.x" target="_blank" rel="noopener noreferrer" class="nav-social-btn social-x" aria-label="X (Twitter)">
-          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-        </a>
-        <a [href]="config.social.instagram" target="_blank" rel="noopener noreferrer" class="nav-social-btn social-instagram" aria-label="Instagram">
+        <a [href]="config.social.instagram" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-instagram" aria-label="Instagram">
           <i class="fa-brands fa-instagram" aria-hidden="true"></i>
         </a>
-        <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="nav-social-btn social-facebook" aria-label="Facebook">
+        <a [href]="config.social.tiktok" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-tiktok" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.x" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-x" aria-label="X (Twitter)">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-facebook" aria-label="Facebook">
           <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
         </a>
-        <a [href]="config.social.youtube" target="_blank" rel="noopener noreferrer" class="nav-social-btn social-youtube" aria-label="YouTube">
+        <a [href]="config.social.youtube" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-youtube" aria-label="YouTube">
           <i class="fa-brands fa-youtube" aria-hidden="true"></i>
         </a>
       </div>
@@ -113,6 +125,9 @@
       <a routerLink="/products" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.t().navbar.products }}</span>
       </a>
+      <a routerLink="/articles" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+        <span class="m-link-text">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</span>
+      </a>
       <a routerLink="/contact" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.t().navbar.contact }}</span>
       </a>
@@ -124,6 +139,30 @@
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
         <span>{{ i18n.t().navbar.cta }}</span>
       </a>
+
+      <!-- Mobile Social Media Icons (matching navbar styling) -->
+      <div class="mobile-social-links" role="group" aria-label="Social Media">
+        <a [href]="config.social.instagram" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-instagram"
+          (click)="closeMobileMenu()" aria-label="Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.tiktok" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-tiktok"
+          (click)="closeMobileMenu()" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.x" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-x"
+          (click)="closeMobileMenu()" aria-label="X (Twitter)">
+          <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-facebook"
+          (click)="closeMobileMenu()" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.youtube" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-youtube"
+          (click)="closeMobileMenu()" aria-label="YouTube">
+          <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   </div>
   }

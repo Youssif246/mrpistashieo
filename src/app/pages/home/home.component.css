@@ -211,12 +211,10 @@
   height: 52px;
   min-width: 215px;
   padding: 0 1.85rem;
-  background-color: rgba(14, 38, 25, 0.92);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(138, 168, 86, 0.45);
+  background-color: var(--c-logo-primary);
+  border: 1px solid var(--c-logo-bright);
   border-radius: 4px;
-  color: #FAF8F3;
+  color: #FFFFFF;
   text-decoration: none;
   font-family: var(--font-sans);
   font-size: 0.8125rem;
@@ -239,14 +237,14 @@
 }
 
 .hero-cta-primary .cta-wa-icon {
-  color: #8FC947;
+  color: #FFFFFF;
   font-size: 1.05rem;
   transition: transform 250ms ease;
 }
 
 .hero-cta-primary:hover {
-  background-color: rgba(22, 54, 36, 0.98);
-  border-color: rgba(154, 188, 98, 0.72);
+  background-color: var(--c-logo-deep);
+  border-color: var(--c-logo-primary);
   box-shadow: 0 6px 22px rgba(10, 20, 14, 0.48);
   transform: translateY(-2px);
   color: #FFFFFF;
@@ -264,10 +262,10 @@
   height: 52px;
   min-width: 245px;
   padding: 0 1.85rem;
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: rgba(250, 246, 239, 0.12);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(246, 242, 232, 0.38);
+  border: 1.5px solid var(--c-ochre);
   border-radius: 4px;
   color: #FAF8F3;
   text-decoration: none;
@@ -282,6 +280,13 @@
     color 280ms cubic-bezier(0.2, 0.8, 0.2, 1),
     transform 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
   cursor: pointer;
+}
+
+.hero-cta-secondary:hover {
+  background-color: var(--c-ochre);
+  border-color: var(--c-ochre);
+  color: var(--c-forest);
+  transform: translateY(-2px);
 }
 
 :host-context(body.rtl) .hero-cta-secondary {
@@ -424,8 +429,8 @@
    2. Botanical Pistachio Agricultural Spread (Elevated Layered Composition)
    -------------------------------------------------------------------------- */
 .botanical-editorial-section {
-  background-color: #FAF7F0;
-  border-bottom: 1px solid rgba(118, 142, 55, 0.12);
+  background-color: var(--c-ivory);
+  border-bottom: 1px solid rgba(194, 160, 115, 0.28);
   padding-block: clamp(4.5rem, 6.75vw, 6.25rem);
   position: relative;
   overflow: hidden;
@@ -885,11 +890,11 @@
    -------------------------------------------------------------------------- */
 .section-service-index {
   position: relative;
-  background-color: #F4F6EE;
+  background-color: var(--c-ivory-light);
   padding-block: clamp(4.5rem, 6.5vw, 6.5rem);
   overflow: hidden;
-  border-top: 1px solid rgba(118, 142, 55, 0.12);
-  border-bottom: 1px solid rgba(118, 142, 55, 0.12);
+  border-top: 1px solid rgba(194, 160, 115, 0.2);
+  border-bottom: 1px solid rgba(194, 160, 115, 0.2);
 }
 
 /* Subtle Architectural Botanical Layer */
@@ -1400,11 +1405,9 @@
    -------------------------------------------------------------------------- */
 .section-botanical-monograph {
   padding-block: clamp(5rem, 8vw, 7.5rem);
-  background: radial-gradient(circle at 12% 18%, rgba(126, 153, 59, 0.05) 0%, transparent 45%),
-    radial-gradient(circle at 88% 82%, rgba(212, 180, 125, 0.06) 0%, transparent 40%),
-    #FAF7F2;
-  border-top: 1px solid rgba(118, 142, 55, 0.12);
-  border-bottom: 1px solid rgba(118, 142, 55, 0.12);
+  background-color: var(--c-ivory);
+  border-top: 1px solid rgba(194, 160, 115, 0.2);
+  border-bottom: 1px solid rgba(194, 160, 115, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -1630,23 +1633,37 @@
 .specimen-coord-strip {
   position: absolute;
   top: 1.25rem;
-  inset-inline-start: 50%;
+  left: 50%;
+  right: auto;
   transform: translateX(-50%);
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(17, 33, 23, 0.78);
+  background: rgba(17, 33, 23, 0.84);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  padding: 0.35rem 0.9rem;
+  padding: 0.35rem 0.95rem;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #E2ECE5;
   white-space: nowrap;
   z-index: 3;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  max-width: calc(100% - 3.5rem);
+}
+
+:host-context(body.rtl) .specimen-coord-strip,
+body.rtl .specimen-coord-strip {
+  left: 50% !important;
+  right: auto !important;
+  inset-inline-start: auto !important;
+  transform: translateX(-50%) !important;
+  letter-spacing: normal;
+  font-family: var(--font-ar-body);
+  font-size: 0.76rem;
 }
 
 .specimen-coord-strip i {
@@ -2083,10 +2100,10 @@
    -------------------------------------------------------------------------- */
 .section-nursery-editorial {
   padding-block: clamp(4.5rem, 7vw, 6.5rem);
-  background-color: #F3F6ED;
+  background-color: var(--c-ivory-light);
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(118, 142, 55, 0.12);
+  border-bottom: 1px solid rgba(194, 160, 115, 0.2);
 }
 
 /* Nursery Ambient Botanical Layer (Geometric-Organic Nursery Cultivation Rows) */
@@ -2124,7 +2141,7 @@
   font-size: clamp(6rem, 14vw, 13rem);
   font-weight: 900;
   letter-spacing: 0.16em;
-  color: rgba(126, 153, 59, 0.05);
+  color: rgba(21, 39, 30, 0.035);
   line-height: 0.9;
   display: block;
 }
@@ -2165,7 +2182,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: var(--c-pistachio);
+  background-color: var(--c-logo-primary);
 }
 
 .nursery-kicker {
@@ -2180,7 +2197,7 @@
   font-family: var(--font-serif);
   font-size: clamp(2.3rem, 4vw, 3.4rem);
   line-height: 1.15;
-  color: var(--c-forest-dark);
+  color: var(--c-forest);
   font-weight: 600;
   margin-bottom: 1.25rem;
 }
@@ -2188,7 +2205,7 @@
 .nursery-lead-text {
   font-size: 1.05rem;
   font-weight: 500;
-  color: var(--c-forest);
+  color: var(--c-pistachio-deep);
   line-height: 1.6;
   margin-bottom: 0.85rem;
 }
@@ -2211,17 +2228,25 @@
 .connector-track {
   height: 1px;
   width: 48px;
-  background: rgba(126, 153, 59, 0.45);
+  background: rgba(194, 160, 115, 0.4);
 }
 
 .connector-icon {
   font-size: 0.75rem;
-  color: var(--c-pistachio);
+  color: var(--c-logo-primary);
 }
 
 .nursery-cta-wrap {
   display: flex;
   align-items: center;
+}
+
+.nursery-cta-desktop {
+  display: flex;
+}
+
+.nursery-cta-mobile {
+  display: none;
 }
 
 .nursery-text-cta {
@@ -2231,16 +2256,16 @@
   min-height: 46px;
   padding: 0 1.65rem;
   border-radius: 4px;
-  border: 1px solid rgba(21, 39, 30, 0.22);
-  background-color: transparent;
-  color: var(--c-forest);
+  border: 1px solid var(--c-logo-primary);
+  background-color: var(--c-logo-primary);
+  color: #FFFFFF;
   font-family: var(--font-sans);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: none;
+  box-shadow: 0 4px 14px rgba(10, 20, 14, 0.25);
   transition:
     background-color 280ms cubic-bezier(0.2, 0.8, 0.2, 1),
     border-color 280ms cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -2256,10 +2281,11 @@
 }
 
 .nursery-text-cta:hover {
-  border-color: rgba(118, 142, 55, 0.65);
-  background-color: rgba(118, 142, 55, 0.10);
-  color: var(--c-forest-dark);
+  border-color: var(--c-logo-deep);
+  background-color: var(--c-logo-deep);
+  color: #FFFFFF;
   transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(10, 20, 14, 0.35);
 }
 
 .nursery-visual-col {
@@ -2357,7 +2383,7 @@
     width: 1px;
     height: 100%;
     min-height: 48px;
-    background: rgba(220, 213, 201, 0.85);
+    background: rgba(194, 160, 115, 0.35);
   }
 }
 
@@ -2377,18 +2403,18 @@
   width: 26px;
   height: 26px;
   border-radius: 6px;
-  background: rgba(126, 153, 59, 0.1);
+  background: rgba(59, 124, 4, 0.28);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--c-pistachio-deep);
+  color: var(--c-logo-bright);
   font-size: 0.85rem;
   flex-shrink: 0;
   transition: all 250ms ease;
 }
 
 .nursery-spec-item:hover .spec-icon-wrap {
-  background: var(--c-pistachio);
+  background: var(--c-logo-primary);
   color: #FFFFFF;
 }
 
@@ -2426,7 +2452,7 @@
   }
 
   .nursery-editorial-col {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .nursery-cta-wrap {
@@ -2440,6 +2466,35 @@
   }
 }
 
+@media (max-width: 1023px) {
+  .nursery-editorial-layout {
+    gap: 1.25rem;
+  }
+
+  .nursery-body-text {
+    margin-bottom: 0;
+  }
+
+  .nursery-connector-line {
+    display: none;
+  }
+
+  .nursery-editorial-col {
+    margin-bottom: 0;
+  }
+
+  .nursery-cta-desktop {
+    display: none !important;
+  }
+
+  .nursery-cta-mobile {
+    display: flex !important;
+    width: 100%;
+    margin-top: 1.25rem;
+    justify-content: center;
+  }
+}
+
 /* --------------------------------------------------------------------------
    6. Harvest Climax (Panoramic Photography + Process Line)
    -------------------------------------------------------------------------- */
@@ -2449,10 +2504,10 @@
    -------------------------------------------------------------------------- */
 .section-cultivation-journey {
   padding-block: clamp(6rem, 10vw, 10.5rem);
-  background-color: #FAF7F2;
+  background-color: var(--c-cream);
   position: relative;
-  border-top: 1px solid rgba(118, 142, 55, 0.12);
-  border-bottom: 1px solid rgba(118, 142, 55, 0.12);
+  border-top: 1px solid rgba(194, 160, 115, 0.28);
+  border-bottom: 1px solid rgba(194, 160, 115, 0.28);
 }
 
 /* Subtle Architectural Botanical Ambient Layer */
@@ -3412,4 +3467,613 @@
 
 :host-context(body.rtl) .botanical-ambient-branch {
   transform-origin: top left;
+}
+
+/* ==========================================================================
+   7. SOCIAL EDITORIAL & AGRONOMIC COMMUNITY SECTION (INSPIRED BY BRAND IDENTITY)
+   ========================================================================== */
+.section-social-editorial {
+  position: relative;
+  padding-block: clamp(4.5rem, 8vw, 7rem);
+  background-color: var(--c-ivory-light);
+  border-top: 1px solid var(--c-sand);
+  border-bottom: 1px solid var(--c-sand);
+  overflow: hidden;
+}
+
+.social-editorial-spread {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+
+/* Column 1: Agronomic Quote */
+.social-quote-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.founder-quote-block {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.3vw, 1.85rem);
+  line-height: 1.55;
+  color: var(--c-forest);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+:host-context(body.rtl) .quote-text {
+  font-family: var(--font-ar);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.quote-author-lockup {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--c-sand);
+}
+
+.author-badge-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: var(--c-white);
+  border: 2px solid var(--c-pistachio);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-shadow: 0 4px 14px rgba(17, 33, 23, 0.08);
+  flex-shrink: 0;
+}
+
+.avatar-brand-crest {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.author-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.author-name {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--c-forest);
+  font-style: normal;
+}
+
+:host-context(body.rtl) .author-name {
+  font-family: var(--font-ar);
+}
+
+.author-title {
+  font-size: 0.84rem;
+  color: var(--c-slate-light);
+  letter-spacing: 0.03em;
+}
+
+/* Column 2: Social Channel Dossier Card */
+.social-dossier-card {
+  background-color: var(--c-white);
+  border: 1px solid var(--c-sand);
+  border-radius: 16px;
+  padding: clamp(2rem, 3.5vw, 3rem);
+  box-shadow: 0 10px 30px rgba(17, 33, 23, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dossier-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.channel-brand-badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--c-ivory);
+  border: 2px solid var(--c-pistachio-subtle);
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.channel-crest-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.channel-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.channel-display-title {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--c-forest);
+  margin: 0;
+  line-height: 1.25;
+}
+
+:host-context(body.rtl) .channel-display-title {
+  font-family: var(--font-ar);
+}
+
+.channel-handle-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--c-pistachio);
+}
+
+.channel-bio-prose {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: var(--c-slate);
+  margin: 0;
+  border-top: 1px solid rgba(223, 215, 199, 0.6);
+  padding-top: 1.25rem;
+}
+
+.btn-instagram-follow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.95rem 1.5rem;
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(253, 29, 29, 0.25);
+  transition: transform 0.25s var(--ease-editorial), box-shadow 0.25s var(--ease-editorial);
+}
+
+:host-context(body.rtl) .btn-instagram-follow {
+  font-family: var(--font-ar);
+}
+
+.btn-instagram-follow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(253, 29, 29, 0.35);
+  color: #FFFFFF;
+}
+
+.channel-platforms-roster {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(223, 215, 199, 0.6);
+  padding-top: 1.25rem;
+}
+
+.platforms-sub-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-slate-light);
+}
+
+.platforms-pill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+}
+
+.platform-mini-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 8px;
+  background-color: var(--c-ivory);
+  border: 1px solid var(--c-sand);
+  color: var(--c-forest);
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 600;
+  transition: all 0.22s var(--ease-editorial);
+}
+
+.platform-mini-pill:hover {
+  background-color: var(--c-forest);
+  color: #FFFFFF;
+  border-color: var(--c-forest);
+  transform: translateY(-1.5px);
+}
+
+@media (max-width: 960px) {
+  .social-editorial-spread {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .platforms-pill-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   7. AGRONOMIC LEADERSHIP & FOUNDER'S PERSPECTIVE (STANDALONE SECTION)
+   ══════════════════════════════════════════════════════════════════════════ */
+.section-expert-quote {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  background-color: var(--c-ivory-light);
+  border-top: 1px solid rgba(194, 160, 115, 0.22);
+  border-bottom: 1px solid rgba(194, 160, 115, 0.22);
+  position: relative;
+  overflow: hidden;
+}
+
+.expert-quote-container {
+  max-width: 960px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.expert-quote-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.expert-quote-eyebrow .eyebrow-accent-line {
+  background-color: var(--c-logo-primary);
+}
+
+.expert-quote-eyebrow .brand-eyebrow-text {
+  color: var(--c-logo-deep);
+}
+
+.expert-quote-body {
+  font-family: var(--font-serif);
+  font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+  line-height: 1.45;
+  color: var(--c-forest);
+  font-style: italic;
+  margin: 0 0 2.5rem 0;
+  letter-spacing: -0.01em;
+}
+
+:host-context([dir="rtl"]) .expert-quote-body,
+:host-context(html[dir="rtl"]) .expert-quote-body {
+  font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.expert-author-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: #FFFFFF;
+  padding: 0.9rem 2rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(194, 160, 115, 0.4);
+  box-shadow: 0 6px 20px rgba(14, 32, 19, 0.06);
+}
+
+.expert-avatar-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 2px solid var(--c-logo-primary);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.expert-avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.expert-author-info {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 0.25rem;
+}
+
+.expert-author-name {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--c-forest);
+  font-style: normal !important;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: normal !important;
+  display: block;
+}
+
+:host-context([dir="rtl"]) .expert-author-name,
+:host-context(html[dir="rtl"]) .expert-author-name {
+  font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+  font-style: normal !important;
+  color: var(--c-forest);
+}
+
+.expert-author-title {
+  font-size: 0.88rem;
+  color: var(--c-slate);
+  font-style: normal !important;
+  line-height: 1.45;
+  display: block;
+}
+
+:host-context([dir="rtl"]) .expert-author-title,
+:host-context(html[dir="rtl"]) .expert-author-title {
+  font-family: var(--font-ar-body), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
+  font-style: normal !important;
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   8. DEDICATED INSTAGRAM & OFFICIAL SOCIAL SHOWCASE (STANDALONE SECTION)
+   ══════════════════════════════════════════════════════════════════════════ */
+.section-instagram-dedicated {
+  padding: clamp(5.5rem, 9vw, 8.5rem) 0;
+  background-color: var(--c-ivory);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(194, 160, 115, 0.22);
+}
+
+.instagram-dedicated-header {
+  text-align: center;
+  max-width: 760px;
+  margin-inline: auto;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instagram-dedicated-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.instagram-dedicated-eyebrow .eyebrow-accent-line {
+  background-color: var(--c-logo-primary);
+}
+
+.instagram-dedicated-eyebrow .brand-eyebrow-text {
+  color: var(--c-logo-deep);
+}
+
+.instagram-dedicated-title {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  color: var(--c-forest);
+  margin-bottom: 1rem;
+  letter-spacing: -0.015em;
+  text-align: center;
+  width: 100%;
+}
+
+:host-context([dir="rtl"]) .instagram-dedicated-title,
+:host-context(html[dir="rtl"]) .instagram-dedicated-title {
+  font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
+  text-align: center !important;
+}
+
+.instagram-dedicated-lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--c-slate);
+  margin: 0;
+  text-align: center;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+:host-context([dir="rtl"]) .instagram-dedicated-lead,
+:host-context(html[dir="rtl"]) .instagram-dedicated-lead {
+  font-family: var(--font-ar-body), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
+  text-align: center !important;
+}
+
+.instagram-profile-dossier {
+  background: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid rgba(194, 160, 115, 0.35);
+  box-shadow: 0 10px 32px -8px rgba(14, 32, 19, 0.06);
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  max-width: 880px;
+  margin-inline: auto;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.instagram-dossier-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.instagram-user-identity {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.instagram-crest-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  padding: 6px;
+  box-shadow: 0 0 0 2px #E1306C, 0 0 0 5px rgba(225, 48, 108, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.instagram-crest-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.instagram-user-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.instagram-display-name {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--c-forest);
+  margin: 0;
+}
+
+:host-context([dir="rtl"]) .instagram-display-name,
+:host-context(html[dir="rtl"]) .instagram-display-name {
+  font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
+}
+
+.instagram-username {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #C13584;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-instagram-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.6rem;
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(253, 29, 29, 0.28);
+  transition: transform 0.25s var(--ease-editorial), box-shadow 0.25s var(--ease-editorial);
+}
+
+:host-context([dir="rtl"]) .btn-instagram-action,
+:host-context(html[dir="rtl"]) .btn-instagram-action {
+  font-family: var(--font-ar-body), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
+}
+
+.btn-instagram-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(253, 29, 29, 0.38);
+  color: #FFFFFF;
+}
+
+.instagram-bio-strip {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--c-slate);
+  border-top: 1px solid rgba(223, 215, 199, 0.6);
+  padding-top: 1.25rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .instagram-profile-dossier {
+    padding: clamp(1.25rem, 4vw, 1.5rem);
+    border-radius: 14px;
+    gap: 1.25rem;
+    max-width: 420px;
+    margin-inline: auto;
+    margin-bottom: 0;
+  }
+
+  .instagram-dossier-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.15rem;
+  }
+
+  .instagram-user-identity {
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .instagram-crest-avatar {
+    width: 62px;
+    height: 62px;
+  }
+
+  .instagram-display-name {
+    font-size: 1.2rem;
+  }
+
+  .btn-instagram-action {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 14px rgba(253, 29, 29, 0.25);
+  }
+
+  .instagram-bio-strip {
+    font-size: 0.88rem;
+    line-height: 1.65;
+    text-align: center;
+    padding-top: 1rem;
+  }
 }

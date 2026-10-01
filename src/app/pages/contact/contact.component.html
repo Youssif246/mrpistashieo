@@ -12,7 +12,7 @@
   <header class="internal-editorial-hero" id="contactHero">
     <div class="internal-hero-container">
       <div class="internal-hero-grid">
-        
+
         <!-- Content Block: Right in RTL, Left in LTR -->
         <div class="internal-hero-content">
           <div class="internal-hero-eyebrow">
@@ -40,22 +40,20 @@
             <span class="strip-sep">/</span>
             <span class="hero-meta-badge">
               <span class="badge-dot"></span>
-              {{ i18n.currentLang() === 'ar' ? 'استجابة مباشرة < 24 ساعة' : 'Direct Response < 24h' }}
-            </span>
+              {{ i18n.currentLang() === 'ar' ? 'استجابة مباشرة < 24 ساعة' : 'Direct Response < 24h' }} </span>
           </div>
         </div>
 
         <!-- Large Custom Image Block (45-50% width) -->
         <div class="internal-hero-media">
           <div class="internal-hero-frame">
-            <img src="/hero-images/hero-contact.jpg" 
-                 alt="Specialist pistachio nursery grounds and consultation estate" 
-                 class="internal-hero-img"
-                 loading="eager">
+            <img src="/hero-images/hero-contact.jpg" alt="Specialist pistachio nursery grounds and consultation estate"
+              class="internal-hero-img" loading="eager">
             <div class="internal-hero-plate">
               <span class="plate-marker">{{ i18n.t().navbar.contact }}</span>
               <span class="plate-caption">
-                {{ i18n.currentLang() === 'ar' ? 'مقر المشاتل التخصصية وبساتين التجارب الحقلية المعتمدة' : 'Specialist nursery grounds and field trial cultivation estate' }}
+                {{ i18n.currentLang() === 'ar' ? 'مقر المشاتل التخصصية وبساتين التجارب الحقلية المعتمدة' : 'Specialist
+                nursery grounds and field trial cultivation estate' }}
               </span>
             </div>
           </div>
@@ -89,7 +87,6 @@
             <div class="dossier-header-block">
               <div class="editorial-brand-eyebrow">
                 <span class="eyebrow-accent-line" aria-hidden="true"></span>
-                <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
                 <span class="brand-eyebrow-text">{{ i18n.t().contact.info.tag }}</span>
                 <span class="brand-eyebrow-dot" aria-hidden="true">·</span>
                 <span class="brand-eyebrow-sub">Pistacia vera L.</span>
@@ -130,7 +127,8 @@
                         <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                         <span>{{ i18n.t().contact.info.emailLabel }}</span>
                       </div>
-                      <a href="mailto:contact@specialist-pistachio.com" class="coord-link">{{ i18n.t().contact.info.emailValue }}</a>
+                      <a href="mailto:info@misterpistachio.com" class="coord-link">{{ i18n.t().contact.info.emailValue
+                        }}</a>
                       <span class="coord-note">{{ i18n.t().contact.info.emailNote }}</span>
                     </div>
 
@@ -174,9 +172,12 @@
             <!-- Sheet Corner Ambient Accent -->
             <div class="sheet-ambient-decor" aria-hidden="true">
               <svg class="sheet-botanical-branch" viewBox="0 0 200 240" fill="none">
-                <path d="M 180 20 C 140 70 80 140 30 220" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.14" stroke-linecap="round"/>
-                <path d="M 140 70 C 120 45 140 25 165 40 C 168 60 150 72 140 70 Z" stroke="#768E37" stroke-width="1" stroke-opacity="0.16"/>
-                <path d="M 80 140 C 50 120 60 90 90 105 C 95 125 85 140 80 140 Z" stroke="#768E37" stroke-width="1" stroke-opacity="0.16"/>
+                <path d="M 180 20 C 140 70 80 140 30 220" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.14"
+                  stroke-linecap="round" />
+                <path d="M 140 70 C 120 45 140 25 165 40 C 168 60 150 72 140 70 Z" stroke="#768E37" stroke-width="1"
+                  stroke-opacity="0.16" />
+                <path d="M 80 140 C 50 120 60 90 90 105 C 95 125 85 140 80 140 Z" stroke="#768E37" stroke-width="1"
+                  stroke-opacity="0.16" />
               </svg>
             </div>
 
@@ -184,7 +185,6 @@
             <div class="sheet-header">
               <div class="editorial-brand-eyebrow">
                 <span class="eyebrow-accent-line" aria-hidden="true"></span>
-                <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
                 <span class="brand-eyebrow-text">{{ i18n.t().contact.form.tag }}</span>
                 <span class="brand-eyebrow-dot" aria-hidden="true">·</span>
                 <span class="brand-eyebrow-sub">{{ i18n.t().contact.info.bespokeAdvisory }}</span>
@@ -201,14 +201,8 @@
                   <span class="doc-label-text">{{ i18n.t().contact.form.name }}</span>
                   <span class="doc-required" aria-hidden="true">*</span>
                 </label>
-                <input
-                  id="contact-name"
-                  name="name"
-                  type="text"
-                  class="doc-input"
-                  [(ngModel)]="name"
-                  [placeholder]="i18n.t().contact.form.namePlaceholder"
-                  required>
+                <input id="contact-name" name="name" type="text" class="doc-input" [(ngModel)]="name"
+                  [placeholder]="i18n.t().contact.form.namePlaceholder" required>
               </div>
 
               <!-- Phone & Email Dual Row -->
@@ -218,26 +212,15 @@
                     <span class="doc-label-text">{{ i18n.t().contact.form.phone }}</span>
                     <span class="doc-required" aria-hidden="true">*</span>
                   </label>
-                  <input
-                    id="contact-phone"
-                    name="phone"
-                    type="tel"
-                    class="doc-input"
-                    [(ngModel)]="phone"
-                    [placeholder]="i18n.t().contact.form.phonePlaceholder"
-                    required>
+                  <input id="contact-phone" name="phone" type="tel" class="doc-input" [(ngModel)]="phone"
+                    [placeholder]="i18n.t().contact.form.phonePlaceholder" required>
                 </div>
 
                 <div class="doc-field-wrap">
                   <label for="contact-email" class="doc-label">
                     <span class="doc-label-text">{{ i18n.t().contact.form.email }}</span>
                   </label>
-                  <input
-                    id="contact-email"
-                    name="email"
-                    type="email"
-                    class="doc-input"
-                    [(ngModel)]="email"
+                  <input id="contact-email" name="email" type="email" class="doc-input" [(ngModel)]="email"
                     [placeholder]="i18n.t().contact.form.emailPlaceholder">
                 </div>
               </div>
@@ -248,15 +231,14 @@
                   <span class="doc-label-text">{{ i18n.t().contact.form.interest }}</span>
                 </label>
                 <div class="doc-select-shell">
-                  <select
-                    id="contact-interest"
-                    name="interest"
-                    class="doc-select"
-                    [(ngModel)]="interest">
-                    <option value="General Pistachio Plants Inquiry">{{ i18n.t().contact.form.interestOption1 }}</option>
+                  <select id="contact-interest" name="interest" class="doc-select" [(ngModel)]="interest">
+                    <option value="General Pistachio Plants Inquiry">{{ i18n.t().contact.form.interestOption1 }}
+                    </option>
                     <option value="UCB1 Rootstock Inquiries">{{ i18n.t().contact.form.interestOption2 }}</option>
-                    <option value="Traditional Rootstocks (Cornicabra / Atlantica)">{{ i18n.t().contact.form.interestOption3 }}</option>
-                    <option value="Grafted Plants (Kerman, Sirora, Larnaka)">{{ i18n.t().contact.form.interestOption4 }}</option>
+                    <option value="Traditional Rootstocks (Cornicabra / Atlantica)">{{
+                      i18n.t().contact.form.interestOption3 }}</option>
+                    <option value="Grafted Plants (Kerman, Sirora, Larnaka)">{{ i18n.t().contact.form.interestOption4 }}
+                    </option>
                     <option value="Agricultural & Field Services">{{ i18n.t().contact.form.interestOption5 }}</option>
                   </select>
                   <span class="doc-select-caret" aria-hidden="true">
@@ -270,11 +252,7 @@
                 <label for="contact-details" class="doc-label">
                   <span class="doc-label-text">{{ i18n.t().contact.form.projectDetails }}</span>
                 </label>
-                <textarea
-                  id="contact-details"
-                  name="projectDetails"
-                  rows="4"
-                  class="doc-textarea"
+                <textarea id="contact-details" name="projectDetails" rows="4" class="doc-textarea"
                   [(ngModel)]="projectDetails"
                   [placeholder]="i18n.t().contact.form.projectDetailsPlaceholder"></textarea>
               </div>
@@ -313,10 +291,12 @@
 
         <div class="location-editorial-content">
           <div class="location-text-side">
-            <div class="editorial-brand-eyebrow">
+            <div class="editorial-brand-eyebrow center-eyebrow">
               <span class="eyebrow-accent-line" aria-hidden="true"></span>
-              <span class="eyebrow-botanical-pip" aria-hidden="true"><i class="fa-solid fa-location-crosshairs"></i></span>
+              <span class="eyebrow-botanical-pip" aria-hidden="true"><i
+                  class="fa-solid fa-location-crosshairs"></i></span>
               <span class="brand-eyebrow-text">{{ i18n.t().contact.info.locationLabel }}</span>
+              <span class="eyebrow-accent-line" aria-hidden="true"></span>
             </div>
             <h3 class="location-card-title">{{ i18n.t().contact.info.locationValue }}</h3>
             <p class="location-card-sub">{{ i18n.t().contact.info.locationSub }}</p>
@@ -339,7 +319,8 @@
   <div class="contact-footer-bridge" aria-hidden="true">
     <div class="bridge-ambient-branch">
       <svg viewBox="0 0 1440 64" fill="none" preserveAspectRatio="none">
-        <path d="M 0 0 C 460 50 980 50 1440 0" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.18" stroke-linecap="round"/>
+        <path d="M 0 0 C 460 50 980 50 1440 0" stroke="#768E37" stroke-width="1.2" stroke-opacity="0.18"
+          stroke-linecap="round" />
       </svg>
     </div>
   </div>

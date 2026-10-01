@@ -138,23 +138,19 @@ body.rtl .intro-skip-link {
   max-width: 520px;
 }
 
-.brand-logotype {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  color: #15271E;
-  margin: 0 0 0.5rem 0;
-  line-height: 1.1;
-  text-transform: uppercase;
+.brand-logotype-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
 }
 
-:host-context([dir="rtl"]) .brand-logotype,
-body.rtl .brand-logotype {
-  font-family: 'Amiri', 'Traditional Arabic', serif;
-  letter-spacing: 0.04em;
-  font-weight: 600;
-  font-size: clamp(2.2rem, 4.4vw, 3.2rem);
+.brand-logotype-img {
+  width: clamp(200px, 32vw, 290px);
+  height: auto;
+  max-height: 85px;
+  object-fit: contain;
+  display: block;
 }
 
 .brand-tagline {

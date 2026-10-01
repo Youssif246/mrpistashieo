@@ -348,7 +348,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(2.5rem, 5vw, 5.5rem);
-  align-items: center;
+  align-items: start;
   padding-bottom: clamp(3rem, 5vw, 4.5rem);
   border-bottom: 1px solid rgba(42, 68, 46, 0.1);
 }
@@ -808,28 +808,51 @@
 .formats-duo-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(1.5rem, 3.5vw, 2.5rem);
+  gap: clamp(1.75rem, 3.5vw, 2.75rem);
+  max-width: 1040px;
+  margin-inline: auto;
 }
 
 .format-card-clean {
   background-color: #FFFFFF;
   border: 1px solid var(--c-sand, #DFD7C7);
-  padding: 1.25rem;
-  box-shadow: 0 10px 25px -8px rgba(17, 33, 23, 0.05);
+  padding: clamp(1.25rem, 2vw, 1.5rem);
+  box-shadow: 0 12px 32px -10px rgba(17, 33, 23, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.format-card-clean:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(17, 33, 23, 0.1);
+  border-color: rgba(118, 142, 55, 0.45);
 }
 
 .format-card-visual {
+  position: relative;
   overflow: hidden;
   background-color: #F8F5EE;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
   border: 1px solid var(--c-sand, #DFD7C7);
+  aspect-ratio: 3 / 4;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .format-preview-img {
   width: 100%;
-  height: 260px;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.format-card-clean:hover .format-preview-img {
+  transform: scale(1.03);
 }
 
 .format-season-pill {
@@ -862,48 +885,57 @@
    6. FINAL CTA SECTION: SOPHISTICATED, PREMIUM & UNDERSTATED
    ────────────────────────────────────────────────────────────────────────── */
 .products-closing-cta {
-  padding-top: clamp(6rem, 10vw, 8.5rem);
-  padding-bottom: clamp(6rem, 10vw, 8.5rem);
+  padding-top: clamp(4.5rem, 8vw, 7rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7rem);
   background-color: #FAF8F5;
+  border-top: 1px solid var(--c-sand, #DFD7C7);
 }
 
 .cta-inner-envelope {
-  max-width: 780px;
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-display-title {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  color: var(--c-forest, #112117);
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.cta-supporting-text {
+  font-family: var(--font-sans, system-ui);
+  font-size: clamp(1rem, 1.25vw, 1.14rem);
+  line-height: 1.8;
+  color: var(--c-slate, #4A564F);
+  margin-bottom: 2.25rem;
+  max-width: 680px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
 
-.cta-display-title {
-  font-family: var(--font-serif, Georgia, serif);
-  font-size: clamp(2.25rem, 4.2vw, 3.5rem);
-  font-weight: 500;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-  color: var(--c-forest, #112117);
-  margin-bottom: 1.35rem;
-}
-
-.cta-supporting-text {
-  font-family: var(--font-sans, system-ui);
-  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
-  line-height: 1.75;
-  color: var(--c-slate, #4A564F);
-  margin-bottom: 2.75rem;
-}
-
 .cta-actions-group {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
+  width: 100%;
 }
 
 .btn-editorial-primary {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.85rem;
   padding: 0.95rem 2.25rem;
   background-color: var(--c-forest, #112117);
   color: #FFFFFF;
@@ -912,39 +944,23 @@
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
+  border-radius: 6px;
   border: 1px solid var(--c-forest, #112117);
+  box-shadow: 0 4px 16px rgba(17, 33, 23, 0.15);
   transition: all 0.3s ease;
 }
 
 .btn-editorial-primary i {
-  color: #25D366;
-  font-size: 1.15rem;
+  color: var(--c-logo-bright, #7CB933);
+  font-size: 1rem;
   transition: transform 0.3s ease;
 }
 
 .btn-editorial-primary:hover {
-  background-color: #1A3123;
-  box-shadow: 0 8px 24px -6px rgba(17, 33, 23, 0.25);
-}
-
-.btn-editorial-primary:hover i {
-  transform: scale(1.15);
-}
-
-.btn-editorial-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.95rem 2rem;
-  background-color: transparent;
-  color: var(--c-forest, #112117);
-  border: 1px solid var(--c-sand-muted, #BCB2A1);
-  font-family: var(--font-sans, system-ui);
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  background-color: var(--c-logo-deep, #24520B);
+  border-color: var(--c-logo-deep, #24520B);
+  box-shadow: 0 8px 24px -4px rgba(17, 33, 23, 0.28);
+  transform: translateY(-2px);
 }
 
 .btn-editorial-secondary i {
@@ -965,63 +981,123 @@
 /* ──────────────────────────────────────────────────────────────────────────
    7. RTL & ARABIC ADAPTATIONS (IBM Plex Sans Arabic & Cairo)
    ────────────────────────────────────────────────────────────────────────── */
-body.rtl .products-editorial-page {
+:host-context([dir="rtl"]) .products-editorial-page,
+:host-context(html[dir="rtl"]) .products-editorial-page {
   text-align: right;
 }
 
-body.rtl .hero-display-title,
-body.rtl .section-display-heading,
-body.rtl .group-display-title,
-body.rtl .variety-title,
-body.rtl .rootstock-title,
-body.rtl .formats-heading,
-body.rtl .cta-display-title {
-  font-family: var(--font-ar, 'IBM Plex Sans Arabic', system-ui);
+:host-context([dir="rtl"]) .hero-display-title,
+:host-context(html[dir="rtl"]) .hero-display-title,
+:host-context([dir="rtl"]) .section-display-heading,
+:host-context(html[dir="rtl"]) .section-display-heading,
+:host-context([dir="rtl"]) .group-display-title,
+:host-context(html[dir="rtl"]) .group-display-title,
+:host-context([dir="rtl"]) .variety-title,
+:host-context(html[dir="rtl"]) .variety-title,
+:host-context([dir="rtl"]) .rootstock-title,
+:host-context(html[dir="rtl"]) .rootstock-title,
+:host-context([dir="rtl"]) .formats-heading,
+:host-context(html[dir="rtl"]) .formats-heading {
+  font-family: var(--font-ar, 'IBM Plex Sans Arabic', system-ui) !important;
   font-weight: 700;
   line-height: 1.3;
 }
 
-body.rtl .hero-lead-narrative,
-body.rtl .intro-narrative p,
-body.rtl .group-short-intro,
-body.rtl .variety-prose-desc,
-body.rtl .rootstock-narrative,
-body.rtl .formats-sub,
-body.rtl .cta-supporting-text {
-  font-family: var(--font-ar, 'IBM Plex Sans Arabic', system-ui);
+:host-context([dir="rtl"]) .cta-display-title,
+:host-context(html[dir="rtl"]) .cta-display-title {
+  font-family: var(--font-ar-display, 'IBM Plex Sans Arabic', system-ui) !important;
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: normal;
+  text-align: center !important;
+}
+
+:host-context([dir="rtl"]) .hero-lead-narrative,
+:host-context(html[dir="rtl"]) .hero-lead-narrative,
+:host-context([dir="rtl"]) .intro-narrative p,
+:host-context(html[dir="rtl"]) .intro-narrative p,
+:host-context([dir="rtl"]) .group-short-intro,
+:host-context(html[dir="rtl"]) .group-short-intro,
+:host-context([dir="rtl"]) .variety-prose-desc,
+:host-context(html[dir="rtl"]) .variety-prose-desc,
+:host-context([dir="rtl"]) .rootstock-narrative,
+:host-context(html[dir="rtl"]) .rootstock-narrative,
+:host-context([dir="rtl"]) .formats-sub,
+:host-context(html[dir="rtl"]) .formats-sub {
+  font-family: var(--font-ar, 'IBM Plex Sans Arabic', system-ui) !important;
   line-height: 1.85;
 }
 
-body.rtl .variety-scientific-name {
+:host-context([dir="rtl"]) .cta-inner-envelope,
+:host-context(html[dir="rtl"]) .cta-inner-envelope {
+  text-align: center !important;
+  align-items: center !important;
+}
+
+:host-context([dir="rtl"]) .cta-supporting-text,
+:host-context(html[dir="rtl"]) .cta-supporting-text {
+  font-family: var(--font-ar-body, 'IBM Plex Sans Arabic', system-ui) !important;
+  font-size: clamp(1rem, 1.2vw, 1.12rem);
+  line-height: 1.85;
+  text-align: center !important;
+}
+
+:host-context([dir="rtl"]) .cta-actions-group,
+:host-context(html[dir="rtl"]) .cta-actions-group {
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+:host-context([dir="rtl"]) .btn-editorial-primary,
+:host-context(html[dir="rtl"]) .btn-editorial-primary {
+  font-family: var(--font-ar-body, 'IBM Plex Sans Arabic', system-ui) !important;
+  justify-content: center !important;
+  text-align: center !important;
+  margin-inline: auto !important;
+}
+
+:host-context([dir="rtl"]) .btn-editorial-primary:hover i,
+:host-context(html[dir="rtl"]) .btn-editorial-primary:hover i {
+  transform: translateX(-4px);
+}
+
+:host-context([dir="rtl"]) .variety-scientific-name,
+:host-context(html[dir="rtl"]) .variety-scientific-name {
   direction: ltr;
   text-align: right;
   display: inline-block;
 }
 
-body.rtl .variety-badge-pill {
+:host-context([dir="rtl"]) .variety-badge-pill,
+:host-context(html[dir="rtl"]) .variety-badge-pill {
   left: auto;
-  right: 1.5rem;
+  right: 1.25rem;
 }
 
-body.rtl .rootstock-botanical-tag {
+:host-context([dir="rtl"]) .rootstock-botanical-tag,
+:host-context(html[dir="rtl"]) .rootstock-botanical-tag {
   left: auto;
   right: 0.85rem;
   direction: ltr;
   text-align: right;
 }
 
-body.rtl .variety-origin-tag {
+:host-context([dir="rtl"]) .variety-origin-tag,
+:host-context(html[dir="rtl"]) .variety-origin-tag {
   border-left: none;
   border-right: 1px solid var(--c-sand-muted, #BCB2A1);
   padding-left: 0;
   padding-right: 0.75rem;
 }
 
-body.rtl .editorial-comparison-table {
+:host-context([dir="rtl"]) .editorial-comparison-table,
+:host-context(html[dir="rtl"]) .editorial-comparison-table {
   text-align: right;
 }
 
-body.rtl .btn-editorial-secondary:hover i {
+:host-context([dir="rtl"]) .btn-editorial-secondary:hover i,
+:host-context(html[dir="rtl"]) .btn-editorial-secondary:hover i {
   transform: translateX(-4px);
 }
 
@@ -1053,7 +1129,28 @@ body.rtl .btn-editorial-secondary:hover i {
 
   .editorial-variety-row {
     grid-template-columns: 1fr;
-    gap: 2.25rem;
+    gap: 1.75rem;
+  }
+
+  .variety-visual-column {
+    width: 100%;
+  }
+
+  .variety-image-canvas {
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .variety-editorial-img {
+    height: clamp(260px, 48vw, 380px);
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .variety-content-column {
+    width: 100%;
   }
 
   .rootstock-editorial-card {

@@ -1,0 +1,444 @@
+[
+  {
+    "id": "pistachio-orchard-guide",
+    "slug": "pistachio-orchard-guide",
+    "title": "A Complete Technical Guide to Establishing a Commercial Pistachio Orchard",
+    "excerpt": "From microclimatic evaluation and GPS-guided planting geometry to rootstock selection and initial vegetative training, explore the agronomic milestones essential for building a profitable multi-decade pistachio plantation.",
+    "category": "Orchard Engineering",
+    "date": "October 1, 2026",
+    "readTime": "9 min read",
+    "coverImage": "assets/images/articles/pistachio-orchard-guide.jpg",
+    "seo": {
+      "title": "Establishing a Commercial Pistachio Orchard: Complete Guide | Mister Pistachio",
+      "description": "Comprehensive agronomic guide to planning, planting, and managing a high-yield commercial pistachio plantation. Expert advice on soil, climate, and tree density."
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Establishing a commercial pistachio orchard is a generational agricultural investment. Unlike traditional stone fruits or annual field crops, Pistacia vera trees require four to six years before producing their first commercial crop, but can thrive and remain economically productive for well over a century. Achieving sustained profitability demands meticulous agronomic planning long before the first sapling enters the ground."
+      },
+      {
+        "type": "paragraph",
+        "text": "In the Mediterranean basin, the expansion of pistachio cultivation is driven by climate resilience and strong global market demand. However, success depends upon precise alignment between geographic terrain, soil mechanics, rootstock compatibility, and operational layout. This guide breaks down the essential foundational phases that every commercial grower must master."
+      },
+      {
+        "type": "heading",
+        "text": "1. Microclimatic Prerequisites: Winter Chilling and Heat Units"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pistachio trees possess unique physiological requirements defined by extreme seasonal contrast. During the winter dormancy period, trees require substantial cold temperatures to break flower and vegetative bud dormancy uniformly. Cultivars such as Kerman require between 800 and 1,000 chilling hours below 7°C (45°F), whereas moderate-chill cultivars like Sirora perform exceptionally well in areas receiving 600 to 750 chilling hours."
+      },
+      {
+        "type": "paragraph",
+        "text": "Conversely, the summer season must provide prolonged heat and arid atmospheric conditions. High heat unit accumulation—measured in growing degree days—is vital for kernel expansion, hull breakdown, and shell dehiscence. Areas with high late-summer relative humidity or frequent rain showers during the August-September ripening period face elevated risks of Botryosphaeria and Alternaria fungal blights, making dry, continental Mediterranean inland plains the premier choice."
+      },
+      {
+        "type": "heading",
+        "text": "2. Topographic Surveying and GPS Field Geometry"
+      },
+      {
+        "type": "paragraph",
+        "text": "Modern orchard operations are engineered around mechanization. Tree shaking, automated pruning, herbicide spraying, and bulk transport carts all require uniform row alignments and optimized turning corridors at headlands."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/pistachio-orchard-layout.jpg",
+        "alt": "Agronomic field surveying and GPS stake layout for pistachio plantation alignment"
+      },
+      {
+        "type": "paragraph",
+        "text": "Employing satellite RTK-GPS guidance during field marking ensures millimeter-precise row parallelity. The predominant orientation should run North-South whenever topography permits. This orientation maximizes bidirectional sunlight interception across both sides of the canopy throughout the day, accelerating photosynthetic efficiency and uniform kernel filling."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Standard Commercial Spacing: 7.0 m x 5.0 m (285 trees/ha) for traditional open-canopy management.",
+          "High-Density Vigor Control: 6.0 m x 4.0 m (416 trees/ha) on certified dwarfing rootstocks with strict summer pruning.",
+          "Headland Buffer: Minimum 8.0 to 10.0 meters clearance on turn rows to accommodate multi-arm trunk shakers and bulk harvest trailers."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "3. Pollination Distribution Architecture"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pistachios are strictly dioecious: male and female flowers are borne on separate trees. Pollination relies entirely on wind currents rather than insect vectors. As a consequence, spatial placement of male pollinator trees is a deterministic factor in final yield."
+      },
+      {
+        "type": "paragraph",
+        "text": "The prevailing wind direction during the April bloom window dictates male positioning. In standard commercial layouts, a ratio of 1 male tree to every 8 or 9 female trees (11-12% male density) is recommended. Placing continuous male buffer rows along the windward perimeter ensures an uninterrupted pollen drift across the entire orchard canopy during the critical 10-day stigma receptivity phase."
+      },
+      {
+        "type": "heading",
+        "text": "4. The First 24 Months: Establishment and Root Architecture"
+      },
+      {
+        "type": "paragraph",
+        "text": "The initial two seasons determine the vertical straightness and root depth of the orchard. Certified containerized rootstocks with uncoiled taproots must be planted during early autumn or late winter dormancy. Providing sturdy 35–40 mm galvanized steel tutors or rigid bamboo stakes anchored 40 cm into the ground prevents wind flexing from snapping delicate graft unions."
+      },
+      {
+        "type": "paragraph",
+        "text": "Weed competition in the 1-meter tree strip must be eliminated completely, as young pistachios exhibit slow initial canopy shade. Utilizing UV-resistant tree protectors (protectores) guards the tender young trunk against herbicide spray drift, direct trunk solarization, and rodent damage."
+      },
+      {
+        "type": "heading",
+        "text": "Conclusion: A Foundation Engineered for Longevity"
+      },
+      {
+        "type": "paragraph",
+        "text": "A commercial pistachio plantation established with scientific rigor represents one of the most reliable and valuable agricultural assets in Mediterranean climate zones. By prioritizing deep subsoil preparation, precision GPS layouts, and optimized pollination spacing from day one, growers protect their capital and ensure bountiful harvests for generations to come."
+      }
+    ]
+  },
+  {
+    "id": "choosing-rootstock-variety",
+    "slug": "choosing-rootstock-variety",
+    "title": "Selecting the Right Pistachio Rootstock and Cultivar for Your Climate",
+    "excerpt": "An exhaustive comparative analysis of UCB-1, Pistacia terebinthus (Cornicabra), and P. atlantica, alongside the phenological traits and chilling requirements of Kerman, Sirora, Larnaka, and male synchronizers.",
+    "category": "Varieties & Genetics",
+    "date": "October 8, 2026",
+    "readTime": "8 min read",
+    "coverImage": "assets/images/articles/choosing-rootstock-variety.jpg",
+    "seo": {
+      "title": "Pistachio Rootstocks & Varieties Guide: UCB1, Kerman, Sirora | Mister Pistachio",
+      "description": "Compare pistachio rootstocks UCB-1, Cornicabra, Atlantica and choose the ideal female cultivar (Kerman, Sirora, Larnaka) for your orchard's climate and soil."
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "The decision of which rootstock and scion combination to plant is irreversible once an orchard is established. While irrigation lines and fertilization regimens can be re-engineered, a mismatched rootstock or cultivar will permanently constrain yield, disease resistance, and fruit commercialization. Understanding the genetic synergy between rootstock and variety is the cornerstone of modern agronomy."
+      },
+      {
+        "type": "heading",
+        "text": "1. The Rootstock Matrix: UCB-1, Cornicabra, and Atlantica"
+      },
+      {
+        "type": "paragraph",
+        "text": "The rootstock governs nutrient uptake, soilborne disease tolerance, salinity resistance, and vegetative vigor. In contemporary European and Mediterranean commercial orchards, three primary rootstock families dominate:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "UCB-1 (P. atlantica x P. integerrima hybrid): The global benchmark for commercial irrigated orchards. Offers supreme vegetative vigor, early bearing (reducing entry into production by 1-2 years), high salinity tolerance, and proven resistance to Verticillium dahliae wilt.",
+          "Cornicabra (Pistacia terebinthus): The historical standard for dry-farmed (secano) Mediterranean landscapes. Exhibits exceptional cold hardiness and drought endurance in stony, shallow soils, though vegetative growth is slower.",
+          "Pistacia atlantica: Renowned for deep taproot anchorage and cold resistance, ideal for heavy clay soils where drainage is properly managed."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/rootstock-graft-detail.jpg",
+        "alt": "Close-up detail of successful T-budding graft union on young pistachio rootstock stem"
+      },
+      {
+        "type": "heading",
+        "text": "2. Certified Clonal Micropropagation vs. Seedling UCB-1"
+      },
+      {
+        "type": "paragraph",
+        "text": "When selecting UCB-1, growers must differentiate between open-pollinated seed progeny and certified clonal micropropagated plantlets. Seedling populations naturally exhibit phenotypic variation in vigor and cold susceptibility. In contrast, clonal laboratory-propagated rootstocks deliver 100% genetic homogeneity across the plantation, resulting in uniform tree caliper, synchronized grafting windows, and homogenous shaker harvest efficiency."
+      },
+      {
+        "type": "heading",
+        "text": "3. Evaluating Female Cultivars: Kerman, Sirora, and Larnaka"
+      },
+      {
+        "type": "paragraph",
+        "text": "The female cultivar dictates harvest window, nut size, shell splitting percentage, and market valuation:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Kerman: The international commercial standard. Produces large, round nuts with ivory-white shells and exceptional taste. Requires high chilling (850–1,000+ hours). Late blooming protects against early spring frosts, but late harvest (mid-September to October) requires dry autumns.",
+          "Sirora: Australian selection with medium-high chilling requirement (650–800 hours). Earlier harvest by 10 to 14 days compared to Kerman, superior natural split percentage (exceeding 85%), and remarkable yield consistency with lower alternate bearing tendency.",
+          "Larnaka: Low-to-moderate chill cultivar (500–650 hours) originating from Cyprus. Ideal for southern and coastal Mediterranean basins. Produces elongated, intensely green kernels highly sought after by premium confectionery processors."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "4. Synchronizing Male Pollinators"
+      },
+      {
+        "type": "paragraph",
+        "text": "A common failure in commercial orchards is blooming desynchronization between female flower receptivity and male pollen shed. Female flowers remain receptive to pollen for only 4 to 6 days. Because spring temperatures fluctuate annually, relying on a single male cultivar introduces catastrophic crop risk."
+      },
+      {
+        "type": "paragraph",
+        "text": "Best agricultural practice dictates pairing female cultivars with at least two overlapping male selections. For instance, orchards planted with Kerman are optimally served by combining 'Peters' (the primary synchronizer) with 'C-Especial' or 'Guerrero' to ensure continuous pollen presence across early, peak, and late female stigma openings."
+      },
+      {
+        "type": "heading",
+        "text": "Summary: Tailoring Genetics to Site Specifics"
+      },
+      {
+        "type": "paragraph",
+        "text": "There is no single 'universal' variety; the optimum choice is determined by historical chilling records, soil electrical conductivity, and water availability. Combining certified clonal UCB-1 with regionally proven female cultivars guarantees vigor, disease tolerance, and premium commercial grade returns."
+      }
+    ]
+  },
+  {
+    "id": "soil-preparation-pistachio",
+    "slug": "soil-preparation-pistachio",
+    "title": "Subsoil Preparation and Deep Tillage for Long-Lived Pistachio Orchards",
+    "excerpt": "Pistacia vera's taproot can penetrate beyond three meters. Learn how deep ripping, cross-subsoiling, chemical soil amendment, and drainage grading ensure taproot health and prevent root asphyxiation.",
+    "category": "Soil Science",
+    "date": "October 15, 2026",
+    "readTime": "8 min read",
+    "coverImage": "assets/images/articles/soil-preparation-pistachio.jpg",
+    "seo": {
+      "title": "Soil Preparation for Pistachio Planting: Deep Ripping & Amendments | Mister Pistachio",
+      "description": "Master subsoil preparation, cross ripping, pH correction, and drainage engineering to give young pistachio roots unobstructed deep vertical growth."
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Among all commercial tree nuts, the pistachio possesses the most robust and aggressive vertical taproot system. In permeable soils, taproots rapidly drive downward during the first thirty months of growth, seeking deep water reserves and anchoring the tree against intense winds. If this descending root encounters a hardpan, compacted plow layer, or waterlogged clay strata, growth stalls, root rot pathogens proliferate, and orchard performance is permanently impaired."
+      },
+      {
+        "type": "heading",
+        "text": "1. The Diagnostic Test Pit: Inspecting Soil Strata"
+      },
+      {
+        "type": "paragraph",
+        "text": "Before running heavy machinery across the parcel, agronomic soil test pits (calicatas) should be excavated using a backhoe down to a depth of 2.5 to 3.0 meters at multiple representative points across the property."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/soil-strata-detail.jpg",
+        "alt": "Agronomic soil profile test pit showing stratified horizons and permeable root zone"
+      },
+      {
+        "type": "paragraph",
+        "text": "These profile pits reveal subterranean realities that standard surface soil cores miss: impenetrable caliche limestone crusts, impermeable clay lenses, subsurface gravel beds, and seasonal water table fluctuations. Soil samples must be extracted at distinct depths (0–30 cm, 30–60 cm, and 60–100 cm) to analyze active limestone, pH, texture, cation exchange capacity, and salinity."
+      },
+      {
+        "type": "heading",
+        "text": "2. Deep Cross-Subsoiling (Subsolado Cruzado)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Plow pans created by decades of shallow cereal cultivation must be completely fractured. This requires deep ripping with single or double heavy-duty ripper shanks penetrating 90 to 120 cm below the surface when the soil is completely dry (typically late summer)."
+      },
+      {
+        "type": "paragraph",
+        "text": "Ripping moist soil merely slices plastic cuts that seal shut upon subsequent rain. Ripping dry soil creates extensive internal shattering, creating fissures and micro-channels through which young taproots can easily penetrate. Executing a cross-pattern (two passes at right angles) guarantees that no subterranean barriers remain intact."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Minimum Shank Depth: 90 cm to 120 cm depending on hardpan depth.",
+          "Soil Moisture Window: Late summer dry condition to maximize shattering effect.",
+          "Shank Spacing: No more than 1.5 times the ripping depth to ensure total overlap between passes."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "3. Correcting Soil Chemistry: Limestone and Gypsum Amendments"
+      },
+      {
+        "type": "paragraph",
+        "text": "While pistachios tolerate alkaline and calcareous soils better than almonds or walnuts, excessive active limestone (over 12-14%) can induce severe iron chlorosis, especially on Cornicabra rootstocks. Incorporating organic amendments (composted animal manure at 20–30 tonnes/ha) prior to deep tillage buffers pH and introduces microbial life into the fractured subsoil."
+      },
+      {
+        "type": "paragraph",
+        "text": "In sodic or saline soils with high exchangeable sodium percentages (ESP), agricultural gypsum (calcium sulfate) should be applied to displace sodium ions into deep drainage strata, restoring soil flocculation and structural porosity."
+      },
+      {
+        "type": "heading",
+        "text": "4. Laser Levelling and Surface Drainage Engineering"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pistachios are acutely vulnerable to root crown asphyxiation and Phytophthora root rot. Standing water around the tree trunk for even 48 hours during warm weather can be fatal. Precise GPS/laser field leveling ensures gentle surface gradients (0.2–0.5%) that guide storm runoff away from tree rows."
+      },
+      {
+        "type": "paragraph",
+        "text": "In heavier soils, planting on raised berms (caballones) elevated 25 to 35 cm above the inter-row middles elevates the vulnerable root collar above potential waterlogging, ensuring aerated root zones even during unseasonal torrential rains."
+      },
+      {
+        "type": "heading",
+        "text": "Conclusion: Investing Below Ground Before Planting Above"
+      },
+      {
+        "type": "paragraph",
+        "text": "Subsoil preparation is the single phase of orchard development that cannot be repeated once trees are established. Thorough soil testing, dry cross-ripping, organic amendment, and drainage grading lay the indispensable physical foundation for orchard vigor, disease resistance, and centenary production."
+      }
+    ]
+  },
+  {
+    "id": "irrigation-water-management",
+    "slug": "irrigation-water-management",
+    "title": "Precision Drip Irrigation and Regulated Deficit Management in Pistachio Cultivation",
+    "excerpt": "Mastering the four phenological stages of nut development. How regulated deficit irrigation (RDI) conserves water while maximizing shell splitting and minimizing early split nuts.",
+    "category": "Irrigation Engineering",
+    "date": "October 22, 2026",
+    "readTime": "9 min read",
+    "coverImage": "assets/images/articles/irrigation-water-management.jpg",
+    "seo": {
+      "title": "Pistachio Irrigation Guide: Drip Systems & Deficit Management | Mister Pistachio",
+      "description": "Learn precision drip irrigation schedules and Regulated Deficit Irrigation (RDI) strategies to optimize pistachio nut splitting and water-use efficiency."
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Although Pistacia vera is famously celebrated for its drought hardiness and ability to survive on arid hillsides where other tree crops perish, commercial yields and profitability require controlled irrigation. Unirrigated plantations often produce alternating yields of 600 to 1,000 kg/ha with high blank nut percentages, whereas well-managed precision drip irrigation regularly achieves 3,000 to 4,500 kg/ha of premium grade split nuts."
+      },
+      {
+        "type": "heading",
+        "text": "1. The Four Phenological Stages of Nut Development"
+      },
+      {
+        "type": "paragraph",
+        "text": "Effective water management requires understanding the distinct water sensitivity of each nut developmental phase:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Stage I (Leaf Out to Shell Sizing - April to mid-May): Rapid vegetative growth and shell expansion to full ultimate volume. Water stress during this window permanently reduces nut size. 100% ETc (crop evapotranspiration) replacement is required.",
+          "Stage II (Shell Hardening / Lignification - mid-May to early July): Shell lignifies and hardens; minimal kernel growth occurs. This is the ideal window for Regulated Deficit Irrigation (RDI).",
+          "Stage III (Kernel Filling - July to late August): Rapid embryo expansion fills the shell cavity. High water demand period. Water stress here causes kernel shriveling, low kernel weight, and poor shell dehiscence.",
+          "Stage IV (Post-Harvest to Dormancy - September to October): Flower bud differentiation for next year's crop and root carbohydrate accumulation. Moderate irrigation maintains canopy health without inducing late frost-sensitive flushes."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/drip-emitter-detail.jpg",
+        "alt": "Precision pressure-compensating drip irrigation line and soil moisture capacitance probe"
+      },
+      {
+        "type": "heading",
+        "text": "2. The Science of Regulated Deficit Irrigation (RDI)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pistachios possess a unique physiological window during Stage II (shell hardening) where water applications can be reduced by 50% without diminishing final yield or nut size. In fact, research demonstrates that controlled moderate water stress during Stage II promotes deeper rooting and can actually increase shell splitting percentages during Stage III."
+      },
+      {
+        "type": "paragraph",
+        "text": "However, severe deficit during Stage I or early Stage III must be avoided. Stress during Stage I restricts pericarp cell division, resulting in stunted nuts. Stress during late Stage III prevents kernel pressure from pushing the shell halves apart, drastically increasing unmarketable closed-shell percentages."
+      },
+      {
+        "type": "heading",
+        "text": "3. Drip System Engineering: Flow Rates and Placement"
+      },
+      {
+        "type": "paragraph",
+        "text": "A commercial pistachio drip system should be designed with two parallel drip laterals per tree row as trees mature. During the first two years, a single line positioned 30 cm from the tree trunk delivers moisture directly to the establishing root ball. By year three, a second lateral is installed, and both lines are moved 60–90 cm outwards from the trunk."
+      },
+      {
+        "type": "paragraph",
+        "text": "Pressure-compensating (PC) self-flushing emitters (typically 1.6 to 2.2 L/h spaced at 0.5 to 0.75 m intervals) ensure uniform water delivery across undulating terrain. Keeping the irrigation wetted pattern away from the direct trunk collar prevents Phytophthora and crown rot infection."
+      },
+      {
+        "type": "heading",
+        "text": "4. Soil Moisture Sensor Integration"
+      },
+      {
+        "type": "paragraph",
+        "text": "Relying strictly on historical weather estimates leads to either over-irrigation or unseen deficit stress. Modern orchards utilize continuous multi-depth capacitance probes (measuring moisture at 20, 40, 60, and 90 cm) linked via telemetry."
+      },
+      {
+        "type": "paragraph",
+        "text": "Observing real-time root moisture extraction curves allows irrigation managers to initiate watering cycles precisely when active root zones reach 45–50% available water capacity, maximizing water productivity per cubic meter applied."
+      },
+      {
+        "type": "heading",
+        "text": "Conclusion: Water as a Precision Input"
+      },
+      {
+        "type": "paragraph",
+        "text": "Precision irrigation transforms pistachio cultivation from erratic dryland farming into a high-efficiency industrial crop. By synchronizing water delivery with phenological stages and utilizing dual-lateral drip engineering, commercial growers maximize yield, increase shell splitting, and conserve precious water resources."
+      }
+    ]
+  },
+  {
+    "id": "pruning-early-management",
+    "slug": "pruning-early-management",
+    "title": "Formative Pruning and Structural Canopy Architecture for Young Pistachios",
+    "excerpt": "A precise multi-year guide to establishing the open vase (vaso abierto) architecture, trunk heading height, primary scaffold selection, and summer pinching for mechanized harvesting.",
+    "category": "Canopy Architecture",
+    "date": "October 29, 2026",
+    "readTime": "8 min read",
+    "coverImage": "assets/images/articles/pruning-early-management.jpg",
+    "seo": {
+      "title": "Pistachio Tree Pruning Guide: Formative & Canopy Architecture | Mister Pistachio",
+      "description": "Step-by-step agronomic guide to formative pruning young pistachio trees: trunk heading, scaffold selection, open-center vase structure, and summer pinching."
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "The physiological habit of Pistacia vera is naturally bushy, multi-stemmed, and sprawling. In the wild, seedlings branch close to the ground, producing dense shrubs with brittle, overlapping limbs. Left unpruned, an orchard cannot be mechanically harvested, suffers from poor interior light penetration, and experiences severe alternate bearing due to localized canopy dieback."
+      },
+      {
+        "type": "paragraph",
+        "text": "Formative pruning (poda de formación) during the first four years engineers a rigid, three-dimensional skeleton capable of supporting heavy crops (exceeding 30 kg of dried nuts per tree) and withstanding the aggressive shaking forces of commercial harvest machinery."
+      },
+      {
+        "type": "heading",
+        "text": "1. Year One: Heading Height and Central Trunk Definition"
+      },
+      {
+        "type": "paragraph",
+        "text": "The primary task during the first winter dormancy is establishing the central trunk. The single vertical shoot selected as the future trunk is tied securely to the tutor stake to ensure flawless verticality. All lateral shoots along the lower trunk are rubbed off during early summer, preserving only top vegetative growth."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/pruning-canopy-detail.jpg",
+        "alt": "Clean lateral pruning cut on pistachio scaffold branch promoting vigorous secondary shoot growth"
+      },
+      {
+        "type": "paragraph",
+        "text": "At the end of year one or early year two, when the trunk reaches sufficient caliper (typically 20–25 mm), it is headed (decapitated) at a height of 90 to 110 cm from the ground line. This specific height is critical: lower heading hampers harvest shaker clamps and collection umbrellas, while higher heading elevates the center of gravity and increases wind-throw vulnerability."
+      },
+      {
+        "type": "heading",
+        "text": "2. Year Two: Selecting the Primary Scaffolds (Vaso Abierto)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Following trunk heading, dormant buds just below the cut break vigorously in spring. The grower must select three—or at most four—primary scaffold branches that will form the open-center vase architecture (vaso abierto)."
+      },
+      {
+        "type": "list",
+        "items": [
+          "Radial Symmetry: The three primary branches must be spaced approximately 120 degrees apart around the circumference of the trunk.",
+          "Vertical Staggering: Scaffold origin points should be separated vertically by 10 to 15 cm along the trunk, avoiding narrow crotches originating from the same node.",
+          "Crotch Angle: Scaffolds should emerge at an angle of 45 to 55 degrees from vertical. Narrower angles (<35°) develop bark inclusions and split under crop load; wider angles (>65°) lack vertical vigor."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "3. Summer Pinching (Despunte) to Accelerate Branching"
+      },
+      {
+        "type": "paragraph",
+        "text": "In vigorous plantations (especially on UCB-1 rootstocks), primary scaffolds can grow 1.5 to 2.0 meters in a single season. If left unheaded until winter, branching will only occur at the extreme tips, leaving long, bare, whippy wood prone to sunburn."
+      },
+      {
+        "type": "paragraph",
+        "text": "Executing a summer pinch (despunte en verde) in late June or early July—heading the primary scaffolds at 50 to 60 cm—forces immediate lateral bud break during the same growing season. This technique effectively gains an entire year of structural development, creating secondary scaffolds by autumn."
+      },
+      {
+        "type": "heading",
+        "text": "4. Years Three and Four: Secondary Scaffolds and Air Flow"
+      },
+      {
+        "type": "paragraph",
+        "text": "During the third and fourth winters, two secondary branches are selected on each primary scaffold, creating a balanced framework of six to eight major limbs. All interior water sprouts, vigorous upright suckers, and crossing branches that crowd the center of the vase must be cleanly removed."
+      },
+      {
+        "type": "paragraph",
+        "text": "Maintaining an open center allows unimpeded sunlight and airflow through the canopy. Sunlight penetration directly stimulates fruit bud initiation for subsequent seasons and accelerates foliage drying after morning dew, minimizing Botryosphaeria and fungal infections."
+      },
+      {
+        "type": "heading",
+        "text": "Conclusion: Structural Integrity for a Century of Harvests"
+      },
+      {
+        "type": "paragraph",
+        "text": "Patience and precision during formative pruning establish the structural foundation for the entire lifetime of the pistachio orchard. A well-built open vase framework ensures compatibility with modern mechanization, uniform sunlight distribution, and maximum commercial nut production for decades."
+      }
+    ]
+  }
+]

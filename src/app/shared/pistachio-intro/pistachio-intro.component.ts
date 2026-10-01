@@ -13,11 +13,19 @@ import { CommonModule } from '@angular/common';
 import { TranslationService } from '../translation.service';
 import { gsap } from 'gsap';
 
-// In-memory flag: ensures intro only runs once when entering the site,
-// and never replays when navigating back to the home page from other routes.
+// Session state tracking: Intro plays once per site visit/session,
+// preventing replay when navigating between internal SPA routes (e.g. Products -> Home).
 let hasIntroPlayedInSession = false;
 
+// Clear legacy blocked session keys from previous attempts so intro can appear cleanly
+if (typeof window !== 'undefined') {
+  try {
+    sessionStorage.removeItem('mr_pistachio_intro_played');
+  } catch {}
+}
+
 export function hasIntroAlreadyPlayed(): boolean {
+  if (typeof window === 'undefined') return true;
   return hasIntroPlayedInSession;
 }
 
@@ -48,16 +56,7 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
   ngOnInit(): void {
     if (typeof window === 'undefined') return;
 
-    // Purge any stale storage keys from prior runs so reload always functions
-    try {
-      sessionStorage.removeItem('mr_pistachio_intro_seen');
-      localStorage.removeItem('mr_pistachio_intro_seen');
-      sessionStorage.removeItem('introPlayed');
-    } catch {
-      // Storage safe
-    }
-
-    // If intro has already played in this application session, skip immediately
+    // If intro has already played in this browser session or reduced motion is preferred, skip immediately
     if (hasIntroAlreadyPlayed()) {
       this.isVisible.set(false);
       this.introComplete.emit();
@@ -291,7 +290,10 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
     tl.to(overlay, {
       opacity: 0,
       duration: 0.85,
-      ease: 'power2.inOut'
+      ease: 'power2.inOut',
+      onComplete: () => {
+        this.finishIntro(false);
+      }
     }, 5.05);
 
     // Start playback immediately

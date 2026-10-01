@@ -17,20 +17,20 @@
           <div class="internal-hero-eyebrow">
             <span class="internal-hero-eyebrow-line" aria-hidden="true"></span>
             <span class="internal-hero-eyebrow-text">
-              {{ i18n.currentLang() === 'ar' ? 'المواد النباتية المعتمدة • مشاتل تخصصية' : 'Certified Botanical Portfolio · Specialist Nursery' }}
+              {{ i18n.currentLang() === 'ar' ? 'أصناف الفستق والمواد الزراعية المعتمدة' : 'Certified Pistachio Varieties & Rootstocks' }}
             </span>
           </div>
 
           <h1 class="internal-hero-title">
-            {{ i18n.currentLang() === 'ar' ? 'أصناف الفستق الحلبي التخصصية' : 'Our Pistachio Varieties' }}
+            {{ i18n.currentLang() === 'ar' ? 'أصناف الفستق الحلبي التخصصية' : 'Specialist Pistachio Varieties' }}
           </h1>
 
           <div class="internal-hero-divider" aria-hidden="true"></div>
 
           <p class="internal-hero-desc">
             {{ i18n.currentLang() === 'ar'
-              ? 'دليل حقلي شامل للأصناف الإنتاجية المؤنثة، الملقحات المذكرة المتزامنة، والأصول الجذرية المعتمدة—تم إكثارها وتطعيمها بعناية فائقة لتلائم طبيعة التربة والمناخ المتوسطي.'
-              : 'A curated agronomic portfolio of elite female scions, synchronous male pollinators, and certified rootstocks—selected and propagated under strict phytosanitary standards for high-performance Mediterranean orchards.' }}
+              ? 'دليل حقلي شامل للأصناف الإنتاجية المؤنثة (كيرمان، سيرورا، لارناكا)، الملقحات المذكرة المتزامنة، والأصول الجذرية المعتمدة (UCB-1، كورنيكابرا، أتلانتيكا)—تم إكثارها وتطعيمها بعناية فائقة لتلائم طبيعة التربة والمناخ المتوسطي.'
+              : 'A curated agronomic portfolio of elite female scions (Kerman, Sirora, Larnaka), synchronous male pollinators, and foundational rootstocks (UCB-1, Cornicabra, Atlantica)—selected and propagated under strict phytosanitary standards for high-performance Mediterranean orchards.' }}
           </p>
 
           <!-- Quick Anchor Index Strip -->
@@ -47,7 +47,7 @@
             <span class="strip-sep">/</span>
             <button type="button" class="hero-strip-pip" (click)="scrollToSection('rootstocksSection')">
               <span class="pip-dot"></span>
-              <span class="pip-label">{{ i18n.currentLang() === 'ar' ? 'الأصول الجذرية' : 'Rootstocks' }}</span>
+              <span class="pip-label">{{ i18n.currentLang() === 'ar' ? 'الأصول الجذرية والمواد الزراعية' : 'Rootstocks & Planting Material' }}</span>
             </button>
             <span class="strip-sep">/</span>
             <button type="button" class="hero-strip-pip" (click)="scrollToSection('comparisonSection')">
@@ -228,18 +228,6 @@
                 }
               </div>
 
-              <!-- Quick Inquiry CTA -->
-              <div class="variety-action-row">
-                <a [href]="getVarietyWhatsApp(variety.name)" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="btn-editorial-inline">
-                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                  <span>
-                    {{ i18n.currentLang() === 'ar' ? 'استفسر عن صنف ' + variety.name : 'Inquire on WhatsApp for ' + variety.name }}
-                  </span>
-                </a>
-              </div>
             </div>
 
           </article>
@@ -329,18 +317,6 @@
                 }
               </div>
 
-              <!-- Quick Inquiry CTA -->
-              <div class="variety-action-row">
-                <a [href]="getVarietyWhatsApp(pollinator.name)" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="btn-editorial-inline">
-                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                  <span>
-                    {{ i18n.currentLang() === 'ar' ? 'استفسر عن ملقح ' + pollinator.name : 'Inquire on WhatsApp for ' + pollinator.name }}
-                  </span>
-                </a>
-              </div>
             </div>
 
           </article>
@@ -490,17 +466,6 @@
                 </div>
               </div>
 
-              <div class="rootstock-action">
-                <a [href]="getRootstockWhatsApp(stock.name)" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   class="btn-editorial-inline">
-                  <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                  <span>
-                    {{ i18n.currentLang() === 'ar' ? 'استفسر عن أصل ' + stock.name : 'Inquire on WhatsApp for ' + stock.name }}
-                  </span>
-                </a>
-              </div>
             </div>
 
           </article>
@@ -510,7 +475,7 @@
       <!-- Production Formats Banner (CT Containers vs Bare Root RD) -->
       <div class="production-formats-editorial">
         <div class="formats-text-header">
-          <span class="formats-kicker">{{ i18n.currentLang() === 'ar' ? 'أشكال التسليم المعتمدة' : 'Certified Production Formats' }}</span>
+          <span class="formats-kicker">{{ i18n.currentLang() === 'ar' ? 'أشكال تسليم المواد الزراعية' : 'Certified Planting Material Formats' }}</span>
           <h3 class="formats-heading">
             {{ i18n.currentLang() === 'ar' ? 'شتلات مطعمة بارتفاع لا يقل عن 120 سم' : 'Grafted Trees with Minimum 120 cm Caliper' }}
           </h3>
@@ -525,7 +490,7 @@
           <!-- Bare Root Presentation -->
           <div class="format-card-clean">
             <div class="format-card-visual">
-              <img src="products-images/pistachero-raiz-desnuda.jpg" 
+              <img src="products-images/pistachero-raiz-desnuda.png" 
                    alt="Pistachio bare root plant with bamboo stake" 
                    class="format-preview-img"
                    loading="lazy">
@@ -544,7 +509,7 @@
           <!-- Containerized Presentation -->
           <div class="format-card-clean">
             <div class="format-card-visual">
-              <img src="products-images/pistachero-pot-5l.jpg" 
+              <img src="products-images/pistachero-pot-5l.png" 
                    alt="Pistachio plant in container pot" 
                    class="format-preview-img"
                    loading="lazy">
@@ -576,34 +541,26 @@
         <div class="editorial-eyebrow center-eyebrow">
           <span class="eyebrow-line" aria-hidden="true"></span>
           <span class="eyebrow-text">
-            {{ i18n.currentLang() === 'ar' ? 'استشارات التأسيس واختيار المواد النباتية' : 'Plant Material & Orchard Consultation' }}
+            {{ i18n.currentLang() === 'ar' ? 'استشارات زراعية متخصصة' : 'Agricultural Consultation' }}
           </span>
           <span class="eyebrow-line" aria-hidden="true"></span>
         </div>
 
         <h2 class="cta-display-title">
-          {{ i18n.currentLang() === 'ar' ? 'حدد الصنف والنمط الأنسب لمشروعك الزراعي' : 'Find the Right Variety for Your Project' }}
+          {{ i18n.currentLang() === 'ar' ? 'ابدأ تأسيس بستانك مع خبرائنا' : 'Start Your Orchard with Our Experts' }}
         </h2>
 
         <p class="cta-supporting-text">
           {{ i18n.currentLang() === 'ar'
-            ? 'تنفرد كل قطعة أرض بخصائص مميزة من قوام التربة وملوحة المياه وساعات البرودة الشتوية. يتولى مهندسونا الزراعيون دراسة معطيات أرضك لتحديد التوليفة الوراثية المثالية بين الأصل والصنف ونسب التلقيح.'
-            : 'Every parcel of land presents unique soil structure, water chemistry, and winter chill accumulation. Our agronomic specialists evaluate your microclimate and formulate the precise rootstock, cultivar, and pollinator balance for your orchard.' }}
+            ? 'نساعدك في اختيار الأصول والأصناف الأنسب لطبيعة تربتك ومناخك، لضمان أعلى إنتاجية واستدامة لبستانك.'
+            : 'We help you select the ideal rootstocks and cultivars for your soil and climate, ensuring lasting yield and success.' }}
         </p>
 
-        <!-- Understated Refined Action Buttons -->
+        <!-- Refined Single Action Button: Consultation Request -->
         <div class="cta-actions-group">
-          <a [href]="getGeneralWhatsApp()" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="btn-editorial-primary">
-            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-            <span>{{ i18n.currentLang() === 'ar' ? 'استشر مهندساً زراعياً عبر واتساب' : 'Consult an Agronomist on WhatsApp' }}</span>
-          </a>
-
-          <a routerLink="/contact" class="btn-editorial-secondary">
-            <span>{{ i18n.currentLang() === 'ar' ? 'تواصل معنا' : 'Contact Us' }}</span>
-            <i class="fa-solid fa-arrow-right-long" aria-hidden="true"></i>
+          <a routerLink="/contact" class="btn-editorial-primary">
+            <span>{{ i18n.currentLang() === 'ar' ? 'احجز استشارتك الزراعية' : 'Book Your Consultation' }}</span>
+            <i [class]="i18n.isRtl() ? 'fa-solid fa-arrow-left' : 'fa-solid fa-arrow-right'" aria-hidden="true"></i>
           </a>
         </div>
 

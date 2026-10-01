@@ -8,7 +8,8 @@ export const APP_CONFIG = {
   whatsappNumber: '31612555547',
 
   social: {
-    instagram: 'https://www.instagram.com/mister.pistachio?stkn=MWRibzJ4N254MXdpaw%3D%3D&utm_source=qr',
+    instagram: 'https://www.instagram.com/misterpistach?stkn=MWRibzJ4N254MXdpaw%3D%3D',
+    tiktok: 'https://www.tiktok.com/@misterpistachiosy',
     facebook: 'https://www.facebook.com/profile.php?id=61594065104773',
     youtube: 'https://youtube.com/@mister_pistachio',
     x: 'https://x.com/Misterpistach'
@@ -21,3 +22,4 @@ export const APP_CONFIG = {
     return `https://wa.me/${APP_CONFIG.whatsappNumber}?text=${text}`;
   }
 };
+

@@ -17,6 +17,7 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
   readonly i18n = inject(TranslationService);
+  readonly config = APP_CONFIG;
   private readonly el = inject(ElementRef);
   private gsapCtx?: gsap.Context;
 
@@ -38,7 +39,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       this.initMonographAnimation(prefersReducedMotion);
       this.initNurseryAnimation(prefersReducedMotion);
       this.initJourneyAnimation(prefersReducedMotion);
-      this.initCtaAnimation(prefersReducedMotion);
       this.initBotanicalParallax(prefersReducedMotion);
     }, this.el);
   }
@@ -49,33 +49,19 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
 
   // ═══════════════════════════════════════════════════════════════
   // 1. HERO ENTRANCE (PATTERN A) & BOTANICAL PARALLAX
+  // Zero flicker: Content is rendered immediately, parallax is subtle
   // ═══════════════════════════════════════════════════════════════
   private initHeroAnimation(prefersReducedMotion: boolean): void {
     const heroSection = this.el.nativeElement.querySelector('.hero') as HTMLElement | null;
     if (!heroSection) return;
 
-    const eyebrow = heroSection.querySelector('.hero-eyebrow') as HTMLElement | null;
-    const title   = heroSection.querySelector('.hero-title') as HTMLElement | null;
-    const desc    = heroSection.querySelector('.hero-description') as HTMLElement | null;
-    const ctas    = heroSection.querySelectorAll('.hero-cta-primary, .hero-cta-secondary');
     const heroImg = heroSection.querySelector('.hero-backdrop-img') as HTMLElement | null;
-
-    // Guaranteed visibility: buttons and elements are never hidden
-    gsap.set([eyebrow, title, desc, ...Array.from(ctas)].filter(Boolean), { opacity: 1, y: 0 });
 
     if (prefersReducedMotion) return;
 
-    const heroTl = gsap.timeline({ delay: 0.1, defaults: { ease: 'power2.out' } });
-    if (eyebrow) heroTl.from(eyebrow, { opacity: 0, y: 15, duration: 0.55 }, 0);
-    if (title)   heroTl.from(title,   { opacity: 0, y: 20, duration: 0.65 }, 0.15);
-    if (desc)    heroTl.from(desc,    { opacity: 0, y: 15, duration: 0.55 }, 0.3);
-    if (ctas.length > 0) {
-      heroTl.from(ctas, { opacity: 0, y: 15, duration: 0.5, stagger: 0.1 }, 0.45);
-    }
-
     if (heroImg) {
       gsap.to(heroImg, {
-        yPercent: 12,
+        yPercent: 10,
         ease: 'none',
         scrollTrigger: {
           trigger: heroSection,
@@ -351,43 +337,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
     });
   }
 
-  // ═══════════════════════════════════════════════════════════════
-  // 7. CINEMATIC CTA ENTRANCE
-  // ═══════════════════════════════════════════════════════════════
-  private initCtaAnimation(prefersReducedMotion: boolean): void {
-    const ctaSection = document.getElementById('cinematicCtaSection');
-    if (!ctaSection) return;
-
-    const ctaBackdropImg = ctaSection.querySelector('.cta-backdrop-img') as HTMLElement | null;
-    const ctaFrame       = ctaSection.querySelector('.cta-editorial-frame') as HTMLElement | null;
-    const ctaEyebrow     = document.getElementById('ctaEyebrow');
-    const ctaHeading     = document.getElementById('ctaHeading');
-    const ctaLead        = document.getElementById('ctaLead');
-    const ctaActions     = document.getElementById('ctaActions');
-
-    const ctaEls = [ctaFrame, ctaEyebrow, ctaHeading, ctaLead, ctaActions].filter(Boolean);
-
-    if (prefersReducedMotion) {
-      if (ctaBackdropImg) gsap.set(ctaBackdropImg, { scale: 1, opacity: 1 });
-      ctaEls.forEach(el => el && gsap.set(el, { opacity: 1, y: 0 }));
-      return;
-    }
-
-    const ctaTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ctaSection,
-        start: 'top 82%',
-        once: true
-      }
-    });
-
-    if (ctaBackdropImg) ctaTl.to(ctaBackdropImg, { scale: 1, duration: 1.6, ease: 'power2.out' }, 0);
-    if (ctaFrame)       ctaTl.to(ctaFrame,       { opacity: 1, duration: 0.9, ease: 'power2.out' }, 0.15);
-    if (ctaEyebrow)     ctaTl.to(ctaEyebrow,     { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' }, 0.2);
-    if (ctaHeading)     ctaTl.to(ctaHeading,     { opacity: 1, y: 0, duration: 0.7,  ease: 'power2.out' }, 0.32);
-    if (ctaLead)        ctaTl.to(ctaLead,        { opacity: 1, y: 0, duration: 0.6,  ease: 'power2.out' }, 0.46);
-    if (ctaActions)     ctaTl.to(ctaActions,     { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' }, 0.58);
-  }
 
   // ═══════════════════════════════════════════════════════════════
   // 8. BOTANICAL ORCHARD PARALLAX

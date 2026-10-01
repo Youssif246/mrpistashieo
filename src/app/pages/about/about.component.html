@@ -83,7 +83,6 @@
       <aside class="story-anchor-column">
         <div class="editorial-brand-eyebrow">
           <span class="eyebrow-accent-line" aria-hidden="true"></span>
-          <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
           <span class="brand-eyebrow-text">{{ i18n.t().about.story.tag }}</span>
         </div>
 
@@ -117,7 +116,7 @@
         <!-- Subtle Botanical Separation Line with Pistachio Pip -->
         <div class="prose-subtle-divider" aria-hidden="true">
           <span class="divider-line"></span>
-          <span class="divider-leaf"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
+          <span class="divider-node"></span>
           <span class="divider-line"></span>
         </div>
 
@@ -165,7 +164,6 @@
     <header class="philosophy-section-header">
       <div class="editorial-brand-eyebrow">
         <span class="eyebrow-accent-line" aria-hidden="true"></span>
-        <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
         <span class="brand-eyebrow-text">{{ i18n.t().about.philosophy.tag }}</span>
       </div>
 
@@ -184,7 +182,7 @@
 
       <!-- Center Botanical Cross Axis Node -->
       <div class="grid-center-node" aria-hidden="true">
-        <span class="center-pip"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
+        <span class="center-pip"></span>
       </div>
 
       <!-- Principle 01: Botanical Integrity -->
@@ -341,7 +339,6 @@
       <div class="technical-prose-column">
         <div class="editorial-brand-eyebrow">
           <span class="eyebrow-accent-line" aria-hidden="true"></span>
-          <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
           <span class="brand-eyebrow-text">{{ i18n.t().about.expertise.tag }}</span>
         </div>
 
@@ -384,7 +381,6 @@
       <!-- Centered Eyebrow with Flanking Hairlines -->
       <div class="cta-centered-eyebrow">
         <span class="cta-hairline-accent" aria-hidden="true"></span>
-        <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy"></span>
         <span class="cta-eyebrow-text">{{ i18n.t().about.cta.tag }}</span>
         <span class="cta-hairline-accent" aria-hidden="true"></span>
       </div>
@@ -399,13 +395,8 @@
 
       <!-- Unified Button System - Matching Home Page Exactly (NO ARROWS) -->
       <div class="cta-editorial-buttons">
-        <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-dark" aria-label="Start WhatsApp Consultation">
-          <i class="fa-brands fa-whatsapp cta-wa-icon" aria-hidden="true"></i>
-          <span>{{ i18n.t().about.cta.btn }}</span>
-        </a>
-
-        <a routerLink="/services" class="btn-editorial btn-editorial-outline" aria-label="Explore Services">
-          <span>{{ i18n.t().navbar.services }}</span>
+        <a routerLink="/contact" class="btn-editorial btn-editorial-dark" aria-label="Contact Us">
+          <span>{{ i18n.currentLang() === 'ar' ? 'تواصل معنا الآن' : 'Contact Us Now' }}</span>
         </a>
       </div>
     </div>

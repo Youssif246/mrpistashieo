@@ -241,12 +241,4 @@ export class ServicesComponent implements AfterViewInit, OnDestroy {
       }
     }, this.el);
   }
-
-  getServicesWhatsApp(): string {
-    const isAr = this.i18n.currentLang() === 'ar';
-    const msg = isAr
-      ? 'مرحباً، أود الاستفسار عن خدمات تأسيس وبساتين الفستق والحلول المتكاملة.'
-      : 'Hello, I would like to inquire about your turnkey pistachio plantation and agricultural services.';
-    return APP_CONFIG.getWhatsAppUrl(msg);
-  }
 }

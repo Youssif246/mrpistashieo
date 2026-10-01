@@ -9,8 +9,8 @@
 .contact-editorial-hero {
   position: relative;
   background-color: #FAF7F0;
-  padding-top: clamp(1rem, 1.8vw, 1.6rem);
-  padding-bottom: clamp(2rem, 3.5vw, 3rem);
+  padding-top: clamp(3.5rem, 6.5vw, 6rem);
+  padding-bottom: clamp(3rem, 5vw, 5rem);
   overflow: hidden;
 }
 
@@ -817,19 +817,24 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .location-editorial-content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+  align-items: center;
+  text-align: center;
+  gap: 1.75rem;
 }
 
 .location-text-side {
   max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.location-editorial-content .editorial-brand-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
 }
 
 .location-card-title {
@@ -840,23 +845,35 @@
   line-height: 1.15;
   margin-top: 0.6rem;
   margin-bottom: 0.4rem;
+  text-align: center;
 }
 
-:host-context(body.rtl) .location-card-title {
-  font-family: var(--font-ar-display);
+:host-context([dir="rtl"]) .location-card-title,
+:host-context(html[dir="rtl"]) .location-card-title {
+  font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
   font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  text-align: center !important;
 }
 
 .location-card-sub {
   font-family: var(--font-sans);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   color: var(--c-slate);
   margin-bottom: 0;
+  text-align: center;
 }
 
-:host-context(body.rtl) .location-card-sub {
-  font-family: var(--font-ar-body);
-  font-size: 0.88rem;
+:host-context([dir="rtl"]) .location-card-sub,
+:host-context(html[dir="rtl"]) .location-card-sub {
+  font-family: var(--font-ar-body), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
+  font-size: 0.92rem;
+  text-align: center !important;
+}
+
+.location-action-side {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Location Action Button: Outline style, NO ARROW */
@@ -881,8 +898,9 @@
   transition: var(--transition-fast);
 }
 
-:host-context(body.rtl) .btn-location-action {
-  font-family: var(--font-ar-body);
+:host-context([dir="rtl"]) .btn-location-action,
+:host-context(html[dir="rtl"]) .btn-location-action {
+  font-family: var(--font-ar-body), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
   font-size: 0.88rem;
   letter-spacing: normal;
 }

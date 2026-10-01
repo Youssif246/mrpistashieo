@@ -31,11 +31,11 @@
   padding-inline: clamp(1.5rem, 4.5vw, 3.5rem);
   
   /* Initial State: Clean Warm Ivory Header */
-  background-color: #FAF8F3;
+  background-color: var(--c-ivory);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border: none;
-  border-bottom: 1px solid rgba(21, 39, 30, 0.08);
+  border-bottom: 1px solid rgba(194, 160, 115, 0.28);
 
   transition: height 0.35s var(--ease-editorial),
               background-color 0.35s var(--ease-editorial),
@@ -49,11 +49,11 @@
 .navbar-floating-wrapper.is-floating .navbar-glass-slab {
   height: 68px;
   padding-inline: clamp(1.25rem, 4vw, 3.5rem);
-  background: rgba(250, 248, 243, 0.90);
+  background: rgba(250, 246, 239, 0.94);
   backdrop-filter: blur(14px) saturate(120%);
   -webkit-backdrop-filter: blur(14px) saturate(120%);
-  border-bottom: 1px solid rgba(21, 39, 30, 0.08);
-  box-shadow: 0 4px 20px -2px rgba(17, 33, 23, 0.05);
+  border-bottom: 1px solid rgba(194, 160, 115, 0.35);
+  box-shadow: 0 4px 20px -2px rgba(14, 32, 19, 0.08);
 }
 
 /* --------------------------------------------------------------------------
@@ -126,7 +126,7 @@
 }
 
 .nav-link:hover {
-  color: #112117;
+  color: var(--c-logo-primary);
 }
 
 /* Custom Thin Botanical Green Accent Line (Centered identically in LTR and RTL) */
@@ -135,10 +135,10 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%) scaleX(0);
-  width: 22px;
-  height: 2px;
-  background-color: #7E993B;
-  border-radius: 1px;
+  width: 24px;
+  height: 2.5px;
+  background-color: var(--c-logo-primary);
+  border-radius: 2px;
   opacity: 0;
   pointer-events: none;
   transition: transform 0.25s var(--ease-editorial),
@@ -150,13 +150,13 @@
 }
 
 .nav-link:hover .nav-active-botanical {
-  opacity: 0.5;
+  opacity: 0.6;
   transform: translateX(-50%) scaleX(0.7);
 }
 
 .nav-link.active {
-  color: #112117;
-  font-weight: 600;
+  color: var(--c-logo-primary);
+  font-weight: 700;
 }
 
 .nav-link.active .nav-active-botanical {
@@ -205,101 +205,104 @@
 }
 
 .lang-btn:hover {
-  color: var(--c-forest);
+  color: var(--c-logo-primary);
 }
 
 .lang-btn.active {
   font-weight: 700;
-  color: var(--c-forest);
+  color: var(--c-logo-primary);
 }
 
 .lang-dot {
   font-size: 0.8rem;
-  color: rgba(118, 142, 55, 0.45);
+  color: var(--c-ochre);
   line-height: 1;
   user-select: none;
 }
 
 /* --------------------------------------------------------------------------
-   3. SOCIAL MEDIA CHANNELS (Authentic Brand Colors & Smooth Elevate Hover)
+   3. SOCIAL MEDIA CHANNELS (Refined Editorial Minimalist Styling)
    -------------------------------------------------------------------------- */
 .navbar-social-links {
   display: flex;
   align-items: center;
   gap: 0.45rem;
+  padding-inline-start: 0.65rem;
+  border-inline-start: 1px solid rgba(223, 215, 199, 0.7);
 }
 
-.nav-social-btn {
+.nav-social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   line-height: 1;
   position: relative;
-  transition: transform 0.28s var(--ease-editorial),
-              box-shadow 0.28s var(--ease-editorial),
-              filter 0.25s ease;
-  box-shadow: 0 2px 6px rgba(17, 33, 23, 0.12);
+  transition: transform 0.22s var(--ease-editorial), box-shadow 0.22s var(--ease-editorial), filter 0.2s ease;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
-.nav-social-btn:hover {
-  transform: translateY(-2.5px) scale(1.08);
+.nav-social-icon:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  color: #FFFFFF;
 }
 
-.nav-social-btn:active {
-  transform: translateY(0) scale(0.96);
-}
-
-/* Authentic Brand Color Schemes */
-.nav-social-btn.social-instagram {
+.nav-social-icon.social-instagram {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-  box-shadow: 0 2px 8px rgba(214, 36, 159, 0.3);
+  box-shadow: 0 2px 6px rgba(214, 36, 159, 0.28);
+}
+.nav-social-icon.social-instagram:hover {
+  box-shadow: 0 4px 12px rgba(214, 36, 159, 0.45);
 }
 
-.nav-social-btn.social-instagram:hover {
-  box-shadow: 0 6px 16px rgba(214, 36, 159, 0.55);
+.nav-social-icon.social-tiktok {
+  background-color: #010101;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
-
-.nav-social-btn.social-facebook {
-  background-color: #1877F2;
-  box-shadow: 0 2px 8px rgba(24, 119, 242, 0.3);
-}
-
-.nav-social-btn.social-facebook:hover {
-  box-shadow: 0 6px 16px rgba(24, 119, 242, 0.55);
-}
-
-.nav-social-btn.social-x {
-  background-color: #000000;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.nav-social-btn.social-x:hover {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.55);
+.nav-social-icon.social-tiktok:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   background-color: #111111;
 }
 
-.nav-social-btn.social-youtube {
+.nav-social-icon.social-x {
+  background-color: #000000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+.nav-social-icon.social-x:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  background-color: #111111;
+}
+
+.nav-social-icon.social-facebook {
+  background-color: #1877F2;
+  box-shadow: 0 2px 6px rgba(24, 119, 242, 0.28);
+}
+.nav-social-icon.social-facebook:hover {
+  box-shadow: 0 4px 12px rgba(24, 119, 242, 0.45);
+}
+
+.nav-social-icon.social-youtube {
   background-color: #FF0000;
-  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(255, 0, 0, 0.28);
+}
+.nav-social-icon.social-youtube:hover {
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.45);
 }
 
-.nav-social-btn.social-youtube:hover {
-  box-shadow: 0 6px 16px rgba(255, 0, 0, 0.55);
+.nav-social-icon:active {
+  transform: translateY(0);
 }
 
-@media (max-width: 520px) {
-  .nav-social-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 0.85rem;
+@media (max-width: 900px) {
+  .navbar-social-links {
+    display: none;
   }
 }
 
@@ -459,6 +462,22 @@
 
 .mobile-cta:hover {
   opacity: 0.94;
+}
+
+.mobile-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(21, 39, 30, 0.08);
+}
+
+.mobile-social-links .nav-social-icon {
+  width: 38px;
+  height: 38px;
+  font-size: 0.95rem;
 }
 
 /* --------------------------------------------------------------------------

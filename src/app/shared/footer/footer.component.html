@@ -29,11 +29,10 @@
         </p>
       </div>
 
-      <div class="footer-direct-action">
-        <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer"
-          class="btn-editorial btn-editorial-wa-light">
-          <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-          <span>{{ i18n.t().footer.whatsappCta }}</span>
+      <div class="footer-action-wrap">
+        <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn-footer-whatsapp" aria-label="Start WhatsApp Consultation">
+          <i class="fa-brands fa-whatsapp footer-wa-icon" aria-hidden="true"></i>
+          <span>{{ i18n.currentLang() === 'ar' ? 'ابدأ المحادثة عبر واتساب' : 'Start WhatsApp Conversation' }}</span>
         </a>
       </div>
     </div>
@@ -50,6 +49,7 @@
           <li><a routerLink="/about">{{ i18n.t().navbar.about }}</a></li>
           <li><a routerLink="/services">{{ i18n.t().navbar.services }}</a></li>
           <li><a routerLink="/products">{{ i18n.t().navbar.products }}</a></li>
+          <li><a routerLink="/articles">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</a></li>
           <li><a routerLink="/contact">{{ i18n.t().navbar.contact }}</a></li>
         </ul>
       </div>
@@ -88,13 +88,13 @@
       <div class="footer-column">
         <span class="column-kicker">{{ i18n.t().footer.socialTitle }}</span>
         <div class="footer-social-roster">
-          <a [href]="social.x" target="_blank" rel="noopener noreferrer" class="social-tag" aria-label="X (Twitter)">
-            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
-            <span>X (Twitter)</span>
-          </a>
           <a [href]="social.instagram" target="_blank" rel="noopener noreferrer" class="social-tag">
             <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             <span>Instagram</span>
+          </a>
+          <a [href]="social.tiktok" target="_blank" rel="noopener noreferrer" class="social-tag" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            <span>TikTok</span>
           </a>
           <a [href]="social.facebook" target="_blank" rel="noopener noreferrer" class="social-tag">
             <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
@@ -103,6 +103,10 @@
           <a [href]="social.youtube" target="_blank" rel="noopener noreferrer" class="social-tag">
             <i class="fa-brands fa-youtube" aria-hidden="true"></i>
             <span>YouTube</span>
+          </a>
+          <a [href]="social.x" target="_blank" rel="noopener noreferrer" class="social-tag" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            <span>X (Twitter)</span>
           </a>
         </div>
       </div>
@@ -115,11 +119,6 @@
       <p class="copyright-text">
         &copy; {{ currentYear }} {{ i18n.t().footer.rights }}
       </p>
-      <div class="colophon-links">
-        <a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().footer.privacy }}</a>
-        <span class="colophon-sep">/</span>
-        <a class="is-inert-link" aria-disabled="true" tabindex="-1">{{ i18n.t().footer.legalNotice }}</a>
-      </div>
     </div>
   </div>
 </footer>

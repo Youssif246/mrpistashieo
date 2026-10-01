@@ -1,5 +1,5 @@
 @if (hasIntroPending) {
-  <app-pistachio-intro (introComplete)="onIntroComplete()"></app-pistachio-intro>
+<app-pistachio-intro (introComplete)="onIntroComplete()"></app-pistachio-intro>
 }
 
 <!-- ==========================================================================
@@ -16,8 +16,6 @@
     <!-- Centered Eyebrow -->
     <div class="hero-eyebrow">
       <span class="eyebrow-accent-line" aria-hidden="true"></span>
-      <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
-          class="pip-pistachio-img" loading="lazy"></span>
       <span class="eyebrow-text">{{ i18n.t().home.hero.badge }}</span>
       <span class="eyebrow-dot" aria-hidden="true">·</span>
       <span class="eyebrow-botanical">{{ i18n.t().home.hero.botanical }}</span>
@@ -39,11 +37,6 @@
 
     <!-- Centered CTA Buttons (Unified Premium Button System - No Arrows) -->
     <div class="hero-cta-row">
-      <a [href]="getGeneralWhatsApp()" target="_blank" rel="noopener noreferrer" class="hero-cta-primary"
-        aria-label="WhatsApp Inquiry">
-        <i class="fa-brands fa-whatsapp cta-wa-icon" aria-hidden="true"></i>
-        <span>{{ i18n.t().home.hero.ctaPrimary }}</span>
-      </a>
       <a routerLink="/services" class="hero-cta-secondary">
         <span>{{ i18n.t().home.hero.ctaSecondary }}</span>
       </a>
@@ -77,8 +70,6 @@
       <div class="manifesto-headline-block">
         <div class="editorial-brand-eyebrow">
           <span class="eyebrow-accent-line" aria-hidden="true"></span>
-          <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
-              class="pip-pistachio-img" loading="lazy"></span>
           <span class="brand-eyebrow-text">{{ i18n.t().home.positioning.tag }}</span>
         </div>
         <h2 class="manifesto-display-title">
@@ -95,12 +86,10 @@
       </aside>
     </header>
 
-    <!-- Subtle Architectural Divider in Midground (Pistachio accent) -->
+    <!-- Subtle Architectural Divider in Midground -->
     <div class="manifesto-mid-divider" aria-hidden="true">
       <span class="mid-divider-line"></span>
-      <span class="mid-divider-pip">
-        <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
-      </span>
+      <span class="mid-divider-pip"></span>
       <span class="mid-divider-line"></span>
     </div>
 
@@ -153,8 +142,7 @@
 
 <div class="botanical-chapter-divider" aria-hidden="true">
   <span class="chapter-line"></span>
-  <span class="chapter-node"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img"
-      loading="lazy"></span>
+  <span class="chapter-node"></span>
   <span class="chapter-line"></span>
 </div>
 
@@ -193,8 +181,6 @@
       <div class="service-header-lead">
         <div class="editorial-brand-eyebrow">
           <span class="eyebrow-accent-line" aria-hidden="true"></span>
-          <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
-              class="pip-pistachio-img" loading="lazy"></span>
           <span class="brand-eyebrow-text">{{ i18n.t().home.services.tag }}</span>
         </div>
         <h2 class="service-index-title">{{ i18n.t().home.services.title }}</h2>
@@ -221,14 +207,6 @@
           <span class="panel-subtitle">{{ service.subtitle }}</span>
           <h3 class="panel-title">{{ service.title }}</h3>
           <p class="panel-desc">{{ service.description }}</p>
-          <ul class="panel-bullet-list" aria-label="Service highlights">
-            @for (bullet of service.bullets; track $index) {
-            <li class="panel-bullet-item">
-              <span class="panel-bullet-pip" aria-hidden="true"></span>
-              <span class="panel-bullet-text">{{ bullet }}</span>
-            </li>
-            }
-          </ul>
         </div>
       </article>
       }
@@ -246,8 +224,7 @@
 
 <div class="botanical-chapter-divider" aria-hidden="true">
   <span class="chapter-line"></span>
-  <span class="chapter-node"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img"
-      loading="lazy"></span>
+  <span class="chapter-node"></span>
   <span class="chapter-line"></span>
 </div>
 
@@ -288,7 +265,7 @@
     <header class="monograph-header-block">
       <div class="monograph-archival-badge">
         <span class="archival-badge-icon" aria-hidden="true">
-          <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
+          <i class="fa-solid fa-leaf"></i>
         </span>
         <span class="archival-badge-title">{{ i18n.t().home.botanical.tag }}</span>
         <span class="archival-badge-divider" aria-hidden="true"></span>
@@ -448,7 +425,7 @@
 
     <!-- Editorial Action Bar & Certification Mark (No Arrows) -->
     <div class="monograph-action-footer">
-      <a routerLink="/services" class="monograph-cta-button">
+      <a routerLink="/products" class="monograph-cta-button" id="exploreVarietiesBotanicalBtn">
         <span class="btn-text">{{ i18n.t().home.botanical.cta }}</span>
       </a>
 
@@ -464,8 +441,7 @@
 
 <div class="botanical-chapter-divider" aria-hidden="true">
   <span class="chapter-line"></span>
-  <span class="chapter-node"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img"
-      loading="lazy"></span>
+  <span class="chapter-node"></span>
   <span class="chapter-line"></span>
 </div>
 
@@ -497,8 +473,6 @@
       <div class="nursery-editorial-col">
         <div class="editorial-brand-eyebrow">
           <span class="eyebrow-accent-line" aria-hidden="true"></span>
-          <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
-              class="pip-pistachio-img" loading="lazy"></span>
           <span class="brand-eyebrow-text">{{ i18n.t().home.nursery.tag }}</span>
         </div>
 
@@ -510,11 +484,10 @@
         <!-- Visual Botanical Connector Line -->
         <div class="nursery-connector-line" aria-hidden="true">
           <span class="connector-track"></span>
-          <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
         </div>
 
-        <div class="nursery-cta-wrap">
-          <a routerLink="/services" class="nursery-text-cta" aria-label="Explore Services">
+        <div class="nursery-cta-wrap nursery-cta-desktop">
+          <a routerLink="/contact" class="nursery-text-cta" aria-label="Contact Us & Plant Reservations">
             <span>{{ i18n.t().home.nursery.cta }}</span>
           </a>
         </div>
@@ -540,7 +513,7 @@
           <div class="nursery-spec-item">
             <div class="spec-meta-header">
               <span class="spec-icon-wrap" aria-hidden="true">
-                <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
+                <i class="fa-solid fa-seedling"></i>
               </span>
               <span class="spec-title-label">{{ i18n.t().home.nursery.spec1Label }}</span>
             </div>
@@ -574,14 +547,20 @@
           </div>
         </div>
       </div>
+
+      <!-- Mobile CTA: Positioned at the very end of the nursery section on phones -->
+      <div class="nursery-cta-wrap nursery-cta-mobile">
+        <a routerLink="/contact" class="nursery-text-cta" aria-label="Contact Us & Plant Reservations">
+          <span>{{ i18n.t().home.nursery.cta }}</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <div class="botanical-chapter-divider" aria-hidden="true">
   <span class="chapter-line"></span>
-  <span class="chapter-node"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img"
-      loading="lazy"></span>
+  <span class="chapter-node"></span>
   <span class="chapter-line"></span>
 </div>
 
@@ -615,8 +594,6 @@
         <header class="journey-editorial-header">
           <div class="editorial-brand-eyebrow">
             <span class="eyebrow-accent-line" aria-hidden="true"></span>
-            <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
-                class="pip-pistachio-img" loading="lazy"></span>
             <span class="brand-eyebrow-text">{{ i18n.t().home.harvest.tag }}</span>
           </div>
           <h2 class="journey-editorial-title">{{ i18n.t().home.harvest.title }}</h2>
@@ -652,7 +629,7 @@
           <div class="stage-node-col">
             <span class="step-num">{{ i18n.t().home.harvest.stage1Num }}</span>
             <div class="stage-icon-dot">
-              <img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img" loading="lazy">
+              <i class="fa-solid fa-seedling"></i>
             </div>
           </div>
           <div class="stage-text-col">
@@ -726,58 +703,104 @@
   </div>
 </section>
 
-<div class="botanical-chapter-divider" aria-hidden="true">
-  <span class="chapter-line"></span>
-  <span class="chapter-node"><img src="/botanical/real-pistachio-nut.png" alt="" class="pip-pistachio-img"
-      loading="lazy"></span>
-  <span class="chapter-line"></span>
-</div>
+<!-- ==========================================================================
+     7. AGRONOMIC LEADERSHIP & EXPERT AGRICULTURAL VOICE
+     Dedicated monograph quote from Javier Moreno García
+     ========================================================================== -->
+<section class="section-expert-quote" id="expertQuoteSection" aria-label="Agronomic Perspective">
+  <div class="container-wide">
+    <div class="expert-quote-container">
+      <div class="expert-quote-eyebrow">
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span class="brand-eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'رؤية وتوجيه زراعي' : 'Agronomic Perspective'
+          }}</span>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+      </div>
+
+      <blockquote class="expert-quote-body">
+        {{ i18n.currentLang() === 'ar'
+        ? '«شهد قطاع الفستق أكبر نمو بين جميع أنواع المكسرات في السنوات الأخيرة، نظراً لتزايد طلب المستهلكين عليه بسبب
+        قيمته الغذائية الممتازة.»'
+        : '“The pistachio sector has witnessed the strongest growth among all tree nuts in recent years, driven by
+        increasing consumer demand for its exceptional nutritional value and agricultural resilience.”' }}
+      </blockquote>
+
+      <div class="expert-author-card">
+        <div class="expert-avatar-wrap">
+          <img src="logo.png" alt="Mister Pistachio" class="avatar-brand-crest">
+        </div>
+        <div class="expert-author-info">
+          <strong class="expert-author-name">{{ i18n.currentLang() === 'ar' ? 'زين' : 'Zain' }}</strong>
+          <span class="expert-author-title">{{ i18n.currentLang() === 'ar' ? 'خبير ومستشار زراعي متخصص •
+            @mister_pistachio' : 'Specialist Agricultural Consultant · @mister_pistachio' }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ==========================================================================
-     8. FINAL CINEMATIC CTA — HIGH-END AGRICULTURAL EDITORIAL
+     8. DEDICATED INSTAGRAM & OFFICIAL SOCIAL SHOWCASE
+     Completely separate standalone section encouraging visitors to follow
      ========================================================================== -->
-<section class="section-cinematic-cta" id="cinematicCtaSection" aria-label="Contact Section">
+<section class="section-instagram-dedicated" id="instagramSection" aria-label="Mister Pistachio on Instagram">
+  <div class="container-wide">
 
-  <!-- Full-Bleed Background Photograph (Preserved exactly as requested) -->
-  <div class="cta-photo-backdrop" aria-hidden="true">
-    <img src="cta.png" alt="" class="cta-backdrop-img" aria-hidden="true">
-    <!-- Refined Deep Botanical Atmospheric Vignette Overlay -->
-    <div class="cta-botanical-overlay"></div>
-  </div>
+    <!-- Section Header: Centered & Art-Directed -->
+    <div class="instagram-dedicated-header">
+      <div class="instagram-dedicated-eyebrow">
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+        <span class="brand-eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'مجتمعنا الزراعي' : 'OUR COMMUNITY' }}</span>
+        <span class="eyebrow-accent-line" aria-hidden="true"></span>
+      </div>
 
-  <!-- Centered Editorial Content Stage -->
-  <div class="cta-content-stage" id="ctaContentStage">
-    <div class="cta-editorial-frame" aria-hidden="true"></div>
+      <h2 class="instagram-dedicated-title">
+        {{ i18n.currentLang() === 'ar' ? 'مستر بيستاشيو على إنستغرام' : 'Mister Pistachio on Instagram' }}
+      </h2>
 
-    <!-- Restrained Editorial Eyebrow -->
-    <div class="cta-eyebrow-wrap" id="ctaEyebrow">
-      <span class="cta-eyebrow-line" aria-hidden="true"></span>
-      <span class="eyebrow-botanical-pip" aria-hidden="true"><img src="/botanical/real-pistachio-nut.png" alt=""
-          class="pip-pistachio-img" loading="lazy"></span>
-      <span class="cta-eyebrow-text">{{ i18n.t().home.ctaSection.tag }}</span>
-      <span class="cta-eyebrow-line" aria-hidden="true"></span>
+      <p class="instagram-dedicated-lead">
+        {{ i18n.currentLang() === 'ar'
+        ? 'تابع أحدث جولات المشاتل وعمليات التطعيم الميدانية ومستجدات زراعة الفستق عبر حسابنا الرسمي.'
+        : 'Follow our nursery routines, field grafting, and Mediterranean cultivation updates on Instagram.' }}
+      </p>
     </div>
 
-    <!-- Editorial Heading with Controlled Break -->
-    <h2 class="cta-editorial-heading" id="ctaHeading">
-      <span class="cta-heading-line cta-heading-line--1">{{ i18n.t().home.ctaSection.titleLine1 }}</span>
-      <span class="cta-heading-line cta-heading-line--2">{{ i18n.t().home.ctaSection.titleLine2 }}</span>
-    </h2>
+    <!-- Instagram Profile Card & Direct Action (Refined Text + Social CTA) -->
+    <div class="instagram-profile-dossier">
+      <div class="instagram-dossier-top">
+        <div class="instagram-user-identity">
+          <div class="instagram-crest-avatar">
+            <img src="logo.png" alt="Mister Pistachio">
+          </div>
+          <div class="instagram-user-text">
+            <h3 class="instagram-display-name">
+              {{ i18n.currentLang() === 'ar' ? 'مستر بيستاشيو' : 'Mister Pistachio' }}
+            </h3>
+            <span class="instagram-username" dir="ltr">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+              <span>&#64;misterpistach</span>
+            </span>
+          </div>
+        </div>
 
-    <!-- Understated Supporting Paragraph (controlled max-width 620-680px) -->
-    <p class="cta-editorial-lead" id="ctaLead">
-      {{ i18n.t().home.ctaSection.desc }}
-    </p>
+        <!-- Follow on Instagram CTA Button -->
+        <a [href]="config.social.instagram" target="_blank" rel="noopener noreferrer" class="btn-instagram-action"
+          aria-label="Follow Mister Pistachio on Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span>{{ i18n.currentLang() === 'ar' ? 'متابعة على إنستغرام' : 'Follow on Instagram' }}</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
 
-    <div class="cta-action-cluster" id="ctaActions">
-      <!-- High-End Editorial Contact Button -->
-      <a routerLink="/contact" class="cta-btn cta-btn--editorial-main" aria-label="Contact Our Specialists">
-        <span class="cta-btn-icon" aria-hidden="true">
-          <i class="fa-solid fa-paper-plane"></i>
-        </span>
-        <span class="cta-btn-label">{{ i18n.t().home.ctaSection.secondaryBtn }}</span>
-      </a>
+      <p class="instagram-bio-strip">
+        {{ i18n.currentLang() === 'ar'
+        ? 'حماة، سوريا • info@misterpistachio.com • شركة متخصصة بالكامل في تجارة وزراعة الفستق
+        الحلبي، إكثار الأصول المعتمدة، وتقديم الرعاية الحقلية المتكاملة.'
+        : 'Hama, Syria · info@misterpistachio.com · Agricultural enterprise dedicated entirely to
+        certified pistachio nursery propagation, orchard establishment, and Mediterranean cultivation.' }}
+      </p>
     </div>
+
 
   </div>
 </section>

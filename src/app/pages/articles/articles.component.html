@@ -1,0 +1,171 @@
+<!-- ==========================================================================
+     ARTICLES & RESEARCH MONOGRAPH: UNIFIED INTERNAL EDITORIAL HERO
+     Consistent visual language matching Products, Services, and About
+     ========================================================================== -->
+
+<header class="internal-editorial-hero" id="articlesHero">
+  <div class="internal-hero-container">
+    <div class="internal-hero-grid">
+      
+      <!-- Content Block: Right in RTL, Left in LTR -->
+      <div class="internal-hero-content">
+        <div class="internal-hero-eyebrow">
+          <span class="internal-hero-eyebrow-line" aria-hidden="true"></span>
+          <span class="internal-hero-eyebrow-text">
+            {{ i18n.currentLang() === 'ar' ? 'الأبحاث والدراسات الزراعية' : 'Agronomic Research & Field Insights' }}
+          </span>
+        </div>
+
+        <h1 class="internal-hero-title">
+          {{ i18n.currentLang() === 'ar' ? 'المقالات والأبحاث الزراعية' : 'Agricultural Articles & Insights' }}
+        </h1>
+
+        <div class="internal-hero-divider" aria-hidden="true"></div>
+
+        <p class="internal-hero-desc">
+          {{ i18n.currentLang() === 'ar'
+            ? 'دراسات زراعية تخصصية ومقالات تطبيقية تُعنى بتخطيط البساتين الاستثمارية، انتخاب الأصول المعتمدة، هندسة التربة، واستراتيجيات الري الذكي لتحقيق أقصى إنتاجية مستدامة.'
+            : 'Authoritative agronomic research, orchard engineering protocols, rootstock genetic analysis, and precision irrigation strategies designed for commercial pistachio growers.' }}
+        </p>
+
+        <!-- Subtle Agronomic Metadata Badges -->
+        <div class="internal-hero-strip internal-hero-meta-badges">
+          <span class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            {{ i18n.currentLang() === 'ar' ? 'دراسات ميدانية تطبيقية' : 'Applied Field Studies' }}
+          </span>
+          <span class="strip-sep">/</span>
+          <span class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            {{ i18n.currentLang() === 'ar' ? 'معايير جودة معتمدة' : 'Certified Standards' }}
+          </span>
+          <span class="strip-sep">/</span>
+          <span class="hero-meta-badge">
+            <span class="badge-dot"></span>
+            {{ i18n.currentLang() === 'ar' ? 'حوض البحر الأبيض المتوسط' : 'Mediterranean Basin' }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Large Custom Image Block (45-50% width) -->
+      <div class="internal-hero-media">
+        <div class="internal-hero-frame">
+          <img src="assets/images/articles/pistachio-orchard-guide.jpg" 
+               [alt]="i18n.currentLang() === 'ar' ? 'أبحاث ودراسات زراعة الفستق الحلبي' : 'Pistachio agricultural research and orchard management'" 
+               class="internal-hero-img"
+               loading="eager">
+          <div class="internal-hero-plate">
+            <span class="plate-marker">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</span>
+            <span class="plate-caption">
+              {{ i18n.currentLang() === 'ar' ? 'أبحاث ودراسات متخصصة في هندسة وإدارة بساتين الفستق الحلبي' : 'Specialist research in commercial pistachio orchard engineering' }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- Main Articles Content Section -->
+<main class="articles-main-section" [class.is-rtl]="i18n.isRtl()">
+  <div class="internal-hero-container">
+
+    <!-- Featured Article Banner -->
+    @if (featuredArticle(); as featured) {
+      <section class="featured-article-section" aria-label="Featured Technical Article">
+        <article class="featured-card">
+          <a [routerLink]="['/articles', featured.slug]" class="featured-image-link" [attr.aria-label]="featured.title">
+            <div class="image-wrapper">
+              <img [src]="featured.coverImage" [alt]="featured.title" loading="eager" width="720" height="460">
+              <span class="featured-badge">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                {{ i18n.currentLang() === 'ar' ? 'مقال مميز' : 'Featured Guide' }}
+              </span>
+            </div>
+          </a>
+
+          <div class="featured-content">
+            <div class="meta-row">
+              <span class="category-chip">{{ featured.category }}</span>
+              <span class="meta-dot">·</span>
+              <span class="meta-date">
+                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                {{ featured.date }}
+              </span>
+              <span class="meta-dot">·</span>
+              <span class="meta-readtime">
+                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                {{ featured.readTime }}
+              </span>
+            </div>
+
+            <h2 class="featured-title">
+              <a [routerLink]="['/articles', featured.slug]">{{ featured.title }}</a>
+            </h2>
+
+            <p class="featured-excerpt">{{ featured.excerpt }}</p>
+
+            <div class="featured-action">
+              <a [routerLink]="['/articles', featured.slug]" class="btn-read-featured">
+                <span>{{ i18n.currentLang() === 'ar' ? 'قراءة الدليل الشامل' : 'Read Technical Guide' }}</span>
+                <i [class]="i18n.isRtl() ? 'fa-solid fa-arrow-left' : 'fa-solid fa-arrow-right'" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      </section>
+    }
+
+    <!-- Articles Grid Section -->
+    <section class="articles-grid-section" aria-label="Agricultural Articles Grid">
+      <div class="grid-header">
+        <h2 class="grid-section-title">
+          {{ i18n.currentLang() === 'ar' ? 'أحدث الدراسات والمقالات الفنية' : 'Latest Agricultural Research & Studies' }}
+        </h2>
+        <span class="grid-count">
+          {{ gridArticles().length }} {{ i18n.currentLang() === 'ar' ? 'مقالات' : 'articles' }}
+        </span>
+      </div>
+
+      <div class="articles-grid">
+        @for (article of gridArticles(); track article.id) {
+          <article class="article-card">
+            <a [routerLink]="['/articles', article.slug]" class="card-image-wrap" [attr.aria-label]="article.title">
+              <img [src]="article.coverImage" [alt]="article.title" loading="lazy" width="480" height="300">
+              <span class="card-category-overlay">{{ article.category }}</span>
+            </a>
+
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="meta-item">
+                  <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                  {{ article.date }}
+                </span>
+                <span class="meta-separator">•</span>
+                <span class="meta-item">
+                  <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                  {{ article.readTime }}
+                </span>
+              </div>
+
+              <h3 class="card-title">
+                <a [routerLink]="['/articles', article.slug]">{{ article.title }}</a>
+              </h3>
+
+              <p class="card-excerpt">{{ article.excerpt }}</p>
+
+              <div class="card-footer">
+                <a [routerLink]="['/articles', article.slug]" class="card-read-link">
+                  <span>{{ i18n.currentLang() === 'ar' ? 'قراءة المقال' : 'Read Article' }}</span>
+                  <i [class]="i18n.isRtl() ? 'fa-solid fa-arrow-left' : 'fa-solid fa-arrow-right'" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+
+  </div>
+</main>

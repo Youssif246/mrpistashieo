@@ -4,12 +4,17 @@ import { AboutComponent } from './pages/about/about.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ArticlesComponent } from './pages/articles/articles.component';
+import { ArticleDetailsComponent } from './pages/article-details/article-details.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Specialist Pistachio Nursery & Cultivation' },
   { path: 'about', component: AboutComponent, title: 'About Our Nursery - Pistachio Specialist' },
   { path: 'services', component: ServicesComponent, title: 'Agricultural Services & Orchard Engineering - Mister Pistachio' },
   { path: 'products', component: ProductsComponent, title: 'Pistachio Varieties & Certified Rootstocks - Mister Pistachio' },
+  { path: 'articles', component: ArticlesComponent, title: 'Agricultural Articles & Cultivation Insights - Mister Pistachio' },
+  { path: 'articles/:slug', component: ArticleDetailsComponent },
   { path: 'contact', component: ContactComponent, title: 'Contact Our Agricultural Team - Pistachio Specialist' },
   { path: '**', redirectTo: '' }
 ];
+

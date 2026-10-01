@@ -1,30 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+
 /* ==========================================================================
    WORLD-CLASS BOTANICAL EDITORIAL DESIGN SYSTEM
    Specialist Pistachio Cultivation & Nursery
    ========================================================================== */
 
 :root {
-  /* Editorial Color Palette */
-  --c-ivory: #F8F5EE;          /* Warm limestone / editorial paper */
-  --c-ivory-warm: #F2EDE2;     /* Slightly deeper linen */
-  --c-ivory-light: #FCFAF6;    /* Soft clean alabaster */
+  /* ═══════════════════════════════════════════════════════════════
+     MAJOR REBRAND COLOR SYSTEM — SOURCED FROM NEW LOGO
+     ═══════════════════════════════════════════════════════════════ */
+  /* Primary & Botanical Greens (Derived directly from 'Pistachio' logo gradient & leaves) */
+  --c-logo-primary: #3B7C04;
+  /* Primary vibrant pistachio green from logo */
+  --c-logo-deep: #24520B;
+  /* Deep leaf green from logo shadow */
+  --c-logo-medium: #4E8F16;
+  /* Medium pistachio foliage */
+  --c-logo-light: #6EA82B;
+  /* Fresh young shoot */
+  --c-logo-bright: #7CB933;
+  /* Crisp botanical highlight */
+
+  /* Deep Mediterranean Evergreens */
+  --c-forest: #0E2013;
+  /* Deepest logo-derived forest green */
+  --c-forest-dark: #07100A;
+  /* Ink botanical */
+  --c-forest-mid: #152E1C;
+  /* Rich botanical slate */
+  --c-forest-card: #1B3923;
+  /* Deep green card surface */
+
+  /* Standard Brand Green Aliases */
+  --c-pistachio: #3B7C04;
+  /* Primary logo green */
+  --c-pistachio-deep: #24520B;
+  /* Deep olive-pistachio */
+  --c-pistachio-medium: #4E8F16;
+  /* Medium pistachio */
+  --c-pistachio-light: #6EA82B;
+  /* Fresh light pistachio */
+  --c-pistachio-tint: #E2ECCE;
+  /* VISIBLE light pistachio background wash */
+  --c-pistachio-subtle: #ECF3DE;
+  /* Soft pistachio wash */
+  --c-pistachio-muted: #D5E2BF;
+  /* Distinct muted pistachio background */
+
+  /* Golden Almond Ochre & Earth (Derived directly from 'Mister' and leaf in logo) */
+  --c-ochre: #C2A073;
+  /* Golden almond ochre from brand logomark */
+  --c-ochre-warm: #B5935F;
+  /* Warm almond ochre */
+  --c-ochre-dark: #8F7249;
+  /* Deep hazelnut ochre */
+  --c-ochre-light: #D8C3A3;
+  /* Light ochre tint */
+  --c-ochre-subtle: #F6EFE3;
+  /* Soft ochre cream */
+
+  /* Warm Sand & Earthy Neutrals (Distinct background colors) */
+  --c-sand: #E8DFC8;
+  /* VISIBLE natural sand background */
+  --c-sand-warm: #DFD2BA;
+  /* Rich earthy sand */
+  --c-sand-muted: #C4B59D;
+  /* Warm sand rule / border */
+  --c-sand-subtle: #F0E9DA;
+  /* Pale sand wash */
+  --c-earth: #8C7554;
+  /* Darker earthy neutral / loam */
+
+  /* Editorial Paper & Ivory Surfaces */
+  --c-ivory: #FAF6EF;
+  /* Warm editorial paper */
+  --c-ivory-warm: #F4EEDE;
+  /* Slightly deeper linen */
+  --c-ivory-light: #FDFBF7;
+  /* Clean alabaster */
+  --c-cream: #FAF5EB;
+  /* Editorial cream */
   --c-white: #FFFFFF;
 
-  --c-forest: #112117;         /* Deepest Mediterranean evergreen */
-  --c-forest-dark: #0A140E;    /* Ink forest */
-  --c-forest-mid: #1A3123;     /* Rich botanical slate */
-
-  --c-pistachio: #768E37;      /* Refined botanical pistachio green */
-  --c-pistachio-deep: #5A6F28; /* Deep olive-pistachio */
-  --c-pistachio-subtle: #EBF0DC;/* Pale pistachio tint */
-
-  --c-sand: #DFD7C7;          /* Fine limestone border */
-  --c-sand-muted: #BCB2A1;    /* Subtle rule color */
-  --c-earth: #8C7B65;         /* Warm loam accent */
-
-  --c-charcoal: #151A17;      /* Primary text */
-  --c-slate: #4A564F;         /* Editorial body text */
-  --c-slate-light: #7E8C83;   /* Secondary captions & metadata */
+  /* Typography Neutrals (High legibility) */
+  --c-charcoal: #141A16;
+  /* Primary high-contrast text */
+  --c-slate: #3A473F;
+  /* Editorial body text */
+  --c-slate-light: #6A7970;
+  /* Secondary captions & metadata */
 
   /* Typography System */
   --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
@@ -46,7 +110,9 @@
 }
 
 /* Base Setup */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -76,20 +142,35 @@ body {
 }
 
 /* ==========================================================================
-   ARABIC TYPOGRAPHY & RTL ARCHITECTURE
-   Unified 'IBM Plex Sans Arabic' across all UI, headings, prose & controls
+   UNIFIED ARABIC TYPOGRAPHY ARCHITECTURE (AMIRI)
+   Every single Arabic UI element across the entire website strictly uses Amiri.
    ========================================================================== */
-body.rtl {
+html[lang="ar"],
+html[dir="rtl"],
+body.rtl,
+:lang(ar),
+[dir="rtl"] {
   font-family: var(--font-ar);
   direction: rtl;
   text-align: start;
 }
 
+html[dir="rtl"] body,
+body.rtl {
+  font-family: var(--font-ar);
+}
+
 /* Eliminate Latin uppercase and letter-spacing that breaks Arabic cursive connectivity */
 body.rtl,
-body.rtl *,
-body.rtl *::before,
-body.rtl *::after {
+body.rtl p,
+body.rtl h1,
+body.rtl h2,
+body.rtl h3,
+body.rtl h4,
+body.rtl h5,
+body.rtl h6,
+body.rtl span:not([class*="fa-"]),
+body.rtl a:not([class*="fa-"]) {
   letter-spacing: normal !important;
   text-transform: none !important;
 }
@@ -101,7 +182,13 @@ body.rtl h2,
 body.rtl h3,
 body.rtl h4,
 body.rtl h5,
-body.rtl h6 {
+body.rtl h6,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6 {
   font-family: var(--font-ar) !important;
   font-style: normal !important;
   font-weight: 700;
@@ -110,17 +197,77 @@ body.rtl h6 {
 
 body.rtl p,
 body.rtl li,
-body.rtl span,
-body.rtl a,
-body.rtl button,
-body.rtl input,
-body.rtl textarea,
-body.rtl select {
+body.rtl blockquote,
+body.rtl cite,
+html[dir="rtl"] p,
+html[dir="rtl"] li,
+html[dir="rtl"] blockquote,
+html[dir="rtl"] cite {
+  font-family: var(--font-ar);
+  line-height: 1.85;
+  font-style: normal;
+}
+
+.lang-ar {
   font-family: var(--font-ar);
 }
 
-body.rtl p {
-  line-height: 1.85;
+body.rtl button,
+body.rtl input,
+body.rtl textarea,
+body.rtl select,
+html[dir="rtl"] button,
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] select {
+  font-family: var(--font-ar);
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+   PROTECT ALL FONT AWESOME ICONS ACROSS EN & AR (PREVENTS OVERRIDE)
+   ══════════════════════════════════════════════════════════════════════════ */
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands,
+i[class*="fa-"],
+span[class*="fa-"],
+[class^="fa-"],
+[class*=" fa-"],
+[class^="fa-"]::before,
+[class*=" fa-"]::before,
+body.rtl i[class*="fa-"],
+body.rtl span[class*="fa-"],
+body.rtl [class^="fa-"],
+body.rtl [class*=" fa-"],
+body.rtl .fa,
+body.rtl .fa-solid,
+body.rtl .fa-regular,
+body.rtl .fa-brands,
+body.rtl .fa::before,
+body.rtl .fa-solid::before,
+body.rtl .fa-regular::before,
+body.rtl .fa-brands::before,
+body.rtl [class^="fa-"]::before,
+body.rtl [class*=" fa-"]::before {
+  font-family: "Font Awesome 6 Free" !important;
+  letter-spacing: normal !important;
+}
+
+.fa-brands,
+.fa-brands::before,
+.fab,
+.fab::before,
+body.rtl .fa-brands,
+body.rtl .fa-brands::before,
+body.rtl .fab,
+body.rtl .fab::before {
+  font-family: "Font Awesome 6 Brands" !important;
 }
 
 /* Direction Helper for directional icons */
@@ -132,7 +279,10 @@ body.rtl .fa-angle-right {
 }
 
 /* Editorial Typography */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-serif);
   font-weight: 500;
   line-height: 1.1;
@@ -337,18 +487,24 @@ body.rtl .brand-eyebrow-sub {
 
 /* Botanical Subtle Breathing Animations */
 @keyframes botanicalBreathe {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(1);
   }
+
   50% {
     transform: translateY(-5px) scale(1.02);
   }
 }
 
 @keyframes botanicalGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.12;
   }
+
   50% {
     opacity: 0.2;
   }
@@ -380,49 +536,86 @@ body.rtl .btn-editorial {
 
 .btn-editorial-dark {
   background-color: var(--c-forest);
-  color: var(--c-ivory);
+  color: var(--c-ivory-light);
   border-color: var(--c-forest);
+  border-radius: 4px;
 }
 
 .btn-editorial-dark:hover {
-  background-color: var(--c-forest-mid);
+  background-color: var(--c-pistachio);
+  border-color: var(--c-pistachio);
   color: #FFFFFF;
   transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(59, 124, 4, 0.28);
 }
 
 .btn-editorial-outline {
-  background-color: transparent;
+  background-color: var(--c-ivory-light);
   color: var(--c-forest);
-  border-color: var(--c-charcoal);
+  border: 1.5px solid var(--c-forest);
+  border-radius: 4px;
 }
 
 .btn-editorial-outline:hover {
   background-color: var(--c-forest);
-  color: var(--c-ivory);
+  color: var(--c-ivory-light);
   transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(14, 32, 19, 0.16);
+}
+
+.btn-editorial-primary {
+  background-color: var(--c-logo-primary);
+  color: #FFFFFF;
+  border-color: var(--c-logo-primary);
+  border-radius: 4px;
+}
+
+.btn-editorial-primary:hover {
+  background-color: var(--c-logo-deep);
+  border-color: var(--c-logo-deep);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(36, 82, 11, 0.35);
+}
+
+.btn-editorial-pistachio {
+  background-color: var(--c-logo-medium);
+  color: #FFFFFF;
+  border-color: var(--c-logo-medium);
+  border-radius: 4px;
+}
+
+.btn-editorial-pistachio:hover {
+  background-color: var(--c-logo-primary);
+  border-color: var(--c-logo-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(59, 124, 4, 0.3);
 }
 
 .btn-editorial-wa {
   background-color: var(--c-forest);
   color: #FFFFFF;
-  border-color: var(--c-forest);
+  border-color: rgba(59, 124, 4, 0.4);
+  border-radius: 4px;
 }
 
 .btn-editorial-wa .fa-whatsapp {
-  color: #38E079;
+  color: #4ADE80;
 }
 
 .btn-editorial-wa:hover {
-  background-color: #193825;
-  border-color: #193825;
+  background-color: var(--c-forest-mid);
+  border-color: var(--c-logo-primary);
   color: #FFFFFF;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(14, 32, 19, 0.25);
 }
 
 .btn-editorial-wa-light {
   background-color: #FFFFFF;
   color: var(--c-forest);
-  border-color: #FFFFFF;
+  border: 1px solid var(--c-sand-muted);
+  border-radius: 4px;
 }
 
 .btn-editorial-wa-light .fa-whatsapp {
@@ -430,7 +623,9 @@ body.rtl .btn-editorial {
 }
 
 .btn-editorial-wa-light:hover {
-  background-color: var(--c-ivory-warm);
+  background-color: var(--c-pistachio-tint);
+  border-color: var(--c-pistachio);
+  color: var(--c-forest);
   transform: translateY(-2px);
 }
 
@@ -511,7 +706,7 @@ body.rtl .btn-editorial {
   }
 
   /* Safe tap target defaults */
-  button, 
+  button,
   [role="button"],
   .btn-editorial,
   .hero-cta-primary,
@@ -520,7 +715,13 @@ body.rtl .btn-editorial {
   }
 
   /* Prevent text clipping on narrow viewports */
-  h1, h2, h3, h4, h5, h6, p {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     overflow-wrap: break-word;
     word-break: break-word;
   }
@@ -542,7 +743,7 @@ body.rtl .btn-editorial {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background: 
+  background:
     radial-gradient(ellipse 65% 50% at 85% 15%, rgba(255, 255, 255, 0.45) 0%, rgba(246, 243, 233, 0.15) 60%, transparent 100%),
     radial-gradient(ellipse 50% 40% at 15% 85%, rgba(235, 240, 222, 0.18) 0%, transparent 70%);
 }
@@ -704,9 +905,11 @@ body.rtl .botanical-shadow--monograph-branch,
     opacity: 0.16;
     transform: scale(0.65);
   }
+
   .botanical-shadow--center-cards {
     display: none;
   }
+
   .botanical-shadow--orchard-row {
     height: 50px;
     opacity: 0.25;
@@ -1041,6 +1244,7 @@ body.rtl .plate-marker,
     opacity: 0;
     transform: translateY(14px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -1052,6 +1256,7 @@ body.rtl .plate-marker,
     transform: scaleX(0);
     opacity: 0;
   }
+
   to {
     transform: scaleX(1);
     opacity: 1;
@@ -1081,6 +1286,7 @@ body.rtl .plate-marker,
 }
 
 @media (max-width: 768px) {
+
   .internal-editorial-hero,
   .inner-page-hero,
   .products-hero-section {
@@ -1118,4 +1324,3 @@ body.rtl .plate-marker,
 [data-reveal] {
   will-change: auto;
 }
-

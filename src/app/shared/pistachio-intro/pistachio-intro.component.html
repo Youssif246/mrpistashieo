@@ -16,12 +16,28 @@
     <div class="botanical-canvas-wrapper">
       <svg class="growth-svg" viewBox="0 0 600 700" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <!-- Authentic Raw Seed Gradient (Pistacia vera Uncracked Seed) -->
-          <linearGradient id="rawSeedGrad" x1="20%" y1="0%" x2="80%" y2="100%">
-            <stop offset="0%" stop-color="#F8F3EA"/>
-            <stop offset="35%" stop-color="#ECE2D1"/>
-            <stop offset="75%" stop-color="#DACBB4"/>
-            <stop offset="100%" stop-color="#C4B197"/>
+          <!-- Authentic Realistic Pistacia vera Seed Shell Gradient -->
+          <linearGradient id="pistachioShellGrad" x1="15%" y1="0%" x2="85%" y2="100%">
+            <stop offset="0%" stop-color="#F5E8D0"/>
+            <stop offset="25%" stop-color="#E5D1B0"/>
+            <stop offset="65%" stop-color="#CBB185"/>
+            <stop offset="90%" stop-color="#AD9060"/>
+            <stop offset="100%" stop-color="#8E7142"/>
+          </linearGradient>
+
+          <!-- Authentic Emerald Pistachio Kernel Interior -->
+          <linearGradient id="pistachioKernelGrad" x1="20%" y1="0%" x2="80%" y2="100%">
+            <stop offset="0%" stop-color="#8DB836"/>
+            <stop offset="45%" stop-color="#6F9927"/>
+            <stop offset="85%" stop-color="#557B1A"/>
+            <stop offset="100%" stop-color="#3D5A12"/>
+          </linearGradient>
+
+          <!-- Natural Violet-Rose Pistachio Pellicle Accent -->
+          <linearGradient id="pistachioPellicleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#9E3B5A"/>
+            <stop offset="60%" stop-color="#782942"/>
+            <stop offset="100%" stop-color="#521A2C"/>
           </linearGradient>
 
           <!-- Sapling Woody Stem with Botanical Green Apex -->
@@ -49,21 +65,33 @@
         </defs>
 
         <g class="growth-root-group">
-          <!-- 1. Authentic Raw Pistacia vera Seed Base (Unopened, Raw Planting Seed) -->
+          <!-- 1. Authentic Realistic Pistacia vera Seed Base (Natural Shell, Pellicle, Emerald Kernel) -->
           <g class="seed-node" transform="translate(300, 560)">
             <!-- Soft Soil Shadow -->
-            <ellipse cx="0" cy="18" rx="42" ry="9" fill="#15271E" opacity="0.08"/>
+            <ellipse cx="0" cy="22" rx="46" ry="11" fill="#15271E" opacity="0.12"/>
 
-            <!-- Raw Seed Body: Pointed Oval Pistacia vera Seed -->
-            <path class="raw-seed-shell"
-                  d="M 0 -22 C 22 -22, 34 -4, 32 16 C 30 30, 16 36, 0 36 C -16 36, -30 30, -32 16 C -34 -4, -22 -22, 0 -22 Z"
-                  fill="url(#rawSeedGrad)" stroke="#BFAF96" stroke-width="1.2"/>
+            <!-- Left Shell Valve (Warm Natural Ochre Woody Shell) -->
+            <path class="seed-shell-left"
+                  d="M 0 -24 C -18 -24, -36 -4, -34 16 C -32 32, -16 38, 0 38 C -5 26, -7 8, 0 -24 Z"
+                  fill="url(#pistachioShellGrad)" stroke="#9E8050" stroke-width="1.2"/>
 
-            <!-- Natural Shell Suture Seam -->
-            <path d="M 0 -22 Q 2 7 0 36" stroke="#9E8D74" stroke-width="1.2" stroke-linecap="round"/>
+            <!-- Right Shell Valve (Warm Natural Ochre Woody Shell) -->
+            <path class="seed-shell-right"
+                  d="M 0 -24 C 18 -24, 36 -4, 34 16 C 32 32, 16 38, 0 38 C 5 26, 7 8, 0 -24 Z"
+                  fill="url(#pistachioShellGrad)" stroke="#9E8050" stroke-width="1.2"/>
 
-            <!-- Emerging Green Germination Sprout linking directly to stem -->
-            <path d="M 0 -12 L 0 -22" stroke="#7E993B" stroke-width="4.2" stroke-linecap="round"/>
+            <!-- Natural Violet-Rose Pellicle Skin -->
+            <path class="seed-kernel-pellicle"
+                  d="M 0 -24 C -9 0, -9 18, 0 34 C 9 18, 9 0, 0 -24 Z"
+                  fill="url(#pistachioPellicleGrad)" opacity="0.9"/>
+
+            <!-- Characteristic Emerald Green Pistachio Kernel -->
+            <path class="seed-kernel-core"
+                  d="M 0 -22 C -6 -2, -6 14, 0 28 C 6 14, 6 -2, 0 -22 Z"
+                  fill="url(#pistachioKernelGrad)"/>
+
+            <!-- Emerging Green Germination Sprout connecting directly to sapling stem -->
+            <path class="seed-sprout" d="M 0 -10 L 0 -24" stroke="#6F882C" stroke-width="4.5" stroke-linecap="round"/>
           </g>
 
           <!-- 2. Upward Growing Stem (Starts precisely from apex of seed at 300, 550) -->
@@ -168,9 +196,13 @@
 
     <!-- 2. Centered Luxury Brand Reveal Lockup -->
     <div class="intro-brand-reveal">
-      <h1 class="brand-logotype">
-        {{ i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'MISTER PISTACHIO' }}
-      </h1>
+      <div class="brand-logotype-wrap">
+        <img src="logo.png" 
+             [alt]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'" 
+             class="brand-logotype-img brand-logotype" 
+             width="260" 
+             height="80">
+      </div>
       <p class="brand-tagline">
         {{ i18n.currentLang() === 'ar' ? 'زراعة وتطعيم الفستق الحلبي • مشاتل وأصول معتمدة' : 'SPECIALIST PISTACHIO NURSERY & CULTIVATION' }}
       </p>

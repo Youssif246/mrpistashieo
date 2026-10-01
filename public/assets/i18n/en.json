@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "About Us",
     "services": "Services",
-    "products": "Products",
+    "products": "Pistachio Varieties",
     "contact": "Contact",
     "cta": "WhatsApp Inquiry",
     "langSwitch": "العربية"
@@ -26,16 +26,16 @@
   "footer": {
     "tagline": "Specialist nursery dedicated to pistachio cultivation, certified rootstock propagation, and professional field agronomy.",
     "quickLinks": "Navigation",
-    "productsTitle": "Plant Material",
+    "productsTitle": "Pistachio Varieties",
     "contactTitle": "Direct Contact",
     "socialTitle": "Follow Us",
-    "rights": "All rights reserved. Specialist Pistachio Cultivation & Nursery.",
+    "rights": "All rights reserved. Mister Pistachio S.L.",
     "privacy": "Privacy Policy",
     "legalNotice": "Legal Notice",
-    "whatsappCta": "Chat with an Agronomist",
-    "locationPlaceholder": "Nursery & Agricultural Operations",
-    "emailPlaceholder": "contact@specialist-pistachio.com",
-    "phonePlaceholder": "+31 6 12555547",
+    "whatsappCta": "WhatsApp Consultation",
+    "locationPlaceholder": "Hama, Syria",
+    "emailPlaceholder": "info@misterpistachio.com",
+    "phonePlaceholder": "+34 667 36 29 25",
     "operations": "Operations",
     "inquiries": "Inquiries",
     "direct": "Direct"
@@ -47,7 +47,7 @@
       "title": "Pistachio Cultivation, Rooted in Precision.",
       "headlineLine1": "Pistachio Cultivation,",
       "headlineLine2": "Rooted in Precision.",
-      "description": "Specialized in pistachio nursery production, rootstocks and grafted plants, with professional agricultural support from propagation to field establishment.",
+      "description": "Specialized in pistachio nursery production, rootstocks and grafted plants.",
       "ctaPrimary": "WhatsApp Inquiry",
       "ctaSecondary": "Explore Services"
     },
@@ -119,8 +119,8 @@
         {
           "number": "01",
           "title": "Turnkey Pistachio Plantations",
-          "subtitle": "Comprehensive agricultural investment from raw land to the first harvest.",
-          "description": "End-to-end orchard establishment from soil analysis and precision irrigation design to certified planting and ongoing agronomic management.",
+          "subtitle": "From raw land to a productive pistachio orchard.",
+          "description": "Planning, irrigation, planting and expert follow-up in one service.",
           "bullets": [
             "Feasibility studies & orchard engineering",
             "Irrigation networks & infrastructure setup",
@@ -132,8 +132,8 @@
         {
           "number": "02",
           "title": "Precision GPS-Guided Planting",
-          "subtitle": "Automated planting technology ensuring exact spacing and spatial optimization.",
-          "description": "Satellite-guided planting technology ensuring millimeter-accurate tree spacing and straight rows for effortless mechanization.",
+          "subtitle": "GPS-guided planting for accurate spacing.",
+          "description": "Straight rows and precise tree placement, ready for mechanization.",
           "bullets": [
             "High-speed automated GPS planting",
             "Flawlessly straight rows for mechanization",
@@ -145,8 +145,8 @@
         {
           "number": "03",
           "title": "Pistachio Nursery & Plant Supply",
-          "subtitle": "Certified grafted saplings and rootstocks ensuring crop quality and climatic resilience.",
-          "description": "Premium grafted varieties and certified UCB-1 hybrid rootstocks engineered for root vigor, salinity tolerance, and disease resilience.",
+          "subtitle": "Certified grafted trees and UCB-1 rootstocks.",
+          "description": "Healthy, resilient pistachio plants, ready for your orchard.",
           "bullets": [
             "Phytosanitary-certified grafted saplings",
             "Disease-resistant certified UCB-1 rootstocks",
@@ -239,7 +239,7 @@
       "card3Submetric": "Global Demand Growth",
       "card3Desc": "Sustained global market expansion driven by premium plant-based protein content, healthy lipids, and high economic yields per hectare.",
       "publicationMark": "Official Nursery Monograph • Mediterranean Agro-Ecology",
-      "cta": "Explore Our Services"
+      "cta": "Explore Pistachio Varieties"
     },
     "nursery": {
       "tag": "Controlled Propagation",
@@ -258,7 +258,7 @@
       "bullet2": "Containerized pots for year-round transplanting flexibility",
       "bullet3": "Dormant bare-root trees for winter field plantations",
       "bullet4": "Outdoor hardening process prior to dispatch",
-      "cta": "Discuss Plant Reservations"
+      "cta": "Reserve Your Trees"
     },
     "harvest": {
       "tag": "Cultivation Journey",
@@ -288,9 +288,9 @@
       "imageAnnotation": "Pistacia vera L. • Productive Harvest"
     },
     "productsPreview": {
-      "tag": "Our Offering",
-      "title": "Certified Plants & Specialized Rootstocks",
-      "subtitle": "Discover our core plant material for commercial orchards and private growers.",
+      "tag": "VARIETIES & PLANTING MATERIAL",
+      "title": "Specialist Pistachio Varieties & Rootstocks",
+      "subtitle": "Explore our curated portfolio of elite female scion varieties, synchronous male pollinators, and certified rootstocks.",
       "prod1Badge": "Hybrid Rootstock",
       "prod1Title": "UCB1 Rootstock",
       "prod1Desc": "The benchmark hybrid rootstock offering superior vegetative vigor, cold tolerance, and salinity resistance.",
@@ -300,17 +300,17 @@
       "prod3Badge": "Cultivars",
       "prod3Title": "Commercial Varieties",
       "prod3Desc": "Selected female varieties including Kerman, Sirora, and Larnaka, paired with synchronized pollinators.",
-      "viewAll": "View All Products & Rootstocks"
+      "viewAll": "Explore All Pistachio Varieties & Rootstocks"
     },
     "ctaSection": {
-      "tag": "GET IN TOUCH",
+      "tag": "GET STARTED",
       "title": "Ready to Plan Your Pistachio Orchard?",
       "titleLine1": "Ready to Plan Your",
       "titleLine2": "Pistachio Orchard?",
-      "desc": "Contact our agricultural specialists to discuss rootstock availability, variety selection, and field services for your plantation.",
-      "primaryBtn": "Contact Our Specialists",
-      "secondaryBtn": "Contact Our Specialists",
-      "btn": "Contact Our Specialists"
+      "desc": "Connect with our experts to discuss your project and select the ideal varieties for your soil and climate.",
+      "primaryBtn": "Book Consultation",
+      "secondaryBtn": "Contact Us",
+      "btn": "Contact Us via WhatsApp"
     }
   },
   "about": {
@@ -354,10 +354,10 @@
       "card4Desc": "A pistachio orchard is a multi-decade project. We support growers with ongoing advice throughout the tree's productive life."
     },
     "cta": {
-      "tag": "Agricultural Consultation",
-      "title": "Discuss Your Agricultural Project",
-      "desc": "Our team is ready to review your soil and climate conditions to advise on the most suitable rootstock and variety selection.",
-      "btn": "Connect via WhatsApp"
+      "tag": "Get Started",
+      "title": "Ready to Start Your Agricultural Investment?",
+      "desc": "We place our field expertise at your service to ensure the long-term success of your pistachio orchard.",
+      "btn": "Contact Us Now"
     },
     "footnote": "Applied Agricultural Science & Field Verification",
     "watermarks": {
@@ -375,21 +375,21 @@
   },
   "products": {
     "hero": {
-      "badge": "OUR PRODUCTS",
-      "eyebrow": "OUR PRODUCTS",
-      "headline": "Pistachio Plants & Rootstocks",
-      "description": "Technical guide to our certified rootstocks, grafted trees, and commercial cultivars. Engineered for climatic resilience, soil adaptation, and high commercial yield.",
-      "metaDisciplineLabel": "DISCIPLINE",
-      "metaDiscipline": "Nursery Propagation",
-      "metaTerroirLabel": "TERROIR",
-      "metaTerroir": "Arid & Semi-Arid Terroirs",
+      "badge": "PISTACHIO VARIETIES",
+      "eyebrow": "CERTIFIED BOTANICAL VARIETIES & ROOTSTOCKS",
+      "headline": "Specialist Pistachio Varieties",
+      "description": "Specialist agricultural portfolio documenting certified female cultivars (Kerman, Sirora, Larnaka), synchronous male pollinators, and foundational rootstocks (UCB-1, Cornicabra, Atlantica). Engineered for high commercial yield, longevity, and Mediterranean terroirs.",
+      "metaDisciplineLabel": "TAXONOMY",
+      "metaDiscipline": "Certified Cultivars & Scions",
+      "metaTerroirLabel": "ADAPTATION",
+      "metaTerroir": "Mediterranean & Arid Terroirs",
       "metaStandardsLabel": "STANDARDS",
-      "metaStandards": "Certified Phytosanitary"
+      "metaStandards": "Phytosanitary Verified Lineage"
     },
     "intro": {
-      "tag": "Product Categories",
-      "title": "Nursery Plant Material & Rootstocks",
-      "desc": "We supply professional plant material suited for diverse planting windows, soil compositions, and agricultural management styles."
+      "tag": "Varieties & Rootstock Classification",
+      "title": "Agronomically Selected Cultivars & Soil-Adapted Rootstocks",
+      "desc": "Supplying certified scion varieties and rootstocks tailored to winter chilling requirements, soil chemistry, and commercial longevity."
     },
     "ucb1": {
       "badge": "Hybrid Rootstock",
@@ -538,11 +538,11 @@
       "phoneLabel": "Telephone",
       "phoneValue": "+31 6 12555547",
       "emailLabel": "Email Address",
-      "emailValue": "contact@specialist-pistachio.com",
+      "emailValue": "info@misterpistachio.com",
       "hoursLabel": "Operating Hours",
       "hoursValue": "Monday – Friday: 08:30 – 18:30",
       "locationLabel": "Nursery Location",
-      "locationValue": "Mediterranean Nursery & Operations Center — Spain",
+      "locationValue": "Hama, Syria",
       "facilityDetail": "Specialized Mediterranean rootstock propagation, precision field acclimatization, and phytosanitary distribution hub.",
       "emailNote": "Direct cultivar bookings & laboratory requests",
       "phoneNote": "Field technical advisory & nursery reservations",
@@ -624,12 +624,12 @@
       "watermark": "HARVEST"
     },
     "cta": {
-      "badge": "Consultation & Orchard Planning",
-      "headline": "From Planning to Harvest.",
-      "subheading": "Partner with dedicated pistachio specialists for your plantation project.",
-      "description": "Whether you are evaluating a new turnkey acreage development or seeking certified rootstocks and precision GPS planting, our technical agronomists are available to assess your terrain and project specifications.",
-      "button": "Discuss Your Project on WhatsApp",
-      "secondary": "Inquire via Contact Form"
+      "badge": "Expert Advisory",
+      "headline": "From Planning to Harvest",
+      "subheading": "Your trusted partner for orchard establishment and management.",
+      "description": "Whether establishing a new orchard or developing existing land, our team is ready to provide end-to-end technical support.",
+      "button": "Book a Consultation",
+      "secondary": "Contact Us"
     },
     "labels": {
       "plate1": "PLATE 01 // TURNKEY DEVELOPMENT",
@@ -650,134 +650,5 @@
       "harvestCommercialization": "HARVEST & COMMERCIALIZATION",
       "colophonMark": "MISTER PISTACHO • SPECIALIST AGRICULTURAL CULTIVATION"
     }
-  },
-  "blog": {
-    "hero": {
-      "eyebrow": "OUR JOURNAL",
-      "headline": "Knowledge from the Orchard",
-      "description": "Agricultural monographs, seasonal field observations, and technical agronomic insights from our nursery specialists and orchard engineers."
-    },
-    "ui": {
-      "all": "All Articles",
-      "category": "Category",
-      "readArticle": "Read Monograph",
-      "backToJournal": "Back to Journal",
-      "minRead": "min read",
-      "authorLabel": "Author",
-      "authorDept": "Agricultural Engineering & Propagation Dept.",
-      "publishedOn": "Published",
-      "relatedTitle": "Related Agronomic Insights",
-      "ctaTitle": "Have Questions for Your Orchard Project?",
-      "ctaDesc": "Our agronomists provide terrain evaluation, rootstock-soil matching, and complete plantation blueprints.",
-      "ctaBtn": "Consult an Agronomist on WhatsApp"
-    },
-    "categories": [
-      {
-        "id": "all",
-        "name": "All Articles"
-      },
-      {
-        "id": "rootstocks",
-        "name": "Rootstocks & Genetics"
-      },
-      {
-        "id": "canopy",
-        "name": "Canopy & Pruning"
-      },
-      {
-        "id": "nutrition",
-        "name": "Irrigation & Nutrition"
-      },
-      {
-        "id": "engineering",
-        "name": "Orchard Engineering"
-      }
-    ],
-    "articles": [
-      {
-        "slug": "rootstock-selection-arid-climates",
-        "categoryId": "rootstocks",
-        "categoryName": "Rootstocks & Genetics",
-        "date": "Autumn 2024",
-        "readTime": "6 min read",
-        "title": "Rootstock Selection for Arid Climates: UCB-1 Hybrid vs. Pistacia atlantica",
-        "excerpt": "A comparative technical field evaluation of vegetative vigor, Verticillium dahliae resistance, and salinity tolerance under Mediterranean growing conditions.",
-        "image": "service-images/pistachio-nursery.webp",
-        "imageCaption": "Controlled clonal propagation of verified rootstock material at Mister Pistachio facilities.",
-        "sections": [
-          {
-            "heading": "The Foundation of Long-Term Orchard Profitability",
-            "lead": "Choosing the appropriate rootstock is the single most critical decision in pistachio cultivation; unlike scion varieties, a rootstock cannot be altered once planted.",
-            "body": "Under arid and semi-arid Mediterranean conditions, soil heterogeneity, varying electrical conductivity (salinity), and soil-borne pathogens define plantation longevity. The hybrid UCB-1 (Pistacia atlantica × Pistacia integerrima) has established itself as the global benchmark for irrigated, high-yield commercial installations due to its exceptional vigor and rapid entry into bearing."
-          },
-          {
-            "heading": "Verticillium Resistance and Soil Adaptation",
-            "lead": "Where soil history includes cotton, olive, or solanaceous crops, soil-borne fungal pressure requires strict genetic protection.",
-            "body": "UCB-1 demonstrates superior physiological resistance to Verticillium dahliae compared to traditional Cornicabra (Pistacia terebinthus). However, in dry-farmed (secano) terrains with low annual rainfall (under 300 mm) and high active limestone content exceeding 15%, Pistacia atlantica retains unique taproot penetration capabilities that remain irreplaceable in low-input agro-ecosystems."
-          },
-          {
-            "heading": "Agronomic Conclusion & Nursery Recommendations",
-            "lead": "Site-specific soil physical and chemical analysis must precede cultivar and rootstock acquisition.",
-            "body": "For irrigated acreage aiming for early commercial yields (year 4 to 5), certified clonal or micropropagated UCB-1 in deep containers ensures rapid scaffold development. For arid non-irrigated plateaus, traditional selections remain a proven, resilient alternative."
-          }
-        ]
-      },
-      {
-        "slug": "precision-canopy-summer-pruning",
-        "categoryId": "canopy",
-        "categoryName": "Canopy & Pruning",
-        "date": "Summer 2024",
-        "readTime": "5 min read",
-        "title": "Precision Canopy Management & Summer Pruning in High-Density Pistachio",
-        "excerpt": "Structural balancing techniques to optimize interior photosynthetic radiation penetration and secure alternate-bearing stability.",
-        "image": "service-images/grafting-pruning.webp",
-        "imageCaption": "Summer pinching and structural canopy balancing on third-year pistachio trees.",
-        "sections": [
-          {
-            "heading": "Light Interception and Interior Fruiting Wood",
-            "lead": "Pistachio buds require direct solar irradiance during mid-summer to differentiate into robust flower buds for the subsequent season.",
-            "body": "Dense, shaded canopies trigger inner flower bud drop, leading to bare interior wood and pushing productive volume exclusively to the outer canopy periphery. Strategic summer pruning, executed in late spring and mid-summer, re-establishes airflow, reduces relative humidity, and maintains productive wood throughout the tree canopy."
-          },
-          {
-            "heading": "Controlling Apical Dominance on Vigorous Rootstocks",
-            "lead": "The explosive vegetative vigor of UCB-1 requires active shoot pinching during the first three development seasons.",
-            "body": "By topping vigorous primary shoots when they achieve 60-70 cm in length during June, field teams force premature lateral bud break. This produces well-angled secondary scaffolds in a single growing season, effectively accelerating tree architecture development by an entire calendar year."
-          },
-          {
-            "heading": "Sanitary Precautions During Cutting Operations",
-            "lead": "Every cut is a potential entry point for Botryosphaeria and fungal blight pathogens.",
-            "body": "Pruning shears and pneumatic tools must be systematically sanitized between trees with 70% ethanol or quaternary ammonium solutions. Immediate post-pruning application of copper-based bio-fungicides ensures clean healing across cut tissue."
-          }
-        ]
-      },
-      {
-        "slug": "kernel-filling-irrigation-nutrition",
-        "categoryId": "nutrition",
-        "categoryName": "Irrigation & Nutrition",
-        "date": "Spring 2024",
-        "readTime": "7 min read",
-        "title": "Nutritional Programs During Shell Hardening and Kernel Fill Stages",
-        "excerpt": "Optimizing potassium delivery, foliar zinc-boron applications, and deficit irrigation strategies during Stage II and Stage III development.",
-        "image": "service-images/pistachio-harvest-distribution.webp",
-        "imageCaption": "Nut development monitoring during the critical Stage III kernel expansion window.",
-        "sections": [
-          {
-            "heading": "The Three Physiological Stages of Pistachio Development",
-            "lead": "Nut development follows three distinct biological stages: shell expansion (Stage I), shell hardening (Stage II), and rapid kernel filling (Stage III).",
-            "body": "Stage I (bloom to late May) determines ultimate nut size; water stress here permanently reduces harvest caliber. Stage II (June) involves endocarp lignification with minimal water requirement. Stage III (July to August) is the most energy-intensive window, where kernel dry weight expands rapidly inside the shell."
-          },
-          {
-            "heading": "Potassium and Nitrogen Ratios for High Split Percentages",
-            "lead": "Potassium is the primary osmotic engine driving sugar translocation and natural suture splitting.",
-            "body": "During Stage III, a mature pistachio plantation extracts up to 250 kg/ha of K2O from soil solution. Supplying soluble potassium sulfate via fertigation, coupled with targeted foliar zinc and boron sprays, directly enhances shell splitting rates and reduces blank (empty) nut percentages at harvest."
-          },
-          {
-            "heading": "Regulated Deficit Irrigation (RDI) Protocols",
-            "lead": "Strategic water restrictions during Stage II save up to 25% of annual irrigation volume without compromising yield.",
-            "body": "Because shell size is already fixed by late May, reducing irrigation by 40-50% throughout Stage II conserves water without penalizing yield. Full irrigation must then resume punctually at the onset of Stage III to facilitate maximum nut kernel density."
-          }
-        ]
-      }
-    ]
   }
 }
