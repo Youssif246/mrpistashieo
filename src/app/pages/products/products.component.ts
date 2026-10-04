@@ -1,6 +1,7 @@
-import { Component, inject, computed } from '@angular/core';
+import { Component, inject, computed, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../shared/translation.service';
+import { SeoService } from '../../shared/seo.service';
 import { APP_CONFIG } from '../../shared/config';
 
 export interface VarietyItem {
@@ -51,8 +52,43 @@ export interface ComparisonRow {
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
   readonly i18n = inject(TranslationService);
+  private readonly seo = inject(SeoService);
+
+  ngOnInit(): void {
+    const isAr = this.i18n.currentLang() === 'ar';
+    this.seo.updateSeo({
+      lang: this.i18n.currentLang(),
+      path: '/varieties',
+      title: isAr
+        ? 'أصناف وأصول الفستق الحلبي المعتمدة | مستر بستاشيو'
+        : 'Certified Pistachio Varieties & Rootstocks | Mister Pistachio',
+      description: isAr
+        ? 'استكشف أفضل أصناف الفستق الحلبي (سيرورا، كرمان، لارين، بيتر) وأقوى الأصول المقاومة (UCB-1، البطم الأطلسي، البيري) لأعلى إنتاجية وجودة.'
+        : 'Explore premier pistachio cultivars (Sirora, Kerman, Larnaka, Peter) and high-performance rootstocks (UCB1, Atlantica, Integerrima) engineered for commercial vigor.',
+      image: 'products-images/hero-pistachio.png'
+    });
+
+    this.seo.setStructuredData('varieties-breadcrumb', {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': isAr ? 'الرئيسية' : 'Home',
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}`
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': isAr ? 'الأصناف والأصول' : 'Varieties & Rootstocks',
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}/varieties`
+        }
+      ]
+    });
+  }
 
   readonly femaleVarieties = computed<VarietyItem[]>(() => {
     const isAr = this.i18n.currentLang() === 'ar';

@@ -6,7 +6,7 @@
 .editorial-footer {
   position: relative;
   background-color: var(--c-forest-dark);
-  background-image: 
+  background-image:
     radial-gradient(circle at 90% 15%, rgba(59, 124, 4, 0.14) 0%, transparent 55%),
     linear-gradient(180deg, #102617 0%, #07100A 100%);
   border-top: 1px solid rgba(194, 160, 115, 0.35);
@@ -62,20 +62,19 @@
 .footer-header-strip {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 2rem;
   margin-bottom: clamp(2.5rem, 4.5vw, 4rem);
 }
 
-@media (min-width: 900px) {
-  .footer-header-strip {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-}
-
 .footer-brand-lockup {
-  max-width: 580px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
 }
 
 .footer-action-wrap {
@@ -121,11 +120,11 @@
 
 .footer-logo-anchor {
   display: inline-block;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-logo-inverted {
-  height: 44px;
+  height: 52px;
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
@@ -139,10 +138,12 @@
 .footer-mission-lead {
   font-family: var(--font-serif);
   font-size: clamp(1.15rem, 2vw, 1.5rem);
-  line-height: 1.5;
-  color: var(--c-ivory-light);
+  line-height: 1.65;
+  color: rgba(202, 216, 206, 0.75);
   font-style: italic;
   margin: 0;
+  max-width: 520px;
+  text-align: center;
 }
 
 :host-context(body.rtl) .footer-mission-lead {
@@ -163,6 +164,9 @@
   grid-template-columns: 1fr;
   gap: 2.5rem;
   padding-block: 0.5rem;
+  text-align: center;
+  justify-items: center;
+  align-items: start;
 }
 
 @media (min-width: 640px) {
@@ -173,9 +177,21 @@
 
 @media (min-width: 1024px) {
   .footer-main-columns {
-    grid-template-columns: 1fr 1.2fr 1.35fr 1.15fr;
-    gap: 3.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    text-align: center;
+    justify-items: center;
+    align-items: start;
   }
+}
+
+.footer-column {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .column-kicker {
@@ -186,13 +202,22 @@
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--c-ochre);
+  margin-top: 0;
   margin-bottom: 1.35rem;
+  line-height: 1.4;
+  text-align: center;
+  width: 100%;
 }
 
 :host-context(body.rtl) .column-kicker {
   font-family: var(--font-ar-display);
   letter-spacing: 0.04em;
   font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 1.35rem;
+  line-height: 1.4;
+  text-align: center !important;
+  width: 100%;
 }
 
 .column-links {
@@ -202,6 +227,14 @@
   gap: 0.85rem;
   padding: 0;
   margin: 0;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.column-links li {
+  text-align: center;
+  width: 100%;
 }
 
 .column-links a {
@@ -209,6 +242,8 @@
   font-size: 0.92rem;
   text-decoration: none;
   transition: color var(--transition-fast);
+  display: inline-block;
+  text-align: center;
 }
 
 .column-links a:hover {
@@ -220,6 +255,9 @@
   display: flex;
   flex-direction: column;
   gap: 0.95rem;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
 .meta-row {
@@ -228,6 +266,9 @@
   gap: 0.2rem;
   font-size: 0.9rem;
   margin: 0;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
 .meta-label {
@@ -236,10 +277,31 @@
   letter-spacing: 0.1em;
   color: #7A9082;
   font-weight: 600;
+  text-align: center;
+  width: 100%;
 }
 
 .meta-val {
   color: #DFE8E2;
+  text-align: center;
+  width: 100%;
+}
+
+.meta-val.phone-link {
+  color: #DFE8E2;
+  text-decoration: none;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-block;
+  width: fit-content;
+  text-align: center;
+  align-self: center;
+  transition: color var(--transition-fast);
+  margin: 0 auto;
+}
+
+.meta-val.phone-link:hover {
+  color: var(--c-logo-bright);
 }
 
 /* Social Roster */
@@ -247,17 +309,23 @@
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  align-items: center;
+  text-align: center;
+  width: 100%;
 }
 
 .social-tag {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   color: #B2C3B8;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
   transition: color var(--transition-fast);
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .social-tag:hover {
@@ -270,10 +338,85 @@
   width: 18px;
   text-align: center;
   transition: transform var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .social-tag:hover i {
   transform: scale(1.1);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   RTL ADAPTATIONS (ARABIC) - STRICT CENTERING
+   ────────────────────────────────────────────────────────────────────────── */
+:host-context(body.rtl) .footer-main-columns {
+  text-align: center !important;
+  justify-items: center !important;
+  align-items: start !important;
+  direction: rtl;
+}
+
+:host-context(body.rtl) .footer-column {
+  text-align: center !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 100%;
+}
+
+:host-context(body.rtl) .column-links {
+  align-items: center !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+:host-context(body.rtl) .column-links li {
+  text-align: center !important;
+  width: 100%;
+}
+
+:host-context(body.rtl) .column-links a {
+  text-align: center !important;
+}
+
+:host-context(body.rtl) .column-meta-list {
+  align-items: center !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+:host-context(body.rtl) .meta-row {
+  align-items: center !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+:host-context(body.rtl) .meta-label {
+  text-align: center !important;
+  width: 100%;
+}
+
+:host-context(body.rtl) .meta-val {
+  text-align: center !important;
+  width: 100%;
+}
+
+:host-context(body.rtl) .meta-val.phone-link {
+  text-align: center !important;
+  align-self: center !important;
+  margin: 0 auto !important;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+
+:host-context(body.rtl) .footer-social-roster {
+  align-items: center !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+:host-context(body.rtl) .social-tag {
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
 }
 
 /* Colophon Bottom */
@@ -378,5 +521,3 @@
     gap: 1.75rem;
   }
 }
-
-

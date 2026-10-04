@@ -3,7 +3,7 @@
     "id": "pistachio-orchard-guide",
     "slug": "pistachio-orchard-guide",
     "title": "A Complete Technical Guide to Establishing a Commercial Pistachio Orchard",
-    "excerpt": "From microclimatic evaluation and GPS-guided planting geometry to rootstock selection and initial vegetative training, explore the agronomic milestones essential for building a profitable multi-decade pistachio plantation.",
+    "excerpt": "From microclimatic evaluation and precision planting geometry to rootstock selection and initial vegetative training, explore the agronomic milestones essential for building a profitable multi-decade pistachio plantation.",
     "category": "Orchard Engineering",
     "date": "October 1, 2026",
     "readTime": "9 min read",
@@ -35,7 +35,7 @@
       },
       {
         "type": "heading",
-        "text": "2. Topographic Surveying and GPS Field Geometry"
+        "text": "2. Topographic Surveying and Precision Field Geometry"
       },
       {
         "type": "paragraph",
@@ -44,11 +44,11 @@
       {
         "type": "image",
         "src": "assets/images/articles/pistachio-orchard-layout.jpg",
-        "alt": "Agronomic field surveying and GPS stake layout for pistachio plantation alignment"
+        "alt": "Agronomic field surveying and precision stake layout for pistachio plantation alignment"
       },
       {
         "type": "paragraph",
-        "text": "Employing satellite RTK-GPS guidance during field marking ensures millimeter-precise row parallelity. The predominant orientation should run North-South whenever topography permits. This orientation maximizes bidirectional sunlight interception across both sides of the canopy throughout the day, accelerating photosynthetic efficiency and uniform kernel filling."
+        "text": "Employing advanced topographic guidance during field marking ensures millimeter-precise row parallelity. The predominant orientation should run North-South whenever topography permits. This orientation maximizes bidirectional sunlight interception across both sides of the canopy throughout the day, accelerating photosynthetic efficiency and uniform kernel filling."
       },
       {
         "type": "list",
@@ -88,7 +88,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A commercial pistachio plantation established with scientific rigor represents one of the most reliable and valuable agricultural assets in Mediterranean climate zones. By prioritizing deep subsoil preparation, precision GPS layouts, and optimized pollination spacing from day one, growers protect their capital and ensure bountiful harvests for generations to come."
+        "text": "A commercial pistachio plantation established with scientific rigor represents one of the most reliable and valuable agricultural assets in Mediterranean climate zones. By prioritizing deep subsoil preparation, precision field layouts, and optimized pollination spacing from day one, growers protect their capital and ensure bountiful harvests for generations to come."
       }
     ]
   },
@@ -250,7 +250,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Pistachios are acutely vulnerable to root crown asphyxiation and Phytophthora root rot. Standing water around the tree trunk for even 48 hours during warm weather can be fatal. Precise GPS/laser field leveling ensures gentle surface gradients (0.2–0.5%) that guide storm runoff away from tree rows."
+        "text": "Pistachios are acutely vulnerable to root crown asphyxiation and Phytophthora root rot. Standing water around the tree trunk for even 48 hours during warm weather can be fatal. Precise topographical and laser field leveling ensures gentle surface gradients (0.2–0.5%) that guide storm runoff away from tree rows."
       },
       {
         "type": "paragraph",
@@ -438,6 +438,353 @@
       {
         "type": "paragraph",
         "text": "Patience and precision during formative pruning establish the structural foundation for the entire lifetime of the pistachio orchard. A well-built open vase framework ensures compatibility with modern mechanization, uniform sunlight distribution, and maximum commercial nut production for decades."
+      }
+    ]
+  },
+  {
+    "id": "fertilization-nutrition-management",
+    "slug": "fertilization-nutrition-management",
+    "title": "Balanced Nutrition & Precision Fertilization Management for Commercial Pistachio Orchards",
+    "excerpt": "A comprehensive scientific guide to scheduling Nitrogen, Potassium, Phosphorus, and Zinc nutrition, with mid-season leaf tissue testing protocols and alternate-bearing mitigation.",
+    "category": "Crop Nutrition",
+    "date": "October 12, 2026",
+    "readTime": "8 min read",
+    "coverImage": "assets/images/articles/fertilization-nutrition-management.jpg",
+    "seo": {
+      "title": "Pistachio Orchard Fertilization & Mineral Nutrition Guide | Mister Pistachio",
+      "description": "Commercial guide to pistachio tree nutrition, fertigation curves for N and K, micronutrient foliar sprays (Zn and B), and laboratory leaf tissue diagnostic standards."
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "The pistachio tree (Pistacia vera) is one of the heaviest nutrient extractors among temperate nut crops during critical phenological windows. Developing vegetative flush, shell lignification, and the rapid synthesis of protein- and lipid-dense kernels demand immense quantities of macro- and micronutrients. A balanced nutritional regimen is not merely required for bumper yields; it is the cornerstone for moderating the severe alternate-bearing (biennial) tendency inherent to the species."
+      },
+      {
+        "type": "paragraph",
+        "text": "Achieving maximum nutrient use efficiency requires aligning fertilizer applications directly with seasonal crop uptake dynamics, shifting away from broadcast soil dressings toward precision fertigation guided by calibrated leaf tissue testing."
+      },
+      {
+        "type": "heading",
+        "text": "1. Macronutrient Dynamics: Nitrogen, Potassium, and Kernel Fill"
+      },
+      {
+        "type": "paragraph",
+        "text": "Nitrogen and potassium represent the dual pillars of commercial pistachio nutrition. Nitrogen drives spring vegetative canopy expansion and photosynthetic leaf area, while potassium regulates stomatal conductance, osmotic pressure, and the active vascular transport of carbohydrates into developing kernels."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/leaf-tissue-analysis.jpg",
+        "alt": "Standardized field leaf sampling protocol and tissue analysis documentation for orchard nutrient diagnosis"
+      },
+      {
+        "type": "paragraph",
+        "text": "Annual nutrient allocation in mature, high-yielding commercial orchards is budgeted according to crop load:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Nitrogen (N): 120 to 180 kg/ha in heavy-crop 'on' years. Split into 25% at early spring flush, 50% during kernel fill (late May through July), and 25% post-harvest before leaf senescence to fortify winter reserves.",
+          "Potassium (K2O): Pistachios exhibit exceptional potassium requirements, drawing 180 to 240 kg/ha. More than 60% of total annual K is translocated into developing nuts between late June and August; deficiency during this phase causes catastrophic flower bud abscission for the following year.",
+          "Phosphorus (P2O5): Modest demand of 40 to 60 kg/ha, applied primarily during early root flush to fuel cellular adenosine triphosphate (ATP) energy transfer."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "2. Critical Micronutrients: Zinc and Boron for Pollen Viability"
+      },
+      {
+        "type": "paragraph",
+        "text": "Zinc and boron exert an outsized influence on pistachio fruitfulness. Zinc deficiency induces shortened internodes and the debilitating 'little leaf' syndrome, while boron deficiency impairs pollen tube germination, resulting in high percentages of unfertilized, blank nuts."
+      },
+      {
+        "type": "paragraph",
+        "text": "Two strategic foliar sprays are standard practice: the first at late-dormant bud swell to supply emerging flower clusters, and the second immediately post-harvest while foliage is still green and active, allowing vascular remobilization into overwintering flower buds."
+      },
+      {
+        "type": "heading",
+        "text": "3. Mid-Summer Leaf Tissue Diagnostic Protocols"
+      },
+      {
+        "type": "paragraph",
+        "text": "The international benchmark for verifying orchard nutritional health is diagnostic leaf analysis conducted in mid-summer (July), when leaf nutrient concentrations stabilize:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Sampling Window: July 15 to July 31 across all commercial blocks.",
+          "Sampling Method: Collect fully expanded sub-terminal leaflets from non-bearing shoots at chest height, sampling 4 to 5 leaflets from 20 representative trees per uniform block.",
+          "Critical Sufficiency Thresholds: Nitrogen (2.5–2.9%), Potassium (>1.7%), Phosphorus (0.14–0.17%), Zinc (>15 ppm), Boron (90–120 ppm)."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "Conclusion: Measured Nutrition for Sustainable Longevity"
+      },
+      {
+        "type": "paragraph",
+        "text": "Data-driven fertigation calibrated with laboratory leaf assays delivers maximum fertilizer efficiency, curbs leaching, and prevents canopy depletion, ensuring year-over-year commercial profitability."
+      }
+    ]
+  },
+  {
+    "id": "budding-planting-tree-training",
+    "slug": "budding-planting-tree-training",
+    "title": "UC Davis Illustrated Field Manual: Budding, Planting, and Young Pistachio Tree Training (Robert H. Beede)",
+    "excerpt": "Comprehensive University of California field manual by Farm Advisor Emeritus Robert H. Beede, fully illustrated with authentic photographic documentation covering rootstock nursery styles, planting mechanics, moisture dynamics, 28–32\" budding, and 5-year open-vase canopy architecture.",
+    "category": "Budding & Training",
+    "date": "October 18, 2026",
+    "readTime": "15 min read",
+    "coverImage": "assets/images/articles/budding-planting-tree-training.jpg",
+    "seo": {
+      "title": "UC Davis Illustrated Pistachio Manual: Budding & Tree Training | Mister Pistachio",
+      "description": "Exhaustive field guide by Robert H. Beede (UC Davis): authentic field photographs, planting tools, moisture monitoring, critical budding height (28-32\"), and 5-year open vase training."
+    },
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Establishing a pistachio orchard, executing field budding, and training the structural framework in the first five seasons forms the bedrock of lifelong commercial success. This field manual synthesizes decades of field research conducted by University of California Farm Advisor Emeritus Robert H. Beede (UC Cooperative Extension), complete with authentic photographic records detailing every operational stage from nursery propagate to mechanical harvest maturity."
+      },
+      {
+        "type": "heading",
+        "text": "1. Rootstock Propagation & Advanced Nursery Stock Architecture"
+      },
+      {
+        "type": "paragraph",
+        "text": "Commercial growers select from three primary planting stock options: standard unbudded seedling rootstocks grown in 6-mil plastic sleeves, clonal rootstocks propagated exclusively from superior UCB-1 parentage via aseptic meristem tissue culture, and pre-budded nursery trees. Modern container systems feature radial root development that eliminates circling taproots. The following image illustrates a state-of-the-art nursery greenhouse where clonal pistachio saplings are trained on vertical tutor stakes to ensure a plumb trunk axis before field delivery."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/rootstock-styles-comparison.jpg",
+        "alt": "Modern nursery greenhouse displaying clonal UCB-1 pistachio rootstock saplings tied to tutor stakes"
+      },
+      {
+        "type": "heading",
+        "text": "2. Site Planning & Pre-Planting Evaluation: Backhoe Pits & Tested Irrigation"
+      },
+      {
+        "type": "paragraph",
+        "text": "As Professor Beede emphasizes: 'Planning pays, and we don't know what we don't know—so if you are unsure, ask!'. The very first non-negotiable step before ordering rootstock is evaluating the soil profile using backhoe test pits. This reveals subsurface clay pans, restrictive hardpans, and stratified layers that cannot be identified from topsoil tests alone. Concurrently, comprehensive water quality and quantity analyses must be completed."
+      },
+      {
+        "type": "paragraph",
+        "text": "Furthermore, the drip irrigation system must be completely installed and pressure-tested prior to planting. Beede stresses a vital design rule: leave 6 inches of slack in the drip line between each tree and anchor its location. Most critically, ensure the drip emitter is positioned directly at the base of the young tree trunk, secured to the stake to prevent emitter displacement as shown in the field photograph below."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/mini-sprinkler-basin-placement.jpg",
+        "alt": "Drip line anchored to tutor stake with 6-inch slack loop and emitter positioned precisely at the trunk base"
+      },
+      {
+        "type": "heading",
+        "text": "3. Planting Windows: Avoiding the Late Spring Trap"
+      },
+      {
+        "type": "paragraph",
+        "text": "Decades of UC trials define distinct agronomic outcomes based on planting dates:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Late Winter to Early Spring (Optimal Window): Early February to late March is the absolute best window for unbudded rootstocks (seedling or clonal UCB-1). Budded nursery trees should be planted in April as soon as the danger of spring frost has passed.",
+          "Late Spring to Early Summer (Severe Hazard): Planting between mid-May and mid-June is strongly discouraged. Plants miss the vital spring 'grand period of growth,' undergo immediate severe heat stress, and rarely achieve the caliper needed for summer budding. Consequently, the first-year objective of scion growth reaching the stake top for dormant heading at 42–44 inches is forfeited.",
+          "Conditional Fall Planting: Only recommended if planting tall budded trees (approx. 48 inches) no later than September 1. This permits 5 weeks for root integration into native soil before irrigation must be completely shut off by October 7 to harden off tender wood against November freezing events."
+        ]
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/handling-pistachio-tree-sleeve.jpg",
+        "alt": "Uniformly spaced pistachio orchard blocks with laser-aligned drip lines and expansive tractor headlands"
+      },
+      {
+        "type": "heading",
+        "text": "4. Field Planting Tools: The Balling Shovel & Preventing Glazed Sidewalls"
+      },
+      {
+        "type": "paragraph",
+        "text": "The balling shovel remains the undisputed weapon of choice for pistachio planting. Its elongated, curved blade slices cleanly into soil without collapsing berm profiles. Container stock must never be hoisted by the delicate trunk; field crews must grip the top of the sleeve with one hand supporting the bottom of the rootball to prevent root shearing."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/balling-shovel-planting-hole.jpg",
+        "alt": "The curved balling shovel, recognized as the premier field tool for pistachio planting"
+      },
+      {
+        "type": "paragraph",
+        "text": "When excavating the planting hole, discard topsoil that has received pre-emergent herbicide treatments to keep chemicals out of the root zone. Crucially, verify that the hole sidewalls are not glazed by the shovel blade. Glazed, slick clay sidewalls effectively turn the planting hole into an impermeable 'flower pot' that traps emerging root tips and inhibits radial expansion, as demonstrated in the cross-section below."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/avoiding-glazed-hole-sidewalls.jpg",
+        "alt": "Glazed sidewall inside an excavated planting hole that must be scarified to prevent root circling"
+      },
+      {
+        "type": "heading",
+        "text": "5. Irrigation Basins & Rootball Moisture Dynamics (The Overwatering Warning)"
+      },
+      {
+        "type": "paragraph",
+        "text": "Individual planting basins establish uniform moisture distribution, particularly on raised berms or heavy soils with slow infiltration rates. Metal stakes must always be driven outside the potting soil margin with the stake dip facing the tree, eliminating transplant shock."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/berm-tree-basin-irrigation.jpg",
+        "alt": "Newly transplanted pistachio sapling centered in an engineered irrigation basin on a raised orchard berm"
+      },
+      {
+        "type": "paragraph",
+        "text": "During the first 8 weeks, monitoring rootball soil moisture is critical. Surface dampness does not indicate adequate hydration within the potting plug if the ball dried out beforehand. However, Beede delivers an emphatic warning: 'Overwatering is the single most common cause of poor baby tree growth, root rot, and chlorosis in young orchards'."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/rootball-moisture-overwatering-check.jpg",
+        "alt": "Soil moisture probe inserted directly into the young rootball to verify aeration and prevent waterlogging"
+      },
+      {
+        "type": "heading",
+        "text": "6. Forcing Pre-Budding Vigor & The Maroon Leaf Signal"
+      },
+      {
+        "type": "paragraph",
+        "text": "Two to three weeks prior to summer budding, growers must maintain rapid vegetative flushes in the rootstock, indicated by the continuous emergence of vibrant reddish-maroon juvenile foliage as pictured below. Give the trees a thorough irrigation approximately one week ahead of budding, then re-irrigate 5 days afterward, maintaining a firm, workable field during the budding operation."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/trunk-protector-tube-field.jpg",
+        "alt": "Active flush of maroon juvenile leaves on a rootstock sapling signaling optimal cambial slippage for budding"
+      },
+      {
+        "type": "heading",
+        "text": "7. Field Budding Timing and the Mandatory 28–32\" Height Rule"
+      },
+      {
+        "type": "paragraph",
+        "text": "Vigorous rootstocks planted in early spring reach the standard 3/8-inch (9.5 mm) caliper needed for T-budding between mid-July and early August. Never force budding prematurely; larger diameter stocks take buds far better and push shoots with greater vigor. Cultivars with thicker budwood, such as Golden Hills, require robust rootstock diameter for optimal shield fit."
+      },
+      {
+        "type": "paragraph",
+        "text": "The paramount rule in the UC Davis manual: Bud at 28 to 32 inches (70–80 cm) above ground level. This positions the bud union safely above the clamping zone of commercial mechanical trunk shakers. Having the graft union in the shaker attachment zone dramatically increases the risk of tearing trunk bark during future harvests—and unlike almonds, pistachio trunk wounds heal extremely slowly and compromise tree longevity."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/critical-budding-height-28-inches.jpg",
+        "alt": "Precision T-bud wrapped with budding rubber at 28-32 inches with the new scion shoot actively pushing"
+      },
+      {
+        "type": "heading",
+        "text": "8. Bud Forcing Technique: 50% Shoot Tipping & Notching"
+      },
+      {
+        "type": "paragraph",
+        "text": "To break apical dominance and force the newly set bud, notching the stock bark directly above the bud shield with a 24-tooth hacksaw blade is standard practice. Rather than stripping rootstock foliage completely, Beede recommends tipping all rootstock lateral shoots by 50% approximately 5 days after budding. This retains photosynthetic carbohydrate factories while pushing scion bud emergence within 10 to 14 days."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/budded-tree-heading-field.jpg",
+        "alt": "Field-budded rootstock showing standard 50% shoot tipping to direct sap flow into the emerging scion"
+      },
+      {
+        "type": "heading",
+        "text": "9. First-Season Scion Architecture & Tutor Staking"
+      },
+      {
+        "type": "paragraph",
+        "text": "Field crews must walk the rows every 10 to 14 days to tie the rapidly growing scion to the tutor stake before tissues become woody, guaranteeing a straight vertical trunk axis, while applying protective carton wraps around the base. The first-year goal is scion growth exceeding 36 inches. During the first winter dormancy, scions are headed at 42 to 44 inches (never below 38 inches) to establish the head of the open-vase framework."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/scion-training-stake-tying.jpg",
+        "alt": "Fast-growing scions tied vertically to stakes with protective cartons shielding base trunks"
+      },
+      {
+        "type": "heading",
+        "text": "10. Second-Season Summer Tipping: The 12–14\" Rule"
+      },
+      {
+        "type": "paragraph",
+        "text": "The second growing season is the pivotal window for canopy architecture. Growers select 3 to 4 primary scaffolds. As soon as primary branches reach 12 to 14 inches (30–35 cm), field crews must tip the terminal growth tips as shown below. This forces immediate lateral secondary branching, condensing two years of architectural formation into a single season. This procedure requires 6 to 8 field passes during the summer, concluding by mid-August."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/summer-tipping-primary-scaffolds.jpg",
+        "alt": "Summer tipping of primary scaffolds at 12-14 inches to trigger immediate lateral secondary branching"
+      },
+      {
+        "type": "heading",
+        "text": "11. Canopy Nutrition & Early Pest Monitoring"
+      },
+      {
+        "type": "paragraph",
+        "text": "Micronutrient deficiencies—especially zinc and copper—frequently afflict young, rapidly expanding pistachio canopies due to the high foliage-to-root volume ratio. Symptoms include distorted zigzag shoot growth, shortened internodes, and cupped leaves. Foliar sprays of chelated zinc, copper, and boron early in the season prevent canopy growth stalls."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/micronutrient-deficiency-copper-zinc.jpg",
+        "alt": "Foliar zinc and copper deficiency symptoms on young shoots requiring corrective foliar nutrition"
+      },
+      {
+        "type": "paragraph",
+        "text": "Robert Beede also sounds the alarm regarding the False Chinch Bug (Nysius raphanus), which migrates from weed cover into young orchards. These bugs congregate densely on tender trunk bark, injecting toxic feeding secretions that can kill young trees within days. Immediate field sanitation and targeted treatment are mandatory upon detection."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/pistachio-pest-false-chinch-bug.jpg",
+        "alt": "False chinch bug cluster feeding on young pistachio trunk bark requiring urgent management"
+      },
+      {
+        "type": "heading",
+        "text": "12. Open-Vase Canopy Engineering & Primary Scaffold Selection"
+      },
+      {
+        "type": "paragraph",
+        "text": "Securing the tree head firmly to the tutor stake with wide agricultural tape stabilizes the tree against wind shear. Primary scaffolds should be spaced radially at roughly 120-degree intervals. Any overly flat or congested limbs are thinned to allow space for the upper branches, while avoiding cross-taping between primary branches to prevent bark engulfment."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/primary-scaffold-vase-training.jpg",
+        "alt": "Proper placement of tree head tie supporting primary scaffolds in open vase training"
+      },
+      {
+        "type": "heading",
+        "text": "13. The Third-Season Mandate: Strict No-Tipping of Tertiaries"
+      },
+      {
+        "type": "paragraph",
+        "text": "The most fundamental rule of the third leaf: Do not tip tertiary branches during the summer! Permitting tertiary shoots to grow completely untipped throughout the third season is the sole physiological driver of caliper expansion (limb girth) across the framework. Tipping tertiaries yields thin, whippy shoots that bend outward and collapse under early crop loads."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/third-year-no-tipping-limb-girth.jpg",
+        "alt": "Third-leaf pistachio tree with untipped tertiary branches building exceptional limb girth and upright structure"
+      },
+      {
+        "type": "heading",
+        "text": "14. Years 4 & 5 Pruning: Avoiding Knuckle Cuts & Directing Growth"
+      },
+      {
+        "type": "paragraph",
+        "text": "During dormant pruning in seasons four and five, current-season terminal growth is cut back by roughly one-half. Pruners must never execute 'knuckle cuts' flush above annual growth rings, as this completely halts structural limb extension. Cuts must be positioned 3 to 4 vegetative buds beyond the ring to direct lateral development."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/avoiding-knuckle-cuts-pruning.jpg",
+        "alt": "Mature pistachio canopy displaying healthy bud differentiation between vegetative shoots and flower clusters"
+      },
+      {
+        "type": "paragraph",
+        "text": "Thinning cuts are kept to an absolute minimum to promote early bearing surface area, with late summer irrigations tapered off early to harden wood against autumn frosts."
+      },
+      {
+        "type": "image",
+        "src": "assets/images/articles/mature-trained-pistachio-tree.jpg",
+        "alt": "Fully trained 6-year-old dormant open-vase pistachio tree ready for commercial mechanical harvest"
+      },
+      {
+        "type": "heading",
+        "text": "Conclusion: A Centennial Architectural Legacy"
+      },
+      {
+        "type": "paragraph",
+        "text": "Young pistachio training is biological engineering at its highest caliber. As Robert Beede concludes: 'The ultimate reward of strict five-year canopy discipline is a perfectly balanced six-year-old open-vase pistachio tree, structurally sound, free of bark wounds, and primed to generate maximum commercial profits for a century'."
       }
     ]
   }

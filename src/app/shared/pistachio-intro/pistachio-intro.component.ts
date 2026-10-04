@@ -13,26 +13,6 @@ import { CommonModule } from '@angular/common';
 import { TranslationService } from '../translation.service';
 import { gsap } from 'gsap';
 
-// Session state tracking: Intro plays once per site visit/session,
-// preventing replay when navigating between internal SPA routes (e.g. Products -> Home).
-let hasIntroPlayedInSession = false;
-
-// Clear legacy blocked session keys from previous attempts so intro can appear cleanly
-if (typeof window !== 'undefined') {
-  try {
-    sessionStorage.removeItem('mr_pistachio_intro_played');
-  } catch {}
-}
-
-export function hasIntroAlreadyPlayed(): boolean {
-  if (typeof window === 'undefined') return false;
-  return hasIntroPlayedInSession;
-}
-
-export function markIntroAsPlayed(): void {
-  hasIntroPlayedInSession = true;
-}
-
 @Component({
   selector: 'app-pistachio-intro',
   standalone: true,
@@ -55,13 +35,6 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
 
   ngOnInit(): void {
     if (typeof window === 'undefined') return;
-
-    // If intro has already played in this browser session or reduced motion is preferred, skip immediately
-    if (hasIntroAlreadyPlayed()) {
-      this.isVisible.set(false);
-      this.introComplete.emit();
-      return;
-    }
 
     // Lock page scrolling during intro playback
     if (typeof document !== 'undefined' && document.body) {
@@ -196,6 +169,7 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
         ease: 'power1.out'
       }, 1.55);
     }
+    // Leaflets sprout and stay in radiant botanical pink
     if (leftLeaflets.length > 0) {
       tl.to(leftLeaflets, {
         scale: 1,
@@ -214,6 +188,7 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
         ease: 'power1.out'
       }, 2.25);
     }
+    // Leaflets sprout and stay in radiant botanical pink
     if (rightLeaflets.length > 0) {
       tl.to(rightLeaflets, {
         scale: 1,
@@ -224,7 +199,7 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
       }, 2.45);
     }
 
-    // T = 2.85s – 3.85s: Terminal crown foliage unfolds at the growing apex
+    // T = 2.85s – 3.85s: Terminal crown foliage unfolds at the growing apex in pure radiant pink
     if (rachisApex) {
       tl.to(rachisApex, {
         strokeDashoffset: 0,
@@ -232,11 +207,12 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
         ease: 'power1.out'
       }, 2.85);
     }
+    // Apex crown flush unfolds in full, glowing pistachio pink and stays pink throughout
     if (apexLeaflets.length > 0) {
       tl.to(apexLeaflets, {
         scale: 1,
         opacity: 1,
-        duration: 0.6,
+        duration: 0.65,
         stagger: 0.06,
         ease: 'back.out(1.2)'
       }, 3.05);
@@ -326,7 +302,6 @@ export class PistachioIntroComponent implements OnInit, AfterViewInit, OnDestroy
   }
 
   private finishIntro(isInstant: boolean): void {
-    markIntroAsPlayed();
     if (typeof document !== 'undefined' && document.body) {
       document.body.style.overflow = '';
     }

@@ -224,6 +224,57 @@ html[dir="rtl"] select {
 }
 
 /* ══════════════════════════════════════════════════════════════════════════
+   GLOBAL PHONE NUMBER & NUMERICAL DIRECTIONAL ISOLATION (LTR / RTL PROTECTION)
+   Guarantees telephone digits, + international prefix, and inputs never reverse
+   ══════════════════════════════════════════════════════════════════════════ */
+[dir="ltr"],
+.dir-ltr,
+.ltr-text,
+.num-ltr,
+.phone-val,
+.phone-number,
+.phone-link,
+a[href^="tel:"],
+a[href^="https://wa.me/"] {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  text-align: match-parent;
+  display: inline-block;
+}
+
+bdi,
+.bdi-isolate {
+  unicode-bidi: isolate !important;
+}
+
+.text-nowrap,
+.no-break {
+  white-space: nowrap !important;
+}
+
+/* Ensure phone inputs are strictly LTR for digit entry in both AR and EN */
+input[type="tel"] {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  text-align: left;
+}
+
+body.rtl input[type="tel"],
+html[dir="rtl"] input[type="tel"] {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  text-align: right;
+}
+
+body.rtl input[type="tel"]::placeholder,
+html[dir="rtl"] input[type="tel"]::placeholder {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
+
+/* ══════════════════════════════════════════════════════════════════════════
    PROTECT ALL FONT AWESOME ICONS ACROSS EN & AR (PREVENTS OVERRIDE)
    ══════════════════════════════════════════════════════════════════════════ */
 .fa,

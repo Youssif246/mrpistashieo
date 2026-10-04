@@ -11,7 +11,7 @@
       <nav class="editorial-breadcrumbs" aria-label="Breadcrumb">
         <ol>
           <li>
-            <a routerLink="/">
+            <a [routerLink]="['/' + i18n.currentLang()]">
               <i class="fa-solid fa-house" aria-hidden="true"></i>
               <span>{{ i18n.currentLang() === 'ar' ? 'الرئيسية' : 'Home' }}</span>
             </a>
@@ -20,7 +20,7 @@
             <i [class]="i18n.isRtl() ? 'fa-solid fa-chevron-left' : 'fa-solid fa-chevron-right'"></i>
           </li>
           <li>
-            <a routerLink="/articles">
+            <a [routerLink]="['/' + i18n.currentLang(), 'articles']">
               <span>{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</span>
             </a>
           </li>
@@ -125,7 +125,7 @@
             <h3 class="related-title">
               {{ i18n.currentLang() === 'ar' ? 'دراسات ومقالات ذات صلة' : 'Related Agronomic Insights' }}
             </h3>
-            <a routerLink="/articles" class="view-all-link">
+            <a [routerLink]="['/' + i18n.currentLang(), 'articles']" class="view-all-link">
               <span>{{ i18n.currentLang() === 'ar' ? 'استعراض كافة المقالات' : 'Explore All Guides' }}</span>
               <i [class]="i18n.isRtl() ? 'fa-solid fa-arrow-left' : 'fa-solid fa-arrow-right'" aria-hidden="true"></i>
             </a>
@@ -134,7 +134,7 @@
           <div class="related-grid">
             @for (rel of relatedArticles(); track rel.id) {
               <article class="related-card">
-                <a [routerLink]="['/articles', rel.slug]" class="related-image-link" [attr.aria-label]="rel.title">
+                <a [routerLink]="['/' + i18n.currentLang(), 'articles', rel.slug]" class="related-image-link" [attr.aria-label]="rel.title">
                   <img [src]="rel.coverImage" [alt]="rel.title" loading="lazy" width="400" height="240">
                   <span class="related-category-pill">{{ rel.category }}</span>
                 </a>
@@ -145,7 +145,7 @@
                     <span>{{ rel.readTime }}</span>
                   </div>
                   <h4 class="related-card-title">
-                    <a [routerLink]="['/articles', rel.slug]">{{ rel.title }}</a>
+                    <a [routerLink]="['/' + i18n.currentLang(), 'articles', rel.slug]">{{ rel.title }}</a>
                   </h4>
                 </div>
               </article>
@@ -163,7 +163,7 @@
         <p>
           {{ i18n.currentLang() === 'ar' ? 'عذراً، لم نتمكن من العثور على الدراسة المطلوبة. قد يكون الرابط قد تم تحديثه.' : 'Sorry, the requested article could not be located. It may have been moved or updated.' }}
         </p>
-        <a routerLink="/articles" class="btn-back-articles">
+        <a [routerLink]="['/' + i18n.currentLang(), 'articles']" class="btn-back-articles">
           <i [class]="i18n.isRtl() ? 'fa-solid fa-arrow-right' : 'fa-solid fa-arrow-left'" aria-hidden="true"></i>
           <span>{{ i18n.currentLang() === 'ar' ? 'العودة إلى فهرس المقالات' : 'Back to Articles Directory' }}</span>
         </a>

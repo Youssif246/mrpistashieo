@@ -1,6 +1,7 @@
-import { Component, inject, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, inject, OnInit, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslationService } from '../../shared/translation.service';
+import { SeoService } from '../../shared/seo.service';
 import { APP_CONFIG } from '../../shared/config';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -14,9 +15,10 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
-export class ContactComponent implements AfterViewInit, OnDestroy {
+export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   readonly i18n = inject(TranslationService);
   readonly social = APP_CONFIG.social;
+  private readonly seo = inject(SeoService);
   private readonly el = inject(ElementRef);
   private gsapCtx?: gsap.Context;
 
@@ -26,6 +28,40 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
   email = '';
   interest = 'General Pistachio Plants Inquiry';
   projectDetails = '';
+
+  ngOnInit(): void {
+    const isAr = this.i18n.currentLang() === 'ar';
+    this.seo.updateSeo({
+      lang: this.i18n.currentLang(),
+      path: '/contact',
+      title: isAr
+        ? 'تواصل معنا واستشر خبراءنا الزراعيين | مستر بستاشيو'
+        : 'Contact Us & Consult Our Agronomic Engineers | Mister Pistachio',
+      description: isAr
+        ? 'تواصل مع فريق مستر بستاشيو المتخصص للحصول على استشارات زراعية، حجز شتلات UCB1، وتخطيط مشاريع بساتين الفستق الحلبي.'
+        : 'Get in touch with Mister Pistachio agricultural specialists for technical consultations, certified UCB1 rootstock reservations, and orchard development planning.',
+      image: 'contact-images/contact-hero.png'
+    });
+
+    this.seo.setStructuredData('contact-breadcrumb', {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': isAr ? 'الرئيسية' : 'Home',
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}`
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': isAr ? 'اتصل بنا' : 'Contact Us',
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}/contact`
+        }
+      ]
+    });
+  }
 
   ngAfterViewInit(): void {
     if (typeof window === 'undefined') return;
@@ -74,12 +110,13 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
       if (spreadSection) {
         const dossierPanel = spreadSection.querySelector('.contact-dossier-panel');
         const formPanel = spreadSection.querySelector('.contact-form-panel');
-        const liaisonCards = spreadSection.querySelectorAll('.liaison-card');
+        const cardShowcase = spreadSection.querySelector('.luxury-card-showcase-wrapper');
+
+        if (cardShowcase) gsap.set(cardShowcase, { opacity: 1, y: 0 });
 
         if (prefersReducedMotion) {
           if (dossierPanel) gsap.set(dossierPanel, { opacity: 1, y: 0 });
           if (formPanel) gsap.set(formPanel, { opacity: 1, y: 0 });
-          if (liaisonCards) gsap.set(liaisonCards, { opacity: 1, y: 0 });
         } else {
           const tl = gsap.timeline({
             scrollTrigger: {
@@ -90,15 +127,6 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
           });
 
           if (dossierPanel) tl.to(dossierPanel, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
-          if (liaisonCards.length) {
-            tl.to(liaisonCards, {
-              opacity: 1,
-              y: 0,
-              duration: 0.6,
-              stagger: 0.1,
-              ease: 'power2.out'
-            }, '-=0.5');
-          }
           if (formPanel) tl.to(formPanel, { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out' }, '-=0.6');
         }
       }
@@ -156,7 +184,7 @@ export class ContactComponent implements AfterViewInit, OnDestroy {
     const lines = [
       isAr ? '🌱 استفسار جديد عبر الموقع الإلكتروني:' : '🌱 New Inquiry from Corporate Website:',
       `${isAr ? 'الاسم' : 'Name'}: ${this.name || (isAr ? 'غير محدد' : 'Not provided')}`,
-      `${isAr ? 'الهاتف' : 'Phone'}: ${this.phone || (isAr ? 'غير محدد' : 'Not provided')}`,
+      `${isAr ? 'الهاتف' : 'Phone'}: \u200E${this.phone || (isAr ? 'غير محدد' : 'Not provided')}`,
       `${isAr ? 'البريد الإلكتروني' : 'Email'}: ${this.email || (isAr ? 'غير محدد' : 'Not provided')}`,
       `${isAr ? 'الموضوع' : 'Interest'}: ${this.interest}`,
       `${isAr ? 'تفاصيل المشروع' : 'Project Details'}: ${this.projectDetails || (isAr ? 'لا يوجد تفاصيل إضافية' : 'None')}`

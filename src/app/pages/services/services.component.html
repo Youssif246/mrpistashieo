@@ -204,7 +204,7 @@
       <!-- 2. TWO SECONDARY EDITORIAL SERVICE BLOCKS: Services 02 & 03 -->
       <div class="establish-secondary-grid">
         
-        <!-- SERVICE 02: Precision GPS-Guided Planting -->
+        <!-- SERVICE 02: Precision Field Planting -->
         <article class="secondary-service-card" id="service-02">
           <div class="secondary-photo-wrapper">
             <img src="service-images/gps-precision-planting.webp" 
@@ -230,7 +230,7 @@
               </p>
             </div>
 
-            <ul class="editorial-spec-list" aria-label="GPS planting capabilities">
+            <ul class="editorial-spec-list" aria-label="Precision planting capabilities">
               @for (bullet of i18n.t().home.services.items[1].bullets; track $index) {
               <li class="editorial-spec-item">
                 <span class="spec-bullet-icon" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
@@ -569,7 +569,7 @@
       </p>
 
       <div class="cta-actions-cluster">
-        <a routerLink="/contact" 
+        <a [routerLink]="['/' + i18n.currentLang(), 'contact']" 
            class="btn-editorial-cta btn-cta-primary"
            aria-label="Contact Agricultural Team">
           <span>{{ i18n.t().servicesPage.cta.button }}</span>

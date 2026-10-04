@@ -151,6 +151,11 @@
   }
 }
 
+.text-nowrap {
+  white-space: nowrap;
+  display: inline-block;
+}
+
 :host-context(body.rtl) .hero-title,
 :host-context(body.rtl) .hero-headline {
   font-family: var(--font-ar-display);
@@ -2665,9 +2670,9 @@ body.rtl .specimen-coord-strip {
 /* Vertical SVG Organic Rail */
 .journey-track-rail {
   position: absolute;
-  top: 48px;
-  bottom: 52px;
-  inset-inline-start: 21px;
+  top: calc(clamp(2.5rem, 5vh, 4.5rem) + 12px);
+  bottom: calc(clamp(2.5rem, 5vh, 4.5rem) + 22px);
+  inset-inline-start: 21.25px;
   width: 3.5px;
   pointer-events: none;
   z-index: 1;
@@ -2719,8 +2724,11 @@ body.rtl .specimen-coord-strip {
 }
 
 .journey-stage-step:hover .step-num {
-  color: var(--c-forest-dark);
-  font-weight: 800;
+  background: var(--c-pistachio);
+  color: #FFFFFF;
+  border-color: var(--c-pistachio);
+  box-shadow: 0 0 0 3px rgba(118, 142, 55, 0.22), 0 4px 12px rgba(118, 142, 55, 0.3);
+  transform: translateY(-2px) scale(1.06);
   opacity: 1;
 }
 
@@ -2744,8 +2752,11 @@ body.rtl .specimen-coord-strip {
 }
 
 .journey-stage-step.is-active .step-num {
-  color: var(--c-forest-dark);
-  font-weight: 800;
+  background: var(--c-forest-dark);
+  color: #FFFFFF;
+  border-color: var(--c-forest-dark);
+  box-shadow: 0 0 0 3px rgba(17, 33, 23, 0.15), 0 4px 14px rgba(17, 33, 23, 0.25);
+  transform: scale(1.06);
   opacity: 1;
 }
 
@@ -2754,23 +2765,44 @@ body.rtl .specimen-coord-strip {
   transform: translateY(0);
 }
 
+.journey-stage-step.is-passed .step-num {
+  background: #F4F7EE;
+  color: var(--c-pistachio-deep);
+  border-color: rgba(118, 142, 55, 0.45);
+}
+
 .stage-node-col {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.65rem;
   flex-shrink: 0;
-  width: 45px;
+  width: 46px;
+  position: relative;
+  z-index: 2;
 }
 
 .step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 24px;
+  padding: 0 0.5rem;
   font-family: var(--font-mono, monospace);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--c-pistachio-deep);
-  opacity: 0.88;
-  transition: color 250ms ease, opacity 250ms ease;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--c-forest-dark, #1B3524);
+  background: #FFFFFF;
+  border: 1.5px solid rgba(118, 142, 55, 0.35);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(17, 33, 23, 0.08);
+  position: relative;
+  z-index: 3;
+  line-height: 1;
+  opacity: 1;
+  transition: all 280ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .stage-icon-dot {
@@ -2866,23 +2898,37 @@ body.rtl .specimen-coord-strip {
 
   .journey-timeline-track {
     gap: 3.5rem;
-    padding-block: 1rem;
+    padding-block: 1.5rem;
+  }
+
+  .journey-track-rail {
+    top: calc(1.5rem + 12px);
+    bottom: calc(1.5rem + 22px);
   }
 }
 
 @media (max-width: 768px) {
   .journey-timeline-track {
     gap: 3rem;
+    padding-block: 1.25rem;
   }
 
   .journey-track-rail {
-    inset-inline-start: 18px;
-    top: 42px;
-    bottom: 45px;
+    inset-inline-start: 17.25px;
+    top: calc(1.25rem + 11px);
+    bottom: calc(1.25rem + 19px);
   }
 
   .stage-node-col {
     width: 38px;
+    gap: 0.45rem;
+  }
+
+  .step-num {
+    min-width: 32px;
+    height: 22px;
+    font-size: 0.68rem;
+    padding: 0 0.35rem;
   }
 
   .stage-icon-dot {
@@ -3729,130 +3775,6 @@ body.rtl .specimen-coord-strip {
   }
 }
 
-/* ══════════════════════════════════════════════════════════════════════════
-   7. AGRONOMIC LEADERSHIP & FOUNDER'S PERSPECTIVE (STANDALONE SECTION)
-   ══════════════════════════════════════════════════════════════════════════ */
-.section-expert-quote {
-  padding: clamp(5rem, 8vw, 7.5rem) 0;
-  background-color: var(--c-ivory-light);
-  border-top: 1px solid rgba(194, 160, 115, 0.22);
-  border-bottom: 1px solid rgba(194, 160, 115, 0.22);
-  position: relative;
-  overflow: hidden;
-}
-
-.expert-quote-container {
-  max-width: 960px;
-  margin-inline: auto;
-  text-align: center;
-}
-
-.expert-quote-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
-}
-
-.expert-quote-eyebrow .eyebrow-accent-line {
-  background-color: var(--c-logo-primary);
-}
-
-.expert-quote-eyebrow .brand-eyebrow-text {
-  color: var(--c-logo-deep);
-}
-
-.expert-quote-body {
-  font-family: var(--font-serif);
-  font-size: clamp(1.45rem, 2.6vw, 2.15rem);
-  line-height: 1.45;
-  color: var(--c-forest);
-  font-style: italic;
-  margin: 0 0 2.5rem 0;
-  letter-spacing: -0.01em;
-}
-
-:host-context([dir="rtl"]) .expert-quote-body,
-:host-context(html[dir="rtl"]) .expert-quote-body {
-  font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
-  font-style: normal !important;
-  font-weight: 700;
-  line-height: 1.65;
-}
-
-.expert-author-card {
-  display: inline-flex;
-  align-items: center;
-  gap: 1.25rem;
-  background: #FFFFFF;
-  padding: 0.9rem 2rem;
-  border-radius: 9999px;
-  border: 1px solid rgba(194, 160, 115, 0.4);
-  box-shadow: 0 6px 20px rgba(14, 32, 19, 0.06);
-}
-
-.expert-avatar-wrap {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #FFFFFF;
-  border: 2px solid var(--c-logo-primary);
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.expert-avatar-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.expert-author-info {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  gap: 0.25rem;
-}
-
-.expert-author-name {
-  font-family: var(--font-sans);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--c-forest);
-  font-style: normal !important;
-  line-height: 1.35;
-  margin: 0;
-  letter-spacing: normal !important;
-  display: block;
-}
-
-:host-context([dir="rtl"]) .expert-author-name,
-:host-context(html[dir="rtl"]) .expert-author-name {
-  font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
-  font-size: 1.25rem;
-  font-weight: 700;
-  font-style: normal !important;
-  color: var(--c-forest);
-}
-
-.expert-author-title {
-  font-size: 0.88rem;
-  color: var(--c-slate);
-  font-style: normal !important;
-  line-height: 1.45;
-  display: block;
-}
-
-:host-context([dir="rtl"]) .expert-author-title,
-:host-context(html[dir="rtl"]) .expert-author-title {
-  font-family: var(--font-ar-body), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
-  font-style: normal !important;
-}
 
 /* ══════════════════════════════════════════════════════════════════════════
    8. DEDICATED INSTAGRAM & OFFICIAL SOCIAL SHOWCASE (STANDALONE SECTION)
@@ -3948,26 +3870,99 @@ body.rtl .specimen-coord-strip {
 .instagram-user-identity {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .instagram-crest-avatar {
+  position: relative;
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: #FFFFFF;
-  padding: 6px;
-  box-shadow: 0 0 0 2px #E1306C, 0 0 0 5px rgba(225, 48, 108, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  margin-inline-end: 0.25rem;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+/* 1. Pulsing Outward Live Radar Waves (Tight, disciplined diameter) */
+.instagram-crest-avatar::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 19, 97, 0.7);
+  opacity: 0;
+  animation: liveRadarPulse 2.2s cubic-bezier(0.1, 0.2, 0.3, 1) infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 2. Rotating Fiery Instagram Story / Live Conic Ring */
+.instagram-crest-avatar::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #FF007F 0%,
+    #FF4500 22%,
+    #FFD700 45%,
+    #FF0055 70%,
+    #833AB4 88%,
+    #FF007F 100%
+  );
+  animation: fieryRingSpin 3.2s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.35), 0 0 16px rgba(225, 48, 108, 0.25);
+  z-index: 2;
+}
+
+/* 3. Logo Inside (Clean White Disc with Inner Border) */
 .instagram-crest-avatar img {
+  position: relative;
+  z-index: 3;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  background: #FFFFFF;
+  padding: 6px;
   object-fit: contain;
+  box-shadow: inset 0 0 0 2px #FFFFFF, inset 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.instagram-crest-avatar:hover {
+  transform: scale(1.06);
+}
+
+.instagram-crest-avatar:hover::after {
+  box-shadow: 0 0 16px rgba(255, 69, 0, 0.5), 0 0 24px rgba(225, 48, 108, 0.4);
+}
+
+@keyframes fieryRingSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes liveRadarPulse {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.85;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.55), 0 0 8px rgba(225, 48, 108, 0.35);
+  }
+  45% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: scale(1.20);
+    opacity: 0;
+    box-shadow: 0 0 8px rgba(255, 69, 0, 0), 0 0 12px rgba(225, 48, 108, 0);
+  }
 }
 
 .instagram-user-text {

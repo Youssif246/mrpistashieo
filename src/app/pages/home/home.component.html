@@ -1,7 +1,3 @@
-@if (hasIntroPending) {
-<app-pistachio-intro (introComplete)="onIntroComplete()"></app-pistachio-intro>
-}
-
 <!-- ==========================================================================
      1. CINEMATIC HERO (IMMERSIVE, PHOTOGRAPHY-LED)
      ========================================================================== -->
@@ -24,9 +20,9 @@
     <!-- Centered Main Headline with Controlled Desktop Line Break -->
     <h1 class="hero-title">
       @if (i18n.currentLang() === 'en') {
-      Pistachio Cultivation, Rooted<br class="desktop-break"> in Precision.
+        Pistachio Cultivation, Rooted<br class="desktop-break"> in Precision.
       } @else {
-      {{ i18n.t().home.hero.title }}
+        زراعة الفستق الحلبي مرسخة<br class="desktop-break"> <span class="text-nowrap">في الدقة الزراعية.</span>
       }
     </h1>
 
@@ -37,7 +33,7 @@
 
     <!-- Centered CTA Buttons (Unified Premium Button System - No Arrows) -->
     <div class="hero-cta-row">
-      <a routerLink="/services" class="hero-cta-secondary">
+      <a [routerLink]="['/' + i18n.currentLang(), 'services']" class="hero-cta-secondary">
         <span>{{ i18n.t().home.hero.ctaSecondary }}</span>
       </a>
     </div>
@@ -214,7 +210,7 @@
 
     <!-- Single Unified Editorial CTA: View All Services -->
     <div class="service-index-footer">
-      <a routerLink="/services" class="editorial-services-cta" id="viewAllServicesBtn">
+      <a [routerLink]="['/' + i18n.currentLang(), 'services']" class="editorial-services-cta" id="viewAllServicesBtn">
         <span>{{ i18n.t().home.services.viewAll }}</span>
         <i class="fa-solid fa-arrow-right cta-arrow-icon" aria-hidden="true"></i>
       </a>
@@ -425,7 +421,7 @@
 
     <!-- Editorial Action Bar & Certification Mark (No Arrows) -->
     <div class="monograph-action-footer">
-      <a routerLink="/products" class="monograph-cta-button" id="exploreVarietiesBotanicalBtn">
+      <a [routerLink]="['/' + i18n.currentLang(), 'varieties']" class="monograph-cta-button" id="exploreVarietiesBotanicalBtn">
         <span class="btn-text">{{ i18n.t().home.botanical.cta }}</span>
       </a>
 
@@ -487,7 +483,7 @@
         </div>
 
         <div class="nursery-cta-wrap nursery-cta-desktop">
-          <a routerLink="/contact" class="nursery-text-cta" aria-label="Contact Us & Plant Reservations">
+          <a [routerLink]="['/' + i18n.currentLang(), 'contact']" class="nursery-text-cta" aria-label="Contact Us & Plant Reservations">
             <span>{{ i18n.t().home.nursery.cta }}</span>
           </a>
         </div>
@@ -550,7 +546,7 @@
 
       <!-- Mobile CTA: Positioned at the very end of the nursery section on phones -->
       <div class="nursery-cta-wrap nursery-cta-mobile">
-        <a routerLink="/contact" class="nursery-text-cta" aria-label="Contact Us & Plant Reservations">
+        <a [routerLink]="['/' + i18n.currentLang(), 'contact']" class="nursery-text-cta" aria-label="Contact Us & Plant Reservations">
           <span>{{ i18n.t().home.nursery.cta }}</span>
         </a>
       </div>
@@ -703,41 +699,6 @@
   </div>
 </section>
 
-<!-- ==========================================================================
-     7. AGRONOMIC LEADERSHIP & EXPERT AGRICULTURAL VOICE
-     Dedicated monograph quote from Javier Moreno García
-     ========================================================================== -->
-<section class="section-expert-quote" id="expertQuoteSection" aria-label="Agronomic Perspective">
-  <div class="container-wide">
-    <div class="expert-quote-container">
-      <div class="expert-quote-eyebrow">
-        <span class="eyebrow-accent-line" aria-hidden="true"></span>
-        <span class="brand-eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'رؤية وتوجيه زراعي' : 'Agronomic Perspective'
-          }}</span>
-        <span class="eyebrow-accent-line" aria-hidden="true"></span>
-      </div>
-
-      <blockquote class="expert-quote-body">
-        {{ i18n.currentLang() === 'ar'
-        ? '«شهد قطاع الفستق أكبر نمو بين جميع أنواع المكسرات في السنوات الأخيرة، نظراً لتزايد طلب المستهلكين عليه بسبب
-        قيمته الغذائية الممتازة.»'
-        : '“The pistachio sector has witnessed the strongest growth among all tree nuts in recent years, driven by
-        increasing consumer demand for its exceptional nutritional value and agricultural resilience.”' }}
-      </blockquote>
-
-      <div class="expert-author-card">
-        <div class="expert-avatar-wrap">
-          <img src="logo.png" alt="Mister Pistachio" class="avatar-brand-crest">
-        </div>
-        <div class="expert-author-info">
-          <strong class="expert-author-name">{{ i18n.currentLang() === 'ar' ? 'زين' : 'Zain' }}</strong>
-          <span class="expert-author-title">{{ i18n.currentLang() === 'ar' ? 'خبير ومستشار زراعي متخصص •
-            @mister_pistachio' : 'Specialist Agricultural Consultant · @mister_pistachio' }}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ==========================================================================
      8. DEDICATED INSTAGRAM & OFFICIAL SOCIAL SHOWCASE
@@ -778,7 +739,7 @@
             </h3>
             <span class="instagram-username" dir="ltr">
               <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-              <span>&#64;misterpistach</span>
+              <span>&#64;mister.pistachio</span>
             </span>
           </div>
         </div>

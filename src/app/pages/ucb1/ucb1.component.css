@@ -1,0 +1,809 @@
+/* ==========================================================================
+   MISTER PISTACHIO: UCB-1 HYBRID ROOTSTOCK DEDICATED SHOWCASE
+   Ultra-Premium Botanical Editorial Design System
+   ========================================================================== */
+
+.ucb1-page-wrapper {
+  background-color: var(--c-ivory, #F8F5EE);
+  color: var(--c-charcoal, #151A17);
+  overflow-x: clip;
+  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+}
+
+/* RTL Layout Adaptation */
+.ucb1-page-wrapper.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.ucb1-page-wrapper.rtl .editorial-eyebrow .eyebrow-line {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   CONTAINERS & EDITORIAL PRIMITIVES
+   ────────────────────────────────────────────────────────────────────────── */
+.container-wide {
+  width: 100%;
+  max-width: 1340px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 3.5rem);
+  padding-right: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 2.5rem);
+  padding-right: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.editorial-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.editorial-eyebrow .eyebrow-line {
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background-color: var(--c-pistachio, #3B7C04);
+}
+
+.editorial-eyebrow .eyebrow-text {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-pistachio-deep, #24520B);
+}
+
+.center-eyebrow {
+  justify-content: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.section-center-header {
+  text-align: center !important;
+  max-width: 820px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 0;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.section-center-header .editorial-eyebrow {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  justify-content: center !important;
+}
+
+.section-title {
+  font-family: var(--font-ar), var(--font-serif, 'Noto Naskh Arabic', Georgia, serif);
+  font-size: clamp(2rem, 3.6vw, 2.85rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--c-forest, #0E2013);
+  margin-bottom: 1rem;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+}
+
+.section-subtitle {
+  font-family: var(--font-ar), var(--font-sans), sans-serif;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.75;
+  color: var(--c-slate, #4A564F);
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 720px;
+  width: 100%;
+}
+
+.ucb1-page-wrapper.rtl .section-center-header,
+.ucb1-page-wrapper.rtl .section-center-header .section-title,
+.ucb1-page-wrapper.rtl .section-center-header .section-subtitle,
+.ucb1-page-wrapper.rtl .section-center-header .editorial-eyebrow {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  justify-content: center !important;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   2. EDITORIAL GENETICS STORY SECTION
+   ────────────────────────────────────────────────────────────────────────── */
+.ucb1-story-section {
+  padding-top: clamp(4rem, 7vw, 6.5rem);
+  padding-bottom: clamp(4rem, 7vw, 6.5rem);
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.story-layout-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.story-photo-frame {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E6E1D7;
+  background-color: #F8F5EE;
+}
+
+.story-img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-caption {
+  padding: 1.25rem 1.5rem;
+  background-color: #F8F5EE;
+  border-top: 1px solid #E6E1D7;
+}
+
+.caption-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-pistachio, #3B7C04);
+  margin-bottom: 0.35rem;
+}
+
+.caption-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--c-slate, #4A564F);
+  margin: 0;
+}
+
+.story-content-col {
+  padding-left: clamp(0rem, 2vw, 1.5rem);
+}
+
+.ucb1-page-wrapper.rtl .story-content-col {
+  padding-left: 0;
+  padding-right: clamp(0rem, 2vw, 1.5rem);
+}
+
+.story-prose p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--c-slate, #4A564F);
+  margin-bottom: 1.25rem;
+}
+
+.story-key-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.metric-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-val {
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  font-weight: 700;
+  color: var(--c-pistachio, #3B7C04);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+}
+
+.metric-lbl {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--c-slate, #4A564F);
+  line-height: 1.4;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   3. CORE ADVANTAGES GRID (6 CARDS)
+   ────────────────────────────────────────────────────────────────────────── */
+.ucb1-advantages-section {
+  padding-top: clamp(4rem, 7vw, 6.5rem);
+  padding-bottom: clamp(4rem, 7vw, 6.5rem);
+  background-color: #FAF8F5;
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.advantage-card {
+  background: #FFFFFF;
+  border: 1px solid #E6E1D7;
+  border-radius: 14px;
+  padding: clamp(1.75rem, 3vw, 2.25rem);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.advantage-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--c-pistachio, #3B7C04);
+  box-shadow: 0 14px 28px rgba(14, 32, 19, 0.08);
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.advantage-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background-color: #E8EFE2;
+  color: var(--c-pistachio, #3B7C04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.advantage-icon-wrapper i {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.advantage-card:hover .advantage-icon-wrapper {
+  transform: scale(1.08);
+  background-color: #DEEAD4;
+}
+
+.advantage-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--c-pistachio-deep, #24520B);
+  background-color: #FAF4EB;
+  border: 1px solid #EBDDC8;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+}
+
+.advantage-title {
+  font-family: var(--font-serif, 'Noto Naskh Arabic', Georgia, serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--c-forest, #0E2013);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.advantage-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--c-slate, #4A564F);
+  margin: 0;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   4. PHOTO MOSAIC SHOWCASE STRIP
+   ────────────────────────────────────────────────────────────────────────── */
+.ucb1-gallery-section {
+  padding-top: clamp(4rem, 6vw, 6rem);
+  padding-bottom: clamp(4rem, 6vw, 6rem);
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.gallery-header-row {
+  margin-bottom: clamp(2rem, 3.5vw, 3rem);
+}
+
+.gallery-mosaic-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  grid-template-rows: 240px 240px;
+  gap: 1.5rem;
+}
+
+.mosaic-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.mosaic-item-large {
+  grid-row: span 2;
+}
+
+.mosaic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mosaic-item:hover .mosaic-img {
+  transform: scale(1.04);
+}
+
+.mosaic-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(14, 32, 19, 0.88) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: #FFFFFF;
+}
+
+.mosaic-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--c-pistachio, #3B7C04);
+  color: #FFFFFF;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.mosaic-caption {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+  color: #F8F5EE;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   5. COMPARISON & TECHNICAL SPECS TABLE
+   ────────────────────────────────────────────────────────────────────────── */
+.ucb1-specs-section {
+  padding-top: clamp(4rem, 7vw, 6.5rem);
+  padding-bottom: clamp(4rem, 7vw, 6.5rem);
+  background-color: #FAF8F5;
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.specs-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid #DED7C9;
+  background-color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(14, 32, 19, 0.05);
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: inherit;
+  font-size: 0.95rem;
+  min-width: 820px;
+}
+
+.specs-table th {
+  padding: 1.25rem 1.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #D5CCBD;
+  background-color: #F4EFE6;
+  color: var(--c-forest, #0E2013);
+}
+
+.specs-table th.th-ucb1 {
+  background-color: #E8EFE2;
+  border-bottom: 2px solid var(--c-pistachio, #3B7C04);
+}
+
+.th-badge-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  gap: 0.2rem;
+}
+
+.ucb1-pill {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--c-pistachio, #3B7C04);
+}
+
+.th-sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--c-slate, #4A564F);
+}
+
+.specs-table td {
+  padding: 1.15rem 1.5rem;
+  border-bottom: 1px solid #EDE7DC;
+  vertical-align: middle;
+  line-height: 1.55;
+}
+
+.specs-table tr.stripe-row {
+  background-color: #FCFBF9;
+}
+
+.specs-table td.td-param {
+  font-weight: 700;
+  color: var(--c-forest, #0E2013);
+  width: 25%;
+}
+
+.specs-table td.td-ucb1 {
+  background-color: rgba(232, 239, 226, 0.45);
+  font-weight: 700;
+  color: var(--c-pistachio-deep, #24520B);
+  width: 28%;
+}
+
+.specs-table td.td-traditional {
+  color: #6E7972;
+  width: 22%;
+}
+
+.specs-table td.td-significance {
+  font-size: 0.875rem;
+  color: var(--c-slate, #4A564F);
+  width: 25%;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   6. FREQUENTLY ASKED QUESTIONS (ACCORDION)
+   ────────────────────────────────────────────────────────────────────────── */
+.ucb1-faq-section {
+  padding-top: clamp(4rem, 7vw, 6.5rem);
+  padding-bottom: clamp(4rem, 7vw, 6.5rem);
+  background-color: #FFFFFF;
+  border-bottom: 1px solid var(--c-sand, #DFD7C7);
+}
+
+.faq-accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.faq-accordion-item {
+  background-color: #FAF8F5;
+  border: 1px solid #E2DCD1;
+  border-inline-start: 4px solid #DFD7C7;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.faq-accordion-item:hover {
+  border-color: #D5CEBF;
+  border-inline-start-color: var(--c-pistachio-light, #6EA82B);
+  background-color: #FAF7F2;
+}
+
+.faq-accordion-item.is-expanded {
+  background-color: #FFFFFF;
+  border-color: var(--c-pistachio, #3B7C04);
+  border-inline-start-color: var(--c-pistachio, #3B7C04);
+  box-shadow: 0 8px 24px rgba(14, 32, 19, 0.07);
+}
+
+.faq-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.35rem 1.65rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: inherit;
+  font-family: inherit;
+  color: var(--c-forest, #0E2013);
+  transition: background-color 0.2s ease;
+  gap: 1.25rem;
+}
+
+.faq-accordion-header:hover {
+  background-color: rgba(245, 239, 230, 0.6);
+}
+
+.faq-question-text {
+  font-family: var(--font-ar), var(--font-sans), sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--c-forest, #0E2013);
+  flex: 1;
+}
+
+.faq-toggle-icon {
+  color: var(--c-pistachio, #3B7C04);
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(59, 124, 4, 0.08);
+  transition: all 0.25s ease;
+}
+
+.faq-accordion-item.is-expanded .faq-toggle-icon {
+  background-color: var(--c-pistachio, #3B7C04);
+  color: #FFFFFF;
+}
+
+.faq-toggle-icon i {
+  font-size: 0.95rem;
+  transition: transform 0.2s ease;
+}
+
+.faq-accordion-body {
+  padding: 0 1.65rem 1.65rem 1.65rem;
+  border-top: 1px solid #F0ECE4;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-answer-text {
+  font-family: var(--font-ar), var(--font-sans), sans-serif;
+  font-size: 1.025rem;
+  line-height: 1.85;
+  color: var(--c-slate, #4A564F);
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   7. FINAL CLOSING CTA SECTION: BOTANICAL AMBIENT & RESTRAINED EDITORIAL
+   Matches About & Services Pages with Tree Specimen & Orchard Horizon
+   ────────────────────────────────────────────────────────────────────────── */
+.ucb1-closing-cta {
+  position: relative;
+  padding: clamp(5.5rem, 9vw, 8.5rem) 1.5rem clamp(4.5rem, 8vw, 7.5rem) 1.5rem;
+  background-color: var(--c-ivory, #F8F5EE);
+  overflow: hidden;
+  border-top: 1px solid var(--c-sand, #DFD7C7);
+  text-align: center;
+}
+
+.cta-ambient-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.cta-ghost-watermark {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-serif);
+  font-size: clamp(6.5rem, 15vw, 16rem);
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  color: rgba(17, 33, 23, 0.028);
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.botanical-shadow--orchard-row {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.botanical-shadow--orchard-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ucb1-cta-tree-left {
+  position: absolute;
+  bottom: 0;
+  inset-inline-end: 5%;
+  width: clamp(140px, 16vw, 250px);
+  opacity: 0.18;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ucb1-cta-tree-left img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ucb1-cta-branch-left {
+  position: absolute;
+  left: clamp(35px, 6vw, 100px) !important;
+  right: auto !important;
+  bottom: -15px !important;
+  width: clamp(260px, 24vw, 380px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ucb1-page-wrapper.rtl .ucb1-cta-branch-left {
+  left: clamp(35px, 6vw, 100px) !important;
+  right: auto !important;
+  transform: none !important;
+}
+
+.cta-editorial-stage {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-centered-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-hairline-accent {
+  width: 22px;
+  height: 1.5px;
+  background-color: var(--c-pistachio, #3B7C04);
+  border-radius: 1px;
+}
+
+.cta-eyebrow-text {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--c-pistachio-deep, #24520B);
+}
+
+.ucb1-page-wrapper.rtl .cta-eyebrow-text {
+  letter-spacing: 0.04em;
+  font-size: 0.82rem;
+}
+
+.cta-editorial-headline {
+  font-family: var(--font-serif, 'Noto Naskh Arabic', Georgia, serif);
+  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--c-forest, #0E2013);
+  letter-spacing: -0.015em;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.cta-editorial-description {
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+  color: var(--c-slate, #4A564F);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  max-width: 660px;
+}
+
+.cta-editorial-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.cta-editorial-buttons .btn-editorial {
+  min-width: 230px;
+  height: 52px;
+  border-radius: 4px;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   RESPONSIVE BREAKPOINTS
+   ────────────────────────────────────────────────────────────────────────── */
+@media (max-width: 1080px) {
+  .story-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advantages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-mosaic-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .mosaic-item-large {
+    grid-row: auto;
+    height: 340px;
+  }
+
+  .mosaic-item {
+    height: 260px;
+  }
+}
+
+@media (max-width: 640px) {
+  .advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .story-key-metrics {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .cta-editorial-buttons .btn-editorial {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ucb1-cta-tree-left {
+    display: none;
+  }
+}

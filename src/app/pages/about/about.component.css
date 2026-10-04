@@ -833,6 +833,11 @@ body.rtl .plate-desc {
   height: 100%;
 }
 
+.chapter-botanical-icon i {
+  font-size: 1.85rem;
+  line-height: 1;
+}
+
 .chapter-body {
   flex: 1;
   display: flex;

@@ -3,7 +3,8 @@
   <div class="footer-bg-ambient" aria-hidden="true">
     <svg class="footer-pistachio-art" viewBox="0 0 520 420" fill="none">
       <!-- Main botanical branch -->
-      <path d="M 500 420 C 430 320 340 220 230 140 C 170 95 90 55 20 40" stroke="#768E37" stroke-width="1.6" stroke-linecap="round" />
+      <path d="M 500 420 C 430 320 340 220 230 140 C 170 95 90 55 20 40" stroke="#768E37" stroke-width="1.6"
+        stroke-linecap="round" />
       <!-- Pistachio leaves -->
       <path d="M 230 140 C 205 75 260 30 305 65 C 315 110 270 140 230 140 Z" stroke="#768E37" stroke-width="1.3" />
       <path d="M 230 140 C 190 170 170 235 210 255 C 240 245 250 185 230 140 Z" stroke="#768E37" stroke-width="1.3" />
@@ -21,19 +22,13 @@
     <!-- Top Editorial Header in Footer -->
     <div class="footer-header-strip">
       <div class="footer-brand-lockup">
-        <a routerLink="/" class="footer-logo-anchor">
-          <img src="logo.png" [alt]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'" class="footer-logo-inverted" width="160" height="52">
+        <a [routerLink]="['/' + i18n.currentLang()]" class="footer-logo-anchor">
+          <img src="logo.png" [alt]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'"
+            class="footer-logo-inverted" width="160" height="52">
         </a>
         <p class="footer-mission-lead">
           {{ i18n.t().footer.tagline }}
         </p>
-      </div>
-
-      <div class="footer-action-wrap">
-        <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn-footer-whatsapp" aria-label="Start WhatsApp Consultation">
-          <i class="fa-brands fa-whatsapp footer-wa-icon" aria-hidden="true"></i>
-          <span>{{ i18n.currentLang() === 'ar' ? 'ابدأ المحادثة عبر واتساب' : 'Start WhatsApp Conversation' }}</span>
-        </a>
       </div>
     </div>
 
@@ -45,12 +40,13 @@
       <div class="footer-column">
         <span class="column-kicker">{{ i18n.t().footer.quickLinks }}</span>
         <ul class="column-links">
-          <li><a routerLink="/">{{ i18n.t().navbar.home }}</a></li>
-          <li><a routerLink="/about">{{ i18n.t().navbar.about }}</a></li>
-          <li><a routerLink="/services">{{ i18n.t().navbar.services }}</a></li>
-          <li><a routerLink="/products">{{ i18n.t().navbar.products }}</a></li>
-          <li><a routerLink="/articles">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</a></li>
-          <li><a routerLink="/contact">{{ i18n.t().navbar.contact }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang()]">{{ i18n.t().navbar.home }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'usb1']">USB1</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'varieties']">{{ i18n.t().navbar.products }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'services']">{{ i18n.t().navbar.services }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'articles']">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'about']">{{ i18n.t().navbar.about }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'contact']">{{ i18n.t().navbar.contact }}</a></li>
         </ul>
       </div>
 
@@ -58,10 +54,10 @@
       <div class="footer-column">
         <span class="column-kicker">{{ i18n.t().navbar.services }}</span>
         <ul class="column-links">
-          <li><a routerLink="/services" fragment="service-01">{{ i18n.t().home.services.items[0].title }}</a></li>
-          <li><a routerLink="/services" fragment="service-02">{{ i18n.t().home.services.items[1].title }}</a></li>
-          <li><a routerLink="/services" fragment="service-03">{{ i18n.t().home.services.items[2].title }}</a></li>
-          <li><a routerLink="/services">{{ i18n.t().home.services.viewAll }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'services']" fragment="service-01">{{ i18n.t().home.services.items[0].title }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'services']" fragment="service-02">{{ i18n.t().home.services.items[1].title }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'services']" fragment="service-03">{{ i18n.t().home.services.items[2].title }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'services']">{{ i18n.t().home.services.viewAll }}</a></li>
         </ul>
       </div>
 
@@ -79,7 +75,8 @@
           </p>
           <p class="meta-row">
             <span class="meta-label">{{ i18n.t().footer.direct }}</span>
-            <span class="meta-val" dir="ltr">{{ i18n.t().footer.phonePlaceholder }}</span>
+            <a [href]="'tel:' + cleanPhone(i18n.t().footer.phonePlaceholder)" class="meta-val phone-link"
+              dir="ltr"><bdi>{{ i18n.t().footer.phonePlaceholder }}</bdi></a>
           </p>
         </div>
       </div>
@@ -88,23 +85,23 @@
       <div class="footer-column">
         <span class="column-kicker">{{ i18n.t().footer.socialTitle }}</span>
         <div class="footer-social-roster">
-          <a [href]="social.instagram" target="_blank" rel="noopener noreferrer" class="social-tag">
+          <a [href]="social.instagram" target="_blank" rel="noopener noreferrer" class="social-tag" dir="ltr">
             <i class="fa-brands fa-instagram" aria-hidden="true"></i>
             <span>Instagram</span>
           </a>
-          <a [href]="social.tiktok" target="_blank" rel="noopener noreferrer" class="social-tag" aria-label="TikTok">
+          <a [href]="social.tiktok" target="_blank" rel="noopener noreferrer" class="social-tag" aria-label="TikTok" dir="ltr">
             <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
             <span>TikTok</span>
           </a>
-          <a [href]="social.facebook" target="_blank" rel="noopener noreferrer" class="social-tag">
+          <a [href]="social.facebook" target="_blank" rel="noopener noreferrer" class="social-tag" dir="ltr">
             <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
             <span>Facebook</span>
           </a>
-          <a [href]="social.youtube" target="_blank" rel="noopener noreferrer" class="social-tag">
+          <a [href]="social.youtube" target="_blank" rel="noopener noreferrer" class="social-tag" dir="ltr">
             <i class="fa-brands fa-youtube" aria-hidden="true"></i>
             <span>YouTube</span>
           </a>
-          <a [href]="social.x" target="_blank" rel="noopener noreferrer" class="social-tag" aria-label="X (Twitter)">
+          <a [href]="social.x" target="_blank" rel="noopener noreferrer" class="social-tag" aria-label="X (Twitter)" dir="ltr">
             <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
             <span>X (Twitter)</span>
           </a>

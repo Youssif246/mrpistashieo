@@ -1,6 +1,7 @@
-import { Component, inject, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, inject, OnInit, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../shared/translation.service';
+import { SeoService } from '../../shared/seo.service';
 import { APP_CONFIG } from '../../shared/config';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -14,10 +15,45 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export class AboutComponent implements AfterViewInit, OnDestroy {
+export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
   readonly i18n = inject(TranslationService);
+  private readonly seo = inject(SeoService);
   private readonly el = inject(ElementRef);
   private gsapCtx?: gsap.Context;
+
+  ngOnInit(): void {
+    const isAr = this.i18n.currentLang() === 'ar';
+    this.seo.updateSeo({
+      lang: this.i18n.currentLang(),
+      path: '/about',
+      title: isAr
+        ? 'عن الشركة ورؤيتنا الزراعية | مستر بستاشيو'
+        : 'About Us & Agronomic Vision | Mister Pistachio',
+      description: isAr
+        ? 'تعرف على قصة ورؤية مستر بستاشيو، ريادتنا في تقنيات إكثار أصول الفستق الحلبي، وشراكاتنا الإسبانية لتطوير البساتين في الشرق الأوسط.'
+        : 'Discover Mister Pistachio, our clonal propagation nursery leadership, Spanish agronomic partnerships, and precision pistachio orchard engineering across the Mediterranean.',
+      image: 'about-images/nursery.png'
+    });
+
+    this.seo.setStructuredData('about-breadcrumb', {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': isAr ? 'الرئيسية' : 'Home',
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}`
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': isAr ? 'من نحن' : 'About Us',
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}/about`
+        }
+      ]
+    });
+  }
 
   ngAfterViewInit(): void {
     if (typeof window === 'undefined') return;

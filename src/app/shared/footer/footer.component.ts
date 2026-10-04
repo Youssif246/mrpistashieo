@@ -15,6 +15,10 @@ export class FooterComponent {
   readonly currentYear = new Date().getFullYear();
   readonly social = APP_CONFIG.social;
 
+  cleanPhone(phone: string): string {
+    return phone ? phone.replace(/[^\d+]/g, '') : '';
+  }
+
   getWhatsAppLink(): string {
     const msg = this.i18n.currentLang() === 'ar'
       ? 'مرحباً، أود الاستفسار عن حجز شتلات الفستق والخدمات الحقلية.'

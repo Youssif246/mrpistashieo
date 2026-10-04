@@ -1,8 +1,8 @@
-import { Component, inject, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, inject, OnInit, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../shared/translation.service';
+import { SeoService } from '../../shared/seo.service';
 import { APP_CONFIG } from '../../shared/config';
-import { PistachioIntroComponent, hasIntroAlreadyPlayed } from '../../shared/pistachio-intro/pistachio-intro.component';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -11,17 +11,59 @@ gsap.registerPlugin(ScrollTrigger);
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink, PistachioIntroComponent],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements AfterViewInit, OnDestroy {
+export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   readonly i18n = inject(TranslationService);
   readonly config = APP_CONFIG;
+  private readonly seo = inject(SeoService);
   private readonly el = inject(ElementRef);
   private gsapCtx?: gsap.Context;
 
-  hasIntroPending = !hasIntroAlreadyPlayed();
+  ngOnInit(): void {
+    const isAr = this.i18n.currentLang() === 'ar';
+    this.seo.updateSeo({
+      lang: this.i18n.currentLang(),
+      path: '/',
+      title: isAr
+        ? 'مستر بستاشيو | مشاتل متخصصة في زراعة وإنتاج الفستق الحلبي'
+        : 'Mister Pistachio | Specialist Pistachio Nursery & Plantation Engineering',
+      description: isAr
+        ? 'مشتل زراعي رائد متخصص في إكثار أصول الفستق الحلبي المعتمدة (UCB1، البطم)، وتأسيس البساتين النموذجية بأعلى المعايير الإسبانية والعالمية.'
+        : 'Certified pistachio nursery specializing in clonal rootstocks (UCB1, Atlantica), grafted saplings, and precision Mediterranean orchard establishment.',
+      image: 'home-images/hero.png'
+    });
+
+    this.seo.setStructuredData('org-schema', {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': isAr ? 'مستر بستاشيو' : 'Mister Pistachio',
+      'legalName': 'Mister Pistachio S.L.',
+      'url': 'https://misterpistachio.com',
+      'logo': 'https://misterpistachio.com/logo.png',
+      'description': isAr
+        ? 'مشاتل متخصصة في إكثار أصول الفستق الحلبي المعتمدة وتأسيس البساتين التجارية.'
+        : 'Specialist nursery in pistachio cultivation, certified rootstocks, and commercial orchard establishment.',
+      'telephone': '+31 6 12555547',
+      'sameAs': [
+        this.config.social.instagram,
+        this.config.social.tiktok,
+        this.config.social.facebook,
+        this.config.social.youtube,
+        this.config.social.x
+      ]
+    });
+
+    this.seo.setStructuredData('website-schema', {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      'name': isAr ? 'مستر بستاشيو' : 'Mister Pistachio',
+      'url': 'https://misterpistachio.com',
+      'inLanguage': ['ar', 'en']
+    });
+  }
 
   ngAfterViewInit(): void {
     if (typeof window === 'undefined') return;
@@ -41,10 +83,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
       this.initJourneyAnimation(prefersReducedMotion);
       this.initBotanicalParallax(prefersReducedMotion);
     }, this.el);
-  }
-
-  onIntroComplete(): void {
-    this.hasIntroPending = false;
   }
 
   // ═══════════════════════════════════════════════════════════════

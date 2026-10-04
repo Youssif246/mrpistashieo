@@ -1,13 +1,14 @@
 <header class="navbar-floating-wrapper" [class.is-floating]="isScrolled()">
   <div class="navbar-glass-slab">
     <!-- 1. Left: Company Logo (Signature Brand Anchor) -->
-    <a routerLink="/" class="navbar-logo" (click)="closeMobileMenu()" [attr.aria-label]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'">
+    <a [routerLink]="['/' + i18n.currentLang()]" class="navbar-logo" (click)="closeMobileMenu()" [attr.aria-label]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'">
       <img src="logo.png" [alt]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'" class="logo-img" width="170" height="50">
     </a>
 
     <!-- 2. Center: Navigation Links (Refined Botanical Typography) -->
     <nav class="navbar-links" aria-label="Primary Navigation">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">
+      <!-- 1. الرئيسية -->
+      <a [routerLink]="['/' + i18n.currentLang()]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">
         <span class="nav-link-text">{{ i18n.t().navbar.home }}</span>
         <span class="nav-active-botanical" aria-hidden="true">
           <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,8 +17,10 @@
           </svg>
         </span>
       </a>
-      <a routerLink="/about" routerLinkActive="active" class="nav-link">
-        <span class="nav-link-text">{{ i18n.t().navbar.about }}</span>
+
+      <!-- 2. USB1 -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'usb1']" routerLinkActive="active" class="nav-link">
+        <span class="nav-link-text">USB1</span>
         <span class="nav-active-botanical" aria-hidden="true">
           <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
@@ -25,16 +28,9 @@
           </svg>
         </span>
       </a>
-      <a routerLink="/services" routerLinkActive="active" class="nav-link">
-        <span class="nav-link-text">{{ i18n.t().navbar.services }}</span>
-        <span class="nav-active-botanical" aria-hidden="true">
-          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
-            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
-          </svg>
-        </span>
-      </a>
-      <a routerLink="/products" routerLinkActive="active" class="nav-link">
+
+      <!-- 3. الأصناف -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'varieties']" routerLinkActive="active" class="nav-link">
         <span class="nav-link-text">{{ i18n.t().navbar.products }}</span>
         <span class="nav-active-botanical" aria-hidden="true">
           <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,7 +39,20 @@
           </svg>
         </span>
       </a>
-      <a routerLink="/articles" routerLinkActive="active" class="nav-link">
+
+      <!-- 4. الخدمات -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'services']" routerLinkActive="active" class="nav-link">
+        <span class="nav-link-text">{{ i18n.t().navbar.services }}</span>
+        <span class="nav-active-botanical" aria-hidden="true">
+          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
+            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
+          </svg>
+        </span>
+      </a>
+
+      <!-- 5. المقالات -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'articles']" routerLinkActive="active" class="nav-link">
         <span class="nav-link-text">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</span>
         <span class="nav-active-botanical" aria-hidden="true">
           <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,7 +61,20 @@
           </svg>
         </span>
       </a>
-      <a routerLink="/contact" routerLinkActive="active" class="nav-link">
+
+      <!-- 6. من نحن -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'about']" routerLinkActive="active" class="nav-link">
+        <span class="nav-link-text">{{ i18n.t().navbar.about }}</span>
+        <span class="nav-active-botanical" aria-hidden="true">
+          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
+            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
+          </svg>
+        </span>
+      </a>
+
+      <!-- 7. التواصل -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'contact']" routerLinkActive="active" class="nav-link">
         <span class="nav-link-text">{{ i18n.t().navbar.contact }}</span>
         <span class="nav-active-botanical" aria-hidden="true">
           <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -63,7 +85,7 @@
       </a>
     </nav>
 
-    <!-- 3. Right: Utility Controls (Translucent Hardware Dial & Metallic-Accented WhatsApp CTA) -->
+    <!-- 3. Right: Utility Controls (Language Switcher & Social Links) -->
     <div class="navbar-actions">
       <!-- Refined Translucent Language Switcher: EN · العربية -->
       <div class="lang-switcher" role="group" aria-label="Language selection">
@@ -112,34 +134,44 @@
   @if (isMobileMenuOpen()) {
   <div class="mobile-menu-glass" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <nav class="mobile-nav">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="mobile-nav-link"
+      <!-- 1. الرئيسية -->
+      <a [routerLink]="['/' + i18n.currentLang()]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="mobile-nav-link"
         (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.t().navbar.home }}</span>
       </a>
-      <a routerLink="/about" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
-        <span class="m-link-text">{{ i18n.t().navbar.about }}</span>
+
+      <!-- 2. USB1 -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'usb1']" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+        <span class="m-link-text">USB1</span>
       </a>
-      <a routerLink="/services" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
-        <span class="m-link-text">{{ i18n.t().navbar.services }}</span>
-      </a>
-      <a routerLink="/products" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+
+      <!-- 3. الأصناف -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'varieties']" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.t().navbar.products }}</span>
       </a>
-      <a routerLink="/articles" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+
+      <!-- 4. الخدمات -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'services']" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+        <span class="m-link-text">{{ i18n.t().navbar.services }}</span>
+      </a>
+
+      <!-- 5. المقالات -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'articles']" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</span>
       </a>
-      <a routerLink="/contact" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+
+      <!-- 6. من نحن -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'about']" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+        <span class="m-link-text">{{ i18n.t().navbar.about }}</span>
+      </a>
+
+      <!-- 7. التواصل -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'contact']" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.t().navbar.contact }}</span>
       </a>
     </nav>
 
     <div class="mobile-actions">
-      <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="mobile-cta"
-        (click)="closeMobileMenu()">
-        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-        <span>{{ i18n.t().navbar.cta }}</span>
-      </a>
-
       <!-- Mobile Social Media Icons (matching navbar styling) -->
       <div class="mobile-social-links" role="group" aria-label="Social Media">
         <a [href]="config.social.instagram" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-instagram"

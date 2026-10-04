@@ -1,8 +1,8 @@
 import { Component, inject, computed, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { Title, Meta } from '@angular/platform-browser';
 import { TranslationService } from '../../shared/translation.service';
+import { SeoService } from '../../shared/seo.service';
 import { Article } from '../../shared/models/article.model';
 import enArticles from '../../../assets/data/articles/en.json';
 import arArticles from '../../../assets/data/articles/ar.json';
@@ -16,8 +16,7 @@ import arArticles from '../../../assets/data/articles/ar.json';
 })
 export class ArticlesComponent implements OnInit {
   readonly i18n = inject(TranslationService);
-  private readonly titleService = inject(Title);
-  private readonly metaService = inject(Meta);
+  private readonly seo = inject(SeoService);
 
   // Full articles list based on active language
   readonly allArticles = computed<Article[]>(() => {
@@ -37,10 +36,6 @@ export class ArticlesComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    this.updateSeo();
-  }
-
-  private updateSeo(): void {
     const isAr = this.i18n.currentLang() === 'ar';
     const title = isAr
       ? 'مقالات ودراسات زراعة الفستق الحلبي | مستر بستاشيو'
@@ -49,10 +44,31 @@ export class ArticlesComponent implements OnInit {
       ? 'أبحاث ودراسات زراعية تطبيقية متخصصة في تأسيس بساتين الفستق الحلبي، انتخاب الأصول المقاومة، إدارة الري الذكي، وميكانيكا التربة.'
       : 'Authoritative agronomic research, orchard engineering guides, rootstock selection analysis, and deficit irrigation strategies for commercial pistachio growers.';
 
-    this.titleService.setTitle(title);
-    this.metaService.updateTag({ name: 'description', content: description });
-    this.metaService.updateTag({ property: 'og:title', content: title });
-    this.metaService.updateTag({ property: 'og:description', content: description });
-    this.metaService.updateTag({ property: 'og:type', content: 'website' });
+    this.seo.updateSeo({
+      lang: this.i18n.currentLang(),
+      path: '/articles',
+      title,
+      description,
+      image: 'articles-images/banner.png'
+    });
+
+    this.seo.setStructuredData('articles-breadcrumb', {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': isAr ? 'الرئيسية' : 'Home',
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}`
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': isAr ? 'المقالات والأبحاث' : 'Articles & Research',
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}/articles`
+        }
+      ]
+    });
   }
 }

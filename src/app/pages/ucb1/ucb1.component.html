@@ -1,0 +1,439 @@
+<div class="ucb1-page-wrapper" [class.rtl]="i18n.currentLang() === 'ar'">
+
+  <!-- ==========================================================================
+       1. HERO: UNIFIED PREMIUM INTERNAL EDITORIAL HERO
+       Consistent with Services, Varieties, About, and Contact pages
+       ========================================================================== -->
+  <header class="internal-editorial-hero" id="ucb1Hero">
+    <div class="internal-hero-container">
+      <div class="internal-hero-grid">
+        
+        <!-- Content Block: Right in RTL, Left in LTR -->
+        <div class="internal-hero-content">
+          <div class="internal-hero-eyebrow">
+            <span class="internal-hero-eyebrow-line" aria-hidden="true"></span>
+            <span class="internal-hero-eyebrow-text">
+              {{ i18n.currentLang() === 'ar' ? 'المعيار العالمي للمزارع الاستثمارية' : 'The Global Benchmark for Commercial Orchards' }}
+            </span>
+          </div>
+
+          <h1 class="internal-hero-title">
+            {{ i18n.currentLang() === 'ar' ? 'أصل الفستق الهجين USB1' : 'Certified USB1 Rootstock' }}
+          </h1>
+
+          <div class="internal-hero-divider" aria-hidden="true"></div>
+
+          <p class="internal-hero-desc">
+            {{ i18n.currentLang() === 'ar'
+              ? 'الأصل الجذري الأكثر كفاءة وموثوقية في العالم لمزارع الفستق الحديثة والمكثفة. يجمع بين قوة النمو الخضري الاستثنائية، والمناعة المؤكدة علمياً ضد فطر ذبول الفيرتيسيليوم، والقدرة على بدء الإنتاج التجاري في غضون 4 إلى 5 سنوات مع إمكانية التطعيم الحقلي في نفس عام الغرس.'
+              : 'The premier, internationally validated rootstock engineered for high-density, profitable pistachio cultivation. Combining vigorous vegetative canopy growth, verified genetic immunity to Verticillium dahliae wilt, and rapid commercial bearing by years 4–5 with reliable first-year field budding.' }}
+          </p>
+
+          <!-- Unified Internal Hero Agronomic Metadata Badges -->
+          <div class="internal-hero-strip internal-hero-meta-badges">
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.currentLang() === 'ar' ? 'مقاومة تامة للفيرتيسيليوم' : 'Total Verticillium Immunity' }}
+            </span>
+            <span class="strip-sep">/</span>
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.currentLang() === 'ar' ? 'تطعيم حقلي في العام الأول' : 'Same-Year Field Budding' }}
+            </span>
+            <span class="strip-sep">/</span>
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.currentLang() === 'ar' ? 'تحمل ملوحة حتى 5.0 dS/m' : 'Salinity Tolerance to 5.0 dS/m' }}
+            </span>
+            <span class="strip-sep">/</span>
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.currentLang() === 'ar' ? 'تبكير الإنتاج (السنة 4 - 5)' : 'Early Harvest (Year 4–5)' }}
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Large Custom Image Block (Consistent 45-50% width frame) -->
+        <div class="internal-hero-media">
+          <div class="internal-hero-frame">
+            <img src="products-images/ucb1/ucb1-greenhouse.jpg" 
+                 alt="Certified UCB-1 Hybrid Pistachio Rootstock Nursery" 
+                 class="internal-hero-img" 
+                 loading="eager">
+            <div class="internal-hero-plate">
+              <span class="plate-marker">USB1</span>
+              <span class="plate-caption">
+                {{ i18n.currentLang() === 'ar' ? 'شتلات أصل الفستق الهجين UCB-1 المعتمد في المشاتل المتخصصة' : 'Certified UCB-1 hybrid rootstock saplings under controlled nursery propagation' }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       2. EDITORIAL GENETIC PEDIGREE & OVERVIEW SECTION
+       ========================================================================== -->
+  <section class="ucb1-story-section" id="botanicalPedigree">
+    <div class="container">
+      
+      <div class="story-layout-grid">
+        
+        <!-- Story Image with Frame -->
+        <div class="story-media-col">
+          <div class="story-photo-frame">
+            <img src="products-images/ucb1/ucb1-root-system.jpg" 
+                 alt="UCB-1 Hybrid Rootstock Strong Root Network and Graft Union" 
+                 class="story-img">
+            <div class="photo-caption">
+              <span class="caption-tag">{{ i18n.currentLang() === 'ar' ? 'الجذور والتطعيم' : 'Root & Graft Architecture' }}</span>
+              <p class="caption-text">
+                {{ i18n.currentLang() === 'ar' 
+                  ? 'مجموع جذري كثيف وعميق وشعيرات ماصة متطورة تؤمن انطلاقة نمو فورية والتحاماً متيناً مع الطعم.' 
+                  : 'Dense fibrous root system ensuring explosive post-transplant vigor and robust vascular continuity with scion.' }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Content -->
+        <div class="story-content-col">
+          <div class="editorial-eyebrow">
+            <span class="eyebrow-line" aria-hidden="true"></span>
+            <span class="eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'النسب النباتي والتطوير العلمي' : 'Botanical Pedigree & Genetics' }}</span>
+          </div>
+
+          <h2 class="section-title">
+            {{ i18n.currentLang() === 'ar' ? 'ثورة فسيولوجية غيرت صناعة الفستق في العالم' : 'A Physiological Revolution in Modern Pistachio Farming' }}
+          </h2>
+
+          <div class="story-prose">
+            <p>
+              {{ i18n.currentLang() === 'ar'
+                ? 'تم استنباط أصل UCB-1 (University of California Berkeley / Davis) في قسم أمراض النبات بجامعة كاليفورنيا بعد أبحاث مكثفة هدفت لإنتاج أصل جذري يجمع أرقى الخصائص الفسيولوجية. تحقق الإنجاز من خلال تهجين منتقى بعناية بين شجرة أنثى من البطم الأطلسي (Pistacia atlantica) ولقاح مذكر من البطم الصحيح (Pistacia integerrima).'
+                : 'The UCB-1 hybrid rootstock was engineered by the Department of Plant Pathology at the University of California to overcome the severe limitations of traditional wild rootstocks. The breakthrough was achieved by cross-pollinating selected female Pistacia atlantica with staminate Pistacia integerrima.' }}
+            </p>
+            <p>
+              {{ i18n.currentLang() === 'ar'
+                ? 'ورث هذا الهجين من البطم الأطلسي القدرة على تحمل برودة الشتاء القارس والتعمق في التربة الكلسية، بينما ورث من البطم الصحيح المناعة المطلقة ضد فطر ذبول الفيرتيسيليوم وقوة النمو الخضري الجارفة. شكلت هذه التركيبة المعيار المعتمد للمزارع الاستثمارية في إسبانيا والولايات المتحدة وحوض البحر الأبيض المتوسط.'
+                : 'UCB-1 inherited winter cold endurance and deep limestone soil adaptation from Pistacia atlantica, while inheriting verified Verticillium dahliae immunity and ferocious vegetative vigor from Pistacia integerrima. This unique genetic synergy has made it the undisputed commercial choice across Spain, the US, and the Mediterranean.' }}
+            </p>
+          </div>
+
+          <div class="story-key-metrics">
+            <div class="metric-card">
+              <span class="metric-val">4 - 5</span>
+              <span class="metric-lbl">{{ i18n.currentLang() === 'ar' ? 'سنوات لبدء الحصاد التجاري' : 'Years to First Harvest' }}</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val">0%</span>
+              <span class="metric-lbl">{{ i18n.currentLang() === 'ar' ? 'إصابة بالفيرتيسيليوم في الترب السليمة' : 'Verticillium Susceptibility' }}</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-val">100%</span>
+              <span class="metric-lbl">{{ i18n.currentLang() === 'ar' ? 'توافق التحام مع كافة الأصناف' : 'Graft Scion Compatibility' }}</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. CORE AGRONOMIC ADVANTAGES GRID (6 CARDS)
+       ========================================================================== -->
+  <section class="ucb1-advantages-section" id="coreAdvantages">
+    <div class="container-wide">
+      
+      <div class="section-center-header">
+        <div class="editorial-eyebrow center-eyebrow">
+          <span class="eyebrow-line" aria-hidden="true"></span>
+          <span class="eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'الخصائص الاستثنائية' : 'Key Agronomic Merits' }}</span>
+          <span class="eyebrow-line" aria-hidden="true"></span>
+        </div>
+
+        <h2 class="section-title">
+          {{ i18n.currentLang() === 'ar' ? 'لماذا يختار كبار المستثمرين أصل UCB-1؟' : 'Why Leading Growers Choose UCB-1 Rootstock' }}
+        </h2>
+        <p class="section-subtitle">
+          {{ i18n.currentLang() === 'ar' 
+            ? 'مزايا حقلية وبيولوجية متكاملة تضمن أعلى عائد سنوي للهكتار وتحمي استثمارك على المدى الطويل.' 
+            : 'Engineered biological attributes that maximize annual orchard returns while safeguarding your long-term capital.' }}
+        </p>
+      </div>
+
+      <div class="advantages-grid">
+        @for (adv of coreAdvantages(); track adv.id) {
+          <article class="advantage-card">
+            <div class="card-header-row">
+              <div class="advantage-icon-wrapper">
+                @switch (adv.icon) {
+                  @case ('growth') {
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                  }
+                  @case ('shield') {
+                    <i class="fa-solid fa-shield-halved"></i>
+                  }
+                  @case ('graft') {
+                    <i class="fa-solid fa-scissors"></i>
+                  }
+                  @case ('mineral') {
+                    <i class="fa-solid fa-droplet"></i>
+                  }
+                  @case ('root') {
+                    <i class="fa-solid fa-network-wired"></i>
+                  }
+                  @case ('sync') {
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                  }
+                }
+              </div>
+              <span class="advantage-badge">{{ adv.subtitle }}</span>
+            </div>
+
+            <h3 class="advantage-title">{{ adv.title }}</h3>
+            <p class="advantage-desc">{{ adv.description }}</p>
+          </article>
+        }
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. PHOTO MOSAIC / ORCHARD SHOWCASE STRIP
+       ========================================================================== -->
+  <section class="ucb1-gallery-section">
+    <div class="container-wide">
+      
+      <div class="section-center-header">
+        <div class="editorial-eyebrow center-eyebrow">
+          <span class="eyebrow-line" aria-hidden="true"></span>
+          <span class="eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'المشاهد الميدانية والتوثيق' : 'Field & Nursery Showcase' }}</span>
+          <span class="eyebrow-line" aria-hidden="true"></span>
+        </div>
+        <h2 class="section-title">
+          {{ i18n.currentLang() === 'ar' ? 'من مشاتلنا المعتمدة إلى البساتين الإنتاجية الكبرى' : 'From Controlled Nurseries to Thriving Commercial Orchards' }}
+        </h2>
+      </div>
+
+      <div class="gallery-mosaic-grid">
+        
+        <!-- Large Featured Image: Commercial Orchard -->
+        <div class="mosaic-item mosaic-item-large">
+          <img src="products-images/ucb1/ucb1-orchard.jpg" 
+               alt="Vigorous Commercial Pistachio Orchard on UCB-1 Rootstock under Drip Irrigation" 
+               class="mosaic-img" 
+               loading="lazy">
+          <div class="mosaic-overlay">
+            <span class="mosaic-tag">{{ i18n.currentLang() === 'ar' ? 'بستان تجاري حديث' : 'Commercial Plantation' }}</span>
+            <h4 class="mosaic-caption">{{ i18n.currentLang() === 'ar' ? 'صفوف أشجار فستق قائمة على أصل UCB-1 بنظام الري بالتنقيط عالي الكفاءة' : 'Precision drip-irrigated commercial rows anchored on vigorous UCB-1' }}</h4>
+          </div>
+        </div>
+
+        <!-- Secondary Image: Greenhouse Rows -->
+        <div class="mosaic-item">
+          <img src="products-images/ucb1/ucb1-greenhouse.jpg" 
+               alt="Rows of UCB-1 Rootstock Saplings in Precision Nursery Greenhouse" 
+               class="mosaic-img" 
+               loading="lazy">
+          <div class="mosaic-overlay">
+            <span class="mosaic-tag">{{ i18n.currentLang() === 'ar' ? 'إكثار المشاتل' : 'Controlled Propagation' }}</span>
+            <h4 class="mosaic-caption">{{ i18n.currentLang() === 'ar' ? 'شتلات UCB-1 معتمدة في أوانٍ مهواة تحت بيئة خاضعة للمراقبة الصارمة' : 'Certified saplings in aerated pots under strict phytosanitary management' }}</h4>
+          </div>
+        </div>
+
+        <!-- Secondary Image: Root Examination -->
+        <div class="mosaic-item">
+          <img src="products-images/ucb1/ucb1-root-system.jpg" 
+               alt="Healthy Root System and Graft Union of UCB-1 Pistachio Plant" 
+               class="mosaic-img" 
+               loading="lazy">
+          <div class="mosaic-overlay">
+            <span class="mosaic-tag">{{ i18n.currentLang() === 'ar' ? 'الفحص الجذري' : 'Root Architecture' }}</span>
+            <h4 class="mosaic-caption">{{ i18n.currentLang() === 'ar' ? 'مجموع جذري ليفي كثيف يضمن أعلى نسبة نجاح واستقرار في الحقل' : 'Expansive root network providing unmatched nutrient and water intake' }}</h4>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. TECHNICAL SPECIFICATIONS & COMPARISON TABLE
+       ========================================================================== -->
+  <section class="ucb1-specs-section" id="technical-specs">
+    <div class="container-wide">
+      
+      <div class="section-center-header">
+        <div class="editorial-eyebrow center-eyebrow">
+          <span class="eyebrow-line" aria-hidden="true"></span>
+          <span class="eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'البيانات الفنية المقارنة' : 'Comparative Technical Matrix' }}</span>
+          <span class="eyebrow-line" aria-hidden="true"></span>
+        </div>
+
+        <h2 class="section-title">
+          {{ i18n.currentLang() === 'ar' ? 'جدول المواصفات الفنية ومقارنة الأصول' : 'Technical Specifications & Comparative Benchmarks' }}
+        </h2>
+        <p class="section-subtitle">
+          {{ i18n.currentLang() === 'ar'
+            ? 'مقارنة فسيولوجية وزراعية دقيقة توضح الفوارق الجوهرية بين هجين UCB-1 والأصول البرية التقليدية.'
+            : 'Detailed agronomic parameters comparing certified UCB-1 hybrid against traditional wild rootstocks.' }}
+        </p>
+      </div>
+
+      <!-- Responsive Table Container -->
+      <div class="specs-table-wrapper">
+        <table class="specs-table" role="table">
+          <thead>
+            <tr>
+              <th scope="col" class="th-param">{{ i18n.currentLang() === 'ar' ? 'المعيار الفني / الفسيولوجي' : 'Agronomic Parameter' }}</th>
+              <th scope="col" class="th-ucb1">
+                <div class="th-badge-wrapper">
+                  <span class="ucb1-pill">UCB-1 Hybrid</span>
+                  <span class="th-sub">{{ i18n.currentLang() === 'ar' ? 'هجين معتمد' : 'Certified Hybrid' }}</span>
+                </div>
+              </th>
+              <th scope="col" class="th-traditional">{{ i18n.currentLang() === 'ar' ? 'الأصول البرية التقليدية' : 'Wild Traditional Stocks' }}</th>
+              <th scope="col" class="th-significance">{{ i18n.currentLang() === 'ar' ? 'الأهمية الاستثمارية والحقلية' : 'Field & Economic Impact' }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (row of specComparison(); track row.parameter; let idx = $index) {
+              <tr [class.stripe-row]="idx % 2 === 1">
+                <td class="td-param">
+                  <span class="param-title">{{ row.parameter }}</span>
+                </td>
+                <td class="td-ucb1">
+                  <span class="ucb1-val-text">{{ row.ucb1Value }}</span>
+                </td>
+                <td class="td-traditional">
+                  <span class="trad-val-text">{{ row.traditionalValue }}</span>
+                </td>
+                <td class="td-significance">
+                  <span class="sig-val-text">{{ row.significance }}</span>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. FREQUENTLY ASKED QUESTIONS (ACCORDION)
+       ========================================================================== -->
+  <section class="ucb1-faq-section" id="faqSection">
+    <div class="container">
+      
+      <div class="section-center-header">
+        <div class="editorial-eyebrow center-eyebrow">
+          <span class="eyebrow-line" aria-hidden="true"></span>
+          <span class="eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'الإجابات الفنية' : 'Agronomic Inquiries' }}</span>
+          <span class="eyebrow-line" aria-hidden="true"></span>
+        </div>
+
+        <h2 class="section-title">
+          @if (i18n.currentLang() === 'ar') {
+            الأسئلة الشائعة حول أصل <bdi class="bdi-isolate">UCB-1</bdi>
+          } @else {
+            Frequently Asked Questions About <bdi class="bdi-isolate">UCB-1</bdi>
+          }
+        </h2>
+        <p class="section-subtitle">
+          {{ i18n.currentLang() === 'ar'
+            ? 'إجابات علمية دقيقة على أكثر الأسئلة التي يطرحها مزارعو ومستثمرو الفستق الحلبي.'
+            : 'Authoritative answers to the most common questions from pistachio growers and agricultural investors.' }}
+        </p>
+      </div>
+
+      <div class="faq-accordion-wrapper">
+        @for (item of faqs(); track item.question; let idx = $index) {
+          <div class="faq-accordion-item" [class.is-expanded]="activeFaqIndex() === idx">
+            
+            <button type="button" 
+                    class="faq-accordion-header" 
+                    (click)="toggleFaq(idx)" 
+                    [attr.aria-expanded]="activeFaqIndex() === idx">
+              <span class="faq-question-text">{{ item.question }}</span>
+              <span class="faq-toggle-icon" aria-hidden="true">
+                <i [class]="activeFaqIndex() === idx ? 'fa-solid fa-minus' : 'fa-solid fa-plus'"></i>
+              </span>
+            </button>
+
+            @if (activeFaqIndex() === idx) {
+              <div class="faq-accordion-body">
+                <p class="faq-answer-text">{{ item.answer }}</p>
+              </div>
+            }
+
+          </div>
+        }
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. FINAL CLOSING CTA SECTION: BOTANICAL AMBIENT TREE & UNIFIED BUTTON
+       Matches About & Services Pages with Tree Specimen & Orchard Horizon
+       ========================================================================== -->
+  <section class="ucb1-closing-cta" id="ucb1Cta">
+    <!-- Ghost Watermark & Ground Organic Contour & Tree/Branch -->
+    <div class="cta-ambient-canvas" aria-hidden="true">
+      <div class="botanical-sunlight-filter"></div>
+      <div class="botanical-shadow-wrapper botanical-shadow--orchard-row">
+        <img src="/botanical/pistachio-orchard-horizon.svg" alt="" loading="lazy">
+      </div>
+      <div class="botanical-shadow-wrapper ucb1-cta-tree-left">
+        <img src="/botanical/pistachio-specimen-vertical.svg" alt="" loading="lazy">
+      </div>
+      <div class="botanical-shadow-wrapper botanical-shadow--bottom-left ucb1-cta-branch-left">
+        <img src="/botanical/real-pistachio-corner.png" alt="" loading="lazy">
+      </div>
+      <span class="cta-ghost-watermark">PISTACIA</span>
+    </div>
+
+    <div class="container text-center">
+      <div class="cta-editorial-stage">
+        
+        <!-- Centered Eyebrow with Flanking Hairlines -->
+        <div class="cta-centered-eyebrow">
+          <span class="cta-hairline-accent" aria-hidden="true"></span>
+          <span class="cta-eyebrow-text">
+            {{ i18n.currentLang() === 'ar' ? 'استشارات زراعية وتأسيس البساتين' : 'Agricultural Consultation' }}
+          </span>
+          <span class="cta-hairline-accent" aria-hidden="true"></span>
+        </div>
+
+        <h2 class="cta-editorial-headline">
+          {{ i18n.currentLang() === 'ar' ? 'ابدأ تأسيس بستانك مع خبراء أصل UCB-1' : 'Start Your Orchard with UCB-1 Experts' }}
+        </h2>
+
+        <p class="cta-editorial-description">
+          {{ i18n.currentLang() === 'ar'
+            ? 'نساعدك في دراسة قطاع التربة والمياه واختيار الأصناف المتزامنة وجدولة تسليم شتلات UCB-1 لضمان أعلى إنتاجية واستدامة لبستانك.'
+            : 'We help you select the ideal rootstocks and cultivars for your soil and climate, ensuring lasting yield and success.' }}
+        </p>
+
+        <!-- Unified Button System - Matching other CTA sections (btn-editorial btn-editorial-dark) -->
+        <div class="cta-editorial-buttons">
+          <a [routerLink]="['/' + i18n.currentLang(), 'contact']" class="btn-editorial btn-editorial-dark" aria-label="Contact Us">
+            <span>{{ i18n.currentLang() === 'ar' ? 'تواصل معنا الآن' : 'Contact Us Now' }}</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>

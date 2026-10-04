@@ -75,7 +75,7 @@
     @if (featuredArticle(); as featured) {
       <section class="featured-article-section" aria-label="Featured Technical Article">
         <article class="featured-card">
-          <a [routerLink]="['/articles', featured.slug]" class="featured-image-link" [attr.aria-label]="featured.title">
+          <a [routerLink]="['/' + i18n.currentLang(), 'articles', featured.slug]" class="featured-image-link" [attr.aria-label]="featured.title">
             <div class="image-wrapper">
               <img [src]="featured.coverImage" [alt]="featured.title" loading="eager" width="720" height="460">
               <span class="featured-badge">
@@ -101,13 +101,13 @@
             </div>
 
             <h2 class="featured-title">
-              <a [routerLink]="['/articles', featured.slug]">{{ featured.title }}</a>
+              <a [routerLink]="['/' + i18n.currentLang(), 'articles', featured.slug]">{{ featured.title }}</a>
             </h2>
 
             <p class="featured-excerpt">{{ featured.excerpt }}</p>
 
             <div class="featured-action">
-              <a [routerLink]="['/articles', featured.slug]" class="btn-read-featured">
+              <a [routerLink]="['/' + i18n.currentLang(), 'articles', featured.slug]" class="btn-read-featured">
                 <span>{{ i18n.currentLang() === 'ar' ? 'قراءة الدليل الشامل' : 'Read Technical Guide' }}</span>
                 <i [class]="i18n.isRtl() ? 'fa-solid fa-arrow-left' : 'fa-solid fa-arrow-right'" aria-hidden="true"></i>
               </a>
@@ -131,7 +131,7 @@
       <div class="articles-grid">
         @for (article of gridArticles(); track article.id) {
           <article class="article-card">
-            <a [routerLink]="['/articles', article.slug]" class="card-image-wrap" [attr.aria-label]="article.title">
+            <a [routerLink]="['/' + i18n.currentLang(), 'articles', article.slug]" class="card-image-wrap" [attr.aria-label]="article.title">
               <img [src]="article.coverImage" [alt]="article.title" loading="lazy" width="480" height="300">
               <span class="card-category-overlay">{{ article.category }}</span>
             </a>
@@ -150,13 +150,13 @@
               </div>
 
               <h3 class="card-title">
-                <a [routerLink]="['/articles', article.slug]">{{ article.title }}</a>
+                <a [routerLink]="['/' + i18n.currentLang(), 'articles', article.slug]">{{ article.title }}</a>
               </h3>
 
               <p class="card-excerpt">{{ article.excerpt }}</p>
 
               <div class="card-footer">
-                <a [routerLink]="['/articles', article.slug]" class="card-read-link">
+                <a [routerLink]="['/' + i18n.currentLang(), 'articles', article.slug]" class="card-read-link">
                   <span>{{ i18n.currentLang() === 'ar' ? 'قراءة المقال' : 'Read Article' }}</span>
                   <i [class]="i18n.isRtl() ? 'fa-solid fa-arrow-left' : 'fa-solid fa-arrow-right'" aria-hidden="true"></i>
                 </a>

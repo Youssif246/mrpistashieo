@@ -1,6 +1,7 @@
-import { Component, inject, AfterViewInit, OnDestroy, ElementRef, signal } from '@angular/core';
+import { Component, inject, OnInit, AfterViewInit, OnDestroy, ElementRef, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../shared/translation.service';
+import { SeoService } from '../../shared/seo.service';
 import { APP_CONFIG } from '../../shared/config';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -14,12 +15,47 @@ gsap.registerPlugin(ScrollTrigger);
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
-export class ServicesComponent implements AfterViewInit, OnDestroy {
+export class ServicesComponent implements OnInit, AfterViewInit, OnDestroy {
   readonly i18n = inject(TranslationService);
+  private readonly seo = inject(SeoService);
   private readonly el = inject(ElementRef);
   private gsapCtx?: gsap.Context;
 
   readonly activeChapter = signal<'establish' | 'cultivate' | 'harvest'>('establish');
+
+  ngOnInit(): void {
+    const isAr = this.i18n.currentLang() === 'ar';
+    this.seo.updateSeo({
+      lang: this.i18n.currentLang(),
+      path: '/services',
+      title: isAr
+        ? 'خدماتنا الزراعية وتأسيس بساتين الفستق الحلبي | مستر بستاشيو'
+        : 'Agronomic Services & Orchard Engineering | Mister Pistachio',
+      description: isAr
+        ? 'نقدم حلولاً زراعية متكاملة: دراسات الجدوى، تجهيز التربة، شبكات الري الذكي، توريد الشتلات المعتمدة، والإشراف الفني حتى مرحلة الإنتاج.'
+        : 'Comprehensive pistachio orchard engineering: feasibility studies, soil mechanics, precision irrigation networks, certified rootstock supply, and expert agronomic oversight.',
+      image: 'services-images/services-hero.png'
+    });
+
+    this.seo.setStructuredData('services-breadcrumb', {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': isAr ? 'الرئيسية' : 'Home',
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}`
+        },
+        {
+          '@type': 'ListItem',
+          'position': 2,
+          'name': isAr ? 'خدماتنا' : 'Services',
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}/services`
+        }
+      ]
+    });
+  }
 
   ngAfterViewInit(): void {
     if (typeof window === 'undefined') return;

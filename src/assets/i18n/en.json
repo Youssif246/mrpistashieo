@@ -24,7 +24,7 @@
     "stage6Title": "THE HARVEST"
   },
   "footer": {
-    "tagline": "Specialist nursery dedicated to pistachio cultivation, certified rootstock propagation, and professional field agronomy.",
+    "tagline": "A Spanish partnership specializing in pistachio cultivation, certified rootstocks, and model orchard establishment.",
     "quickLinks": "Navigation",
     "productsTitle": "Pistachio Varieties",
     "contactTitle": "Direct Contact",
@@ -33,10 +33,12 @@
     "privacy": "Privacy Policy",
     "legalNotice": "Legal Notice",
     "whatsappCta": "WhatsApp Consultation",
-    "locationPlaceholder": "Hama, Syria",
+    "operations": "Partners in Spain",
+    "locationPlaceholder": "Hama, Syria – Qasioun Nursery",
+    "spainPartners": "Partners in Spain",
+    "spainPartnersValue": "Certified Rootstock Propagation Nurseries",
     "emailPlaceholder": "info@misterpistachio.com",
-    "phonePlaceholder": "+34 667 36 29 25",
-    "operations": "Operations",
+    "phonePlaceholder": "+31 6 12555547",
     "inquiries": "Inquiries",
     "direct": "Direct"
   },
@@ -47,7 +49,7 @@
       "title": "Pistachio Cultivation, Rooted in Precision.",
       "headlineLine1": "Pistachio Cultivation,",
       "headlineLine2": "Rooted in Precision.",
-      "description": "Specialized in pistachio nursery production, rootstocks and grafted plants.",
+      "description": "Certified pistachio nursery propagation, rootstocks, and high-standard orchard establishment.",
       "ctaPrimary": "WhatsApp Inquiry",
       "ctaSecondary": "Explore Services"
     },
@@ -59,13 +61,13 @@
       "lead": "Pistachio cultivation represents one of the most resilient and rewarding agricultural endeavors for arid and semi-arid Mediterranean regions.",
       "statementLine1": "Cultivation Shaped by",
       "statementLine2": "Precision & Soil Knowledge.",
-      "narrative": "Dedicated exclusively to Pistacia vera, our nursery develops resilient rootstocks and high-vigor grafted plants engineered for the demanding climate and soil profiles of Mediterranean orchards.",
+      "narrative": "Dedicated exclusively to Pistacia vera, our company represents a pioneering Spanish–Middle Eastern partnership producing resilient rootstocks and high-vigor grafted plants, committed to being the grower's trusted partner from planting to commercial production.",
       "pillar1Title": "Specialized Nursery",
       "pillar1Desc": "Pistacia vera propagation, certified rootstock genetics, and field-oriented hardening.",
       "pillar2Title": "Field Precision",
       "pillar2Desc": "Deep understanding of soil profiles, physiological thresholds, and orchard establishment.",
-      "pillar3Title": "Long-Term Cultivation",
-      "pillar3Desc": "Plant material and technical guidance structured for decades of orchard vitality.",
+      "pillar3Title": "Enduring Partnership",
+      "pillar3Desc": "Our vision is to be the grower's trusted partner: from rootstock and variety selection to commercial production.",
       "item1Title": "Botanical Knowledge",
       "item1Desc": "Pistacia vera physiology, rootstock compatibility, and soil requirements.",
       "item2Title": "Field Precision",
@@ -74,20 +76,20 @@
       "item3Desc": "Plant material selected for demanding Mediterranean growing environments.",
       "col1Num": "01",
       "col1Title": "Exclusive Nursery Focus",
-      "col1Desc": "Unlike generalized multi-crop nurseries, our facilities, technical team, and agronomic knowledge are dedicated exclusively to Pistacia vera.",
+      "col1Desc": "Unlike generalized multi-crop nurseries, our company embodies a Spanish–Middle Eastern partnership, dedicating our facilities and agronomic knowledge exclusively to Pistacia vera under European standards.",
       "col2Num": "02",
       "col2Title": "Physiological & Soil Affinity",
       "col2Desc": "We understand the physiological requirements, chill hour thresholds, and rootstock-soil affinities vital for establishing high-yield orchards.",
       "col3Num": "03",
-      "col3Title": "Propagation to Longevity",
-      "col3Desc": "From verified hybrid seeds to rigorous budding and field hardening, our plants are developed to thrive in demanding conditions, ensuring long-term orchard vigor.",
-      "p1": "Unlike generalized multi-crop nurseries, our facilities, technical team, and agronomic knowledge are focused solely on Pistacia vera. We understand the physiological requirements, chill hour thresholds, and rootstock-soil affinities vital for establishing high-yield orchards.",
-      "p2": "From verified hybrid seeds to rigorous budding and field hardening, our plants are developed to thrive in demanding conditions, ensuring long-term vigor and orchard longevity."
+      "col3Title": "Enduring Partnership & Vision",
+      "col3Desc": "Our vision is to accompany growers and investors as a trusted partner: from rootstock selection and planting to commercial production.",
+      "p1": "Unlike generalized multi-crop nurseries, our operations stem from a Spanish partnership in the Middle East focused entirely on Pistacia vera to certified European agronomic standards.",
+      "p2": "From verified hybrid seeds to rigorous budding and field trials, our vision is to be the grower's trusted partner at every milestone, ensuring decades of commercial vitality."
     },
     "services": {
       "tag": "Field & Technical Services",
       "title": "Comprehensive Field Services for Pistachio Plantations",
-      "subtitle": "Professional technical support across every crucial phase of orchard establishment and maintenance.",
+      "subtitle": "Integrated agricultural support accompanying your orchard across every phase of establishment and growth.",
       "watermark": "FIELD",
       "s1Num": "01",
       "s1Category": "Preparation",
@@ -104,56 +106,56 @@
       "viewAll": "Explore All Agricultural Services",
       "item1Title": "Soil Preparation & Analysis",
       "item1Desc": "Deep subsoiling, cross-tillage, and soil profile assessment to ensure unrestricted taproot development and balanced drainage.",
-      "item2Title": "GPS Precision Planting",
-      "item2Desc": "Plantation execution utilizing high-accuracy GPS systems to guarantee precise tree spacing, row alignment, and optimal density.",
+      "item2Title": "Field Planting",
+      "item2Desc": "Precision field planting planned and executed by agricultural engineers to guarantee optimal spacing and tree vigor.",
       "item3Title": "Specialized Field Grafting",
       "item3Desc": "Skilled in-field budding and grafting services performed by seasoned specialists, ensuring robust graft union and scion vigor.",
       "item4Title": "Formative & Canopy Pruning",
       "item4Desc": "Structural canopy training designed for balanced branch architecture, maximum solar capture, and future mechanical harvesting.",
       "item5Title": "Post-Planting Hydration",
       "item5Desc": "Dedicated water tanker irrigation support during critical early establishment phases to secure initial root taking.",
-      "item6Title": "Agronomic Consulting",
-      "item6Desc": "Tailored agricultural advisory on rootstock-variety compatibility, nutrition programs, and orchard management.",
+      "item6Title": "Field Supervision & Orchard Follow-Up",
+      "item6Desc": "Regular agronomic visits to monitor tree development, fine-tune nutrition and irrigation, and protect peak yields.",
       "cta": "Inquire About Agricultural Services",
       "items": [
         {
           "number": "01",
-          "title": "Turnkey Pistachio Plantations",
-          "subtitle": "From raw land to a productive pistachio orchard.",
-          "description": "Planning, irrigation, planting and expert follow-up in one service.",
+          "title": "Turnkey Investor Projects",
+          "subtitle": "From raw land to commercial harvest.",
+          "description": "Guiding investors in building profitable orchards from layout to production.",
           "bullets": [
             "Feasibility studies & orchard engineering",
             "Irrigation networks & infrastructure setup",
-            "Full-cycle supervision until commercial harvest"
+            "Full-cycle supervision through commercial harvest"
           ],
           "image": "service-images/turnkey-pistachio-plantation.webp",
-          "esTitle": "Plantaciones Llave en Mano"
+          "esTitle": "Soluciones Integrales"
         },
         {
           "number": "02",
-          "title": "Precision GPS-Guided Planting",
-          "subtitle": "GPS-guided planting for accurate spacing.",
-          "description": "Straight rows and precise tree placement, ready for mechanization.",
+          "title": "Precision Field Planting",
+          "subtitle": "Guided by agricultural engineers.",
+          "description": "Disciplined plantation ensuring straight rows and optimal spacing for mechanization.",
           "bullets": [
-            "High-speed automated GPS planting",
-            "Flawlessly straight rows for mechanization",
-            "Immediate soil prep & initial irrigation"
+            "Direct supervision by agricultural engineers",
+            "Laser-straight rows for equipment & harvest",
+            "Immediate soil settling & initial irrigation"
           ],
           "image": "service-images/gps-precision-planting.webp",
-          "esTitle": "Plantación Guiada por GPS"
+          "esTitle": "Plantación de Precisión"
         },
         {
           "number": "03",
-          "title": "Pistachio Nursery & Plant Supply",
-          "subtitle": "Certified grafted trees and UCB-1 rootstocks.",
-          "description": "Healthy, resilient pistachio plants, ready for your orchard.",
+          "title": "Plant Production & Supply",
+          "subtitle": "Direct from our Spanish nurseries.",
+          "description": "Certified disease-free UCB-1 rootstocks and grafted saplings, orchard-ready.",
           "bullets": [
-            "Phytosanitary-certified grafted saplings",
-            "Disease-resistant certified UCB-1 rootstocks",
-            "Supplied bare-root or containerized"
+            "Direct propagation from our Spanish nurseries",
+            "Resilient, certified hybrid UCB-1 rootstocks",
+            "Phytosanitary documentation & global shipping"
           ],
           "image": "service-images/pistachio-nursery.webp",
-          "esTitle": "Vivero y Venta de Planta"
+          "esTitle": "Vivero y Planta Certificada"
         },
         {
           "number": "04",
@@ -317,8 +319,8 @@
     "hero": {
       "badge": "ABOUT US",
       "eyebrow": "ABOUT US",
-      "headline": "Cultivating Long-Term Growth",
-      "description": "Rooted in agricultural science and Mediterranean cultivation expertise, we specialize in high-yield pistachio nursery production, certified rootstocks, and field engineering designed for multi-generational returns.",
+      "headline": "Pioneering Spanish Partnership in Pistachio Cultivation",
+      "description": "Uniting cutting-edge European nursery science and certified rootstocks with deep field expertise in the Middle East, serving as the grower's trusted partner from orchard inception to commercial harvest.",
       "metaDisciplineLabel": "DISCIPLINE",
       "metaDiscipline": "Specialist Cultivation",
       "metaTerroirLabel": "TERROIR",
@@ -327,18 +329,18 @@
       "metaStandards": "Certified Lineage"
     },
     "story": {
-      "tag": "Our Background",
-      "title": "Rooted in Passion for Mediterranean Agriculture",
-      "lead": "Specialization is the core of our agricultural philosophy.",
-      "p1": "Our focus was born from the recognition that pistachio cultivation requires dedicated expertise distinct from traditional stone fruit or olive farming. Recognizing the transformative potential of pistachios in arid terrains, we concentrated all efforts on mastering rootstock genetics and grafting techniques.",
-      "p2": "Today, we operate a dedicated nursery combining scientific propagation with hands-on field experience. We work directly with farmers, agricultural enterprises, and investors seeking reliable, field-hardened plant material."
+      "tag": "Our Background & Identity",
+      "title": "A Spanish–Middle Eastern Partnership Rooted in Agricultural Excellence",
+      "lead": "To be the grower's trusted partner: from rootstock and variety selection, through orchard establishment, all the way to commercial production—grounded in rigorous agronomic science and modern field trials.",
+      "p1": "Our journey was forged through a strategic collaboration combining advanced Spanish nursery techniques and rootstock genetics with the deep agricultural heritage of the Middle East. We recognize that Pistacia vera demands specialized technical precision built upon certified European standards.",
+      "p2": "Today, we leverage contemporary field trials and botanical science to deliver end-to-end orchard solutions. We assist investors in building and establishing profitable agricultural ventures, executing precision field planting, and providing dedicated agronomic supervision across all growth stages to guarantee high yields and long-term asset value."
     },
     "expertise": {
       "tag": "Technical Mastery",
       "title": "Specialized Agronomic Knowledge",
       "lead": "Real experience in the field informs every plant we produce.",
       "p1": "Pistachio cultivation is a precise science: soil texture, active limestone, water electrical conductivity, and seasonal chill hours dictate the viability of every orchard. Our team provides realistic, factual recommendations based on field realities.",
-      "p2": "We do not simply produce plants; we execute land preparation, precision GPS planting, and field grafting across multiple regions. This continuous feedback loop between nursery propagation and field results guarantees superior quality."
+      "p2": "We do not simply produce plants; we assist investors in project planning, execute precision field planting, and conduct ongoing field supervision and grafting across multiple regions. This direct field presence guarantees exceptional plant vigor and orchard success."
     },
     "philosophy": {
       "tag": "Our Principles",
@@ -350,8 +352,8 @@
       "card2Desc": "Cultivating robust, uncoiled root systems that anchor deeply into the soil profile for rapid post-transplant establishment.",
       "card3Title": "Water Stewardship",
       "card3Desc": "Promoting sustainable irrigation strategies and drought-resilient rootstocks tailored to arid and semi-arid conditions.",
-      "card4Title": "Long-Term Partnership",
-      "card4Desc": "A pistachio orchard is a multi-decade project. We support growers with ongoing advice throughout the tree's productive life."
+      "card4Title": "Our Vision & Enduring Partnership",
+      "card4Desc": "To be the grower's trusted partner: from rootstock and variety selection, through orchard establishment, all the way to commercial production—grounded in rigorous agronomic science and modern field trials."
     },
     "cta": {
       "tag": "Get Started",
@@ -370,7 +372,7 @@
       "cat1": "Genetic Foundation",
       "cat2": "Subterranean Vitality",
       "cat3": "Resource Wisdom",
-      "cat4": "Generational Vision"
+      "cat4": "Grower Vision"
     }
   },
   "products": {
@@ -531,7 +533,7 @@
     "info": {
       "tag": "Direct Communication",
       "title": "Let's Talk About Your Orchard",
-      "desc": "Our agronomic specialists can assist with certified plant availability, rootstock selection, field GPS planting services, and bespoke cultivation planning.",
+      "desc": "Our agronomic specialists can assist with certified plant availability, rootstock selection, precision field planting services, and bespoke cultivation planning.",
       "whatsappLabel": "Official WhatsApp",
       "whatsappSub": "Fastest response for inquiries & quotes",
       "whatsappAction": "Start Chat",
@@ -540,14 +542,14 @@
       "emailLabel": "Email Address",
       "emailValue": "info@misterpistachio.com",
       "hoursLabel": "Operating Hours",
-      "hoursValue": "Monday – Friday: 08:30 – 18:30",
+      "hoursValue": "Sunday – Thursday: 08:30 – 18:30",
       "locationLabel": "Nursery Location",
-      "locationValue": "Hama, Syria",
-      "facilityDetail": "Specialized Mediterranean rootstock propagation, precision field acclimatization, and phytosanitary distribution hub.",
+      "locationValue": "Hama, Syria – Qasioun Nursery",
+      "facilityDetail": "A specialized facility born from a Spanish–Middle Eastern partnership, propagating certified Mediterranean rootstocks and establishing commercial orchards to modern European agronomic standards.",
       "emailNote": "Direct cultivar bookings & laboratory requests",
       "phoneNote": "Field technical advisory & nursery reservations",
       "bespokeAdvisory": "Bespoke Advisory",
-      "locationSub": "Specialized Mediterranean Nursery Operations",
+      "locationSub": "Mediterranean Nursery Operations (Syria & Spain)",
       "startConversation": "Start a Conversation"
     },
     "form": {
@@ -557,15 +559,15 @@
       "name": "Full Name",
       "namePlaceholder": "e.g. Michael Smith",
       "phone": "Phone / WhatsApp",
-      "phonePlaceholder": "e.g. +34 612 345 678",
+      "phonePlaceholder": "e.g. +31 6 12345678",
       "email": "Email Address",
       "emailPlaceholder": "e.g. michael@example.com",
       "interest": "Primary Interest",
-      "interestOption1": "General Pistachio Plants Inquiry",
+      "interestOption1": "Turnkey Agricultural Project (Investor Services)",
       "interestOption2": "UCB1 Rootstock Inquiries",
       "interestOption3": "Traditional Rootstocks (Cornicabra / Atlantica)",
       "interestOption4": "Grafted Plants (Kerman, Sirora, Larnaka)",
-      "interestOption5": "Agricultural & Field Services",
+      "interestOption5": "Field Planting & Orchard Supervision Services",
       "projectDetails": "Project Details & Location",
       "projectDetailsPlaceholder": "Please include approximate hectares or tree count, soil type, and plantation location...",
       "submit": "Submit Inquiry Request",
@@ -600,8 +602,8 @@
       "number": "01",
       "eyebrow": "01 / ESTABLISH",
       "title": "From Land to Orchard",
-      "subtitle": "Successful pistachio cultivation begins with proper land planning, infrastructure and precise planting.",
-      "lead": "The foundation of generational profitability is established in the initial months. We transform raw acreage into a meticulously engineered pistachio estate through deep soil profile preparation, topographic hydraulic design, and satellite-guided planting precision.",
+      "subtitle": "Successful pistachio cultivation begins with proper land planning, robust infrastructure, and precise field planting.",
+      "lead": "The foundation of generational profitability is established in the initial months. We transform raw acreage into engineered pistachio orchards through soil profiling, modern irrigation, and precise field planting.",
       "tag": "Orchard Establishment Phase",
       "watermark": "ESTABLISH"
     },
@@ -634,14 +636,14 @@
     "labels": {
       "plate1": "PLATE 01 // TURNKEY DEVELOPMENT",
       "plate1Sub": "FULL-CYCLE ORCHARD ENGINEERING",
-      "turnkeyPlantation": "TURNKEY PLANTATION",
+      "turnkeyPlantation": "INVESTOR PROJECTS",
       "coreCapabilities": "CORE CAPABILITIES & MILESTONES",
-      "gpsPrecision": "GPS PRECISION",
-      "propagationSupply": "PROPAGATION & SUPPLY",
+      "gpsPrecision": "FIELD PLANTING",
+      "propagationSupply": "SPANISH NURSERIES",
       "fieldPhysiology": "04 / FIELD PHYSIOLOGY",
       "graftingCanopy": "GRAFTING & CANOPY",
       "technicalCapabilities": "TECHNICAL CAPABILITIES",
-      "agronomicSupervision": "05 / AGRONOMIC SUPERVISION",
+      "agronomicSupervision": "05 / FIELD SUPERVISION",
       "consultingIpm": "CONSULTING & IPM",
       "orchardShelter": "06 / ORCHARD SHELTER",
       "orchardStabilization": "ORCHARD STABILIZATION",
