@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       'description': isAr
         ? 'مشاتل متخصصة في إكثار أصول الفستق الحلبي المعتمدة وتأسيس البساتين التجارية.'
         : 'Specialist nursery in pistachio cultivation, certified rootstocks, and commercial orchard establishment.',
-      'telephone': '+31 6 12555547',
+      'telephone': '+31 612 55 55 47',
       'sameAs': [
         this.config.social.instagram,
         this.config.social.tiktok,

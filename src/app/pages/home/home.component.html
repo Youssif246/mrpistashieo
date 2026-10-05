@@ -701,67 +701,64 @@
 
 
 <!-- ==========================================================================
-     8. DEDICATED INSTAGRAM & OFFICIAL SOCIAL SHOWCASE
+     8. DEDICATED FACEBOOK & OFFICIAL SOCIAL SHOWCASE
      Completely separate standalone section encouraging visitors to follow
      ========================================================================== -->
-<section class="section-instagram-dedicated" id="instagramSection" aria-label="Mister Pistachio on Instagram">
+<section class="section-facebook-dedicated" id="facebookSection" aria-label="Mister Pistachio on Facebook">
   <div class="container-wide">
 
     <!-- Section Header: Centered & Art-Directed -->
-    <div class="instagram-dedicated-header">
-      <div class="instagram-dedicated-eyebrow">
+    <div class="facebook-dedicated-header">
+      <div class="facebook-dedicated-eyebrow">
         <span class="eyebrow-accent-line" aria-hidden="true"></span>
-        <span class="brand-eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'مجتمعنا الزراعي' : 'OUR COMMUNITY' }}</span>
+        <span class="brand-eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'تابع أحدث أخبار الفستق الحلبي' : 'LATEST PISTACHIO UPDATES' }}</span>
         <span class="eyebrow-accent-line" aria-hidden="true"></span>
       </div>
 
-      <h2 class="instagram-dedicated-title">
-        {{ i18n.currentLang() === 'ar' ? 'مستر بيستاشيو على إنستغرام' : 'Mister Pistachio on Instagram' }}
+      <h2 class="facebook-dedicated-title">
+        {{ i18n.currentLang() === 'ar' ? 'مستر بيستاشيو على فيسبوك' : 'Mister Pistachio on Facebook' }}
       </h2>
 
-      <p class="instagram-dedicated-lead">
+      <p class="facebook-dedicated-lead">
         {{ i18n.currentLang() === 'ar'
-        ? 'تابع أحدث جولات المشاتل وعمليات التطعيم الميدانية ومستجدات زراعة الفستق عبر حسابنا الرسمي.'
-        : 'Follow our nursery routines, field grafting, and Mediterranean cultivation updates on Instagram.' }}
+        ? 'تابع أحدث جولات المشاتل وعمليات التطعيم الميدانية ومستجدات زراعة الفستق عبر صفحتنا الرسمية.'
+        : 'Follow our nursery routines, field grafting, and Mediterranean cultivation updates on Facebook.' }}
       </p>
     </div>
 
-    <!-- Instagram Profile Card & Direct Action (Refined Text + Social CTA) -->
-    <div class="instagram-profile-dossier">
-      <div class="instagram-dossier-top">
-        <div class="instagram-user-identity">
-          <div class="instagram-crest-avatar">
+    <!-- Facebook Profile Card & Direct Action (Refined Text + Social CTA) -->
+    <div class="facebook-profile-dossier">
+      <div class="facebook-dossier-top">
+        <div class="facebook-user-identity">
+          <div class="facebook-crest-avatar">
             <img src="logo.png" alt="Mister Pistachio">
           </div>
-          <div class="instagram-user-text">
-            <h3 class="instagram-display-name">
+          <div class="facebook-user-text">
+            <h3 class="facebook-display-name">
               {{ i18n.currentLang() === 'ar' ? 'مستر بيستاشيو' : 'Mister Pistachio' }}
             </h3>
-            <span class="instagram-username" dir="ltr">
-              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-              <span>&#64;mister.pistachio</span>
+            <span class="facebook-username" dir="ltr">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              <span>Mister Pistachio</span>
             </span>
           </div>
         </div>
 
-        <!-- Follow on Instagram CTA Button -->
-        <a [href]="config.social.instagram" target="_blank" rel="noopener noreferrer" class="btn-instagram-action"
-          aria-label="Follow Mister Pistachio on Instagram">
-          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-          <span>{{ i18n.currentLang() === 'ar' ? 'متابعة على إنستغرام' : 'Follow on Instagram' }}</span>
+        <!-- Follow on Facebook CTA Button -->
+        <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="btn-facebook-action"
+          aria-label="Follow Mister Pistachio on Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          <span>{{ i18n.currentLang() === 'ar' ? 'متابعة على فيسبوك' : 'Follow on Facebook' }}</span>
           <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
         </a>
       </div>
 
-      <p class="instagram-bio-strip">
+      <p class="facebook-bio-strip">
         {{ i18n.currentLang() === 'ar'
-        ? 'حماة، سوريا • info@misterpistachio.com • شركة متخصصة بالكامل في تجارة وزراعة الفستق
-        الحلبي، إكثار الأصول المعتمدة، وتقديم الرعاية الحقلية المتكاملة.'
-        : 'Hama, Syria · info@misterpistachio.com · Agricultural enterprise dedicated entirely to
-        certified pistachio nursery propagation, orchard establishment, and Mediterranean cultivation.' }}
+        ? 'سوريا، حماة - مشتل القاسيون • شركة متخصصة بالكامل في تجارة وزراعة الفستق الحلبي، إكثار الأصول المعتمدة، وتقديم الرعاية الحقلية المتكاملة.'
+        : 'Syria, Hama – Qasioun Nursery · Agricultural enterprise dedicated entirely to certified pistachio nursery propagation, orchard establishment, and Mediterranean cultivation.' }}
       </p>
     </div>
-
 
   </div>
 </section>

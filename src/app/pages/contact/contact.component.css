@@ -505,6 +505,14 @@ a.bc-line:hover span {
   color: #1F7A36;
 }
 
+a.bc-line[href^="tel:"] span {
+  font-family: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  direction: ltr !important;
+  letter-spacing: 0.03em !important;
+  word-spacing: 0.18em !important;
+  font-variant-numeric: tabular-nums lining-nums !important;
+}
+
 .bc-sheen {
   position: absolute;
   inset: 0;

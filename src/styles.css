@@ -169,10 +169,32 @@ body.rtl h3,
 body.rtl h4,
 body.rtl h5,
 body.rtl h6,
-body.rtl span:not([class*="fa-"]),
-body.rtl a:not([class*="fa-"]) {
+body.rtl span:not([class*="fa-"]):not(.phone-link):not([dir="ltr"]):not([href^="tel:"]),
+body.rtl a:not([class*="fa-"]):not(.phone-link):not([dir="ltr"]):not([href^="tel:"]) {
   letter-spacing: normal !important;
   text-transform: none !important;
+}
+
+/* Universal Phone Number & Digit Display: Clean, natural spacing, identical in Arabic & English */
+.phone-link,
+.phone-digits,
+a.phone-link,
+a[href^="tel:"],
+a[href^="tel:"] span,
+a[href^="tel:"] bdi,
+[dir="ltr"].phone-link,
+body.rtl a.phone-link,
+html[dir="rtl"] a.phone-link,
+body.rtl a.phone-link bdi,
+html[dir="rtl"] a.phone-link bdi,
+body.rtl a[href^="tel:"],
+html[dir="rtl"] a[href^="tel:"] {
+  font-family: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  letter-spacing: 0.03em !important;
+  word-spacing: 0.18em !important;
+  font-variant-numeric: tabular-nums lining-nums !important;
 }
 
 body.rtl .font-serif,

@@ -287,17 +287,39 @@
   width: 100%;
 }
 
-.meta-val.phone-link {
+.meta-val.phone-link,
+:host-context([dir="rtl"]) .meta-val.phone-link,
+:host-context(html[dir="rtl"]) .meta-val.phone-link,
+:host-context(body.rtl) .meta-val.phone-link {
   color: #DFE8E2;
   text-decoration: none;
   direction: ltr !important;
   unicode-bidi: isolate !important;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
   text-align: center;
   align-self: center;
   transition: color var(--transition-fast);
   margin: 0 auto;
+  font-family: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.03em !important;
+  word-spacing: 0.18em !important;
+  font-variant-numeric: tabular-nums lining-nums !important;
+}
+
+.meta-val.phone-link bdi,
+:host-context([dir="rtl"]) .meta-val.phone-link bdi,
+:host-context(html[dir="rtl"]) .meta-val.phone-link bdi,
+:host-context(body.rtl) .meta-val.phone-link bdi {
+  font-family: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  letter-spacing: 0.03em !important;
+  word-spacing: 0.18em !important;
 }
 
 .meta-val.phone-link:hover {

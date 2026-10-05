@@ -3777,9 +3777,10 @@ body.rtl .specimen-coord-strip {
 
 
 /* ══════════════════════════════════════════════════════════════════════════
-   8. DEDICATED INSTAGRAM & OFFICIAL SOCIAL SHOWCASE (STANDALONE SECTION)
+/* ══════════════════════════════════════════════════════════════════════════
+   8. DEDICATED FACEBOOK & OFFICIAL SOCIAL SHOWCASE (STANDALONE SECTION)
    ══════════════════════════════════════════════════════════════════════════ */
-.section-instagram-dedicated {
+.section-facebook-dedicated {
   padding: clamp(5.5rem, 9vw, 8.5rem) 0;
   background-color: var(--c-ivory);
   position: relative;
@@ -3787,7 +3788,7 @@ body.rtl .specimen-coord-strip {
   border-top: 1px solid rgba(194, 160, 115, 0.22);
 }
 
-.instagram-dedicated-header {
+.facebook-dedicated-header {
   text-align: center;
   max-width: 760px;
   margin-inline: auto;
@@ -3797,7 +3798,7 @@ body.rtl .specimen-coord-strip {
   align-items: center;
 }
 
-.instagram-dedicated-eyebrow {
+.facebook-dedicated-eyebrow {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3805,15 +3806,21 @@ body.rtl .specimen-coord-strip {
   margin-bottom: 1rem;
 }
 
-.instagram-dedicated-eyebrow .eyebrow-accent-line {
-  background-color: var(--c-logo-primary);
+.facebook-dedicated-eyebrow .eyebrow-accent-line {
+  width: 32px;
+  height: 2px;
+  background-color: #1877F2;
 }
 
-.instagram-dedicated-eyebrow .brand-eyebrow-text {
-  color: var(--c-logo-deep);
+.facebook-dedicated-eyebrow .brand-eyebrow-text {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1877F2;
 }
 
-.instagram-dedicated-title {
+.facebook-dedicated-title {
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 700;
   color: var(--c-forest);
@@ -3823,13 +3830,13 @@ body.rtl .specimen-coord-strip {
   width: 100%;
 }
 
-:host-context([dir="rtl"]) .instagram-dedicated-title,
-:host-context(html[dir="rtl"]) .instagram-dedicated-title {
+:host-context([dir="rtl"]) .facebook-dedicated-title,
+:host-context(html[dir="rtl"]) .facebook-dedicated-title {
   font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
   text-align: center !important;
 }
 
-.instagram-dedicated-lead {
+.facebook-dedicated-lead {
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--c-slate);
@@ -3839,17 +3846,17 @@ body.rtl .specimen-coord-strip {
   margin-inline: auto;
 }
 
-:host-context([dir="rtl"]) .instagram-dedicated-lead,
-:host-context(html[dir="rtl"]) .instagram-dedicated-lead {
+:host-context([dir="rtl"]) .facebook-dedicated-lead,
+:host-context(html[dir="rtl"]) .facebook-dedicated-lead {
   font-family: var(--font-ar-body), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
   text-align: center !important;
 }
 
-.instagram-profile-dossier {
+.facebook-profile-dossier {
   background: #FFFFFF;
   border-radius: 16px;
-  border: 1px solid rgba(194, 160, 115, 0.35);
-  box-shadow: 0 10px 32px -8px rgba(14, 32, 19, 0.06);
+  border: 1px solid rgba(24, 119, 242, 0.18);
+  box-shadow: 0 10px 32px -8px rgba(24, 119, 242, 0.08), 0 2px 12px rgba(0, 0, 0, 0.03);
   padding: clamp(1.75rem, 3.5vw, 2.75rem);
   max-width: 880px;
   margin-inline: auto;
@@ -3857,9 +3864,15 @@ body.rtl .specimen-coord-strip {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.instagram-dossier-top {
+.facebook-profile-dossier:hover {
+  box-shadow: 0 16px 40px -8px rgba(24, 119, 242, 0.14), 0 4px 16px rgba(0, 0, 0, 0.04);
+  border-color: rgba(24, 119, 242, 0.32);
+}
+
+.facebook-dossier-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3867,13 +3880,13 @@ body.rtl .specimen-coord-strip {
   flex-wrap: wrap;
 }
 
-.instagram-user-identity {
+.facebook-user-identity {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-.instagram-crest-avatar {
+.facebook-crest-avatar {
   position: relative;
   width: 72px;
   height: 72px;
@@ -3886,41 +3899,40 @@ body.rtl .specimen-coord-strip {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* 1. Pulsing Outward Live Radar Waves (Tight, disciplined diameter) */
-.instagram-crest-avatar::before {
+/* 1. Pulsing Outward Facebook Blue Radar Waves */
+.facebook-crest-avatar::before {
   content: '';
   position: absolute;
-  inset: -3px;
+  inset: -4px;
   border-radius: 50%;
-  border: 1.5px solid rgba(255, 19, 97, 0.7);
+  border: 2px solid rgba(24, 119, 242, 0.7);
   opacity: 0;
-  animation: liveRadarPulse 2.2s cubic-bezier(0.1, 0.2, 0.3, 1) infinite;
+  animation: fbRadarPulse 2.4s cubic-bezier(0.1, 0.2, 0.3, 1) infinite;
   pointer-events: none;
   z-index: 1;
 }
 
-/* 2. Rotating Fiery Instagram Story / Live Conic Ring */
-.instagram-crest-avatar::after {
+/* 2. Rotating Glowing Facebook Conic Ring */
+.facebook-crest-avatar::after {
   content: '';
   position: absolute;
-  inset: -3px;
+  inset: -4px;
   border-radius: 50%;
   background: conic-gradient(
     from 0deg,
-    #FF007F 0%,
-    #FF4500 22%,
-    #FFD700 45%,
-    #FF0055 70%,
-    #833AB4 88%,
-    #FF007F 100%
+    #1877F2 0%,
+    #00C6FF 25%,
+    #0866FF 50%,
+    #0052CC 75%,
+    #1877F2 100%
   );
-  animation: fieryRingSpin 3.2s linear infinite;
-  box-shadow: 0 0 10px rgba(255, 69, 0, 0.35), 0 0 16px rgba(225, 48, 108, 0.25);
+  animation: fbRingSpin 3.5s linear infinite;
+  box-shadow: 0 0 12px rgba(24, 119, 242, 0.4), 0 0 20px rgba(0, 198, 255, 0.25);
   z-index: 2;
 }
 
-/* 3. Logo Inside (Clean White Disc with Inner Border) */
-.instagram-crest-avatar img {
+/* 3. Logo Inside (Clean White Disc) */
+.facebook-crest-avatar img {
   position: relative;
   z-index: 3;
   width: 100%;
@@ -3932,15 +3944,15 @@ body.rtl .specimen-coord-strip {
   box-shadow: inset 0 0 0 2px #FFFFFF, inset 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
-.instagram-crest-avatar:hover {
+.facebook-crest-avatar:hover {
   transform: scale(1.06);
 }
 
-.instagram-crest-avatar:hover::after {
-  box-shadow: 0 0 16px rgba(255, 69, 0, 0.5), 0 0 24px rgba(225, 48, 108, 0.4);
+.facebook-crest-avatar:hover::after {
+  box-shadow: 0 0 18px rgba(24, 119, 242, 0.6), 0 0 28px rgba(0, 198, 255, 0.45);
 }
 
-@keyframes fieryRingSpin {
+@keyframes fbRingSpin {
   0% {
     transform: rotate(0deg);
   }
@@ -3949,76 +3961,100 @@ body.rtl .specimen-coord-strip {
   }
 }
 
-@keyframes liveRadarPulse {
+@keyframes fbRadarPulse {
   0% {
     transform: scale(0.98);
-    opacity: 0.85;
-    box-shadow: 0 0 5px rgba(255, 69, 0, 0.55), 0 0 8px rgba(225, 48, 108, 0.35);
+    opacity: 0.9;
+    box-shadow: 0 0 8px rgba(24, 119, 242, 0.6);
   }
   45% {
-    opacity: 0.45;
+    opacity: 0.4;
   }
   100% {
-    transform: scale(1.20);
+    transform: scale(1.24);
     opacity: 0;
-    box-shadow: 0 0 8px rgba(255, 69, 0, 0), 0 0 12px rgba(225, 48, 108, 0);
+    box-shadow: 0 0 14px rgba(24, 119, 242, 0);
   }
 }
 
-.instagram-user-text {
+.facebook-user-text {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.25rem;
 }
 
-.instagram-display-name {
+.facebook-display-name {
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--c-forest);
   margin: 0;
 }
 
-:host-context([dir="rtl"]) .instagram-display-name,
-:host-context(html[dir="rtl"]) .instagram-display-name {
+:host-context([dir="rtl"]) .facebook-display-name,
+:host-context(html[dir="rtl"]) .facebook-display-name {
   font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
 }
 
-.instagram-username {
+.facebook-username {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #C13584;
+  color: #1877F2;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
 }
 
-.btn-instagram-action {
+.facebook-username i {
+  font-size: 1.15rem;
+  color: #1877F2;
+}
+
+/* Facebook Action Button */
+.btn-facebook-action {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  padding: 0.85rem 1.6rem;
-  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  padding: 0.85rem 1.65rem;
+  background: linear-gradient(135deg, #1877F2 0%, #0866FF 60%, #0052cc 100%);
   color: #FFFFFF;
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(253, 29, 29, 0.28);
-  transition: transform 0.25s var(--ease-editorial), box-shadow 0.25s var(--ease-editorial);
+  box-shadow: 0 4px 16px rgba(24, 119, 242, 0.35);
+  transition: transform 0.25s var(--ease-editorial), box-shadow 0.25s var(--ease-editorial), background 0.25s;
+  position: relative;
+  overflow: hidden;
 }
 
-:host-context([dir="rtl"]) .btn-instagram-action,
-:host-context(html[dir="rtl"]) .btn-instagram-action {
+.btn-facebook-action::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+
+.btn-facebook-action:hover::before {
+  left: 130%;
+}
+
+:host-context([dir="rtl"]) .btn-facebook-action,
+:host-context(html[dir="rtl"]) .btn-facebook-action {
   font-family: var(--font-ar-body), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
 }
 
-.btn-instagram-action:hover {
+.btn-facebook-action:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(253, 29, 29, 0.38);
+  box-shadow: 0 8px 26px rgba(24, 119, 242, 0.5);
   color: #FFFFFF;
 }
 
-.instagram-bio-strip {
+.facebook-bio-strip {
   font-size: 0.95rem;
   line-height: 1.7;
   color: var(--c-slate);
@@ -4028,7 +4064,7 @@ body.rtl .specimen-coord-strip {
 }
 
 @media (max-width: 768px) {
-  .instagram-profile-dossier {
+  .facebook-profile-dossier {
     padding: clamp(1.25rem, 4vw, 1.5rem);
     border-radius: 14px;
     gap: 1.25rem;
@@ -4037,35 +4073,35 @@ body.rtl .specimen-coord-strip {
     margin-bottom: 0;
   }
 
-  .instagram-dossier-top {
+  .facebook-dossier-top {
     flex-direction: column;
     align-items: stretch;
     gap: 1.15rem;
   }
 
-  .instagram-user-identity {
+  .facebook-user-identity {
     justify-content: flex-start;
     gap: 1rem;
   }
 
-  .instagram-crest-avatar {
+  .facebook-crest-avatar {
     width: 62px;
     height: 62px;
   }
 
-  .instagram-display-name {
+  .facebook-display-name {
     font-size: 1.2rem;
   }
 
-  .btn-instagram-action {
+  .btn-facebook-action {
     width: 100%;
     justify-content: center;
     padding: 0.85rem 1rem;
     font-size: 0.95rem;
-    box-shadow: 0 4px 14px rgba(253, 29, 29, 0.25);
+    box-shadow: 0 4px 14px rgba(24, 119, 242, 0.3);
   }
 
-  .instagram-bio-strip {
+  .facebook-bio-strip {
     font-size: 0.88rem;
     line-height: 1.65;
     text-align: center;
