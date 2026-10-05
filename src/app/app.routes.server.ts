@@ -6,7 +6,7 @@ import enArticles from '../assets/data/articles/en.json';
  * Indexable static pages, prerendered for BOTH languages at build time.
  * Keep in sync with `localizedRoutes` in app.routes.ts and public/sitemap.xml.
  */
-const STATIC_PAGES = ['', 'about', 'services', 'varieties', 'usb1', 'articles', 'contact'];
+const STATIC_PAGES = ['', 'about', 'services', 'varieties', 'ucb1', 'articles', 'contact'];
 const LANGS = ['ar', 'en'] as const;
 
 const staticPrerenderRoutes: ServerRoute[] = LANGS.flatMap(lang =>

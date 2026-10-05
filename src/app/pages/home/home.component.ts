@@ -40,7 +40,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@context': 'https://schema.org',
       '@type': 'Organization',
       'name': isAr ? 'مستر بستاشيو' : 'Mister Pistachio',
-      'legalName': 'Mister Pistachio S.L.',
+      'legalName': 'Mister Pistachio Trading O P LLC',
       'url': 'https://misterpistachio.com',
       'logo': 'https://misterpistachio.com/logo.png',
       'description': isAr

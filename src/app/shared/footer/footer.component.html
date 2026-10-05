@@ -41,7 +41,7 @@
         <span class="column-kicker">{{ i18n.t().footer.quickLinks }}</span>
         <ul class="column-links">
           <li><a [routerLink]="['/' + i18n.currentLang()]">{{ i18n.t().navbar.home }}</a></li>
-          <li><a [routerLink]="['/' + i18n.currentLang(), 'usb1']">USB1</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'ucb1']">UCB1</a></li>
           <li><a [routerLink]="['/' + i18n.currentLang(), 'varieties']">{{ i18n.t().navbar.products }}</a></li>
           <li><a [routerLink]="['/' + i18n.currentLang(), 'services']">{{ i18n.t().navbar.services }}</a></li>
           <li><a [routerLink]="['/' + i18n.currentLang(), 'articles']">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</a></li>
@@ -114,7 +114,11 @@
     <!-- Bottom Colophon -->
     <div class="footer-colophon">
       <p class="copyright-text">
-        &copy; {{ currentYear }} {{ i18n.t().footer.rights }}
+        <span class="copyright-symbol">&copy;</span>
+        <span class="copyright-year">{{ currentYear }}</span>
+        <span class="legal-entity-name" dir="ltr">Mister Pistachio Trading O P LLC</span>
+        <span class="rights-separator" aria-hidden="true">&bull;</span>
+        <span class="rights-phrase">{{ i18n.currentLang() === 'ar' ? 'جميع الحقوق محفوظة.' : 'All rights reserved.' }}</span>
       </p>
     </div>
   </div>

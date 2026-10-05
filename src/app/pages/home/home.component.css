@@ -3778,8 +3778,9 @@ body.rtl .specimen-coord-strip {
 
 /* ══════════════════════════════════════════════════════════════════════════
 /* ══════════════════════════════════════════════════════════════════════════
-   8. DEDICATED FACEBOOK & OFFICIAL SOCIAL SHOWCASE (STANDALONE SECTION)
+   8. DEDICATED OFFICIAL SOCIAL SHOWCASE (FACEBOOK & INSTAGRAM)
    ══════════════════════════════════════════════════════════════════════════ */
+.section-social-dedicated,
 .section-facebook-dedicated {
   padding: clamp(5.5rem, 9vw, 8.5rem) 0;
   background-color: var(--c-ivory);
@@ -3788,6 +3789,7 @@ body.rtl .specimen-coord-strip {
   border-top: 1px solid rgba(194, 160, 115, 0.22);
 }
 
+.social-dedicated-header,
 .facebook-dedicated-header {
   text-align: center;
   max-width: 760px;
@@ -3798,6 +3800,7 @@ body.rtl .specimen-coord-strip {
   align-items: center;
 }
 
+.social-dedicated-eyebrow,
 .facebook-dedicated-eyebrow {
   display: inline-flex;
   align-items: center;
@@ -3806,20 +3809,23 @@ body.rtl .specimen-coord-strip {
   margin-bottom: 1rem;
 }
 
+.social-dedicated-eyebrow .eyebrow-accent-line,
 .facebook-dedicated-eyebrow .eyebrow-accent-line {
   width: 32px;
   height: 2px;
-  background-color: #1877F2;
+  background-color: var(--c-logo-primary);
 }
 
+.social-dedicated-eyebrow .brand-eyebrow-text,
 .facebook-dedicated-eyebrow .brand-eyebrow-text {
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #1877F2;
+  color: var(--c-logo-deep);
 }
 
+.social-dedicated-title,
 .facebook-dedicated-title {
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 700;
@@ -3830,12 +3836,15 @@ body.rtl .specimen-coord-strip {
   width: 100%;
 }
 
+:host-context([dir="rtl"]) .social-dedicated-title,
+:host-context(html[dir="rtl"]) .social-dedicated-title,
 :host-context([dir="rtl"]) .facebook-dedicated-title,
 :host-context(html[dir="rtl"]) .facebook-dedicated-title {
   font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
   text-align: center !important;
 }
 
+.social-dedicated-lead,
 .facebook-dedicated-lead {
   font-size: 1.05rem;
   line-height: 1.75;
@@ -3846,32 +3855,59 @@ body.rtl .specimen-coord-strip {
   margin-inline: auto;
 }
 
+:host-context([dir="rtl"]) .social-dedicated-lead,
+:host-context(html[dir="rtl"]) .social-dedicated-lead,
 :host-context([dir="rtl"]) .facebook-dedicated-lead,
 :host-context(html[dir="rtl"]) .facebook-dedicated-lead {
   font-family: var(--font-ar-body), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
   text-align: center !important;
 }
 
-.facebook-profile-dossier {
-  background: #FFFFFF;
-  border-radius: 16px;
-  border: 1px solid rgba(24, 119, 242, 0.18);
-  box-shadow: 0 10px 32px -8px rgba(24, 119, 242, 0.08), 0 2px 12px rgba(0, 0, 0, 0.03);
-  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+/* Social Cards Stack */
+.social-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   max-width: 880px;
   margin-inline: auto;
-  margin-bottom: 0;
+}
+
+/* Shared Dossier Card Styles */
+.facebook-profile-dossier,
+.instagram-profile-dossier {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: clamp(1.75rem, 3.5vw, 2.75rem);
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  transition: box-shadow 0.35s ease, border-color 0.35s ease;
+  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+}
+
+/* Facebook Card Styling */
+.facebook-profile-dossier {
+  border: 1px solid rgba(24, 119, 242, 0.20);
+  box-shadow: 0 10px 32px -8px rgba(24, 119, 242, 0.08), 0 2px 12px rgba(0, 0, 0, 0.03);
 }
 
 .facebook-profile-dossier:hover {
-  box-shadow: 0 16px 40px -8px rgba(24, 119, 242, 0.14), 0 4px 16px rgba(0, 0, 0, 0.04);
-  border-color: rgba(24, 119, 242, 0.32);
+  box-shadow: 0 16px 40px -8px rgba(24, 119, 242, 0.16), 0 4px 16px rgba(0, 0, 0, 0.04);
+  border-color: rgba(24, 119, 242, 0.38);
 }
 
+/* Instagram Card Styling */
+.instagram-profile-dossier {
+  border: 1px solid rgba(225, 48, 108, 0.20);
+  box-shadow: 0 10px 32px -8px rgba(225, 48, 108, 0.08), 0 2px 12px rgba(0, 0, 0, 0.03);
+}
+
+.instagram-profile-dossier:hover {
+  box-shadow: 0 16px 40px -8px rgba(225, 48, 108, 0.16), 0 4px 16px rgba(0, 0, 0, 0.04);
+  border-color: rgba(225, 48, 108, 0.38);
+}
+
+.social-dossier-top,
 .facebook-dossier-top {
   display: flex;
   align-items: center;
@@ -3880,13 +3916,16 @@ body.rtl .specimen-coord-strip {
   flex-wrap: wrap;
 }
 
+.social-user-identity,
 .facebook-user-identity {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
 
-.facebook-crest-avatar {
+/* Avatars Base */
+.facebook-crest-avatar,
+.instagram-crest-avatar {
   position: relative;
   width: 72px;
   height: 72px;
@@ -3899,7 +3938,25 @@ body.rtl .specimen-coord-strip {
   transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-/* 1. Pulsing Outward Facebook Blue Radar Waves */
+.facebook-crest-avatar img,
+.instagram-crest-avatar img {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #FFFFFF;
+  padding: 6px;
+  object-fit: contain;
+  box-shadow: inset 0 0 0 2px #FFFFFF, inset 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.facebook-crest-avatar:hover,
+.instagram-crest-avatar:hover {
+  transform: scale(1.06);
+}
+
+/* 1. Facebook Avatar: Pulsing & Spinning Blue Aura */
 .facebook-crest-avatar::before {
   content: '';
   position: absolute;
@@ -3912,7 +3969,6 @@ body.rtl .specimen-coord-strip {
   z-index: 1;
 }
 
-/* 2. Rotating Glowing Facebook Conic Ring */
 .facebook-crest-avatar::after {
   content: '';
   position: absolute;
@@ -3931,34 +3987,13 @@ body.rtl .specimen-coord-strip {
   z-index: 2;
 }
 
-/* 3. Logo Inside (Clean White Disc) */
-.facebook-crest-avatar img {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #FFFFFF;
-  padding: 6px;
-  object-fit: contain;
-  box-shadow: inset 0 0 0 2px #FFFFFF, inset 0 1px 4px rgba(0, 0, 0, 0.06);
-}
-
-.facebook-crest-avatar:hover {
-  transform: scale(1.06);
-}
-
 .facebook-crest-avatar:hover::after {
   box-shadow: 0 0 18px rgba(24, 119, 242, 0.6), 0 0 28px rgba(0, 198, 255, 0.45);
 }
 
 @keyframes fbRingSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes fbRadarPulse {
@@ -3967,9 +4002,7 @@ body.rtl .specimen-coord-strip {
     opacity: 0.9;
     box-shadow: 0 0 8px rgba(24, 119, 242, 0.6);
   }
-  45% {
-    opacity: 0.4;
-  }
+  45% { opacity: 0.4; }
   100% {
     transform: scale(1.24);
     opacity: 0;
@@ -3977,12 +4010,70 @@ body.rtl .specimen-coord-strip {
   }
 }
 
+/* 2. Instagram Avatar: Fiery Conic Ring & Radar Pulse */
+.instagram-crest-avatar::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 19, 97, 0.7);
+  opacity: 0;
+  animation: igRadarPulse 2.2s cubic-bezier(0.1, 0.2, 0.3, 1) infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.instagram-crest-avatar::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #FF007F 0%,
+    #FF4500 22%,
+    #FFD700 45%,
+    #FF0055 70%,
+    #833AB4 88%,
+    #FF007F 100%
+  );
+  animation: igRingSpin 3.2s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.35), 0 0 16px rgba(225, 48, 108, 0.25);
+  z-index: 2;
+}
+
+.instagram-crest-avatar:hover::after {
+  box-shadow: 0 0 16px rgba(255, 69, 0, 0.5), 0 0 24px rgba(225, 48, 108, 0.4);
+}
+
+@keyframes igRingSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes igRadarPulse {
+  0% {
+    transform: scale(0.98);
+    opacity: 0.85;
+    box-shadow: 0 0 5px rgba(255, 69, 0, 0.55), 0 0 8px rgba(225, 48, 108, 0.35);
+  }
+  45% { opacity: 0.45; }
+  100% {
+    transform: scale(1.20);
+    opacity: 0;
+    box-shadow: 0 0 8px rgba(255, 69, 0, 0), 0 0 12px rgba(225, 48, 108, 0);
+  }
+}
+
+/* User Identity Typography */
+.social-user-text,
 .facebook-user-text {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
+.social-display-name,
 .facebook-display-name {
   font-size: 1.35rem;
   font-weight: 700;
@@ -3990,6 +4081,8 @@ body.rtl .specimen-coord-strip {
   margin: 0;
 }
 
+:host-context([dir="rtl"]) .social-display-name,
+:host-context(html[dir="rtl"]) .social-display-name,
 :host-context([dir="rtl"]) .facebook-display-name,
 :host-context(html[dir="rtl"]) .facebook-display-name {
   font-family: var(--font-ar-display), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
@@ -4009,25 +4102,61 @@ body.rtl .specimen-coord-strip {
   color: #1877F2;
 }
 
-/* Facebook Action Button */
-.btn-facebook-action {
+.instagram-username {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #C13584;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.instagram-username i {
+  font-size: 1.15rem;
+  color: #C13584;
+}
+
+/* Action Buttons */
+.btn-facebook-action,
+.btn-instagram-action {
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
   padding: 0.85rem 1.65rem;
-  background: linear-gradient(135deg, #1877F2 0%, #0866FF 60%, #0052cc 100%);
   color: #FFFFFF;
   font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(24, 119, 242, 0.35);
   transition: transform 0.25s var(--ease-editorial), box-shadow 0.25s var(--ease-editorial), background 0.25s;
   position: relative;
   overflow: hidden;
 }
 
-.btn-facebook-action::before {
+.btn-facebook-action {
+  background: linear-gradient(135deg, #1877F2 0%, #0866FF 60%, #0052cc 100%);
+  box-shadow: 0 4px 16px rgba(24, 119, 242, 0.35);
+}
+
+.btn-facebook-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(24, 119, 242, 0.5);
+  color: #FFFFFF;
+}
+
+.btn-instagram-action {
+  background: linear-gradient(135deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+  box-shadow: 0 4px 16px rgba(253, 29, 29, 0.28);
+}
+
+.btn-instagram-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(253, 29, 29, 0.42);
+  color: #FFFFFF;
+}
+
+.btn-facebook-action::before,
+.btn-instagram-action::before {
   content: '';
   position: absolute;
   top: 0;
@@ -4039,21 +4168,20 @@ body.rtl .specimen-coord-strip {
   transition: left 0.6s ease;
 }
 
-.btn-facebook-action:hover::before {
+.btn-facebook-action:hover::before,
+.btn-instagram-action:hover::before {
   left: 130%;
 }
 
 :host-context([dir="rtl"]) .btn-facebook-action,
-:host-context(html[dir="rtl"]) .btn-facebook-action {
+:host-context(html[dir="rtl"]) .btn-facebook-action,
+:host-context([dir="rtl"]) .btn-instagram-action,
+:host-context(html[dir="rtl"]) .btn-instagram-action {
   font-family: var(--font-ar-body), var(--font-ar), 'IBM Plex Sans Arabic', system-ui, sans-serif !important;
 }
 
-.btn-facebook-action:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(24, 119, 242, 0.5);
-  color: #FFFFFF;
-}
-
+/* Bio Strip */
+.social-bio-strip,
 .facebook-bio-strip {
   font-size: 0.95rem;
   line-height: 1.7;
@@ -4063,44 +4191,54 @@ body.rtl .specimen-coord-strip {
   margin: 0;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .facebook-profile-dossier {
+  .social-cards-stack {
+    gap: 1.5rem;
+  }
+
+  .facebook-profile-dossier,
+  .instagram-profile-dossier {
     padding: clamp(1.25rem, 4vw, 1.5rem);
     border-radius: 14px;
     gap: 1.25rem;
     max-width: 420px;
     margin-inline: auto;
-    margin-bottom: 0;
   }
 
+  .social-dossier-top,
   .facebook-dossier-top {
     flex-direction: column;
     align-items: stretch;
     gap: 1.15rem;
   }
 
+  .social-user-identity,
   .facebook-user-identity {
     justify-content: flex-start;
     gap: 1rem;
   }
 
-  .facebook-crest-avatar {
+  .facebook-crest-avatar,
+  .instagram-crest-avatar {
     width: 62px;
     height: 62px;
   }
 
+  .social-display-name,
   .facebook-display-name {
     font-size: 1.2rem;
   }
 
-  .btn-facebook-action {
+  .btn-facebook-action,
+  .btn-instagram-action {
     width: 100%;
     justify-content: center;
     padding: 0.85rem 1rem;
     font-size: 0.95rem;
-    box-shadow: 0 4px 14px rgba(24, 119, 242, 0.3);
   }
 
+  .social-bio-strip,
   .facebook-bio-strip {
     font-size: 0.88rem;
     line-height: 1.65;

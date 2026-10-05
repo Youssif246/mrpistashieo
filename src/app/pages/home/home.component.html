@@ -701,63 +701,102 @@
 
 
 <!-- ==========================================================================
-     8. DEDICATED FACEBOOK & OFFICIAL SOCIAL SHOWCASE
-     Completely separate standalone section encouraging visitors to follow
+     8. DEDICATED OFFICIAL SOCIAL SHOWCASE (FACEBOOK & INSTAGRAM)
+     Standalone section encouraging visitors to follow on Facebook and Instagram
      ========================================================================== -->
-<section class="section-facebook-dedicated" id="facebookSection" aria-label="Mister Pistachio on Facebook">
+<section class="section-social-dedicated" id="socialSection" aria-label="Mister Pistachio on Facebook and Instagram">
   <div class="container-wide">
 
     <!-- Section Header: Centered & Art-Directed -->
-    <div class="facebook-dedicated-header">
-      <div class="facebook-dedicated-eyebrow">
+    <div class="social-dedicated-header">
+      <div class="social-dedicated-eyebrow">
         <span class="eyebrow-accent-line" aria-hidden="true"></span>
         <span class="brand-eyebrow-text">{{ i18n.currentLang() === 'ar' ? 'تابع أحدث أخبار الفستق الحلبي' : 'LATEST PISTACHIO UPDATES' }}</span>
         <span class="eyebrow-accent-line" aria-hidden="true"></span>
       </div>
 
-      <h2 class="facebook-dedicated-title">
-        {{ i18n.currentLang() === 'ar' ? 'مستر بيستاشيو على فيسبوك' : 'Mister Pistachio on Facebook' }}
+      <h2 class="social-dedicated-title">
+        {{ i18n.currentLang() === 'ar' ? 'مستر بيستاشيو على إنستغرام وفيسبوك' : 'Mister Pistachio on Instagram & Facebook' }}
       </h2>
 
-      <p class="facebook-dedicated-lead">
+      <p class="social-dedicated-lead">
         {{ i18n.currentLang() === 'ar'
-        ? 'تابع أحدث جولات المشاتل وعمليات التطعيم الميدانية ومستجدات زراعة الفستق عبر صفحتنا الرسمية.'
-        : 'Follow our nursery routines, field grafting, and Mediterranean cultivation updates on Facebook.' }}
+        ? 'تابع أحدث جولات المشاتل وعمليات التطعيم الميدانية ومستجدات زراعة الفستق عبر قنواتنا الرسمية.'
+        : 'Follow our nursery routines, field grafting, and Mediterranean cultivation updates on our official social channels.' }}
       </p>
     </div>
 
-    <!-- Facebook Profile Card & Direct Action (Refined Text + Social CTA) -->
-    <div class="facebook-profile-dossier">
-      <div class="facebook-dossier-top">
-        <div class="facebook-user-identity">
-          <div class="facebook-crest-avatar">
-            <img src="logo.png" alt="Mister Pistachio">
+    <!-- Social Showcase Cards Stack -->
+    <div class="social-cards-stack">
+
+      <!-- 1. Instagram Profile Card -->
+      <div class="instagram-profile-dossier">
+        <div class="social-dossier-top">
+          <div class="social-user-identity">
+            <div class="instagram-crest-avatar">
+              <img src="logo.png" alt="Mister Pistachio">
+            </div>
+            <div class="social-user-text">
+              <h3 class="social-display-name">
+                {{ i18n.currentLang() === 'ar' ? 'مستر بيستاشيو' : 'Mister Pistachio' }}
+              </h3>
+              <span class="instagram-username" dir="ltr">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                <span>&#64;mister.pistachio</span>
+              </span>
+            </div>
           </div>
-          <div class="facebook-user-text">
-            <h3 class="facebook-display-name">
-              {{ i18n.currentLang() === 'ar' ? 'مستر بيستاشيو' : 'Mister Pistachio' }}
-            </h3>
-            <span class="facebook-username" dir="ltr">
-              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-              <span>Mister Pistachio</span>
-            </span>
-          </div>
+
+          <!-- Follow on Instagram CTA Button -->
+          <a [href]="config.social.instagram" target="_blank" rel="noopener noreferrer" class="btn-instagram-action"
+            aria-label="Follow Mister Pistachio on Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <span>{{ i18n.currentLang() === 'ar' ? 'متابعة على إنستغرام' : 'Follow on Instagram' }}</span>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
         </div>
 
-        <!-- Follow on Facebook CTA Button -->
-        <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="btn-facebook-action"
-          aria-label="Follow Mister Pistachio on Facebook">
-          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-          <span>{{ i18n.currentLang() === 'ar' ? 'متابعة على فيسبوك' : 'Follow on Facebook' }}</span>
-          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
-        </a>
+        <p class="social-bio-strip">
+          {{ i18n.currentLang() === 'ar'
+          ? 'سوريا، حماة - مشتل القاسيون • شركة متخصصة بالكامل في تجارة وزراعة الفستق الحلبي، إكثار الأصول المعتمدة، وتقديم الرعاية الحقلية المتكاملة.'
+          : 'Syria, Hama – Qasioun Nursery · Agricultural enterprise dedicated entirely to certified pistachio nursery propagation, orchard establishment, and Mediterranean cultivation.' }}
+        </p>
       </div>
 
-      <p class="facebook-bio-strip">
-        {{ i18n.currentLang() === 'ar'
-        ? 'سوريا، حماة - مشتل القاسيون • شركة متخصصة بالكامل في تجارة وزراعة الفستق الحلبي، إكثار الأصول المعتمدة، وتقديم الرعاية الحقلية المتكاملة.'
-        : 'Syria, Hama – Qasioun Nursery · Agricultural enterprise dedicated entirely to certified pistachio nursery propagation, orchard establishment, and Mediterranean cultivation.' }}
-      </p>
+      <!-- 2. Facebook Profile Card -->
+      <div class="facebook-profile-dossier">
+        <div class="social-dossier-top">
+          <div class="social-user-identity">
+            <div class="facebook-crest-avatar">
+              <img src="logo.png" alt="Mister Pistachio">
+            </div>
+            <div class="social-user-text">
+              <h3 class="social-display-name">
+                {{ i18n.currentLang() === 'ar' ? 'مستر بيستاشيو' : 'Mister Pistachio' }}
+              </h3>
+              <span class="facebook-username" dir="ltr">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                <span>Mister Pistachio</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Follow on Facebook CTA Button -->
+          <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="btn-facebook-action"
+            aria-label="Follow Mister Pistachio on Facebook">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            <span>{{ i18n.currentLang() === 'ar' ? 'متابعة على فيسبوك' : 'Follow on Facebook' }}</span>
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <p class="social-bio-strip">
+          {{ i18n.currentLang() === 'ar'
+          ? 'سوريا، حماة - مشتل القاسيون • شركة متخصصة بالكامل في تجارة وزراعة الفستق الحلبي، إكثار الأصول المعتمدة، وتقديم الرعاية الحقلية المتكاملة.'
+          : 'Syria, Hama – Qasioun Nursery · Agricultural enterprise dedicated entirely to certified pistachio nursery propagation, orchard establishment, and Mediterranean cultivation.' }}
+        </p>
+      </div>
+
     </div>
 
   </div>

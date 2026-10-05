@@ -33,7 +33,7 @@ export class Ucb1Component implements OnInit {
     const isAr = this.i18n.currentLang() === 'ar';
     this.seo.updateSeo({
       lang: this.i18n.currentLang(),
-      path: '/usb1',
+      path: '/ucb1',
       title: isAr
         ? 'أصل الفستق الهجين UCB-1 المعتمد | مستر بستاشيو'
         : 'UCB-1 Hybrid Pistachio Rootstock | Mister Pistachio',
@@ -57,7 +57,7 @@ export class Ucb1Component implements OnInit {
           '@type': 'ListItem',
           'position': 2,
           'name': isAr ? 'أصل UCB-1' : 'UCB-1 Rootstock',
-          'item': `https://misterpistachio.com/${this.i18n.currentLang()}/usb1`
+          'item': `https://misterpistachio.com/${this.i18n.currentLang()}/ucb1`
         }
       ]
     });

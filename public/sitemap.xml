@@ -50,16 +50,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://misterpistachio.com/ar/varieties"/>
   </url>
   <url>
-    <loc>https://misterpistachio.com/ar/usb1</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://misterpistachio.com/ar/usb1"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://misterpistachio.com/en/usb1"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://misterpistachio.com/ar/usb1"/>
+    <loc>https://misterpistachio.com/ar/ucb1</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misterpistachio.com/ar/ucb1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misterpistachio.com/en/ucb1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misterpistachio.com/ar/ucb1"/>
   </url>
   <url>
-    <loc>https://misterpistachio.com/en/usb1</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://misterpistachio.com/ar/usb1"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://misterpistachio.com/en/usb1"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://misterpistachio.com/ar/usb1"/>
+    <loc>https://misterpistachio.com/en/ucb1</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://misterpistachio.com/ar/ucb1"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://misterpistachio.com/en/ucb1"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://misterpistachio.com/ar/ucb1"/>
   </url>
   <url>
     <loc>https://misterpistachio.com/ar/articles</loc>
