@@ -435,8 +435,13 @@
   z-index: 1;
 }
 
-.bc-stream-top { top: 0; }
-.bc-stream-bottom { bottom: 0; }
+.bc-stream-top {
+  top: 0;
+}
+
+.bc-stream-bottom {
+  bottom: 0;
+}
 
 /* Right side */
 .bc-identity {
@@ -452,8 +457,8 @@
   font-family: 'Alex Brush', 'Great Vibes', cursive;
   font-size: 6.6cqw;
   line-height: 1;
-  color: #6E6E6E;
-  padding-left: 5cqw;
+  color: #C29A4A;
+  margin-right: 15px;
   white-space: nowrap;
 }
 
@@ -530,7 +535,7 @@ a.bc-line[href^="tel:"] span {
   background: #FFFFFF;
   border-radius: 24px;
   border: 1px solid rgba(194, 160, 115, 0.32);
-  box-shadow: 
+  box-shadow:
     0 16px 40px -8px rgba(18, 38, 24, 0.12),
     0 4px 14px rgba(0, 0, 0, 0.04),
     inset 0 0 0 1px rgba(255, 255, 255, 0.8);
@@ -545,7 +550,7 @@ a.bc-line[href^="tel:"] span {
 
 .authentic-business-card:hover {
   transform: none;
-  box-shadow: 
+  box-shadow:
     0 16px 40px -8px rgba(18, 38, 24, 0.12),
     0 4px 14px rgba(0, 0, 0, 0.04);
 }
@@ -702,10 +707,21 @@ a.bc-line[href^="tel:"] span {
   flex-shrink: 0;
 }
 
-.coord-gold-pin { color: #BFA370; }
-.coord-green-wa { color: #25D366; }
-.coord-gold-globe { color: #BFA370; }
-.coord-gold-mail { color: #BFA370; }
+.coord-gold-pin {
+  color: #BFA370;
+}
+
+.coord-green-wa {
+  color: #25D366;
+}
+
+.coord-gold-globe {
+  color: #BFA370;
+}
+
+.coord-gold-mail {
+  color: #BFA370;
+}
 
 .coord-label-text {
   font-weight: 500;
