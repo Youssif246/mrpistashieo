@@ -555,7 +555,7 @@
     "form": {
       "tag": "Inquiry Form",
       "title": "Send an Agronomic Inquiry",
-      "desc": "Fill out your project details below to open a direct, pre-filled WhatsApp conversation with our agronomic team.",
+      "desc": "Fill in your inquiry details below and our agronomic team will review your request and get in touch with you directly.",
       "name": "Full Name",
       "namePlaceholder": "e.g. Michael Smith",
       "phone": "Phone / WhatsApp",

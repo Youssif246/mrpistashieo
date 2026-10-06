@@ -233,7 +233,13 @@
             </div>
 
             <!-- Form Fields -->
-            <form (ngSubmit)="onSubmit()" class="editorial-document-form">
+            <form (ngSubmit)="onSubmit($event)" class="editorial-document-form">
+              <!-- Web3Forms Access Key & Configuration -->
+              <input type="hidden" name="access_key" value="496522ba-f583-41dc-a6b3-285e56f27251">
+              <input type="hidden" name="from_name" value="Mister Pistachio Website">
+              <input type="hidden" name="subject" [value]="i18n.currentLang() === 'ar' ? 'طلب استفسار زراعي جديد من موقع مستر بيستاشيو' : 'New Agronomic Inquiry from Mister Pistachio Website'">
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
               <!-- Full Name -->
               <div class="doc-field-wrap">
                 <label for="contact-name" class="doc-label">
@@ -259,9 +265,10 @@
                 <div class="doc-field-wrap">
                   <label for="contact-email" class="doc-label">
                     <span class="doc-label-text">{{ i18n.t().contact.form.email }}</span>
+                    <span class="doc-required" aria-hidden="true">*</span>
                   </label>
                   <input id="contact-email" name="email" type="email" class="doc-input" [(ngModel)]="email"
-                    [placeholder]="i18n.t().contact.form.emailPlaceholder">
+                    [placeholder]="i18n.t().contact.form.emailPlaceholder" required>
                 </div>
               </div>
 
@@ -287,23 +294,43 @@
                 </div>
               </div>
 
-              <!-- Project Details Textarea -->
+              <!-- Project Details / Message Textarea -->
               <div class="doc-field-wrap">
                 <label for="contact-details" class="doc-label">
                   <span class="doc-label-text">{{ i18n.t().contact.form.projectDetails }}</span>
+                  <span class="doc-required" aria-hidden="true">*</span>
                 </label>
-                <textarea id="contact-details" name="projectDetails" rows="4" class="doc-textarea"
-                  [(ngModel)]="projectDetails"
-                  [placeholder]="i18n.t().contact.form.projectDetailsPlaceholder"></textarea>
+                <textarea id="contact-details" name="message" rows="4" class="doc-textarea"
+                  [(ngModel)]="message"
+                  [placeholder]="i18n.t().contact.form.projectDetailsPlaceholder" required></textarea>
               </div>
 
-              <!-- Submit Action: Send Inquiry Request with appropriate icon -->
+              <!-- Submit Action: Send Inquiry Request with dynamic loading indicator -->
               <div class="doc-action-wrap">
-                <button type="submit" class="btn-editorial-submit">
-                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
-                  <span>{{ i18n.t().contact.form.submit }}</span>
+                <button type="submit" class="btn-editorial-submit" [disabled]="isSubmitting()">
+                  @if (isSubmitting()) {
+                    <i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i>
+                    <span>{{ i18n.currentLang() === 'ar' ? 'جاري الإرسال...' : 'Sending...' }}</span>
+                  } @else {
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                    <span>{{ i18n.t().contact.form.submit }}</span>
+                  }
                 </button>
               </div>
+
+              <!-- Feedback Messages -->
+              @if (submitStatus() === 'success') {
+                <div class="form-feedback success" role="alert">
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  <span>{{ statusMessage() }}</span>
+                </div>
+              }
+              @if (submitStatus() === 'error') {
+                <div class="form-feedback error" role="alert">
+                  <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                  <span>{{ statusMessage() }}</span>
+                </div>
+              }
             </form>
 
           </div>

@@ -1019,6 +1019,69 @@ a.bc-line[href^="tel:"] span {
   transform: scaleX(-1) translateY(-1px) translateX(3px);
 }
 
+.btn-editorial-submit:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.btn-editorial-submit:disabled i {
+  color: #FFFFFF;
+}
+
+/* Form Feedback Alerts */
+.form-feedback {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.94rem;
+  line-height: 1.55;
+  margin-top: 1rem;
+  animation: feedbackSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+:host-context(body.rtl) .form-feedback {
+  font-family: var(--font-ar-body);
+}
+
+.form-feedback.success {
+  background-color: #F0F7EB;
+  border: 1px solid #C5E2B8;
+  color: #1F5418;
+}
+
+.form-feedback.success i {
+  color: #388E3C;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.form-feedback.error {
+  background-color: #FDF2F2;
+  border: 1px solid #F6C5C5;
+  color: #9B1C1C;
+}
+
+.form-feedback.error i {
+  color: #E02424;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+@keyframes feedbackSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* ══════════════════════════════════════════════════════════════════════════
    3. NURSERY LOCATION EDITORIAL FEATURE / FINAL CTA BAND

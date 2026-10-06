@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, inject, OnInit, AfterViewInit, OnDestroy, ElementRef, signal, ChangeDetectorRef } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TranslationService } from '../../shared/translation.service';
 import { SeoService } from '../../shared/seo.service';
@@ -20,6 +20,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   readonly social = APP_CONFIG.social;
   private readonly seo = inject(SeoService);
   private readonly el = inject(ElementRef);
+  private readonly cdr = inject(ChangeDetectorRef);
   private gsapCtx?: gsap.Context;
 
   // Form Model
@@ -27,7 +28,12 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   phone = '';
   email = '';
   interest = 'General Pistachio Plants Inquiry';
-  projectDetails = '';
+  message = '';
+
+  // Form Submission Reactive State (Signals)
+  readonly isSubmitting = signal(false);
+  readonly submitStatus = signal<'idle' | 'success' | 'error'>('idle');
+  readonly statusMessage = signal('');
 
   ngOnInit(): void {
     const isAr = this.i18n.currentLang() === 'ar';
@@ -179,19 +185,59 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
     return APP_CONFIG.getWhatsAppUrl(msg);
   }
 
-  onSubmit(): void {
-    const isAr = this.i18n.currentLang() === 'ar';
-    const lines = [
-      isAr ? '🌱 استفسار جديد عبر الموقع الإلكتروني:' : '🌱 New Inquiry from Corporate Website:',
-      `${isAr ? 'الاسم' : 'Name'}: ${this.name || (isAr ? 'غير محدد' : 'Not provided')}`,
-      `${isAr ? 'الهاتف' : 'Phone'}: \u200E${this.phone || (isAr ? 'غير محدد' : 'Not provided')}`,
-      `${isAr ? 'البريد الإلكتروني' : 'Email'}: ${this.email || (isAr ? 'غير محدد' : 'Not provided')}`,
-      `${isAr ? 'الموضوع' : 'Interest'}: ${this.interest}`,
-      `${isAr ? 'تفاصيل المشروع' : 'Project Details'}: ${this.projectDetails || (isAr ? 'لا يوجد تفاصيل إضافية' : 'None')}`
-    ];
+  async onSubmit(event?: Event): Promise<void> {
+    if (event && typeof event.preventDefault === 'function') {
+      event.preventDefault();
+    }
 
-    const fullMessage = lines.join('\n');
-    const waUrl = APP_CONFIG.getWhatsAppUrl(fullMessage);
-    window.open(waUrl, '_blank', 'noopener,noreferrer');
+    if (this.isSubmitting()) return;
+
+    this.isSubmitting.set(true);
+    this.submitStatus.set('idle');
+    this.statusMessage.set('');
+    this.cdr.markForCheck();
+
+    const formData = new FormData();
+    formData.append('access_key', '496522ba-f583-41dc-a6b3-285e56f27251');
+    formData.append('from_name', 'Mister Pistachio Website');
+    formData.append('subject', this.i18n.currentLang() === 'ar'
+      ? `طلب استفسار جديد: ${this.name || 'عميل'} (${this.interest})`
+      : `New Inquiry: ${this.name || 'Client'} (${this.interest})`);
+    formData.append('name', this.name);
+    formData.append('phone', this.phone);
+    formData.append('email', this.email);
+    formData.append('interest', this.interest);
+    formData.append('message', this.message);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        this.submitStatus.set('success');
+        this.statusMessage.set(this.i18n.currentLang() === 'ar'
+          ? 'تم إرسال استفسارك بنجاح! سيتواصل معك فريقنا الزراعي في أقرب وقت.'
+          : 'Your inquiry has been submitted successfully! Our agronomic team will contact you shortly.');
+
+        this.name = '';
+        this.phone = '';
+        this.email = '';
+        this.message = '';
+      } else {
+        throw new Error(result.message || 'Submission error');
+      }
+    } catch {
+      this.submitStatus.set('error');
+      this.statusMessage.set(this.i18n.currentLang() === 'ar'
+        ? 'تعذر إرسال النموذج حالياً، يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة عبر واتساب.'
+        : 'Could not submit the form right now. Please try again or contact us directly via WhatsApp.');
+    } finally {
+      this.isSubmitting.set(false);
+      this.cdr.markForCheck();
+    }
   }
 }
