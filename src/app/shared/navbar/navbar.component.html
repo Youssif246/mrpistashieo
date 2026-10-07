@@ -102,20 +102,20 @@
 
       <!-- Social Media Platform Icons (Refined Editorial Botanical Styling) -->
       <div class="navbar-social-links" role="group" aria-label="Social Media">
+        <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-facebook" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
         <a [href]="config.social.instagram" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-instagram" aria-label="Instagram">
           <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a [href]="config.social.tiktok" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-tiktok" aria-label="TikTok">
-          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
         </a>
         <a [href]="config.social.x" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-x" aria-label="X (Twitter)">
           <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
         </a>
-        <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-facebook" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-        </a>
         <a [href]="config.social.youtube" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-youtube" aria-label="YouTube">
           <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.tiktok" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-tiktok" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
         </a>
       </div>
 
@@ -174,25 +174,25 @@
     <div class="mobile-actions">
       <!-- Mobile Social Media Icons (matching navbar styling) -->
       <div class="mobile-social-links" role="group" aria-label="Social Media">
+        <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-facebook"
+          (click)="closeMobileMenu()" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+        </a>
         <a [href]="config.social.instagram" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-instagram"
           (click)="closeMobileMenu()" aria-label="Instagram">
           <i class="fa-brands fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a [href]="config.social.tiktok" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-tiktok"
-          (click)="closeMobileMenu()" aria-label="TikTok">
-          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
         </a>
         <a [href]="config.social.x" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-x"
           (click)="closeMobileMenu()" aria-label="X (Twitter)">
           <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
         </a>
-        <a [href]="config.social.facebook" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-facebook"
-          (click)="closeMobileMenu()" aria-label="Facebook">
-          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
-        </a>
         <a [href]="config.social.youtube" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-youtube"
           (click)="closeMobileMenu()" aria-label="YouTube">
           <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+        </a>
+        <a [href]="config.social.tiktok" target="_blank" rel="noopener noreferrer" class="nav-social-icon social-tiktok"
+          (click)="closeMobileMenu()" aria-label="TikTok">
+          <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
         </a>
       </div>
     </div>

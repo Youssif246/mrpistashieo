@@ -47,7 +47,7 @@
         <!-- Large Custom Image Block (45-50% width) -->
         <div class="internal-hero-media">
           <div class="internal-hero-frame">
-            <img src="/hero-images/hero-contact.jpg" alt="Specialist pistachio nursery grounds and consultation estate"
+            <img src="/hero-images/hero-contact.webp" alt="Specialist pistachio nursery grounds and consultation estate"
               class="internal-hero-img" loading="eager">
             <div class="internal-hero-plate">
               <span class="plate-marker">{{ i18n.t().navbar.contact }}</span>
@@ -75,10 +75,56 @@
     </div>
 
     <div class="container-wide">
-      <div class="contact-editorial-composition">
+      
+      <!-- ══════════════════════════════════════════════════════════════════
+           1. TOP DUO: FOUNDER EDITORIAL QUOTE & BUSINESS CARD SIDE BY SIDE
+           ══════════════════════════════════════════════════════════════════ -->
+      <div class="contact-spread-duo-grid">
 
         <!-- ──────────────────────────────────────────────────────────────────
-             LEFT COLUMN: REDESIGNED ARCHITECTURAL LIAISON DESK
+             FOUNDER EDITORIAL QUOTE (MATCHING IMAGE 1 REFERENCE)
+             ────────────────────────────────────────────────────────────────── -->
+        <div class="founder-editorial-panel">
+          <div class="founder-quote-block">
+
+            <div class="founder-quote-header">
+              <div class="editorial-brand-eyebrow">
+                <span class="eyebrow-accent-line" aria-hidden="true"></span>
+                <span class="brand-eyebrow-text">{{ i18n.t().contact.founderQuote.tag }}</span>
+                <span class="brand-eyebrow-dot" aria-hidden="true">·</span>
+                <span class="brand-eyebrow-sub">Pistacia vera L.</span>
+              </div>
+            </div>
+
+            <!-- The 3 paragraphs requested by the user -->
+            <div class="founder-statement-text">
+              <p class="founder-para p-lead">
+                {{ i18n.t().contact.founderQuote.p1 }}
+              </p>
+              <p class="founder-para">
+                {{ i18n.t().contact.founderQuote.p2 }}
+              </p>
+              <p class="founder-para p-closing">
+                {{ i18n.t().contact.founderQuote.p3 }}
+              </p>
+            </div>
+
+            <!-- Founder Attribution (Avatar + Green Serif Name matching Image 1) -->
+            <div class="founder-identity-lockup">
+              <div class="founder-avatar-frame">
+                <img src="/yazan.png" alt="Yazan Alfares" class="founder-avatar-img" loading="lazy">
+              </div>
+              <div class="founder-name-group">
+                <h3 class="founder-name-display">{{ i18n.t().contact.founderQuote.author }}</h3>
+                <span class="founder-role-caption">{{ i18n.t().contact.founderQuote.role }}</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ──────────────────────────────────────────────────────────────────
+             ARCHITECTURAL LIAISON DOSSIER: BUSINESS CARD (IMAGE 2 REFERENCE)
              ────────────────────────────────────────────────────────────────── -->
         <div class="contact-dossier-panel">
           <div class="dossier-inner-content">
@@ -202,10 +248,55 @@
           </div>
         </div>
 
-        <!-- ──────────────────────────────────────────────────────────────────
-             RIGHT COLUMN: INQUIRY FORM (PRESERVED INTACT AS REQUESTED)
-             ────────────────────────────────────────────────────────────────── -->
-        <div class="contact-form-panel">
+      </div>
+
+      <!-- ══════════════════════════════════════════════════════════════════
+           2. INTERACTIVE FAQ-STYLE INQUIRY CARD (CLICK TO EXPAND INQUIRY FORM)
+           ══════════════════════════════════════════════════════════════════ -->
+      <div class="contact-faq-inquiry-container" id="inquiryAccordion">
+        <div class="faq-card-envelope" [class.is-expanded]="isFormOpen()">
+
+          <!-- FAQ Accordion Header / Trigger Button -->
+          <button type="button"
+                  class="faq-card-trigger"
+                  (click)="toggleForm()"
+                  [attr.aria-expanded]="isFormOpen()"
+                  aria-controls="contactFormPanel"
+                  id="faqFormToggleBtn">
+            <div class="faq-trigger-start">
+              <div class="faq-trigger-icon-box" aria-hidden="true">
+                <i class="fa-solid fa-file-pen"></i>
+              </div>
+              <div class="faq-trigger-copy">
+                <div class="faq-trigger-eyebrow">
+                  <span class="faq-eyebrow-dot"></span>
+                  <span>{{ i18n.t().contact.faqTrigger.badge }}</span>
+                </div>
+                <h3 class="faq-trigger-title">{{ i18n.t().contact.faqTrigger.title }}</h3>
+                <p class="faq-trigger-subtitle">{{ i18n.t().contact.faqTrigger.subtitle }}</p>
+              </div>
+            </div>
+
+            <div class="faq-trigger-action">
+              <span class="faq-action-pill">
+                {{ isFormOpen() ? i18n.t().contact.faqTrigger.closeAction : i18n.t().contact.faqTrigger.openAction }}
+              </span>
+              <span class="faq-toggle-circle" aria-hidden="true">
+                <i class="fa-solid fa-chevron-down" [class.rotate-180]="isFormOpen()"></i>
+              </span>
+            </div>
+          </button>
+
+          <!-- Collapsible Form Body -->
+          <div class="faq-card-collapse"
+               id="contactFormPanel"
+               role="region"
+               aria-labelledby="faqFormToggleBtn"
+               [class.is-open]="isFormOpen()">
+            <div class="faq-collapse-inner">
+
+              <!-- Preserved Contact Form Panel Intact -->
+              <div class="contact-form-panel">
           <div class="editorial-document-sheet">
 
             <!-- Sheet Corner Ambient Accent -->
@@ -336,7 +427,12 @@
           </div>
         </div>
 
+            </div>
+          </div>
+
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -352,7 +448,7 @@
             <img src="/botanical/pistachio-orchard-horizon.svg" alt="" loading="lazy">
           </div>
           <div class="botanical-shadow-wrapper botanical-shadow--bottom-right">
-            <img src="/botanical/real-pistachio-corner.png" alt="" loading="lazy">
+            <img src="/botanical/real-pistachio-corner.webp" alt="" loading="lazy">
           </div>
         </div>
 

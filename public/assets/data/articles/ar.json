@@ -7,7 +7,7 @@
     "category": "هندسة البساتين",
     "date": "1 أكتوبر 2026",
     "readTime": "9 دقائق قراءة",
-    "coverImage": "assets/images/articles/pistachio-orchard-guide.jpg",
+    "coverImage": "assets/images/articles/pistachio-orchard-guide/pistachio-orchard-guide.webp",
     "seo": {
       "title": "تأسيس بساتين الفستق الحلبي التجارية: دليل شامل | مستر بستاشيو",
       "description": "دليل زراعي تخصصي لتخطيط وغرس وإدارة مزارع الفستق الحلبي الاستثمارية بنجاح، يشمل التربة والمناخ والكثافة وتوزيع الملقحات."
@@ -43,7 +43,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/pistachio-orchard-layout.jpg",
+        "src": "assets/images/articles/pistachio-orchard-guide/pistachio-orchard-layout.webp",
         "alt": "تخطيط حقلي هندسي وتحديد مسافات الغرس لبساتين الفستق الحلبي بدقة متناهية"
       },
       {
@@ -100,7 +100,7 @@
     "category": "الأصناف والأصول",
     "date": "8 أكتوبر 2026",
     "readTime": "8 دقائق قراءة",
-    "coverImage": "assets/images/articles/choosing-rootstock-variety.jpg",
+    "coverImage": "assets/images/articles/choosing-rootstock-variety/choosing-rootstock-variety.webp",
     "seo": {
       "title": "أصول وأصناف الفستق الحلبي: مقارنة UCB1 وكيرمان وسيرورا | مستر بستاشيو",
       "description": "دليل المقارنة بين أصول الفستق الحلبي UCB-1 وكورنيكابرا وأتلانتيكا وكيفية اختيار الصنف المؤنث الأنسب لمناخ مزرعتك ونوعية تربتك."
@@ -128,7 +128,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/rootstock-graft-detail.jpg",
+        "src": "assets/images/articles/choosing-rootstock-variety/rootstock-graft-detail.webp",
         "alt": "لقطة مقربة لمنطقة التطعيم الدرعي الناجح على ساق شتلة أصل فستق معتمد"
       },
       {
@@ -185,7 +185,7 @@
     "category": "علوم التربة",
     "date": "15 أكتوبر 2026",
     "readTime": "8 دقائق قراءة",
-    "coverImage": "assets/images/articles/soil-preparation-pistachio.jpg",
+    "coverImage": "assets/images/articles/soil-preparation-pistachio/soil-preparation-pistachio.webp",
     "seo": {
       "title": "إعداد التربة والشق العميق لغرس الفستق الحلبي | مستر بستاشيو",
       "description": "دليل هندسة التربة والحراثة التحتية العميقة وتعديل خواص الأرض وتصريف المياه لضمان نمو عميق وصحي لجذور أشجار الفستق الحلبي."
@@ -205,7 +205,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/soil-strata-detail.jpg",
+        "src": "assets/images/articles/soil-preparation-pistachio/soil-strata-detail.webp",
         "alt": "قطاع استكشافي زراعي يوضح طبقات التربة ونفاذية الطبقات التحتية للجذور"
       },
       {
@@ -274,7 +274,7 @@
     "category": "إدارة الري والمياه",
     "date": "22 أكتوبر 2026",
     "readTime": "9 دقائق قراءة",
-    "coverImage": "assets/images/articles/irrigation-water-management.jpg",
+    "coverImage": "assets/images/articles/irrigation-water-management/irrigation-water-management.webp",
     "seo": {
       "title": "إدارة الري بالتنقيط في مزارع الفستق الحلبي | مستر بستاشيو",
       "description": "دليل علمي لجدولة الري بالتنقيط الدقيق وتطبيق تقنية الري الناقص المنظم (RDI) لزيادة تفتح ثمار الفستق الحلبي وترشيد المياه."
@@ -303,7 +303,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/drip-emitter-detail.jpg",
+        "src": "assets/images/articles/irrigation-water-management/drip-emitter-detail.webp",
         "alt": "خط ري بالتنقيط الدقيق مع نقاطات معوضة للضغط وحساس قياس رطوبة التربة"
       },
       {
@@ -360,7 +360,7 @@
     "category": "التقليم ورعاية المجموع الخضري",
     "date": "29 أكتوبر 2026",
     "readTime": "8 دقائق قراءة",
-    "coverImage": "assets/images/articles/pruning-early-management.jpg",
+    "coverImage": "assets/images/articles/pruning-early-management/pruning-early-management.webp",
     "seo": {
       "title": "تقليم أشجار الفستق الحلبي: التربية الكأسية والتشكيل | مستر بستاشيو",
       "description": "دليل تطبيقي للتقليم التكويني لأشجار الفستق الحلبي الحديثة، يشمل تحديد ارتفاع الجذع، واختيار الأفرع الرئيسية، والتقليم الصيفي لتحفيز التفريع."
@@ -384,7 +384,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/pruning-canopy-detail.jpg",
+        "src": "assets/images/articles/pruning-early-management/pruning-canopy-detail.webp",
         "alt": "قص جانبي دقيق على فرع هيكلي لشجرة فستق يحفز انبثاق نموات ثانوية قوية"
       },
       {
@@ -449,7 +449,7 @@
     "category": "التغذية والتسميد",
     "date": "12 أكتوبر 2026",
     "readTime": "8 دقائق قراءة",
-    "coverImage": "assets/images/articles/fertilization-nutrition-management.jpg",
+    "coverImage": "assets/images/articles/fertilization-nutrition-management/fertilization-nutrition-management.webp",
     "seo": {
       "title": "التسميد المتوازن لبساتين الفستق الحلبي: دليل الاحتياجات الغذائية | مستر بستاشيو",
       "description": "دليل تطبيقي لتسميد الفستق الحلبي وتغذية الأشجار بالنيتروجين والبوتاسيوم والزنك والبورون مع جداول تحليل الأنسجة الورقية وبرامج التسميد بالري."
@@ -473,7 +473,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/leaf-tissue-analysis.jpg",
+        "src": "assets/images/articles/fertilization-nutrition-management/leaf-tissue-analysis.webp",
         "alt": "بروتوكول جمع عينات الأوراق وتحليل الأنسجة النباتية لتحديد الاحتياجات السمادية بدقة"
       },
       {
@@ -534,7 +534,7 @@
     "category": "التطعيم والتربية الهيكلية",
     "date": "18 أكتوبر 2026",
     "readTime": "15 دقيقة قراءة",
-    "coverImage": "assets/images/articles/budding-planting-tree-training.jpg",
+    "coverImage": "assets/images/articles/budding-planting-tree-training/budding-planting-tree-training.webp",
     "seo": {
       "title": "الدليل المصور لغرس وتطعيم وتربية الفستق الحلبي (جامعة كاليفورنيا) | مستر بستاشيو",
       "description": "دليل ميداني كامل مستخلص من أبحاث روبرت بيدي (UC Davis): صور حقلية حقيقية، أدوات الغرس، ارتفاع التطعيم الميكانيكي (28-32 بوصة)، وبروتوكول التقليم الكأسي عبر 5 مواسم."
@@ -554,7 +554,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/rootstock-styles-comparison.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/rootstock-styles-comparison.webp",
         "alt": "أصول فستق حلبي نسيجية وبذرية داخل بيت محمي متطور مربوطة بدعامات استقامة عمودية"
       },
       {
@@ -571,7 +571,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/mini-sprinkler-basin-placement.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/mini-sprinkler-basin-placement.webp",
         "alt": "تثبيت خرطوم التنقيط بالدعامة مع ترك ارتخاء 6 بوصات ووضع النقاط عند قاعدة الجذع تماماً"
       },
       {
@@ -592,7 +592,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/handling-pistachio-tree-sleeve.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/handling-pistachio-tree-sleeve.webp",
         "alt": "حقل فستق حديث الغرس بصفوف منتظمة وخطوط تنقيط مستقيمة ومسافات دوران واسعة"
       },
       {
@@ -605,7 +605,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/balling-shovel-planting-hole.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/balling-shovel-planting-hole.webp",
         "alt": "مجرفة الشتل المقوسة Balling Shovel الأداة الميدانية المفضلة لغرس شتلات الفستق"
       },
       {
@@ -614,7 +614,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/avoiding-glazed-hole-sidewalls.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/avoiding-glazed-hole-sidewalls.webp",
         "alt": "جدران حفرة الغرس الملساء Glazed Sidewalls التي يجب تخشينها لتفادي حبس الجذور"
       },
       {
@@ -627,7 +627,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/berm-tree-basin-irrigation.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/berm-tree-basin-irrigation.webp",
         "alt": "شتلة فستق فتية مستقرة في حوض الري الفردي على مصطبة ترابية لضمان تجانس الرطوبة"
       },
       {
@@ -636,7 +636,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/rootball-moisture-overwatering-check.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/rootball-moisture-overwatering-check.webp",
         "alt": "استخدام مجس قياس رطوبة التربة لفحص قلب صلصلة الجذور وتجنب أضرار الري الزائد"
       },
       {
@@ -649,7 +649,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/trunk-protector-tube-field.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/trunk-protector-tube-field.webp",
         "alt": "انبثاق النموات القرمزية الفتية Maroon Leaves على شتلة الأصل دلالة على الجاهزية للتطعيم"
       },
       {
@@ -666,7 +666,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/critical-budding-height-28-inches.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/critical-budding-height-28-inches.webp",
         "alt": "برعم الطعم مثبت برباط مطاطي على ارتفاع 28-32 بوصة ويبدأ بالانبثاق بقوة"
       },
       {
@@ -679,7 +679,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/budded-tree-heading-field.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/budded-tree-heading-field.webp",
         "alt": "تطعيم شتلات الفستق في الحقل وتطويش نموات الأصل بنسبة 50% لدفع طرد الطعم"
       },
       {
@@ -692,7 +692,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/scion-training-stake-tying.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/scion-training-stake-tying.webp",
         "alt": "تربية طرود الطعم رأسياً على الدعامات مع حماية القواعد بالأكمام الكرتونية الواقية"
       },
       {
@@ -705,7 +705,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/summer-tipping-primary-scaffolds.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/summer-tipping-primary-scaffolds.webp",
         "alt": "تطويش قمم الأفرع الهيكلية الرئيسية عند طول 12-14 بوصة لإجبارها على التفريع الجانبي"
       },
       {
@@ -718,7 +718,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/micronutrient-deficiency-copper-zinc.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/micronutrient-deficiency-copper-zinc.webp",
         "alt": "أعراض نقص النحاس والزنك على الأفرع الفتية والالتواء الورقي الذي يستلزم التدخل بالتسميد"
       },
       {
@@ -727,7 +727,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/pistachio-pest-false-chinch-bug.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/pistachio-pest-false-chinch-bug.webp",
         "alt": "تجمع حشرات بق الفستق الكاذب False Chinch Bug على لحاء الشتلات الفتية وضرورة مكافحتها"
       },
       {
@@ -740,7 +740,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/primary-scaffold-vase-training.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/primary-scaffold-vase-training.webp",
         "alt": "التثبيت الصحيح لرأس الشجرة على الدعامة وتوزيع الأفرع الهيكلية الرئيسية بنظام الكأس"
       },
       {
@@ -753,7 +753,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/third-year-no-tipping-limb-girth.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/third-year-no-tipping-limb-girth.webp",
         "alt": "أشجار الفستق في السنة الثالثة مع نمو الأفرع الثلاثية دون تطويش لبناء سماكة وصلابة الخشب"
       },
       {
@@ -766,7 +766,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/avoiding-knuckle-cuts-pruning.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/avoiding-knuckle-cuts-pruning.webp",
         "alt": "أفرع فستق ثمرية بالغة توضح تمايز البراعم الزهرية والنموات الخضرية السليمة"
       },
       {
@@ -775,7 +775,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/mature-trained-pistachio-tree.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/mature-trained-pistachio-tree.webp",
         "alt": "شجرة فستق مكتملة التأسيس في عمر 6 سنوات بهيكل كأسي متوازن وجذع مهيأ للحصاد الآلي"
       },
       {

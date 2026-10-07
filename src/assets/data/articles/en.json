@@ -7,7 +7,7 @@
     "category": "Orchard Engineering",
     "date": "October 1, 2026",
     "readTime": "9 min read",
-    "coverImage": "assets/images/articles/pistachio-orchard-guide.jpg",
+    "coverImage": "assets/images/articles/pistachio-orchard-guide/pistachio-orchard-guide.webp",
     "seo": {
       "title": "Establishing a Commercial Pistachio Orchard: Complete Guide | Mister Pistachio",
       "description": "Comprehensive agronomic guide to planning, planting, and managing a high-yield commercial pistachio plantation. Expert advice on soil, climate, and tree density."
@@ -43,7 +43,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/pistachio-orchard-layout.jpg",
+        "src": "assets/images/articles/pistachio-orchard-guide/pistachio-orchard-layout.webp",
         "alt": "Agronomic field surveying and precision stake layout for pistachio plantation alignment"
       },
       {
@@ -100,7 +100,7 @@
     "category": "Varieties & Genetics",
     "date": "October 8, 2026",
     "readTime": "8 min read",
-    "coverImage": "assets/images/articles/choosing-rootstock-variety.jpg",
+    "coverImage": "assets/images/articles/choosing-rootstock-variety/choosing-rootstock-variety.webp",
     "seo": {
       "title": "Pistachio Rootstocks & Varieties Guide: UCB1, Kerman, Sirora | Mister Pistachio",
       "description": "Compare pistachio rootstocks UCB-1, Cornicabra, Atlantica and choose the ideal female cultivar (Kerman, Sirora, Larnaka) for your orchard's climate and soil."
@@ -128,7 +128,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/rootstock-graft-detail.jpg",
+        "src": "assets/images/articles/choosing-rootstock-variety/rootstock-graft-detail.webp",
         "alt": "Close-up detail of successful T-budding graft union on young pistachio rootstock stem"
       },
       {
@@ -185,7 +185,7 @@
     "category": "Soil Science",
     "date": "October 15, 2026",
     "readTime": "8 min read",
-    "coverImage": "assets/images/articles/soil-preparation-pistachio.jpg",
+    "coverImage": "assets/images/articles/soil-preparation-pistachio/soil-preparation-pistachio.webp",
     "seo": {
       "title": "Soil Preparation for Pistachio Planting: Deep Ripping & Amendments | Mister Pistachio",
       "description": "Master subsoil preparation, cross ripping, pH correction, and drainage engineering to give young pistachio roots unobstructed deep vertical growth."
@@ -205,7 +205,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/soil-strata-detail.jpg",
+        "src": "assets/images/articles/soil-preparation-pistachio/soil-strata-detail.webp",
         "alt": "Agronomic soil profile test pit showing stratified horizons and permeable root zone"
       },
       {
@@ -274,7 +274,7 @@
     "category": "Irrigation Engineering",
     "date": "October 22, 2026",
     "readTime": "9 min read",
-    "coverImage": "assets/images/articles/irrigation-water-management.jpg",
+    "coverImage": "assets/images/articles/irrigation-water-management/irrigation-water-management.webp",
     "seo": {
       "title": "Pistachio Irrigation Guide: Drip Systems & Deficit Management | Mister Pistachio",
       "description": "Learn precision drip irrigation schedules and Regulated Deficit Irrigation (RDI) strategies to optimize pistachio nut splitting and water-use efficiency."
@@ -303,7 +303,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/drip-emitter-detail.jpg",
+        "src": "assets/images/articles/irrigation-water-management/drip-emitter-detail.webp",
         "alt": "Precision pressure-compensating drip irrigation line and soil moisture capacitance probe"
       },
       {
@@ -360,7 +360,7 @@
     "category": "Canopy Architecture",
     "date": "October 29, 2026",
     "readTime": "8 min read",
-    "coverImage": "assets/images/articles/pruning-early-management.jpg",
+    "coverImage": "assets/images/articles/pruning-early-management/pruning-early-management.webp",
     "seo": {
       "title": "Pistachio Tree Pruning Guide: Formative & Canopy Architecture | Mister Pistachio",
       "description": "Step-by-step agronomic guide to formative pruning young pistachio trees: trunk heading, scaffold selection, open-center vase structure, and summer pinching."
@@ -384,7 +384,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/pruning-canopy-detail.jpg",
+        "src": "assets/images/articles/pruning-early-management/pruning-canopy-detail.webp",
         "alt": "Clean lateral pruning cut on pistachio scaffold branch promoting vigorous secondary shoot growth"
       },
       {
@@ -449,7 +449,7 @@
     "category": "Crop Nutrition",
     "date": "October 12, 2026",
     "readTime": "8 min read",
-    "coverImage": "assets/images/articles/fertilization-nutrition-management.jpg",
+    "coverImage": "assets/images/articles/fertilization-nutrition-management/fertilization-nutrition-management.webp",
     "seo": {
       "title": "Pistachio Orchard Fertilization & Mineral Nutrition Guide | Mister Pistachio",
       "description": "Commercial guide to pistachio tree nutrition, fertigation curves for N and K, micronutrient foliar sprays (Zn and B), and laboratory leaf tissue diagnostic standards."
@@ -473,7 +473,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/leaf-tissue-analysis.jpg",
+        "src": "assets/images/articles/fertilization-nutrition-management/leaf-tissue-analysis.webp",
         "alt": "Standardized field leaf sampling protocol and tissue analysis documentation for orchard nutrient diagnosis"
       },
       {
@@ -534,7 +534,7 @@
     "category": "Budding & Training",
     "date": "October 18, 2026",
     "readTime": "15 min read",
-    "coverImage": "assets/images/articles/budding-planting-tree-training.jpg",
+    "coverImage": "assets/images/articles/budding-planting-tree-training/budding-planting-tree-training.webp",
     "seo": {
       "title": "UC Davis Illustrated Pistachio Manual: Budding & Tree Training | Mister Pistachio",
       "description": "Exhaustive field guide by Robert H. Beede (UC Davis): authentic field photographs, planting tools, moisture monitoring, critical budding height (28-32\"), and 5-year open vase training."
@@ -554,7 +554,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/rootstock-styles-comparison.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/rootstock-styles-comparison.webp",
         "alt": "Modern nursery greenhouse displaying clonal UCB-1 pistachio rootstock saplings tied to tutor stakes"
       },
       {
@@ -571,7 +571,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/mini-sprinkler-basin-placement.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/mini-sprinkler-basin-placement.webp",
         "alt": "Drip line anchored to tutor stake with 6-inch slack loop and emitter positioned precisely at the trunk base"
       },
       {
@@ -592,7 +592,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/handling-pistachio-tree-sleeve.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/handling-pistachio-tree-sleeve.webp",
         "alt": "Uniformly spaced pistachio orchard blocks with laser-aligned drip lines and expansive tractor headlands"
       },
       {
@@ -605,7 +605,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/balling-shovel-planting-hole.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/balling-shovel-planting-hole.webp",
         "alt": "The curved balling shovel, recognized as the premier field tool for pistachio planting"
       },
       {
@@ -614,7 +614,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/avoiding-glazed-hole-sidewalls.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/avoiding-glazed-hole-sidewalls.webp",
         "alt": "Glazed sidewall inside an excavated planting hole that must be scarified to prevent root circling"
       },
       {
@@ -627,7 +627,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/berm-tree-basin-irrigation.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/berm-tree-basin-irrigation.webp",
         "alt": "Newly transplanted pistachio sapling centered in an engineered irrigation basin on a raised orchard berm"
       },
       {
@@ -636,7 +636,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/rootball-moisture-overwatering-check.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/rootball-moisture-overwatering-check.webp",
         "alt": "Soil moisture probe inserted directly into the young rootball to verify aeration and prevent waterlogging"
       },
       {
@@ -649,7 +649,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/trunk-protector-tube-field.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/trunk-protector-tube-field.webp",
         "alt": "Active flush of maroon juvenile leaves on a rootstock sapling signaling optimal cambial slippage for budding"
       },
       {
@@ -666,7 +666,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/critical-budding-height-28-inches.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/critical-budding-height-28-inches.webp",
         "alt": "Precision T-bud wrapped with budding rubber at 28-32 inches with the new scion shoot actively pushing"
       },
       {
@@ -679,7 +679,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/budded-tree-heading-field.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/budded-tree-heading-field.webp",
         "alt": "Field-budded rootstock showing standard 50% shoot tipping to direct sap flow into the emerging scion"
       },
       {
@@ -692,7 +692,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/scion-training-stake-tying.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/scion-training-stake-tying.webp",
         "alt": "Fast-growing scions tied vertically to stakes with protective cartons shielding base trunks"
       },
       {
@@ -705,7 +705,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/summer-tipping-primary-scaffolds.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/summer-tipping-primary-scaffolds.webp",
         "alt": "Summer tipping of primary scaffolds at 12-14 inches to trigger immediate lateral secondary branching"
       },
       {
@@ -718,7 +718,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/micronutrient-deficiency-copper-zinc.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/micronutrient-deficiency-copper-zinc.webp",
         "alt": "Foliar zinc and copper deficiency symptoms on young shoots requiring corrective foliar nutrition"
       },
       {
@@ -727,7 +727,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/pistachio-pest-false-chinch-bug.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/pistachio-pest-false-chinch-bug.webp",
         "alt": "False chinch bug cluster feeding on young pistachio trunk bark requiring urgent management"
       },
       {
@@ -740,7 +740,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/primary-scaffold-vase-training.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/primary-scaffold-vase-training.webp",
         "alt": "Proper placement of tree head tie supporting primary scaffolds in open vase training"
       },
       {
@@ -753,7 +753,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/third-year-no-tipping-limb-girth.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/third-year-no-tipping-limb-girth.webp",
         "alt": "Third-leaf pistachio tree with untipped tertiary branches building exceptional limb girth and upright structure"
       },
       {
@@ -766,7 +766,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/avoiding-knuckle-cuts-pruning.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/avoiding-knuckle-cuts-pruning.webp",
         "alt": "Mature pistachio canopy displaying healthy bud differentiation between vegetative shoots and flower clusters"
       },
       {
@@ -775,7 +775,7 @@
       },
       {
         "type": "image",
-        "src": "assets/images/articles/mature-trained-pistachio-tree.jpg",
+        "src": "assets/images/articles/budding-planting-tree-training/mature-trained-pistachio-tree.webp",
         "alt": "Fully trained 6-year-old dormant open-vase pistachio tree ready for commercial mechanical harvest"
       },
       {

@@ -32,7 +32,7 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
       description: isAr
         ? 'تعرف على قصة ورؤية مستر بستاشيو، ريادتنا في تقنيات إكثار أصول الفستق الحلبي، وشراكاتنا الإسبانية لتطوير البساتين في الشرق الأوسط.'
         : 'Discover Mister Pistachio, our clonal propagation nursery leadership, Spanish agronomic partnerships, and precision pistachio orchard engineering across the Mediterranean.',
-      image: 'about-images/nursery.png'
+      image: 'about-images/nursery.webp'
     });
 
     this.seo.setStructuredData('about-breadcrumb', {

@@ -26,7 +26,7 @@ export class SeoService {
   private readonly isBrowser = isPlatformBrowser(this.platformId);
 
   private readonly siteUrl = 'https://misterpistachio.com';
-  private readonly defaultImage = 'https://misterpistachio.com/home-images/hero.png';
+  private readonly defaultImage = 'https://misterpistachio.com/home-images/hero.webp';
 
   updateSeo(config: SeoConfig): void {
     const isAr = config.lang === 'ar';

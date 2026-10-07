@@ -1,11 +1,9 @@
 @if (isVisible()) {
-<div class="pistachio-brand-intro" role="dialog" aria-modal="true" aria-label="Brand Introduction" [class.is-fading]="isFading()">
+<div class="pistachio-brand-intro" role="dialog" aria-modal="true" aria-label="Brand Introduction"
+  [class.is-fading]="isFading()">
 
   <!-- Minimal Chic Skip Button -->
-  <button type="button"
-          class="intro-skip-link"
-          (click)="skipIntro()"
-          aria-label="Skip animation">
+  <button type="button" class="intro-skip-link" (click)="skipIntro()" aria-label="Skip animation">
     <span>{{ i18n.currentLang() === 'ar' ? 'تخطي' : 'SKIP' }}</span>
   </button>
 
@@ -18,66 +16,66 @@
         <defs>
           <!-- Authentic Realistic Pistachio Rootstock Seed Gradient -->
           <radialGradient id="rootstockSeedGrad" cx="36%" cy="28%" r="68%">
-            <stop offset="0%" stop-color="#CBB692"/>
-            <stop offset="28%" stop-color="#AC936D"/>
-            <stop offset="65%" stop-color="#846C4A"/>
-            <stop offset="88%" stop-color="#5E4B30"/>
-            <stop offset="100%" stop-color="#463620"/>
+            <stop offset="0%" stop-color="#CBB692" />
+            <stop offset="28%" stop-color="#AC936D" />
+            <stop offset="65%" stop-color="#846C4A" />
+            <stop offset="88%" stop-color="#5E4B30" />
+            <stop offset="100%" stop-color="#463620" />
           </radialGradient>
 
           <!-- Authentic Rootstock Seed Hilum Scar (Characteristic White/Cream Micropyle Eye) -->
           <linearGradient id="rootstockHilumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#FFFFFF"/>
-            <stop offset="40%" stop-color="#F4ECE0"/>
-            <stop offset="85%" stop-color="#D9C7A8"/>
-            <stop offset="100%" stop-color="#9C825E"/>
+            <stop offset="0%" stop-color="#FFFFFF" />
+            <stop offset="40%" stop-color="#F4ECE0" />
+            <stop offset="85%" stop-color="#D9C7A8" />
+            <stop offset="100%" stop-color="#9C825E" />
           </linearGradient>
 
           <!-- Tender Germination Shoot Core -->
           <linearGradient id="rootstockShootGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stop-color="#557B1A"/>
-            <stop offset="50%" stop-color="#6F9927"/>
-            <stop offset="100%" stop-color="#8DB836"/>
+            <stop offset="0%" stop-color="#557B1A" />
+            <stop offset="50%" stop-color="#6F9927" />
+            <stop offset="100%" stop-color="#8DB836" />
           </linearGradient>
 
           <!-- Sapling Woody Stem with Tender Reddish-Pink Juvenile Apex -->
           <linearGradient id="saplingStemGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stop-color="#4E3B29"/>
-            <stop offset="35%" stop-color="#5E4832"/>
-            <stop offset="65%" stop-color="#6F882C"/>
-            <stop offset="85%" stop-color="#AA4752"/>
-            <stop offset="100%" stop-color="#D84558"/>
+            <stop offset="0%" stop-color="#4E3B29" />
+            <stop offset="35%" stop-color="#5E4832" />
+            <stop offset="65%" stop-color="#6F882C" />
+            <stop offset="85%" stop-color="#AA4752" />
+            <stop offset="100%" stop-color="#D84558" />
           </linearGradient>
 
           <!-- Authentic Leathery Pistacia vera Foliage (Mature Olive) -->
           <linearGradient id="veraFoliageGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#98B446"/>
-            <stop offset="50%" stop-color="#7A9732"/>
-            <stop offset="100%" stop-color="#567220"/>
+            <stop offset="0%" stop-color="#98B446" />
+            <stop offset="50%" stop-color="#7A9732" />
+            <stop offset="100%" stop-color="#567220" />
           </linearGradient>
 
           <!-- Authentic Pistacia vera Juvenile Flush (Sprouting Coral Pink) -->
           <linearGradient id="veraPinkFlushGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#FFBAC4"/>
-            <stop offset="25%" stop-color="#FF5B71"/>
-            <stop offset="65%" stop-color="#E23048"/>
-            <stop offset="100%" stop-color="#9E182B"/>
+            <stop offset="0%" stop-color="#FFBAC4" />
+            <stop offset="25%" stop-color="#FF5B71" />
+            <stop offset="65%" stop-color="#E23048" />
+            <stop offset="100%" stop-color="#9E182B" />
           </linearGradient>
 
           <!-- Radiant Terminal Apex Crown Gradient (Botanical Pistachio Top Flush) -->
           <linearGradient id="veraPinkApexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#FFC6CF"/>
-            <stop offset="25%" stop-color="#FF5067"/>
-            <stop offset="65%" stop-color="#DE2A43"/>
-            <stop offset="100%" stop-color="#961325"/>
+            <stop offset="0%" stop-color="#FFC6CF" />
+            <stop offset="25%" stop-color="#FF5067" />
+            <stop offset="65%" stop-color="#DE2A43" />
+            <stop offset="100%" stop-color="#961325" />
           </linearGradient>
 
           <!-- Subtle Pistachio Drupe / Cluster Gradient -->
           <linearGradient id="veraClusterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#C85A6B"/>
-            <stop offset="45%" stop-color="#A24A58"/>
-            <stop offset="80%" stop-color="#7B9338"/>
-            <stop offset="100%" stop-color="#637C25"/>
+            <stop offset="0%" stop-color="#C85A6B" />
+            <stop offset="45%" stop-color="#A24A58" />
+            <stop offset="80%" stop-color="#7B9338" />
+            <stop offset="100%" stop-color="#637C25" />
           </linearGradient>
         </defs>
 
@@ -85,147 +83,148 @@
           <!-- 1. Authentic Realistic Pistachio Rootstock Seed -->
           <g class="seed-node" transform="translate(300, 550)">
             <!-- Soft Soil Contact Shadow -->
-            <ellipse cx="0" cy="22" rx="40" ry="10" fill="#15271E" opacity="0.16"/>
+            <ellipse cx="0" cy="22" rx="40" ry="10" fill="#15271E" opacity="0.16" />
 
             <!-- Main Rootstock Seed Body (Natural rounded lenticular obovate seed) -->
             <path class="rootstock-seed-body"
-                  d="M 0 -16 C 22 -16, 32 -4, 30 10 C 28 22, 16 26, 0 26 C -16 26, -28 22, -30 10 C -32 -4, -22 -16, 0 -16 Z"
-                  fill="url(#rootstockSeedGrad)"
-                  stroke="#4E3D26"
-                  stroke-width="1.3"/>
+              d="M 0 -16 C 22 -16, 32 -4, 30 10 C 28 22, 16 26, 0 26 C -16 26, -28 22, -30 10 C -32 -4, -22 -16, 0 -16 Z"
+              fill="url(#rootstockSeedGrad)" stroke="#4E3D26" stroke-width="1.3" />
 
             <!-- Natural 3D Specular Highlight / Curvature Reflection -->
-            <path d="M -18 0 C -15 -10, -5 -13, 8 -11 C 18 -9, 21 -3, 16 4 C 9 -3, -2 -4, -18 0 Z"
-                  fill="#FFFFFF"
-                  opacity="0.16"/>
+            <path d="M -18 0 C -15 -10, -5 -13, 8 -11 C 18 -9, 21 -3, 16 4 C 9 -3, -2 -4, -18 0 Z" fill="#FFFFFF"
+              opacity="0.16" />
 
             <!-- Natural Longitudinal Seed Suture Line -->
-            <path d="M 0 -16 C 4 0, 5 14, 0 26"
-                  fill="none"
-                  stroke="#46351F"
-                  stroke-width="0.9"
-                  opacity="0.4"
-                  stroke-dasharray="3 1.5"/>
+            <path d="M 0 -16 C 4 0, 5 14, 0 26" fill="none" stroke="#46351F" stroke-width="0.9" opacity="0.4"
+              stroke-dasharray="3 1.5" />
 
             <!-- Characteristic White Hilum Scar on Shoulder (Micropyle Eye) -->
             <g class="seed-hilum" transform="translate(-11, -7) rotate(-24)">
-              <ellipse cx="0" cy="0" rx="6" ry="3.8" fill="url(#rootstockHilumGrad)" stroke="#705634" stroke-width="0.8"/>
-              <ellipse cx="0.4" cy="0.1" rx="3.4" ry="2" fill="#FBF6EE"/>
-              <circle cx="0.2" cy="0.1" r="1" fill="#8B7049" opacity="0.75"/>
+              <ellipse cx="0" cy="0" rx="6" ry="3.8" fill="url(#rootstockHilumGrad)" stroke="#705634"
+                stroke-width="0.8" />
+              <ellipse cx="0.4" cy="0.1" rx="3.4" ry="2" fill="#FBF6EE" />
+              <circle cx="0.2" cy="0.1" r="1" fill="#8B7049" opacity="0.75" />
             </g>
 
             <!-- Emerging Green Germination Sprout tucked inside seed aperture -->
-            <path class="seed-sprout"
-                  d="M 0 -10 L 0 -17"
-                  stroke="url(#rootstockShootGrad)"
-                  stroke-width="4.2"
-                  stroke-linecap="round"/>
+            <path class="seed-sprout" d="M 0 -10 L 0 -17" stroke="url(#rootstockShootGrad)" stroke-width="4.2"
+              stroke-linecap="round" />
 
             <!-- Natural Germination Aperture at apex -->
-            <path d="M -4 -13 C -2 -16, 2 -16, 4 -13 C 2 -11, -2 -11, -4 -13 Z"
-                  fill="#3D5018"/>
+            <path d="M -4 -13 C -2 -16, 2 -16, 4 -13 C 2 -11, -2 -11, -4 -13 Z" fill="#3D5018" />
           </g>
 
           <!-- 2. Upward Growing Stem (Emerges directly from inside apex aperture at 300, 534) -->
-          <path class="main-stem-path"
-                d="M 300 534 C 298 480, 290 420, 302 360 C 312 305, 304 250, 298 180"
-                fill="none" stroke="url(#saplingStemGrad)" stroke-width="4.2" stroke-linecap="round"/>
+          <path class="main-stem-path" d="M 300 534 C 298 480, 290 420, 302 360 C 312 305, 304 250, 298 180" fill="none"
+            stroke="url(#saplingStemGrad)" stroke-width="4.2" stroke-linecap="round" />
 
           <!-- 3. Lower Left Compound Leaf (Sprouts and stays in radiant botanical pink) -->
           <g class="compound-leaf-left" transform="translate(295, 430)">
-            <path class="leaf-rachis rachis-left"
-                  d="M 0 0 C -45 -18, -100 -24, -165 -18"
-                  fill="none" stroke="#C23E50" stroke-width="2.2" stroke-linecap="round"/>
+            <path class="leaf-rachis rachis-left" d="M 0 0 C -45 -18, -100 -24, -165 -18" fill="none" stroke="#C23E50"
+              stroke-width="2.2" stroke-linecap="round" />
 
             <g class="leaflet-node leaflet-l1" transform="translate(-45, -12) rotate(-22)">
-              <ellipse cx="0" cy="0" rx="22" ry="11" fill="url(#veraPinkFlushGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-20" y1="0" x2="20" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="22" ry="11" fill="url(#veraPinkFlushGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-20" y1="0" x2="20" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-l2" transform="translate(-45, 8) rotate(32)">
-              <ellipse cx="0" cy="0" rx="22" ry="11" fill="url(#veraPinkFlushGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-20" y1="0" x2="20" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="22" ry="11" fill="url(#veraPinkFlushGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-20" y1="0" x2="20" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-l3" transform="translate(-105, -20) rotate(-18)">
-              <ellipse cx="0" cy="0" rx="24" ry="12" fill="url(#veraPinkFlushGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-22" y1="0" x2="22" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="24" ry="12" fill="url(#veraPinkFlushGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-22" y1="0" x2="22" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-l4" transform="translate(-105, 4) rotate(26)">
-              <ellipse cx="0" cy="0" rx="24" ry="12" fill="url(#veraPinkFlushGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-22" y1="0" x2="22" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="24" ry="12" fill="url(#veraPinkFlushGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-22" y1="0" x2="22" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-l5" transform="translate(-165, -16) rotate(-5)">
-              <ellipse cx="0" cy="0" rx="26" ry="13" fill="url(#veraPinkFlushGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-24" y1="0" x2="24" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="26" ry="13" fill="url(#veraPinkFlushGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-24" y1="0" x2="24" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
           </g>
 
           <!-- 4. Upper Right Compound Leaf (Sprouts and stays in radiant botanical pink) -->
           <g class="compound-leaf-right" transform="translate(305, 330)">
-            <path class="leaf-rachis rachis-right"
-                  d="M 0 0 C 45 -18, 100 -24, 165 -18"
-                  fill="none" stroke="#C23E50" stroke-width="2.2" stroke-linecap="round"/>
+            <path class="leaf-rachis rachis-right" d="M 0 0 C 45 -18, 100 -24, 165 -18" fill="none" stroke="#C23E50"
+              stroke-width="2.2" stroke-linecap="round" />
 
             <g class="leaflet-node leaflet-r1" transform="translate(45, -12) rotate(22)">
-              <ellipse cx="0" cy="0" rx="22" ry="11" fill="url(#veraPinkFlushGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-20" y1="0" x2="20" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="22" ry="11" fill="url(#veraPinkFlushGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-20" y1="0" x2="20" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-r2" transform="translate(45, 8) rotate(-32)">
-              <ellipse cx="0" cy="0" rx="22" ry="11" fill="url(#veraPinkFlushGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-20" y1="0" x2="20" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="22" ry="11" fill="url(#veraPinkFlushGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-20" y1="0" x2="20" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-r3" transform="translate(105, -20) rotate(18)">
-              <ellipse cx="0" cy="0" rx="24" ry="12" fill="url(#veraPinkFlushGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-22" y1="0" x2="22" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="24" ry="12" fill="url(#veraPinkFlushGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-22" y1="0" x2="22" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-r4" transform="translate(105, 4) rotate(-26)">
-              <ellipse cx="0" cy="0" rx="24" ry="12" fill="url(#veraPinkFlushGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-22" y1="0" x2="22" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="24" ry="12" fill="url(#veraPinkFlushGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-22" y1="0" x2="22" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-r5" transform="translate(165, -16) rotate(5)">
-              <ellipse cx="0" cy="0" rx="26" ry="13" fill="url(#veraPinkFlushGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-24" y1="0" x2="24" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="26" ry="13" fill="url(#veraPinkFlushGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-24" y1="0" x2="24" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
           </g>
 
           <!-- 5. Terminal Apex Crown Leaf (Vibrant Pink Botanical Flush - Always radiant pink) -->
           <g class="compound-leaf-apex" transform="translate(298, 200)">
-            <path class="leaf-rachis rachis-apex"
-                  d="M 0 0 C -8 -35, 12 -70, 0 -105"
-                  fill="none" stroke="#C23E50" stroke-width="2.2" stroke-linecap="round"/>
+            <path class="leaf-rachis rachis-apex" d="M 0 0 C -8 -35, 12 -70, 0 -105" fill="none" stroke="#C23E50"
+              stroke-width="2.2" stroke-linecap="round" />
 
             <g class="leaflet-node leaflet-a1" transform="translate(-18, -40) rotate(-35)">
-              <ellipse cx="0" cy="0" rx="20" ry="10" fill="url(#veraPinkApexGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-18" y1="0" x2="18" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="20" ry="10" fill="url(#veraPinkApexGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-18" y1="0" x2="18" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-a2" transform="translate(18, -40) rotate(35)">
-              <ellipse cx="0" cy="0" rx="20" ry="10" fill="url(#veraPinkApexGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-18" y1="0" x2="18" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="20" ry="10" fill="url(#veraPinkApexGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-18" y1="0" x2="18" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-a3" transform="translate(-16, -75) rotate(-25)">
-              <ellipse cx="0" cy="0" rx="21" ry="11" fill="url(#veraPinkApexGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-19" y1="0" x2="19" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="21" ry="11" fill="url(#veraPinkApexGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-19" y1="0" x2="19" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-a4" transform="translate(16, -75) rotate(25)">
-              <ellipse cx="0" cy="0" rx="21" ry="11" fill="url(#veraPinkApexGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-19" y1="0" x2="19" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="21" ry="11" fill="url(#veraPinkApexGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-19" y1="0" x2="19" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
             <g class="leaflet-node leaflet-a5" transform="translate(0, -112)">
-              <ellipse cx="0" cy="0" rx="23" ry="12" fill="url(#veraPinkApexGrad)" stroke="#8A1827" stroke-width="0.8"/>
-              <line x1="-21" y1="0" x2="21" y2="0" stroke="#FFB8C1" stroke-width="0.8"/>
+              <ellipse cx="0" cy="0" rx="23" ry="12" fill="url(#veraPinkApexGrad)" stroke="#8A1827"
+                stroke-width="0.8" />
+              <line x1="-21" y1="0" x2="21" y2="0" stroke="#FFB8C1" stroke-width="0.8" />
             </g>
           </g>
 
           <!-- 6. Subtle Pistachio Fruit Clusters in Axils -->
           <g class="pistachio-cluster-node cluster-left" transform="translate(285, 385)">
-            <ellipse cx="-8" cy="-5" rx="11" ry="7.5" transform="rotate(-15 -8 -5)" fill="url(#veraClusterGrad)"/>
-            <ellipse cx="-16" cy="4" rx="10" ry="7" transform="rotate(22 -16 4)" fill="url(#veraClusterGrad)"/>
-            <ellipse cx="-4" cy="8" rx="11" ry="7.5" transform="rotate(-8 -4 8)" fill="url(#veraClusterGrad)"/>
+            <ellipse cx="-8" cy="-5" rx="11" ry="7.5" transform="rotate(-15 -8 -5)" fill="url(#veraClusterGrad)" />
+            <ellipse cx="-16" cy="4" rx="10" ry="7" transform="rotate(22 -16 4)" fill="url(#veraClusterGrad)" />
+            <ellipse cx="-4" cy="8" rx="11" ry="7.5" transform="rotate(-8 -4 8)" fill="url(#veraClusterGrad)" />
           </g>
 
           <g class="pistachio-cluster-node cluster-right" transform="translate(315, 295)">
-            <ellipse cx="8" cy="-5" rx="11" ry="7.5" transform="rotate(15 8 -5)" fill="url(#veraClusterGrad)"/>
-            <ellipse cx="16" cy="4" rx="10" ry="7" transform="rotate(-22 16 4)" fill="url(#veraClusterGrad)"/>
-            <ellipse cx="5" cy="9" rx="11" ry="7.5" transform="rotate(8 5 9)" fill="url(#veraClusterGrad)"/>
+            <ellipse cx="8" cy="-5" rx="11" ry="7.5" transform="rotate(15 8 -5)" fill="url(#veraClusterGrad)" />
+            <ellipse cx="16" cy="4" rx="10" ry="7" transform="rotate(-22 16 4)" fill="url(#veraClusterGrad)" />
+            <ellipse cx="5" cy="9" rx="11" ry="7.5" transform="rotate(8 5 9)" fill="url(#veraClusterGrad)" />
           </g>
         </g>
       </svg>
@@ -234,14 +233,12 @@
     <!-- 2. Centered Luxury Brand Reveal Lockup -->
     <div class="intro-brand-reveal">
       <div class="brand-logotype-wrap">
-        <img src="logo.png" 
-             [alt]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'" 
-             class="brand-logotype-img brand-logotype" 
-             width="260" 
-             height="80">
+        <img src="logo.png" [alt]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'"
+          class="brand-logotype-img brand-logotype" width="260" height="80">
       </div>
       <p class="brand-tagline">
-        {{ i18n.currentLang() === 'ar' ? 'زراعة وتطعيم الفستق الحلبي • مشاتل وأصول معتمدة' : 'SPECIALIST PISTACHIO NURSERY & CULTIVATION' }}
+        {{ i18n.currentLang() === 'ar' ? 'زراعة وتطعيم الفستق الحلبي • مشاتل وأصول معتمدة' : 'SPECIALIST PISTACHIO
+        NURSERY & CULTIVATION' }}
       </p>
     </div>
 

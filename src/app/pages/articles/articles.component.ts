@@ -49,7 +49,7 @@ export class ArticlesComponent implements OnInit {
       path: '/articles',
       title,
       description,
-      image: 'articles-images/banner.png'
+      image: 'assets/images/articles/pistachio-orchard-guide/pistachio-orchard-guide.webp'
     });
 
     this.seo.setStructuredData('articles-breadcrumb', {

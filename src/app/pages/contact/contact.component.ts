@@ -35,8 +35,21 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   readonly submitStatus = signal<'idle' | 'success' | 'error'>('idle');
   readonly statusMessage = signal('');
 
+  // Accordion FAQ Card State for Contact Form
+  readonly isFormOpen = signal(false);
+
+  toggleForm(): void {
+    this.isFormOpen.update(open => !open);
+    this.cdr.markForCheck();
+  }
+
   ngOnInit(): void {
     const isAr = this.i18n.currentLang() === 'ar';
+
+    if (typeof window !== 'undefined' && (window.location.hash === '#inquiry' || window.location.hash === '#form')) {
+      this.isFormOpen.set(true);
+    }
+
     this.seo.updateSeo({
       lang: this.i18n.currentLang(),
       path: '/contact',
@@ -46,7 +59,7 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
       description: isAr
         ? 'تواصل مع فريق مستر بستاشيو المتخصص للحصول على استشارات زراعية، حجز شتلات UCB1، وتخطيط مشاريع بساتين الفستق الحلبي.'
         : 'Get in touch with Mister Pistachio agricultural specialists for technical consultations, certified UCB1 rootstock reservations, and orchard development planning.',
-      image: 'contact-images/contact-hero.png'
+      image: 'contact-images/contact-hero.webp'
     });
 
     this.seo.setStructuredData('contact-breadcrumb', {
@@ -111,18 +124,20 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       }
 
-      // 2. SPREAD SECTION ENTRANCE (DOSSIER & INQUIRY FORM - PATTERN C & D)
+      // 2. SPREAD SECTION ENTRANCE (FOUNDER QUOTE, DOSSIER & FAQ CARD)
       const spreadSection = this.el.nativeElement.querySelector('#contactSpread') as HTMLElement | null;
       if (spreadSection) {
+        const founderPanel = spreadSection.querySelector('.founder-editorial-panel');
         const dossierPanel = spreadSection.querySelector('.contact-dossier-panel');
-        const formPanel = spreadSection.querySelector('.contact-form-panel');
         const cardShowcase = spreadSection.querySelector('.luxury-card-showcase-wrapper');
+        const faqCard = spreadSection.querySelector('.contact-faq-inquiry-container');
 
         if (cardShowcase) gsap.set(cardShowcase, { opacity: 1, y: 0 });
 
         if (prefersReducedMotion) {
+          if (founderPanel) gsap.set(founderPanel, { opacity: 1, y: 0 });
           if (dossierPanel) gsap.set(dossierPanel, { opacity: 1, y: 0 });
-          if (formPanel) gsap.set(formPanel, { opacity: 1, y: 0 });
+          if (faqCard) gsap.set(faqCard, { opacity: 1, y: 0 });
         } else {
           const tl = gsap.timeline({
             scrollTrigger: {
@@ -132,8 +147,9 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
             }
           });
 
-          if (dossierPanel) tl.to(dossierPanel, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
-          if (formPanel) tl.to(formPanel, { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out' }, '-=0.6');
+          if (founderPanel) tl.fromTo(founderPanel, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' });
+          if (dossierPanel) tl.fromTo(dossierPanel, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }, '-=0.5');
+          if (faqCard) tl.fromTo(faqCard, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.4');
         }
       }
 

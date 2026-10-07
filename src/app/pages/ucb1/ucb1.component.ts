@@ -40,7 +40,7 @@ export class Ucb1Component implements OnInit {
       description: isAr
         ? 'دليل شامل حول الأصل الهجين UCB-1: مقاومة الفيتوفثورا والديدان الثعبانية، تحمل الملوحة العالية، وقوة النمو المتسارعة للإنتاج التجاري المبكر.'
         : 'Comprehensive technical guide on certified clonal UCB-1 rootstocks: Phytophthora and nematode resistance, extreme salinity tolerance, and vigorous commercial precocity.',
-      image: 'products-images/hero-pistachio.png'
+      image: 'products-images/ucb1/ucb1-orchard.webp'
     });
 
     this.seo.setStructuredData('ucb1-breadcrumb', {

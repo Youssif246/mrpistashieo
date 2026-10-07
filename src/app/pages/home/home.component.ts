@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       description: isAr
         ? 'مشتل زراعي رائد متخصص في إكثار أصول الفستق الحلبي المعتمدة (UCB1، البطم)، وتأسيس البساتين النموذجية بأعلى المعايير الإسبانية والعالمية.'
         : 'Certified pistachio nursery specializing in clonal rootstocks (UCB1, Atlantica), grafted saplings, and precision Mediterranean orchard establishment.',
-      image: 'home-images/hero.png'
+      image: 'home-images/hero.webp'
     });
 
     this.seo.setStructuredData('org-schema', {
@@ -81,31 +81,58 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       this.initMonographAnimation(prefersReducedMotion);
       this.initNurseryAnimation(prefersReducedMotion);
       this.initJourneyAnimation(prefersReducedMotion);
+      this.initSocialAnimation(prefersReducedMotion);
       this.initBotanicalParallax(prefersReducedMotion);
     }, this.el);
   }
 
   // ═══════════════════════════════════════════════════════════════
-  // 1. HERO ENTRANCE (PATTERN A) & BOTANICAL PARALLAX
-  // Zero flicker: Content is rendered immediately, parallax is subtle
+  // 1. HERO ENTRANCE (CALM & EDITORIAL) & BOTANICAL PARALLAX
   // ═══════════════════════════════════════════════════════════════
   private initHeroAnimation(prefersReducedMotion: boolean): void {
     const heroSection = this.el.nativeElement.querySelector('.hero') as HTMLElement | null;
     if (!heroSection) return;
 
     const heroImg = heroSection.querySelector('.hero-backdrop-img') as HTMLElement | null;
+    const eyebrow = heroSection.querySelector('.hero-eyebrow') as HTMLElement | null;
+    const title   = heroSection.querySelector('.hero-title') as HTMLElement | null;
+    const desc    = heroSection.querySelector('.hero-description') as HTMLElement | null;
+    const cta     = heroSection.querySelector('.hero-cta-row') as HTMLElement | null;
 
-    if (prefersReducedMotion) return;
+    if (prefersReducedMotion) {
+      [eyebrow, title, desc, cta].forEach(el => el && gsap.set(el, { opacity: 1, y: 0 }));
+      return;
+    }
+
+    // Hero entrance timeline - calm, subtle and editorial
+    const heroTl = gsap.timeline({ defaults: { ease: 'power2.out' }, delay: 0.1 });
 
     if (heroImg) {
+      heroTl.fromTo(heroImg, { scale: 1.05 }, { scale: 1, duration: 1.6, ease: 'power2.out' }, 0);
+    }
+    if (eyebrow) {
+      heroTl.fromTo(eyebrow, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.65 }, 0.15);
+    }
+    if (title) {
+      heroTl.fromTo(title, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.8 }, 0.3);
+    }
+    if (desc) {
+      heroTl.fromTo(desc, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.75 }, 0.45);
+    }
+    if (cta) {
+      heroTl.fromTo(cta, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.65 }, 0.6);
+    }
+
+    // Parallax on scroll
+    if (heroImg) {
       gsap.to(heroImg, {
-        yPercent: 10,
+        yPercent: 8,
         ease: 'none',
         scrollTrigger: {
           trigger: heroSection,
           start: 'top top',
           end: 'bottom top',
-          scrub: 0.5
+          scrub: 0.6
         }
       });
     }
@@ -115,7 +142,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   // 2. BRAND MANIFESTO & CONTINUOUS TRAIL ENTRANCE
   // ═══════════════════════════════════════════════════════════════
   private initManifestoAnimation(prefersReducedMotion: boolean): void {
-    const section = document.getElementById('agricultural-specialization');
+    const section = this.el.nativeElement.querySelector('#agricultural-specialization') as HTMLElement | null;
     if (!section) return;
 
     const headlineBlock = section.querySelector('.manifesto-headline-block');
@@ -138,32 +165,34 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       }
     });
 
-    if (headlineBlock) tl.to(headlineBlock, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' });
-    if (narrative)     tl.to(narrative,     { opacity: 1, y: 0, duration: 0.65, ease: 'power2.out' }, '-=0.45');
-    if (midDivider)    tl.to(midDivider,    { opacity: 1, scaleX: 1, duration: 0.6, ease: 'power2.out' }, '-=0.35');
+    if (headlineBlock) tl.fromTo(headlineBlock, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
+    if (narrative)     tl.fromTo(narrative,     { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }, '-=0.5');
+    if (midDivider)    tl.fromTo(midDivider,    { scaleX: 0, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 0.65, ease: 'power2.out' }, '-=0.4');
     if (stations.length > 0) {
-      tl.to(stations, { opacity: 1, y: 0, duration: 0.7, stagger: 0.16, ease: 'power2.out' }, '-=0.35');
+      tl.fromTo(stations, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, stagger: 0.15, ease: 'power2.out' }, '-=0.35');
     }
 
     if (branch) {
-      gsap.to(branch, {
-        opacity: 0.8,
-        y: 0,
-        rotate: 0,
-        scale: 1,
-        duration: 1.1,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 85%',
-          once: true
+      gsap.fromTo(branch,
+        { opacity: 0, y: 20, rotate: -3 },
+        {
+          opacity: 0.8,
+          y: 0,
+          rotate: 0,
+          duration: 1.1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 85%',
+            once: true
+          }
         }
-      });
+      );
     }
   }
 
   // ═══════════════════════════════════════════════════════════════
-  // 3. EDITORIAL SERVICE PANELS ENTRANCE (PATTERN C & D)
+  // 3. EDITORIAL SERVICE PANELS ENTRANCE
   // ═══════════════════════════════════════════════════════════════
   private initServicesAnimation(prefersReducedMotion: boolean): void {
     const section = this.el.nativeElement.querySelector('.section-service-index') as HTMLElement | null;
@@ -183,22 +212,22 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: 'top 78%',
+        start: 'top 80%',
         once: true
       }
     });
 
-    if (header) tl.to(header, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' });
+    if (header) tl.fromTo(header, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
     if (panels.length > 0) {
-      tl.to(panels, { opacity: 1, y: 0, duration: 0.8, stagger: 0.18, ease: 'power2.out' }, '-=0.45');
+      tl.fromTo(panels, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.85, stagger: 0.16, ease: 'power2.out' }, '-=0.45');
     }
     if (footer) {
-      tl.to(footer, { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' }, '-=0.3');
+      tl.fromTo(footer, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.3');
     }
   }
 
   // ═══════════════════════════════════════════════════════════════
-  // 4. ARCHITECTURAL BOTANICAL MONOGRAPH ENTRANCE (PATTERNS B, C, D)
+  // 4. ARCHITECTURAL BOTANICAL MONOGRAPH ENTRANCE
   // ═══════════════════════════════════════════════════════════════
   private initMonographAnimation(prefersReducedMotion: boolean): void {
     const section = this.el.nativeElement.querySelector('.section-botanical-monograph') as HTMLElement | null;
@@ -221,18 +250,18 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: 'top 78%',
+        start: 'top 80%',
         once: true
       }
     });
 
-    if (header)        tl.to(header,        { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' });
-    if (specimenFrame) tl.to(specimenFrame, { opacity: 1, scale: 1, duration: 0.85, ease: 'power2.out' }, '-=0.45');
+    if (header)        tl.fromTo(header,        { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
+    if (specimenFrame) tl.fromTo(specimenFrame, { opacity: 0, scale: 0.96, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.9, ease: 'power2.out' }, '-=0.45');
     if (cards.length > 0) {
-      tl.to(cards, { opacity: 1, y: 0, duration: 0.75, stagger: 0.16, ease: 'power2.out' }, '-=0.55');
+      tl.fromTo(cards, { opacity: 0, y: 25 }, { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power2.out' }, '-=0.55');
     }
     if (footer) {
-      tl.to(footer, { opacity: 1, y: 0, duration: 0.55, ease: 'power2.out' }, '-=0.3');
+      tl.fromTo(footer, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }, '-=0.3');
     }
 
     if (diagram) {
@@ -250,7 +279,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   // ═══════════════════════════════════════════════════════════════
-  // 5. NURSERY CULTIVATION ENTRANCE (PATTERNS B & C)
+  // 5. NURSERY CULTIVATION ENTRANCE
   // ═══════════════════════════════════════════════════════════════
   private initNurseryAnimation(prefersReducedMotion: boolean): void {
     const section = this.el.nativeElement.querySelector('.section-nursery-editorial') as HTMLElement | null;
@@ -270,15 +299,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: section,
-        start: 'top 78%',
+        start: 'top 80%',
         once: true
       }
     });
 
-    if (editorialCol) tl.to(editorialCol, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
-    if (heroFrame)    tl.to(heroFrame,    { opacity: 1, scale: 1, duration: 0.85, ease: 'power2.out' }, '-=0.5');
+    if (editorialCol) tl.fromTo(editorialCol, { opacity: 0, y: 25 }, { opacity: 1, y: 0, duration: 0.85, ease: 'power2.out' });
+    if (heroFrame)    tl.fromTo(heroFrame,    { opacity: 0, scale: 0.96, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.9, ease: 'power2.out' }, '-=0.5');
     if (specs.length > 0) {
-      tl.to(specs, { opacity: 1, y: 0, duration: 0.7, stagger: 0.14, ease: 'power2.out' }, '-=0.4');
+      tl.fromTo(specs, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.75, stagger: 0.14, ease: 'power2.out' }, '-=0.4');
     }
   }
 
@@ -286,37 +315,60 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   // 6. CULTIVATION JOURNEY (SVG + Stages + Harvest Image)
   // ═══════════════════════════════════════════════════════════════
   private initJourneyAnimation(prefersReducedMotion: boolean): void {
-    const section    = document.getElementById('cultivationJourneySection');
-    const svgPath    = document.getElementById('journeySvgPath') as SVGPathElement | null;
-    const harvestImg = document.getElementById('harvestClimaxImg') as HTMLElement | null;
-    const stages     = gsap.utils.toArray('.journey-stage-step') as HTMLElement[];
-    const header     = section?.querySelector('.journey-editorial-header');
+    const section    = this.el.nativeElement.querySelector('#cultivationJourneySection') as HTMLElement | null;
+    if (!section) return;
+
+    const svgPath    = section.querySelector('#journeySvgPath') as SVGPathElement | null;
+    const harvestImg = section.querySelector('#harvestClimaxImg') as HTMLElement | null;
+    const stages     = gsap.utils.toArray(section.querySelectorAll('.journey-stage-step')) as HTMLElement[];
+    const header     = section.querySelector('.journey-editorial-header');
+    const plate      = section.querySelector('.harvest-showcase-plate');
 
     stages.forEach((s, i) => {
       s.classList.toggle('is-active', i === 0);
     });
 
-    if (harvestImg) {
-      gsap.set(harvestImg, { opacity: 1, filter: 'none' });
-    }
-
-    if (header && !prefersReducedMotion) {
-      gsap.to(header, {
-        opacity: 1,
-        y: 0,
-        duration: 0.8,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: section,
-          start: 'top 80%',
-          once: true
-        }
-      });
-    }
-
-    if (prefersReducedMotion || stages.length === 0) {
+    if (prefersReducedMotion) {
+      if (header) gsap.set(header, { opacity: 1, y: 0 });
+      if (plate)  gsap.set(plate,  { opacity: 1, y: 0 });
+      if (harvestImg) gsap.set(harvestImg, { opacity: 1, filter: 'none' });
       if (svgPath) gsap.set(svgPath, { strokeDashoffset: 0 });
       return;
+    }
+
+    if (header) {
+      gsap.fromTo(header,
+        { opacity: 0, y: 24 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.85,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 80%',
+            once: true
+          }
+        }
+      );
+    }
+
+    if (plate) {
+      gsap.fromTo(plate,
+        { opacity: 0, y: 24, scale: 0.98 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.85,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 78%',
+            once: true
+          }
+        }
+      );
     }
 
     if (harvestImg) {
@@ -328,7 +380,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           scale: 1.06,
           ease: 'none',
           scrollTrigger: {
-            trigger: '#cultivationJourneySection',
+            trigger: section,
             start: 'top bottom',
             end: 'bottom top',
             scrub: 0.5
@@ -342,7 +394,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const pathLength = svgPath.getTotalLength() || 1000;
     gsap.set(svgPath, { strokeDasharray: pathLength, strokeDashoffset: pathLength });
 
-    const timelineTrack = document.getElementById('journeyTimelineTrack');
+    const timelineTrack = section.querySelector('#journeyTimelineTrack');
     if (!timelineTrack) return;
 
     const lineTl = gsap.timeline({
@@ -373,6 +425,36 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         });
       });
     });
+  }
+
+  // ═══════════════════════════════════════════════════════════════
+  // 7. SOCIAL DEDICATED SECTION ENTRANCE
+  // ═══════════════════════════════════════════════════════════════
+  private initSocialAnimation(prefersReducedMotion: boolean): void {
+    const section = this.el.nativeElement.querySelector('#socialSection') as HTMLElement | null;
+    if (!section) return;
+
+    const header = section.querySelector('.social-dedicated-header');
+    const cards  = section.querySelectorAll('.instagram-profile-dossier, .facebook-profile-dossier');
+
+    if (prefersReducedMotion) {
+      if (header) gsap.set(header, { opacity: 1, y: 0 });
+      cards.forEach(c => gsap.set(c, { opacity: 1, y: 0 }));
+      return;
+    }
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 82%',
+        once: true
+      }
+    });
+
+    if (header) tl.fromTo(header, { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
+    if (cards.length > 0) {
+      tl.fromTo(cards, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.85, stagger: 0.18, ease: 'power2.out' }, '-=0.45');
+    }
   }
 
 

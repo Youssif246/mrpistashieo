@@ -34,7 +34,7 @@ export class ServicesComponent implements OnInit, AfterViewInit, OnDestroy {
       description: isAr
         ? 'نقدم حلولاً زراعية متكاملة: دراسات الجدوى، تجهيز التربة، شبكات الري الذكي، توريد الشتلات المعتمدة، والإشراف الفني حتى مرحلة الإنتاج.'
         : 'Comprehensive pistachio orchard engineering: feasibility studies, soil mechanics, precision irrigation networks, certified rootstock supply, and expert agronomic oversight.',
-      image: 'services-images/services-hero.png'
+      image: 'services-images/services-hero.webp'
     });
 
     this.seo.setStructuredData('services-breadcrumb', {

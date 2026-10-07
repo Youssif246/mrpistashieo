@@ -216,27 +216,195 @@
   height: auto;
 }
 
-.contact-editorial-composition {
+/* ──────────────────────────────────────────────────────────────────────────
+   1. TOP DUO: FOUNDER EDITORIAL QUOTE & BUSINESS CARD SIDE BY SIDE
+   ────────────────────────────────────────────────────────────────────────── */
+.contact-spread-duo-grid {
   position: relative;
   z-index: 2;
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(3.5rem, 6vw, 6rem);
-  align-items: flex-start;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: stretch;
+  margin-bottom: clamp(3.5rem, 6vw, 5.5rem);
 }
 
 @media (min-width: 992px) {
-  .contact-editorial-composition {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.22fr);
-    gap: clamp(3.5rem, 5.5vw, 5.5rem);
+  .contact-spread-duo-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 4.5vw, 4.5rem);
   }
 }
 
 /* ──────────────────────────────────────────────────────────────────────────
-   LEFT COLUMN: REDESIGNED ARCHITECTURAL DOSSIER PANEL
+   FOUNDER EDITORIAL QUOTE (MATCHING IMAGE 1 REFERENCE)
+   ────────────────────────────────────────────────────────────────────────── */
+.founder-editorial-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FAF7F0;
+  border: 1px solid rgba(118, 142, 55, 0.28);
+  border-radius: 16px;
+  padding: clamp(2rem, 3.5vw, 3rem);
+  box-shadow: 0 14px 34px -10px rgba(17, 33, 23, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-editorial-panel:hover {
+  box-shadow: 0 20px 42px -12px rgba(17, 33, 23, 0.11);
+}
+
+.founder-quote-block {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.founder-quote-header {
+  margin-bottom: 1.25rem;
+}
+
+.founder-statement-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-family: var(--font-sans);
+  font-size: clamp(1.02rem, 1.25vw, 1.18rem);
+  line-height: 1.82;
+  color: var(--c-slate);
+}
+
+:host-context(body.rtl) .founder-statement-text {
+  font-family: var(--font-ar-body);
+  font-size: clamp(1.02rem, 1.2vw, 1.15rem);
+  line-height: 1.95;
+  color: #334438;
+}
+
+.founder-para {
+  margin: 0;
+}
+
+.founder-para.p-lead {
+  color: var(--c-forest);
+  font-weight: 500;
+}
+
+.founder-para.p-closing {
+  font-weight: 700;
+  color: var(--c-forest);
+  padding-inline-start: 1rem;
+  border-inline-start: 3px solid var(--c-pistachio);
+  margin-top: 0.25rem;
+  font-size: 1.05em;
+}
+
+:host-context(body.rtl) .founder-para.p-closing {
+  font-family: var(--font-ar-display), var(--font-ar-body);
+  font-weight: 700;
+}
+
+/* Founder Attribution: Avatar + Green Serif Name (Chic Horizontal Side-by-Side Lockup) */
+.founder-identity-lockup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.4rem);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(118, 142, 55, 0.22);
+}
+
+.founder-avatar-frame {
+  width: clamp(62px, 4.5vw, 72px);
+  height: clamp(62px, 4.5vw, 72px);
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2.5px solid #FFFFFF;
+  box-shadow: 0 6px 18px rgba(17, 33, 23, 0.12), 0 0 0 1.5px rgba(118, 142, 55, 0.35);
+  background-color: var(--c-sand);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.founder-identity-lockup:hover .founder-avatar-frame {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(17, 33, 23, 0.16), 0 0 0 2px rgba(118, 142, 55, 0.55);
+}
+
+.founder-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 12%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.founder-identity-lockup:hover .founder-avatar-img {
+  transform: scale(1.08);
+}
+
+.founder-name-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.founder-name-display {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  color: #1A4623; /* Deep forest green matching reference name Javier Moreno García */
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+:host-context(body.rtl) .founder-name-display {
+  font-family: var(--font-ar-display);
+  font-size: clamp(1.35rem, 2vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+.founder-role-caption {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--c-pistachio-deep);
+}
+
+:host-context(body.rtl) .founder-role-caption {
+  font-family: var(--font-ar-body);
+  font-size: 0.85rem;
+  letter-spacing: normal;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   ARCHITECTURAL DOSSIER PANEL: BUSINESS CARD
    ────────────────────────────────────────────────────────────────────────── */
 .contact-dossier-panel {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #FAF7F0;
+  border: 1px solid rgba(118, 142, 55, 0.28);
+  border-radius: 16px;
+  padding: clamp(2rem, 3.5vw, 3rem);
+  box-shadow: 0 14px 34px -10px rgba(17, 33, 23, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-dossier-panel:hover {
+  box-shadow: 0 20px 42px -12px rgba(17, 33, 23, 0.11);
 }
 
 .dossier-inner-content {
@@ -751,8 +919,239 @@ a.bc-line[href^="tel:"] span {
   border-radius: 24px;
 }
 
+/* ══════════════════════════════════════════════════════════════════════════
+   2. INTERACTIVE FAQ-STYLE INQUIRY CARD
+   ══════════════════════════════════════════════════════════════════════════ */
+.contact-faq-inquiry-container {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.faq-card-envelope {
+  background: #FAF7F0;
+  border: 1.5px solid rgba(118, 142, 55, 0.28);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px -10px rgba(17, 33, 23, 0.08);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.faq-card-envelope:hover {
+  border-color: rgba(118, 142, 55, 0.45);
+  box-shadow: 0 16px 42px -10px rgba(17, 33, 23, 0.12);
+}
+
+.faq-card-envelope.is-expanded {
+  border-color: rgba(118, 142, 55, 0.55);
+  box-shadow: 0 20px 50px -12px rgba(17, 33, 23, 0.15);
+}
+
+.faq-card-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: clamp(1.4rem, 2.8vw, 2.25rem);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: start;
+  transition: background-color 0.25s ease;
+}
+
+.faq-card-trigger:hover {
+  background-color: rgba(255, 255, 255, 0.65);
+}
+
+.faq-trigger-start {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  flex: 1;
+}
+
+.faq-trigger-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: rgba(118, 142, 55, 0.12);
+  border: 1px solid rgba(118, 142, 55, 0.26);
+  color: var(--c-pistachio-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.faq-card-envelope.is-expanded .faq-trigger-icon-box {
+  background: var(--c-forest);
+  color: #A4C660;
+  border-color: var(--c-forest);
+}
+
+.faq-trigger-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.faq-trigger-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-pistachio-deep);
+}
+
+:host-context(body.rtl) .faq-trigger-eyebrow {
+  font-family: var(--font-ar-body);
+  font-size: 0.78rem;
+  letter-spacing: normal;
+}
+
+.faq-eyebrow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--c-pistachio);
+}
+
+.faq-trigger-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-weight: 600;
+  color: var(--c-forest);
+  margin: 0;
+  line-height: 1.25;
+}
+
+:host-context(body.rtl) .faq-trigger-title {
+  font-family: var(--font-ar-display);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.faq-trigger-subtitle {
+  font-family: var(--font-sans);
+  font-size: clamp(0.88rem, 1.2vw, 0.98rem);
+  color: var(--c-slate);
+  margin: 0;
+  line-height: 1.5;
+}
+
+:host-context(body.rtl) .faq-trigger-subtitle {
+  font-family: var(--font-ar-body);
+  font-size: 0.92rem;
+}
+
+.faq-trigger-action {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+
+.faq-action-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+  background-color: var(--c-forest);
+  color: var(--c-ivory);
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+:host-context(body.rtl) .faq-action-pill {
+  font-family: var(--font-ar-body);
+  font-size: 0.88rem;
+  letter-spacing: normal;
+}
+
+.faq-card-envelope.is-expanded .faq-action-pill {
+  background-color: rgba(118, 142, 55, 0.18);
+  color: var(--c-forest);
+  border: 1px solid rgba(118, 142, 55, 0.35);
+}
+
+.faq-toggle-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(118, 142, 55, 0.12);
+  color: var(--c-forest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.faq-card-envelope.is-expanded .faq-toggle-circle {
+  background: var(--c-pistachio);
+  color: #FFFFFF;
+}
+
+.faq-toggle-circle i {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.faq-toggle-circle i.rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Collapsible Body with Smooth Grid Transition */
+.faq-card-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  border-top: 1px solid transparent;
+}
+
+.faq-card-collapse.is-open {
+  grid-template-rows: 1fr;
+  border-top-color: rgba(118, 142, 55, 0.22);
+}
+
+.faq-collapse-inner {
+  overflow: hidden;
+}
+
+.faq-collapse-inner .contact-form-panel {
+  padding: 0;
+}
+
+.faq-collapse-inner .editorial-document-sheet {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: #FFFFFF;
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+@media (max-width: 640px) {
+  .faq-card-trigger {
+    padding: 1.25rem 1rem;
+    gap: 0.85rem;
+  }
+  .faq-action-pill {
+    display: none;
+  }
+}
+
 /* ──────────────────────────────────────────────────────────────────────────
-   RIGHT COLUMN: INQUIRY FORM (PRESERVED INTACT AS REQUESTED)
+   INQUIRY FORM PANEL
    ────────────────────────────────────────────────────────────────────────── */
 .contact-form-panel {
   position: relative;
