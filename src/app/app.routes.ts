@@ -1,27 +1,42 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ServicesComponent } from './pages/services/services.component';
-import { ProductsComponent } from './pages/products/products.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { ArticlesComponent } from './pages/articles/articles.component';
-import { ArticleDetailsComponent } from './pages/article-details/article-details.component';
-import { Ucb1Component } from './pages/ucb1/ucb1.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { langGuard } from './shared/lang.guard';
 
 const localizedRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'varieties', component: ProductsComponent },
+  {
+    path: '',
+    loadComponent: () => import('./pages/home/home.component').then(m => m.HomeComponent)
+  },
+  {
+    path: 'about',
+    loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent)
+  },
+  {
+    path: 'services',
+    loadComponent: () => import('./pages/services/services.component').then(m => m.ServicesComponent)
+  },
+  {
+    path: 'varieties',
+    loadComponent: () => import('./pages/products/products.component').then(m => m.ProductsComponent)
+  },
   { path: 'products', redirectTo: 'varieties', pathMatch: 'full' },
-  { path: 'ucb1', component: Ucb1Component },
+  {
+    path: 'ucb1',
+    loadComponent: () => import('./pages/ucb1/ucb1.component').then(m => m.Ucb1Component)
+  },
   { path: 'usb1', redirectTo: 'ucb1', pathMatch: 'full' },
   { path: 'rootstock-ucb1', redirectTo: 'ucb1', pathMatch: 'full' },
-  { path: 'articles', component: ArticlesComponent },
-  { path: 'articles/:slug', component: ArticleDetailsComponent },
-  { path: 'contact', component: ContactComponent }
+  {
+    path: 'articles',
+    loadComponent: () => import('./pages/articles/articles.component').then(m => m.ArticlesComponent)
+  },
+  {
+    path: 'articles/:slug',
+    loadComponent: () => import('./pages/article-details/article-details.component').then(m => m.ArticleDetailsComponent)
+  },
+  {
+    path: 'contact',
+    loadComponent: () => import('./pages/contact/contact.component').then(m => m.ContactComponent)
+  }
 ];
 
 export const routes: Routes = [
@@ -56,5 +71,8 @@ export const routes: Routes = [
   { path: 'contact', redirectTo: 'ar/contact', pathMatch: 'full' },
 
   // 404 Catch-All Page
-  { path: '**', component: NotFoundComponent }
+  {
+    path: '**',
+    loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent)
+  }
 ];
