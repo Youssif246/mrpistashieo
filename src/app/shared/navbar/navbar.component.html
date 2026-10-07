@@ -1,4 +1,4 @@
-<header class="navbar-floating-wrapper" [class.is-floating]="isScrolled()">
+<header class="navbar-floating-wrapper" [class.is-floating]="isScrolled()" [class.menu-open]="isMobileMenuOpen()">
   <div class="navbar-glass-slab">
     <!-- 1. Left: Company Logo (Signature Brand Anchor) -->
     <a [routerLink]="['/' + i18n.currentLang()]" class="navbar-logo" (click)="closeMobileMenu()" [attr.aria-label]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'">

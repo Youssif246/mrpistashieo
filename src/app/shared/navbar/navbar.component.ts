@@ -9,7 +9,10 @@ import { APP_CONFIG } from '../config';
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
+  host: {
+    '[class.menu-open]': 'isMobileMenuOpen()'
+  }
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   private readonly platformId = inject(PLATFORM_ID);
@@ -36,17 +39,31 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    if (this.isBrowser && this.scrollHandler) {
-      window.removeEventListener('scroll', this.scrollHandler);
+    if (this.isBrowser) {
+      if (this.scrollHandler) {
+        window.removeEventListener('scroll', this.scrollHandler);
+      }
+      this.syncBodyClass(false);
     }
   }
 
   toggleMobileMenu(): void {
-    this.isMobileMenuOpen.update(open => !open);
+    this.isMobileMenuOpen.update(open => {
+      const next = !open;
+      this.syncBodyClass(next);
+      return next;
+    });
   }
 
   closeMobileMenu(): void {
     this.isMobileMenuOpen.set(false);
+    this.syncBodyClass(false);
+  }
+
+  private syncBodyClass(isOpen: boolean): void {
+    if (this.isBrowser) {
+      document.body.classList.toggle('nav-menu-open', isOpen);
+    }
   }
 
   toggleLanguage(): void {

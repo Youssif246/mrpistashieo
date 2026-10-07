@@ -1397,3 +1397,13 @@ body.rtl .plate-marker,
 [data-reveal] {
   will-change: auto;
 }
+
+/* Hide floating WhatsApp button when mobile navigation menu is active */
+body.nav-menu-open .whatsapp-float,
+body:has(.menu-open) .whatsapp-float,
+body:has(.mobile-menu-glass) .whatsapp-float {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: scale(0.6) translateY(24px) !important;
+  visibility: hidden !important;
+}
