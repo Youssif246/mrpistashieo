@@ -69,58 +69,76 @@
   text-align: center;
 }
 
-/* 2. Eyebrow: Centered (22px to Headline) */
+/* 2. Eyebrow: Centered, Chic & Botanical (24px to Headline) */
 .hero-eyebrow {
   display: inline-flex;
   width: fit-content;
   align-items: center;
   justify-content: center;
-  gap: 0.65rem;
-  margin-bottom: 22px;
+  gap: 0.85rem;
+  margin-bottom: 24px;
   margin-inline: auto;
+  padding: 0.45rem 1.25rem;
+  background: rgba(14, 32, 19, 0.52);
+  border: 1px solid rgba(212, 180, 125, 0.32);
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.28);
 }
 
 .eyebrow-accent-line {
-  width: 22px;
-  height: 1.5px;
-  background-color: #7E993B;
-  border-radius: 1px;
+  width: 28px;
+  height: 2px;
+  background: linear-gradient(90deg, #D4B47D, #9E7D47);
+  border-radius: 2px;
   flex-shrink: 0;
+}
+
+:host-context(body.rtl) .eyebrow-accent-line {
+  background: linear-gradient(270deg, #D4B47D, #9E7D47);
 }
 
 .eyebrow-text {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  color: #D5E2D9;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #F7EAD0;
   text-transform: uppercase;
 }
 
 :host-context(body.rtl) .eyebrow-text {
-  font-family: var(--font-ar-body);
-  font-size: 0.8rem;
-  letter-spacing: normal;
+  font-family: var(--font-ar-display), var(--font-ar-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #F7EAD0;
+  letter-spacing: 0.02em;
 }
 
 .eyebrow-dot {
-  color: #B89358;
-  font-size: 0.85rem;
+  color: #D4B47D;
+  font-size: 1.15rem;
   line-height: 1;
+  opacity: 0.9;
 }
 
 .eyebrow-botanical {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 0.88rem;
+  font-size: 1.05rem;
   color: #D4B47D;
   letter-spacing: 0.02em;
 }
 
 :host-context(body.rtl) .eyebrow-botanical {
-  font-family: var(--font-ar-body);
-  font-style: normal;
-  font-size: 0.8rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #D4B47D;
+  direction: ltr;
+  display: inline-block;
+  unicode-bidi: isolate;
 }
 
 /* 3. Headline: Centered, max-width: 950px, large and cinematic (26px to Description) */

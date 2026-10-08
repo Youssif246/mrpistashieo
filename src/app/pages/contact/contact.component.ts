@@ -147,9 +147,9 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
             }
           });
 
-          if (founderPanel) tl.fromTo(founderPanel, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' });
+          if (faqCard) tl.fromTo(faqCard, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
+          if (founderPanel) tl.fromTo(founderPanel, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }, '-=0.4');
           if (dossierPanel) tl.fromTo(dossierPanel, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }, '-=0.5');
-          if (faqCard) tl.fromTo(faqCard, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.4');
         }
       }
 

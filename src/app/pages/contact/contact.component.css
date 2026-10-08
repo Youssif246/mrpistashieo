@@ -263,8 +263,63 @@
   justify-content: space-between;
 }
 
-.founder-quote-header {
-  margin-bottom: 1.25rem;
+.founder-quote-header,
+.dossier-header-block {
+  margin-bottom: 1.35rem;
+}
+
+.founder-quote-header .editorial-brand-eyebrow,
+.dossier-header-block .editorial-brand-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.founder-quote-header .brand-eyebrow-text,
+.dossier-header-block .brand-eyebrow-text {
+  font-size: clamp(0.98rem, 1.25vw, 1.15rem);
+  font-weight: 700;
+  color: var(--c-forest);
+}
+
+:host-context(body.rtl) .founder-quote-header .brand-eyebrow-text,
+:host-context(body.rtl) .dossier-header-block .brand-eyebrow-text {
+  font-family: var(--font-ar-display), var(--font-ar-body);
+  font-size: clamp(1.18rem, 1.45vw, 1.35rem);
+  font-weight: 700;
+  color: #123318;
+  letter-spacing: 0.01em;
+}
+
+.founder-quote-header .eyebrow-accent-line,
+.dossier-header-block .eyebrow-accent-line {
+  width: 36px;
+  height: 3px;
+  background: linear-gradient(90deg, #3B7C04, #24520B);
+  border-radius: 3px;
+}
+
+:host-context(body.rtl) .founder-quote-header .eyebrow-accent-line,
+:host-context(body.rtl) .dossier-header-block .eyebrow-accent-line {
+  background: linear-gradient(270deg, #3B7C04, #24520B);
+}
+
+.founder-quote-header .brand-eyebrow-sub,
+.dossier-header-block .brand-eyebrow-sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.02rem, 1.18vw, 1.12rem);
+  font-weight: 500;
+  color: #637154;
+  letter-spacing: 0.03em;
+}
+
+.founder-quote-header .brand-eyebrow-dot,
+.dossier-header-block .brand-eyebrow-dot {
+  font-size: 1.25rem;
+  color: var(--c-pistachio);
+  opacity: 0.85;
 }
 
 .founder-statement-text {
@@ -926,6 +981,7 @@ a.bc-line[href^="tel:"] span {
   width: 100%;
   position: relative;
   z-index: 2;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
 }
 
 .faq-card-envelope {
