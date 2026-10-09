@@ -201,6 +201,13 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
     return APP_CONFIG.getWhatsAppUrl(msg);
   }
 
+  getFounderWhatsApp(): string {
+    const msg = this.i18n.currentLang() === 'ar'
+      ? 'مرحباً أستاذ يزن، أود التواصل معك مباشرة بخصوص مشاريع واستشارات مستر بيستاشيو.'
+      : 'Hello Mr. Yazan, I would like to connect with you directly regarding Mister Pistachio projects and consultations.';
+    return APP_CONFIG.getWhatsAppUrl(msg);
+  }
+
   async onSubmit(event?: Event): Promise<void> {
     if (event && typeof event.preventDefault === 'function') {
       event.preventDefault();

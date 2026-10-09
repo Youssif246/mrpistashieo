@@ -373,21 +373,29 @@
   border-top: 1px solid rgba(118, 142, 55, 0.22);
 }
 
+/* Founder Avatar Link & Micro-Interactions (WhatsApp Gateway) */
+.founder-avatar-link {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .founder-avatar-frame {
-  width: clamp(62px, 4.5vw, 72px);
-  height: clamp(62px, 4.5vw, 72px);
+  width: clamp(64px, 4.8vw, 76px);
+  height: clamp(64px, 4.8vw, 76px);
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
   border: 2.5px solid #FFFFFF;
-  box-shadow: 0 6px 18px rgba(17, 33, 23, 0.12), 0 0 0 1.5px rgba(118, 142, 55, 0.35);
+  box-shadow: 0 6px 18px rgba(17, 33, 23, 0.12), 0 0 0 2.5px var(--c-ochre);
   background-color: var(--c-sand);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.founder-identity-lockup:hover .founder-avatar-frame {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(17, 33, 23, 0.16), 0 0 0 2px rgba(118, 142, 55, 0.55);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
 }
 
 .founder-avatar-img {
@@ -396,11 +404,79 @@
   object-fit: cover;
   object-position: 50% 12%;
   display: block;
-  transition: transform 0.4s ease;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.4s ease;
 }
 
-.founder-identity-lockup:hover .founder-avatar-img {
-  transform: scale(1.08);
+.founder-avatar-badge {
+  position: absolute;
+  bottom: -2px;
+  inset-inline-end: -2px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FAF7F0;
+  box-shadow: 0 3px 10px rgba(18, 140, 126, 0.35);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease,
+              background 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.whatsapp-mini-icon {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Chic Hover State: Soft elevation, emerald aura & subtle badge pop */
+.founder-avatar-link:hover .founder-avatar-frame {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 14px 28px rgba(17, 33, 23, 0.16),
+              0 0 0 2px #FFFFFF,
+              0 0 0 4.5px #25D366,
+              0 0 22px rgba(37, 211, 102, 0.38);
+}
+
+.founder-avatar-link:hover .founder-avatar-img {
+  transform: scale(1.12);
+  filter: brightness(1.04);
+}
+
+.founder-avatar-link:hover .founder-avatar-badge {
+  transform: scale(1.22) rotate(10deg);
+  background: linear-gradient(135deg, #2ae772, #25D366);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.6);
+}
+
+.founder-avatar-link:hover .whatsapp-mini-icon {
+  transform: scale(1.1);
+}
+
+/* Subtle Press / Click Feedback */
+.founder-avatar-link:active .founder-avatar-frame {
+  transform: translateY(-1px) scale(0.97);
+  box-shadow: 0 6px 14px rgba(17, 33, 23, 0.18),
+              0 0 0 2px #FFFFFF,
+              0 0 0 3.5px #25D366;
+  transition-duration: 0.15s;
+}
+
+.founder-avatar-link:active .founder-avatar-badge {
+  transform: scale(1.02);
+  transition-duration: 0.15s;
+}
+
+.founder-avatar-link:focus-visible .founder-avatar-frame {
+  outline: 2px solid #25D366;
+  outline-offset: 3px;
 }
 
 .founder-name-group {
@@ -414,7 +490,7 @@
   font-family: var(--font-serif);
   font-size: clamp(1.4rem, 2.2vw, 1.75rem);
   font-weight: 700;
-  color: #1A4623; /* Deep forest green matching reference name Javier Moreno García */
+  color: var(--c-logo-primary); /* #3B7C04 vibrant pistachio green from logo */
   margin: 0;
   line-height: 1.2;
   letter-spacing: -0.01em;
@@ -430,15 +506,16 @@
 .founder-role-caption {
   font-family: var(--font-sans);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--c-pistachio-deep);
+  color: var(--c-ochre); /* #C2A073 golden almond ochre from brand logomark */
 }
 
 :host-context(body.rtl) .founder-role-caption {
   font-family: var(--font-ar-body);
   font-size: 0.85rem;
+  font-weight: 700;
   letter-spacing: normal;
 }
 
