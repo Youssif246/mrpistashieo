@@ -19,11 +19,9 @@
 
     <!-- Centered Main Headline with Controlled Desktop Line Break -->
     <h1 class="hero-title">
-      @if (i18n.currentLang() === 'en') {
-        Agricultural Precision in<br class="desktop-break"> <span class="text-nowrap">Pistachio Cultivation.</span>
-      } @else {
-        دقّةٌ زراعية في زراعة<br class="desktop-break"> <span class="text-nowrap">الفستق الحلبي.</span>
-      }
+      <span class="hero-title-line-1">{{ i18n.t().home.hero.headlineLine1 }}</span>
+      <br class="desktop-break">
+      <span class="hero-title-line-2">{{ i18n.t().home.hero.headlineLine2 }}</span>
     </h1>
 
     <!-- Centered Supporting Statement -->
