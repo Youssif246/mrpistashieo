@@ -133,7 +133,7 @@ export class NotFoundComponent implements OnInit {
       this.responseInit.statusText = 'Not Found';
     }
     this.seo.setNoIndex(
-      this.isAr ? '404 - الصفحة غير موجودة | مستر بستاشيو' : '404 - Page Not Found | Mister Pistachio',
+      this.isAr ? '404 - الصفحة غير موجودة | مستر بيستاشيو' : '404 - Page Not Found | Mister Pistachio',
       this.isAr ? 'الصفحة المطلوبة غير موجودة.' : 'The requested page could not be found.'
     );
   }

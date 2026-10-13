@@ -33,13 +33,14 @@
               "src/styles.css"
             ],
             "server": "src/main.server.ts",
-            "outputMode": "server",
+            "outputMode": "static",
             "ssr": {
               "entry": "src/server.ts"
             }
           },
           "configurations": {
             "production": {
+              "outputMode": "static",
               "budgets": [
                 {
                   "type": "initial",
@@ -52,6 +53,10 @@
                   "maximumError": "100kB"
                 }
               ],
+              "outputHashing": "all"
+            },
+            "ssr": {
+              "outputMode": "server",
               "outputHashing": "all"
             },
             "development": {

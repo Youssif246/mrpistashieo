@@ -70,6 +70,12 @@ export const routes: Routes = [
   { path: 'articles/:slug', redirectTo: 'ar/articles/:slug' },
   { path: 'contact', redirectTo: 'ar/contact', pathMatch: 'full' },
 
+  // Explicit 404 Page (prerendered as /404/index.html for Apache ErrorDocument)
+  {
+    path: '404',
+    loadComponent: () => import('./pages/not-found/not-found.component').then(m => m.NotFoundComponent)
+  },
+
   // 404 Catch-All Page
   {
     path: '**',

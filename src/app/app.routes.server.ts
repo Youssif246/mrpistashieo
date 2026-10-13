@@ -37,11 +37,15 @@ export const serverRoutes: ServerRoute[] = [
     }
   },
 
-  // Everything else (legacy redirects, root redirect, unknown URLs) is rendered
-  // on demand by the Node SSR server, so redirects become real HTTP redirects
-  // and unknown URLs return HTTP 404 (set in NotFoundComponent via RESPONSE_INIT).
+  // Standalone 404 page prerendered for static hosting error document
+  {
+    path: '404',
+    renderMode: RenderMode.Prerender
+  },
+
+  // Fallback for client-side routing on static hosting
   {
     path: '**',
-    renderMode: RenderMode.Server
+    renderMode: RenderMode.Client
   }
 ];

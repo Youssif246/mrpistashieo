@@ -4,9 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && node scripts/post-build.mjs && node scripts/verify-sitemap.mjs",
+    "build:static": "ng build && node scripts/post-build.mjs && node scripts/verify-sitemap.mjs",
+    "build:ssr": "ng build --configuration ssr",
+    "postbuild": "node scripts/post-build.mjs && node scripts/verify-sitemap.mjs",
+    "verify:sitemap": "node scripts/verify-sitemap.mjs",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --no-watch",
     "serve:ssr:project": "node dist/project/server/server.mjs"
   },
   "prettier": {

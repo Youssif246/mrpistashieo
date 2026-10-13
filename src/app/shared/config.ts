@@ -10,7 +10,7 @@ export const APP_CONFIG = {
   social: {
     instagram: 'https://www.instagram.com/mister.pistachio?stkn=MWRibzJ4N254MXdpaw%253D%25',
     tiktok: 'https://www.tiktok.com/@misterpistachiosy',
-    facebook: 'https://www.facebook.com/profile.php?id=61594065104773',
+    facebook: 'https://www.facebook.com/MisterPistachia',
     youtube: 'https://youtube.com/@mister_pistachio',
     x: 'https://x.com/Misterpistach'
   },

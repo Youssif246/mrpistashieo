@@ -29,8 +29,8 @@ export class ServicesComponent implements OnInit, AfterViewInit, OnDestroy {
       lang: this.i18n.currentLang(),
       path: '/services',
       title: isAr
-        ? 'خدماتنا الزراعية وتأسيس بساتين الفستق الحلبي | مستر بستاشيو'
-        : 'Agronomic Services & Orchard Engineering | Mister Pistachio',
+        ? 'الخدمات الزراعية وهندسة بساتين الفستق الحلبي | مستر بيستاشيو'
+        : 'Agricultural Services & Orchard Engineering | Mister Pistachio',
       description: isAr
         ? 'نقدم حلولاً زراعية متكاملة: دراسات الجدوى، تجهيز التربة، شبكات الري الذكي، توريد الشتلات المعتمدة، والإشراف الفني حتى مرحلة الإنتاج.'
         : 'Comprehensive pistachio orchard engineering: feasibility studies, soil mechanics, precision irrigation networks, certified rootstock supply, and expert agronomic oversight.',

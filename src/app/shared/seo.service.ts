@@ -46,7 +46,16 @@ export class SeoService {
     this.metaService.updateTag({ name: 'robots', content: 'index, follow, max-image-preview:large' });
 
     // 3. Open Graph Metadata
-    const currentUrl = `${this.siteUrl}/${config.lang}${cleanPath === '/' ? '' : cleanPath}`;
+    const normalizeUrlPath = (p: string): string => {
+      if (!p || p === '/') return '/';
+      const clean = p.startsWith('/') ? p : `/${p}`;
+      return clean.replace(/\/+$/, '') + '/';
+    };
+
+    const normCurrentPath = normalizeUrlPath(cleanPath);
+    const normEqPath = normalizeUrlPath(equivalentPath);
+
+    const currentUrl = `${this.siteUrl}/${config.lang}${normCurrentPath}`;
     const imageUrl = config.image 
       ? (config.image.startsWith('http') ? config.image : `${this.siteUrl}/${config.image.replace(/^\//, '')}`)
       : this.defaultImage;
@@ -55,7 +64,7 @@ export class SeoService {
     this.metaService.updateTag({ property: 'og:description', content: config.description });
     this.metaService.updateTag({ property: 'og:url', content: currentUrl });
     this.metaService.updateTag({ property: 'og:type', content: config.type || 'website' });
-    this.metaService.updateTag({ property: 'og:site_name', content: isAr ? 'مستر بستاشيو' : 'Mister Pistachio' });
+    this.metaService.updateTag({ property: 'og:site_name', content: isAr ? 'مستر بيستاشيو' : 'Mister Pistachio' });
     this.metaService.updateTag({ property: 'og:locale', content: isAr ? 'ar_AR' : 'en_US' });
     this.metaService.updateTag({ property: 'og:locale:alternate', content: isAr ? 'en_US' : 'ar_AR' });
     this.metaService.updateTag({ property: 'og:image', content: imageUrl });
@@ -83,21 +92,17 @@ export class SeoService {
     }
 
     // 5. Canonical & Hreflang Link Tags in <head>
-    this.updateCanonicalAndHreflang(config.lang, cleanPath, equivalentPath);
+    this.updateCanonicalAndHreflang(config.lang, normCurrentPath, normEqPath);
   }
 
-  private updateCanonicalAndHreflang(currentLang: 'ar' | 'en', currentPath: string, equivalentPath: string): void {
+  private updateCanonicalAndHreflang(currentLang: 'ar' | 'en', normCurrentPath: string, normEqPath: string): void {
     const head = this.document.head;
     if (!head) return;
 
-    const canonicalPath = currentPath === '/' ? '' : currentPath;
-    const arPath = currentLang === 'ar' ? canonicalPath : (equivalentPath === '/' ? '' : equivalentPath);
-    const enPath = currentLang === 'en' ? canonicalPath : (equivalentPath === '/' ? '' : equivalentPath);
-
-    const canonicalUrl = `${this.siteUrl}/${currentLang}${canonicalPath}`;
-    const arUrl = `${this.siteUrl}/ar${arPath}`;
-    const enUrl = `${this.siteUrl}/en${enPath}`;
-    const xDefaultUrl = `${this.siteUrl}/ar${arPath}`;
+    const canonicalUrl = `${this.siteUrl}/${currentLang}${normCurrentPath}`;
+    const arUrl = `${this.siteUrl}/ar${currentLang === 'ar' ? normCurrentPath : normEqPath}`;
+    const enUrl = `${this.siteUrl}/en${currentLang === 'en' ? normCurrentPath : normEqPath}`;
+    const xDefaultUrl = arUrl;
 
     // Canonical tag
     this.setOrCreateLinkTag('canonical', canonicalUrl);
@@ -108,9 +113,15 @@ export class SeoService {
     this.setOrCreateLinkTag('alternate', xDefaultUrl, 'x-default');
   }
 
-  private setOrCreateLinkTag(rel: string, href: string, hreflang?: string): void {
+  private setOrCreateLinkTag(rel: string, rawHref: string, hreflang?: string): void {
     const head = this.document.head;
     if (!head) return;
+
+    // Guard against Markdown syntax e.g. [url](url) and accidental brackets
+    const href = String(rawHref)
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$2')
+      .replace(/[\[\]\(\)]/g, '')
+      .trim();
 
     let selector = `link[rel="${rel}"]`;
     if (hreflang) {

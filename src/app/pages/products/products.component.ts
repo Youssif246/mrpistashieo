@@ -62,8 +62,8 @@ export class ProductsComponent implements OnInit {
       lang: this.i18n.currentLang(),
       path: '/varieties',
       title: isAr
-        ? 'أصناف وأصول الفستق الحلبي المعتمدة | مستر بستاشيو'
-        : 'Certified Pistachio Varieties & Rootstocks | Mister Pistachio',
+        ? 'أصناف الفستق الحلبي والأصول المعتمدة | مستر بيستاشيو'
+        : 'Commercial Pistachio Varieties & Certified Rootstocks | Mister Pistachio',
       description: isAr
         ? 'استكشف أفضل أصناف الفستق الحلبي (سيرورا، كرمان، لارين، بيتر) وأقوى الأصول المقاومة (UCB-1، البطم الأطلسي، البيري) لأعلى إنتاجية وجودة.'
         : 'Explore premier pistachio cultivars (Sirora, Kerman, Larnaka, Peter) and high-performance rootstocks (UCB1, Atlantica, Integerrima) engineered for commercial vigor.',

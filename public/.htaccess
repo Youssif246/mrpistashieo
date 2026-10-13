@@ -1,0 +1,146 @@
+# ==============================================================================
+# MISTER PISTACHO / مستر بيستاشيو — Apache Configuration for Hostinger Web Hosting
+# Production Static Deployment (.htaccess)
+# ==============================================================================
+
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # ----------------------------------------------------------------------------
+  # 1. FORCE HTTPS
+  # ----------------------------------------------------------------------------
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # ----------------------------------------------------------------------------
+  # 2. ROOT DIRECTORY & LANGUAGE ROOTS
+  # Redirect root / to default Arabic language (/ar/) with HTTP 301
+  # ----------------------------------------------------------------------------
+  RewriteRule ^$ /ar/ [R=301,L]
+  RewriteRule ^ar$ /ar/ [R=301,L]
+  RewriteRule ^en$ /en/ [R=301,L]
+
+  # ----------------------------------------------------------------------------
+  # 3. LEGACY ROUTE REDIRECTS (Preserve Backwards Compatibility & Search Value)
+  # ----------------------------------------------------------------------------
+  RewriteRule ^about/?$ /ar/about/ [R=301,L]
+  RewriteRule ^services/?$ /ar/services/ [R=301,L]
+  RewriteRule ^varieties/?$ /ar/varieties/ [R=301,L]
+  RewriteRule ^products/?$ /ar/varieties/ [R=301,L]
+  RewriteRule ^ar/products/?$ /ar/varieties/ [R=301,L]
+  RewriteRule ^en/products/?$ /en/varieties/ [R=301,L]
+  RewriteRule ^ucb1/?$ /ar/ucb1/ [R=301,L]
+  RewriteRule ^usb1/?$ /ar/ucb1/ [R=301,L]
+  RewriteRule ^ar/usb1/?$ /ar/ucb1/ [R=301,L]
+  RewriteRule ^en/usb1/?$ /en/ucb1/ [R=301,L]
+  RewriteRule ^rootstock-ucb1/?$ /ar/ucb1/ [R=301,L]
+  RewriteRule ^ar/rootstock-ucb1/?$ /ar/ucb1/ [R=301,L]
+  RewriteRule ^en/rootstock-ucb1/?$ /en/ucb1/ [R=301,L]
+  RewriteRule ^articles/?$ /ar/articles/ [R=301,L]
+  RewriteRule ^articles/(.+?)/?$ /ar/articles/$1/ [R=301,L]
+  RewriteRule ^contact/?$ /ar/contact/ [R=301,L]
+
+  # ----------------------------------------------------------------------------
+  # 4. STATIC DIRECTORY & ROUTE SERVING
+  # ----------------------------------------------------------------------------
+  # If requested path corresponds to an existing directory containing index.html, serve it
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^ - [L]
+
+  # If requested file exists, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 5. DIRECTORY INDEX & ERROR DOCUMENTS
+# ------------------------------------------------------------------------------
+DirectoryIndex index.html 404/index.html
+
+# Real HTTP 404 status returned for non-existent routes (prevents Soft-404 penalty)
+ErrorDocument 404 /404/index.html
+
+# ------------------------------------------------------------------------------
+# 6. GZIP / DEFLATE COMPRESSION
+# ------------------------------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff2
+  AddOutputFilterByType DEFLATE font/woff
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 7. BROWSER CACHING & EXPIRATION (Core Web Vitals Optimization)
+# ------------------------------------------------------------------------------
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Default expiration
+  ExpiresDefault "access plus 1 month"
+
+  # HTML documents (short cache for freshness)
+  ExpiresByType text/html "access plus 1 hour"
+
+  # Sitemaps & robots
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/plain "access plus 1 day"
+
+  # Media and Images
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+
+  # JavaScript & CSS (hashed bundles)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Immutable cache for versioned/hashed assets
+  <FilesMatch "\.(js|css|woff2|woff|webp|png|jpg|jpeg|svg|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Revalidation for HTML
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  # Security Headers
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ------------------------------------------------------------------------------
+# 8. MIME TYPES
+# ------------------------------------------------------------------------------
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType application/json .json
+  AddType application/xml .xml
+  AddCharset UTF-8 .xml
+</IfModule>

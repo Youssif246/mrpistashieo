@@ -35,8 +35,8 @@ export class Ucb1Component implements OnInit {
       lang: this.i18n.currentLang(),
       path: '/ucb1',
       title: isAr
-        ? 'أصل الفستق الهجين UCB-1 المعتمد | مستر بستاشيو'
-        : 'UCB-1 Hybrid Pistachio Rootstock | Mister Pistachio',
+        ? 'أصل الفستق الهجين UCB1 المعتمد | مستر بيستاشيو'
+        : 'UCB1 Hybrid Pistachio Rootstock | Mister Pistachio',
       description: isAr
         ? 'دليل شامل حول الأصل الهجين UCB-1: مقاومة الفيتوفثورا والديدان الثعبانية، تحمل الملوحة العالية، وقوة النمو المتسارعة للإنتاج التجاري المبكر.'
         : 'Comprehensive technical guide on certified clonal UCB-1 rootstocks: Phytophthora and nematode resistance, extreme salinity tolerance, and vigorous commercial precocity.',
@@ -254,7 +254,7 @@ export class Ucb1Component implements OnInit {
       },
       {
         question: isAr
-          ? 'كيف تضمن شركة مستر بستاشيو جودة ونقاء شتلات UCB-1؟'
+          ? 'كيف تضمن شركة مستر بيستاشيو جودة ونقاء شتلات UCB-1؟'
           : 'How does Mister Pistachio guarantee the genetic purity of UCB-1 rootstocks?',
         answer: isAr
           ? 'نعتمد في مشاتلنا حصرياً على بذور هجينة أصلية معتمدة ومصدرة من أشجار أمهات مراقبة ومعتمدة دولياً ومختبرة جينياً (True-to-Type)، لتفادي الطفرات الوراثية وتجنب متلازمة الشجيرات القزمة أو البكتيريا (مثل Rhodococcus fascians). تخضع شتلاتنا لإشراف زراعي صارم وتحصل على شهادة صحة نباتية رسمية تثبت خلوها التام من النيماتودا والفطريات.'

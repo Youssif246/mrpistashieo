@@ -1,8 +1,8 @@
 <header class="navbar-floating-wrapper" [class.is-floating]="isScrolled()" [class.menu-open]="isMobileMenuOpen()">
   <div class="navbar-glass-slab">
     <!-- 1. Left: Company Logo (Signature Brand Anchor) -->
-    <a [routerLink]="['/' + i18n.currentLang()]" class="navbar-logo" (click)="closeMobileMenu()" [attr.aria-label]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'">
-      <img src="logo.png" [alt]="i18n.currentLang() === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio'" class="logo-img" width="170" height="50">
+    <a [routerLink]="['/' + i18n.currentLang()]" class="navbar-logo" (click)="closeMobileMenu()" [attr.aria-label]="i18n.currentLang() === 'ar' ? 'مستر بيستاشيو' : 'Mister Pistachio'">
+      <img src="logo.png" [alt]="i18n.currentLang() === 'ar' ? 'مستر بيستاشيو' : 'Mister Pistachio'" class="logo-img" width="170" height="50">
     </a>
 
     <!-- 2. Center: Navigation Links (Refined Botanical Typography) -->

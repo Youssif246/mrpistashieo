@@ -28,18 +28,19 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       lang: this.i18n.currentLang(),
       path: '/',
       title: isAr
-        ? 'مستر بستاشيو | مشاتل متخصصة في زراعة وإنتاج الفستق الحلبي'
-        : 'Mister Pistachio | Specialist Pistachio Nursery & Plantation Engineering',
+        ? 'مستر بيستاشيو | Mister Pistachio – الفستق الحلبي وشتلاته'
+        : 'Mister Pistachio | Pistachio Cultivation and Nursery',
       description: isAr
         ? 'مشتل زراعي رائد متخصص في إكثار أصول الفستق الحلبي المعتمدة (UCB1، البطم)، وتأسيس البساتين النموذجية بأعلى المعايير الإسبانية والعالمية.'
-        : 'Certified pistachio nursery specializing in clonal rootstocks (UCB1, Atlantica), grafted saplings, and precision Mediterranean orchard establishment.',
+        : 'Specialist nursery in pistachio cultivation, certified UCB1 rootstocks, elite grafted varieties, and precision Mediterranean orchard establishment.',
       image: 'home-images/hero.webp'
     });
 
     this.seo.setStructuredData('org-schema', {
       '@context': 'https://schema.org',
       '@type': 'Organization',
-      'name': isAr ? 'مستر بستاشيو' : 'Mister Pistachio',
+      'name': 'Mister Pistachio',
+      'alternateName': 'مستر بيستاشيو',
       'legalName': 'Mister Pistachio Trading O P LLC',
       'url': 'https://misterpistachio.com',
       'logo': 'https://misterpistachio.com/logo.png',
@@ -59,7 +60,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.seo.setStructuredData('website-schema', {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      'name': isAr ? 'مستر بستاشيو' : 'Mister Pistachio',
+      'name': 'Mister Pistachio',
+      'alternateName': 'مستر بيستاشيو',
       'url': 'https://misterpistachio.com',
       'inLanguage': ['ar', 'en']
     });

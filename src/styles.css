@@ -846,6 +846,18 @@ body.rtl .btn-editorial {
   height: auto;
 }
 
+/* Completely suppress all background watermarks / ghost text across all sections */
+.services-bg-watermark,
+.nursery-watermark-text,
+.chapter-bg-watermark,
+.cta-ghost-watermark,
+.story-ghost-watermark,
+.philosophy-ghost-wordmark,
+.technical-ghost-wordmark,
+.bg-wordmark-text {
+  display: none !important;
+}
+
 /* Real photographic pistachio cutout enhancement */
 .botanical-shadow-wrapper img[src$=".png"] {
   filter: saturate(0.92) contrast(1.02);

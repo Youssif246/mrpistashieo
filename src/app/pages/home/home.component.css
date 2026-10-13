@@ -4236,11 +4236,22 @@ body.rtl .specimen-coord-strip {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
 }
 
 .facebook-username i {
   font-size: 1.15rem;
   color: #1877F2;
+}
+
+.facebook-username bdi,
+.facebook-username span,
+.instagram-username bdi,
+.instagram-username span {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-block;
 }
 
 .instagram-username {
@@ -4250,6 +4261,8 @@ body.rtl .specimen-coord-strip {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
 }
 
 .instagram-username i {

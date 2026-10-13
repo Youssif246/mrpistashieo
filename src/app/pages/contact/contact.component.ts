@@ -54,10 +54,10 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
       lang: this.i18n.currentLang(),
       path: '/contact',
       title: isAr
-        ? 'تواصل معنا واستشر خبراءنا الزراعيين | مستر بستاشيو'
-        : 'Contact Us & Consult Our Agronomic Engineers | Mister Pistachio',
+        ? 'تواصل معنا | مستر بيستاشيو – استشارات وشتلات الفستق الحلبي'
+        : 'Contact Our Agricultural Advisory Team | Mister Pistachio',
       description: isAr
-        ? 'تواصل مع فريق مستر بستاشيو المتخصص للحصول على استشارات زراعية، حجز شتلات UCB1، وتخطيط مشاريع بساتين الفستق الحلبي.'
+        ? 'تواصل مع فريق مستر بيستاشيو المتخصص للحصول على استشارات زراعية، حجز شتلات UCB1، وتخطيط مشاريع بساتين الفستق الحلبي.'
         : 'Get in touch with Mister Pistachio agricultural specialists for technical consultations, certified UCB1 rootstock reservations, and orchard development planning.',
       image: 'contact-images/contact-hero.webp'
     });

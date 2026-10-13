@@ -38,8 +38,8 @@ export class ArticlesComponent implements OnInit {
   ngOnInit(): void {
     const isAr = this.i18n.currentLang() === 'ar';
     const title = isAr
-      ? 'مقالات ودراسات زراعة الفستق الحلبي | مستر بستاشيو'
-      : 'Agricultural Articles & Pistachio Cultivation Insights | Mister Pistachio';
+      ? 'مقالات وأبحاث زراعة الفستق الحلبي | مستر بيستاشيو'
+      : 'Agricultural Articles & Pistachio Cultivation Research | Mister Pistachio';
     const description = isAr
       ? 'أبحاث ودراسات زراعية تطبيقية متخصصة في تأسيس بساتين الفستق الحلبي، انتخاب الأصول المقاومة، إدارة الري الذكي، وميكانيكا التربة.'
       : 'Authoritative agronomic research, orchard engineering guides, rootstock selection analysis, and deficit irrigation strategies for commercial pistachio growers.';

@@ -27,10 +27,10 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
       lang: this.i18n.currentLang(),
       path: '/about',
       title: isAr
-        ? 'عن الشركة ورؤيتنا الزراعية | مستر بستاشيو'
-        : 'About Us & Agronomic Vision | Mister Pistachio',
+        ? 'من نحن | مستر بيستاشيو – شراكة زراعية متخصصة في الفستق الحلبي'
+        : 'About Us | Mister Pistachio – Mediterranean Pistachio Specialists',
       description: isAr
-        ? 'تعرف على قصة ورؤية مستر بستاشيو، ريادتنا في تقنيات إكثار أصول الفستق الحلبي، وشراكاتنا الإسبانية لتطوير البساتين في الشرق الأوسط.'
+        ? 'تعرف على قصة ورؤية مستر بيستاشيو، ريادتنا في تقنيات إكثار أصول الفستق الحلبي، وشراكاتنا الإسبانية لتطوير البساتين في الشرق الأوسط.'
         : 'Discover Mister Pistachio, our clonal propagation nursery leadership, Spanish agronomic partnerships, and precision pistachio orchard engineering across the Mediterranean.',
       image: 'about-images/nursery.webp'
     });

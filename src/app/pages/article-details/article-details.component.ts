@@ -58,7 +58,7 @@ export class ArticleDetailsComponent implements OnInit {
         }
         const isAr = this.i18n.currentLang() === 'ar';
         this.seo.setNoIndex(
-          isAr ? 'المقال غير موجود | مستر بستاشيو' : 'Article Not Found | Mister Pistachio',
+          isAr ? 'المقال غير موجود | مستر بيستاشيو' : 'Article Not Found | Mister Pistachio',
           isAr ? 'المقال المطلوب غير موجود.' : 'The requested article could not be found.'
         );
       }
@@ -127,7 +127,7 @@ export class ArticleDetailsComponent implements OnInit {
       },
       'publisher': {
         '@type': 'Organization',
-        'name': currentLang === 'ar' ? 'مستر بستاشيو' : 'Mister Pistachio',
+        'name': currentLang === 'ar' ? 'مستر بيستاشيو' : 'Mister Pistachio',
         'logo': {
           '@type': 'ImageObject',
           'url': 'https://misterpistachio.com/logo.png'
