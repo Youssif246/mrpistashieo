@@ -11,7 +11,7 @@ export const APP_CONFIG = {
     instagram: 'https://www.instagram.com/mister.pistachio?stkn=MWRibzJ4N254MXdpaw%253D%25',
     tiktok: 'https://www.tiktok.com/@misterpistachiosy',
     facebook: 'https://www.facebook.com/MisterPistachia',
-    youtube: 'https://youtube.com/@mister_pistachio',
+    youtube: 'https://youtube.com/@mister.pistachio?si=1ChT_fDC11urdrJs',
     x: 'https://x.com/Misterpistach'
   },
 

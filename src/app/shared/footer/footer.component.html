@@ -118,6 +118,10 @@
         <span class="copyright-year">{{ currentYear }}</span>
         <span class="legal-entity-name" dir="ltr">Mister Pistachio Trading O P LLC</span>
         <span class="rights-separator" aria-hidden="true">&bull;</span>
+        <span class="cr-badge" dir="ltr" [attr.aria-label]="i18n.currentLang() === 'ar' ? 'رقم السجل التجاري: 58' : 'Commercial Registration No. 58'" [title]="i18n.currentLang() === 'ar' ? 'رقم السجل التجاري: 58' : 'Commercial Registration No. 58'">
+          <bdi>CR No. 58</bdi>
+        </span>
+        <span class="rights-separator" aria-hidden="true">&bull;</span>
         <span class="rights-phrase">{{ i18n.currentLang() === 'ar' ? 'جميع الحقوق محفوظة.' : 'All rights reserved.' }}</span>
       </p>
     </div>
