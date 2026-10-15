@@ -6,12 +6,14 @@ import { APP_CONFIG } from '../../shared/config';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+import { InquiryAccordionComponent } from '../../shared/inquiry-accordion/inquiry-accordion.component';
+
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [RouterLink],
+  imports: [InquiryAccordionComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })

@@ -1,5 +1,4 @@
-import { Component, inject, OnInit, AfterViewInit, OnDestroy, ElementRef, signal, ChangeDetectorRef } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, inject, OnInit, AfterViewInit, OnDestroy, ElementRef } from '@angular/core';
 import { TranslationService } from '../../shared/translation.service';
 import { SeoService } from '../../shared/seo.service';
 import { APP_CONFIG } from '../../shared/config';
@@ -11,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -20,35 +19,10 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
   readonly social = APP_CONFIG.social;
   private readonly seo = inject(SeoService);
   private readonly el = inject(ElementRef);
-  private readonly cdr = inject(ChangeDetectorRef);
   private gsapCtx?: gsap.Context;
-
-  // Form Model
-  name = '';
-  phone = '';
-  email = '';
-  interest = 'General Pistachio Plants Inquiry';
-  message = '';
-
-  // Form Submission Reactive State (Signals)
-  readonly isSubmitting = signal(false);
-  readonly submitStatus = signal<'idle' | 'success' | 'error'>('idle');
-  readonly statusMessage = signal('');
-
-  // Accordion FAQ Card State for Contact Form
-  readonly isFormOpen = signal(false);
-
-  toggleForm(): void {
-    this.isFormOpen.update(open => !open);
-    this.cdr.markForCheck();
-  }
 
   ngOnInit(): void {
     const isAr = this.i18n.currentLang() === 'ar';
-
-    if (typeof window !== 'undefined' && (window.location.hash === '#inquiry' || window.location.hash === '#form')) {
-      this.isFormOpen.set(true);
-    }
 
     this.seo.updateSeo({
       lang: this.i18n.currentLang(),
@@ -130,14 +104,9 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
         const founderPanel = spreadSection.querySelector('.founder-editorial-panel');
         const dossierPanel = spreadSection.querySelector('.contact-dossier-panel');
         const cardShowcase = spreadSection.querySelector('.luxury-card-showcase-wrapper');
-        const faqCard = spreadSection.querySelector('.contact-faq-inquiry-container');
-
-        if (cardShowcase) gsap.set(cardShowcase, { opacity: 1, y: 0 });
-
         if (prefersReducedMotion) {
           if (founderPanel) gsap.set(founderPanel, { opacity: 1, y: 0 });
           if (dossierPanel) gsap.set(dossierPanel, { opacity: 1, y: 0 });
-          if (faqCard) gsap.set(faqCard, { opacity: 1, y: 0 });
         } else {
           const tl = gsap.timeline({
             scrollTrigger: {
@@ -147,9 +116,8 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
             }
           });
 
-          if (faqCard) tl.fromTo(faqCard, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' });
-          if (founderPanel) tl.fromTo(founderPanel, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }, '-=0.4');
-          if (dossierPanel) tl.fromTo(dossierPanel, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }, '-=0.5');
+          if (founderPanel) tl.fromTo(founderPanel, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' });
+          if (dossierPanel) tl.fromTo(dossierPanel, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.75, ease: 'power2.out' }, '-=0.4');
         }
       }
 
@@ -206,61 +174,5 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
       ? 'مرحباً أستاذ يزن، أود التواصل معك مباشرة بخصوص مشاريع واستشارات مستر بيستاشيو.'
       : 'Hello Mr. Yazan, I would like to connect with you directly regarding Mister Pistachio projects and consultations.';
     return APP_CONFIG.getWhatsAppUrl(msg);
-  }
-
-  async onSubmit(event?: Event): Promise<void> {
-    if (event && typeof event.preventDefault === 'function') {
-      event.preventDefault();
-    }
-
-    if (this.isSubmitting()) return;
-
-    this.isSubmitting.set(true);
-    this.submitStatus.set('idle');
-    this.statusMessage.set('');
-    this.cdr.markForCheck();
-
-    const formData = new FormData();
-    formData.append('access_key', '496522ba-f583-41dc-a6b3-285e56f27251');
-    formData.append('from_name', 'Mister Pistachio Website');
-    formData.append('subject', this.i18n.currentLang() === 'ar'
-      ? `طلب استفسار جديد: ${this.name || 'عميل'} (${this.interest})`
-      : `New Inquiry: ${this.name || 'Client'} (${this.interest})`);
-    formData.append('name', this.name);
-    formData.append('phone', this.phone);
-    formData.append('email', this.email);
-    formData.append('interest', this.interest);
-    formData.append('message', this.message);
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData
-      });
-
-      const result = await response.json();
-
-      if (response.ok && result.success) {
-        this.submitStatus.set('success');
-        this.statusMessage.set(this.i18n.currentLang() === 'ar'
-          ? 'تم إرسال استفسارك بنجاح! سيتواصل معك فريقنا الزراعي في أقرب وقت.'
-          : 'Your inquiry has been submitted successfully! Our agronomic team will contact you shortly.');
-
-        this.name = '';
-        this.phone = '';
-        this.email = '';
-        this.message = '';
-      } else {
-        throw new Error(result.message || 'Submission error');
-      }
-    } catch {
-      this.submitStatus.set('error');
-      this.statusMessage.set(this.i18n.currentLang() === 'ar'
-        ? 'تعذر إرسال النموذج حالياً، يرجى المحاولة مرة أخرى أو مراسلتنا مباشرة عبر واتساب.'
-        : 'Could not submit the form right now. Please try again or contact us directly via WhatsApp.');
-    } finally {
-      this.isSubmitting.set(false);
-      this.cdr.markForCheck();
-    }
   }
 }

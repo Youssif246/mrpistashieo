@@ -424,11 +424,9 @@
             : 'We help you select the ideal rootstocks and cultivars for your soil and climate, ensuring lasting yield and success.' }}
         </p>
 
-        <!-- Unified Button System - Matching other CTA sections (btn-editorial btn-editorial-dark) -->
-        <div class="cta-editorial-buttons">
-          <a [routerLink]="['/' + i18n.currentLang(), 'contact']" class="btn-editorial btn-editorial-dark" aria-label="Contact Us">
-            <span>{{ i18n.currentLang() === 'ar' ? 'تواصل معنا الآن' : 'Contact Us Now' }}</span>
-          </a>
+        <!-- Interactive Inquiry Form Accordion Replacing Static CTA -->
+        <div class="cta-inquiry-accordion-wrap">
+          <app-inquiry-accordion defaultInterest="UCB1 Rootstock Inquiries"></app-inquiry-accordion>
         </div>
 
       </div>

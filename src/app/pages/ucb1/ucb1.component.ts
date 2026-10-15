@@ -4,6 +4,8 @@ import { TranslationService } from '../../shared/translation.service';
 import { SeoService } from '../../shared/seo.service';
 import { APP_CONFIG } from '../../shared/config';
 
+import { InquiryAccordionComponent } from '../../shared/inquiry-accordion/inquiry-accordion.component';
+
 export interface Ucb1FaqItem {
   question: string;
   answer: string;
@@ -20,7 +22,7 @@ export interface Ucb1SpecRow {
 @Component({
   selector: 'app-ucb1',
   standalone: true,
-  imports: [RouterLink],
+  imports: [InquiryAccordionComponent],
   templateUrl: './ucb1.component.html',
   styleUrl: './ucb1.component.css'
 })

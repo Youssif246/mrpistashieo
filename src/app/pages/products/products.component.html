@@ -565,12 +565,9 @@
             : 'We help you select the ideal rootstocks and cultivars for your soil and climate, ensuring lasting yield and success.' }}
         </p>
 
-        <!-- Refined Single Action Button: Consultation Request -->
-        <div class="cta-actions-group">
-          <a [routerLink]="['/' + i18n.currentLang(), 'contact']" class="btn-editorial-primary">
-            <span>{{ i18n.currentLang() === 'ar' ? 'احجز استشارتك الزراعية' : 'Book Your Consultation' }}</span>
-            <i [class]="i18n.isRtl() ? 'fa-solid fa-arrow-left' : 'fa-solid fa-arrow-right'" aria-hidden="true"></i>
-          </a>
+        <!-- Interactive Inquiry Form Accordion Replacing Static CTA -->
+        <div class="cta-inquiry-accordion-wrap">
+          <app-inquiry-accordion defaultInterest="Grafted Plants (Kerman, Sirora, Larnaka)"></app-inquiry-accordion>
         </div>
 
       </div>

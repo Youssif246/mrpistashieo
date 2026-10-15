@@ -1,0 +1,178 @@
+<!-- ==========================================================================
+     REUSABLE INTERACTIVE INQUIRY ACCORDION COMPONENT
+     Editorial Pistachio Agronomic Consultation Form
+     ========================================================================== -->
+
+<div class="contact-faq-inquiry-container" id="inquiryAccordion">
+  <div class="faq-card-envelope" [class.is-expanded]="isFormOpen()">
+
+    <!-- FAQ Accordion Header / Trigger Button -->
+    <button type="button" class="faq-card-trigger" (click)="toggleForm()" [attr.aria-expanded]="isFormOpen()"
+      aria-controls="inquiryFormPanel" id="faqFormToggleBtn">
+      <div class="faq-trigger-start">
+        <div class="faq-trigger-icon-box" aria-hidden="true">
+          <i class="fa-solid fa-file-pen"></i>
+        </div>
+        <div class="faq-trigger-copy">
+          <div class="faq-trigger-eyebrow">
+            <span class="faq-eyebrow-dot"></span>
+            <span>{{ i18n.t().contact.faqTrigger.badge }}</span>
+          </div>
+          <h3 class="faq-trigger-title">{{ i18n.t().contact.faqTrigger.title }}</h3>
+          <p class="faq-trigger-subtitle">{{ i18n.t().contact.faqTrigger.subtitle }}</p>
+        </div>
+      </div>
+
+      <div class="faq-trigger-action">
+        <span class="faq-action-pill">
+          {{ isFormOpen() ? i18n.t().contact.faqTrigger.closeAction : i18n.t().contact.faqTrigger.openAction }}
+        </span>
+        <span class="faq-toggle-circle" aria-hidden="true">
+          <i class="fa-solid fa-chevron-down" [class.rotate-180]="isFormOpen()"></i>
+        </span>
+      </div>
+    </button>
+
+    <!-- Collapsible Form Body -->
+    <div class="faq-card-collapse" id="inquiryFormPanel" role="region" aria-labelledby="faqFormToggleBtn"
+      [class.is-open]="isFormOpen()">
+      <div class="faq-collapse-inner">
+
+        <!-- Preserved Contact Form Panel Intact -->
+        <div class="contact-form-panel">
+          <div class="editorial-document-sheet">
+
+            <!-- Sheet Corner Ambient Accent -->
+            <div class="sheet-ambient-decor" aria-hidden="true">
+              <svg class="sheet-botanical-branch" viewBox="0 0 200 240" fill="none">
+                <path d="M 180 20 C 140 70 80 140 30 220" stroke="#768E37" stroke-width="1.2"
+                  stroke-opacity="0.14" stroke-linecap="round" />
+                <path d="M 140 70 C 120 45 140 25 165 40 C 168 60 150 72 140 70 Z" stroke="#768E37"
+                  stroke-width="1" stroke-opacity="0.16" />
+                <path d="M 80 140 C 50 120 60 90 90 105 C 95 125 85 140 80 140 Z" stroke="#768E37"
+                  stroke-width="1" stroke-opacity="0.16" />
+              </svg>
+            </div>
+
+            <!-- Form Header with Editorial Hierarchy -->
+            <div class="sheet-header">
+              <div class="editorial-brand-eyebrow">
+                <span class="eyebrow-accent-line" aria-hidden="true"></span>
+                <span class="brand-eyebrow-text">{{ i18n.t().contact.form.tag }}</span>
+                <span class="brand-eyebrow-dot" aria-hidden="true">·</span>
+                <span class="brand-eyebrow-sub">{{ i18n.t().contact.info.bespokeAdvisory }}</span>
+              </div>
+              <h2 class="sheet-display-title">{{ i18n.t().contact.form.title }}</h2>
+              <p class="sheet-display-lead">{{ i18n.t().contact.form.desc }}</p>
+            </div>
+
+            <!-- Form Fields -->
+            <form (ngSubmit)="onSubmit($event)" class="editorial-document-form">
+              <!-- Web3Forms Access Key & Configuration -->
+              <input type="hidden" name="access_key" value="496522ba-f583-41dc-a6b3-285e56f27251">
+              <input type="hidden" name="from_name" value="Mister Pistachio Website">
+              <input type="hidden" name="subject"
+                [value]="i18n.currentLang() === 'ar' ? 'طلب استفسار زراعي جديد من موقع مستر بيستاشيو' : 'New Agronomic Inquiry from Mister Pistachio Website'">
+              <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+              <!-- Full Name -->
+              <div class="doc-field-wrap">
+                <label for="inquiry-name" class="doc-label">
+                  <span class="doc-label-text">{{ i18n.t().contact.form.name }}</span>
+                  <span class="doc-required" aria-hidden="true">*</span>
+                </label>
+                <input id="inquiry-name" name="name" type="text" class="doc-input" [(ngModel)]="name"
+                  [placeholder]="i18n.t().contact.form.namePlaceholder" required>
+              </div>
+
+              <!-- Phone & Email Dual Row -->
+              <div class="doc-dual-grid">
+                <div class="doc-field-wrap">
+                  <label for="inquiry-phone" class="doc-label">
+                    <span class="doc-label-text">{{ i18n.t().contact.form.phone }}</span>
+                    <span class="doc-required" aria-hidden="true">*</span>
+                  </label>
+                  <input id="inquiry-phone" name="phone" type="tel" class="doc-input phone-input"
+                    [(ngModel)]="phone" dir="ltr" [placeholder]="i18n.t().contact.form.phonePlaceholder" required>
+                </div>
+
+                <div class="doc-field-wrap">
+                  <label for="inquiry-email" class="doc-label">
+                    <span class="doc-label-text">{{ i18n.t().contact.form.email }}</span>
+                    <span class="doc-required" aria-hidden="true">*</span>
+                  </label>
+                  <input id="inquiry-email" name="email" type="email" class="doc-input" [(ngModel)]="email"
+                    [placeholder]="i18n.t().contact.form.emailPlaceholder" required>
+                </div>
+              </div>
+
+              <!-- Primary Interest Select -->
+              <div class="doc-field-wrap">
+                <label for="inquiry-interest" class="doc-label">
+                  <span class="doc-label-text">{{ i18n.t().contact.form.interest }}</span>
+                </label>
+                <div class="doc-select-shell">
+                  <select id="inquiry-interest" name="interest" class="doc-select" [(ngModel)]="interest">
+                    <option value="General Pistachio Plants Inquiry">{{ i18n.t().contact.form.interestOption1 }}
+                    </option>
+                    <option value="UCB1 Rootstock Inquiries">{{ i18n.t().contact.form.interestOption2 }}</option>
+                    <option value="Traditional Rootstocks (Cornicabra / Atlantica)">{{
+                      i18n.t().contact.form.interestOption3 }}</option>
+                    <option value="Grafted Plants (Kerman, Sirora, Larnaka)">{{
+                      i18n.t().contact.form.interestOption4 }}
+                    </option>
+                    <option value="Agricultural & Field Services">{{ i18n.t().contact.form.interestOption5 }}
+                    </option>
+                  </select>
+                  <span class="doc-select-caret" aria-hidden="true">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Project Details / Message Textarea -->
+              <div class="doc-field-wrap">
+                <label for="inquiry-details" class="doc-label">
+                  <span class="doc-label-text">{{ i18n.t().contact.form.projectDetails }}</span>
+                  <span class="doc-required" aria-hidden="true">*</span>
+                </label>
+                <textarea id="inquiry-details" name="message" rows="4" class="doc-textarea" [(ngModel)]="message"
+                  [placeholder]="i18n.t().contact.form.projectDetailsPlaceholder" required></textarea>
+              </div>
+
+              <!-- Submit Action: Send Inquiry Request with dynamic loading indicator -->
+              <div class="doc-action-wrap">
+                <button type="submit" class="btn-editorial-submit" [disabled]="isSubmitting()">
+                  @if (isSubmitting()) {
+                  <i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i>
+                  <span>{{ i18n.currentLang() === 'ar' ? 'جاري الإرسال...' : 'Sending...' }}</span>
+                  } @else {
+                  <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                  <span>{{ i18n.t().contact.form.submit }}</span>
+                  }
+                </button>
+              </div>
+
+              <!-- Feedback Messages -->
+              @if (submitStatus() === 'success') {
+              <div class="form-feedback success" role="alert">
+                <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                <span>{{ statusMessage() }}</span>
+              </div>
+              }
+              @if (submitStatus() === 'error') {
+              <div class="form-feedback error" role="alert">
+                <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                <span>{{ statusMessage() }}</span>
+              </div>
+              }
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

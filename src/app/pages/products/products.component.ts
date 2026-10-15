@@ -45,10 +45,12 @@ export interface ComparisonRow {
   keyTrait: string;
 }
 
+import { InquiryAccordionComponent } from '../../shared/inquiry-accordion/inquiry-accordion.component';
+
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, InquiryAccordionComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })

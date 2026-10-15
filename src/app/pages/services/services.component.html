@@ -565,13 +565,8 @@
         {{ i18n.t().servicesPage.cta.description }}
       </p>
 
-      <div class="cta-actions-cluster">
-        <a [routerLink]="['/' + i18n.currentLang(), 'contact']" 
-           class="btn-editorial-cta btn-cta-primary"
-           aria-label="Contact Agricultural Team">
-          <span>{{ i18n.t().servicesPage.cta.button }}</span>
-          <i class="fa-solid fa-arrow-right icon-dir" aria-hidden="true"></i>
-        </a>
+      <div class="cta-inquiry-accordion-wrap">
+        <app-inquiry-accordion defaultInterest="Agricultural & Field Services"></app-inquiry-accordion>
       </div>
 
       <!-- Subtle Closing Colophon Mark -->

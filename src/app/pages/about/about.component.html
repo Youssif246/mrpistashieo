@@ -365,11 +365,9 @@
         {{ i18n.t().about.cta.desc }}
       </p>
 
-      <!-- Unified Button System - Matching Home Page Exactly (NO ARROWS) -->
-      <div class="cta-editorial-buttons">
-        <a [routerLink]="['/' + i18n.currentLang(), 'contact']" class="btn-editorial btn-editorial-dark" aria-label="Contact Us">
-          <span>{{ i18n.currentLang() === 'ar' ? 'تواصل معنا الآن' : 'Contact Us Now' }}</span>
-        </a>
+      <!-- Interactive Inquiry Form Accordion Replacing Static CTA -->
+      <div class="cta-inquiry-accordion-wrap">
+        <app-inquiry-accordion defaultInterest="General Pistachio Plants Inquiry"></app-inquiry-accordion>
       </div>
     </div>
   </div>
