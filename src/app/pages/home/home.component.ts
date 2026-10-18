@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       description: isAr
         ? 'مشتل زراعي رائد متخصص في إكثار أصول الفستق الحلبي المعتمدة (UCB1، البطم)، وتأسيس البساتين النموذجية بأعلى المعايير الإسبانية والعالمية.'
         : 'Specialist nursery in pistachio cultivation, certified UCB1 rootstocks, elite grafted varieties, and precision Mediterranean orchard establishment.',
-      image: 'home-images/hero.webp'
+      image: 'og-image.png'
     });
 
     this.seo.setStructuredData('org-schema', {
