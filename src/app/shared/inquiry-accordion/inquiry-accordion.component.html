@@ -67,7 +67,8 @@
             </div>
 
             <!-- Form Fields -->
-            <form (ngSubmit)="onSubmit($event)" class="editorial-document-form">
+            <!-- Form Fields with Enhanced Validation -->
+            <form (ngSubmit)="onSubmit($event)" class="editorial-document-form" novalidate>
               <!-- Web3Forms Access Key & Configuration -->
               <input type="hidden" name="access_key" value="496522ba-f583-41dc-a6b3-285e56f27251">
               <input type="hidden" name="from_name" value="Mister Pistachio Website">
@@ -76,33 +77,63 @@
               <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
               <!-- Full Name -->
-              <div class="doc-field-wrap">
+              <div class="doc-field-wrap" [class.has-error]="isFieldInvalid('name')">
                 <label for="inquiry-name" class="doc-label">
                   <span class="doc-label-text">{{ i18n.t().contact.form.name }}</span>
                   <span class="doc-required" aria-hidden="true">*</span>
                 </label>
                 <input id="inquiry-name" name="name" type="text" class="doc-input" [(ngModel)]="name"
-                  [placeholder]="i18n.t().contact.form.namePlaceholder" required>
+                  (blur)="onBlur('name')" (input)="onInput('name')"
+                  [class.input-error]="isFieldInvalid('name')"
+                  [attr.aria-invalid]="isFieldInvalid('name')"
+                  [attr.aria-describedby]="isFieldInvalid('name') ? 'name-error' : null"
+                  [placeholder]="i18n.t().contact.form.namePlaceholder" required autocomplete="name">
+                @if (isFieldInvalid('name')) {
+                  <div class="field-error-msg" id="name-error" role="alert">
+                    <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                    <span>{{ getNameError() }}</span>
+                  </div>
+                }
               </div>
 
               <!-- Phone & Email Dual Row -->
               <div class="doc-dual-grid">
-                <div class="doc-field-wrap">
+                <div class="doc-field-wrap" [class.has-error]="isFieldInvalid('phone')">
                   <label for="inquiry-phone" class="doc-label">
                     <span class="doc-label-text">{{ i18n.t().contact.form.phone }}</span>
                     <span class="doc-required" aria-hidden="true">*</span>
                   </label>
                   <input id="inquiry-phone" name="phone" type="tel" class="doc-input phone-input"
-                    [(ngModel)]="phone" dir="ltr" [placeholder]="i18n.t().contact.form.phonePlaceholder" required>
+                    [(ngModel)]="phone" (blur)="onBlur('phone')" (input)="onInput('phone')"
+                    [class.input-error]="isFieldInvalid('phone')"
+                    [attr.aria-invalid]="isFieldInvalid('phone')"
+                    [attr.aria-describedby]="isFieldInvalid('phone') ? 'phone-error' : null"
+                    dir="ltr" [placeholder]="i18n.t().contact.form.phonePlaceholder" required autocomplete="tel">
+                  @if (isFieldInvalid('phone')) {
+                    <div class="field-error-msg" id="phone-error" role="alert">
+                      <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                      <span>{{ getPhoneError() }}</span>
+                    </div>
+                  }
                 </div>
 
-                <div class="doc-field-wrap">
+                <div class="doc-field-wrap" [class.has-error]="isFieldInvalid('email')">
                   <label for="inquiry-email" class="doc-label">
                     <span class="doc-label-text">{{ i18n.t().contact.form.email }}</span>
                     <span class="doc-required" aria-hidden="true">*</span>
                   </label>
                   <input id="inquiry-email" name="email" type="email" class="doc-input" [(ngModel)]="email"
-                    [placeholder]="i18n.t().contact.form.emailPlaceholder" required>
+                    (blur)="onBlur('email')" (input)="onInput('email')"
+                    [class.input-error]="isFieldInvalid('email')"
+                    [attr.aria-invalid]="isFieldInvalid('email')"
+                    [attr.aria-describedby]="isFieldInvalid('email') ? 'email-error' : null"
+                    [placeholder]="i18n.t().contact.form.emailPlaceholder" required autocomplete="email">
+                  @if (isFieldInvalid('email')) {
+                    <div class="field-error-msg" id="email-error" role="alert">
+                      <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                      <span>{{ getEmailError() }}</span>
+                    </div>
+                  }
                 </div>
               </div>
 
@@ -131,13 +162,23 @@
               </div>
 
               <!-- Project Details / Message Textarea -->
-              <div class="doc-field-wrap">
+              <div class="doc-field-wrap" [class.has-error]="isFieldInvalid('message')">
                 <label for="inquiry-details" class="doc-label">
                   <span class="doc-label-text">{{ i18n.t().contact.form.projectDetails }}</span>
                   <span class="doc-required" aria-hidden="true">*</span>
                 </label>
                 <textarea id="inquiry-details" name="message" rows="4" class="doc-textarea" [(ngModel)]="message"
+                  (blur)="onBlur('message')" (input)="onInput('message')"
+                  [class.input-error]="isFieldInvalid('message')"
+                  [attr.aria-invalid]="isFieldInvalid('message')"
+                  [attr.aria-describedby]="isFieldInvalid('message') ? 'message-error' : null"
                   [placeholder]="i18n.t().contact.form.projectDetailsPlaceholder" required></textarea>
+                @if (isFieldInvalid('message')) {
+                  <div class="field-error-msg" id="message-error" role="alert">
+                    <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+                    <span>{{ getMessageError() }}</span>
+                  </div>
+                }
               </div>
 
               <!-- Submit Action: Send Inquiry Request with dynamic loading indicator -->

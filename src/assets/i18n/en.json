@@ -586,7 +586,17 @@
       "projectDetails": "Project Details & Location",
       "projectDetailsPlaceholder": "Please include approximate hectares or tree count, soil type, and plantation location...",
       "submit": "Submit Inquiry Request",
-      "notice": "Clicking submit will open WhatsApp with your pre-composed project message for immediate dialogue."
+      "notice": "Clicking submit will open WhatsApp with your pre-composed project message for immediate dialogue.",
+      "errors": {
+        "nameRequired": "Please enter your full name (at least 2 characters)",
+        "phoneRequired": "Please enter your phone or WhatsApp number",
+        "phoneInvalid": "Please enter a valid phone number (at least 7 digits)",
+        "emailRequired": "Please enter your email address",
+        "emailInvalid": "Please enter a valid email address (e.g. name@domain.com)",
+        "messageRequired": "Please enter your inquiry details or message",
+        "messageTooShort": "Please provide more details (at least 10 characters)",
+        "formInvalid": "Please complete all required fields and correct the highlighted errors before submitting."
+      }
     },
     "social": {
       "tag": "Official Channels",
