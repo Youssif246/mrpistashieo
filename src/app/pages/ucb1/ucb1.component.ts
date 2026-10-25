@@ -53,13 +53,13 @@ export class Ucb1Component implements OnInit {
           '@type': 'ListItem',
           'position': 1,
           'name': isAr ? 'الرئيسية' : 'Home',
-          'item': `https://misterpistachio.com/${this.i18n.currentLang()}`
+          'item': `https://www.misterpistachio.com/${this.i18n.currentLang()}/`
         },
         {
           '@type': 'ListItem',
           'position': 2,
           'name': isAr ? 'أصل UCB-1' : 'UCB-1 Rootstock',
-          'item': `https://misterpistachio.com/${this.i18n.currentLang()}/ucb1`
+          'item': `https://www.misterpistachio.com/${this.i18n.currentLang()}/ucb1/`
         }
       ]
     });

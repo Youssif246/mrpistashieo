@@ -42,8 +42,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       'name': 'Mister Pistachio',
       'alternateName': 'مستر بيستاشيو',
       'legalName': 'Mister Pistachio Trading O P LLC',
-      'url': 'https://misterpistachio.com',
-      'logo': 'https://misterpistachio.com/logo.png',
+      'url': 'https://www.misterpistachio.com',
+      'logo': 'https://www.misterpistachio.com/logo.png',
       'description': isAr
         ? 'مشاتل متخصصة في إكثار أصول الفستق الحلبي المعتمدة وتأسيس البساتين التجارية.'
         : 'Specialist nursery in pistachio cultivation, certified rootstocks, and commercial orchard establishment.',
@@ -62,7 +62,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       '@type': 'WebSite',
       'name': 'Mister Pistachio',
       'alternateName': 'مستر بيستاشيو',
-      'url': 'https://misterpistachio.com',
+      'url': 'https://www.misterpistachio.com',
       'inLanguage': ['ar', 'en']
     });
   }

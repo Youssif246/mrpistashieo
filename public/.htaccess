@@ -1,7 +1,10 @@
-# ==============================================================================
-# MISTER PISTACHO / مستر بيستاشيو — Apache Configuration for Hostinger Web Hosting
-# Production Static Deployment (.htaccess)
-# ==============================================================================
+# Disable automatic trailing slash redirect by mod_dir (prevents 301 redirect errors on directory paths)
+<IfModule mod_dir.c>
+  DirectorySlash Off
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes +FollowSymLinks
 
 # Enable Rewrite Engine
 <IfModule mod_rewrite.c>
@@ -9,47 +12,54 @@
   RewriteBase /
 
   # ----------------------------------------------------------------------------
-  # 1. FORCE HTTPS
+  # 1. CANONICAL DOMAIN (FORCE WWW) & FORCE HTTPS (Single 301 Redirect)
   # ----------------------------------------------------------------------------
+  # Normalization A: HTTP -> HTTPS on canonical domain
   RewriteCond %{HTTPS} off
   RewriteCond %{HTTP:X-Forwarded-Proto} !https
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteRule ^(.*)$ https://www.misterpistachio.com/$1 [R=301,L]
+
+  # Normalization B: non-www -> www on canonical domain
+  RewriteCond %{HTTP_HOST} ^misterpistachio\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.misterpistachio.com/$1 [R=301,L]
 
   # ----------------------------------------------------------------------------
-  # 2. ROOT DIRECTORY & LANGUAGE ROOTS
+  # 2. ROOT DIRECTORY
   # Redirect root / to default Arabic language (/ar/) with HTTP 301
   # ----------------------------------------------------------------------------
   RewriteRule ^$ /ar/ [R=301,L]
-  RewriteRule ^ar$ /ar/ [R=301,L]
-  RewriteRule ^en$ /en/ [R=301,L]
 
   # ----------------------------------------------------------------------------
   # 3. LEGACY ROUTE REDIRECTS (Preserve Backwards Compatibility & Search Value)
   # ----------------------------------------------------------------------------
-  RewriteRule ^about/?$ /ar/about/ [R=301,L]
-  RewriteRule ^services/?$ /ar/services/ [R=301,L]
-  RewriteRule ^varieties/?$ /ar/varieties/ [R=301,L]
-  RewriteRule ^products/?$ /ar/varieties/ [R=301,L]
-  RewriteRule ^ar/products/?$ /ar/varieties/ [R=301,L]
-  RewriteRule ^en/products/?$ /en/varieties/ [R=301,L]
-  RewriteRule ^ucb1/?$ /ar/ucb1/ [R=301,L]
-  RewriteRule ^usb1/?$ /ar/ucb1/ [R=301,L]
-  RewriteRule ^ar/usb1/?$ /ar/ucb1/ [R=301,L]
-  RewriteRule ^en/usb1/?$ /en/ucb1/ [R=301,L]
-  RewriteRule ^rootstock-ucb1/?$ /ar/ucb1/ [R=301,L]
-  RewriteRule ^ar/rootstock-ucb1/?$ /ar/ucb1/ [R=301,L]
-  RewriteRule ^en/rootstock-ucb1/?$ /en/ucb1/ [R=301,L]
-  RewriteRule ^articles/?$ /ar/articles/ [R=301,L]
-  RewriteRule ^articles/(.+?)/?$ /ar/articles/$1/ [R=301,L]
-  RewriteRule ^contact/?$ /ar/contact/ [R=301,L]
+  RewriteRule ^about/?$ https://www.misterpistachio.com/ar/about/ [R=301,L]
+  RewriteRule ^services/?$ https://www.misterpistachio.com/ar/services/ [R=301,L]
+  RewriteRule ^varieties/?$ https://www.misterpistachio.com/ar/varieties/ [R=301,L]
+  RewriteRule ^products/?$ https://www.misterpistachio.com/ar/varieties/ [R=301,L]
+  RewriteRule ^ar/products/?$ https://www.misterpistachio.com/ar/varieties/ [R=301,L]
+  RewriteRule ^en/products/?$ https://www.misterpistachio.com/en/varieties/ [R=301,L]
+  RewriteRule ^ucb1/?$ https://www.misterpistachio.com/ar/ucb1/ [R=301,L]
+  RewriteRule ^usb1/?$ https://www.misterpistachio.com/ar/ucb1/ [R=301,L]
+  RewriteRule ^ar/usb1/?$ https://www.misterpistachio.com/ar/ucb1/ [R=301,L]
+  RewriteRule ^en/usb1/?$ https://www.misterpistachio.com/en/ucb1/ [R=301,L]
+  RewriteRule ^rootstock-ucb1/?$ https://www.misterpistachio.com/ar/ucb1/ [R=301,L]
+  RewriteRule ^ar/rootstock-ucb1/?$ https://www.misterpistachio.com/ar/ucb1/ [R=301,L]
+  RewriteRule ^en/rootstock-ucb1/?$ https://www.misterpistachio.com/en/ucb1/ [R=301,L]
+  RewriteRule ^articles/?$ https://www.misterpistachio.com/ar/articles/ [R=301,L]
+  RewriteRule ^articles/(.+?)/?$ https://www.misterpistachio.com/ar/articles/$1/ [R=301,L]
+  RewriteRule ^contact/?$ https://www.misterpistachio.com/ar/contact/ [R=301,L]
 
   # ----------------------------------------------------------------------------
-  # 4. STATIC DIRECTORY & ROUTE SERVING
+  # 4. STATIC DIRECTORY & ROUTE SERVING (Direct 200 OK for Slash & Non-Slash URLs)
   # ----------------------------------------------------------------------------
-  # If requested path corresponds to an existing directory containing index.html, serve it
+  # If requested path corresponds to an existing directory containing index.html, serve it directly
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteCond %{REQUEST_FILENAME}/index.html -f
-  RewriteRule ^ - [L]
+  RewriteRule ^(.*)/?$ $1/index.html [L]
+
+  # If requested path without slash corresponds to a directory containing index.html, serve it directly
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+?)/?$ $1/index.html [L]
 
   # If requested file exists, serve it directly
   RewriteCond %{REQUEST_FILENAME} -f

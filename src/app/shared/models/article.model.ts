@@ -1,9 +1,11 @@
 export interface ArticleContentBlock {
-  type: 'paragraph' | 'heading' | 'image' | 'list';
+  type: 'paragraph' | 'heading' | 'image' | 'list' | 'table';
   text?: string;
   src?: string;
   alt?: string;
   items?: string[];
+  headers?: string[];
+  rows?: string[][];
 }
 
 export interface Article {

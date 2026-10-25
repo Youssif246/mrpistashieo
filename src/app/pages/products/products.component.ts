@@ -80,13 +80,13 @@ export class ProductsComponent implements OnInit {
           '@type': 'ListItem',
           'position': 1,
           'name': isAr ? 'الرئيسية' : 'Home',
-          'item': `https://misterpistachio.com/${this.i18n.currentLang()}`
+          'item': `https://www.misterpistachio.com/${this.i18n.currentLang()}/`
         },
         {
           '@type': 'ListItem',
           'position': 2,
           'name': isAr ? 'الأصناف والأصول' : 'Varieties & Rootstocks',
-          'item': `https://misterpistachio.com/${this.i18n.currentLang()}/varieties`
+          'item': `https://www.misterpistachio.com/${this.i18n.currentLang()}/varieties/`
         }
       ]
     });

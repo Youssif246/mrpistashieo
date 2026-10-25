@@ -130,8 +130,8 @@ urlNodes.forEach((node, idx) => {
   if (parsedUrl.protocol !== 'https:') {
     errors.push(`Entry #${idx + 1} ("${loc}") protocol must be https:`);
   }
-  if (parsedUrl.hostname !== 'misterpistachio.com') {
-    errors.push(`Entry #${idx + 1} ("${loc}") hostname must be misterpistachio.com, got: ${parsedUrl.hostname}`);
+  if (parsedUrl.hostname !== 'www.misterpistachio.com') {
+    errors.push(`Entry #${idx + 1} ("${loc}") hostname must be www.misterpistachio.com, got: ${parsedUrl.hostname}`);
   }
 
   // Trailing slash requirement for directory routes
@@ -189,7 +189,7 @@ urlNodes.forEach((node, idx) => {
       if (href.includes('[') || href.includes(']') || href.includes('(') || href.includes(')')) {
         errors.push(`Entry "${loc}" alternate href contains Markdown syntax: "${href}"`);
       }
-      if (!href.startsWith('https://misterpistachio.com/')) {
+      if (!href.startsWith('https://www.misterpistachio.com/')) {
         errors.push(`Entry "${loc}" alternate href has wrong domain: "${href}"`);
       }
       if (!href.endsWith('/')) {

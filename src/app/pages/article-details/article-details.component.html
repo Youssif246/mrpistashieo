@@ -115,6 +115,33 @@
               </ul>
             </div>
           }
+
+          @if (block.type === 'table') {
+            <div class="content-table-wrapper">
+              <table class="content-table">
+                @if (block.headers && block.headers.length > 0) {
+                  <thead>
+                    <tr>
+                      @for (header of block.headers; track header) {
+                        <th>{{ header }}</th>
+                      }
+                    </tr>
+                  </thead>
+                }
+                @if (block.rows && block.rows.length > 0) {
+                  <tbody>
+                    @for (row of block.rows; track $index) {
+                      <tr>
+                        @for (cell of row; track $index) {
+                          <td>{{ cell }}</td>
+                        }
+                      </tr>
+                    }
+                  </tbody>
+                }
+              </table>
+            </div>
+          }
         }
       </main>
 

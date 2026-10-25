@@ -51,7 +51,18 @@
         </span>
       </a>
 
-      <!-- 5. المقالات -->
+      <!-- 5. التوريد بالجملة -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'wholesale']" routerLinkActive="active" class="nav-link">
+        <span class="nav-link-text">{{ i18n.currentLang() === 'ar' ? 'التوريد بالجملة' : 'Wholesale' }}</span>
+        <span class="nav-active-botanical" aria-hidden="true">
+          <svg viewBox="0 0 28 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 3.5C8 1 20 1 27 3.5" stroke="#7E993B" stroke-width="2" stroke-linecap="round" />
+            <circle cx="26" cy="3.5" r="1.2" fill="#B89358" />
+          </svg>
+        </span>
+      </a>
+
+      <!-- 6. المقالات -->
       <a [routerLink]="['/' + i18n.currentLang(), 'articles']" routerLinkActive="active" class="nav-link">
         <span class="nav-link-text">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</span>
         <span class="nav-active-botanical" aria-hidden="true">
@@ -155,7 +166,12 @@
         <span class="m-link-text">{{ i18n.t().navbar.services }}</span>
       </a>
 
-      <!-- 5. المقالات -->
+      <!-- 5. التوريد بالجملة -->
+      <a [routerLink]="['/' + i18n.currentLang(), 'wholesale']" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
+        <span class="m-link-text">{{ i18n.currentLang() === 'ar' ? 'التوريد بالجملة' : 'Wholesale' }}</span>
+      </a>
+
+      <!-- 6. المقالات -->
       <a [routerLink]="['/' + i18n.currentLang(), 'articles']" routerLinkActive="active" class="mobile-nav-link" (click)="closeMobileMenu()">
         <span class="m-link-text">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</span>
       </a>

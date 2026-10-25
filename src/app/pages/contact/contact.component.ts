@@ -44,13 +44,13 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
           '@type': 'ListItem',
           'position': 1,
           'name': isAr ? 'الرئيسية' : 'Home',
-          'item': `https://misterpistachio.com/${this.i18n.currentLang()}`
+          'item': `https://www.misterpistachio.com/${this.i18n.currentLang()}/`
         },
         {
           '@type': 'ListItem',
           'position': 2,
           'name': isAr ? 'اتصل بنا' : 'Contact Us',
-          'item': `https://misterpistachio.com/${this.i18n.currentLang()}/contact`
+          'item': `https://www.misterpistachio.com/${this.i18n.currentLang()}/contact/`
         }
       ]
     });

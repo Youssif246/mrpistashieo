@@ -25,8 +25,8 @@ export class SeoService {
   private readonly platformId = inject(PLATFORM_ID);
   private readonly isBrowser = isPlatformBrowser(this.platformId);
 
-  private readonly siteUrl = 'https://misterpistachio.com';
-  private readonly defaultImage = 'https://misterpistachio.com/og-image.png';
+  private readonly siteUrl = 'https://www.misterpistachio.com';
+  private readonly defaultImage = 'https://www.misterpistachio.com/og-image.png';
 
   updateSeo(config: SeoConfig): void {
     const isAr = config.lang === 'ar';
@@ -56,9 +56,8 @@ export class SeoService {
     const normEqPath = normalizeUrlPath(equivalentPath);
 
     const currentUrl = `${this.siteUrl}/${config.lang}${normCurrentPath}`;
-    const imageUrl = config.image 
-      ? (config.image.startsWith('http') ? config.image : `${this.siteUrl}/${config.image.replace(/^\//, '')}`)
-      : this.defaultImage;
+    // Per AGENTS.md Branding Standard: ALWAYS use high-resolution branded og-image.png for social cards
+    const imageUrl = this.defaultImage;
 
     this.metaService.updateTag({ property: 'og:title', content: config.title });
     this.metaService.updateTag({ property: 'og:description', content: config.description });
@@ -68,6 +67,10 @@ export class SeoService {
     this.metaService.updateTag({ property: 'og:locale', content: isAr ? 'ar_AR' : 'en_US' });
     this.metaService.updateTag({ property: 'og:locale:alternate', content: isAr ? 'en_US' : 'ar_AR' });
     this.metaService.updateTag({ property: 'og:image', content: imageUrl });
+    this.metaService.updateTag({ property: 'og:image:secure_url', content: imageUrl });
+    this.metaService.updateTag({ property: 'og:image:type', content: 'image/png' });
+    this.metaService.updateTag({ property: 'og:image:width', content: '1200' });
+    this.metaService.updateTag({ property: 'og:image:height', content: '630' });
     this.metaService.updateTag({ property: 'og:image:alt', content: config.title });
 
     // 4. Twitter Cards

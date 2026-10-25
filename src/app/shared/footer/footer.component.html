@@ -44,6 +44,7 @@
           <li><a [routerLink]="['/' + i18n.currentLang(), 'ucb1']">UCB1</a></li>
           <li><a [routerLink]="['/' + i18n.currentLang(), 'varieties']">{{ i18n.t().navbar.products }}</a></li>
           <li><a [routerLink]="['/' + i18n.currentLang(), 'services']">{{ i18n.t().navbar.services }}</a></li>
+          <li><a [routerLink]="['/' + i18n.currentLang(), 'wholesale']">{{ i18n.currentLang() === 'ar' ? 'التوريد بالجملة' : 'Wholesale' }}</a></li>
           <li><a [routerLink]="['/' + i18n.currentLang(), 'articles']">{{ i18n.currentLang() === 'ar' ? 'المقالات' : 'Articles' }}</a></li>
           <li><a [routerLink]="['/' + i18n.currentLang(), 'about']">{{ i18n.t().navbar.about }}</a></li>
           <li><a [routerLink]="['/' + i18n.currentLang(), 'contact']">{{ i18n.t().navbar.contact }}</a></li>

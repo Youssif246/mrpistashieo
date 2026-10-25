@@ -19,7 +19,7 @@ const rootDir = path.resolve(__dirname, '..');
 
 const distBrowserDir = path.join(rootDir, 'dist', 'project', 'browser');
 const publicDir = path.join(rootDir, 'public');
-const SITE_DOMAIN = process.env.SITE_DOMAIN || 'https://misterpistachio.com';
+const SITE_DOMAIN = process.env.SITE_DOMAIN || 'https://www.misterpistachio.com';
 
 function log(msg) {
   console.log(`[post-build] ${msg}`);
@@ -109,6 +109,7 @@ try {
     { ar: '/services', en: '/services' },
     { ar: '/varieties', en: '/varieties' },
     { ar: '/ucb1', en: '/ucb1' },
+    { ar: '/wholesale', en: '/wholesale' },
     { ar: '/articles', en: '/articles' },
     { ar: '/contact', en: '/contact' }
   ];

@@ -95,8 +95,8 @@ export class ArticleDetailsComponent implements OnInit {
     const otherArticle = otherArticles.find(a => a.id === article.id);
     const equivalentPath = otherArticle ? `/articles/${otherArticle.slug}` : `/articles/${article.slug}`;
 
-    const imageUrl = `https://misterpistachio.com/${article.coverImage}`;
-    const currentUrl = `https://misterpistachio.com/${currentLang}/articles/${article.slug}`;
+    const imageUrl = `https://www.misterpistachio.com/${article.coverImage}`;
+    const currentUrl = `https://www.misterpistachio.com/${currentLang}/articles/${article.slug}/`;
 
     const publishedIso = this.getIsoPublishedDate(article.id);
 
@@ -123,14 +123,14 @@ export class ArticleDetailsComponent implements OnInit {
       'author': {
         '@type': 'Organization',
         'name': 'Mister Pistachio',
-        'url': 'https://misterpistachio.com'
+        'url': 'https://www.misterpistachio.com'
       },
       'publisher': {
         '@type': 'Organization',
         'name': currentLang === 'ar' ? 'مستر بيستاشيو' : 'Mister Pistachio',
         'logo': {
           '@type': 'ImageObject',
-          'url': 'https://misterpistachio.com/logo.png'
+          'url': 'https://www.misterpistachio.com/logo.png'
         }
       },
       'mainEntityOfPage': {
@@ -152,13 +152,13 @@ export class ArticleDetailsComponent implements OnInit {
           '@type': 'ListItem',
           'position': 1,
           'name': currentLang === 'ar' ? 'الرئيسية' : 'Home',
-          'item': `https://misterpistachio.com/${currentLang}`
+          'item': `https://www.misterpistachio.com/${currentLang}/`
         },
         {
           '@type': 'ListItem',
           'position': 2,
           'name': currentLang === 'ar' ? 'المقالات والأبحاث' : 'Articles & Research',
-          'item': `https://misterpistachio.com/${currentLang}/articles`
+          'item': `https://www.misterpistachio.com/${currentLang}/articles/`
         },
         {
           '@type': 'ListItem',

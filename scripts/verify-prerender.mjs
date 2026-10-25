@@ -79,6 +79,9 @@ for (const p of testPages) {
       console.error(`  -> FAIL: Missing canonical`);
       allPassed = false;
     }
+  } else if (!canonical.startsWith('https://www.misterpistachio.com/')) {
+    console.error(`  -> FAIL: Canonical must start with https://www.misterpistachio.com/, got: ${canonical}`);
+    allPassed = false;
   } else if (!canonical.endsWith('/')) {
     console.error(`  -> FAIL: Canonical missing trailing slash: ${canonical}`);
     allPassed = false;

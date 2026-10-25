@@ -1,0 +1,497 @@
+<div class="wholesale-page-wrapper" [class.rtl]="i18n.currentLang() === 'ar'" [attr.dir]="i18n.isRtl() ? 'rtl' : 'ltr'">
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       1. HERO: UNIFIED PREMIUM INTERNAL EDITORIAL HERO
+       Matches Services, Products, About, UCB1, and Contact pages
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <header class="internal-editorial-hero" id="wholesaleHero">
+    <div class="internal-hero-container">
+      <div class="internal-hero-grid">
+        
+        <!-- Content Block: Right in RTL, Left in LTR -->
+        <div class="internal-hero-content">
+          <div class="internal-hero-eyebrow">
+            <span class="internal-hero-eyebrow-line" aria-hidden="true"></span>
+            <span class="internal-hero-eyebrow-text">
+              {{ i18n.currentLang() === 'ar' ? 'توريد وتصدير معتمد' : 'Certified Wholesale & Export' }}
+            </span>
+          </div>
+
+          <h1 class="internal-hero-title">
+            {{ i18n.currentLang() === 'ar'
+              ? 'توريد الفستق الحلبي السوري بالجملة'
+              : 'Wholesale Syrian Pistachio Supply' }}
+          </h1>
+
+          <div class="internal-hero-divider" aria-hidden="true"></div>
+
+          <p class="internal-hero-desc">
+            {{ i18n.currentLang() === 'ar'
+              ? 'متخصصون في توريد الفستق الحلبي السوري الفاخر لتجار الجملة، المصانع، والمستوردين حول العالم—بمختلف أشكاله الطبيعية، المحمصة، المجروشة، ومعجون الفستق النقي 100% وفق أعلى معايير الجودة وشهادات التحليل المعتمدة.'
+              : 'Specialists in supplying authentic Syrian pistachios to wholesalers, processors, and importers worldwide—in-shell, shelled kernels, roasted, calibrated nibs, flour, and 100% pure paste with certified phytosanitary standards.' }}
+          </p>
+
+          <!-- Subtle Agronomic & Commercial Metadata Badges -->
+          <div class="internal-hero-strip internal-hero-meta-badges">
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.currentLang() === 'ar' ? 'فستق حلبي سوري 100% أصيل' : '100% Authentic Syrian Origin' }}
+            </span>
+            <span class="strip-sep">/</span>
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.currentLang() === 'ar' ? 'توريد مباشر للمصانع والشركات' : 'Direct B2B & Food Industry Supply' }}
+            </span>
+            <span class="strip-sep">/</span>
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.currentLang() === 'ar' ? 'شهادات تحليل مخبري معتمدة' : 'Certified Laboratory Analysis' }}
+            </span>
+            <span class="strip-sep">/</span>
+            <span class="hero-meta-badge">
+              <span class="badge-dot"></span>
+              {{ i18n.currentLang() === 'ar' ? 'شحن وتصدير دولي موثوق' : 'Global Export & Cold Chain Logistics' }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Large Custom Image Block (45-50% width) -->
+        <div class="internal-hero-media">
+          <div class="internal-hero-frame">
+            <img src="assets/images/wholesale/wholesale-products-forms.jpg" 
+                 alt="Wholesale Syrian pistachio products portfolio by Mister Pistachio" 
+                 class="internal-hero-img"
+                 loading="eager">
+            <div class="internal-hero-plate">
+              <span class="plate-marker">{{ i18n.currentLang() === 'ar' ? 'التوريد بالجملة' : 'Wholesale Portfolio' }}</span>
+              <span class="plate-caption">
+                {{ i18n.currentLang() === 'ar' ? 'تشكيلة متكاملة من الفستق الحلبي الخام والمصنع جاهزة للشحن والتصدير' : 'Comprehensive raw & processed pistachio forms tailored for commercial supply' }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       OFFERINGS TRUST RIBBON: HORIZONTAL SUMMARY BAR
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="wholesale-offerings-ribbon" aria-label="Wholesale Product Forms Overview">
+    <div class="container-wide">
+      <div class="offerings-ribbon-grid">
+        <div class="offering-ribbon-card">
+          <div class="offering-card-icon">
+            <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+          </div>
+          <span class="offering-card-text">{{ i18n.currentLang() === 'ar' ? 'فستق طبيعي بقشره وبدون قشرة' : 'Natural In-Shell & Kernels' }}</span>
+        </div>
+
+        <div class="offering-ribbon-card">
+          <div class="offering-card-icon">
+            <i class="fa-solid fa-fire-flame-curved" aria-hidden="true"></i>
+          </div>
+          <span class="offering-card-text">{{ i18n.currentLang() === 'ar' ? 'فستق محمص ومملح بقشره' : 'Roasted & Salted In-Shell' }}</span>
+        </div>
+
+        <div class="offering-ribbon-card">
+          <div class="offering-card-icon">
+            <i class="fa-solid fa-mortar-pestle" aria-hidden="true"></i>
+          </div>
+          <span class="offering-card-text">{{ i18n.currentLang() === 'ar' ? 'طحين وبودرة الفستق الناعمة' : 'Fine Flour & Meal' }}</span>
+        </div>
+
+        <div class="offering-ribbon-card">
+          <div class="offering-card-icon">
+            <i class="fa-solid fa-cubes-stacked" aria-hidden="true"></i>
+          </div>
+          <span class="offering-card-text">{{ i18n.currentLang() === 'ar' ? 'فستق حلبي مجروش وحبيبات' : 'Calibrated Chopped Nibs' }}</span>
+        </div>
+
+        <div class="offering-ribbon-card">
+          <div class="offering-card-icon">
+            <i class="fa-solid fa-jar" aria-hidden="true"></i>
+          </div>
+          <span class="offering-card-text">{{ i18n.currentLang() === 'ar' ? 'معجون فستق طبيعي نقي 100%' : '100% Pure Natural Paste' }}</span>
+        </div>
+
+        <div class="offering-ribbon-card">
+          <div class="offering-card-icon">
+            <i class="fa-solid fa-boxes-packing" aria-hidden="true"></i>
+          </div>
+          <span class="offering-card-text">{{ i18n.currentLang() === 'ar' ? 'سائب، مفرز ومعاير، عضوي وتقليدي' : 'Bulk, Calibrated & Organic' }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       BODY CONTENT CONTAINER: 5 EDITORIAL PRODUCT & AGRONOMIC CHAPTERS
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <div class="wholesale-body-container">
+
+    <!-- SECTION 2: PRODUCT PORTFOLIO CARDS -->
+    <section id="products-section" class="wholesale-section">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">{{ i18n.currentLang() === 'ar' ? 'تشكيلة المنتجات للتوريد التجاري' : 'Wholesale Portfolio' }}</span>
+        <h2 class="section-headline">
+          {{ i18n.currentLang() === 'ar' ? 'أشكال الفستق الحلبي المتاحة للتصدير والتوريد' : 'Available Pistachio Product Forms for Export' }}
+        </h2>
+        <p class="section-lead">
+          {{ i18n.currentLang() === 'ar'
+            ? 'نوفر الفستق الحلبي بمختلف الأشكال والمعايير التي تلبي بدقة متطلبات مصانع الأغذية، صانعي الشوكولاتة، المخابز الراقية، وشبكات تجارة الجملة.'
+            : 'Supplying pistachios across diverse culinary grades and calibrations tailored for food manufacturers, master chocolatiers, patisseries, and wholesale distributors.' }}
+        </p>
+      </div>
+
+      <div class="products-cards-grid">
+        @for (item of products; track item.id) {
+          <article class="product-card">
+            <div class="card-header">
+              <div class="card-icon-box">
+                <i [class]="item.icon"></i>
+              </div>
+              <span class="card-category-badge">{{ i18n.currentLang() === 'ar' ? item.categoryAr : item.categoryEn }}</span>
+            </div>
+
+            <h3 class="card-title">{{ i18n.currentLang() === 'ar' ? item.titleAr : item.titleEn }}</h3>
+            <p class="card-desc">{{ i18n.currentLang() === 'ar' ? item.descAr : item.descEn }}</p>
+
+            <div class="card-specs-list">
+              @for (spec of (i18n.currentLang() === 'ar' ? item.specsAr : item.specsEn); track spec) {
+                <div class="spec-bullet">
+                  <i class="fa-solid fa-check"></i>
+                  <span>{{ spec }}</span>
+                </div>
+              }
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+
+    <!-- SECTION 3: TERROIR, IDEAL ENVIRONMENT & QUALITY -->
+    <section class="wholesale-section terroir-section">
+      <div class="terroir-grid">
+        <div class="terroir-text">
+          <span class="section-eyebrow">
+            {{ i18n.currentLang() === 'ar' ? 'بيئة المنشأ والزراعة العريقة' : 'Authentic Terroir & Heritage' }}
+          </span>
+          <h2 class="section-headline">
+            {{ i18n.currentLang() === 'ar'
+              ? 'سورية: المهد الطبيعي والمناخ الأنسب لإنتاج الفستق الفاخر'
+              : 'Syria: The Natural Cradle & Ideal Setting for Premium Pistachios' }}
+          </h2>
+
+          <div class="terroir-pillar">
+            <div class="pillar-icon"><i class="fa-solid fa-sun-plant-wilt"></i></div>
+            <div class="pillar-body">
+              <h4>{{ i18n.currentLang() === 'ar' ? 'مناخ متوسطي وساعات برودة مثالية' : 'Ideal Mediterranean Climate & Chilling Hours' }}</h4>
+              <p>
+                {{ i18n.currentLang() === 'ar'
+                  ? 'تمنح شتاءات سورية المعتدلة وساعات البرودة المحسوبة، مع صيف جاف ومشمس، بيئة زراعية استثنائية تزدهر فيها شجرة الفستق وتتحمل درجات الحرارة في تربة كلسية خصبة عالية التصريف.'
+                  : 'Syria’s balanced winter chilling hours and warm, arid summers create the premier microclimate for pistachio trees, fostering deep root resilience in calcareous mineral-rich soils.' }}
+              </p>
+            </div>
+          </div>
+
+          <div class="terroir-pillar">
+            <div class="pillar-icon"><i class="fa-solid fa-medal"></i></div>
+            <div class="pillar-body">
+              <h4>{{ i18n.currentLang() === 'ar' ? 'تركيز زيتي ونكهة عطرية أصيلة' : 'Intense Essential Oils & Emerald Depth' }}</h4>
+              <p>
+                {{ i18n.currentLang() === 'ar'
+                  ? 'يتفوق الفستق الحلبي عالمياً بمذاقه المركز ولونه الأخضر الزمردي الجذاب، بفضل التركيز العالي للزيوت الطبيعية والمستخلصات العطرية التي تنفرد بها البيئة السورية الأصيلة.'
+                  : 'Renowned globally for superior aroma and vibrant green kernels, driven by high concentrations of natural volatile oils unique to authentic Syrian terroir.' }}
+              </p>
+            </div>
+          </div>
+
+          <div class="terroir-pillar">
+            <div class="pillar-icon"><i class="fa-solid fa-seedling"></i></div>
+            <div class="pillar-body">
+              <h4>{{ i18n.currentLang() === 'ar' ? 'نقاوة غذائية وبروتينات متكاملة' : 'Pure Nutrition & Complete Plant Protein' }}</h4>
+              <p>
+                {{ i18n.currentLang() === 'ar'
+                  ? 'يحتوي على بروتين نباتي كامل غني بجميع الأحماض الأمينية الأساسية، ومضادات أكسدة وفيتامينات (E وB وA) ومعادن حيوية تدعم أعلى مواصفات الجودة الغذائية والصناعية.'
+                  : 'Delivering a complete amino acid profile, heart-healthy antioxidants, essential lipids, and micronutrients meeting the strictest international food manufacturing standards.' }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="terroir-visual">
+          <div class="terroir-editorial-frame">
+            <!-- Image Stage with Floating Location Tag -->
+            <div class="terroir-img-stage">
+              <img src="assets/images/articles/syrian-pistachios-export/syrian-pistachios-export.jpg"
+                   [alt]="i18n.currentLang() === 'ar' ? 'بساتين الفستق الحلبي السوري العريقة في مورك وحماة' : 'Heritage Syrian Pistachio Orchards'"
+                   class="terroir-img"
+                   loading="lazy">
+              <div class="terroir-floating-tag">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <span>{{ i18n.currentLang() === 'ar' ? 'سورية • بساتين مورك وحماة' : 'Syria • Mork & Hama Orchards' }}</span>
+              </div>
+            </div>
+
+            <!-- Archival Caption Plate -->
+            <div class="terroir-plate">
+              <span class="plate-marker">{{ i18n.currentLang() === 'ar' ? 'بيئة المنشأ' : 'Terroir Origin' }}</span>
+              <span class="plate-caption">
+                {{ i18n.currentLang() === 'ar' ? 'أشجار الفستق الحلبي المعمرة في التربة الكلسية الطبيعية' : 'Century-old pistachio trees in native limestone soil' }}
+              </span>
+            </div>
+
+            <!-- Refined 3-Metric Specifications Strip -->
+            <div class="terroir-metrics-card">
+              <div class="terroir-metric-item">
+                <div class="metric-icon-wrap">
+                  <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+                </div>
+                <div class="metric-info">
+                  <span class="metric-val">100%</span>
+                  <span class="metric-label">{{ i18n.currentLang() === 'ar' ? 'منشأ سوري موثق' : 'Syrian Origin' }}</span>
+                </div>
+              </div>
+
+              <div class="metric-sep" aria-hidden="true"></div>
+
+              <div class="terroir-metric-item">
+                <div class="metric-icon-wrap">
+                  <i class="fa-solid fa-droplet" aria-hidden="true"></i>
+                </div>
+                <div class="metric-info">
+                  <span class="metric-val" dir="ltr">&lt; 5%</span>
+                  <span class="metric-label">{{ i18n.currentLang() === 'ar' ? 'رطوبة مضبوطة' : 'Controlled Moisture' }}</span>
+                </div>
+              </div>
+
+              <div class="metric-sep" aria-hidden="true"></div>
+
+              <div class="terroir-metric-item">
+                <div class="metric-icon-wrap">
+                  <i class="fa-solid fa-flask-vial" aria-hidden="true"></i>
+                </div>
+                <div class="metric-info">
+                  <span class="metric-val">HPLC</span>
+                  <span class="metric-label">{{ i18n.currentLang() === 'ar' ? 'فحص جودة معتمد' : 'Lab Certified' }}</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: SYRIAN VARIETIES ADAPTED TO CLIMATE -->
+    <section class="wholesale-section">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">{{ i18n.currentLang() === 'ar' ? 'أصناف مختارة للتوريد' : 'Selected Varieties' }}</span>
+        <h2 class="section-headline">
+          {{ i18n.currentLang() === 'ar' ? 'أشهر الأصناف السورية المتاحة للطلبيات التجارية' : 'Premier Syrian Pistachio Cultivars for Commercial Orders' }}
+        </h2>
+        <p class="section-lead">
+          {{ i18n.currentLang() === 'ar'
+            ? 'نمتلك أصنافاً تراثية معتمدة تتكيف تماماً مع أعلى متطلبات التصدير والتصنيع وتناسب أذواق المستهلكين حول العالم.'
+            : 'Supplying verified heritage cultivars that meet exacting export calibrations and consumer preferences across global markets.' }}
+        </p>
+      </div>
+
+      <div class="varieties-showcase-grid">
+        <!-- Ashouri -->
+        <div class="variety-spotlight-card">
+          <div class="spotlight-tag">{{ i18n.currentLang() === 'ar' ? 'الصنف الملكي الأكثر طلباً' : 'Flagship Premium' }}</div>
+          <h3>{{ i18n.currentLang() === 'ar' ? 'الفستق الحلبي العاشوري — Ashouri' : 'Ashouri Pistachio — Flagship' }}</h3>
+          <p class="variety-desc">
+            {{ i18n.currentLang() === 'ar'
+              ? 'يتميز بشكل ثماره المتطاول، وحجمه الكبير، ونكهته العطرية الزكية المركزة. وهو الخيار الأول للمكسرات الفاخرة والبقلاوة الملكية.'
+              : 'Characterized by an elongated nut shape, generous size, and intense aromatic fragrance. The premier choice for luxury snacking and royal Levant pastry.' }}
+          </p>
+          <div class="variety-meta">
+            <span class="meta-pill"><i class="fa-solid fa-maximize"></i> {{ i18n.currentLang() === 'ar' ? 'حجم كبير متطاول' : 'Large Elongated Caliber' }}</span>
+            <span class="meta-pill"><i class="fa-solid fa-droplet"></i> {{ i18n.currentLang() === 'ar' ? 'زيوت عطرية مركزة' : 'Rich Essential Oils' }}</span>
+          </div>
+        </div>
+
+        <!-- Batouri -->
+        <div class="variety-spotlight-card">
+          <div class="spotlight-tag">{{ i18n.currentLang() === 'ar' ? 'نسبة انفتاح ممتازة' : 'High Natural Split' }}</div>
+          <h3>{{ i18n.currentLang() === 'ar' ? 'الفستق الحلبي الباتوري — Batouri' : 'Batouri Pistachio — Plump Caliber' }}</h3>
+          <p class="variety-desc">
+            {{ i18n.currentLang() === 'ar'
+              ? 'يتميز بحباته الممتلئة المستديرة، ونسبة انفتاح طبيعية عالية، ومظهر فاتح جذاب يجعله مثالياً للتحميص والتعبئة الاستهلاكية.'
+              : 'Distinguished by plump, rounded nuts, high natural split rates, and attractive clean shells, making it optimal for roasting and snack retail.' }}
+          </p>
+          <div class="variety-meta">
+            <span class="meta-pill"><i class="fa-solid fa-circle-dot"></i> {{ i18n.currentLang() === 'ar' ? 'حجم ممتلئ مستدير' : 'Round Full Kernel' }}</span>
+            <span class="meta-pill"><i class="fa-solid fa-lock-open"></i> {{ i18n.currentLang() === 'ar' ? 'انفتاح قشرة طبيعي' : 'Natural Dehiscence' }}</span>
+          </div>
+        </div>
+
+        <!-- Aleimi & Mawardi -->
+        <div class="variety-spotlight-card">
+          <div class="spotlight-tag">{{ i18n.currentLang() === 'ar' ? 'لصناعة الشوكولاتة والآيس كريم' : 'Chocolatier & Gelato Choice' }}</div>
+          <h3>{{ i18n.currentLang() === 'ar' ? 'الفستق الحلبي العليمي والماوردي — Mawardi' : 'Aleimi & Mawardi Cultivars' }}</h3>
+          <p class="variety-desc">
+            {{ i18n.currentLang() === 'ar'
+              ? 'يمتاز بلونه الأخضر الزمردي الزاهي ونقاء لبه الداخلي، وهو المفضل بشدة لدى مصانع الشوكولاتة السويسرية والفرنسية ومصنعي الجيلاتو.'
+              : 'Renowned for intense emerald green pigmentation and pure kernel flesh, universally prized by artisan chocolatiers and Italian gelaterias.' }}
+          </p>
+          <div class="variety-meta">
+            <span class="meta-pill"><i class="fa-solid fa-gem"></i> {{ i18n.currentLang() === 'ar' ? 'أخضر زمردي عميق' : 'Deep Emerald Green' }}</span>
+            <span class="meta-pill"><i class="fa-solid fa-ice-cream"></i> {{ i18n.currentLang() === 'ar' ? 'مثالي للحلويات والمعجون' : 'Ideal for Paste & Confections' }}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: CUSTOMIZABLE PACKAGING -->
+    <section class="wholesale-section packaging-section">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">{{ i18n.currentLang() === 'ar' ? 'تعبئة مرنة ومحمية' : 'Custom Packaging' }}</span>
+        <h2 class="section-headline">
+          {{ i18n.currentLang() === 'ar' ? 'خيارات التعبئة والتغليف المخصصة للشحن الدولي' : 'Customizable Packaging Solutions for International Logistics' }}
+        </h2>
+        <p class="section-lead">
+          {{ i18n.currentLang() === 'ar'
+            ? 'نوفر حلول تعبئة صناعية وتجارية متعددة تشمل الأكياس، الجامبو باج، والكراتين المفرغة من الهواء، مع إمكانية توفير خيارات خاصة حسب طلب العميل.'
+            : 'Supplying bulk bags, big bags / totes, and vacuum cartons engineered to preserve freshness throughout ocean and air freight.' }}
+        </p>
+      </div>
+
+      <div class="packaging-cards-grid">
+        @for (pkg of packagingOptions; track pkg.weight) {
+          <article class="packaging-card">
+            <!-- Top Metadata Strip -->
+            <div class="pkg-card-header">
+              <div class="pkg-caliber-badge">
+                <i class="fa-solid fa-weight-hanging" aria-hidden="true"></i>
+                <span dir="ltr">{{ pkg.weight }}</span>
+              </div>
+              <span class="pkg-format-indicator">{{ i18n.currentLang() === 'ar' ? pkg.subtitleAr : pkg.subtitleEn }}</span>
+            </div>
+
+            <!-- Distinctive Icon Emblem -->
+            <div class="pkg-icon-sphere">
+              <div class="icon-ambient-ring" aria-hidden="true"></div>
+              <i [class]="pkg.icon" aria-hidden="true"></i>
+            </div>
+
+            <!-- Card Headline & Divider -->
+            <h3 class="pkg-card-title">{{ i18n.currentLang() === 'ar' ? pkg.titleAr : pkg.titleEn }}</h3>
+            <div class="pkg-card-divider" aria-hidden="true"></div>
+
+            <!-- Description -->
+            <p class="pkg-card-desc">{{ i18n.currentLang() === 'ar' ? pkg.descAr : pkg.descEn }}</p>
+
+            <!-- Specification Highlights -->
+            <ul class="pkg-features-list">
+              @for (feat of (i18n.currentLang() === 'ar' ? pkg.featuresAr : pkg.featuresEn); track feat) {
+                <li>
+                  <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+                  <span>{{ feat }}</span>
+                </li>
+              }
+            </ul>
+          </article>
+        }
+      </div>
+    </section>
+
+    <!-- SECTION 6: 5 HEALTH BENEFITS (Exact match from Alas de Castilla) -->
+    <section class="wholesale-section health-section">
+      <div class="section-title-wrap">
+        <span class="section-eyebrow">{{ i18n.currentLang() === 'ar' ? 'القيمة الغذائية والصحية' : 'Nutritional Powerhouse' }}</span>
+        <h2 class="section-headline">
+          {{ i18n.currentLang() === 'ar' ? 'الفوائد الصحية الخمس المثبتة للفستق الحلبي' : '5 Proven Health Benefits of Pistachios' }}
+        </h2>
+        <p class="section-lead">
+          {{ i18n.currentLang() === 'ar'
+            ? 'يُعد الفستق الحلبي من أكثر المكسرات توازناً وصحة، لاحتوائه على مزيج متكامل من البروتينات، الألياف الغذائية، والدهون المفيدة والمعادن الأساسية.'
+            : 'Pistachios rank among the healthiest tree nuts, offering a complete balance of nutrients: plant proteins, dietary fibers, heart-healthy lipids, and essential minerals.' }}
+        </p>
+      </div>
+
+      <div class="health-benefits-grid">
+        @for (benefit of healthBenefits; track benefit.number) {
+          <article class="health-card">
+            <!-- Top Header with Number and Icon -->
+            <div class="health-card-top">
+              <span class="health-number">{{ benefit.number }}</span>
+              <div class="health-icon-box">
+                <i [class]="benefit.icon" aria-hidden="true"></i>
+              </div>
+            </div>
+
+            <!-- Title & Hairline Divider -->
+            <h3 class="health-title">{{ i18n.currentLang() === 'ar' ? benefit.titleAr : benefit.titleEn }}</h3>
+            <div class="health-divider" aria-hidden="true"></div>
+
+            <!-- Description -->
+            <p class="health-desc">{{ i18n.currentLang() === 'ar' ? benefit.descAr : benefit.descEn }}</p>
+
+            <!-- Compound Badge -->
+            <div class="health-card-tag">
+              <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+              <span>{{ i18n.currentLang() === 'ar' ? benefit.tagAr : benefit.tagEn }}</span>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       7. FINAL CLOSING CTA SECTION: UNIFIED BOTANICAL EDITORIAL CTA (NO FORMS)
+       Matches About, UCB1, Services, and Products pages
+       ══════════════════════════════════════════════════════════════════════════ -->
+  <section class="wholesale-closing-cta" id="wholesaleCta">
+    <!-- Ghost Watermark & Ground Organic Contour & Tree/Branch -->
+    <div class="cta-ambient-canvas" aria-hidden="true">
+      <div class="botanical-sunlight-filter"></div>
+      <div class="botanical-shadow-wrapper botanical-shadow--orchard-row">
+        <img src="/botanical/pistachio-orchard-horizon.svg" alt="" loading="lazy">
+      </div>
+      <div class="botanical-shadow-wrapper wholesale-cta-tree-left">
+        <img src="/botanical/pistachio-specimen-vertical.svg" alt="" loading="lazy">
+      </div>
+      <div class="botanical-shadow-wrapper botanical-shadow--bottom-left wholesale-cta-branch-left">
+        <img src="/botanical/real-pistachio-corner.webp" alt="" loading="lazy">
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <div class="cta-editorial-stage">
+        
+        <!-- Centered Eyebrow with Flanking Hairlines -->
+        <div class="cta-centered-eyebrow">
+          <span class="cta-hairline-accent" aria-hidden="true"></span>
+          <span class="cta-eyebrow-text">
+            {{ i18n.currentLang() === 'ar' ? 'توريد تجاري وشحن دولي' : 'B2B Wholesale & International Supply' }}
+          </span>
+          <span class="cta-hairline-accent" aria-hidden="true"></span>
+        </div>
+
+        <h2 class="cta-editorial-headline">
+          {{ i18n.currentLang() === 'ar' ? 'جاهزون لتلبية طلبات التوريد بالجملة والشحن الدولي' : 'Ready to Fulfill Your Wholesale & Export Requirements' }}
+        </h2>
+
+        <p class="cta-editorial-description">
+          {{ i18n.currentLang() === 'ar'
+            ? 'تواصل مباشرة مع فريق التصدير والتوريد في مستر بستاشيو لمناقشة الكميات، المقاسات، والأسعار وعقود التوريد السنوية وجدولة الشحنات.'
+            : 'Connect directly with Mister Pistachio trade desk to discuss volumes, calibers, technical specifications, and annual supply agreements.' }}
+        </p>
+
+        <!-- Interactive Inquiry Form Accordion (Exact Match to All Internal Pages) -->
+        <div class="cta-inquiry-accordion-wrap">
+          <app-inquiry-accordion defaultInterest="Wholesale Syrian Pistachios"></app-inquiry-accordion>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div>

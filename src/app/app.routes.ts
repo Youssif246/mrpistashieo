@@ -7,6 +7,7 @@ import { ProductsComponent } from './pages/products/products.component';
 import { Ucb1Component } from './pages/ucb1/ucb1.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
 import { ArticleDetailsComponent } from './pages/article-details/article-details.component';
+import { WholesaleComponent } from './pages/wholesale/wholesale.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 
@@ -34,6 +35,10 @@ const localizedRoutes: Routes = [
   },
   { path: 'usb1', redirectTo: 'ucb1', pathMatch: 'full' },
   { path: 'rootstock-ucb1', redirectTo: 'ucb1', pathMatch: 'full' },
+  {
+    path: 'wholesale',
+    component: WholesaleComponent
+  },
   {
     path: 'articles',
     component: ArticlesComponent
@@ -75,6 +80,7 @@ export const routes: Routes = [
   { path: 'ucb1', redirectTo: 'ar/ucb1', pathMatch: 'full' },
   { path: 'usb1', redirectTo: 'ar/ucb1', pathMatch: 'full' },
   { path: 'rootstock-ucb1', redirectTo: 'ar/ucb1', pathMatch: 'full' },
+  { path: 'wholesale', redirectTo: 'ar/wholesale', pathMatch: 'full' },
   { path: 'articles', redirectTo: 'ar/articles', pathMatch: 'full' },
   { path: 'articles/:slug', redirectTo: 'ar/articles/:slug' },
   { path: 'contact', redirectTo: 'ar/contact', pathMatch: 'full' },
