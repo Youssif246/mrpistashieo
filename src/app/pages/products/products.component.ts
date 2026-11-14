@@ -96,6 +96,74 @@ export class ProductsComponent implements OnInit {
     const isAr = this.i18n.currentLang() === 'ar';
     return [
       {
+        id: 'tekin',
+        name: isAr ? 'تِكّين (Tekin)' : 'Tekin',
+        scientificName: 'Pistacia vera cv. Tekin (Sel-1)',
+        category: isAr ? 'صنف مؤنث تركي محسّن' : 'Improved Turkish Female Cultivar',
+        badge: isAr ? 'انتخاب معهد غازي عنتاب — نسبة انفتاح 97%' : 'Gaziantep Selection — 97% Split Rate',
+        origin: isAr ? 'تركيا (معهد أبحاث الفستق في غازي عنتاب)' : 'Turkey (Gaziantep Pistachio Research Institute)',
+        image: 'products-images/varieties/tekin.webp',
+        altText: isAr ? 'ثمار فستق صنف تكين التركي المحسن' : 'Tekin Turkish improved pistachio variety',
+        flowering: isAr ? 'منتصف إلى أواخر أبريل' : 'Mid to Late April',
+        chillingHours: isAr ? '1100 ساعة مرجعية (700 – 800 ساعة بيئية)' : '1,100 Official Chill Hours (700–800 Field)',
+        pollinatorsOrFemales: isAr ? 'أويغور، أطلي، أوزتورك، كاشكا' : 'Uygur, Atlı, Öztürk, Kaşka',
+        description: isAr
+          ? 'صنف تركي محسّن ومسجل رسمياً، نتج عن الانتخاب الزراعي بمعهد أبحاث الفستق بغازي عنتاب (عُرف علمياً بـ Sel-1). يتميز بثمار كبيرة جداً (وزن 100 ثمرة يصل إلى 139 غراماً)، ونسبة انفتاح قياسية تبلغ 97%، وتصافي ممتاز 47%. أثبت تفوقاً استثنائياً تحت الري بالتنقيط في تجارب محطة تكتك بجنوب شرق تركيا، مع انتظام عالي للإنتاج السنوي وميل ضعيف للمعاومة، مما يجعله خياراً استثمارياً أول لسوق الفستق بالقشرة والتسالي والتصدير.'
+          : 'An officially registered improved Turkish cultivar bred via agronomic selection at the Gaziantep Pistachio Research Institute (scientifically designated Sel-1). It boasts exceptionally large nuts (139g per 100 nuts), an extraordinary 97% natural shell-split rate, and a 47% kernel ratio. Long-term irrigation trials at Tektek station demonstrated outstanding yields under drip irrigation with reduced biennial bearing, rendering Tekin a premier commercial choice for high-grade in-shell snacking and export.',
+        characteristics: [
+          {
+            label: isAr ? 'نسبة الانفتاح ووزن الثمرة' : 'Split Rate & Nut Caliber',
+            value: isAr ? '97% تفتح طبيعي قياسي — وزن 100 ثمرة 139 غرام' : '97% record natural dehiscence — 139g per 100 nuts'
+          },
+          {
+            label: isAr ? 'نسبة التصافي والإنتاج' : 'Kernel Yield & Tree Output',
+            value: isAr ? '47% تصافي — 4.42 كغ إنتاج مرجعي للشجرة' : '47% kernel yield — 4.42 kg reference tree output'
+          },
+          {
+            label: isAr ? 'الري وانتظام الحمل' : 'Irrigation & Bearing Regularity',
+            value: isAr ? 'استجابة متفوقة للري بالتنقيط وميل ضعيف للمعاومة' : 'Superb response to drip irrigation; low alternate bearing'
+          },
+          {
+            label: isAr ? 'الملقحات المتوافقة' : 'Compatible Pollinators',
+            value: isAr ? 'أويغور (Uygur) وأطلي (Atlı) وكاشكا (Kaşka)' : 'Uygur, Atlı, Kaşka, Öztürk'
+          }
+        ]
+      },
+      {
+        id: 'siirt',
+        name: isAr ? 'سيرت (Siirt)' : 'Siirt',
+        scientificName: 'Pistacia vera cv. Siirt',
+        category: isAr ? 'صنف مؤنث تركي تجاري' : 'Premier Turkish Commercial Cultivar',
+        badge: isAr ? 'الصنف التصديري الأول للتسالي في تركيا' : 'Top Turkish Export Table Nut',
+        origin: isAr ? 'تركيا (محافظة سيرت، جنوب شرق الأناضول)' : 'Turkey (Siirt Province, Southeast Anatolia)',
+        image: 'products-images/varieties/siirt.webp',
+        altText: isAr ? 'ثمار فستق صنف سيرت التركي الفاخر' : 'Siirt Turkish pistachio variety nuts',
+        flowering: isAr ? 'منتصف إلى أواخر أبريل' : 'Mid to Late April',
+        chillingHours: isAr ? '1050 ساعة مرجعية (700 – 900 ساعة بيئية)' : '1,050 Official Chill Hours (700–900 Field)',
+        pollinatorsOrFemales: isAr ? 'أويغور، أطلي، أوزتورك' : 'Uygur, Atlı, Öztürk',
+        description: isAr
+          ? 'الصنف التجاري القياسي الأوسع شهرة وانتشاراً في تركيا ومحرك صادرات الفستق الفاخر بالقشرة. يتميز بحباته البيضاوية الكبيرة الممتلئة (وزن 100 ثمرة 134 غراماً)، وقشرته الصلبة الفاتحة ذات القبول التسويقي العالي، ونسبة انفتاح طبيعي تصل إلى 94%. حقق إنتاجاً تاريخياً بلغ 300 كغ للدونم في دراسات الزراعة المروية المكثفة المنشورة في Acta Horticulturae، مع سهولة جني وانفصال الثمار عن العناقيد.'
+          : 'The definitive commercial standard in Turkey and the engine of Turkish premium in-shell table nut exports. Characterized by large, uniform oval nuts (134g per 100 nuts), bright ivory-toned shells highly prized by consumers, and a 94% natural split percentage. Landmark intensive irrigation studies published in Acta Horticulturae verified yields reaching 300 kg/decar, complemented by rapid harvesting detachment from fruit clusters.',
+        characteristics: [
+          {
+            label: isAr ? 'شكل الثمرة والجاذبية التجارية' : 'Nut Geometry & Market Appeal',
+            value: isAr ? 'حبات بيضاوية كبيرة، قشرة صلبة فاتحة، تفتح 94%' : 'Large oval nuts, bright ivory shell, 94% split rate'
+          },
+          {
+            label: isAr ? 'الإنتاجية المروية' : 'Irrigated Productivity',
+            value: isAr ? 'سجل حتى 300 كغ/دونم في تجارب الزراعة المكثفة' : 'Up to 300 kg/decar achieved in intensive irrigation'
+          },
+          {
+            label: isAr ? 'وزن المحصول والتصافي' : 'Nut Weight & Kernel Ratio',
+            value: isAr ? 'وزن 100 ثمرة 134غ — نسبة تصافي 44%' : '134g per 100 nuts — 44% kernel yield'
+          },
+          {
+            label: isAr ? 'تأمين التلقيح' : 'Pollination Strategy',
+            value: isAr ? 'تأمين ملقحين متتابعين (أويغور وأطلي)' : 'Dual staminate donors recommended (Uygur & Atlı)'
+          }
+        ]
+      },
+      {
         id: 'kerman',
         name: isAr ? 'كيرمان' : 'Kerman',
         scientificName: 'Pistacia vera cv. Kerman',
@@ -579,6 +647,24 @@ export class ProductsComponent implements OnInit {
   readonly comparisonRows = computed<ComparisonRow[]>(() => {
     const isAr = this.i18n.currentLang() === 'ar';
     return [
+      {
+        name: isAr ? 'تِكّين (Tekin)' : 'Tekin',
+        sex: 'female',
+        type: isAr ? 'أنثى تجارية محسّنة' : 'Female Improved Cultivar',
+        floweringWindow: isAr ? 'منتصف-أواخر أبريل' : 'Mid-Late April',
+        chillHours: isAr ? '700 – 1100 ساعة' : '700 – 1,100 hrs',
+        partners: isAr ? 'أويغور، أطلي، كاشكا' : 'Uygur, Atlı, Kaşka',
+        keyTrait: isAr ? 'نسبة انفتاح قياسية 97%، حبة 139غ/100، إنتاج مروي غزير بلا معاومة' : 'Record 97% split rate, 139g/100 nuts, high drip yield, minimal alternate bearing'
+      },
+      {
+        name: isAr ? 'سيرت (Siirt)' : 'Siirt',
+        sex: 'female',
+        type: isAr ? 'أنثى تصديرية فاخرة' : 'Female Premium Export',
+        floweringWindow: isAr ? 'منتصف-أواخر أبريل' : 'Mid-Late April',
+        chillHours: isAr ? '700 – 1050 ساعة' : '700 – 1,050 hrs',
+        partners: isAr ? 'أويغور، أطلي، أوزتورك' : 'Uygur, Atlı, Öztürk',
+        keyTrait: isAr ? 'صنف التسالي الأول بتركيا، 300 كغ/دونم بالتجربة، تفتح 94% وثمرة بيضاوية' : 'Top Turkish snack nut, 300 kg/decar trial yield, 94% split, clean light shell'
+      },
       {
         name: isAr ? 'كيرمان (Kerman)' : 'Kerman',
         sex: 'female',
