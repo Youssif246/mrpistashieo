@@ -1,5 +1,4 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { TranslationService } from '../../shared/translation.service';
 import { SeoService } from '../../shared/seo.service';
 import { APP_CONFIG } from '../../shared/config';
@@ -46,7 +45,7 @@ import { InquiryAccordionComponent } from '../../shared/inquiry-accordion/inquir
 @Component({
   selector: 'app-wholesale',
   standalone: true,
-  imports: [RouterLink, InquiryAccordionComponent],
+  imports: [InquiryAccordionComponent],
   templateUrl: './wholesale.component.html',
   styleUrl: './wholesale.component.css'
 })

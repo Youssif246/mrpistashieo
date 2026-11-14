@@ -1,59 +1,269 @@
-# Project
+# مستر بيستاشيو | Mister Pistachio
+## الموقع الرسمي لإنتاج وتوريد شتلات وأصول الفستق الحلبي (Official Website)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.3.
+موقع ويب إنتاجي حديث مبني باستخدام **Angular 21** بنظام **التصيير المسبق الكامل (100% Static Prerendered / SSG)**، مخصص للعمل بكفاءة فائقة وسرعة قصوى على الاستضافات المشتركة والسحابية (Apache / Hostinger) بدون الحاجة إلى خادم Node.js قيد التشغيل. يدعم الموقع اللغتين العربية (كلغة أساسية RTL) والإنجليزية (LTR)، مع معمارية SEO متطورة ومطابقة لمعايير Google Search Console.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📑 الفهرس (Table of Contents)
+1. [المتطلبات التقنية والتشغيل السريع (Quick Start)](#1-المتطلبات-التقنية-والتشغيل-السريع-quick-start)
+2. [المعمارية التقنية للمشروع (Tech Stack & Architecture)](#2-المعمارية-التقنية-للمشروع-tech-stack--architecture)
+3. [هيكل المجلدات والملفات (Folder Structure)](#3-هيكل-المجلدات-والملفات-folder-structure)
+4. [دليل المبرمج: كيفية التعديل والإضافة خطوة بخطوة (Developer Guide)](#4-دليل-المبرمج-كيفية-التعديل-والإضافة-خطوة-بخطوة-developer-guide)
+   - [تعديل أرقام الواتساب وروابط التواصل الاجتماعي](#أ-تعديل-أرقام-الواتساب-وروابط-التواصل-الاجتماعي)
+   - [تعديل النصوص والترجمات (عربي / إنجليزي)](#ب-تعديل-النصوص-والترجمات-عربي--إنجليزي)
+   - [إضافة مقال جديد إلى المدونة](#ج-إضافة-مقال-جديد-إلى-المدونة)
+   - [إضافة صفحة جديدة للمشروع](#د-إضافة-صفحة-جديدة-للمشروع)
+5. [أوامر البناء والنشر على الاستضافة (Build & Deployment)](#5-أوامر-البناء-والنشر-على-الاستضافة-build--deployment)
+6. [معايير الـ SEO وشبكات التواصل المعتمدة (Branding & Standards)](#6-معايير-الـ-seo-وشبكات-التواصل-المعتمدة-branding--standards)
 
-```bash
-ng serve
+---
+
+## 1. المتطلبات التقنية والتشغيل السريع (Quick Start)
+
+### المتطلبات الأساسية (Prerequisites):
+- **Node.js**: إصدار 18 أو 20 أو 22 فما فوق (LTS موصى به).
+- **npm**: إصدار 9 أو 10 أو 11 فما فوق.
+
+### خطوات التشغيل المحلي (Local Development):
+1. افتح التيرمينال داخل مجلد المشروع:
+   ```bash
+   cd project
+   ```
+2. تثبيت الحزم والمكتبات:
+   ```bash
+   npm install
+   ```
+3. تشغيل خادم التطوير المحلي:
+   ```bash
+   npm start
+   ```
+4. افتح المتصفح على:
+   ```text
+   http://localhost:4200/
+   ```
+   الموقع يدعم التحديث التلقائي الفوري (Live Reload) عند تعديل أي ملف في الكود.
+
+---
+
+## 2. المعمارية التقنية للمشروع (Tech Stack & Architecture)
+
+- **Framework**: [Angular 21](https://angular.dev/) (Standalone Components, Signals, Computed, New Control Flow `@if` / `@for`).
+- **Rendering Engine**: `@angular/ssr` مع معمارية **Static Site Generation (SSG)**:
+  - تُصيّر جميع الصفحات والمقالات (34+ صفحة) أثناء عملية البناء محلياً إلى ملفات HTML ثابتة تماماً.
+  - لا حاجة لتشغيل خادم Node.js أو PM2 على الاستضافة الإنتاجية.
+- **Styling**: نظام تصميم نباتي تحريري فاخر (Botanical Editorial Design System) مكتوب بـ CSS نقي عالي الأداء مع متغيرات CSS (`:root`) متكاملة، ومتجاوب بالكامل مع كافة الشاشات (Mobile First).
+- **Animations**: مكتبة [GSAP](https://greensock.com/gsap/) للحركات التفاعلية والسلسة.
+- **Internationalization (i18n)**: خدمة ترجمة مخصصة (`TranslationService`) تعتمد على مسارات URL كمصدر للحقيقة (`/ar/...` و `/en/...`) وتخزن التفضيل في `localStorage`.
+- **SEO & Meta**: خدمة مركزية (`SeoService`) لتوليد وسوم `Title`, `Meta Description`, `Canonical`, `hreflang`, `Open Graph`, `Twitter Cards`, والبيانات المنظمة `JSON-LD (schema.org)`.
+
+---
+
+## 3. هيكل المجلدات والملفات (Folder Structure)
+
+```text
+project/
+├── public/                     # الملفات الثابتة العامة (تُنسخ كما هي إلى مخرجات البناء)
+│   ├── .htaccess               # إعدادات Apache لهوستنجر (التوجيه، الكاش، الأمان، وإجبار HTTPS)
+│   ├── robots.txt              # توجيه عناكب محركات البحث
+│   ├── sitemap.xml             # خريطة الموقع الإنتاجية
+│   ├── og-image.png            # البطاقة المعتمدة للمشاركة على السوشيال ميديا (1200x630)
+│   ├── logo.png / favicon.*    # الشعار والأيقونات بجميع المقاسات
+│   └── */-images/              # مجلدات الصور الثابتة للواجهات والأصناف
+├── scripts/                    # سكربتات ما بعد البناء والتحقق
+│   ├── post-build.mjs          # توليد تحويل الجذر، نسخ 404، وبناء sitemap.xml محدثة
+│   ├── verify-sitemap.mjs      # فحص دقة خريطة الموقع وتوافقها مع معايير Google
+│   ├── verify-all-pages.mjs    # تدقيق شامل لجميع الصفحات والمقالات الـ 34 والتأكد من وسوم SEO
+│   └── generate-card-pdf.mjs   # سكربت لتوليد بطاقة العمل الرسمية بصيغة PDF
+├── src/
+│   ├── app/
+│   │   ├── pages/              # صفحات الموقع الرئيسية
+│   │   │   ├── home/           # الصفحة الرئيسية (Hero, القصة، الإحصائيات، الخدمات، الشتلات)
+│   │   │   ├── about/          # من نحن (رؤية المشتل، الفريق، والخبرة الإسبانية)
+│   │   │   ├── services/       # الخدمات الزراعية واستشارات البساتين
+│   │   │   ├── products/       # أصناف الفستق والشتلات المؤصلة
+│   │   │   ├── ucb1/           # الصفحة الفنية التفصيلية للأصل الهجين UCB1
+│   │   │   ├── wholesale/      # التوريد والتصدير بالجملة والمواصفات الصناعية
+│   │   │   ├── articles/       # دليل المدونة وقائمة المقالات الزراعية
+│   │   │   ├── article-details/# صفحة عرض المقال الفردي الديناميكي عبر الـ Slug
+│   │   │   ├── contact/        # صفحة التواصل وحجز الاستشارات
+│   │   │   └── not-found/      # صفحة الخطأ 404
+│   │   ├── shared/             # المكونات والخدمات المشتركة
+│   │   │   ├── config.ts       # ⚠️ الملف المركزي لإعدادات التواصل والروابط
+│   │   │   ├── seo.service.ts  # خدمة إدارة وسوم الـ SEO والـ Structured Data
+│   │   │   ├── translation.service.ts # خدمة إدارة اللغات والنصوص
+│   │   │   ├── navbar/         # شريط التنقل العلوي وتغيير اللغة
+│   │   │   ├── footer/         # التذييل وروابط الوصول السريع
+│   │   │   ├── floating-whatsapp/ # زر الواتساب العائم الذكي
+│   │   │   └── pistachio-intro/   # شاشة البداية الترحيبية التفاعلية
+│   │   ├── app.routes.ts       # مسارات التوجيه وقواعد التوجيه ثنائي اللغة
+│   │   └── app.ts              # المكون الجذري للتطبيق
+│   ├── assets/
+│   │   ├── i18n/               # قواميس النصوص الثابتة (ar.json / en.json)
+│   │   ├── data/articles/      # قاعدة بيانات المقالات العلمية (ar.json / en.json)
+│   │   └── images/articles/    # الصور المرفقة بمقالات المدونة
+│   ├── styles.css              # ملف الأنماط العام ومتغيرات التصميم
+│   └── index.html              # قالب الـ HTML الأساسي والخطوط
+├── angular.json                # تكوين البناء والـ SSG
+└── package.json                # الحزم والأوامر المتاحة
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 4. دليل المبرمج: كيفية التعديل والإضافة خطوة بخطوة (Developer Guide)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### أ. تعديل أرقام الواتساب وروابط التواصل الاجتماعي
+جميع روابط التواصل ورقم الواتساب ورسائل الاستفسار محددة في مكان مركزي واحد:
+- **الملف**: `src/app/shared/config.ts`
+```typescript
+export const APP_CONFIG = {
+  // رقم الواتساب بالصيغة الدولية بدون (+) أو مسافات:
+  whatsappNumber: '31612555547',
 
+  social: {
+    instagram: 'https://www.instagram.com/mister.pistachio?...',
+    tiktok: 'https://www.tiktok.com/@misterpistachiosy',
+    facebook: 'https://www.facebook.com/MisterPistachia',
+    youtube: 'https://youtube.com/@mister.pistachio?...',
+    x: 'https://x.com/Misterpistach'
+  },
+
+  // رسالة الواتساب الافتراضية عند الضغط على أزرار الاستفسار:
+  getWhatsAppUrl(message?: string): string { ... }
+};
+```
+بمجرد تعديل هذا الملف، تتحدث جميع أزرار الموقع والتذييل والزر العائم تلقائياً.
+
+---
+
+### ب. تعديل النصوص والترجمات (عربي / إنجليزي)
+النصوص الثابتة للواجهات العامة وأقسام الموقع موجودة في:
+- **العربية**: `src/assets/i18n/ar.json`
+- **الإنجليزية**: `src/assets/i18n/en.json`
+
+عند تعديل أي جملة أو إضافة مفتاح جديد:
+1. عدل المفتاح في `ar.json` وأضف الترجمة المقابلة في `en.json`.
+2. في قوالب المكونات (HTML)، استخدم:
+   ```html
+   {{ i18n.t().NAV.HOME }}
+   ```
+   أو للتحقق من اللغة النشطة:
+   ```html
+   {{ i18n.currentLang() === 'ar' ? 'نص عربي' : 'English Text' }}
+   ```
+
+---
+
+### ج. إضافة مقال جديد إلى المدونة
+المقالات تُدار كنظام مقالات غني (Headless Content) عبر ملفات JSON مخصصة ومصيرة مسبقاً بنسبة 100% لمحركات البحث:
+
+1. **إضافة بيانات المقال العربي**: افتح `src/assets/data/articles/ar.json` وأضف كائن المقال في المصفوفة:
+   ```json
+   {
+     "id": 10,
+     "slug": "new-article-slug",
+     "title": "عنوان المقال بالعربية",
+     "subtitle": "وصف قصير للمقال",
+     "date": "2026-11-15",
+     "readTime": "7 دقائق",
+     "category": "إدارة البساتين",
+     "image": "assets/images/articles/new-article-slug/hero.webp",
+     "excerpt": "مقتطف المقال الذي يظهر في بطاقة المدونة...",
+     "sections": [
+       {
+         "heading": "القسم الأول",
+         "content": "نص الفقرة...",
+         "list": ["نقطة 1", "نقطة 2"]
+       }
+     ]
+   }
+   ```
+2. **إضافة النسخة الإنجليزية المقابلة**: افتح `src/assets/data/articles/en.json` وأضف نفس الكائن بنفس الـ `slug` أو بـ slug إنجليزي مع الحفاظ على الربط.
+3. **وضع صور المقال**: أنشئ مجلداً للصور في `src/assets/images/articles/<slug>/` وضع صورك بداخله.
+4. **البناء**: عند تشغيل `npm run build`:
+   - يقوم السكربت تلقائياً باكتشاف المقال الجديد.
+   - تصيير صفحة الـ HTML الكاملة له في `dist/project/browser/ar/articles/<slug>/index.html`.
+   - إضافة رابط المقال في خريطة الموقع `sitemap.xml` مع وسوم اللغة البديلة `xhtml:link`.
+   - التحقق من وسوم الـ SEO في اختبار الفحص الشامل.
+
+---
+
+### د. إضافة صفحة جديدة للمشروع
+إذا أردت إنشاء صفحة جديدة (مثلاً: صفحة لشركاء النجاح `partners`):
+1. قم بإنشاء المكون داخل مجلد `src/app/pages/partners/`.
+2. افتح ملف المسارات `src/app/app.routes.ts`.
+3. أضف المسار داخل مصفوفة `localizedRoutes`:
+   ```typescript
+   {
+     path: 'partners',
+     component: PartnersComponent
+   }
+   ```
+   *سيتكفل الـ Guard ومصفوفة المسارات بجعل الصفحة متاحة تلقائياً على كل من `/ar/partners` و `/en/partners`.*
+4. في المكون `partners.component.ts`، احقن خدمة `SeoService` لضبط بيانات الصفحة لمحركات البحث:
+   ```typescript
+   ngOnInit(): void {
+     this.seo.updateSeo({
+       lang: this.i18n.currentLang(),
+       path: '/partners',
+       title: this.i18n.currentLang() === 'ar' ? 'شركاء النجاح | مستر بيستاشيو' : 'Partners | Mister Pistachio',
+       description: '...'
+     });
+   }
+   ```
+5. أضف المسار إلى سكربتات التدقيق `scripts/verify-all-pages.mjs` ليبقى فحص الـ SEO شاملاً لجميع الصفحات.
+
+---
+
+## 5. أوامر البناء والنشر على الاستضافة (Build & Deployment)
+
+### أمر البناء الإنتاجي الشامل:
 ```bash
-ng generate component component-name
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+يقوم هذا الأمر التلقائي بسلسلة عمليات متتابعة:
+1. **`ng build`**: بناء تطبيق Angular وتصيير كافة المسارات الـ 34 ثنائية اللغة (Static HTML).
+2. **`scripts/post-build.mjs`**: 
+   - إنشاء صفحة الجذر `dist/.../browser/index.html` للتحويل الفوري الذكي إلى النسخة العربية `/ar/`.
+   - نسخ صفحة الخطأ 404 المخصصة.
+   - إنشاء خريطة الموقع الإنتاجية `sitemap.xml`.
+   - نسخ ملف التكوين `.htaccess` وملف `robots.txt`.
+3. **`scripts/verify-sitemap.mjs`**: فحص خريطة الموقع ضد معايير Google Search Console.
+4. **`scripts/verify-all-pages.mjs`**: تدقيق تقني فوري لجميع ملفات الـ HTML الـ 34 والتأكد من سلامة وسوم الـ Canonical, Hreflang, Schema.org, وOpen Graph.
 
-```bash
-ng generate --help
-```
+### مجلد الرفع على هوستنجر (Upload Directory):
+- مجلد المخرجات على جهازك:
+  ```text
+  dist/project/browser/
+  ```
+- **ما يجب رفعه على استضافة هوستنجر**:
+  ارفع **محتويات** مجلد `dist/project/browser/` بالكامل إلى داخل مجلد **`public_html`** في الاستضافة (وليس مجلد `browser` نفسه).
 
-## Building
+> للمزيد من التفاصيل الدقيقة وحلول أي مشاكل تتعلق باستضافة Apache / Hostinger، راجع الدليل الشامل في:
+> [`HOSTINGER_DEPLOYMENT.md`](./HOSTINGER_DEPLOYMENT.md)
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 6. معايير الـ SEO وشبكات التواصل المعتمدة (Branding & Standards)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+يلتزم هذا المشروع بمعايير صارمة وثابتة تخص الهوية البصرية ومحركات البحث:
 
-## Running unit tests
+1. **معيار المشاركة على شبكات التواصل (Social Sharing Card)**:
+   - **ممنوع نهائياً** استخدام صور البساتين، الخلفيات العشوائية، أو صور الطبيعة كصورة مشاركة رئيسية (`og:image` أو `twitter:image`).
+   - **يجب دائماً** استخدام بطاقة الهوية الرسمية المصممة بمقاس **1200x630** بكسل (`public/og-image.png`) التي تبرز الشعار الرسمي في المنتصف على خلفية نظيفة وعالية الوضوح لضمان ظهور الرابط بأعلى جودة واحترافية على واتساب وفيسبوك ولينكدإن وغيرها.
+2. **البيانات المنظمة (Structured Data / Schema.org)**:
+   - كل صفحة تتضمن كود JSON-LD محدداً (Organization, BreadcrumbList, Article).
+   - `Organization.logo` يشير دائماً إلى الشعار الرسمي المعتمد `https://www.misterpistachio.com/logo.png`.
+3. **توجيه اللغات والروابط البديلة**:
+   - اللغة العربية هي اللغة الافتراضية والهدف لوسم `x-default`.
+   - كل صفحة عربية ترتبط بنظيرتها الإنجليزية عبر وسوم `hreflang="ar"` و `hreflang="en"`.
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## 7. الدعم والاستفسارات التقنية
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+إذا كان لديك أي سؤال أو استفسار حول معمارية الأكواد أو رغبت في إضافة مزايا متقدمة، يمكنك الرجوع إلى ملفات التوثيق الإضافية المرفقة في المشروع:
+- [`HOSTINGER_DEPLOYMENT.md`](./HOSTINGER_DEPLOYMENT.md) - دليل النشر وإعدادات أباتشي بالتفصيل.
+- [`SEO_STRATEGY_PLAN.md`](./SEO_STRATEGY_PLAN.md) - استراتيجية تحسين محركات البحث.
+- [`ARABIC_KEYWORD_STRATEGY.md`](./ARABIC_KEYWORD_STRATEGY.md) - خطة الكلمات المفتاحية الزراعية.
