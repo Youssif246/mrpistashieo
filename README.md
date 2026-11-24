@@ -15,7 +15,8 @@
    - [إضافة مقال جديد إلى المدونة](#ج-إضافة-مقال-جديد-إلى-المدونة)
    - [إضافة صفحة جديدة للمشروع](#د-إضافة-صفحة-جديدة-للمشروع)
 5. [أوامر البناء والنشر على الاستضافة (Build & Deployment)](#5-أوامر-البناء-والنشر-على-الاستضافة-build--deployment)
-6. [معايير الـ SEO وشبكات التواصل المعتمدة (Branding & Standards)](#6-معايير-الـ-seo-وشبكات-التواصل-المعتمدة-branding--standards)
+6. [بيئة التطوير واعتماد أداة Antigravity](#6-بيئة-التطوير-واعتماد-أداة-antigravity-)
+7. [معايير الـ SEO وشبكات التواصل المعتمدة (Branding & Standards)](#7-معايير-الـ-seo-وشبكات-التواصل-المعتمدة-branding--standards)
 
 ---
 
@@ -50,7 +51,7 @@
 
 - **Framework**: [Angular 21](https://angular.dev/) (Standalone Components, Signals, Computed, New Control Flow `@if` / `@for`).
 - **Rendering Engine**: `@angular/ssr` مع معمارية **Static Site Generation (SSG)**:
-  - تُصيّر جميع الصفحات والمقالات (34+ صفحة) أثناء عملية البناء محلياً إلى ملفات HTML ثابتة تماماً.
+  - تُصيّر جميع الصفحات والمقالات (39 مساراً ثابتاً تشمل 38 صفحة ومقالاً ثنائي اللغة + صفحة 404) أثناء عملية البناء محلياً إلى ملفات HTML ثابتة تماماً.
   - لا حاجة لتشغيل خادم Node.js أو PM2 على الاستضافة الإنتاجية.
 - **Styling**: نظام تصميم نباتي تحريري فاخر (Botanical Editorial Design System) مكتوب بـ CSS نقي عالي الأداء مع متغيرات CSS (`:root`) متكاملة، ومتجاوب بالكامل مع كافة الشاشات (Mobile First).
 - **Animations**: مكتبة [GSAP](https://greensock.com/gsap/) للحركات التفاعلية والسلسة.
@@ -73,7 +74,7 @@ project/
 ├── scripts/                    # سكربتات ما بعد البناء والتحقق
 │   ├── post-build.mjs          # توليد تحويل الجذر، نسخ 404، وبناء sitemap.xml محدثة
 │   ├── verify-sitemap.mjs      # فحص دقة خريطة الموقع وتوافقها مع معايير Google
-│   ├── verify-all-pages.mjs    # تدقيق شامل لجميع الصفحات والمقالات الـ 34 والتأكد من وسوم SEO
+│   ├── verify-all-pages.mjs    # تدقيق شامل لجميع الصفحات والمقالات الـ 38 والتأكد من وسوم SEO
 │   └── generate-card-pdf.mjs   # سكربت لتوليد بطاقة العمل الرسمية بصيغة PDF
 ├── src/
 │   ├── app/
@@ -145,7 +146,7 @@ export const APP_CONFIG = {
 1. عدل المفتاح في `ar.json` وأضف الترجمة المقابلة في `en.json`.
 2. في قوالب المكونات (HTML)، استخدم:
    ```html
-   {{ i18n.t().NAV.HOME }}
+   {{ i18n.t().navbar.home }}
    ```
    أو للتحقق من اللغة النشطة:
    ```html
@@ -223,14 +224,14 @@ npm run build
 ```
 
 يقوم هذا الأمر التلقائي بسلسلة عمليات متتابعة:
-1. **`ng build`**: بناء تطبيق Angular وتصيير كافة المسارات الـ 34 ثنائية اللغة (Static HTML).
+1. **`ng build`**: بناء تطبيق Angular وتصيير كافة المسارات الثابتة (39 مساراً ثنائياً للغة + 404).
 2. **`scripts/post-build.mjs`**: 
    - إنشاء صفحة الجذر `dist/.../browser/index.html` للتحويل الفوري الذكي إلى النسخة العربية `/ar/`.
    - نسخ صفحة الخطأ 404 المخصصة.
    - إنشاء خريطة الموقع الإنتاجية `sitemap.xml`.
    - نسخ ملف التكوين `.htaccess` وملف `robots.txt`.
 3. **`scripts/verify-sitemap.mjs`**: فحص خريطة الموقع ضد معايير Google Search Console.
-4. **`scripts/verify-all-pages.mjs`**: تدقيق تقني فوري لجميع ملفات الـ HTML الـ 34 والتأكد من سلامة وسوم الـ Canonical, Hreflang, Schema.org, وOpen Graph.
+4. **`scripts/verify-all-pages.mjs`**: تدقيق تقني فوري لجميع ملفات الـ HTML الـ 38 والتأكد من سلامة وسوم الـ Canonical, Hreflang, Schema.org, وOpen Graph.
 
 ### مجلد الرفع على هوستنجر (Upload Directory):
 - مجلد المخرجات على جهازك:
@@ -271,10 +272,3 @@ npm run build
 3. **توجيه اللغات والروابط البديلة**:
    - اللغة العربية هي اللغة الافتراضية والهدف لوسم `x-default`.
    - كل صفحة عربية ترتبط بنظيرتها الإنجليزية عبر وسوم `hreflang="ar"` و `hreflang="en"`.
-
----
-
-## 8. وثيقة التسليم الرسمية
-
-للاطلاع على التقرير الإداري الشامل ووثيقة التسليم المعتمدة الموجهة للعميل وفريق الإدارة، راجع:
-- [`PROJECT_HANDOVER.md`](../PROJECT_HANDOVER.md) في المجلد الرئيسي للمشروع.
